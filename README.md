@@ -17,3 +17,4 @@ Inventory System is a highly flexible tool for unity. It can be used in any type
 <br>• Easy to modify and extend
 <br>• Source code included
 <br>• Examples
+<br><br><b><a href="https://deviongames.com/inventory-system/getting-started/">Documentation</a> | <a href="https://discord.gg/y4fMXpZ">Discord</a> | <a href="https://assetstore.unity.com/packages/tools/gui/item-inventory-system-45568">Asset Store</a></b>
