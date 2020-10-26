@@ -1,0 +1,86 @@
+{
+    "name": "UI Widgets",
+    "id": "com.deviongames.ui",
+    "assetPath":"Assets/Devion Games/UI Widgets",
+    "version": "1.0.7",
+    "unityVersion": "2019.4.1",
+    "downloadPath": "https://deviongames.com/modules/UIWidgets.unitypackage",
+    "author": "Konstantin Janson",
+    "email": "support@unitycoding.com",
+    "description": "UI Widgets is a collection of useful base ui scripts where you can extend from.",
+    "documentation": "https://deviongames.com/ui-widgets/",
+    "dependencies": 
+    [
+        "com.deviongames.utilities"
+    ],
+    "changelogs": 
+    [
+        {
+            "version": "1.0.0",
+            "changes": 
+            [
+                "Initial Release"
+            ]
+        }, 
+        {
+            "version": "1.0.1",
+            "changes":
+            [
+                "Code comments in TooltipTrigger.cs"
+            ]
+        }, 
+        {
+            "version": "1.0.2",
+            "changes": 
+            [
+                "Renamed UI Controls to UI Widget",
+                "Renamed UIWindow to UIWidget",
+                "Added animation options to UIWidget",
+                "Added a button to add TriggerEvents(OnShow, OnClose)",
+                "Removed key triggers, use KeyTrigger instead",
+                "Added new ui widgets",
+                "Changed namespace to Unitycoding.UIWidgets",
+                "Replaced UIWindow.Get<T>(string name) with UIUtility.Find<T>(string name)"
+            ]
+        },  
+        {
+            "version": "1.0.3",
+            "changes": 
+            [
+                "Deactivate on close option",
+                "Tooltip to stay in place option"
+            ]
+        },
+        {
+            "version": "1.0.4",
+            "changes": 
+            [
+                "Widget Manager",
+                "Component menu"
+            ]
+        }, 
+        {
+            "version": "1.0.5",
+            "changes": 
+            [
+                "Updated to Devion Games website.",
+                "Changed asset path from Unitycoding/Package to Devion Games/Package",
+                "Updated Documentation"
+            ]
+        }, 
+        {
+            "version": "1.0.6",
+            "changes": 
+            [
+                "Clear Cache used by WidgetUtility.Find when new scene is loaded"
+            ]
+        }, 
+        {
+            "version": "1.0.7",
+            "changes": 
+            [
+                "Fixed WidgetInputHandler when switching scenes"
+            ]
+        }
+    ]
+}

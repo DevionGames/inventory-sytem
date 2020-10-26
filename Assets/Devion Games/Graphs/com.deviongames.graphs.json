@@ -1,0 +1,46 @@
+{
+    "name": "Graphs",
+    "id": "com.deviongames.graphs",
+    "assetPath":"Assets/Devion Games/Graphs",
+    "version": "1.0.3",
+    "unityVersion": "2019.4.10",
+    "downloadPath": "https://deviongames.com/modules/Graphs.unitypackage",
+    "author": "Konstantin Janson",
+    "email": "support@unitycoding.com",
+    "description": "Simple graph scripts to extend from and create visual scripting behavior.",
+    "dependencies": [ 
+        "com.deviongames.utilities"
+    ],
+    "changelogs": 
+    [
+        {
+            "version": "1.0.0",
+            "changes": 
+            [
+                "Initial Release"
+            ]
+        },
+        {
+            "version": "1.0.1",
+            "changes": 
+            [
+                "Added more math nodes"
+            ]
+        },
+        {
+            "version": "1.0.2",
+            "changes": 
+            [
+                "Extended GraphUtility"
+            ]
+        },
+        {
+            "version": "1.0.3",
+            "changes": 
+            [
+                "Updated Graph selection with SerializedProperty extension methods GetParent, GetValue, SetValue",
+                "Fixed string serialization"
+            ]
+        }
+    ]
+}

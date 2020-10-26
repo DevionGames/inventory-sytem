@@ -1,0 +1,33 @@
+{
+    "name": "Triggers",
+    "id": "com.deviongames.triggers",
+    "assetPath":"Assets/Devion Games/Triggers",
+    "version": "1.0.1",
+    "unityVersion": "2019.4.10",
+    "downloadPath": "https://deviongames.com/modules/Triggers.unitypackage",
+    "author": "Konstantin Janson",
+    "email": "support@unitycoding.com",
+    "description": "Base triggering system.",
+    "dependencies": [
+      "com.deviongames.utilities"
+    ],
+    "changelogs": 
+    [
+        {
+            "version": "1.0.0",
+            "changes": 
+            [
+                "Initial Release"
+            ]
+        },
+        {
+            "version": "1.0.1",
+            "changes": 
+            [
+                "Added Missing Action, when an action script is deleted, the value will be replace by this action (Only in BehaviorTrigger component).",
+                "Added CameraRaycast to Display Type in DisplayName component. It allows to display the name for FirstPersonController with a raycast from camera. TriggerRaycaster needs to be attached to camera to enable it.",
+                "Improved drawing performance for actions."
+            ]
+        }
+    ]
+}

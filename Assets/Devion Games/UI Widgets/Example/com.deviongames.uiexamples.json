@@ -1,0 +1,37 @@
+{    
+    "name": "UI Widgets Examples",
+    "id": "com.deviongames.uiexamples",
+    "assetPath":"Assets/Devion Games/UI Widgets/Example",
+    "version": "1.0.1",
+    "unityVersion": "2019.4.1",
+    "downloadPath": "https://deviongames.com/modules/UIWidgetsExamples.unitypackage",
+    "author": "Konstantin Janson",
+    "email": "support@unitycoding.com",
+    "description": "Examples and prefabs for the UI Widgets module.",
+    "documentation": "https://deviongames.com/ui-widgets/",
+    "dependencies": 
+    [
+        "com.deviongames.utilities",
+	    "com.deviongames.ui",
+	    "com.deviongames.flatgui"
+	],
+	"changelogs": 
+    [
+        {
+            "version": "1.0.0",
+            "changes": 
+            [
+                "Initial Release"
+            ]
+        }, 
+        {
+            "version": "1.0.1",
+            "changes": 
+            [
+                "Updated to Devion Games website.",
+                "Changed asset path from Unitycoding/Package to Devion Games/Package",
+                "Updated Documentation"
+            ]
+        }
+    ]
+}

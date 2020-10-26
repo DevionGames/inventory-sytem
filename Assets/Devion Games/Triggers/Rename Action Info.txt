@@ -1,0 +1,2 @@
+If class is renamed but still has references this attribute is required:
+ [UnityEngine.Scripting.APIUpdating.MovedFromAttribute("oldclass")]

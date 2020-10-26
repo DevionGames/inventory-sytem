@@ -1,0 +1,67 @@
+{
+    "name": "Third Person Controller",
+    "id": "com.deviongames.controllers",
+    "assetPath":"Assets/Devion Games/Third Person Controller",
+    "version": "1.0.5",
+    "unityVersion": "2019.4.10",
+    "downloadPath": "https://deviongames.com/modules/ThirdPersonController.unitypackage",
+    "author": "Konstantin Janson",
+    "email": "support@unitycoding.com",
+    "description": "The Third Person Controller is an animation framework, character and camera controller. Easily create new motions from the inspector.",
+     "documentation": "https://deviongames.com/third-person-controller/getting-started/",
+    "dependencies": 
+    [
+        "com.deviongames.utilities"
+    ],
+    "changelogs": 
+    [
+        {
+            "version": "1.0.0",
+            "changes": 
+            [
+                "Initial Release"
+            ]
+        }, 
+        {
+            "version": "1.0.1",
+            "changes": 
+            [
+                "Updated to Devion Games website.",
+                "Changed asset path from Unitycoding/Package to Devion Games/Package",
+                "Updated Documentation",
+                "Created Slide or Crouch Motion like in COD"
+            ]
+        }, 
+        {
+            "version": "1.0.2",
+            "changes": 
+            [
+                "Copy Component now creates real copy of motions",
+                "Camera has now a Default preset, which name can not be changed",
+                "Motions can now activate a camera preset",
+                "Update for Item & Inventory System"
+            ]
+        }, 
+        {
+            "version": "1.0.3",
+            "changes": 
+            [
+                "Added SetIK(bool state) to IKCharacter"
+            ]
+        }, 
+        {
+            "version": "1.0.4",
+            "changes": 
+            [
+                "Added sounds(Footsetps, Swimming...)"
+            ]
+        }, 
+        {
+            "version": "1.0.5",
+            "changes": 
+            [
+                "Removed global setting Physics.QuerriesHitTriggers"
+            ]
+        }
+    ]
+}

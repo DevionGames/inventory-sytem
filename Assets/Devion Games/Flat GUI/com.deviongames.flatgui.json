@@ -1,0 +1,30 @@
+{
+    "name": "Flat GUI",
+    "id": "com.deviongames.flatgui",
+    "assetPath":"Assets/Devion Games/Flat GUI",
+    "version": "1.0.1",
+    "unityVersion": "2019.4.1",
+    "downloadPath": "https://deviongames.com/modules/FlatGUI.unitypackage",
+    "author": "Konstantin Janson",
+    "email": "support@unitycoding.com",
+    "description": "White ui elements and icons for prototyping and examples.",
+    "dependencies": [],
+    "changelogs": 
+    [
+        {
+            "version": "1.0.0",
+            "changes": 
+            [
+                "Initial Release"
+            ]
+        }, 
+        {
+            "version": "1.0.1",
+            "changes": 
+            [
+                "Updated to Devion Games website.",
+                "Changed asset path from Unitycoding/Package to Devion Games/Package"
+            ]
+        }
+    ]
+}

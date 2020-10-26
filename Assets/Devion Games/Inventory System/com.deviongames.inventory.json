@@ -1,0 +1,295 @@
+{
+    "name": "Inventory System",
+    "id": "com.deviongames.inventory",
+        "assetPath":"Assets/Devion Games/Inventory System",
+    "version": "2.0.9",
+    "unityVersion": "2019.4.10",
+    "assetStore": "",
+    "downloadPath": "https://deviongames.com/modules/InventorySystem.unitypackage",
+    "author": "Konstantin Janson",
+    "email": "support@unitycoding.com",
+    "description": "Inventory System is a highly flexible tool that allows you to easily create items, skills, spells and manage multiple inventories, vendors, crafting and a lot more.",
+    "documentation": "https://deviongames.com/inventory-system/getting-started/",
+    "dependencies": 
+    [
+        "com.deviongames.utilities",
+        "com.deviongames.ui",
+        "com.deviongames.triggers"
+    ],
+    "changelogs": 
+    [
+        {
+            "version": "1.0.0",
+            "changes": 
+            [
+                "Initial Release"
+            ]
+        },
+		{
+            "version": "1.1.0",
+            "changes": 
+            [
+                "string properties are saveable",
+				"Replaced UIMessage with a more adnvanced MessageBox",
+				"Hover color for triggers",
+				"Placeable items",
+				"World Saving",
+				"GatheringTrigger",
+				"Not usable items were throwing an error on use.",
+				"To far away message in settings.",
+				"UIContainer is generic class now.",
+				"ItemContainer extends from UIContainer and has its previous functionality",
+				"UISlot is a generic class now.",
+				"ItemSlot extends from UISlot and has its previous functionality",
+				"Renamed UICrafting to CraftingContainer and extended the functionality(Only one container now with more properties.)",
+				"MySQL support for saving items.",
+				"Shared scripts update",
+				"UIStore has a buy price and sell price modifier",
+				"Added UIStoreTrigger with options to modify buy price/sell price",
+				"Updated documentation with 04. Creating Store and 05. Using Triggers",
+				"Multiple Databases",
+				"Renamed OpenContainer to ItemContainerTrigger",
+				"Renamed ItemHandler to ItemTrigger",
+				"Renamed ShowCustomTooltip to ShowTooltip",
+				"Renamed ItemUtility to UnityUtility and moved to Shared/Scripts/",
+				"Editor cleanup",
+				"Combined CategoryDatabase, EquipmentRegionDatabase, RarityDatabase to ItemDatabase.",
+				"Renamed ISavable to ISavingProvider",
+				"Other cleanup"
+            ]
+        },
+		{
+            "version": "1.1.1",
+            "changes": 
+            [
+                "Moved base ui classes to Unitycoding/UI Controls",
+				"Changes to base ui classes will be located in Unitycoding/UI Controls/Version Changes.txt"
+            ]
+        },
+		{
+            "version": "1.1.2",
+            "changes": 
+            [
+				"CharacterHandler updates equipment in start",
+				"Fixed ItemContainer Inspector",
+				"Fixed Saving/Loading dynamic container",
+				"Moved triggers to Unitycoding/Item System/Components/Triggers",
+				"Changed serialization to json",
+				"Improved triggers",
+				"Referenced containers"
+
+            ]
+        },
+		{
+            "version": "1.1.3",
+            "changes": 
+            [
+				"Fixed internal FindGameObjectWithTag method inside BehaviourAction, first game object was not returned",
+				"Updated to new UIWidget collection.",
+				"Added PlayerPrefs editor",
+				"Simple healthbar example"
+            ]
+        },
+		{
+            "version": "1.1.4",
+            "changes": 
+            [
+				"Fixed internal FindGameObjectWithTag method inside BehaviourAction, first game object was not returned",
+				"Updated to new UIWidget collection.",
+				"Added PlayerPrefs editor",
+				"Simple healthbar example"
+            ]
+        },
+		{
+            "version": "1.1.5",
+            "changes": 
+            [
+				"Fixed ItemContainerTrigger destroyEmpty setting was not destroying the game object.",
+				"DebugFilter",
+				"Fixed duplicate bug with action bar",
+				"Improved networking handling(requires a Proxy in scene to create through Tools/Unitycoding/Proxy/Create)",
+				"UI Widgets update"
+            ]
+        },
+		{
+            "version": "1.1.8",
+            "changes": 
+            [
+				"Fixed for Unity 5.6",
+				"Fixed base.Destroy error",
+				"UIWidgets: Widget Manager",
+				"UIWidgets: Component menu",
+				"Fixed syncing items for multiplayer",
+				"Added ICode integration condition IsDraggingItem",
+				"Replaced multiple instance debug warning to info debug.",
+				"Minimum required Unity is 5.5.0",
+				"Fixed BuildTargetGroup in integration windows"
+            ]
+        },
+        {
+            "version": "2.0.0",
+            "changes": 
+            [
+				"Minimum unity version 2019.1.1",
+				"Massive cleanup of the asset",
+				"Sequence based item behavior with built in item actions",
+				"Sequence based trigger behavior with built in trigger actions",
+				"Support for custom item and trigger actions",
+				"Database selection improvement(performance)",
+				"Seperation of general settings",
+				"Slot restriction editor",
+				"Seperated ItemContainer and ItemCollection(ItemContainer is used to display items that are located in ItemCollection)",
+				"Improved EquipmentHandler",
+				"New video tutorials",
+				"Save and load example"
+            ]
+        }, 
+        {
+            "version": "2.0.1",
+            "changes": 
+            [
+                "Updated to Devion Games website.",
+                "Changed asset path from Unitycoding/Package to Devion Games/Package",
+                "Updated Documentation",
+                "Some visual editor style updates"
+            ]
+        },
+        {
+            "version": "2.0.2",
+            "changes": 
+            [
+                "Currency is saving now",
+                "Ignoring weapon use when over trigger",
+                "Copy EquipmentHandler now creates real copy of visual items",
+                "Cleanup of visual item components when EquipmentHandler is removed",
+                "Weapon IK has now a lerp functionality",
+                "Deleted not used EquipmentHandlerEditor",
+                "Added debug options in default settings",
+                "Copy Trigger component creates real copy of actions",
+                "Cleanup of trigger actions when a Trigger is removed",
+                "Fixed styles and search functionality for item list in EquipmentHandler",
+                "Merge Databases Editor",
+                "Item Reference Updater"
+            ]
+        },
+        {
+            "version": "2.0.3",
+            "changes": 
+            [
+                "Hotfix: Item Reference Updater was not working correctly on prefabs",
+                "Item Reference Updater was interrupted if item was null, now prints a warning",
+                "Some settings asset were not serialized"
+            ]
+        },
+        {
+            "version": "2.0.4",
+            "changes": 
+            [
+                "Removed Save and Load messages from notification. ",
+                "Added Prefix to saving key for the InventorySystem.",
+                "Inventory System saves only ItemCollections now.",
+                "Style adjustments",
+                "First step to configuration error checking",
+                "Move conditions in ItemContainer use StackOrAdd(Items will be stacked when they are moved)",
+                "EquipmentItems will be now instantiated at runtime and are no longer childs of the actor.(Bone Map setup required in EquipmentHandler.)",
+                "Added lock state for ItemContainer(it was possible when crafting started to drop ingredients to ground and still get the crafting result.)",
+                "Player could pickup items or use a trigger behind a wall.",
+                "Extended rarity",
+                "Rarity is picked automaticaly now, you have to setup a list with possible rarities in Item Editor.",
+                "ItemGenerator and ItemGroupGenerator was active when loading making the ItemCollection grow",
+                "Added IGenerator interface"
+            ]
+        },
+        {
+            "version": "2.0.5",
+            "changes": 
+            [
+               "Fixed ItemGroupGenerator rarity filter bug",
+               "Fixed StackOrSwap to same slot sometimes removed item",
+               "Added PlayerInfo to access cached player components (InventoryManager.current.PlayerInfo)",
+               "Option to lock all containers when Trigger is used.",
+               "Lock container trigger action",
+               "EquipmentHandler did not used correct stat attributes",
+               "Trigger adjustments to work without workbench and with ui button.",
+               "Trigger2D.cs for 2D games"
+            ]
+        },
+        {
+            "version": "2.0.6",
+            "changes": 
+            [
+                "CollectionEditor supports moving items",
+                "ItemAction Invoke can return bool",
+                "ItemAction Invoke can have a failure notification",
+                "Added more ItemActions",
+                "Added more TriggerActions",
+                "Pickup TriggerAction returns Failure if there are no items, please check your order!",
+                "Exp and Level example",
+                "Stats increase example",
+                "Chest configurated correctly",
+                "Player Avatar, Health, Mana, Exp bar is draggable",
+                "Spell Healing and Arcane Ball example (Spell Book: Swords in left corner)",
+                "Gain exp from gathering resources",
+                "Smooth IK change"
+            ]
+        },
+        {
+            "version": "2.0.7",
+            "changes": 
+            [
+                "Teleporter example",
+                "Renamed Example scene to Main Scene",
+                "Disabled DontDestroyOnLoad for Player and Camera",
+                "Added SingleInstance component to Player, Camera, UI to be able to switch scenes",
+                "Dark Skin support",
+                "Min. Required Unity Version 2019.4.10",
+                "Sounds(Footsteps, Swimming, Arrow...)",
+                "Fixed Pickup items"
+            ]
+        },
+        {
+            "version": "2.0.8",
+            "changes": 
+            [
+                "This version has been havily refactored, please make a backup of your project! I recommend to delete the Devion Games folder and reimport all packages. If you read this after updating and you get errors, please remove the whole Devion Games folder and reimport it.",
+                "Combined TriggerActions and ItemActions",
+                "TriggerAction and ItemAction extend not longer from MonoBehavior/ScriptableObject but from simple class Action. This requires you to redo your item and trigger behaviors! To keep your database working, please remove all item actions and trigger actions from database, prefabs and scene game objects and redo them after update.",
+                "Improved Action appearence",
+                "Splitted Trigger component into BaseTrigger > BehaviorTrigger > Trigger...",
+                "Removed Display Cursor option from Trigger  and added DisplayTrigger as an optional component",
+                "Added Display Name as an optional component: This will display Game Objects name.",
+                "Removed (Clone) suffix when item prefabs are instantiated.",
+                "ItemContainer.GetItems<T>() except a bool for inherited items -> items that inherit from T will be included if inherit is set to true",
+                "Seperated UI into 2 child canvases: General, Main",
+                "Fixed RemoveItem with Dynamic Container option was not removing slot",
+                "Fixed WidgetInputHandler when switching scenes",
+                "Added minimalistic example scene Clean with just the inventory"
+            ]
+        },
+        {
+            "version": "2.0.9",
+            "changes": 
+            [
+                "Updated Picker with SerializedProperty extension methods GetParent, GetValue, SetValue",
+                "Info: If class is renamed but still has references this attribute is required: [UnityEngine.Scripting.APIUpdating.MovedFromAttribute(oldclass)] or unlink all references!",
+                "Sub-classes of ItemContainer display all properties in inspector without writing custom Inspector",
+                "Improved CollectionEditor",
+                "OnAddItem callback returns the current added item",
+                "Fixed OnRemoveItem callback in Inspector was not called",
+                "ItemCollection splits items into MaxStack stacks. -> Iron with Max Stack 10 -> If ItemCollection has 25 iron -> it will have 3 stacks 2x10 iron and 1x5 iron",
+                "Generate new id when item is duplicated in editor",
+                "Fixed Trigger Edit Behavior Window when selection is changed.",
+                "Show Notification action for Trigger",
+                "Slot extends from CallbackHandler and has OnAddItem, OnRemoveItem, OnUseItem callbacks. Useful for Equipment window to hide icon background.",
+                "Global ItemContainer restrictions",
+                "Fixed Attach Prefab Handle in EquipmentHandler",
+                "Stats Modifiers are now also applied without VisualItem in EquipmentHandler",
+                "Auto create EventSystem if missing",
+                "Auto add PhysicsRaycaster if missing, by default PhysicsRaycaster is added. If you use PhysicsRaycaster2D please add it manually.",
+                "Fixed Formula string ports used in GetStatValue, GetStatCurrentValue not displaying stat name.",
+                "Stats Max Value = -1 defines unlimited",
+                "Improved drawing pererformance for actions."
+            ]
+        }
+    ]
+}

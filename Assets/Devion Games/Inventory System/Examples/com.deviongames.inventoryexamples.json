@@ -1,0 +1,97 @@
+{
+	"name": "Inventory Examples",
+	"id": "com.deviongames.inventoryexamples",
+	"assetPath":"Assets/Devion Games/Inventory System/Examples",
+	"version": "1.0.9",
+	"unityVersion": "2019.4.10",
+	"downloadPath": "https://deviongames.com/modules/InventorySystemExample.unitypackage",
+	"author": "Konstantin Janson",
+	"email": "support@unitycoding.com",
+	"description": "Example assets and scenes for the inventory system package.",
+	"documentation": "https://deviongames.com/inventory-system/getting-started/",
+	"dependencies": [
+        "com.deviongames.utilities",
+        "com.deviongames.ui",
+		"com.deviongames.inventory",
+		"com.deviongames.flatgui",
+		"com.deviongames.standardassets",
+		"com.deviongames.controllers",
+		"com.deviongames.controllersexamples",
+		"com.deviongames.stats"
+	],
+	"changelogs": 
+    [
+        {
+            "version": "1.0.0",
+            "changes": 
+            [
+                "Initial Release"
+            ]
+        }, 
+        {
+            "version": "1.0.1",
+            "changes": 
+            [
+                "Updated to Devion Games website.",
+                "Changed asset path from Unitycoding/Package to Devion Games/Package",
+                "Updated Documentation"
+            ]
+        }, 
+        {
+            "version": "1.0.2",
+            "changes": 
+            [
+                "Updated examples for Inventory System 2.0.2"
+            ]
+        }, 
+        {
+            "version": "1.0.3",
+            "changes": 
+            [
+                "Some prefabs had missing item reference in ItemCollection"
+            ]
+        }, 
+        {
+            "version": "1.0.4",
+            "changes": 
+            [
+                "Setup update for Inventory System 2.0.4"
+            ]
+        }, 
+        {
+            "version": "1.0.5",
+            "changes": 
+            [
+                "Setup update for Inventory System 2.0.5"
+            ]
+        }, 
+        {
+            "version": "1.0.6",
+            "changes": 
+            [
+                "Setup update for Inventory System 2.0.6"
+            ]
+        }, 
+        {
+            "version": "1.0.7",
+            "changes": 
+            [
+                "Setup update for Inventory System 2.0.7"
+            ]
+        }, 
+        {
+            "version": "1.0.8",
+            "changes": 
+            [
+                "Setup update for Inventory System 2.0.8"
+            ]
+        }, 
+        {
+            "version": "1.0.9",
+            "changes": 
+            [
+                "Setup update for Inventory System 2.0.9"
+            ]
+        }
+    ]
+}

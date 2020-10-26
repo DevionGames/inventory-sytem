@@ -1,0 +1,17 @@
+{
+    "name": "DevionGames.StatSystem",
+    "references": [
+        "GUID:907b3328f60158944b2faf1e1b0a7749",
+        "GUID:d867e9af0b961344187a4792039d5ad2",
+        "GUID:88b6a96a69c522e46b3504e12b7c9972"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,14 @@
+- Fill stacks in ItemContainer first and add rest stack as a new item
+- Fixed Sort by category, auto add first category
+- Removed Currency creation in Items tab, Currency tab should be used
+- Auto assign first currency to item when created
+- Deselect Item when deleted
+- Create default category when ItemDatabase is created.
+- Auto unparent Inventory Manager when DontDestroyOnLoad is enabled
+- Item display name option
+- Fixed Manual Loading, wrong key was used.
+- Reworked Saving And Loading. UI and Scene is saved separately to one key.
+- Item Game Objects in scene do not require prefab name anymore. Shield and Shield(1) names are recognized as one prefab.
+- Saved data can be deleted separately(UI, Scene, All)
+- Fixed Context Menu not creating all slots.
+- EquipmentRegion restriction is used as an or condition. 

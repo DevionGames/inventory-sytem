@@ -1,0 +1,37 @@
+{
+	"name": "Standard Assets",
+	"id": "com.deviongames.standardassets",
+	"version": "1.0.2",
+	"assetPath":"Assets/Devion Games/Standard Assets",
+	"unityVersion": "2019.4.1",
+	"downloadPath": "https://deviongames.com/modules/StandardAssets.unitypackage",
+	"author": "Konstantin Janson",
+	"email": "support@unitycoding.com",
+	"description": "This pack contains picked and modified assets from the Standard Assets pack by Unity Technologies Inc.",
+	"dependencies": [],
+	"changelogs": 
+    [
+        {
+            "version": "1.0.0",
+            "changes": 
+            [
+                "Initial Release"
+            ]
+        }, 
+        {
+            "version": "1.0.1",
+            "changes": 
+            [
+                "Updated to Devion Games website.",
+                "Changed asset path from Unitycoding/Package to Devion Games/Package"
+            ]
+        }, 
+        {
+            "version": "1.0.2",
+            "changes": 
+            [
+                "WaterSimple file name was not named the same as class name."
+            ]
+        }
+    ]
+}

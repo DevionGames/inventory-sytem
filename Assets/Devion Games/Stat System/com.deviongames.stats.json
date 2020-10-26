@@ -1,0 +1,84 @@
+{
+	"name": "Stat System",
+	"id": "com.deviongames.stats",
+	"assetPath":"Assets/Devion Games/Stat System",
+	"version": "1.0.6",
+	"unityVersion": "2019.4.10",
+	"downloadPath": "https://deviongames.com/modules/StatSystem.unitypackage",
+	"author": "Konstantin Janson",
+	"email": "support@unitycoding.com",
+	"description": "Simple stat system.",
+	"dependencies": [
+        "com.deviongames.utilities",
+        "com.deviongames.ui",
+        "com.deviongames.graphs"
+    ],
+	"changelogs": 
+    [
+        {
+            "version": "1.0.0",
+            "changes": 
+            [
+                "Initial Release"
+            ]
+        }, 
+        {
+            "version": "1.0.1",
+            "changes": 
+            [
+                "Updated to Devion Games website.",
+                "Changed asset path from Unitycoding/Package to Devion Games/Package"
+            ]
+        }, 
+        {
+            "version": "1.0.2",
+            "changes": 
+            [
+                "Overall rework",
+                "Renamed StatusSystem.cs to StatManager.cs",
+                "Stat System got a similiar editor as other systems.",
+                "Added saving and loading",
+                "Stats can be increased",
+                "Example for Exp and Level"
+            ]
+        }, 
+        {
+            "version": "1.0.3",
+            "changes": 
+            [
+                "Stat got a formula editor",
+                "Requires Graphs package"
+            ]
+        }, 
+        {
+            "version": "1.0.4",
+            "changes": 
+            [
+                "StatsHandler is not longer readded to root of transform",
+                "CanApplyDamage method added to StatsHandler",
+                "Replaced Formula with StatFormula",
+                "Nodes: GetStatValue, GetStatCurrentValue",
+                "Replaced Result with StatResult",
+                "CurrentValue is also saved now",
+                "Regenerate option for stat",
+                "Blink/Fade effect for stat bar"
+            ]
+        }, 
+        {
+            "version": "1.0.5",
+            "changes": 
+            [
+                "StatsRenderer not used anymore",
+                "Extended UIStat component, please update in your custom scenes"
+            ]
+        }, 
+        {
+            "version": "1.0.6",
+            "changes": 
+            [
+                "Stats Max Value = -1 defines unlimited",
+                "Fixed Formula string ports used in GetStatValue, GetStatCurrentValue not displaying stat name"
+            ]
+        }
+    ]
+}

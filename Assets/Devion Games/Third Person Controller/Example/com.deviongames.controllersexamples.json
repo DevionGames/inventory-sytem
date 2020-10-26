@@ -1,0 +1,55 @@
+{
+    "name": "Third Person Controller Examples",
+    "id": "com.deviongames.controllersexamples",
+    "assetPath":"Assets/Devion Games/Third Person Controller/Example",
+    "version": "1.0.3",
+    "unityVersion": "2019.4.10",
+    "downloadPath": "https://deviongames.com/modules/ThirdPersonControllerExamples.unitypackage",
+    "author": "Konstantin Janson",
+    "email": "support@unitycoding.com",
+    "description": "Example assets for the Third Person Controller package.",
+    "documentation": "https://deviongames.com/third-person-controller/getting-started/",
+    "dependencies": 
+    [
+        "com.deviongames.utilities",
+        "com.deviongames.controllers",
+        "com.deviongames.standardassets"
+    ],
+    "changelogs": 
+    [
+        {
+            "version": "1.0.0",
+            "changes": 
+            [
+                "Initial Release"
+            ]
+        }, 
+        {
+            "version": "1.0.1",
+            "changes": 
+            [
+                "Updated to Devion Games website.",
+                "Changed asset path from Unitycoding/Package to Devion Games/Package",
+                "Updated Documentation",
+                "Created Slide or Crouch Motion like in COD"
+            ]
+        }, 
+        {
+            "version": "1.0.2",
+            "changes": 
+            [
+                "Camera has now a Default preset, which name can not be changed",
+                "Motions can now activate a camera preset",
+                "Update for Item & Inventory System"
+            ]
+        }, 
+        {
+            "version": "1.0.3",
+            "changes": 
+            [
+                "Update for Third Person Controller 1.0.4"
+
+            ]
+        }
+    ]
+}
