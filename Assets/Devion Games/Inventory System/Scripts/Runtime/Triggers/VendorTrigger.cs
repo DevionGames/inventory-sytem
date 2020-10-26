@@ -96,7 +96,6 @@ namespace DevionGames.InventorySystem
 
         public override bool OverrideUse(Slot slot, Item item)
         {
-            Debug.Log("overrdie use");
             if (slot.Container.CanSellItems)
             {
                 SellItem(item, item.Stack, true);
