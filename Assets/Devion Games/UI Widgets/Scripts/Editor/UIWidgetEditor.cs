@@ -85,6 +85,7 @@ namespace DevionGames.UIWidgets
 						current = current.parent;
 					}
 					current.SetAsLastSibling();
+					Selection.activeGameObject = current.gameObject;
 				}
 				if (GUILayout.Button(canvasGroup.alpha > 0.01f ? EditorGUIUtility.FindTexture("d_scenevis_hidden") : EditorGUIUtility.FindTexture("d_scenevis_visible"), EditorStyles.label))
 				{

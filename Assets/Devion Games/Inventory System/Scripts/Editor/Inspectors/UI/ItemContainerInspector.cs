@@ -20,9 +20,12 @@ namespace DevionGames.InventorySystem
         private SerializedProperty m_SlotParent;
         private AnimBool m_ShowDynamicContainer;
 
+        private SerializedProperty m_UseReferences;
+
         private SerializedProperty m_MoveUsedItems;
         private SerializedProperty m_MoveItemConditions;
         private AnimBool m_ShowMoveUsedItems;
+
 
         private ReorderableList m_MoveItemConditionList;
 
@@ -53,6 +56,7 @@ namespace DevionGames.InventorySystem
             this.m_ShowDynamicContainer = new AnimBool(this.m_DynamicContainer.boolValue);
             this.m_ShowDynamicContainer.valueChanged.AddListener(new UnityAction(this.Repaint));
 
+            this.m_UseReferences = serializedObject.FindProperty("m_UseReferences");
 
             this.m_MoveUsedItems = serializedObject.FindProperty("m_MoveUsedItem");
             this.m_MoveItemConditions = serializedObject.FindProperty("moveItemConditions");
@@ -87,6 +91,7 @@ namespace DevionGames.InventorySystem
                 this.m_DynamicContainer.propertyPath,
                 this.m_SlotParent.propertyPath,
                 this.m_SlotPrefab.propertyPath,
+                this.m_UseReferences.propertyPath,
                 this.m_MoveUsedItems.propertyPath,
                 this.m_MoveItemConditions.propertyPath,
                 this.m_Restrictions.propertyPath
@@ -114,7 +119,17 @@ namespace DevionGames.InventorySystem
                 EditorGUI.indentLevel = EditorGUI.indentLevel - 1;
             }
             EditorGUILayout.EndFadeGroup();
+            ItemCollection collection = (target as ItemContainer).GetComponent<ItemCollection>();
+            EditorGUI.BeginDisabledGroup(collection != null);
+            if (collection != null) {
+                EditorGUILayout.HelpBox("You can't use references with an ItemCollection component.", MessageType.Warning);
+                this.m_UseReferences.boolValue = false;
+            }
+            EditorGUILayout.PropertyField(this.m_UseReferences);
+            
+            EditorGUI.EndDisabledGroup();
 
+        
             DrawTypePropertiesExcluding(typeof(ItemContainer),this.m_PropertiesToExcludeForDefaultInspector);
 
             EditorGUILayout.PropertyField(this.m_MoveUsedItems);
