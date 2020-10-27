@@ -168,9 +168,8 @@ namespace DevionGames{
 						Select(currentItem);
 						Event.current.Use();
 					}
+					DrawItemLabel(i, currentItem);
 
-
-					GUILayout.Label(ButtonLabel(i, currentItem), Styles.selectButtonText);
 					GUI.backgroundColor = backgroundColor;
 					Styles.selectButtonText.normal.textColor = textColor;
 					Styles.selectButtonText.fontStyle = FontStyle.Normal;
@@ -366,6 +365,10 @@ namespace DevionGames{
 		/// <param name="item">Item.</param>
 		protected virtual void DrawItem(T item){}
 
+		protected virtual void DrawItemLabel(int index, T item) {
+			GUILayout.Label(ButtonLabel(index, item), Styles.selectButtonText);
+		}
+
 		/// <summary>
 		/// Gets the sidebar label displayed in sidebar.
 		/// </summary>
@@ -373,9 +376,10 @@ namespace DevionGames{
 		/// <param name="item">Item.</param>
 		protected abstract string GetSidebarLabel(T item);
 
-        protected virtual string ButtonLabel(int index, T item) {
-            return index + ":  " + GetSidebarLabel(item);
-        }
+		protected virtual string ButtonLabel(int index, T item)
+		{
+			return index + ":  " + GetSidebarLabel(item);
+		}
 
 		/// <summary>
 		/// Checks for search.
@@ -445,6 +449,7 @@ namespace DevionGames{
 			public static Color warningColor;
 			public static GUIStyle dragInsertion;
 
+			public static GUIStyle indicatorColor;
 
 			private static GUISkin skin;
 
@@ -483,6 +488,9 @@ namespace DevionGames{
 				selectButtonText.normal.textColor = EditorGUIUtility.isProSkin ? new Color(0.788f, 0.788f, 0.788f, 1f) : new Color(0.047f, 0.047f, 0.047f, 1f);
 				background = new GUIStyle("PopupCurveSwatchBackground");
 				dragInsertion = new GUIStyle("PR Insertion");
+				indicatorColor = new GUIStyle(selectButton);
+				indicatorColor.margin = new RectOffset(0,0,4,0);
+				indicatorColor.padding = new RectOffset(1,1,1,1);
 			}
 		}
 	}

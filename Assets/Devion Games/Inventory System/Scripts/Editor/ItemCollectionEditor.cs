@@ -94,7 +94,7 @@ namespace DevionGames.InventorySystem
 
         protected override void CreateItem(Type type)
         {
-			Item item = (Item)ScriptableObject.CreateInstance(type);
+            Item item = (Item)ScriptableObject.CreateInstance(type);
 			item.hideFlags = HideFlags.HideInHierarchy;
 			if (InventorySystemEditor.Database.categories.Count > 0) {
 				item.Category = InventorySystemEditor.Database.categories[0];
@@ -117,12 +117,26 @@ namespace DevionGames.InventorySystem
 		{
 			base.AddContextItem(menu);
 			menu.AddItem(new GUIContent("Sort/Category"), false, delegate {
-				Item selected = selectedItem;
+                Item selected = selectedItem;
 				Items.Sort(delegate (Item a, Item b) {
 					return a.Category.Name.CompareTo(b.Category.Name); 
 				});
 				Select(selected);
 			});
+		}
+
+		protected override void DrawItemLabel(int index, Item item)
+		{
+			GUILayout.BeginHorizontal();
+			Color color = GUI.backgroundColor;
+			GUI.backgroundColor = item.Category.EditorColor;
+			Texture2D icon = null;
+			if (item.Icon != null)
+				icon = item.Icon.texture;
+			GUILayout.Label(icon, Styles.indicatorColor, GUILayout.Width(17), GUILayout.Height(17));
+			GUI.backgroundColor = color;
+			GUILayout.Label(item.Name, Styles.selectButtonText);
+			GUILayout.EndHorizontal();
 		}
 	}
 }

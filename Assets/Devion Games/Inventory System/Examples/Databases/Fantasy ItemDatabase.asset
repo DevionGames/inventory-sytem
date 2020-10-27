@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Tool
+  m_EditorColor: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
   m_Cooldown: 1
 --- !u!114 &-8967533827971111582
 MonoBehaviour:
@@ -294,6 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Material
+  m_EditorColor: {r: 0.36739054, g: 0.6037736, b: 0.4591628, a: 1}
   m_Cooldown: 1
 --- !u!114 &-6642204398173666289
 MonoBehaviour:
@@ -361,6 +363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: None
+  m_EditorColor: {r: 1, g: 1, b: 1, a: 0}
   m_Cooldown: 1
 --- !u!114 &-5663772737389988193
 MonoBehaviour:
@@ -411,6 +414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Weapon
+  m_EditorColor: {r: 0.8962264, g: 0.17846043, b: 0.012682426, a: 1}
   m_Cooldown: 1
 --- !u!114 &-4474190543486091594
 MonoBehaviour:
@@ -701,6 +705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Spells
+  m_EditorColor: {r: 0, g: 0, b: 0, a: 0}
   m_Cooldown: 1
 --- !u!114 &-3817802777368614781
 MonoBehaviour:
@@ -1035,9 +1040,9 @@ MonoBehaviour:
   - {fileID: 3129509250564287029}
   - {fileID: -4423743630002525559}
   - {fileID: 4447567160419299934}
+  - {fileID: -2839999955813321745}
   - {fileID: 8692695060773013855}
   - {fileID: 2033560685258441697}
-  - {fileID: -2839999955813321745}
   - {fileID: -447126039411374142}
   - {fileID: -4474190543486091594}
   - {fileID: 2409076057030828310}
@@ -1110,6 +1115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Teleporter
+  m_EditorColor: {r: 0, g: 0, b: 0, a: 0}
   m_Cooldown: 1
 --- !u!114 &171625507360801261
 MonoBehaviour:
@@ -1124,6 +1130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Consumable
+  m_EditorColor: {r: 1, g: 0.8296584, b: 0, a: 1}
   m_Cooldown: 1
 --- !u!114 &316844889573954113
 MonoBehaviour:
@@ -2295,6 +2302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Armor
+  m_EditorColor: {r: 0.81960785, g: 0.6627451, b: 0.4, a: 1}
   m_Cooldown: 1
 --- !u!114 &8763039942855579107
 MonoBehaviour:

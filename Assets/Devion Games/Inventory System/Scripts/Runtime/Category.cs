@@ -11,6 +11,12 @@ namespace DevionGames.InventorySystem{
 			set{this.name = value;}
 		}
 
+		[SerializeField]
+		private Color m_EditorColor = Color.clear;
+		public Color EditorColor {
+			get { return this.m_EditorColor; }
+		}
+
         [SerializeField]
         private float m_Cooldown = 1f;
         public float Cooldown {

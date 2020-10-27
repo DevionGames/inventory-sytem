@@ -103,6 +103,7 @@ namespace DevionGames.UIWidgets
 						canvasGroup.interactable = true;
 						canvasGroup.blocksRaycasts = true;
 					}
+					EditorUtility.SetDirty(canvasGroup);
 				}
 
 				GUILayout.Label (paths [i], EditorStyles.wordWrappedLabel);

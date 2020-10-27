@@ -10,17 +10,17 @@ namespace DevionGames.UIWidgets
 	public class RadialMenu : UIWidget
 	{
 		[SerializeField]
-		private float m_Radius = 100f;
+		protected float m_Radius = 100f;
 		[SerializeField]
-		private float m_Angle = 360f;
+		protected float m_Angle = 360f;
 		[Header ("Reference")]
 		[SerializeField]
-		private MenuItem m_Item = null;
+		protected MenuItem m_Item = null;
 
 		private List<MenuItem> itemCache = new List<MenuItem> ();
 
 
-		private void Update ()
+		protected virtual void Update ()
 		{
 			if (m_CanvasGroup.alpha > 0f && (Input.GetMouseButtonUp (0) || Input.GetMouseButtonUp (1) || Input.GetMouseButtonUp (2))) {
 
@@ -63,7 +63,7 @@ namespace DevionGames.UIWidgets
 			base.Show ();
 		}
 
-		private MenuItem AddMenuItem (Sprite icon)
+		protected virtual MenuItem AddMenuItem (Sprite icon)
 		{
 			MenuItem item = itemCache.Find (x => !x.isActiveAndEnabled);
 			if (item == null) {
