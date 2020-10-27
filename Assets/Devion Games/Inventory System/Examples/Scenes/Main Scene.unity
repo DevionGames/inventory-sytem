@@ -10101,6 +10101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68165cdf1896c89479a91b2478670c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveable: 1
   items: []
   amounts: 
   randomProperty: []
@@ -11585,6 +11586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68165cdf1896c89479a91b2478670c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveable: 0
   items: []
   amounts: 
   randomProperty: []
@@ -14797,6 +14799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68165cdf1896c89479a91b2478670c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveable: 1
   items: []
   amounts: 
   randomProperty: []
@@ -17442,7 +17445,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 601443361}
   m_HandleRect: {fileID: 601443360}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -24315,6 +24318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68165cdf1896c89479a91b2478670c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveable: 0
   items: []
   amounts: 
   randomProperty: []
@@ -24342,7 +24346,7 @@ MonoBehaviour:
   showSound: {fileID: 0}
   closeSound: {fileID: 0}
   m_Focus: 1
-  m_DeactivateOnClose: 1
+  m_DeactivateOnClose: 0
   onShow:
     m_PersistentCalls:
       m_Calls: []
@@ -24373,9 +24377,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 601508441}
   m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!1 &601691200
 GameObject:
@@ -36515,6 +36519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68165cdf1896c89479a91b2478670c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveable: 0
   items: []
   amounts: 
   randomProperty: []
@@ -40842,6 +40847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68165cdf1896c89479a91b2478670c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveable: 1
   items: []
   amounts: 
   randomProperty: []
@@ -58113,6 +58119,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8634550540918060661, guid: 93e4d3ccf7aab4940b58932f25b77b21,
+        type: 3}
+      propertyPath: saveable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8634550540918060662, guid: 93e4d3ccf7aab4940b58932f25b77b21,
         type: 3}
       propertyPath: m_Name
@@ -62920,6 +62931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68165cdf1896c89479a91b2478670c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveable: 1
   items: []
   amounts: 
   randomProperty: []
@@ -70629,7 +70641,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 732875891}
   m_HandleRect: {fileID: 732875890}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -71190,6 +71202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68165cdf1896c89479a91b2478670c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveable: 1
   items: []
   amounts: 
   randomProperty: []
@@ -75829,7 +75842,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1285114968}
   m_HandleRect: {fileID: 1285114967}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -82779,6 +82792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68165cdf1896c89479a91b2478670c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveable: 0
   items: []
   amounts: 
   randomProperty: []
@@ -89292,6 +89306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68165cdf1896c89479a91b2478670c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveable: 1
   items: []
   amounts: 
   randomProperty: []

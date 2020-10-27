@@ -247,7 +247,7 @@ namespace DevionGames.InventorySystem
             //DontDestroyOnLoad GameObjects
             SingleInstance.GetInstanceObjects().ForEach(g => results.AddRange(g.GetComponentsInChildren<MonoBehaviour>(true)));
             
-            ItemCollection[] serializables  = results.OfType<ItemCollection>().ToArray();
+            ItemCollection[] serializables  = results.OfType<ItemCollection>().Where(x=>x.saveable).ToArray();
 
             IJsonSerializable[] ui = serializables.Where(x=>x.GetComponent<ItemContainer>() != null).ToArray();
             IJsonSerializable[] world = serializables.Except(ui).ToArray();
@@ -343,7 +343,7 @@ namespace DevionGames.InventorySystem
 
             if (string.IsNullOrEmpty(json)) return;
            
-            ItemCollection[] itemCollections = FindObjectsOfType<ItemCollection>();
+            ItemCollection[] itemCollections = FindObjectsOfType<ItemCollection>().Where(x=>x.saveable).ToArray();
             for (int i = 0; i < itemCollections.Length; i++)
             {
                 ItemCollection collection = itemCollections[i];

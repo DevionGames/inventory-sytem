@@ -75,8 +75,6 @@ namespace DevionGames.InventorySystem
             handler.OnFailedToBuyItem(item, player, failureCause);
         }
 
-
-
         protected override void Start()
         {
             base.Start();
@@ -191,7 +189,6 @@ namespace DevionGames.InventorySystem
                 }
             }
         }
-
 
         public void SellItem(Item item, int amount, bool showDialog = true)
         {

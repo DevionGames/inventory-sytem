@@ -71,7 +71,6 @@ namespace DevionGames
             //Can the trigger be used?
             if (!CanUse())
             {
-                Debug.Log("Cant Use");
                 return false;
             }
             //Trigger.currentUsedTrigger = this;

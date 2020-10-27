@@ -8,6 +8,7 @@ namespace DevionGames.InventorySystem
 {
 	public class ItemCollection : MonoBehaviour, IEnumerable<Item>, IJsonSerializable
     {
+        public bool saveable = true;
 		[ItemPicker (true)]
 		[SerializeField]
 		protected List<Item> items = new List<Item> ();
@@ -57,7 +58,7 @@ namespace DevionGames.InventorySystem
             //Stack same currencies
             CombineCurrencies();
             ItemCollectionPopulator populator = GetComponent<ItemCollectionPopulator>();
-            if (populator != null) {
+            if (populator != null && populator.enabled) {
                 Add(InventoryManager.CreateInstances(populator.m_ItemGroup));
             } 
             this.m_Initialized = true;
@@ -236,7 +237,7 @@ namespace DevionGames.InventorySystem
                             amounts[i] = 0;
                             randomProperty[i] = 0f;
 
-                            if (itemData.ContainsKey("Slots"))
+                            if (itemData.ContainsKey("Slots") && container != null)
                             {
                                 List<object> slots = itemData["Slots"] as List<object>;
                                 for (int j = 0; j < slots.Count; j++)

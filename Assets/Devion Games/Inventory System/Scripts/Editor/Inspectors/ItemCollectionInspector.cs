@@ -10,11 +10,13 @@ namespace DevionGames.InventorySystem
 	public class ItemCollectionInspector : Editor
 	{
 		private SerializedProperty script;
+        private SerializedProperty savebale;
 		private ReorderableList itemList;
 
 		private void OnEnable ()
 		{
 			this.script = serializedObject.FindProperty ("m_Script");
+            this.savebale = serializedObject.FindProperty("saveable");
             SerializedProperty items = serializedObject.FindProperty("items");
             if (items.arraySize > 0) {
                 CheckForDatabase(items.GetArrayElementAtIndex(0).objectReferenceValue);
@@ -112,63 +114,18 @@ namespace DevionGames.InventorySystem
                         InventorySystemEditor.Database = databases[i];
                     }
 
-                    /*if (typeof(Item).IsAssignableFrom(current.GetType()))
-                    {
-
-                        if (databases[i].items.Contains((Item)current))
-                        {
-                            InventorySystemEditor.Database = databases[i];
-                            break;
-                        }
-                    }
-                    if (typeof(Currency).IsAssignableFrom(current.GetType()))
-                    {
-
-                        if (databases[i].currencies.Contains((Currency)current))
-                        {
-                            InventorySystemEditor.Database = databases[i];
-                            break;
-                        }
-                    }
-                    if (typeof(EquipmentRegion).IsAssignableFrom(current.GetType()))
-                    {
-
-                        if (databases[i].equipments.Contains((EquipmentRegion)current))
-                        {
-                            InventorySystemEditor.Database = databases[i];
-                            break;
-                        }
-                    }
-                    if (typeof(Rarity).IsAssignableFrom(current.GetType()))
-                    {
-
-                        if (databases[i].raritys.Contains((Rarity)current))
-                        {
-                            InventorySystemEditor.Database = databases[i];
-                            break;
-                        }
-                    }
-                    if (typeof(Category).IsAssignableFrom(current.GetType()))
-                    {
-
-                        if (databases[i].categories.Contains((Category)current))
-                        {
-                            InventorySystemEditor.Database = databases[i];
-                            break;
-                        }
-                    }*/
                 }
             }
         }
 
         public override void OnInspectorGUI ()
 		{
-			bool uiState = GUI.enabled;
-			GUI.enabled = false;
+            EditorGUI.BeginDisabledGroup(true);
 			EditorGUILayout.PropertyField (script);
-			GUI.enabled = uiState;
+            EditorGUI.EndDisabledGroup();
 
 			serializedObject.Update ();
+            EditorGUILayout.PropertyField(savebale);
 			GUILayout.Space (3f);
 			itemList.elementHeight = (InventorySystemEditor.Database != null && (InventorySystemEditor.Database.items.Count > 0 || InventorySystemEditor.Database.currencies.Count>0) || itemList.count == 0 ? 21 : (30 + EditorGUIUtility.singleLineHeight + 4));
 			itemList.DoLayoutList ();

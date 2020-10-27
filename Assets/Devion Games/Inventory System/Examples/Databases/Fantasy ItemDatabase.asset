@@ -217,7 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoSave: 1
   savingKey: Player
-  savingRate: 60
+  savingRate: 10
   provider: 0
 --- !u!114 &-8192587188366231400
 MonoBehaviour:

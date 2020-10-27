@@ -19,7 +19,6 @@ namespace DevionGames.InventorySystem
         Middle = 4
     }
 
-
     public class ItemContainer : UIWidget, IDropHandler
     {
         public override string[] Callbacks
@@ -213,8 +212,6 @@ namespace DevionGames.InventorySystem
             protected set { this.m_MoveUsedItem = value; }
         }
 
-     
-
         /// <summary>
         /// Conditions for auto moving items when used
         /// </summary>
@@ -246,6 +243,7 @@ namespace DevionGames.InventorySystem
                 value.Initialize();
                 this.m_Collection = value;
                 CurrencySlot[] currencySlots = GetSlots<CurrencySlot>();
+
                 for (int i = 0; i < currencySlots.Length; i++) {
                     Currency defaultCurrency = currencySlots[i].GetDefaultCurrency();
                     Currency currency = m_Collection.Where(x => typeof(Currency).IsAssignableFrom(x.GetType()) && x.Id == defaultCurrency.Id).FirstOrDefault() as Currency;
@@ -279,7 +277,6 @@ namespace DevionGames.InventorySystem
                         if (CanAddItem(item, out slot)) {
                             ReplaceItem(slot.Index, item);
                         }
-                       
                     }
 
                 }
@@ -298,7 +295,6 @@ namespace DevionGames.InventorySystem
             RefreshSlots();
             RegisterCallbacks();
             this.Collection = GetComponent<ItemCollection>();
-            
         }
 
         /// <summary>
@@ -340,7 +336,6 @@ namespace DevionGames.InventorySystem
             {
                 requiredSlotsObserved.Add(s2);
             }
-
 
             Item[] itemsInRequiredSlotsObserved = requiredSlotsObserved.Where(x => x.ObservedItem != null).Select(y => y.ObservedItem).Distinct().ToArray();
             Slot[] willBeFreeSlotsObserved = s1.Container.GetSlots(s1.ObservedItem);
@@ -464,7 +459,6 @@ namespace DevionGames.InventorySystem
                 }
                
                 slot.Container.ReplaceItem(slot.Index, item);
-
                 return true;
             }
             //Return false if the item can't be stacked to the slot
@@ -694,7 +688,6 @@ namespace DevionGames.InventorySystem
 
                 if (item != null)
                 {
-
                     for (int i = 0; i < slotsForItem.Count; i++)
                     {
                         Item current = slotsForItem[i].ObservedItem;
@@ -706,7 +699,6 @@ namespace DevionGames.InventorySystem
                         slotsForItem[i].ObservedItem = item;
                         if (UseReferences && !item.ReferencedSlots.Contains(slotsForItem[i]))
                             item.ReferencedSlots.Add(slotsForItem[i]);
-
                     }
 
                     if (!UseReferences)
@@ -720,8 +712,6 @@ namespace DevionGames.InventorySystem
                         item.ReferencedSlots = item.ReferencedSlots.Except(slotsForItem).ToList();
                         item.ReferencedSlots.AddRange(slotsForItem);
                     }
-
-
                     OnAddItem(item, slot);
                 }
             }
@@ -825,7 +815,6 @@ namespace DevionGames.InventorySystem
                     }
                 }
             }
-
             return (currentAmount <= 0);
         }
 
@@ -892,8 +881,10 @@ namespace DevionGames.InventorySystem
                     if (this.m_Slots[i].ObservedItem != null)
                     {
                         Item item = this.m_Slots[i].ObservedItem;
+                       // item.Slots.Remove(this.m_Slots[i]);
                         OnRemoveItem(item, item.Stack, this.m_Slots[i]);
                     }
+                   
                     DestroyImmediate(this.m_Slots[i].gameObject);
                 }
                 RefreshSlots();
@@ -905,9 +896,12 @@ namespace DevionGames.InventorySystem
                     if (this.m_Slots[i].ObservedItem != null)
                     {
                         Item item = this.m_Slots[i].ObservedItem;
+                       // item.Slots.Remove(this.m_Slots[i]);
                         OnRemoveItem(item, item.Stack, this.m_Slots[i]); 
                     }
+
                     this.m_Slots[i].ObservedItem = null;
+                    
                 }
             }
             if (!UseReferences && !keepInCollection)
@@ -915,7 +909,6 @@ namespace DevionGames.InventorySystem
                 //Remove items from the collection
                 this.m_Collection.Clear();
             }
-
         }
 
         /// <summary>
@@ -1067,7 +1060,6 @@ namespace DevionGames.InventorySystem
                     }
                 }
             }
-
             return slots;
         }
 
@@ -1222,7 +1214,6 @@ namespace DevionGames.InventorySystem
                 for (int i = 0; i < this.m_Slots.Count; i++)
                 {
                     this.m_Slots[i].gameObject.SetActive(true);
-
                 }
             }
         }

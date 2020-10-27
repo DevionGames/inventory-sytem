@@ -40,17 +40,6 @@ namespace DevionGames.InventorySystem
             }
             set {
                 this.m_Item = value;
-
-               /* if (this.m_Item != null) {
-                    if (!Container.UseReferences && !this.m_Item.Slots.Contains(this)){
-                        this.m_Item.Slots.Add(this);
-                    }else{
-                        if (!this.m_Item.ReferencedSlots.Contains(this))
-                        {
-                            this.m_Item.ReferencedSlots.Add(this);
-                        }
-                    }
-                } */
                 Repaint();
             }
         }
