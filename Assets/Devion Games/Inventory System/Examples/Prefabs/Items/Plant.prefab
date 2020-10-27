@@ -1,0 +1,253 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3767645054357415353
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7782236776755126085}
+  - component: {fileID: 3613579156844543496}
+  - component: {fileID: 1724314183041878354}
+  - component: {fileID: 1972004500636189688}
+  - component: {fileID: 6018296806943748532}
+  - component: {fileID: 3939460662708250679}
+  - component: {fileID: 5110815792147085530}
+  m_Layer: 0
+  m_Name: Plant
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7782236776755126085
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3767645054357415353}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3613579156844543496
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3767645054357415353}
+  m_Mesh: {fileID: 4300002, guid: dfbca7c1b32489d419cf375566fae25a, type: 3}
+--- !u!23 &1724314183041878354
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3767645054357415353}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 6bc9c2d16e26f2445b9f59ec07d6fb10, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!64 &1972004500636189688
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3767645054357415353}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300004, guid: dfbca7c1b32489d419cf375566fae25a, type: 3}
+--- !u!114 &6018296806943748532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3767645054357415353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e2a0650d79394740b1bdb39be00be6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delegates: []
+  useDistance: 1.2
+  triggerType: 3
+  key: 102
+  actions:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  - id: 5
+  - id: 6
+  - id: 7
+  - id: 8
+  references:
+    version: 1
+    00000000:
+      type: {class: CanPickup, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.CanPickup
+        m_Enabled: 1
+        m_WindowName: Inventory
+    00000001:
+      type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.SetEnabled
+        m_Enabled: 1
+        m_Target: 1
+        m_ComponentName: ThirdPersonController
+        m_Enable: 0
+    00000002:
+      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.SendMessage
+        m_Enabled: 1
+        m_Target: 1
+        methodName: SetIK
+        m_Argument:
+          m_BoolValue: 0
+          m_IntValue: 0
+          m_FloatValue: 0
+          m_StringValue: 
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 1
+        m_Options: 1
+    00000003:
+      type: {class: LookAtTrigger, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.LookAtTrigger
+        m_Enabled: 1
+        m_Speed: 15
+    00000004:
+      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.CrossFade
+        m_Enabled: 1
+        m_Target: 1
+        m_AnimatorState: Pickup Plant
+        m_TransitionDuration: 0.2
+    00000005:
+      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.Wait
+        m_Enabled: 1
+        duration: 6
+    00000006:
+      type: {class: Pickup, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.Pickup
+        m_Enabled: 1
+        m_WindowName: Inventory
+        m_DestroyWhenEmpty: 1
+        m_Amount: 1
+    00000007:
+      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.SendMessage
+        m_Enabled: 1
+        m_Target: 1
+        methodName: SetIK
+        m_Argument:
+          m_BoolValue: 1
+          m_IntValue: 0
+          m_FloatValue: 0
+          m_StringValue: 
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 1
+        m_Options: 1
+    00000008:
+      type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.SetEnabled
+        m_Enabled: 1
+        m_Target: 1
+        m_ComponentName: ThirdPersonController
+        m_Enable: 1
+--- !u!114 &3939460662708250679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3767645054357415353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68165cdf1896c89479a91b2478670c0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: -1175442255857385599, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
+  - {fileID: -1175442255857385599, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
+  - {fileID: -1175442255857385599, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
+  amounts: 010000000100000001000000
+  randomProperty:
+  - 0
+  - 0
+  - 0
+  onChange:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!54 &5110815792147085530
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3767645054357415353}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

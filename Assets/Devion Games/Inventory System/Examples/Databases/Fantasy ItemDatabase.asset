@@ -217,7 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoSave: 1
   savingKey: Player
-  savingRate: 10
+  savingRate: 60
   provider: 0
 --- !u!114 &-8192587188366231400
 MonoBehaviour:
@@ -692,6 +692,24 @@ MonoBehaviour:
   tooltipName: Tooltip
   stackName: Stack
   notificationName: Notification
+--- !u!114 &-4213577332647146612
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28fccac83a2fa2245991bffe45a6cdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_GroupName: Alchemy
+  m_Items:
+  - {fileID: 8429455951140046941}
+  m_Amounts: 01000000
+  m_RandomProperty:
+  - 0
 --- !u!114 &-3989543302354102894
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -957,6 +975,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Head
+--- !u!114 &-1175442255857385599
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Id: 344ba9ba-a2e4-4bf8-b120-830bbdfca227
+  m_ItemName: Plant
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: 597ce5b3f1754db4799e0b0046802f23, type: 3}
+  m_Prefab: {fileID: 3767645054357415353, guid: 9a894f0b89034d146b6cf6c49af16592,
+    type: 3}
+  m_Description: Plant to craft a health potion.
+  m_Category: {fileID: -7427245140175711199}
+  m_PossibleRarity: []
+  m_BuyPrice: 4
+  m_BuyCurrency: {fileID: -2811142919616601772}
+  m_SellPrice: 3
+  m_SellCurrency: {fileID: -2811142919616601772}
+  m_Stack: 1
+  m_MaxStack: 10
+  m_IsDroppable: 0
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_CraftingAnimatorState: Blacksmithy
+  ingredients: []
+  properties: []
 --- !u!114 &-447126039411374142
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1048,6 +1102,8 @@ MonoBehaviour:
   - {fileID: 2409076057030828310}
   - {fileID: 960666660569578442}
   - {fileID: -8967533827971111582}
+  - {fileID: -1175442255857385599}
+  - {fileID: 529780001783015153}
   currencies:
   - {fileID: -2811142919616601772}
   - {fileID: -6442420119529586086}
@@ -1082,6 +1138,7 @@ MonoBehaviour:
   - {fileID: -8192587188366231400}
   - {fileID: 6066131165606410366}
   - {fileID: 7990749027154876597}
+  - {fileID: -4213577332647146612}
   settings:
   - {fileID: -3817802777368614781}
   - {fileID: -8057506047932969836}
@@ -1145,6 +1202,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Right Hand
+--- !u!114 &529780001783015153
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Id: 63bb00df-e2e8-4e6e-8552-bb9d27049d1b
+  m_ItemName: Bowl
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: a937ffac382045c4faf50a0158a078c7, type: 3}
+  m_Prefab: {fileID: 6550093729711604389, guid: 53bbca1204ea7aa48938286fdd6d36b6,
+    type: 3}
+  m_Description: Tool used for Alchemy.
+  m_Category: {fileID: -9040799555073544844}
+  m_PossibleRarity: []
+  m_BuyPrice: 10
+  m_BuyCurrency: {fileID: -2811142919616601772}
+  m_SellPrice: 7
+  m_SellCurrency: {fileID: -2811142919616601772}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 1
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 1
+  m_CraftingDuration: 2
+  m_CraftingAnimatorState: Blacksmithy
+  ingredients:
+  - item: {fileID: 8763039942855579107}
+    amount: 2
+  properties: []
+  m_UseCategoryCooldown: 1
+  m_Cooldown: 1
+  actions:
+  - id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: ShowWindow, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.ShowWindow
+        m_Enabled: 1
+        m_WindowName: Alchemy
+        m_DestroyWhenEmpty: 0
 --- !u!114 &960666660569578442
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2134,10 +2242,12 @@ MonoBehaviour:
   m_IsDroppable: 1
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
+  m_IsCraftable: 1
   m_CraftingDuration: 2
-  m_CraftingAnimatorState: Blacksmithy
-  ingredients: []
+  m_CraftingAnimatorState: 
+  ingredients:
+  - item: {fileID: -1175442255857385599}
+    amount: 1
   properties: []
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
