@@ -58,3 +58,6 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# Refactoring Tests
+/[Aa]ssets/Refactoring*
+
