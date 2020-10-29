@@ -11,7 +11,7 @@ namespace DevionGames.InventorySystem
         private string m_WindowName = "Equipment";
 
         [SerializeField]
-        private List<EquipmentBone> m_Bones;
+        private List<EquipmentBone> m_Bones= new List<EquipmentBone>();
         public List<EquipmentBone> Bones
         {
             get { return this.m_Bones; }

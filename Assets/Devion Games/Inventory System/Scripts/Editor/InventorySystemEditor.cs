@@ -70,9 +70,12 @@ namespace DevionGames.InventorySystem
 
         private void OnDisable()
         {
-			for (int i = 0; i < childEditors.Count; i++)
+			if (childEditors != null)
 			{
-				childEditors[i].OnDisable();
+				for (int i = 0; i < childEditors.Count; i++)
+				{
+					childEditors[i].OnDisable();
+				}
 			}
 		}
 
