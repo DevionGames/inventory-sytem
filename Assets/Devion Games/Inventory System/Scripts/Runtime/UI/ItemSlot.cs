@@ -131,6 +131,7 @@ namespace DevionGames.InventorySystem
                     Currency price = Instantiate(ObservedItem.BuyCurrency);
                     price.Stack = Mathf.RoundToInt(ObservedItem.BuyPrice);
                     this.m_BuyPrice.StackOrAdd(price);
+                    //Debug.Log(" Price Update for "+ObservedItem.Name+" "+price.Name+" "+price.Stack);
                 }
             }
         }

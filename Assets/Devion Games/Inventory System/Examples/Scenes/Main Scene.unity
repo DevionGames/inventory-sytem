@@ -10037,16 +10037,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.6
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   useButton: 0
   m_DynamicContainer: 1
   m_SlotParent: {fileID: 313934974}
@@ -10344,16 +10338,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.6
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   useButton: 3
   m_DynamicContainer: 1
   m_SlotParent: {fileID: 1186013985}
@@ -11548,16 +11536,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.7
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   useButton: 0
   m_DynamicContainer: 1
   m_SlotParent: {fileID: 1872334953}
@@ -14854,16 +14836,10 @@ MonoBehaviour:
   m_KeyCode: 112
   m_EaseType: 28
   m_Duration: 0.7
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   useButton: 3
   m_DynamicContainer: 0
   m_SlotParent: {fileID: 445314369}
@@ -20389,21 +20365,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delegates: []
-  name: CraftingProgress
+  name: AlchemyProgress
   priority: 0
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.7
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   progressbar: {fileID: 503195864}
   progressLabel: {fileID: 0}
   format: F0
@@ -20485,7 +20455,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -21750,16 +21720,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.7
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   useButton: 3
   m_DynamicContainer: 0
   m_SlotParent: {fileID: 1161286847}
@@ -24343,16 +24307,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.7
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 0
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   useButton: 0
   m_DynamicContainer: 0
   m_SlotParent: {fileID: 0}
@@ -28218,16 +28176,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.7
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   useButton: -1
   m_DynamicContainer: 1
   m_SlotParent: {fileID: 566865055}
@@ -32891,16 +32843,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.7
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 0
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!225 &810211528
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -35270,7 +35216,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Craft
+  m_Text: Brew
 --- !u!222 &876268044
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -36481,16 +36427,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.7
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   useButton: 0
   m_DynamicContainer: 1
   m_SlotParent: {fileID: 928535952}
@@ -40793,16 +40733,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.6
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   useButton: -1
   m_DynamicContainer: 1
   m_SlotParent: {fileID: 370641829}
@@ -40885,7 +40819,7 @@ MonoBehaviour:
   actions: []
   m_RequiredIngredientsWindow: Inventory
   m_ResultStorageWindow: Inventory
-  m_CraftingProgressbar: CraftingProgress
+  m_CraftingProgressbar: AlchemyProgress
   references:
     version: 1
 --- !u!1 &1007030480
@@ -42492,16 +42426,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.7
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   useButton: 3
   m_DynamicContainer: 0
   m_SlotParent: {fileID: 480013222}
@@ -44176,16 +44104,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.6
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   autoClose: 1
   title: {fileID: 724898219}
   text: {fileID: 157137242}
@@ -47124,7 +47046,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 234574475}
   m_HandleRect: {fileID: 234574474}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -60075,16 +59997,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.7
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   useButton: 0
   m_DynamicContainer: 0
   m_SlotParent: {fileID: 0}
@@ -62891,16 +62807,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.7
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   useButton: -1
   m_DynamicContainer: 0
   m_SlotParent: {fileID: 881816634}
@@ -64765,16 +64675,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.7
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   progressbar: {fileID: 1543196575}
   progressLabel: {fileID: 0}
   format: F0
@@ -67889,16 +67793,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.7
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1614786595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70641,7 +70539,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 732875891}
   m_HandleRect: {fileID: 732875890}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -71150,16 +71048,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.6
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   useButton: 3
   m_DynamicContainer: 1
   m_SlotParent: {fileID: 1677410634}
@@ -75105,16 +74997,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.7
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   useButton: 0
   m_DynamicContainer: 0
   m_SlotParent: {fileID: 0}
@@ -75739,16 +75625,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.7
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!225 &1798291659
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -81434,16 +81314,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.6
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1934526184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82817,16 +82691,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.7
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   useButton: 0
   m_DynamicContainer: 0
   m_SlotParent: {fileID: 0}
@@ -89252,16 +89120,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.6
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   useButton: -1
   m_DynamicContainer: 1
   m_SlotParent: {fileID: 2115602968}

@@ -10,15 +10,9 @@ namespace DevionGames
     {
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
-            EnumFlagsAttribute attr = attribute as EnumFlagsAttribute;
-            if (!string.IsNullOrEmpty(attr.label)) {
-                label.text = attr.label;
-            }
-            if (!string.IsNullOrEmpty(attr.tooltip))
-            {
-                label.tooltip = attr.tooltip;
-            }
+            label = EditorGUI.BeginProperty(position, label, property);
             property.intValue = EditorGUI.MaskField(position, label, property.intValue, property.enumNames);
+            EditorGUI.EndProperty();
         }
     }
 }

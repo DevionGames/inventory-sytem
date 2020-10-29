@@ -130,7 +130,7 @@ namespace DevionGames.InventorySystem
             GameObject user = InventoryManager.current.PlayerInfo.gameObject;
             if (user != null)
             {
-                user.transform.LookAt(new Vector3(Trigger.currentUsedTrigger.transform.position.x, user.transform.position.y, Trigger.currentUsedTrigger.transform.position.z));
+                //user.transform.LookAt(new Vector3(Trigger.currentUsedTrigger.transform.position.x, user.transform.position.y, Trigger.currentUsedTrigger.transform.position.z));
                 user.SendMessage("SetControllerActive", false, SendMessageOptions.DontRequireReceiver);
 
                 Animator animator = InventoryManager.current.PlayerInfo.animator;

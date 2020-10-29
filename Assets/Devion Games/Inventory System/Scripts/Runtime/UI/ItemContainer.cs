@@ -242,6 +242,7 @@ namespace DevionGames.InventorySystem
                 RemoveItems(true);
                 value.Initialize();
                 this.m_Collection = value;
+              
                 CurrencySlot[] currencySlots = GetSlots<CurrencySlot>();
 
                 for (int i = 0; i < currencySlots.Length; i++) {
@@ -251,6 +252,7 @@ namespace DevionGames.InventorySystem
                         ReplaceItem(currencySlots[i].Index, defaultCurrency);
                     } else {
                         currencySlots[i].ObservedItem = currency;
+                        currency.Slots.Add(currencySlots[i]);
                     }
                 }
 
@@ -266,6 +268,7 @@ namespace DevionGames.InventorySystem
                         {
                             item.Slots[j].ObservedItem = item;
                         }
+                        
                         continue;
                     }
                     if (this.m_DynamicContainer) {
@@ -427,6 +430,7 @@ namespace DevionGames.InventorySystem
         public virtual bool StackOrAdd(Item item)
         {
             if (!StackItem(item) && !AddItem(item)){
+              
                 return false;
             }
             return true;
@@ -500,12 +504,15 @@ namespace DevionGames.InventorySystem
             for (int i = 0; i < items.Length; i++)
             {
                 Item current = items[i];
+
                 //Check if max stack is reached
                 if ((current.Stack + item.Stack) <= current.MaxStack)
                 {
+
                     current.Stack += item.Stack;
                     TryConvertCurrency(current as Currency);
                     OnAddItem(item, current.Slot);
+         
                     return true;
                 }
 
@@ -522,6 +529,7 @@ namespace DevionGames.InventorySystem
 
             }
             item.Stack = stack;
+ 
             return false;
         }
 
@@ -881,7 +889,7 @@ namespace DevionGames.InventorySystem
                     if (this.m_Slots[i].ObservedItem != null)
                     {
                         Item item = this.m_Slots[i].ObservedItem;
-                       // item.Slots.Remove(this.m_Slots[i]);
+                        item.Slots.Remove(this.m_Slots[i]);
                         OnRemoveItem(item, item.Stack, this.m_Slots[i]);
                     }
                    

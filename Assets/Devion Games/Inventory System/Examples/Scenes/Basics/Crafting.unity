@@ -445,16 +445,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.7
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   useButton: 0
   m_DynamicContainer: 1
   m_SlotParent: {fileID: 1872334953}
@@ -483,6 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68165cdf1896c89479a91b2478670c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveable: 1
   items: []
   amounts: 
   randomProperty: []
@@ -2810,10 +2805,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Database: {fileID: 11400000, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
   dontDestroyOnLoad: 1
-  onSceneLoaded:
+  onDataLoaded:
     m_PersistentCalls:
       m_Calls: []
-  onSceneSaved:
+  onDataSaved:
     m_PersistentCalls:
       m_Calls: []
 --- !u!4 &1137376609
@@ -2986,6 +2981,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081286545477115103, guid: 7711700c499322241ad0a6161fccb38f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000033759
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081286545477115103, guid: 7711700c499322241ad0a6161fccb38f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 8081286545680344744, guid: 7711700c499322241ad0a6161fccb38f,
         type: 3}
@@ -4460,16 +4465,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.7
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   progressbar: {fileID: 1543196575}
   progressLabel: {fileID: 0}
   format: F0
@@ -5369,16 +5368,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.7
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   useButton: 0
   m_DynamicContainer: 0
   m_SlotParent: {fileID: 0}
@@ -5488,7 +5481,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1285114968}
   m_HandleRect: {fileID: 1285114967}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -6481,16 +6474,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.6
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   useButton: -1
   m_DynamicContainer: 1
   m_SlotParent: {fileID: 2115602968}
@@ -6535,6 +6522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68165cdf1896c89479a91b2478670c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveable: 1
   items: []
   amounts: 
   randomProperty: []

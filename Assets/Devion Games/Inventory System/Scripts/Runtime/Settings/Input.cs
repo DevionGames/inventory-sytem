@@ -17,7 +17,8 @@ namespace DevionGames.InventorySystem.Configuration
         }
 
         [Header("Unstacking:")]
-        [EnumFlags("Event")]
+        [InspectorLabel("Event")]
+        [EnumFlags]
         public UnstackInput unstackEvent = UnstackInput.OnClick | UnstackInput.OnDrag;
         [InspectorLabel("Key Code")]
         public KeyCode unstackKeyCode = KeyCode.LeftShift;

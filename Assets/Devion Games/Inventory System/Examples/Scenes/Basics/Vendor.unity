@@ -950,16 +950,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.6
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   useButton: 3
   m_DynamicContainer: 1
   m_SlotParent: {fileID: 1186013985}
@@ -1445,16 +1439,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.7
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   useButton: 0
   m_DynamicContainer: 0
   m_SlotParent: {fileID: 0}
@@ -3379,16 +3367,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.6
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   autoClose: 1
   title: {fileID: 724898219}
   text: {fileID: 157137242}
@@ -4102,6 +4084,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081286545477115103, guid: 7711700c499322241ad0a6161fccb38f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000033759
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081286545477115103, guid: 7711700c499322241ad0a6161fccb38f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 8081286545680344744, guid: 7711700c499322241ad0a6161fccb38f,
         type: 3}
@@ -6465,16 +6457,10 @@ MonoBehaviour:
   m_KeyCode: 0
   m_EaseType: 28
   m_Duration: 0.7
-  showSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  m_ShowSound: {fileID: 0}
+  m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onClose:
-    m_PersistentCalls:
-      m_Calls: []
   useButton: 0
   m_DynamicContainer: 0
   m_SlotParent: {fileID: 0}

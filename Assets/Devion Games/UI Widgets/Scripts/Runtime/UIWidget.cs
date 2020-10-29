@@ -1,14 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.Events;
-using System.Collections.Generic;
-using UnityEngine.UI;
 
 namespace DevionGames.UIWidgets
 {
+	/// <summary>
+	/// UIWidget is responsible for the management of widgets as well as animating them. 
+	/// Your custom widgets should extend from this class or from child classes. 
+	/// This way you can always track existing widgets by name in your game using WidgetUtility.Find<T>(name).
+	/// </summary>
 	[RequireComponent (typeof(CanvasGroup))]
 	public class UIWidget : CallbackHandler
 	{
+		/// <summary>
+		/// Name of the widget.
+		/// </summary>
+		[Tooltip("Name of the widget. You can find a reference to a widget with WidgetUtility.Find<T>(name).")]
 		[SerializeField]
 		private new string name;
 
@@ -21,6 +27,9 @@ namespace DevionGames.UIWidgets
 			set{ name = value; }
 		}
 
+		/// <summary>
+		/// Callbacks for Inspector.
+		/// </summary>
         public override string[] Callbacks
         {
             get
@@ -32,6 +41,10 @@ namespace DevionGames.UIWidgets
             }
         }
 
+		/// <summary>
+		/// Widgets with higher priority will be prefered when used with WidgetUtility.Find<T>(name).
+		/// </summary>
+		[Tooltip("Widgets with higher priority will be prefered when used with WidgetUtility.Find<T>(name).")]
         [Range (0, 100)]
 		public int priority;
 
@@ -39,44 +52,48 @@ namespace DevionGames.UIWidgets
         /// Key to toggle show and close
         /// </summary>
         [Header("Appearence")]
+		[Tooltip("Key to show or close this widget.")]
         [SerializeField]
         private KeyCode m_KeyCode = KeyCode.None;
 
+		[Tooltip("Easing equation type used to tween this widget.")]
 		[SerializeField]
 		private EasingEquations.EaseType m_EaseType= EasingEquations.EaseType.EaseInOutBack;
+
         /// <summary>
         /// The duration to tween this widget.
         /// </summary>
-        [SerializeField]
+		[Tooltip("The duration to tween this widget.")]
+		[SerializeField]
 		private float m_Duration = 0.7f;
+
         /// <summary>
         /// The AudioClip that will be played when this widget shows.
         /// </summary>
-        public AudioClip showSound;
+		[Tooltip("The AudioClip that will be played when this widget shows.")]
+		[SerializeField]
+        protected AudioClip m_ShowSound;
+
 		/// <summary>
 		/// The AudioClip that will be played when this widget closes.
 		/// </summary>
-		public AudioClip closeSound;
-        /// <summary>
-        /// Brings this window to front in Show()
-        /// </summary>
-        [SerializeField]
+		[Tooltip("The AudioClip that will be played when this widget closes.")]
+		[SerializeField]
+		protected AudioClip m_CloseSound;
+
+		/// <summary>
+		/// Brings this window to front in Show()
+		/// </summary>
+		[Tooltip("Focus the widget. This will bring the widget to front when it is shown.")]
+		[SerializeField]
         private bool m_Focus = true;
+
         /// <summary>
         /// If true deactivates the gameobject when closed.
         /// </summary>
+		[Tooltip("If true, deactivates the game object when it gets closed. This prevets Update() to be called every frame.")]
         [SerializeField]
 		protected bool m_DeactivateOnClose = true;
-		/// <summary>
-		/// Events that will be invoked when this widget is shows.
-		/// </summary>
-		[HideInInspector]
-		public WidgetEvent onShow;
-		/// <summary>
-		/// Events that will be invoked when this widget closes.
-		/// </summary>
-		[HideInInspector]
-		public WidgetEvent onClose;
 
 		/// <summary>
 		/// Gets a value indicating whether this widget is visible.
@@ -96,18 +113,23 @@ namespace DevionGames.UIWidgets
 		/// The CanvasGroup of the widget.
 		/// </summary>
 		protected CanvasGroup m_CanvasGroup;
-		
+		/// <summary>
+		/// Checks if Show() is already called. This prevents from calling Show() multiple times when the widget is not finished animating. 
+		/// </summary>
+		protected bool m_IsShowing;
+
 		private TweenRunner<FloatTween> m_AlphaTweenRunner;
 		private TweenRunner<Vector3Tween> m_ScaleTweenRunner;
-        protected bool m_IsShowing;
-
-
+       
         private void Awake ()
 		{
+			//Register the KeyCode to show or close the widget.
 			WidgetInputHandler.RegisterInput(this.m_KeyCode, this);
 			m_RectTransform = GetComponent<RectTransform> ();
 			m_CanvasGroup = GetComponent<CanvasGroup> ();
+
 			if (!IsVisible) {
+				//Set local scale to zero, when widget is not visible. Used to correctly animate the widget.
 				m_RectTransform.localScale = Vector3.zero;
 			}
 			if (this.m_AlphaTweenRunner == null)
@@ -117,13 +139,6 @@ namespace DevionGames.UIWidgets
 			if (this.m_ScaleTweenRunner == null)
 				this.m_ScaleTweenRunner = new TweenRunner<Vector3Tween> ();
 			this.m_ScaleTweenRunner.Init (this);
-			
-			onShow.AddListener (delegate {
-				Execute ("OnShow", new CallbackEventData());
-			});
-			onClose.AddListener (delegate {
-				Execute ("OnClose", new CallbackEventData());
-			});
             m_IsShowing = IsVisible;
 			OnAwake ();
 		}
@@ -155,25 +170,21 @@ namespace DevionGames.UIWidgets
 		/// </summary>
 		public virtual void Show ()
 		{
-
-            if (m_IsShowing) {
+            if (this.m_IsShowing) {
                 return;
             }
-            m_IsShowing = true;
+            this.m_IsShowing = true;
 			gameObject.SetActive (true);
-            if (m_Focus) {
+            if (this.m_Focus) {
 				Focus ();
 			}
 			TweenCanvasGroupAlpha (m_CanvasGroup.alpha, 1f);
 			TweenTransformScale (Vector3.ClampMagnitude (m_RectTransform.localScale, 1.9f), Vector3.one);
 			
-			WidgetUtility.PlaySound (showSound, 1.0f);
+			WidgetUtility.PlaySound (this.m_ShowSound, 1.0f);
 			m_CanvasGroup.interactable = true;
 			m_CanvasGroup.blocksRaycasts = true;
-			if (onShow != null) {
-				onShow.Invoke ();
-			}
-
+			Execute("OnShow", new CallbackEventData());
 		}
 
 		/// <summary>
@@ -188,12 +199,11 @@ namespace DevionGames.UIWidgets
 			TweenCanvasGroupAlpha (m_CanvasGroup.alpha, 0f);
 			TweenTransformScale (m_RectTransform.localScale, Vector3.zero);
 			
-			WidgetUtility.PlaySound (closeSound, 1.0f);
+			WidgetUtility.PlaySound (this.m_CloseSound, 1.0f);
 			m_CanvasGroup.interactable = false;
 			m_CanvasGroup.blocksRaycasts = false;
-			if (onClose != null) {
-				onClose.Invoke ();
-			}
+			Execute("OnClose", new CallbackEventData());
+
 		}
 
 		private void TweenCanvasGroupAlpha (float startValue, float targetValue)
@@ -256,13 +266,8 @@ namespace DevionGames.UIWidgets
 		}
 
 		protected virtual void OnDestroy() {
-			WidgetInputHandler.UnregisterInput(m_KeyCode, this);
-		}
-
-		[System.Serializable]
-		public class WidgetEvent:UnityEvent
-		{
-
+			//Unregister input key
+			WidgetInputHandler.UnregisterInput(this.m_KeyCode, this);
 		}
 	}
 }
