@@ -12,6 +12,13 @@ namespace DevionGames.InventorySystem{
 		}
 
 		[SerializeField]
+		private bool m_UseAsNamePrefix = false;
+		public bool UseAsNamePrefix {
+			get { return this.m_UseAsNamePrefix; }
+		}
+
+
+		[SerializeField]
 		private Color color=Color.white;
 		public Color Color{
 			get{return this.color;}

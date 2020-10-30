@@ -19,3 +19,6 @@
 - Sell price tooltip
 - Menu tooltip
 - Item IsSellable field
+- Option to use Rarity name as item name prefix.
+- Option on slot to display rarity color or not.
+- Items of diffrent rarity can't be stacked.

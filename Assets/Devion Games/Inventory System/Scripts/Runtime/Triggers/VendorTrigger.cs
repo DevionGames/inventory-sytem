@@ -142,7 +142,9 @@ namespace DevionGames.InventorySystem
                 if (this.m_PurchasedStorageContainer == null || this.m_PaymentContainer == null){
                     return;
                 }
+                Rarity rarity = item.Rarity;
                 item = Instantiate(item);
+                item.Rarity = rarity;
                 item.Stack = amount;
                 Currency price = Instantiate(item.BuyCurrency);
                 price.Stack = Mathf.RoundToInt(item.BuyPrice * amount);
@@ -160,6 +162,7 @@ namespace DevionGames.InventorySystem
                         for (int i = 0; i < stack; i++)
                         {
                             Item singleItem = Instantiate(item);
+                            singleItem.Rarity = item.Rarity;
                             singleItem.Stack = 1;
                             if (!this.m_PurchasedStorageContainer.StackOrAdd(singleItem))
                             {
@@ -176,6 +179,7 @@ namespace DevionGames.InventorySystem
                     else
                     {
                         Item itemInstance = Instantiate(item);
+                        itemInstance.Rarity = item.Rarity;
                         if (!this.m_PurchasedStorageContainer.StackOrAdd(itemInstance))
                         {
                             this.m_PaymentContainer.StackOrAdd(price);

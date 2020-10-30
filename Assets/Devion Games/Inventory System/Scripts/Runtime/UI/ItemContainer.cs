@@ -513,7 +513,7 @@ namespace DevionGames.InventorySystem
                 return false;
             }
             //Get all items in collection with same id as the item to stack
-            Item[] items = this.m_Collection.Where(x => x != null && x.Id == item.Id).ToArray();
+            Item[] items = this.m_Collection.Where(x => x != null && x.Id == item.Id && x.Rarity == item.Rarity).ToArray();
             int stack = item.Stack;
 
             //Loop through the items
@@ -1192,7 +1192,7 @@ namespace DevionGames.InventorySystem
             Item slotItem = slot.ObservedItem;
             return (slotItem != null &&
                     item != null &&
-                    slotItem.Id == item.Id &&
+                    slotItem.Id == item.Id && slotItem.Rarity== item.Rarity &&
                     (slotItem.Stack + item.Stack) <= slotItem.MaxStack);
         }
 
@@ -1208,7 +1208,7 @@ namespace DevionGames.InventorySystem
                 return false;
             }
             //Get all items in collection with same id as the item to stack
-            Item[] items = this.m_Collection.Where(x => x != null && x.Id == item.Id).ToArray();
+            Item[] items = this.m_Collection.Where(x => x != null && x.Id == item.Id && x.Rarity == item.Rarity).ToArray();
             //Loop through the items
             for (int i = 0; i < items.Length; i++)
             {

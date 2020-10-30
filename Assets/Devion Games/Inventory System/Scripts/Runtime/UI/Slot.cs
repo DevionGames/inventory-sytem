@@ -15,6 +15,12 @@ namespace DevionGames.InventorySystem
         [SerializeField]
         protected Text m_ItemName;
         /// <summary>
+        /// Should the name be colored?
+        /// </summary>
+        [SerializeField]
+        protected bool m_UseRarityColor=false;
+
+        /// <summary>
         /// The Image to display item icon.
         /// </summary>
         [SerializeField]
@@ -118,7 +124,7 @@ namespace DevionGames.InventorySystem
         {
             if (this.m_ItemName != null){
                 //Updates the text with item name and rarity color. If this slot is empty, sets the text to empty.
-                this.m_ItemName.text = (!IsEmpty ? UnityTools.ColorString(ObservedItem.DisplayName, ObservedItem.Rarity.Color) : string.Empty);
+                this.m_ItemName.text = (!IsEmpty ? (this.m_UseRarityColor?UnityTools.ColorString(ObservedItem.DisplayName, ObservedItem.Rarity.Color):ObservedItem.DisplayName) : string.Empty);
             }
 
             if (this.m_Ícon != null){

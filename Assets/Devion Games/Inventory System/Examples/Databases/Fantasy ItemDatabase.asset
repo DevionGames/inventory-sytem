@@ -368,6 +368,119 @@ MonoBehaviour:
   name: None
   m_EditorColor: {r: 1, g: 1, b: 1, a: 0}
   m_Cooldown: 1
+--- !u!114 &-6266380644497530537
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Id: c3599c25-74e3-46fd-97b7-c55ea09e6945
+  m_ItemName: Home Rune
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: 9e2c99a2f1ae70343ba923d766b9ead8, type: 3}
+  m_Prefab: {fileID: 0}
+  m_Description: Brings you home.
+  m_Category: {fileID: -6294223960729143046}
+  m_PossibleRarity: []
+  m_IsSellable: 0
+  m_BuyPrice: 0
+  m_BuyCurrency: {fileID: -2811142919616601772}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: -2811142919616601772}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 0
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_CraftingAnimatorState: Blacksmithy
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 0
+  m_Cooldown: 3
+  actions:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  - id: 5
+  - id: 6
+  - id: 7
+  - id: 8
+  references:
+    version: 1
+    00000000:
+      type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.SetEnabled
+        m_Enabled: 1
+        m_Target: 1
+        m_ComponentName: ThirdPersonController
+        m_Enable: 0
+    00000001:
+      type: {class: SetFloat, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.SetFloat
+        m_Enabled: 1
+        m_Target: 1
+        m_ParameterName: Forward Input
+        m_Value: 0
+    00000002:
+      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.CrossFade
+        m_Enabled: 1
+        m_Target: 1
+        m_AnimatorState: Magic Idle
+        m_TransitionDuration: 0.2
+    00000003:
+      type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.ItemActions.Cooldown
+        m_Enabled: 1
+        item: {fileID: -6266380644497530537}
+        m_GlobalCooldown: 3
+    00000004:
+      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.Wait
+        m_Enabled: 1
+        duration: 3
+    00000005:
+      type: {class: Save, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.Save
+        m_Enabled: 1
+    00000006:
+      type: {class: LoadScene, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.LoadScene
+        m_Enabled: 1
+        m_Scene: Main Scene
+    00000007:
+      type: {class: SetPosition, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.SetPosition
+        m_Enabled: 1
+        m_Target: 1
+        m_Position: {x: 0, y: 0, z: 0}
+    00000008:
+      type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.SetEnabled
+        m_Enabled: 1
+        m_Target: 1
+        m_ComponentName: ThirdPersonController
+        m_Enable: 1
 --- !u!114 &-5663772737389988193
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1116,6 +1229,7 @@ MonoBehaviour:
   - {fileID: -8967533827971111582}
   - {fileID: -1175442255857385599}
   - {fileID: 529780001783015153}
+  - {fileID: -6266380644497530537}
   currencies:
   - {fileID: -2811142919616601772}
   - {fileID: -6442420119529586086}
@@ -1451,6 +1565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Common
+  m_UseAsNamePrefix: 0
   color: {r: 1, g: 1, b: 1, a: 1}
   chance: 80
   multiplier: 1.3
@@ -1717,6 +1832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Junk
+  m_UseAsNamePrefix: 0
   color: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}
   chance: 100
   multiplier: 1
@@ -2219,6 +2335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Rare
+  m_UseAsNamePrefix: 1
   color: {r: 0.7744908, g: 0.3443396, b: 1, a: 1}
   chance: 70
   multiplier: 1.5
@@ -2500,6 +2617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Legendary
+  m_UseAsNamePrefix: 1
   color: {r: 1, g: 0.48286825, b: 0, a: 1}
   chance: 60
   multiplier: 2

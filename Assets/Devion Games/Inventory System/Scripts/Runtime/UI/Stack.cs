@@ -39,6 +39,7 @@ namespace DevionGames.InventorySystem
                 int amount = Mathf.RoundToInt(spinner.current);
                 item.Stack -= amount;
                 Item newItem = (Item)Instantiate(item);
+                newItem.Rarity = item.Rarity;
                 newItem.Stack = amount;
                 item = newItem;
                 UICursor.Set(item.Icon);

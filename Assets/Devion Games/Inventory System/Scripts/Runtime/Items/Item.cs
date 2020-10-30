@@ -39,9 +39,10 @@ namespace DevionGames.InventorySystem
         public string DisplayName
         {
             get {
-                if (this.m_UseItemNameAsDisplayName)
-                    return this.m_ItemName;
-                return this.m_DisplayName; 
+                string displayName = m_UseItemNameAsDisplayName ? this.m_ItemName : this.m_DisplayName;
+                if (Rarity.UseAsNamePrefix)
+                    displayName = Rarity.Name + " " + displayName;
+                return displayName; 
             
             }
             set {
@@ -93,6 +94,7 @@ namespace DevionGames.InventorySystem
                 }
                 return this.m_Rarity; 
             }
+            set { this.m_Rarity = value; }
 		}
 
         [SerializeField]
@@ -332,6 +334,8 @@ namespace DevionGames.InventorySystem
 
         private System.Random rnd = new System.Random();
 
+        private static Rarity emptyRarity;
+
         private Rarity SelectRarity(List<Rarity> items)
         {
             int poolSize = 0;
@@ -348,11 +352,14 @@ namespace DevionGames.InventorySystem
                 if (randomNumber <= accumulatedProbability)
                     return items[i];
             }
-            Rarity empty = ScriptableObject.CreateInstance<Rarity>();
-            empty.Color = Color.grey;
-            empty.Chance = 100;
-            empty.Multiplier = 1.0f;
-            return empty;   
+            if (Item.emptyRarity is null)
+            {
+                Item.emptyRarity = ScriptableObject.CreateInstance<Rarity>();
+                Item.emptyRarity.Color = Color.grey;
+                Item.emptyRarity.Chance = 100;
+                Item.emptyRarity.Multiplier = 1.0f;
+            }
+            return Item.emptyRarity;   
         }
 
         protected virtual void OnEnable ()
