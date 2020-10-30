@@ -86,10 +86,10 @@ namespace DevionGames.InventorySystem
             this.m_PurchasedStorageContainer= WidgetUtility.Find<ItemContainer>(this.m_PurchasedStorageWindow);
             this.m_PaymentContainer = WidgetUtility.Find<ItemContainer>(this.m_PaymentWindow);
 
-            ItemCollection collection = GetComponent<ItemCollection>();
+          /*  ItemCollection collection = GetComponent<ItemCollection>();
             for (int i = 0; i < collection.Count; i++) {
                 collection[i].BuyPrice = Mathf.RoundToInt(m_BuyPriceFactor*collection[i].BuyPrice);
-            }
+            }*/
         }
 
         public override bool OverrideUse(Slot slot, Item item)
@@ -125,7 +125,7 @@ namespace DevionGames.InventorySystem
                 this.m_AmountSpinner.onChange.AddListener(delegate (float value)
                 {
                     Currency price = Instantiate(item.BuyCurrency);
-                    price.Stack = Mathf.RoundToInt(item.BuyPrice * value);
+                    price.Stack = Mathf.RoundToInt(this.m_BuyPriceFactor * item.BuyPrice * value);
                     this.m_PriceInfo.RemoveItems();
                     this.m_PriceInfo.StackOrAdd(price);
                 });
@@ -147,7 +147,7 @@ namespace DevionGames.InventorySystem
                 item.Rarity = rarity;
                 item.Stack = amount;
                 Currency price = Instantiate(item.BuyCurrency);
-                price.Stack = Mathf.RoundToInt(item.BuyPrice * amount);
+                price.Stack = Mathf.RoundToInt(this.m_BuyPriceFactor*item.BuyPrice * amount);
 
                 if ( this.m_PaymentContainer.RemoveItem(price,price.Stack))
                 {
@@ -156,7 +156,7 @@ namespace DevionGames.InventorySystem
                     {
                         int stack = item.Stack;
                         Currency singlePrice = Instantiate(item.BuyCurrency);
-                        singlePrice.Stack = item.BuyPrice;
+                        singlePrice.Stack = Mathf.RoundToInt(item.BuyPrice*this.m_BuyPriceFactor);
                        // singlePrice.Stack = Mathf.RoundToInt(this.m_BuyPriceFactor * singlePrice.Stack);
                         int purchasedStack = 0;
                         for (int i = 0; i < stack; i++)

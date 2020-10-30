@@ -36354,7 +36354,7 @@ MonoBehaviour:
   changeDelay: 0.2
   m_Current: 1
   step: 1
-  min: 0
+  min: 1
   max: 10
   onChange:
     m_PersistentCalls:
@@ -59992,7 +59992,7 @@ MonoBehaviour:
   changeDelay: 0.2
   m_Current: 1
   step: 1
-  min: 0
+  min: 1
   max: 10
   onChange:
     m_PersistentCalls:
