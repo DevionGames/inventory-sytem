@@ -1376,6 +1376,12 @@ namespace DevionGames.InventorySystem
            
         }
 
+        public static void RemoveItems(string windowName, bool keepInCollection = false) {
+            ItemContainer container = WidgetUtility.Find<ItemContainer>(windowName);
+            if (container != null)
+                container.RemoveItems(keepInCollection);
+        }
+
         /// <summary>
         /// Removes the amount/stack of items in all containers with windowName
         /// </summary>

@@ -21,6 +21,8 @@ namespace DevionGames.InventorySystem.Configuration
         public string contextMenuName = "ContextMenu";
         [InspectorLabel("Tooltip", "Name of Tooltip widget.")]
         public string tooltipName = "Tooltip";
+        [InspectorLabel("Price Tooltip", "Name of sell price tooltip widget.")]
+        public string sellPriceTooltipName = "Sell Price Tooltip";
         [InspectorLabel("Stack", "Name of Stack widget.")]
         public string stackName = "Stack";
         [InspectorLabel("Notification", "Name of Notification widget.")]
@@ -48,6 +50,19 @@ namespace DevionGames.InventorySystem.Configuration
                 }
                 Assert.IsNotNull(this.m_Tooltip, "Tooltip widget with name " + this.tooltipName + " is not present in scene.");
                 return this.m_Tooltip;
+            }
+        }
+
+        private ItemContainer m_SellPriceTooltip;
+        public ItemContainer sellPriceTooltip
+        {
+            get
+            {
+                if (this.m_SellPriceTooltip == null)
+                {
+                    this.m_SellPriceTooltip = WidgetUtility.Find<ItemContainer>(this.sellPriceTooltipName);
+                }
+                return this.m_SellPriceTooltip;
             }
         }
 

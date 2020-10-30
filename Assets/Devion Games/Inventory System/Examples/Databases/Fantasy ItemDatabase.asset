@@ -690,6 +690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contextMenuName: ContextMenu
   tooltipName: Tooltip
+  sellPriceTooltipName: Sell Price Tooltip
   stackName: Stack
   notificationName: Notification
 --- !u!114 &-4213577332647146612
@@ -1439,6 +1440,7 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   chance: 80
   multiplier: 1.3
+  m_PriceMultiplier: 1.1
 --- !u!114 &2033560685258441697
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1682,6 +1684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contextMenuName: ContextMenu
   tooltipName: Tooltip
+  sellPriceTooltipName: Sell Price Tooltip
   stackName: Stack
   notificationName: Notification
 --- !u!114 &4257271418691296376
@@ -1700,6 +1703,7 @@ MonoBehaviour:
   color: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}
   chance: 100
   multiplier: 1
+  m_PriceMultiplier: 1
 --- !u!114 &4447567160419299934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2019,6 +2023,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contextMenuName: ContextMenu
   tooltipName: Tooltip
+  sellPriceTooltipName: Sell Price Tooltip
   stackName: Stack
   notificationName: Notification
 --- !u!114 &6580122338069936885
@@ -2190,6 +2195,7 @@ MonoBehaviour:
   color: {r: 0.7744908, g: 0.3443396, b: 1, a: 1}
   chance: 70
   multiplier: 1.5
+  m_PriceMultiplier: 1.3
 --- !u!114 &7990749027154876597
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2467,6 +2473,7 @@ MonoBehaviour:
   color: {r: 1, g: 0.48286825, b: 0, a: 1}
   chance: 60
   multiplier: 2
+  m_PriceMultiplier: 1.5
 --- !u!114 &8981082385679816718
 MonoBehaviour:
   m_ObjectHideFlags: 1

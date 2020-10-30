@@ -153,6 +153,14 @@ namespace DevionGames.InventorySystem
             if (InventoryManager.UI.tooltip != null && ObservedItem != null)
             {
                 InventoryManager.UI.tooltip.Show(UnityTools.ColorString(ObservedItem.DisplayName, ObservedItem.Rarity.Color), ObservedItem.Description, ObservedItem.Icon, ObservedItem.GetPropertyInfo());
+                if (InventoryManager.UI.sellPriceTooltip != null && ObservedItem.SellPrice > 0)
+                {
+                    InventoryManager.UI.sellPriceTooltip.RemoveItems();
+                    Currency currency = Instantiate(ObservedItem.SellCurrency);
+                    currency.Stack = ObservedItem.SellPrice;
+                    InventoryManager.UI.sellPriceTooltip.StackOrAdd(currency);
+                    InventoryManager.UI.sellPriceTooltip.Show();
+                }
             }
         }
 
@@ -176,6 +184,11 @@ namespace DevionGames.InventorySystem
             if (Container.ShowTooltips && InventoryManager.UI.tooltip != null)
             {
                 InventoryManager.UI.tooltip.Close();
+                if (InventoryManager.UI.sellPriceTooltip != null)
+                {
+                    InventoryManager.UI.sellPriceTooltip.RemoveItems();
+                    InventoryManager.UI.sellPriceTooltip.Close();
+                }
             }
             if (this.m_DelayTooltipCoroutine != null)
             {

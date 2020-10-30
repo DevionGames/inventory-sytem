@@ -106,7 +106,7 @@ namespace DevionGames.InventorySystem
 		private int m_BuyPrice=0;
 
 		public int BuyPrice {
-			get{ return m_BuyPrice; }
+			get{ return Mathf.RoundToInt(m_BuyPrice*Rarity.PriceMultiplier); }
             set { this.m_BuyPrice = value; }
 		}
 
@@ -124,7 +124,7 @@ namespace DevionGames.InventorySystem
 		private int m_SellPrice=0;
 
 		public int SellPrice {
-			get{ return this.m_SellPrice; }
+			get{ return Mathf.RoundToInt(this.m_SellPrice*Rarity.PriceMultiplier); }
 		}
 
         [CurrencyPicker(true)]

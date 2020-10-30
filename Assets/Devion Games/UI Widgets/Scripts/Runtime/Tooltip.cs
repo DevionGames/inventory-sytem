@@ -12,6 +12,9 @@ namespace DevionGames.UIWidgets{
         /// </summary>
         [SerializeField]
         protected bool m_UpdatePosition=true;
+        [SerializeField]
+        protected Vector2 m_PositionOffset = Vector2.zero;
+
         [Header("Reference")]
         /// <summary>
 		/// The Text component to display tooltip title.
@@ -82,7 +85,7 @@ namespace DevionGames.UIWidgets{
             }else{
                 offset += new Vector2(0, -m_RectTransform.sizeDelta.y * 0.5f);
             }
-            pos = pos + offset;
+            pos = pos + offset+ this.m_PositionOffset;
             transform.position = this.m_Canvas.transform.TransformPoint(pos);
             Focus();
         }
@@ -159,7 +162,9 @@ namespace DevionGames.UIWidgets{
                 this.m_SlotParent.gameObject.SetActive(false);
             }
             m_RectTransform.sizeDelta = new Vector2(width, m_RectTransform.sizeDelta.y);
-            this.m_Background.enabled = showBackground;
+           
+            this.m_Background.gameObject.SetActive(showBackground);
+
             Show();
         }
 

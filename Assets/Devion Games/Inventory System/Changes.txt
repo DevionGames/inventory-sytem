@@ -15,3 +15,4 @@
 - Fixed bug displaying wrong ingredients 
 - Category color and item icons are displayed now in the item editor sidebar.
 - AddItem action has amount field.
+- Rarity price multiplier
