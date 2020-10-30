@@ -333,6 +333,10 @@ namespace DevionGames.InventorySystem
         /// <returns>True if swapped.</returns>
         public bool SwapItems(Slot s1, Slot s2) {
 
+            if (s2.Container.UseReferences && !s1.Container.UseReferences) {
+                return false;
+            }
+
             //Slots the item is currently inside.
             List<Slot> requiredSlotsObserved = s2.Container.GetRequiredSlots(s1.ObservedItem, s2);
             if (requiredSlotsObserved.Count == 0)
@@ -387,6 +391,18 @@ namespace DevionGames.InventorySystem
                     {
                         s1.Container.ReplaceItem(kvp.Key.Index, kvp.Value);
                     }
+                }
+
+                if (s1.Container == s2.Container) {
+                    foreach (KeyValuePair<Slot, Item> kvp in moveLocations)
+                    {
+                        s2.Container.ReplaceItem(kvp.Key.Index, kvp.Value);
+                    }
+                    foreach (KeyValuePair<Slot, Item> kvp in moveLocationsObserved)
+                    {
+                        s1.Container.ReplaceItem(kvp.Key.Index, kvp.Value);
+                    }
+
                 }
                 return true;
             }
@@ -461,7 +477,7 @@ namespace DevionGames.InventorySystem
                 if (!slot.Container.UseReferences && item.Slot != null){
                     item.Container.RemoveItem(item.Slot.Index);
                 }
-               
+
                 slot.Container.ReplaceItem(slot.Index, item);
                 return true;
             }
@@ -734,11 +750,13 @@ namespace DevionGames.InventorySystem
         /// <returns>Returns true if the item was removed.</returns>
         public virtual bool RemoveItem(int index)
         {
+
             if (index < this.m_Slots.Count)
             {
                 Slot slot = this.m_Slots[index];
                 Item item = slot.ObservedItem;
-              
+                if (item is null) return false;
+
                 if (UseReferences)
                 {
                     slot.ObservedItem = null;

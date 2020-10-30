@@ -138,7 +138,7 @@ namespace DevionGames
         protected virtual void OnTriggerEnter(Collider other)
         {
             //Check if the collider other is player 
-            if (other.tag == PlayerInfo.gameObject.tag)
+            if (isActiveAndEnabled && other.tag == PlayerInfo.gameObject.tag)
             {
                 //Set that player is in range
                 InRange = true;
@@ -149,7 +149,7 @@ namespace DevionGames
         protected virtual void OnTriggerExit(Collider other)
         {
             //Check if the collider other is player
-            if (other.tag == PlayerInfo.gameObject.tag)
+            if (isActiveAndEnabled && other.tag == PlayerInfo.gameObject.tag)
             {
                 //Set that player is out of range
                 InRange = false;

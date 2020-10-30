@@ -290,6 +290,7 @@ namespace DevionGames.InventorySystem
             }
   
             dragObject = null;
+           
             if (this.m_ParentScrollRect != null)
             {
                 this.m_ParentScrollRect.OnEndDrag(eventData);

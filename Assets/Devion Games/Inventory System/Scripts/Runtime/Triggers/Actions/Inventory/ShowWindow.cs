@@ -63,10 +63,8 @@ namespace DevionGames.InventorySystem
                 if (this.m_ItemCollection == null) {
                     this.m_ItemContainer.Show();
                 }else{
-                    Debug.Log("Start Show");
                     this.m_ItemContainer.Collection = this.m_ItemCollection;
                     this.m_ItemContainer.Show();
-                    Debug.Log("Finished Show");
                 }
                 this.m_WindowStatus = ActionStatus.Running;
             }
