@@ -94,8 +94,14 @@ namespace DevionGames.InventorySystem
 
         public override bool OverrideUse(Slot slot, Item item)
         {
+            
             if (slot.Container.CanSellItems)
             {
+                if (!item.IsSellable)
+                {
+                    InventoryManager.Notifications.cantSellItem.Show(item.DisplayName);
+                    return true;
+                }
                 SellItem(item, item.Stack, true);
             }
             else if(Trigger.currentUsedWindow == slot.Container)
@@ -165,7 +171,7 @@ namespace DevionGames.InventorySystem
                             purchasedStack += 1;
                             ExecuteEvent<ITriggerBoughtItem>(Execute, singleItem);
                         }
-                        InventoryManager.Notifications.boughtItem.Show(purchasedStack.ToString()+"x"+item.Name, singlePrice.Stack*purchasedStack + " " + price.Name);
+                        InventoryManager.Notifications.boughtItem.Show(purchasedStack.ToString()+"x"+item.DisplayName, singlePrice.Stack*purchasedStack + " " + price.Name);
                     }
                     else
                     {
@@ -184,7 +190,7 @@ namespace DevionGames.InventorySystem
                 }
                 else
                 {
-                    InventoryManager.Notifications.noCurrencyToBuy.Show(item.Name, price.Stack + " " + price.Name);
+                    InventoryManager.Notifications.noCurrencyToBuy.Show(item.DisplayName, price.Stack + " " + price.Name);
                     ExecuteEvent<ITriggerFailedToBuyItem>(Execute, item, FailureCause.NotEnoughCurrency);
                 }
             }

@@ -83,6 +83,11 @@ namespace DevionGames.InventorySystem.Configuration
             text = "You don't have enough coins."
         };
 
+        public NotificationOptions cantSellItem = new NotificationOptions()
+        {
+            text = "You can't sell this {0}!"
+        };
+
         [Header("Trigger:")]
         public NotificationOptions toFarAway = new NotificationOptions()
         {

@@ -153,11 +153,11 @@ namespace DevionGames.InventorySystem
             if (InventoryManager.UI.tooltip != null && ObservedItem != null)
             {
                 InventoryManager.UI.tooltip.Show(UnityTools.ColorString(ObservedItem.DisplayName, ObservedItem.Rarity.Color), ObservedItem.Description, ObservedItem.Icon, ObservedItem.GetPropertyInfo());
-                if (InventoryManager.UI.sellPriceTooltip != null && ObservedItem.SellPrice > 0)
+                if (InventoryManager.UI.sellPriceTooltip != null && ObservedItem.IsSellable && ObservedItem.SellPrice > 0)
                 {
                     InventoryManager.UI.sellPriceTooltip.RemoveItems();
                     Currency currency = Instantiate(ObservedItem.SellCurrency);
-                    currency.Stack = ObservedItem.SellPrice;
+                    currency.Stack = ObservedItem.SellPrice*ObservedItem.Stack;
                     InventoryManager.UI.sellPriceTooltip.StackOrAdd(currency);
                     InventoryManager.UI.sellPriceTooltip.Show();
                 }

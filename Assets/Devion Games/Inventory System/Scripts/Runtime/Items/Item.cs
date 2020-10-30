@@ -102,6 +102,13 @@ namespace DevionGames.InventorySystem
             set { this.m_PossibleRarity = value; }
         }
 
+        [SerializeField]
+        private bool m_IsSellable = true;
+        public bool IsSellable {
+            get { return this.m_IsSellable; }
+            set { this.m_IsSellable = true; }
+        }
+
 		[SerializeField]
 		private int m_BuyPrice=0;
 

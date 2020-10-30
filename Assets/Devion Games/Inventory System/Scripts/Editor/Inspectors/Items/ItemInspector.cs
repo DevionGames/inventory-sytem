@@ -38,7 +38,9 @@ namespace DevionGames.InventorySystem
         protected SerializedProperty m_CraftingAnimatorState;
         protected SerializedProperty m_Ingredients;
         protected SerializedProperty m_Properties;
+        protected SerializedProperty m_IsSellable;
 
+        protected AnimBool m_ShowSellOptions;
         protected AnimBool m_ShowDropOptions;
         protected AnimBool m_ShowCraftOptions;
 
@@ -76,6 +78,11 @@ namespace DevionGames.InventorySystem
             this.m_PossibleRarity = serializedObject.FindProperty("m_PossibleRarity");
 
             this.m_Category = serializedObject.FindProperty("m_Category");
+
+            this.m_IsSellable = serializedObject.FindProperty("m_IsSellable");
+            this.m_ShowSellOptions = new AnimBool(this.m_IsSellable.boolValue);
+            this.m_ShowSellOptions.valueChanged.AddListener(new UnityAction(Repaint));
+
             this.m_BuyPrice = serializedObject.FindProperty("m_BuyPrice");
             this.m_BuyCurrency = serializedObject.FindProperty("m_BuyCurrency");
             this.m_SellPrice = serializedObject.FindProperty("m_SellPrice");
@@ -294,15 +301,23 @@ namespace DevionGames.InventorySystem
             item.PossibleRarity = DrawRaritySelector(item.PossibleRarity.ToArray(), InventorySystemEditor.Database.raritys.ToArray()).ToList();
             EditorGUILayout.EndHorizontal();
 
-            EditorGUILayout.BeginHorizontal();
-            EditorGUILayout.PropertyField(this.m_BuyPrice);
-            EditorGUILayout.PropertyField(this.m_BuyCurrency, GUIContent.none);
-            EditorGUILayout.EndHorizontal();
+            EditorGUILayout.PropertyField(this.m_IsSellable);
+            this.m_ShowSellOptions.target = this.m_IsSellable.boolValue;
+            if (EditorGUILayout.BeginFadeGroup(this.m_ShowSellOptions.faded))
+            {
+                EditorGUI.indentLevel = EditorGUI.indentLevel + 1;
+                EditorGUILayout.BeginHorizontal();
+                EditorGUILayout.PropertyField(this.m_BuyPrice);
+                EditorGUILayout.PropertyField(this.m_BuyCurrency, GUIContent.none);
+                EditorGUILayout.EndHorizontal();
 
-            EditorGUILayout.BeginHorizontal();
-            EditorGUILayout.PropertyField(this.m_SellPrice);
-            EditorGUILayout.PropertyField(this.m_SellCurrency, GUIContent.none);
-            EditorGUILayout.EndHorizontal();
+                EditorGUILayout.BeginHorizontal();
+                EditorGUILayout.PropertyField(this.m_SellPrice);
+                EditorGUILayout.PropertyField(this.m_SellCurrency, GUIContent.none);
+                EditorGUILayout.EndHorizontal();
+                EditorGUI.indentLevel = EditorGUI.indentLevel - 1;
+            }
+            EditorGUILayout.EndFadeGroup();
 
             EditorGUILayout.PropertyField(this.m_Stack);
             if (this.m_MaxStack.intValue == 0)
