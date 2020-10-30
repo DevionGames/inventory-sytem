@@ -116,12 +116,12 @@ namespace DevionGames.InventorySystem
 
 		public int BuyPrice {
 			get{ return Mathf.RoundToInt(m_BuyPrice*Rarity.PriceMultiplier); }
-            set { this.m_BuyPrice = value; }
+           // set { this.m_BuyPrice = value; }
 		}
 
         [CurrencyPicker(true)]
         [SerializeField]
-        private Currency m_BuyCurrency;
+        private Currency m_BuyCurrency=null;
 
         public Currency BuyCurrency
         {
