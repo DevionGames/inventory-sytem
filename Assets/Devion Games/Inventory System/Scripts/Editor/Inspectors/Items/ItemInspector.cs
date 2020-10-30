@@ -207,7 +207,8 @@ namespace DevionGames.InventorySystem
                 this.m_CraftingAnimatorState.propertyPath,
                 this.m_Ingredients.propertyPath,
                 this.m_Properties.propertyPath,
-                this.m_PossibleRarity.propertyPath
+                this.m_PossibleRarity.propertyPath,
+                this.m_IsSellable.propertyPath
             };
 
 

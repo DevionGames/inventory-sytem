@@ -18,3 +18,4 @@
 - Rarity price multiplier
 - Sell price tooltip
 - Menu tooltip
+- Item IsSellable field
