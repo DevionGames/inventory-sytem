@@ -310,6 +310,9 @@ namespace DevionGames.InventorySystem
             if (s1 == s2) {
                 return false;
             }
+            if (s2.Container.UseReferences && !s1.Container.UseReferences) {
+                return false;
+            }
 
             if (s1.Container.UseReferences && !s2.Container.CanReferenceItems) {
                 return false;
@@ -319,8 +322,10 @@ namespace DevionGames.InventorySystem
                 if (!s2.Container.UseReferences && !s1.Container.UseReferences) {
                     s2.Container.RemoveItem(s2.Index);
                 }
+      
                 return true;
             }
+
             return SwapItems(s1, s2);
 
         }

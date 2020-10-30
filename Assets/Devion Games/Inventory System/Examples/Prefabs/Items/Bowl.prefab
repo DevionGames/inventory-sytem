@@ -95,7 +95,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 02f05bd07b76e134b9ce1d218a95057a, type: 3}
 --- !u!95 &2492252505560955442
@@ -133,9 +133,66 @@ MonoBehaviour:
   useDistance: 1.2
   triggerType: 3
   key: 102
-  actions: []
+  actions:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  - id: 5
+  - id: 6
   references:
     version: 1
+    00000000:
+      type: {class: CanPickup, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.CanPickup
+        m_Enabled: 1
+        m_WindowName: Inventory
+    00000001:
+      type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.SetEnabled
+        m_Enabled: 1
+        m_Target: 1
+        m_ComponentName: ThirdPersonController
+        m_Enable: 0
+    00000002:
+      type: {class: LookAtTrigger, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.LookAtTrigger
+        m_Enabled: 1
+        m_Speed: 15
+    00000003:
+      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.CrossFade
+        m_Enabled: 1
+        m_Target: 1
+        m_AnimatorState: Pickup
+        m_TransitionDuration: 0.2
+    00000004:
+      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.Wait
+        m_Enabled: 1
+        duration: 1
+    00000005:
+      type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.SetEnabled
+        m_Enabled: 1
+        m_Target: 1
+        m_ComponentName: ThirdPersonController
+        m_Enable: 1
+    00000006:
+      type: {class: Pickup, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: 
+        m_Enabled: 1
+        m_WindowName: Inventory
+        m_DestroyWhenEmpty: 1
+        m_Amount: -1
 --- !u!114 &8912062079263800403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,6 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68165cdf1896c89479a91b2478670c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveable: 1
   items:
   - {fileID: 529780001783015153, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
   amounts: 01000000
