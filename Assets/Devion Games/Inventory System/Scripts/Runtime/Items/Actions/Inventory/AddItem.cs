@@ -15,10 +15,14 @@ namespace DevionGames.InventorySystem.ItemActions
         [ItemPicker(true)]
         [SerializeField]
         private Item m_Item = null;
+        [Range(1, 200)]
+        [SerializeField]
+        private int m_Amount = 1;
 
         public override ActionStatus OnUpdate()
         {
             Item instance = ScriptableObject.Instantiate(this.m_Item);
+            instance.Stack = this.m_Amount;
             if (this.m_Item.IsCraftable)
             {
                 for (int j = 0; j < this.m_Item.ingredients.Count; j++)

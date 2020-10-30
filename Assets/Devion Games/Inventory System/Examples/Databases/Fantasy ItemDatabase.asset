@@ -1647,6 +1647,7 @@ MonoBehaviour:
         item: {fileID: 3129509250564287029}
         m_WindowName: Crafting
         m_Item: {fileID: -8967533827971111582}
+        m_Amount: 0
     00000003:
       type: {class: ReduceStack, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
       data:
