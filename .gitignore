@@ -58,12 +58,13 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-# Refactoring Tests
-/[Aa]ssets/Refactoring*
-
-
 # Dialogue System
 /[Aa]ssets/Devion Games/Dialogue System*
-
+# Character System
+/[Aa]ssets/Devion Games/Character System*
+# RPG Kit
+/[Aa]ssets/Devion Games/RPG Kit*
+# RPG UI
+/[Aa]ssets/Devion Games/RPG UI*
 # Bolt
 /[Aa]ssets/Ludiq*
