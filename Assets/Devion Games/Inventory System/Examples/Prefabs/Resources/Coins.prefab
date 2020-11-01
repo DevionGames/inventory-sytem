@@ -1609,17 +1609,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68165cdf1896c89479a91b2478670c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
+  saveable: 1
+  m_Items:
   - {fileID: -2811142919616601772, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
-  - {fileID: -6442420119529586086, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
-  amounts: 1500000001000000
-  randomProperty:
-  - 0
-  - 0
+  m_Amounts: 01000000
+  m_Modifiers:
+  - modifiers:
+    - {fileID: 11400000, guid: 3451d08e25b81ff4eb586aa4fb61a191, type: 2}
   onChange:
     m_PersistentCalls:
       m_Calls: []
-  prefab: {fileID: 2074223614}
 --- !u!1 &2087531521
 GameObject:
   m_ObjectHideFlags: 0

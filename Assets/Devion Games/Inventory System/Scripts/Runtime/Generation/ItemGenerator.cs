@@ -36,7 +36,9 @@ namespace DevionGames.InventorySystem
                 stack = Mathf.Clamp(stack, item.Stack, item.MaxStack);
                 item = Instantiate(item);
                 item.Stack = stack;
-                item.RandomizeProperties(data.propertyRandomizer);
+
+                data.modifiers.Modify(item);
+
                 if (item.IsCraftable)
                 {
                     for (int j = 0; j < item.ingredients.Count; j++)

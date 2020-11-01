@@ -11,31 +11,43 @@ namespace DevionGames.InventorySystem
     {
         private SerializedProperty m_Script;
         private SerializedProperty m_GroupName;
-        private SerializedProperty m_Items;
 
+        private SerializedProperty m_Items;
         private ReorderableList m_ItemList;
+
+        private SerializedProperty m_Modifiers;
+        private ReorderableList m_ModifierList;
 
         private void OnEnable()
         {
             this.m_Script = serializedObject.FindProperty("m_Script");
             this.m_GroupName = serializedObject.FindProperty("m_GroupName");
+
             this.m_Items = serializedObject.FindProperty("m_Items");
+            this.m_Modifiers = serializedObject.FindProperty("m_Modifiers");
+
+
             if (this.m_Items.arraySize > 0)
             {
                 CheckForDatabase(this.m_Items.GetArrayElementAtIndex(0).objectReferenceValue);
             }
 
+            CreateItemList(serializedObject, this.m_Items);
+        }
 
-            this.m_ItemList = new ReorderableList(serializedObject, this.m_Items, true, true, true, true);
+        private void CreateItemList(SerializedObject serializedObject, SerializedProperty elements)
+        {
+            this.m_ItemList = new ReorderableList(serializedObject, elements, true, true, true, true);
             this.m_ItemList.drawHeaderCallback = (Rect rect) => {
-                EditorGUI.LabelField(rect, "Items (Item, Amount, Property Randomizer)");
+                EditorGUI.LabelField(rect, "Items (Item, Amount)");
             };
 
             this.m_ItemList.drawElementCallback = (Rect rect, int index, bool isActive, bool isFocused) => {
-                SerializedProperty element = this.m_ItemList.serializedProperty.GetArrayElementAtIndex(index);
-                rect.y += 2;
+                float verticalOffset = (rect.height - EditorGUIUtility.singleLineHeight) * 0.5f;
                 rect.height = EditorGUIUtility.singleLineHeight;
-                rect.width = rect.width - 104f;
+                rect.y = rect.y + verticalOffset;
+                rect.width = rect.width - 52f;
+                SerializedProperty element = elements.GetArrayElementAtIndex(index);
                 EditorGUI.PropertyField(rect, element, GUIContent.none, true);
 
                 SerializedProperty amounts = serializedObject.FindProperty("m_Amounts");
@@ -50,50 +62,63 @@ namespace DevionGames.InventorySystem
                 SerializedProperty amount = amounts.GetArrayElementAtIndex(index);
                 rect.x += rect.width + 2f;
                 rect.width = 50f;
-                if (InventorySystemEditor.Database == null || InventorySystemEditor.Database.items.Count == 0)
-                {
-                    rect.y += (9 + EditorGUIUtility.singleLineHeight + 6);
-                }
+
                 if (EditorApplication.isPlaying)
                 {
                     amount.intValue = element.objectReferenceValue != null ? (element.objectReferenceValue as Item).Stack : amount.intValue;
                 }
                 EditorGUI.PropertyField(rect, amount, GUIContent.none);
 
-
-                SerializedProperty randomProperties = serializedObject.FindProperty("m_RandomProperty");
-                if (randomProperties.arraySize < this.m_Items.arraySize)
-                {
-                    for (int i = randomProperties.arraySize; i < this.m_Items.arraySize; i++)
-                    {
-                        randomProperties.InsertArrayElementAtIndex(i);
-                        randomProperties.GetArrayElementAtIndex(i).floatValue = 0f;
-                    }
-                }
-                SerializedProperty randomProperty = randomProperties.GetArrayElementAtIndex(index);
-                rect.x += rect.width + 2f;
-                rect.width = 50f;
-                EditorGUI.PropertyField(rect, randomProperty, GUIContent.none);
             };
 
-
             this.m_ItemList.onReorderCallbackWithDetails = (ReorderableList list, int oldIndex, int newIndex) => {
-                SerializedProperty amounts = serializedObject.FindProperty("m_Amounts");
-                SerializedProperty randomProperties = serializedObject.FindProperty("m_RandomProperty");
-                amounts.MoveArrayElement(oldIndex, newIndex);
-                randomProperties.MoveArrayElement(oldIndex, newIndex);
+                this.m_Modifiers.MoveArrayElement(oldIndex, newIndex);
+            };
+
+            this.m_ItemList.onAddCallback = (ReorderableList list) => {
+                ReorderableList.defaultBehaviours.DoAddButton(list);
+                this.m_Modifiers.InsertArrayElementAtIndex(list.index);
             };
 
             this.m_ItemList.onRemoveCallback = (ReorderableList list) =>
             {
-                SerializedProperty amounts = serializedObject.FindProperty("m_Amounts");
-                amounts.DeleteArrayElementAtIndex(list.index);
-                SerializedProperty randomProperties = serializedObject.FindProperty("m_RandomProperty");
-                randomProperties.DeleteArrayElementAtIndex(list.index);
+                this.m_Modifiers.DeleteArrayElementAtIndex(list.index);
+                this.m_ModifierList = null;
+
                 list.serializedProperty.GetArrayElementAtIndex(list.index).objectReferenceValue = null;
                 ReorderableList.defaultBehaviours.DoRemoveButton(list);
             };
+
+            this.m_ItemList.onSelectCallback = (ReorderableList list) =>
+            {
+                if (this.m_Modifiers.arraySize < this.m_Items.arraySize)
+                {
+                    for (int i = m_Modifiers.arraySize; i < this.m_Items.arraySize; i++)
+                    {
+                        m_Modifiers.InsertArrayElementAtIndex(i);
+                    }
+                }
+                CreateModifierList("Modifiers", serializedObject, this.m_Modifiers.GetArrayElementAtIndex(list.index));
+            };
         }
+
+        private void CreateModifierList(string title, SerializedObject serializedObject, SerializedProperty property)
+        {
+
+            this.m_ModifierList = new ReorderableList(serializedObject, property.FindPropertyRelative("modifiers"), true, true, true, true);
+            this.m_ModifierList.drawHeaderCallback = (Rect rect) => {
+                EditorGUI.LabelField(rect, title);
+            };
+            this.m_ModifierList.drawElementCallback = (Rect rect, int index, bool isActive, bool isFocused) =>
+            {
+                float verticalOffset = (rect.height - EditorGUIUtility.singleLineHeight) * 0.5f;
+                rect.height = EditorGUIUtility.singleLineHeight;
+                rect.y = rect.y + verticalOffset;
+                SerializedProperty element = this.m_ModifierList.serializedProperty.GetArrayElementAtIndex(index);
+                EditorGUI.PropertyField(rect, element, GUIContent.none, true);
+            };
+        }
+
 
         public override void OnInspectorGUI()
         {
@@ -104,6 +129,9 @@ namespace DevionGames.InventorySystem
             serializedObject.Update();
             EditorGUILayout.PropertyField(this.m_GroupName);
             this.m_ItemList.DoLayoutList();
+            EditorGUILayout.Space();
+            if (this.m_ModifierList != null)
+                this.m_ModifierList.DoLayoutList();
             serializedObject.ApplyModifiedProperties();
 
 

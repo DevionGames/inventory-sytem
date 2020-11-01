@@ -153,15 +153,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68165cdf1896c89479a91b2478670c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
+  saveable: 1
+  m_Items:
   - {fileID: 8429455951140046941, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
-  amounts: 01000000
-  randomProperty:
-  - 0
+  m_Amounts: 03000000
+  m_Modifiers:
+  - modifiers: []
   onChange:
     m_PersistentCalls:
       m_Calls: []
-  prefab: {fileID: 3056294474021234518}
 --- !u!114 &442802685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,8 +181,10 @@ MonoBehaviour:
   m_MaxStack: 1
   m_MinAmount: 1
   m_MaxAmount: 1
-  m_PropertyRandomizer: 0.15
   m_Chance: 0.8
+  m_Modifiers:
+    modifiers:
+    - {fileID: 11400000, guid: af5120ca8702be44fb59b6eadcd27cd0, type: 2}
 --- !u!114 &442802686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,8 +204,9 @@ MonoBehaviour:
   m_MaxStack: 4
   m_MinAmount: 2
   m_MaxAmount: 4
-  m_PropertyRandomizer: 0.15
   m_Chance: 0.7
+  m_Modifiers:
+    modifiers: []
 --- !u!1 &3056294474725751521
 GameObject:
   m_ObjectHideFlags: 0

@@ -454,50 +454,28 @@ namespace DevionGames.InventorySystem
         public static Item[] CreateInstances(ItemGroup group)
         {
             if (group == null) {
-        
-                return CreateInstances(Database.items.ToArray(), Enumerable.Repeat(1, Database.items.Count).ToArray(), Enumerable.Repeat(0f, Database.items.Count).ToArray());
+                return CreateInstances(Database.items.ToArray(), Enumerable.Repeat(1, Database.items.Count).ToArray(), Enumerable.Repeat(new ItemModifierList(), Database.items.Count).ToArray());
             }
-            return CreateInstances(group.Items, group.Amounts, group.RandomProperty);
+            return CreateInstances(group.Items, group.Amounts, group.Modifiers.ToArray());
         }
 
 
         public static Item CreateInstance(Item item)
         {
-            Item instance = Instantiate(item);
-            if (item.IsCraftable)
-            {
-                for (int j = 0; j < item.ingredients.Count; j++)
-                {
-                    item.ingredients[j].item = Instantiate(item.ingredients[j].item);
-                    item.ingredients[j].item.Stack = item.ingredients[j].amount;
-                }
-            }
+            return CreateInstance( item, item.Stack, new ItemModifierList());
+        }
 
-            return instance;
+        public static Item CreateInstance(Item item, int amount, ItemModifierList modiferList)
+        {
+            return CreateInstances(new Item[] { item },new int[] { amount }, new ItemModifierList[] { modiferList })[0];
         }
 
         public static Item[] CreateInstances(Item[] items)
         {
-            Item[] instances = new Item[items.Length];
-
-            for (int i = 0; i < items.Length; i++)
-            {
-                Item item = items[i];
-                item = Instantiate(item);
-                if (item.IsCraftable)
-                {
-                    for (int j = 0; j < item.ingredients.Count; j++)
-                    {
-                        item.ingredients[j].item = Instantiate(item.ingredients[j].item);
-                        item.ingredients[j].item.Stack = item.ingredients[j].amount;
-                    }
-                }
-                instances[i] = item;
-            }
-            return instances;
+            return CreateInstances(items, Enumerable.Repeat(1, items.Length).ToArray(), new ItemModifierList[items.Length]);
         }
 
-        public static Item[] CreateInstances(Item[] items, int[] amounts, float[] randomProperty) {
+        public static Item[] CreateInstances(Item[] items, int[] amounts, ItemModifierList[] modifierLists) {
             Item[] instances = new Item[items.Length];
 
             for (int i = 0; i < items.Length; i++)
@@ -505,9 +483,8 @@ namespace DevionGames.InventorySystem
                 Item item = items[i];
                 item = Instantiate(item);
                 item.Stack = amounts[i];
-                item.PropertyPercentRange = randomProperty[i];
-                
-                item.RandomizeProperties(randomProperty[i]);
+                modifierLists[i].Modify(item); 
+
                 if (item.IsCraftable)
                 {
                     for (int j = 0; j < item.ingredients.Count; j++)

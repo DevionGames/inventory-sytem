@@ -294,13 +294,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68165cdf1896c89479a91b2478670c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
+  saveable: 1
+  m_Items:
   - {fileID: -5663772737389988193, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
   - {fileID: -5663772737389988193, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
-  amounts: 0100000001000000
-  randomProperty:
-  - 0
-  - 0
+  m_Amounts: 0100000001000000
+  m_Modifiers:
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
   onChange:
     m_PersistentCalls:
       m_Calls: []

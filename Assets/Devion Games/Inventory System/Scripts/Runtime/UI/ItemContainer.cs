@@ -451,7 +451,8 @@ namespace DevionGames.InventorySystem
         public virtual bool StackOrAdd(Item item)
         {
             if (!StackItem(item) && !AddItem(item)){
-              
+
+                Debug.Log("False");
                 return false;
             }
             return true;
@@ -519,6 +520,7 @@ namespace DevionGames.InventorySystem
             }
             //Get all items in collection with same id as the item to stack
             Item[] items = this.m_Collection.Where(x => x != null && x.Id == item.Id && x.Rarity == item.Rarity).ToArray();
+
             int stack = item.Stack;
 
             //Loop through the items
@@ -659,7 +661,7 @@ namespace DevionGames.InventorySystem
         {
             slot = null;
             if (item == null) { return true; }
-     
+
             List<Slot> requiredSlots = GetRequiredSlots(item);
             if (requiredSlots.Count > 0)
             {
@@ -693,6 +695,7 @@ namespace DevionGames.InventorySystem
                 }
                 return true;
             }
+
             return false;
         }
 

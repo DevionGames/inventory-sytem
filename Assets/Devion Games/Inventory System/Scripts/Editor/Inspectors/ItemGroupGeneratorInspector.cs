@@ -16,10 +16,13 @@ namespace DevionGames.InventorySystem
         private SerializedProperty m_MaxStack;
         private SerializedProperty m_MinAmount;
         private SerializedProperty m_MaxAmount;
-        private SerializedProperty m_PropertyRandomizer;
         private SerializedProperty m_Chance;
 
         private ReorderableList m_FilterList;
+
+        private SerializedProperty m_Modifiers;
+        private ReorderableList m_ModifierList;
+
 
         protected virtual void OnEnable()
         {
@@ -30,8 +33,10 @@ namespace DevionGames.InventorySystem
             this.m_MaxStack = serializedObject.FindProperty("m_MaxStack");
             this.m_MinAmount = serializedObject.FindProperty("m_MinAmount");
             this.m_MaxAmount = serializedObject.FindProperty("m_MaxAmount");
-            this.m_PropertyRandomizer = serializedObject.FindProperty("m_PropertyRandomizer");
             this.m_Chance = serializedObject.FindProperty("m_Chance");
+            this.m_Modifiers = serializedObject.FindProperty("m_Modifiers");
+
+            CreateModifierList("Modifiers", serializedObject, this.m_Modifiers);
 
             this.m_FilterList = new ReorderableList(serializedObject, this.m_Filters, true, true, true, true);
             this.m_FilterList.drawHeaderCallback = (Rect rect) => {
@@ -81,6 +86,29 @@ namespace DevionGames.InventorySystem
 
         }
 
+        private void CreateModifierList(string title, SerializedObject serializedObject, SerializedProperty property)
+        {
+
+            this.m_ModifierList = new ReorderableList(serializedObject, property.FindPropertyRelative("modifiers"), true, true, true, true);
+            this.m_ModifierList.drawHeaderCallback = (Rect rect) => {
+                EditorGUI.LabelField(rect, title);
+            };
+            this.m_ModifierList.drawElementCallback = (Rect rect, int index, bool isActive, bool isFocused) =>
+            {
+                float verticalOffset = (rect.height - EditorGUIUtility.singleLineHeight) * 0.5f;
+                rect.height = EditorGUIUtility.singleLineHeight;
+                rect.y = rect.y + verticalOffset;
+                SerializedProperty element = this.m_ModifierList.serializedProperty.GetArrayElementAtIndex(index);
+                EditorGUI.PropertyField(rect, element, GUIContent.none, true);
+            };
+
+            this.m_ModifierList.onRemoveCallback = (ReorderableList list) =>
+            {
+                list.serializedProperty.GetArrayElementAtIndex(list.index).objectReferenceValue = null;
+                ReorderableList.defaultBehaviours.DoRemoveButton(list);
+            };
+        }
+
         public override void OnInspectorGUI()
         {
             EditorGUI.BeginDisabledGroup(true);
@@ -94,8 +122,10 @@ namespace DevionGames.InventorySystem
             EditorGUILayout.PropertyField(this.m_MaxStack);
             EditorGUILayout.PropertyField(this.m_MinAmount);
             EditorGUILayout.PropertyField(this.m_MaxAmount);
-            EditorGUILayout.PropertyField(this.m_PropertyRandomizer);
             EditorGUILayout.PropertyField(this.m_Chance);
+            EditorGUILayout.Space();
+            this.m_ModifierList.DoLayoutList();
+
             serializedObject.ApplyModifiedProperties();
         }
 

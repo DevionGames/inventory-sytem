@@ -158,6 +158,7 @@ namespace DevionGames.InventorySystem
                     InventoryManager.UI.sellPriceTooltip.RemoveItems();
                     Currency currency = Instantiate(ObservedItem.SellCurrency);
                     currency.Stack = ObservedItem.SellPrice*ObservedItem.Stack;
+
                     InventoryManager.UI.sellPriceTooltip.StackOrAdd(currency);
                     InventoryManager.UI.sellPriceTooltip.Show();
                 }

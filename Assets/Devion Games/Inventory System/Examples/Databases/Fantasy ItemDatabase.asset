@@ -36,11 +36,6 @@ MonoBehaviour:
     type: 3}
   m_Description: Use a bow to attack enemies from range.
   m_Category: {fileID: -5355670550631679221}
-  m_PossibleRarity:
-  - {fileID: 4257271418691296376}
-  - {fileID: 1459171670829712994}
-  - {fileID: 7388703754817051196}
-  - {fileID: 8829102310862775636}
   m_IsSellable: 1
   m_BuyPrice: 21
   m_BuyCurrency: {fileID: -2811142919616601772}
@@ -54,6 +49,9 @@ MonoBehaviour:
   m_IsCraftable: 1
   m_CraftingDuration: 5
   m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers:
+    - {fileID: 11400000, guid: af5120ca8702be44fb59b6eadcd27cd0, type: 2}
   ingredients:
   - item: {fileID: -5663772737389988193}
     amount: 4
@@ -170,7 +168,6 @@ MonoBehaviour:
   m_Prefab: {fileID: 0}
   m_Description: 
   m_Category: {fileID: 0}
-  m_PossibleRarity: []
   m_IsSellable: 1
   m_BuyPrice: 0
   m_BuyCurrency: {fileID: 0}
@@ -184,6 +181,8 @@ MonoBehaviour:
   m_IsCraftable: 0
   m_CraftingDuration: 2
   m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
   ingredients: []
   properties: []
   currencyConversions:
@@ -217,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefcd19cdc9839d449772c4dce1503f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoSave: 1
+  autoSave: 0
   savingKey: Player
   savingRate: 10
   provider: 0
@@ -246,17 +245,17 @@ MonoBehaviour:
   - {fileID: 8763039942855579107}
   - {fileID: -5663772737389988193}
   m_Amounts: 01000000010000000100000001000000010000000100000001000000010000000100000001000000
-  m_RandomProperty:
-  - 0.1
-  - 0.1
-  - 0.1
-  - 0.1
-  - 0.1
-  - 0.1
-  - 0
-  - 0
-  - 0
-  - 0
+  m_Modifiers:
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
 --- !u!114 &-8061578217545172497
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -332,7 +331,6 @@ MonoBehaviour:
   m_Prefab: {fileID: 0}
   m_Description: 
   m_Category: {fileID: 0}
-  m_PossibleRarity: []
   m_IsSellable: 1
   m_BuyPrice: 0
   m_BuyCurrency: {fileID: 0}
@@ -346,6 +344,8 @@ MonoBehaviour:
   m_IsCraftable: 0
   m_CraftingDuration: 2
   m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
   ingredients: []
   properties: []
   currencyConversions:
@@ -388,7 +388,6 @@ MonoBehaviour:
   m_Prefab: {fileID: 0}
   m_Description: Brings you home.
   m_Category: {fileID: -6294223960729143046}
-  m_PossibleRarity: []
   m_IsSellable: 0
   m_BuyPrice: 0
   m_BuyCurrency: {fileID: -2811142919616601772}
@@ -402,6 +401,8 @@ MonoBehaviour:
   m_IsCraftable: 0
   m_CraftingDuration: 2
   m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
   ingredients: []
   properties: []
   m_UseCategoryCooldown: 0
@@ -502,7 +503,6 @@ MonoBehaviour:
     type: 3}
   m_Description: Resource for crafting items.
   m_Category: {fileID: -7427245140175711199}
-  m_PossibleRarity: []
   m_IsSellable: 1
   m_BuyPrice: 3
   m_BuyCurrency: {fileID: -2811142919616601772}
@@ -516,6 +516,8 @@ MonoBehaviour:
   m_IsCraftable: 0
   m_CraftingDuration: 2
   m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
   ingredients: []
   properties: []
 --- !u!114 &-5355670550631679221
@@ -554,8 +556,6 @@ MonoBehaviour:
     type: 3}
   m_Description: An axe can be used to cut trees.
   m_Category: {fileID: -9040799555073544844}
-  m_PossibleRarity:
-  - {fileID: 4257271418691296376}
   m_IsSellable: 1
   m_BuyPrice: 8
   m_BuyCurrency: {fileID: -2811142919616601772}
@@ -569,6 +569,8 @@ MonoBehaviour:
   m_IsCraftable: 1
   m_CraftingDuration: 3
   m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
   ingredients:
   - item: {fileID: -5663772737389988193}
     amount: 1
@@ -602,7 +604,6 @@ MonoBehaviour:
   m_Prefab: {fileID: 100010, guid: 1b80c9f94defa634487a6d9f6e386f6a, type: 3}
   m_Description: Restores your health by 13 points.
   m_Category: {fileID: -3989543302354102894}
-  m_PossibleRarity: []
   m_IsSellable: 1
   m_BuyPrice: 0
   m_BuyCurrency: {fileID: -2811142919616601772}
@@ -616,6 +617,8 @@ MonoBehaviour:
   m_IsCraftable: 0
   m_CraftingDuration: 2
   m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
   ingredients: []
   properties: []
   m_UseCategoryCooldown: 0
@@ -828,8 +831,8 @@ MonoBehaviour:
   m_Items:
   - {fileID: 8429455951140046941}
   m_Amounts: 01000000
-  m_RandomProperty:
-  - 0
+  m_Modifiers:
+  - modifiers: []
 --- !u!114 &-3989543302354102894
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -881,7 +884,6 @@ MonoBehaviour:
   m_Prefab: {fileID: 0}
   m_Description: Be careful outside the town in the first map.
   m_Category: {fileID: 164684216256526245}
-  m_PossibleRarity: []
   m_IsSellable: 1
   m_BuyPrice: 0
   m_BuyCurrency: {fileID: -2811142919616601772}
@@ -895,6 +897,8 @@ MonoBehaviour:
   m_IsCraftable: 0
   m_CraftingDuration: 2
   m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
   ingredients: []
   properties: []
   m_UseCategoryCooldown: 1
@@ -976,7 +980,6 @@ MonoBehaviour:
   m_Prefab: {fileID: 0}
   m_Description: 
   m_Category: {fileID: 0}
-  m_PossibleRarity: []
   m_IsSellable: 1
   m_BuyPrice: 0
   m_BuyCurrency: {fileID: 0}
@@ -990,6 +993,8 @@ MonoBehaviour:
   m_IsCraftable: 0
   m_CraftingDuration: 2
   m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
   ingredients: []
   properties: []
   currencyConversions:
@@ -1016,11 +1021,6 @@ MonoBehaviour:
     type: 3}
   m_Description: A wooden shield.
   m_Category: {fileID: 8705209814584371102}
-  m_PossibleRarity:
-  - {fileID: 4257271418691296376}
-  - {fileID: 1459171670829712994}
-  - {fileID: 7388703754817051196}
-  - {fileID: 8829102310862775636}
   m_IsSellable: 1
   m_BuyPrice: 19
   m_BuyCurrency: {fileID: -2811142919616601772}
@@ -1034,6 +1034,9 @@ MonoBehaviour:
   m_IsCraftable: 1
   m_CraftingDuration: 5
   m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers:
+    - {fileID: 11400000, guid: af5120ca8702be44fb59b6eadcd27cd0, type: 2}
   ingredients:
   - item: {fileID: -5663772737389988193}
     amount: 3
@@ -1111,7 +1114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Id: 344ba9ba-a2e4-4bf8-b120-830bbdfca227
-  m_ItemName: Plant
+  m_ItemName: Scoparius
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
   m_Icon: {fileID: 21300000, guid: 597ce5b3f1754db4799e0b0046802f23, type: 3}
@@ -1119,7 +1122,6 @@ MonoBehaviour:
     type: 3}
   m_Description: Plant to craft a health potion.
   m_Category: {fileID: -7427245140175711199}
-  m_PossibleRarity: []
   m_IsSellable: 1
   m_BuyPrice: 4
   m_BuyCurrency: {fileID: -2811142919616601772}
@@ -1133,6 +1135,8 @@ MonoBehaviour:
   m_IsCraftable: 0
   m_CraftingDuration: 2
   m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
   ingredients: []
   properties: []
 --- !u!114 &-447126039411374142
@@ -1156,8 +1160,6 @@ MonoBehaviour:
     type: 3}
   m_Description: Hammer is used to craft items.
   m_Category: {fileID: -9040799555073544844}
-  m_PossibleRarity:
-  - {fileID: 4257271418691296376}
   m_IsSellable: 1
   m_BuyPrice: 6
   m_BuyCurrency: {fileID: -2811142919616601772}
@@ -1171,6 +1173,8 @@ MonoBehaviour:
   m_IsCraftable: 1
   m_CraftingDuration: 3
   m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
   ingredients:
   - item: {fileID: -5663772737389988193}
     amount: 1
@@ -1216,20 +1220,20 @@ MonoBehaviour:
   - {fileID: 1063046599387310152}
   - {fileID: -5663772737389988193}
   - {fileID: 8763039942855579107}
+  - {fileID: -1175442255857385599}
   - {fileID: 3129509250564287029}
-  - {fileID: -4423743630002525559}
+  - {fileID: -6266380644497530537}
   - {fileID: 4447567160419299934}
+  - {fileID: -4423743630002525559}
   - {fileID: -2839999955813321745}
   - {fileID: 8692695060773013855}
   - {fileID: 2033560685258441697}
+  - {fileID: 529780001783015153}
   - {fileID: -447126039411374142}
   - {fileID: -4474190543486091594}
   - {fileID: 2409076057030828310}
   - {fileID: 960666660569578442}
   - {fileID: -8967533827971111582}
-  - {fileID: -1175442255857385599}
-  - {fileID: 529780001783015153}
-  - {fileID: -6266380644497530537}
   currencies:
   - {fileID: -2811142919616601772}
   - {fileID: -6442420119529586086}
@@ -1349,7 +1353,6 @@ MonoBehaviour:
     type: 3}
   m_Description: Tool used for Alchemy.
   m_Category: {fileID: -9040799555073544844}
-  m_PossibleRarity: []
   m_IsSellable: 0
   m_BuyPrice: 10
   m_BuyCurrency: {fileID: -2811142919616601772}
@@ -1363,6 +1366,8 @@ MonoBehaviour:
   m_IsCraftable: 1
   m_CraftingDuration: 2
   m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
   ingredients:
   - item: {fileID: 8763039942855579107}
     amount: 2
@@ -1401,10 +1406,6 @@ MonoBehaviour:
     type: 3}
   m_Description: One handed weapon.
   m_Category: {fileID: -5355670550631679221}
-  m_PossibleRarity:
-  - {fileID: 4257271418691296376}
-  - {fileID: 1459171670829712994}
-  - {fileID: 7388703754817051196}
   m_IsSellable: 1
   m_BuyPrice: 18
   m_BuyCurrency: {fileID: -2811142919616601772}
@@ -1418,6 +1419,9 @@ MonoBehaviour:
   m_IsCraftable: 1
   m_CraftingDuration: 3
   m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers:
+    - {fileID: 11400000, guid: af5120ca8702be44fb59b6eadcd27cd0, type: 2}
   ingredients:
   - item: {fileID: 8763039942855579107}
     amount: 3
@@ -1534,7 +1538,6 @@ MonoBehaviour:
     type: 3}
   m_Description: Resource for crafting items.
   m_Category: {fileID: -7427245140175711199}
-  m_PossibleRarity: []
   m_IsSellable: 1
   m_BuyPrice: 6
   m_BuyCurrency: {fileID: -2811142919616601772}
@@ -1548,6 +1551,8 @@ MonoBehaviour:
   m_IsCraftable: 1
   m_CraftingDuration: 3
   m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
   ingredients:
   - item: {fileID: 8763039942855579107}
     amount: 1
@@ -1590,7 +1595,6 @@ MonoBehaviour:
   m_Prefab: {fileID: 0}
   m_Description: Furia is the town in the first map.
   m_Category: {fileID: 164684216256526245}
-  m_PossibleRarity: []
   m_IsSellable: 1
   m_BuyPrice: 0
   m_BuyCurrency: {fileID: -2811142919616601772}
@@ -1604,6 +1608,8 @@ MonoBehaviour:
   m_IsCraftable: 0
   m_CraftingDuration: 2
   m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
   ingredients: []
   properties: []
   m_UseCategoryCooldown: 1
@@ -1686,8 +1692,6 @@ MonoBehaviour:
     type: 3}
   m_Description: A pickaxe can be used to mine.
   m_Category: {fileID: -9040799555073544844}
-  m_PossibleRarity:
-  - {fileID: 4257271418691296376}
   m_IsSellable: 1
   m_BuyPrice: 12
   m_BuyCurrency: {fileID: -2811142919616601772}
@@ -1701,6 +1705,8 @@ MonoBehaviour:
   m_IsCraftable: 1
   m_CraftingDuration: 5
   m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
   ingredients:
   - item: {fileID: 8763039942855579107}
     amount: 1
@@ -1735,7 +1741,6 @@ MonoBehaviour:
     type: 3}
   m_Description: This recipe teaches you to craft a bow.
   m_Category: {fileID: -6294223960729143046}
-  m_PossibleRarity: []
   m_IsSellable: 1
   m_BuyPrice: 22
   m_BuyCurrency: {fileID: -2811142919616601772}
@@ -1749,6 +1754,8 @@ MonoBehaviour:
   m_IsCraftable: 0
   m_CraftingDuration: 2
   m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
   ingredients: []
   properties: []
   m_UseCategoryCooldown: 0
@@ -1857,7 +1864,6 @@ MonoBehaviour:
   m_Prefab: {fileID: 100014, guid: d6f72918cc3dd004584674be2b246697, type: 3}
   m_Description: Cast a magical arcane ball.
   m_Category: {fileID: -3989543302354102894}
-  m_PossibleRarity: []
   m_IsSellable: 1
   m_BuyPrice: 0
   m_BuyCurrency: {fileID: -2811142919616601772}
@@ -1871,6 +1877,8 @@ MonoBehaviour:
   m_IsCraftable: 0
   m_CraftingDuration: 2
   m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
   ingredients: []
   properties: []
   m_UseCategoryCooldown: 0
@@ -2086,9 +2094,9 @@ MonoBehaviour:
   - {fileID: -4423743630002525559}
   - {fileID: 4447567160419299934}
   m_Amounts: 0100000001000000
-  m_RandomProperty:
-  - 0
-  - 0
+  m_Modifiers:
+  - modifiers: []
+  - modifiers: []
 --- !u!114 &6127056651903551046
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2126,7 +2134,6 @@ MonoBehaviour:
     type: 3}
   m_Description: Arrows are required to use a bow.
   m_Category: {fileID: -7427245140175711199}
-  m_PossibleRarity: []
   m_IsSellable: 1
   m_BuyPrice: 1
   m_BuyCurrency: {fileID: -2811142919616601772}
@@ -2140,6 +2147,8 @@ MonoBehaviour:
   m_IsCraftable: 1
   m_CraftingDuration: 2
   m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
   ingredients:
   - item: {fileID: -5663772737389988193}
     amount: 1
@@ -2358,10 +2367,10 @@ MonoBehaviour:
   - {fileID: -2839999955813321745}
   - {fileID: 8692695060773013855}
   m_Amounts: 010000000100000001000000
-  m_RandomProperty:
-  - 0
-  - 0
-  - 0
+  m_Modifiers:
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
 --- !u!114 &8429455951140046941
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2383,7 +2392,6 @@ MonoBehaviour:
     type: 3}
   m_Description: Restores your health by 10 points.
   m_Category: {fileID: 171625507360801261}
-  m_PossibleRarity: []
   m_IsSellable: 1
   m_BuyPrice: 3
   m_BuyCurrency: {fileID: -2811142919616601772}
@@ -2397,6 +2405,8 @@ MonoBehaviour:
   m_IsCraftable: 1
   m_CraftingDuration: 2
   m_CraftingAnimatorState: 
+  m_CraftingModifier:
+    modifiers: []
   ingredients:
   - item: {fileID: -1175442255857385599}
     amount: 1
@@ -2477,7 +2487,6 @@ MonoBehaviour:
   m_Prefab: {fileID: 0}
   m_Description: Town in the second map.
   m_Category: {fileID: 164684216256526245}
-  m_PossibleRarity: []
   m_IsSellable: 1
   m_BuyPrice: 0
   m_BuyCurrency: {fileID: -2811142919616601772}
@@ -2491,6 +2500,8 @@ MonoBehaviour:
   m_IsCraftable: 0
   m_CraftingDuration: 2
   m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
   ingredients: []
   properties: []
   m_UseCategoryCooldown: 1
@@ -2588,7 +2599,6 @@ MonoBehaviour:
     type: 3}
   m_Description: Resource for crafting items.
   m_Category: {fileID: -7427245140175711199}
-  m_PossibleRarity: []
   m_IsSellable: 1
   m_BuyPrice: 5
   m_BuyCurrency: {fileID: -2811142919616601772}
@@ -2602,6 +2612,8 @@ MonoBehaviour:
   m_IsCraftable: 0
   m_CraftingDuration: 2
   m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
   ingredients: []
   properties: []
 --- !u!114 &8829102310862775636
@@ -2643,13 +2655,13 @@ MonoBehaviour:
   - {fileID: -447126039411374142}
   - {fileID: 1063046599387310152}
   m_Amounts: 010000000100000001000000010000000100000001000000
-  m_RandomProperty:
-  - 0.2
-  - 0.2
-  - 0.2
-  - 0.2
-  - 0.2
-  - 0
+  m_Modifiers:
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
 --- !u!114 &9220062648813220349
 MonoBehaviour:
   m_ObjectHideFlags: 1

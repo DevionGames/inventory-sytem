@@ -24,17 +24,19 @@ namespace DevionGames.InventorySystem
                 return this.m_Items;
             }
         }
+
         [SerializeField]
         protected int[] m_Amounts = new int[0];
-        public int[] Amounts {
+        public int[] Amounts
+        {
             get { return this.m_Amounts; }
         }
 
         [SerializeField]
-        protected float[] m_RandomProperty = new float[0];
-        public float[] RandomProperty {
-            get { return this.m_RandomProperty; }
+        protected List<ItemModifierList> m_Modifiers = new List<ItemModifierList>();
+
+        public List<ItemModifierList> Modifiers {
+            get { return this.m_Modifiers; }
         }
-       
     }
 }

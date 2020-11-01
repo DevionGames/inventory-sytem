@@ -86,23 +86,38 @@ namespace DevionGames.InventorySystem
             set { this.m_Category = value; }
         }
 
+        private static Rarity m_DefaultRarity;
+        private static Rarity DefaultRarity {
+            get {
+                if (Item.m_DefaultRarity is null) {
+                    //TODO make not deletable in editor
+                    Item.m_DefaultRarity = ScriptableObject.CreateInstance<Rarity>();
+                    Item.m_DefaultRarity.Name = "None";
+                    Item.m_DefaultRarity.Color = Color.grey;
+                    Item.m_DefaultRarity.Chance = 100;
+                    Item.m_DefaultRarity.Multiplier = 1.0f;
+                }
+                return Item.m_DefaultRarity;
+             }
+        }
+
         private Rarity m_Rarity;
 		public Rarity Rarity {
 			get{
-                if (this.m_Rarity == null) {
-                    this.m_Rarity = SelectRarity(this.m_PossibleRarity);
+                if (this.m_Rarity == null ) {
+                    this.m_Rarity = DefaultRarity;
                 }
                 return this.m_Rarity; 
             }
             set { this.m_Rarity = value; }
 		}
 
-        [SerializeField]
+        /*[SerializeField]
         private List<Rarity> m_PossibleRarity=new List<Rarity>();
         public List<Rarity> PossibleRarity {
             get { return this.m_PossibleRarity; }
             set { this.m_PossibleRarity = value; }
-        }
+        }*/
 
         [SerializeField]
         private bool m_IsSellable = true;
@@ -203,6 +218,7 @@ namespace DevionGames.InventorySystem
 			get{ return this.m_OverridePrefab; }
 		}
 
+        //TODO Move all to CraftingData class
         [SerializeField]
         private bool m_IsCraftable=false;
 
@@ -225,6 +241,13 @@ namespace DevionGames.InventorySystem
         public string CraftingAnimatorState
         {
             get { return this.m_CraftingAnimatorState; }
+        }
+
+        [SerializeField]
+        private ItemModifierList m_CraftingModifier= new ItemModifierList();
+        public ItemModifierList CraftingModifier {
+            get { return this.m_CraftingModifier; }
+            set { this.m_CraftingModifier = value; }
         }
 
         public List<Ingredient> ingredients = new List<Ingredient>();
@@ -268,12 +291,6 @@ namespace DevionGames.InventorySystem
 		[SerializeField]
 		private List<ObjectProperty> properties = new List<ObjectProperty> ();
 
-        private float m_PropertyPercentRange = 0f;
-        public float PropertyPercentRange {
-            get { return this.m_PropertyPercentRange; }
-            set { this.m_PropertyPercentRange = value; }
-        }
-
 		public ObjectProperty FindProperty (string name)
 		{
 			return properties.Find (property => property.Name == name);
@@ -293,74 +310,6 @@ namespace DevionGames.InventorySystem
 		{
 			this.properties = new List<ObjectProperty> (properties);
 		}
-
-        public void RandomizeProperties()
-        {
-            for (int i = 0; i < properties.Count; i++)
-            {
-                RandomizeProperty(properties[i].Name, this.m_PropertyPercentRange);
-            }
-        }
-
-        public void RandomizeProperties (float percent)
-		{
-			for (int i = 0; i < properties.Count; i++) {
-				RandomizeProperty (properties [i].Name, percent);
-			}
-		}
-
-		public void RandomizeProperty (string name, float percent)
-		{
-			ObjectProperty property = FindProperty (name);
-
-			if (property != null) {
-				object value = property.GetValue ();
-                if (UnityTools.IsNumeric(value) && property.show)
-                {
-                    float cur = System.Convert.ToSingle(property.GetValue())*this.Rarity.Multiplier;
-                    float percentage = cur * percent;
-                    float random = UnityEngine.Random.Range(cur - percentage, cur + percentage);
-                    if (value is float)
-                    {
-                        property.SetValue(random );
-                    }
-                    else if (value is int)
-                    {
-                        property.SetValue(Mathf.RoundToInt(random));
-                    }
-                }
-			}
-		}
-
-        private System.Random rnd = new System.Random();
-
-        private static Rarity emptyRarity;
-
-        private Rarity SelectRarity(List<Rarity> items)
-        {
-            int poolSize = 0;
-            for (int i = 0; i < items.Count; i++)
-            {
-                poolSize += items[i].Chance;
-            }
-            int randomNumber = rnd.Next(0, poolSize) + 1;
-
-            int accumulatedProbability = 0;
-            for (int i = 0; i < items.Count; i++)
-            {
-                accumulatedProbability += items[i].Chance;
-                if (randomNumber <= accumulatedProbability)
-                    return items[i];
-            }
-            if (Item.emptyRarity is null)
-            {
-                Item.emptyRarity = ScriptableObject.CreateInstance<Rarity>();
-                Item.emptyRarity.Color = Color.grey;
-                Item.emptyRarity.Chance = 100;
-                Item.emptyRarity.Multiplier = 1.0f;
-            }
-            return Item.emptyRarity;   
-        }
 
         protected virtual void OnEnable ()
 		{

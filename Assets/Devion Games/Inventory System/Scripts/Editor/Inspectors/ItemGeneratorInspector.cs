@@ -14,6 +14,8 @@ namespace DevionGames.InventorySystem
         private SerializedProperty m_ItemGeneratorData;
         private ReorderableList m_ItemGeneratorDataList;
 
+        private ReorderableList m_ModifierList;
+
         protected virtual void OnEnable() {
             this.m_Script = serializedObject.FindProperty("m_Script");
             this.m_MaxAmount = serializedObject.FindProperty("m_MaxAmount");
@@ -32,9 +34,33 @@ namespace DevionGames.InventorySystem
             {
                 this.m_ItemGeneratorDataList.index = index;
                 SelectGeneratorData(this.m_ItemGeneratorDataList);
+               if(index > -1)
+                    CreateModifierList("Modifiers", serializedObject, this.m_ItemGeneratorData.GetArrayElementAtIndex(index).FindPropertyRelative("modifiers")) ;
             }
 
-          
+        }
+
+        private void CreateModifierList(string title, SerializedObject serializedObject, SerializedProperty property)
+        {
+
+            this.m_ModifierList = new ReorderableList(serializedObject, property.FindPropertyRelative("modifiers"), true, true, true, true);
+            this.m_ModifierList.drawHeaderCallback = (Rect rect) => {
+                EditorGUI.LabelField(rect, title);
+            };
+            this.m_ModifierList.drawElementCallback = (Rect rect, int index, bool isActive, bool isFocused) =>
+            {
+                float verticalOffset = (rect.height - EditorGUIUtility.singleLineHeight) * 0.5f;
+                rect.height = EditorGUIUtility.singleLineHeight;
+                rect.y = rect.y + verticalOffset;
+                SerializedProperty element = this.m_ModifierList.serializedProperty.GetArrayElementAtIndex(index);
+                EditorGUI.PropertyField(rect, element, GUIContent.none, true);
+            };
+
+            this.m_ModifierList.onRemoveCallback = (ReorderableList list) =>
+            {
+                list.serializedProperty.GetArrayElementAtIndex(list.index).objectReferenceValue = null;
+                ReorderableList.defaultBehaviours.DoRemoveButton(list);
+            };
         }
 
         public override void OnInspectorGUI()
@@ -98,11 +124,14 @@ namespace DevionGames.InventorySystem
         private void SelectGeneratorData(ReorderableList list)
         {
             EditorPrefs.SetInt("GeneratorIndex" + target.GetInstanceID().ToString(), list.index);
+            if(list.index > -1)
+                CreateModifierList("Modifiers", serializedObject, this.m_ItemGeneratorData.GetArrayElementAtIndex(list.index).FindPropertyRelative("modifiers"));
         }
 
         private void DrawSelectedGeneratorData(SerializedProperty element)
         {
             EditorGUILayout.PropertyField(element.FindPropertyRelative("item"));
+
             SerializedProperty minStack = element.FindPropertyRelative("minStack");
             EditorGUILayout.PropertyField(minStack);
 
@@ -114,8 +143,11 @@ namespace DevionGames.InventorySystem
             if (maxStack.intValue < 1) {
                 maxStack.intValue = 1;
             }
-            EditorGUILayout.PropertyField(element.FindPropertyRelative("propertyRandomizer"));
             EditorGUILayout.PropertyField(element.FindPropertyRelative("chance"));
+
+            EditorGUILayout.Space();
+            if (this.m_ModifierList != null)
+                this.m_ModifierList.DoLayoutList();
         }
 
     }

@@ -195,9 +195,12 @@ namespace DevionGames.InventorySystem
             this.m_ProgressInitTime = Time.time;
             yield return new WaitForSeconds(item.CraftingDuration);
             Item craftedItem = Instantiate(item);
-            craftedItem.PropertyPercentRange = item.PropertyPercentRange;
-            craftedItem.RandomizeProperties();
             craftedItem.Stack = 1;
+            craftedItem.CraftingModifier.Modify(craftedItem);
+
+            /*craftedItem.PropertyPercentRange = item.PropertyPercentRange;
+            craftedItem.RandomizeProperties();*/
+
             if (this.m_ResultStorageContainer.StackOrAdd(craftedItem))
             {
                 for (int i = 0; i < item.ingredients.Count; i++)

@@ -192,7 +192,7 @@ namespace DevionGames{
 							int index = j;
 							if (index < this.m_SelectedItemIndex)
 								index += 1;
-							if (rect1.Contains(Event.current.mousePosition))
+							if (rect1.Contains(Event.current.mousePosition) && (index-1) > -1)
 							{
 								MoveItem(this.m_SelectedItemIndex, index-1);
 								Select(Items[index-1]);

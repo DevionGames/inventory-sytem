@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1332847968068153002}
   - component: {fileID: 4609814832669488598}
   - component: {fileID: 8526055323680340666}
-  - component: {fileID: 2492252505560955442}
   - component: {fileID: 7469636722330649568}
   - component: {fileID: 8912062079263800403}
   - component: {fileID: 2225438275881385005}
@@ -98,25 +97,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 02f05bd07b76e134b9ce1d218a95057a, type: 3}
---- !u!95 &2492252505560955442
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6550093729711604389}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 02f05bd07b76e134b9ce1d218a95057a, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &7469636722330649568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,11 +186,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saveable: 1
-  items:
+  m_Items:
   - {fileID: 529780001783015153, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
-  amounts: 01000000
-  randomProperty:
-  - 0
+  m_Amounts: 01000000
+  m_Modifiers:
+  - modifiers: []
+  - modifiers: []
   onChange:
     m_PersistentCalls:
       m_Calls: []

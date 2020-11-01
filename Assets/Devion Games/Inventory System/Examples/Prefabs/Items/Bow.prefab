@@ -216,12 +216,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68165cdf1896c89479a91b2478670c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
+  saveable: 1
+  m_Items:
   - {fileID: -8967533827971111582, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
-  amounts: 01000000
-  randomProperty:
-  - 0
+  m_Amounts: 01000000
+  m_Modifiers:
+  - modifiers:
+    - {fileID: 11400000, guid: af5120ca8702be44fb59b6eadcd27cd0, type: 2}
+    - {fileID: 11400000, guid: 51ac90cf6263a1a479a1bad8f43f1dfd, type: 2}
+  - modifiers:
+    - {fileID: 11400000, guid: af5120ca8702be44fb59b6eadcd27cd0, type: 2}
   onChange:
     m_PersistentCalls:
       m_Calls: []
-  prefab: {fileID: 8054533140301882152}

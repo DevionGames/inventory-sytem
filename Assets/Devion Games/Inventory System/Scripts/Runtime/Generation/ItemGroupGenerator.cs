@@ -21,11 +21,14 @@ namespace DevionGames.InventorySystem
         private int m_MinAmount = 1;
         [SerializeField]
         private int m_MaxAmount = 1;
-        [SerializeField]
-        private float m_PropertyRandomizer = 0.15f;
+
         [Range(0f,1f)]
         [SerializeField]
         private float m_Chance = 1.0f;
+
+        [SerializeField]
+        private ItemModifierList m_Modifiers = new ItemModifierList();
+
 
         private void Start()
         {
@@ -67,7 +70,9 @@ namespace DevionGames.InventorySystem
                 int stack = Random.Range(this.m_MinStack,this.m_MaxStack);
                 item = Instantiate(item);
                 item.Stack = stack;
-                item.RandomizeProperties(this.m_PropertyRandomizer);
+
+                this.m_Modifiers.Modify(item);
+
                 if (item.IsCraftable)
                 {
                     for (int j = 0; j < item.ingredients.Count; j++)
