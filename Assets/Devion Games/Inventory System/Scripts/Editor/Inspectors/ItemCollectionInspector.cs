@@ -70,6 +70,8 @@ namespace DevionGames.InventorySystem
 
             this.m_ItemList.onReorderCallbackWithDetails = (ReorderableList list, int oldIndex, int newIndex) => {
                 this.m_Modifiers.MoveArrayElement(oldIndex, newIndex);
+                SerializedProperty amounts = serializedObject.FindProperty("m_Amounts");
+                amounts.MoveArrayElement(oldIndex, newIndex);
             };
 
             this.m_ItemList.onAddCallback = (ReorderableList list) => {
@@ -81,6 +83,8 @@ namespace DevionGames.InventorySystem
             {
                 this.m_Modifiers.DeleteArrayElementAtIndex(list.index);
                 this.m_ModifierList = null;
+                SerializedProperty amounts = serializedObject.FindProperty("m_Amounts");
+                amounts.DeleteArrayElementAtIndex(list.index);
 
                 list.serializedProperty.GetArrayElementAtIndex(list.index).objectReferenceValue = null;
                 ReorderableList.defaultBehaviours.DoRemoveButton(list);
