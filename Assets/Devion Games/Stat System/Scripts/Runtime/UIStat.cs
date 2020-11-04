@@ -7,9 +7,9 @@ namespace DevionGames.StatSystem{
 	public class UIStat : MonoBehaviour {
 		[Header("Stat Definition")]
 		[SerializeField]
-		private string m_StatsHandler = "Player Stats";
+		protected string m_StatsHandler = "Player Stats";
 		[SerializeField]
-		private string m_StatName=string.Empty;
+		protected string m_StatName=string.Empty;
 		[Header("UI References")]
 		[SerializeField]
 		protected Text statName;
@@ -24,8 +24,8 @@ namespace DevionGames.StatSystem{
 		[SerializeField]
 		protected Button m_IncrementButton;
 
-		private StatsHandler m_Handler;
-		protected StatsHandler handler {
+		protected StatsHandler m_Handler;
+		protected virtual StatsHandler handler {
 			get {
 				if (this.m_Handler == null)
 					this.m_Handler = StatsManager.GetStatsHandler(this.m_StatsHandler);
@@ -33,8 +33,8 @@ namespace DevionGames.StatSystem{
 			}
 		}
 
-        private Stat m_Stat;
-		protected Stat stat
+        protected Stat m_Stat;
+		protected virtual Stat stat
         {
 			get {
 				if (this.m_Stat == null && handler != null)

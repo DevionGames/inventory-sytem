@@ -23,10 +23,13 @@ namespace DevionGames.InventorySystem
 
         private void OnCollisionEnter(Collision collision)
         {
+            if (!isActiveAndEnabled) return;
+            
             this.m_Collider.enabled = false;
             this.m_Rigidbody.velocity = Vector3.zero;
             this.m_Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
             transform.position = collision.GetContact(0).point;
+            transform.parent = collision.transform;
             if (this.m_AutoDestruct)
                 Destroy(gameObject, this.m_DestructDelay);
         }

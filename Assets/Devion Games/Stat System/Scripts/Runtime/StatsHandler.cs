@@ -45,6 +45,8 @@ namespace DevionGames.StatSystem
             }
         }
 
+
+
         /// <summary>
         /// Apply damage to stat, negative values heal.
         /// Type:

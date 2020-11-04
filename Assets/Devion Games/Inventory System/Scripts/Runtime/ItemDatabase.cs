@@ -32,5 +32,9 @@ namespace DevionGames.InventorySystem{
 			}
 			return null;
 		}
+
+		public ItemGroup GetItemGroup(string name) {
+			return itemGroups.First(x => x.Name == name);
+		}
 	}
 }

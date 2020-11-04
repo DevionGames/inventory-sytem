@@ -244,8 +244,10 @@ MonoBehaviour:
   - {fileID: 1063046599387310152}
   - {fileID: 8763039942855579107}
   - {fileID: -5663772737389988193}
-  m_Amounts: 01000000010000000100000001000000010000000100000001000000010000000100000001000000
+  - {fileID: 8429455951140046941}
+  m_Amounts: 0100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
   m_Modifiers:
+  - modifiers: []
   - modifiers: []
   - modifiers: []
   - modifiers: []
@@ -864,6 +866,44 @@ MonoBehaviour:
   maxDropDistance: 1
   debugMessages: 1
   showAllComponents: 0
+--- !u!114 &-3796731219101042533
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28fccac83a2fa2245991bffe45a6cdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_GroupName: Loot
+  m_Items:
+  - {fileID: 8429455951140046941}
+  - {fileID: -5663772737389988193}
+  - {fileID: -4474190543486091594}
+  - {fileID: -2060425377994505070}
+  - {fileID: -8967533827971111582}
+  - {fileID: 8763039942855579107}
+  - {fileID: 3129509250564287029}
+  - {fileID: -447126039411374142}
+  - {fileID: 2409076057030828310}
+  - {fileID: 960666660569578442}
+  - {fileID: 529780001783015153}
+  m_Amounts: 0100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Modifiers:
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
 --- !u!114 &-2839999955813321745
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1269,6 +1309,7 @@ MonoBehaviour:
   - {fileID: 6066131165606410366}
   - {fileID: 7990749027154876597}
   - {fileID: -4213577332647146612}
+  - {fileID: -3796731219101042533}
   settings:
   - {fileID: -3817802777368614781}
   - {fileID: -8057506047932969836}

@@ -1491,7 +1491,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 122
+  m_Constraints: 10
   m_CollisionDetection: 0
 --- !u!65 &2074223615
 BoxCollider:
@@ -1612,7 +1612,7 @@ MonoBehaviour:
   saveable: 1
   m_Items:
   - {fileID: -2811142919616601772, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
-  m_Amounts: 01000000
+  m_Amounts: 00000000
   m_Modifiers:
   - modifiers:
     - {fileID: 11400000, guid: 3451d08e25b81ff4eb586aa4fb61a191, type: 2}

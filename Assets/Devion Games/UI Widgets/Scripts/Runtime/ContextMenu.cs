@@ -11,8 +11,8 @@ namespace DevionGames.UIWidgets
 	{
 		[Header ("Reference")]
 		[SerializeField]
-		private MenuItem m_MenuItemPrefab= null;
-		private List<MenuItem> itemCache = new List<MenuItem> ();
+		protected MenuItem m_MenuItemPrefab= null;
+		protected List<MenuItem> itemCache = new List<MenuItem> ();
 
 		public override void Show ()
 		{
@@ -20,7 +20,7 @@ namespace DevionGames.UIWidgets
 			base.Show ();
 		}
 
-		private void Update ()
+		protected virtual void Update ()
 		{
 			if (m_CanvasGroup.alpha > 0f && (Input.GetMouseButtonDown (0) || Input.GetMouseButtonDown (1) || Input.GetMouseButtonDown (2))) {
 
@@ -41,14 +41,14 @@ namespace DevionGames.UIWidgets
 			}
 		}
 
-		public void Clear ()
+		public virtual void Clear ()
 		{
 			for (int i = 0; i < itemCache.Count; i++) {
 				itemCache [i].gameObject.SetActive (false);
 			}
 		}
 
-		public MenuItem AddMenuItem (string text, UnityAction used)
+		public virtual MenuItem AddMenuItem (string text, UnityAction used)
 		{
 			MenuItem item = itemCache.Find (x => !x.gameObject.activeSelf);
 

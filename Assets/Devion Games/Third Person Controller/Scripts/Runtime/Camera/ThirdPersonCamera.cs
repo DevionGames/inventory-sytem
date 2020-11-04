@@ -126,10 +126,13 @@ namespace DevionGames
         private void UpdateInput() {
             this.m_ConsumeTurn = false;
             this.m_ConsumeZoom = false;
+
             if ((Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)) && EventSystem.current != null && UnityTools.IsPointerOverUI())
             {
                 this.m_GUIClick = true;
             }
+
+
 
             if (Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1))
             {
@@ -219,7 +222,8 @@ namespace DevionGames
             }
         }
 
-		private float ClampAngle (float angle, float min, float max)
+
+        private float ClampAngle (float angle, float min, float max)
 		{
 			do {
 				if (angle < -360f)

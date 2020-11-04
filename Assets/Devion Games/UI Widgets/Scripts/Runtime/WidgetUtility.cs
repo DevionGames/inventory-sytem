@@ -40,7 +40,7 @@ namespace DevionGames.UIWidgets
 		{
 
 			List<UIWidget> current = null;
-			if (!widgetCache.TryGetValue(name, out current))
+			if (!widgetCache.TryGetValue(name, out current) || current.Count == 0)
 			{
 				current = new List<UIWidget>();
 				Canvas[] canvas = GameObject.FindObjectsOfType<Canvas>();

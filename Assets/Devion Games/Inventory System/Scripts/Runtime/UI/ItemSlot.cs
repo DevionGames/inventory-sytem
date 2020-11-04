@@ -171,7 +171,7 @@ namespace DevionGames.InventorySystem
         }
 
         private void ShowTooltip() {
-            if (Container.ShowTooltips && dragObject == null && ObservedItem != null)
+            if (isActiveAndEnabled && Container.ShowTooltips && dragObject == null && ObservedItem != null)
             {
                 if (this.m_DelayTooltipCoroutine != null)
                 {

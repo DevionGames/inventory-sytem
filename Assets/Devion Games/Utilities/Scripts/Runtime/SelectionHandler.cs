@@ -58,7 +58,7 @@ namespace DevionGames
         }
 
         private void CustomUpdate() {
-            if (this.m_CurrentSelection != null && Vector3.Distance(this.m_Transform.position,this.m_CurrentSelection.position) > this.m_DeselectionDistance) {
+            if (!(this.m_CurrentSelection is null) && Vector3.Distance(this.m_Transform.position,this.m_CurrentSelection.position) > this.m_DeselectionDistance) {
                 Deselect();
             }
         }
@@ -68,13 +68,14 @@ namespace DevionGames
             bool selected = false;
             //Selection
             if (Input.GetMouseButtonDown(0) && selectionType.HasFlag<SelectionInputType>(SelectionInputType.LeftClick) ||
-                Input.GetMouseButtonDown(1) && selectionType.HasFlag<SelectionInputType>(SelectionInputType.RightClick)) {
+                Input.GetMouseButtonDown(1) && selectionType.HasFlag<SelectionInputType>(SelectionInputType.RightClick) || 
+                Input.GetMouseButtonDown(2) && selectionType.HasFlag<SelectionInputType>(SelectionInputType.MiddleClick)) {
                 selected = TrySelect(this.m_Camera.ScreenPointToRay(Input.mousePosition));
             } else if ((Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)) && selectionType.HasFlag<SelectionInputType>(SelectionInputType.Raycast)) {
                 selected = TrySelect(new Ray(this.m_CameraTransform.position, this.m_CameraTransform.forward + this.m_RaycastOffset));
             } else if (Input.GetKeyDown(this.m_SelectionKey) && selectionType.HasFlag<SelectionInputType>(SelectionInputType.Key)) {
                 RaycastHit[] hits = Physics.SphereCastAll(this.m_Transform.position, this.m_SelectionDistance, this.m_Transform.forward);
-                ISelectable selectable = GetBestSelectable(hits.Select(x => x.collider.GetComponent<ISelectable>()).OfType<ISelectable>());
+                ISelectable selectable = GetBestSelectable(hits.Select(x => x.collider.GetComponent<ISelectable>()).OfType<ISelectable>().Where(x=>x.enabled));
                 if (selectable != null) {
                     Select(selectable);
                     selected = true;
@@ -86,6 +87,7 @@ namespace DevionGames
             {
                 if (!selected && (Input.GetMouseButtonDown(0) && deselectionType.HasFlag<DeselectionInputType>(DeselectionInputType.LeftClick) ||
                     Input.GetMouseButtonDown(1) && deselectionType.HasFlag<DeselectionInputType>(DeselectionInputType.RightClick) ||
+                    Input.GetMouseButtonDown(2) && deselectionType.HasFlag<DeselectionInputType>(DeselectionInputType.MiddleClick) ||
                     Input.GetKeyDown(this.m_DeselectionKey) && deselectionType.HasFlag<DeselectionInputType>(DeselectionInputType.Key)))
                 {
                     Deselect();
@@ -101,7 +103,7 @@ namespace DevionGames
                 if (Vector3.Distance(this.m_Transform.position, hit.transform.position) < this.m_SelectionDistance)
                 {
                     ISelectable selectable = hit.collider.GetComponent<ISelectable>();
-                    if (selectable != null)
+                    if (selectable != null && selectable.enabled)
                     {
                         Select(selectable);
                         return true;
@@ -151,7 +153,8 @@ namespace DevionGames
             LeftClick = 1,
             RightClick = 2,
             Key = 4,
-            Raycast = 8
+            Raycast = 8,
+            MiddleClick = 16
         }
 
         [System.Flags]
@@ -160,7 +163,8 @@ namespace DevionGames
             LeftClick = 1,
             RightClick = 2,
             Key = 4,
-            Distance = 8
+            Distance = 8,
+            MiddleClick = 16
         }
     }
 }

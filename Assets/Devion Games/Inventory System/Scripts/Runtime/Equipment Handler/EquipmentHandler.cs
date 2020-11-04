@@ -60,6 +60,8 @@ namespace DevionGames.InventorySystem
             }
         }
 
+        private void TriggerAnimationEvent(string ev) { }
+
         private void OnAddItem(Item item, Slot slot)
         {
             if (item != null && item is EquipmentItem)
