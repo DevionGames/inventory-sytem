@@ -78,6 +78,7 @@ namespace DevionGames.InventorySystem
 
         protected override void Use()
         {
+            Debug.Log("Use");
             if (this.m_CurrentClipSize == 0)
             {
                 TryReload();

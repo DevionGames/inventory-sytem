@@ -30,7 +30,7 @@ namespace DevionGames.InventorySystem
 
         private void Start()
         {
-            if (transform.root != transform)
+           /* if (transform.root != transform)
             {
                 EquipmentHandler handler = transform.root.gameObject.GetComponent<EquipmentHandler>();
                 if (handler == null)
@@ -41,7 +41,7 @@ namespace DevionGames.InventorySystem
 
                 Destroy(this);
                 return;
-            }
+            }*/
            
             this.m_EquipmentContainer = WidgetUtility.Find<ItemContainer>(this.m_WindowName);
             if (this.m_EquipmentContainer != null)

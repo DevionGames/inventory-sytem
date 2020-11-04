@@ -140,7 +140,8 @@ namespace DevionGames
 
 		private void Start ()
 		{
-			this.m_Transform = transform.root;
+			//this.m_Transform = transform.root;
+			this.m_Transform = transform;
 			this.m_Animator = this.m_Transform.GetComponent<Animator> ();
 			this.m_Rigidbody = this.m_Transform.GetComponent<Rigidbody> ();
 			this.m_CapsuleCollider = this.m_Transform.GetComponent<CapsuleCollider> ();
