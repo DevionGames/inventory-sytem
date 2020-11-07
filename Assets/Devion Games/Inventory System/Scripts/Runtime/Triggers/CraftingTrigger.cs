@@ -124,15 +124,23 @@ namespace DevionGames.InventorySystem
             if (item.UseCraftingSkill)
             {
                 ItemContainer skills = WidgetUtility.Find<ItemContainer>(item.SkillWindow);
-                Skill skill = (Skill)skills.GetItems(item.CraftingSkill.Id).FirstOrDefault();
-                if (skill == null) {
-                    InventoryManager.Notifications.missingSkillToCraft.Show(item.DisplayName);
-                    return;
-                }
+                if (skills != null)
+                {
+                    Skill skill = (Skill)skills.GetItems(item.CraftingSkill.Id).FirstOrDefault();
+                    if (skill == null)
+                    {
+                        InventoryManager.Notifications.missingSkillToCraft.Show(item.DisplayName);
+                        return;
+                    }
 
-                if (skill.CurrentValue < item.MinCraftingSkillValue) {
-                    InventoryManager.Notifications.requiresHigherSkill.Show(item.DisplayName,skill.DisplayName);
-                    return;
+                    if (skill.CurrentValue < item.MinCraftingSkillValue)
+                    {
+                        InventoryManager.Notifications.requiresHigherSkill.Show(item.DisplayName, skill.DisplayName);
+                        return;
+                    }
+                }
+                else {
+                    Debug.LogWarning("Item is set to use a skill but no skill window with name "+item.SkillWindow+" found!");
                 }
             }
 
