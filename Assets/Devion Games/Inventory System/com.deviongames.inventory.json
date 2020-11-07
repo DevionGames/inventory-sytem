@@ -2,7 +2,7 @@
     "name": "Inventory System",
     "id": "com.deviongames.inventory",
         "assetPath":"Assets/Devion Games/Inventory System",
-    "version": "2.0.9",
+    "version": "2.1.0",
     "unityVersion": "2019.4.10",
     "assetStore": "",
     "downloadPath": "https://deviongames.com/modules/InventorySystem.unitypackage",
@@ -289,6 +289,38 @@
                 "Fixed Formula string ports used in GetStatValue, GetStatCurrentValue not displaying stat name.",
                 "Stats Max Value = -1 defines unlimited",
                 "Improved drawing pererformance for actions."
+            ]
+        },
+        {
+            "version": "2.1.0",
+            "changes": 
+            [
+                "Fill stacks in ItemContainer first and add rest stack as a new item",
+                "Fixed Sort by category, auto add first category",
+                "Removed Currency creation in Items tab, Currency tab should be used",
+                "Auto assign first currency to item when created",
+                "Deselect Item when deleted",
+                "Create default category when ItemDatabase is created.",
+                "Auto unparent Inventory Manager when DontDestroyOnLoad is enabled",
+                "Item display name option",
+                "Fixed Manual Loading, wrong key was used.",
+                "Reworked Saving And Loading. UI and Scene is saved separately to one key.",
+                "Item Game Objects in scene do not require prefab name anymore. Shield and Shield(1) names are recognized as one prefab.",
+                "Saved data can be deleted separately(UI, Scene, All)",
+                "Fixed Context Menu not creating all slots.",
+                "EquipmentRegion restriction is used as an or condition.", 
+                "Fixed bug displaying wrong ingredients", 
+                "Category color and item icons are displayed now in the item editor sidebar.",
+                "AddItem action has amount field.",
+                "Rarity price multiplier",
+                "Sell price tooltip",
+                "Menu tooltip",
+                "Item IsSellable field",
+                "Option to use Rarity name as item name prefix.",
+                "Option on slot to display rarity color or not.",
+                "Items of diffrent rarity can't be stacked.",
+                "New Item Randomization with extendable Modifiers.",
+                "First implementation of a skilll system."
             ]
         }
     ]

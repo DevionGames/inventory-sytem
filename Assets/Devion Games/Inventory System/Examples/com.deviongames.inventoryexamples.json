@@ -2,7 +2,7 @@
 	"name": "Inventory Examples",
 	"id": "com.deviongames.inventoryexamples",
 	"assetPath":"Assets/Devion Games/Inventory System/Examples",
-	"version": "1.0.9",
+	"version": "1.1.0",
 	"unityVersion": "2019.4.10",
 	"downloadPath": "https://deviongames.com/modules/InventorySystemExample.unitypackage",
 	"author": "Konstantin Janson",
@@ -91,6 +91,13 @@
             "changes": 
             [
                 "Setup update for Inventory System 2.0.9"
+            ]
+        }, 
+        {
+            "version": "1.1.0",
+            "changes": 
+            [
+                "Setup update for Inventory System 2.1.0"
             ]
         }
     ]

@@ -2,7 +2,7 @@
 	"name": "Stat System",
 	"id": "com.deviongames.stats",
 	"assetPath":"Assets/Devion Games/Stat System",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"unityVersion": "2019.4.10",
 	"downloadPath": "https://deviongames.com/modules/StatSystem.unitypackage",
 	"author": "Konstantin Janson",
@@ -78,6 +78,14 @@
             [
                 "Stats Max Value = -1 defines unlimited",
                 "Fixed Formula string ports used in GetStatValue, GetStatCurrentValue not displaying stat name"
+            ]
+        }, 
+        {
+            "version": "1.0.7",
+            "changes": 
+            [
+                "Fixed GetStatCurrentValue was returning Value.",
+                "Added SelectableUIStat to display stats on target."
             ]
         }
     ]

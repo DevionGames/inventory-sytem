@@ -2,7 +2,7 @@
     "name": "Third Person Controller",
     "id": "com.deviongames.controllers",
     "assetPath":"Assets/Devion Games/Third Person Controller",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "unityVersion": "2019.4.10",
     "downloadPath": "https://deviongames.com/modules/ThirdPersonController.unitypackage",
     "author": "Konstantin Janson",
@@ -61,6 +61,14 @@
             "changes": 
             [
                 "Removed global setting Physics.QuerriesHitTriggers"
+            ]
+        }, 
+        {
+            "version": "1.0.6",
+            "changes": 
+            [
+                "Do not check default animator states if target state is empty",
+                "AssemblyDefinition"
             ]
         }
     ]
