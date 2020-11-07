@@ -21,15 +21,27 @@ namespace DevionGames.InventorySystem
             this.m_Collider = GetComponent<Collider>();
         }
 
-        private void OnCollisionEnter(Collision collision)
+
+        //Changed to OnCollisionStay for close shooting.
+        private void OnCollisionStay(Collision collision)
         {
             if (!isActiveAndEnabled) return;
-            
+                OnHit(collision.transform, collision.GetContact(0).point);
+        }
+
+        /*private void OnCollisionEnter(Collision collision)
+        {
+
+            if (!isActiveAndEnabled) return;
+              OnHit(collision.transform,collision.GetContact(0).point);
+        }*/
+
+        private void OnHit(Transform hit, Vector3 position) {
             this.m_Collider.enabled = false;
             this.m_Rigidbody.velocity = Vector3.zero;
             this.m_Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
-            transform.position = collision.GetContact(0).point;
-            transform.parent = collision.transform;
+            transform.position = position;
+            transform.parent = hit;
             if (this.m_AutoDestruct)
                 Destroy(gameObject, this.m_DestructDelay);
         }

@@ -78,7 +78,6 @@ namespace DevionGames.InventorySystem
 
         protected override void Use()
         {
-            Debug.Log("Use");
             if (this.m_CurrentClipSize == 0)
             {
                 TryReload();
@@ -97,7 +96,9 @@ namespace DevionGames.InventorySystem
                 RaycastHit hit;
                 if (Physics.Raycast(this.m_CameraTransform.position, this.m_CameraTransform.forward, out hit, float.PositiveInfinity))
                 {
-                    projectileRigidbody.transform.LookAt(hit.point);
+                    if(Vector3.Distance(m_CurrentProjectile.transform.position,hit.point)>1f)
+                        projectileRigidbody.transform.LookAt(hit.point);
+
                 }
                 else
                 {

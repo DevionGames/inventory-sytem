@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using DevionGames.UIWidgets;
 using UnityEngine;
 
@@ -120,6 +121,21 @@ namespace DevionGames.InventorySystem
                 return;
             }
 
+            if (item.UseCraftingSkill)
+            {
+                ItemContainer skills = WidgetUtility.Find<ItemContainer>(item.SkillWindow);
+                Skill skill = (Skill)skills.GetItems(item.CraftingSkill.Id).FirstOrDefault();
+                if (skill == null) {
+                    InventoryManager.Notifications.missingSkillToCraft.Show(item.DisplayName);
+                    return;
+                }
+
+                if (skill.CurrentValue < item.MinCraftingSkillValue) {
+                    InventoryManager.Notifications.requiresHigherSkill.Show(item.DisplayName,skill.DisplayName);
+                    return;
+                }
+            }
+
             if (!HasIngredients(this.m_RequiredIngredientsContainer, item))
             {
                 InventoryManager.Notifications.missingIngredient.Show();
@@ -194,12 +210,28 @@ namespace DevionGames.InventorySystem
             this.m_ProgressDuration = item.CraftingDuration;
             this.m_ProgressInitTime = Time.time;
             yield return new WaitForSeconds(item.CraftingDuration);
+            if (item.UseCraftingSkill) {
+                ItemContainer skills = WidgetUtility.Find<ItemContainer>(item.SkillWindow);
+                Skill skill = (Skill)skills.GetItems(item.CraftingSkill.Id).FirstOrDefault();
+                if (skill == null) { Debug.LogWarning("Skill not found in " + item.SkillWindow + "."); }
+                if (!skill.CheckSkill()) {
+                    InventoryManager.Notifications.failedToCraft.Show(item.DisplayName);
+                    if (item.RemoveIngredientsWhenFailed) {
+                        for (int i = 0; i < item.ingredients.Count; i++)
+                        {
+                            this.m_RequiredIngredientsContainer.RemoveItem(item.ingredients[i].item, item.ingredients[i].amount);
+                        }
+                    }
+                    yield break;
+                }  
+
+            }
+
             Item craftedItem = Instantiate(item);
             craftedItem.Stack = 1;
             craftedItem.CraftingModifier.Modify(craftedItem);
 
-            /*craftedItem.PropertyPercentRange = item.PropertyPercentRange;
-            craftedItem.RandomizeProperties();*/
+
 
             if (this.m_ResultStorageContainer.StackOrAdd(craftedItem))
             {

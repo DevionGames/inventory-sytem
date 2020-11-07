@@ -33,7 +33,7 @@ namespace DevionGames.InventorySystem
 		{
 			EditorGUI.BeginProperty(position, label, property);
 			T current = (T)property.GetValue();
-
+			
             CheckForDatabase(current);
 
             if (Database == null || Items.Count == 0) {

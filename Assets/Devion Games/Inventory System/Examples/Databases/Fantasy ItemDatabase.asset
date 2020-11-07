@@ -1,5 +1,55 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9164302591508860154
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9a3ee254b78a64481dccedbfd4ba41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Id: 328c9708-0135-44ee-8000-39309dfa737b
+  m_ItemName: Lumberjacking
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: 81e9ec1d21e1f8f43a06e7e75c17fc37, type: 3}
+  m_Prefab: {fileID: 0}
+  m_Description: As your skill improves, your chance of successfully harvesting wood
+    from a given tree increases.
+  m_Category: {fileID: -8831619382594955781}
+  m_IsSellable: 1
+  m_BuyPrice: 80
+  m_BuyCurrency: {fileID: -2811142919616601772}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: -2811142919616601772}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 1
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 1
+  m_Cooldown: 1
+  actions: []
+  m_FixedSuccessChance: 50
+  m_GainModifier: {fileID: 11400000, guid: ab8c15d98d0de6d448b589d24bbb0eef, type: 2}
+  references:
+    version: 1
 --- !u!114 &-9040799555073544844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -48,6 +98,11 @@ MonoBehaviour:
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 1
   m_CraftingDuration: 5
+  m_UseCraftingSkill: 1
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: -3323905948889970588}
+  m_RemoveIngredientsWhenFailed: 1
+  m_MinCraftingSkillValue: 4
   m_CraftingAnimatorState: Blacksmithy
   m_CraftingModifier:
     modifiers:
@@ -180,6 +235,11 @@ MonoBehaviour:
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 0
   m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
   m_CraftingAnimatorState: Blacksmithy
   m_CraftingModifier:
     modifiers: []
@@ -188,6 +248,21 @@ MonoBehaviour:
   currencyConversions:
   - factor: 100
     currency: {fileID: -6442420119529586086}
+--- !u!114 &-8831619382594955781
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Skills
+  m_EditorColor: {r: 0, g: 0, b: 0, a: 0}
+  m_Cooldown: 1
 --- !u!114 &-8373593952731256949
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -216,7 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefcd19cdc9839d449772c4dce1503f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoSave: 0
+  autoSave: 1
   savingKey: Player
   savingRate: 10
   provider: 0
@@ -345,6 +420,11 @@ MonoBehaviour:
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 0
   m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
   m_CraftingAnimatorState: Blacksmithy
   m_CraftingModifier:
     modifiers: []
@@ -402,6 +482,11 @@ MonoBehaviour:
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 0
   m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
   m_CraftingAnimatorState: Blacksmithy
   m_CraftingModifier:
     modifiers: []
@@ -517,6 +602,11 @@ MonoBehaviour:
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 0
   m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
   m_CraftingAnimatorState: Blacksmithy
   m_CraftingModifier:
     modifiers: []
@@ -570,6 +660,11 @@ MonoBehaviour:
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 1
   m_CraftingDuration: 3
+  m_UseCraftingSkill: 1
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: -3323905948889970588}
+  m_RemoveIngredientsWhenFailed: 1
+  m_MinCraftingSkillValue: 0
   m_CraftingAnimatorState: Blacksmithy
   m_CraftingModifier:
     modifiers: []
@@ -618,6 +713,11 @@ MonoBehaviour:
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 0
   m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
   m_CraftingAnimatorState: Blacksmithy
   m_CraftingModifier:
     modifiers: []
@@ -904,6 +1004,104 @@ MonoBehaviour:
   - modifiers: []
   - modifiers: []
   - modifiers: []
+--- !u!114 &-3323905948889970588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9a3ee254b78a64481dccedbfd4ba41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Id: e4f98e95-2c8c-42b2-b020-9b7f9ab982d6
+  m_ItemName: Blacksmithy
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: f6293f20fd85aa143bead12afd67ebbb, type: 3}
+  m_Prefab: {fileID: 0}
+  m_Description: Increases the chance to craft an item.
+  m_Category: {fileID: -8831619382594955781}
+  m_IsSellable: 1
+  m_BuyPrice: 322
+  m_BuyCurrency: {fileID: -2811142919616601772}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: -2811142919616601772}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 1
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 1
+  m_Cooldown: 1
+  actions: []
+  m_FixedSuccessChance: 50
+  m_GainModifier: {fileID: 11400000, guid: 444722d6eb4ecd243aa83015e96c5485, type: 2}
+  references:
+    version: 1
+--- !u!114 &-2920532131010319874
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9a3ee254b78a64481dccedbfd4ba41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Id: b694ddfb-5dbf-481f-b72c-a22ac94d819a
+  m_ItemName: Swordsmanship
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: 5fd50594014b70e48bd6993443d46b32, type: 3}
+  m_Prefab: {fileID: 0}
+  m_Description: Swordsmanship increases your damage and hit chance.
+  m_Category: {fileID: -8831619382594955781}
+  m_IsSellable: 1
+  m_BuyPrice: 0
+  m_BuyCurrency: {fileID: -2811142919616601772}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: -2811142919616601772}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 1
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 1
+  m_Cooldown: 1
+  actions: []
+  m_FixedSuccessChance: 50
+  m_GainModifier: {fileID: 11400000, guid: c1992775e12652140b4d346619cbf34f, type: 2}
+  references:
+    version: 1
 --- !u!114 &-2839999955813321745
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -936,6 +1134,11 @@ MonoBehaviour:
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 0
   m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
   m_CraftingAnimatorState: Blacksmithy
   m_CraftingModifier:
     modifiers: []
@@ -1032,6 +1235,11 @@ MonoBehaviour:
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 0
   m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
   m_CraftingAnimatorState: Blacksmithy
   m_CraftingModifier:
     modifiers: []
@@ -1073,6 +1281,11 @@ MonoBehaviour:
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 1
   m_CraftingDuration: 5
+  m_UseCraftingSkill: 1
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: -3323905948889970588}
+  m_RemoveIngredientsWhenFailed: 1
+  m_MinCraftingSkillValue: 7.7
   m_CraftingAnimatorState: Blacksmithy
   m_CraftingModifier:
     modifiers:
@@ -1174,6 +1387,11 @@ MonoBehaviour:
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 0
   m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
   m_CraftingAnimatorState: Blacksmithy
   m_CraftingModifier:
     modifiers: []
@@ -1212,6 +1430,11 @@ MonoBehaviour:
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 1
   m_CraftingDuration: 3
+  m_UseCraftingSkill: 1
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: -3323905948889970588}
+  m_RemoveIngredientsWhenFailed: 1
+  m_MinCraftingSkillValue: 0
   m_CraftingAnimatorState: Blacksmithy
   m_CraftingModifier:
     modifiers: []
@@ -1261,8 +1484,8 @@ MonoBehaviour:
   - {fileID: -5663772737389988193}
   - {fileID: 8763039942855579107}
   - {fileID: -1175442255857385599}
-  - {fileID: 3129509250564287029}
   - {fileID: -6266380644497530537}
+  - {fileID: 3129509250564287029}
   - {fileID: 4447567160419299934}
   - {fileID: -4423743630002525559}
   - {fileID: -2839999955813321745}
@@ -1272,8 +1495,12 @@ MonoBehaviour:
   - {fileID: -447126039411374142}
   - {fileID: -4474190543486091594}
   - {fileID: 2409076057030828310}
-  - {fileID: 960666660569578442}
   - {fileID: -8967533827971111582}
+  - {fileID: 960666660569578442}
+  - {fileID: -2920532131010319874}
+  - {fileID: -3323905948889970588}
+  - {fileID: -9164302591508860154}
+  - {fileID: 6595735557147903839}
   currencies:
   - {fileID: -2811142919616601772}
   - {fileID: -6442420119529586086}
@@ -1292,6 +1519,7 @@ MonoBehaviour:
   - {fileID: -7427245140175711199}
   - {fileID: -3989543302354102894}
   - {fileID: 164684216256526245}
+  - {fileID: -8831619382594955781}
   equipments:
   - {fileID: -1474344929657048262}
   - {fileID: -327638963660831434}
@@ -1310,6 +1538,7 @@ MonoBehaviour:
   - {fileID: 7990749027154876597}
   - {fileID: -4213577332647146612}
   - {fileID: -3796731219101042533}
+  - {fileID: 5365859910722360372}
   settings:
   - {fileID: -3817802777368614781}
   - {fileID: -8057506047932969836}
@@ -1406,6 +1635,11 @@ MonoBehaviour:
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 1
   m_CraftingDuration: 2
+  m_UseCraftingSkill: 1
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: -3323905948889970588}
+  m_RemoveIngredientsWhenFailed: 1
+  m_MinCraftingSkillValue: 4
   m_CraftingAnimatorState: Blacksmithy
   m_CraftingModifier:
     modifiers: []
@@ -1459,6 +1693,11 @@ MonoBehaviour:
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 1
   m_CraftingDuration: 3
+  m_UseCraftingSkill: 1
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: -3323905948889970588}
+  m_RemoveIngredientsWhenFailed: 1
+  m_MinCraftingSkillValue: 1
   m_CraftingAnimatorState: Blacksmithy
   m_CraftingModifier:
     modifiers:
@@ -1591,6 +1830,11 @@ MonoBehaviour:
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 1
   m_CraftingDuration: 3
+  m_UseCraftingSkill: 1
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: -3323905948889970588}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
   m_CraftingAnimatorState: Blacksmithy
   m_CraftingModifier:
     modifiers: []
@@ -1648,6 +1892,11 @@ MonoBehaviour:
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 0
   m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
   m_CraftingAnimatorState: Blacksmithy
   m_CraftingModifier:
     modifiers: []
@@ -1745,6 +1994,11 @@ MonoBehaviour:
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 1
   m_CraftingDuration: 5
+  m_UseCraftingSkill: 1
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: -3323905948889970588}
+  m_RemoveIngredientsWhenFailed: 1
+  m_MinCraftingSkillValue: 0
   m_CraftingAnimatorState: Blacksmithy
   m_CraftingModifier:
     modifiers: []
@@ -1794,6 +2048,11 @@ MonoBehaviour:
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 0
   m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
   m_CraftingAnimatorState: Blacksmithy
   m_CraftingModifier:
     modifiers: []
@@ -1917,6 +2176,11 @@ MonoBehaviour:
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 0
   m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
   m_CraftingAnimatorState: Blacksmithy
   m_CraftingModifier:
     modifiers: []
@@ -2092,6 +2356,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unstackEvent: -1
   unstackKeyCode: 304
+--- !u!114 &5365859910722360372
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28fccac83a2fa2245991bffe45a6cdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_GroupName: Skills
+  m_Items:
+  - {fileID: -2920532131010319874}
+  m_Amounts: 01000000
+  m_Modifiers:
+  - modifiers: []
 --- !u!114 &5658350685615726283
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2187,6 +2469,11 @@ MonoBehaviour:
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 1
   m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
   m_CraftingAnimatorState: Blacksmithy
   m_CraftingModifier:
     modifiers: []
@@ -2287,6 +2574,30 @@ MonoBehaviour:
     delay: 2
     duration: 2
     ignoreTimeScale: 1
+  failedToCraft:
+    title: 
+    text: You failed to craft {0}.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  missingSkillToCraft:
+    title: 
+    text: You don't have the skill to craft this item!
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  requiresHigherSkill:
+    title: 
+    text: Your {0} is to low to craft {1}.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
   soldItem:
     title: 
     text: Sold {0} for {1}.
@@ -2343,6 +2654,64 @@ MonoBehaviour:
     delay: 2
     duration: 2
     ignoreTimeScale: 1
+  skillGain:
+    title: 
+    text: Your {0} increased by {1}% to {2}%.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+--- !u!114 &6595735557147903839
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9a3ee254b78a64481dccedbfd4ba41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Id: 8d6ade66-001d-4481-a70b-7db0a93db87d
+  m_ItemName: Mining
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: 575a1e2821f78e24bb70f3ba24d83bde, type: 3}
+  m_Prefab: {fileID: 0}
+  m_Description: Mining increases your chance of successfully harvest stones and
+    ores.
+  m_Category: {fileID: -8831619382594955781}
+  m_IsSellable: 1
+  m_BuyPrice: 124
+  m_BuyCurrency: {fileID: -2811142919616601772}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: -2811142919616601772}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 1
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 1
+  m_Cooldown: 1
+  actions: []
+  m_FixedSuccessChance: 50
+  m_GainModifier: {fileID: 11400000, guid: 469cf9288efaed44a9d0eb78c6b58840, type: 2}
+  references:
+    version: 1
 --- !u!114 &7014612192586799646
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2445,6 +2814,11 @@ MonoBehaviour:
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 1
   m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
   m_CraftingAnimatorState: 
   m_CraftingModifier:
     modifiers: []
@@ -2540,6 +2914,11 @@ MonoBehaviour:
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 0
   m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
   m_CraftingAnimatorState: Blacksmithy
   m_CraftingModifier:
     modifiers: []
@@ -2652,6 +3031,11 @@ MonoBehaviour:
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 0
   m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
   m_CraftingAnimatorState: Blacksmithy
   m_CraftingModifier:
     modifiers: []
@@ -2779,6 +3163,30 @@ MonoBehaviour:
     delay: 2
     duration: 2
     ignoreTimeScale: 1
+  failedToCraft:
+    title: 
+    text: You failed to craft {0}.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  missingSkillToCraft:
+    title: 
+    text: You don't have the skill to craft this item!
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  requiresHigherSkill:
+    title: 
+    text: You don't have the skill to craft this item!
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
   soldItem:
     title: 
     text: Sold {0} for {1}.
@@ -2830,6 +3238,14 @@ MonoBehaviour:
   empty:
     title: 
     text: There is nothing to be found here.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  skillGain:
+    title: 
+    text: Your {0} increased by {1}% to {2}%.
     color: {r: 1, g: 1, b: 1, a: 1}
     icon: {fileID: 0}
     delay: 2

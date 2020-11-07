@@ -67,6 +67,18 @@ namespace DevionGames.InventorySystem.Configuration
         {
             text = "You don't have all ingredients to craft this item!"
         };
+        public NotificationOptions failedToCraft = new NotificationOptions()
+        {
+            text = "You failed to craft {0}."
+        };
+        public NotificationOptions missingSkillToCraft = new NotificationOptions()
+        {
+            text = "You don't have the skill to craft this item!"
+        };
+        public NotificationOptions requiresHigherSkill = new NotificationOptions()
+        {
+            text = "Your {0} is to low to craft {1}."
+        };
 
 
         [Header("Vendor:")]
@@ -100,6 +112,12 @@ namespace DevionGames.InventorySystem.Configuration
         public NotificationOptions empty = new NotificationOptions()
         {
             text = "There is nothing to be found here."
+        };
+
+        [Header("Skills:")]
+        public NotificationOptions skillGain = new NotificationOptions()
+        {
+            text = "Your {0} increased by {1}% to {2}%."
         };
     }
 }

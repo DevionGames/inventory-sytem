@@ -262,13 +262,13 @@ namespace DevionGames.InventorySystem
                     if (item is Currency)
                         continue;
 
+                    item.Slots.RemoveAll(x => x == null);
                     if (item.Slots.Count > 0)
                     {
                         for (int j = 0; j < item.Slots.Count; j++)
                         {
                             item.Slots[j].ObservedItem = item;
                         }
-                        
                         continue;
                     }
                     if (this.m_DynamicContainer) {
@@ -984,17 +984,30 @@ namespace DevionGames.InventorySystem
         /// </summary>
         /// <param name="id">Item id</param>
         /// <returns>Array of items with given id</returns>
-        public Item[] GetItems(string id)
+        public Item[] GetItems(string idOrName)
         {
             List<Item> items = new List<Item>();
             if (!this.m_UseReferences)
             {
-                items.AddRange(this.m_Collection.Where(x => x.Id == id));
+                items.AddRange(this.m_Collection.Where(x => x.Id == idOrName));
             }
             else
             {
-                items.AddRange(this.m_Slots.Where(x => !x.IsEmpty && x.ObservedItem.Id == id).Select(y => y.ObservedItem));
+                items.AddRange(this.m_Slots.Where(x => !x.IsEmpty && x.ObservedItem.Id == idOrName).Select(y => y.ObservedItem));
             }
+
+            if (items.Count == 0) {
+                if (!this.m_UseReferences)
+                {
+                    items.AddRange(this.m_Collection.Where(x => x.Name == idOrName));
+                }
+                else
+                {
+                    items.AddRange(this.m_Slots.Where(x => !x.IsEmpty && x.ObservedItem.Name == idOrName).Select(y => y.ObservedItem));
+                }
+
+            }
+
             return items.ToArray();
         }
 
@@ -1474,6 +1487,26 @@ namespace DevionGames.InventorySystem
 
             }
             return existingAmount >= amount;
+        }
+
+        /// <summary>
+        /// Get the first item in container by name.
+        /// </summary>
+        /// <param name="windowName"></param>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public static Item GetItem(string windowName, string nameOrId) {
+            ItemContainer[] windows = WidgetUtility.FindAll<ItemContainer>(windowName);
+            for (int j = 0; j < windows.Length; j++)
+            {
+                ItemContainer current = windows[j];
+
+
+                Item item = current.GetItems(nameOrId).FirstOrDefault();
+                if (item != null)
+                    return item;
+            }
+            return null;
         }
 
         /// <summary>

@@ -32,7 +32,9 @@ namespace DevionGames
 
             Vector3 dir = (player.position+ this.m_Offset) - transform.position;
             //  dir.y = 0.0f;
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime*10f);
+            if (dir != Vector3.zero)
+                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * 10f);
+            
 
             // transform.LookAt(player.position + this.m_Offset);
             if (Vector3.Distance(transform.position, player.position + this.m_Offset) > 0.5f)

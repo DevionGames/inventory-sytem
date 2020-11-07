@@ -12,7 +12,13 @@ namespace DevionGames.InventorySystem{
 			get {
                 List<Item> items = new List<Item>(Database.currencies.Cast<Item>());
                 items.AddRange(Database.items);
-				return items;
+				System.Type type = fieldInfo.FieldType;
+
+				if (typeof(IList).IsAssignableFrom(fieldInfo.FieldType)) {
+					type = Utility.GetElementType(fieldInfo.FieldType);
+				}
+
+				return items.Where(x => type.IsAssignableFrom(x.GetType())).ToList();
 			}
 		}
 		

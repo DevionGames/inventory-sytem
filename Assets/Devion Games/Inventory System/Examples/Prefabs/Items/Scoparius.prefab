@@ -132,13 +132,23 @@ MonoBehaviour:
         m_Enabled: 1
         m_WindowName: Inventory
     00000001:
-      type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}
+      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
       data:
-        m_Type: DevionGames.SetEnabled
+        m_Type: DevionGames.SendMessage
         m_Enabled: 1
         m_Target: 1
-        m_ComponentName: ThirdPersonController
-        m_Enable: 0
+        methodName: SetControllerActive
+        m_Argument:
+          m_BoolValue: 0
+          m_IntValue: 0
+          m_FloatValue: 0
+          m_StringValue: 
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 1
+        m_Options: 1
     00000002:
       type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
       data:
@@ -178,13 +188,23 @@ MonoBehaviour:
         m_Enabled: 1
         duration: 6
     00000006:
-      type: {class: Pickup, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
       data:
-        m_Type: DevionGames.InventorySystem.Pickup
+        m_Type: DevionGames.SendMessage
         m_Enabled: 1
-        m_WindowName: Inventory
-        m_DestroyWhenEmpty: 1
-        m_Amount: 1
+        m_Target: 1
+        methodName: SetControllerActive
+        m_Argument:
+          m_BoolValue: 1
+          m_IntValue: 0
+          m_FloatValue: 0
+          m_StringValue: 
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 1
+        m_Options: 1
     00000007:
       type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
       data:
@@ -204,13 +224,13 @@ MonoBehaviour:
           m_ArgumentType: 1
         m_Options: 1
     00000008:
-      type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}
+      type: {class: Pickup, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
       data:
-        m_Type: DevionGames.SetEnabled
+        m_Type: DevionGames.InventorySystem.Pickup
         m_Enabled: 1
-        m_Target: 1
-        m_ComponentName: ThirdPersonController
-        m_Enable: 1
+        m_WindowName: Inventory
+        m_DestroyWhenEmpty: 1
+        m_Amount: 1
 --- !u!114 &3939460662708250679
 MonoBehaviour:
   m_ObjectHideFlags: 0

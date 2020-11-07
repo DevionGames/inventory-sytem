@@ -176,6 +176,9 @@ namespace DevionGames.InventorySystem
                 if (InventoryManager.SavingLoading.autoSave) {
                     StartCoroutine(RepeatSaving(InventoryManager.SavingLoading.savingRate));
                 }
+
+                Physics.queriesHitTriggers = InventoryManager.DefaultSettings.queriesHitTriggers;
+
                 if (InventoryManager.DefaultSettings.debugMessages)
                     Debug.Log("Inventory Manager initialized.");
             }

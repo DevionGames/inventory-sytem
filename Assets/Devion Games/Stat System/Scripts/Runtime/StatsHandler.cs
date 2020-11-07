@@ -173,7 +173,15 @@ namespace DevionGames.StatSystem
             return 0f;
         }
 
-		public void Refresh ()
+        public float GetStatCurrentValue(string name)
+        {
+            Stat stat = GetStat(name);
+            if (stat != null)
+                return stat.CurrentValue;
+            return 0f;
+        }
+
+        public void Refresh ()
 		{
 			for (int i = 0; i < stats.Count; i++) {
 				Stat stat = stats [i];

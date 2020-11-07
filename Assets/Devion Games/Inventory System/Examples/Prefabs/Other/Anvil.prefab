@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5157323341887067007}
   - component: {fileID: 5157323341887067004}
   - component: {fileID: 5157323341740066072}
+  - component: {fileID: 7650208012899672282}
   - component: {fileID: 5157323341740066066}
   m_Layer: 0
   m_Name: Anvil
@@ -111,6 +112,21 @@ MonoBehaviour:
   m_DisplayType: 34
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Offset: {x: 0, y: 0.4, z: 0}
+--- !u!114 &7650208012899672282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5157323341740066078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aee479a81ddf78248a87eb09e719d8d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Sprite: {fileID: 21300000, guid: f6293f20fd85aa143bead12afd67ebbb, type: 3}
+  m_Size: {x: 32, y: 32}
+  m_AnimatorState: Cursor
 --- !u!114 &5157323341740066066
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -789,7 +789,8 @@ namespace DevionGames
 						}
 					}
 				}
-                DeterminanteDefaultStates();
+				if(!string.IsNullOrEmpty(motion.State))
+					DeterminanteDefaultStates();
                 motion.StartMotion ();
 			}
 		}

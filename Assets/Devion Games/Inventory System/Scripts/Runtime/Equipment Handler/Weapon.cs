@@ -90,8 +90,10 @@ namespace DevionGames.InventorySystem
         {
 
 
+            if (this.m_Pause || UnityTools.IsPointerOverUI() || !this.m_CharacterAnimator.GetCurrentAnimatorStateInfo(0).IsTag("Default")) {
 
-            if (this.m_Pause || UnityTools.IsPointerOverUI() || !this.m_CharacterAnimator.GetCurrentAnimatorStateInfo(0).IsTag("Default")) { return; }
+                return; 
+            }
 
  
             switch (this.m_ActivationType)

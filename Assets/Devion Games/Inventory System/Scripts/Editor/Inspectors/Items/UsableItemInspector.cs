@@ -13,8 +13,8 @@ namespace DevionGames.InventorySystem
     [CustomEditor(typeof(UsableItem), true)]
     public class UsableItemInspector : ItemInspector
     {
-        private SerializedProperty m_UseCategoryCooldown;
-        private SerializedProperty m_Cooldown;
+        protected SerializedProperty m_UseCategoryCooldown;
+        protected SerializedProperty m_Cooldown;
         protected AnimBool m_ShowCategoryCooldownOptions;
 
         private GameObject m_GameObject;
@@ -103,7 +103,7 @@ namespace DevionGames.InventorySystem
         }
 
 
-        private void ActionGUI() {
+        protected void ActionGUI() {
            
             GUILayout.Space(10f);
             for (int i = 0; i < this.m_Actions.arraySize; i++) {

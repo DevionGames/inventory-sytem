@@ -187,6 +187,7 @@ MonoBehaviour:
   - id: 6
   - id: 7
   - id: 8
+  - id: 9
   references:
     version: 1
     00000000:
@@ -199,6 +200,11 @@ MonoBehaviour:
             type: 2}
           boolValue: 0
           stringValue: Equipment
+          intValue: 0
+        - item: {fileID: -9164302591508860154, guid: 1ae57b994efcab048a1bb130d4e11d83,
+            type: 2}
+          boolValue: 0
+          stringValue: Skills
           intValue: 0
     00000001:
       type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}
@@ -237,6 +243,14 @@ MonoBehaviour:
         m_ComponentName: ThirdPersonController
         m_Enable: 1
     00000006:
+      type: {class: CheckSkill, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.CheckSkill
+        m_Enabled: 1
+        m_WindowName: Skills
+        m_Skill: {fileID: -9164302591508860154, guid: 1ae57b994efcab048a1bb130d4e11d83,
+          type: 2}
+    00000007:
       type: {class: Pickup, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
       data:
         m_Type: DevionGames.InventorySystem.Pickup
@@ -244,7 +258,7 @@ MonoBehaviour:
         m_WindowName: 
         m_DestroyWhenEmpty: 0
         m_Amount: 1
-    00000007:
+    00000008:
       type: {class: Invoke, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.Invoke
@@ -271,7 +285,7 @@ MonoBehaviour:
           m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
           m_ObjectValue: {fileID: 0}
           m_ArgumentType: 3
-    00000008:
+    00000009:
       type: {class: Instantiate, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.Instantiate
@@ -323,18 +337,21 @@ MonoBehaviour:
   - item: {fileID: -5663772737389988193, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
     minStack: 3
     maxStack: 3
-    propertyRandomizer: 0
     chance: 0.5
+    modifiers:
+      modifiers: []
   - item: {fileID: -5663772737389988193, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
     minStack: 1
     maxStack: 2
-    propertyRandomizer: 0
     chance: 0.7
+    modifiers:
+      modifiers: []
   - item: {fileID: -5663772737389988193, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
     minStack: 1
     maxStack: 1
-    propertyRandomizer: 0
     chance: 0.9
+    modifiers:
+      modifiers: []
   m_MaxAmount: 3
 --- !u!1 &7232939143057212312
 GameObject:

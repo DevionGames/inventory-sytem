@@ -236,6 +236,41 @@ namespace DevionGames.InventorySystem
         }
 
         [SerializeField]
+        private bool m_UseCraftingSkill = false;
+
+        public bool UseCraftingSkill {
+            get { return this.m_UseCraftingSkill; }
+        }
+
+        [SerializeField]
+        private string m_SkillWindow = "Skills";
+        public string SkillWindow {
+            get { return this.m_SkillWindow; }
+        }
+
+        [ItemPicker(true)]
+        [SerializeField]
+        private Skill m_CraftingSkill = null;
+        public Skill CraftingSkill {
+            get { return this.m_CraftingSkill; }
+        }
+
+        [Tooltip("Remove the ingredients when crafting fails.")]
+        [SerializeField]
+        private bool m_RemoveIngredientsWhenFailed = false;
+        public bool RemoveIngredientsWhenFailed {
+            get { return this.m_RemoveIngredientsWhenFailed; }
+        }
+
+        [Range(0f,100f)]
+        [SerializeField]
+        private float m_MinCraftingSkillValue=0f;
+
+        public float MinCraftingSkillValue {
+            get { return this.m_MinCraftingSkillValue; }
+        }
+
+        [SerializeField]
         private string m_CraftingAnimatorState= "Blacksmithy";
 
         public string CraftingAnimatorState

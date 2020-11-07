@@ -51,7 +51,7 @@ namespace DevionGames.InventorySystem
             UnityTools.StartCoroutine(this.m_ActionBehavior);
         }
 
-        private IEnumerator SequenceCoroutine() {
+        protected IEnumerator SequenceCoroutine() {
             this.m_ActionSequence.Start();
             while (this.m_ActionSequence.Tick()) {
                 yield return null;

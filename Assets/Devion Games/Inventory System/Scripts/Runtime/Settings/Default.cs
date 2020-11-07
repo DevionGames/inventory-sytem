@@ -19,6 +19,9 @@ namespace DevionGames.InventorySystem.Configuration
         public string playerTag = "Player";
         public float maxDropDistance = 3f;
 
+        [Header("Physics")]
+        public bool queriesHitTriggers = false;
+
         [Header("Debug")]
         public bool debugMessages = true;
         public bool showAllComponents = false;
