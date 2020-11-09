@@ -58,6 +58,8 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# Login System
+/[Aa]ssets/Devion Games/Login System*
 # Dialogue System
 /[Aa]ssets/Devion Games/Dialogue System*
 # Character System
