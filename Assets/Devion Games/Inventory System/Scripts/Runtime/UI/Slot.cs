@@ -206,8 +206,15 @@ namespace DevionGames.InventorySystem
                     {
                         if (!moveToContainer.UseReferences || !Container.CanReferenceItems){
                            // Debug.Log("Move Item from "+Container.Name+" to "+moveToContainer.Name);
+
+                            if (!moveToContainer.CanReferenceItems)
+                            {
+                                ItemContainer.RemoveItemReferences(ObservedItem);
+                            }
                             Container.RemoveItem(Index);
                         }
+
+
                         return true;
                     }
                     for (int j = 0; j < moveToContainer.Slots.Count; j++)
