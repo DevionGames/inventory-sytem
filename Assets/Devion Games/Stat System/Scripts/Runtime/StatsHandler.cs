@@ -45,6 +45,27 @@ namespace DevionGames.StatSystem
             }
         }
 
+       /* protected virtual void TriggerAnimationEvent(AnimationEvent ev)
+        {
+            SendMessage(ev.stringParameter, SendMessageOptions.DontRequireReceiver);
+        }
+
+        private void SendDamage()
+        {
+            Collider[] colliders = Physics.OverlapSphere(transform.position, 2f);
+            for (int i = 0; i < colliders.Length; i++)
+            {
+                if (colliders[i].transform != transform)
+                {
+                    Vector3 direction = colliders[i].transform.position - transform.position;
+                    float angle = Vector3.Angle(direction, transform.forward);
+                    if (Mathf.Abs(angle) < 60f)
+                    {
+                        colliders[i].SendMessage("OnReceiveDamage");
+                    }
+                }
+            }
+        }*/
 
 
         /// <summary>

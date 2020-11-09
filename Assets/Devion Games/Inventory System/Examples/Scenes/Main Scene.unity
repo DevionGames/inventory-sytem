@@ -14965,7 +14965,6 @@ GameObject:
   - component: {fileID: 379107561}
   - component: {fileID: 379107560}
   - component: {fileID: 379107559}
-  - component: {fileID: 379107564}
   m_Layer: 5
   m_Name: Equipment
   m_TagString: Untagged
@@ -15131,18 +15130,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 379107557}
   m_CullTransparentMesh: 0
---- !u!114 &379107564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 379107557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0e0323e92b151a4fa92049637b6af9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &380214982
 GameObject:
   m_ObjectHideFlags: 0
@@ -17664,7 +17651,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 601443361}
   m_HandleRect: {fileID: 601443360}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -72647,7 +72634,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 732875891}
   m_HandleRect: {fileID: 732875890}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -77956,7 +77943,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1285114968}
   m_HandleRect: {fileID: 1285114967}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:

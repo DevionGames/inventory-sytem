@@ -127,7 +127,7 @@ MonoBehaviour:
     typeIndex: 3
     stringValue: 
     intValue: 10
-    floatValue: -0.3
+    floatValue: -0.9
     colorValue: {r: 0, g: 0, b: 0, a: 0}
     boolValue: 0
     objectReferenceValue: {fileID: 0}
@@ -964,6 +964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Player
   maxDropDistance: 1
+  queriesHitTriggers: 0
   debugMessages: 1
   showAllComponents: 0
 --- !u!114 &-3796731219101042533
@@ -1501,6 +1502,7 @@ MonoBehaviour:
   - {fileID: -3323905948889970588}
   - {fileID: -9164302591508860154}
   - {fileID: 6595735557147903839}
+  - {fileID: 7113904374044846821}
   currencies:
   - {fileID: -2811142919616601772}
   - {fileID: -6442420119529586086}
@@ -2371,8 +2373,10 @@ MonoBehaviour:
   m_GroupName: Skills
   m_Items:
   - {fileID: -2920532131010319874}
-  m_Amounts: 01000000
+  - {fileID: 7113904374044846821}
+  m_Amounts: 0100000001000000
   m_Modifiers:
+  - modifiers: []
   - modifiers: []
 --- !u!114 &5658350685615726283
 MonoBehaviour:
@@ -2434,6 +2438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Player
   maxDropDistance: 3
+  queriesHitTriggers: 0
   debugMessages: 1
   showAllComponents: 0
 --- !u!114 &6234106693565876968
@@ -2739,8 +2744,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Player
   maxDropDistance: 3
+  queriesHitTriggers: 0
   debugMessages: 1
   showAllComponents: 0
+--- !u!114 &7113904374044846821
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9a3ee254b78a64481dccedbfd4ba41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Id: ef8c1dd7-2e04-4e14-838b-a24f50712dae
+  m_ItemName: Archery
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: 5d7061fc7da05ce44add317708ec7215, type: 3}
+  m_Prefab: {fileID: 0}
+  m_Description: Archery increases your damage and hit chance.
+  m_Category: {fileID: -8831619382594955781}
+  m_IsSellable: 1
+  m_BuyPrice: 0
+  m_BuyCurrency: {fileID: -2811142919616601772}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: -2811142919616601772}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 1
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 1
+  m_Cooldown: 1
+  actions: []
+  m_FixedSuccessChance: 50
+  m_GainModifier: {fileID: 11400000, guid: 4b4c88aca3f41b5428addc167494186f, type: 2}
+  references:
+    version: 1
 --- !u!114 &7388703754817051196
 MonoBehaviour:
   m_ObjectHideFlags: 1

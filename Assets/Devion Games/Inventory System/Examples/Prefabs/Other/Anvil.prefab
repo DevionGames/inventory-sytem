@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 5157323341740066078}
   m_LocalRotation: {x: 0, y: 0.23597325, z: 0, w: 0.97175956}
   m_LocalPosition: {x: 2.8381395, y: -3.9222403, z: 3.0933747}
-  m_LocalScale: {x: 0.6344713, y: 0.72172, z: 0.47700644}
+  m_LocalScale: {x: 0.63447136, y: 0.72172, z: 0.47700644}
   m_Children:
   - {fileID: 5157323342365737469}
   m_Father: {fileID: 0}
@@ -169,6 +169,11 @@ MonoBehaviour:
             type: 2}
           boolValue: 0
           stringValue: Equipment
+          intValue: 0
+        - item: {fileID: -3323905948889970588, guid: 1ae57b994efcab048a1bb130d4e11d83,
+            type: 2}
+          boolValue: 0
+          stringValue: Skills
           intValue: 0
     00000001:
       type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}

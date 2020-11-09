@@ -33,6 +33,8 @@ namespace DevionGames.InventorySystem
         [SerializeField]
         protected StopType m_StopType;
 
+
+
         [Header("Animator IK:")]
         [SerializeField]
         protected Transform m_RightHandIKTarget;
