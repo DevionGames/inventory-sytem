@@ -59,7 +59,9 @@ sysinfo.txt
 crashlytics-build.properties
 
 
-# Dialogue System
+# Quest System
+/[Aa]ssets/Devion Games/Quest System*
+# Login System
 /[Aa]ssets/Devion Games/Login System*
 # Dialogue System
 /[Aa]ssets/Devion Games/Dialogue System*
