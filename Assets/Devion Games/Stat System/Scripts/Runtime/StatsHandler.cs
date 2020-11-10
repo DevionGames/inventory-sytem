@@ -45,12 +45,12 @@ namespace DevionGames.StatSystem
             }
         }
 
-       /* protected virtual void TriggerAnimationEvent(AnimationEvent ev)
+        protected void TriggerAnimationEvent(AnimationEvent ev)
         {
-            SendMessage(ev.stringParameter, SendMessageOptions.DontRequireReceiver);
+           // SendMessage(ev.stringParameter, SendMessageOptions.DontRequireReceiver);
         }
 
-        private void SendDamage()
+      /*  private void SendDamage()
         {
             Collider[] colliders = Physics.OverlapSphere(transform.position, 2f);
             for (int i = 0; i < colliders.Length; i++)

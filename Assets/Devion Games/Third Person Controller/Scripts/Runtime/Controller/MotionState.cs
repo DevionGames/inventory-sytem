@@ -183,7 +183,8 @@ namespace DevionGames
 				SendMessage("PauseItemUpdate", false, SendMessageOptions.DontRequireReceiver);
 			this.m_IsActive = false;
 			OnStop ();
-            m_Controller.CheckDefaultAnimatorStates();
+			if(!string.IsNullOrEmpty(GetDestinationState()))
+				m_Controller.CheckDefaultAnimatorStates();
 			CameraSettings preset = this.m_Camera.Presets.Where(x => x.Name == CameraPreset).FirstOrDefault();
 			if (preset != null && preset.Name != "Default")
 			{

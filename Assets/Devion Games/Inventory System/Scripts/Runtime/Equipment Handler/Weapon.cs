@@ -212,6 +212,12 @@ namespace DevionGames.InventorySystem
         protected bool m_Pause;
         private void PauseItemUpdate(bool state) {
             this.m_Pause = state;
+
+            ItemContainer[] containers = UIWidgets.WidgetUtility.FindAll<ItemContainer>();
+            for (int i = 0; i < containers.Length; i++)
+            {
+                containers[i].Lock(this.m_Pause);
+            }
         }
    
         protected virtual void OnItemActivated(bool activated) {
@@ -226,7 +232,6 @@ namespace DevionGames.InventorySystem
                  }
                 this.m_CharacterAnimator.SetInteger("Item ID", this.m_ItemID);
                 this.m_CharacterAnimator.CrossFadeInFixedTime(this.m_IdleState, 0.15f);
-
                 this.m_InUse = false;
             } else {
                 this.m_CharacterAnimator.SetInteger("Item ID",0);
