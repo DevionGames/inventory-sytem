@@ -20,7 +20,8 @@ namespace DevionGames
 			StartJump ();
 		}
 
-		public override bool UpdateAnimator ()
+
+        public override bool UpdateAnimator ()
 		{
             this.m_Animator.SetFloat ("Float Value", this.m_Rigidbody.velocity.y, 0.15f, Time.deltaTime);
 			return true;
@@ -29,6 +30,7 @@ namespace DevionGames
 		private void StartJump ()
 		{
 			if (this.IsActive) {
+				Debug.Log("Start Jump");
 				this.jumpTime = Time.time;
 				this.m_Controller.IsGrounded = false;
 				Vector3 velocity = this.m_Rigidbody.velocity;
@@ -61,11 +63,9 @@ namespace DevionGames
 
 		public void OnControllerGrounded (bool grounded)
 		{
-
 			if (grounded) {
 				this.lastJumpTime = Time.time;
 				this.StopMotion (true);
-			
 			}
 		}
 
@@ -77,7 +77,7 @@ namespace DevionGames
 		public override bool CanStop ()
 		{
 		
-			return !this.m_Controller.IsGrounded && this.m_Rigidbody.velocity.y < 0.01f; 
+			return !this.m_Controller.IsGrounded && this.m_Rigidbody.velocity.y < 0.01f && Time.time > jumpTime + 0.2f; 
 		}
 	}
 }

@@ -194,6 +194,8 @@ namespace DevionGames
 
 		}
 
+
+
 		public void StartMotion ()
 		{
 			if (PauseItemUpdate)
@@ -211,11 +213,8 @@ namespace DevionGames
 
 			string destinationState = GetDestinationState ();
 			if (!string.IsNullOrEmpty (destinationState)) {
-				#if Proxy
-				Proxy.SendToAll (gameObject, "CrossFadeInFixedTime", destinationState, TransitionDuration);
-				#else
 				m_Animator.CrossFadeInFixedTime (destinationState, TransitionDuration);
-				#endif
+
 			}
 	
 			//Debug.Log("Start Motion " + FriendlyName);

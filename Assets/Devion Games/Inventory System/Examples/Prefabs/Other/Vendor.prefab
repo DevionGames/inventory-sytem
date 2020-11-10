@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 8634550540918060652}
   - component: {fileID: 8634550540918060653}
   - component: {fileID: 8634550540918060651}
+  - component: {fileID: 2995848537818312473}
   m_Layer: 10
   m_Name: Vendor
   m_TagString: Untagged
@@ -109,7 +110,7 @@ Transform:
   m_GameObject: {fileID: 8634550540918060662}
   m_LocalRotation: {x: 0, y: -0.94754833, z: 0, w: 0.3196126}
   m_LocalPosition: {x: 7.1, y: 0.83299994, z: 4.92}
-  m_LocalScale: {x: 0.5812295, y: 0.83874166, z: 0.5812295}
+  m_LocalScale: {x: 0.58122957, y: 0.83874166, z: 0.58122957}
   m_Children:
   - {fileID: 8634550542071474441}
   m_Father: {fileID: 0}
@@ -243,7 +244,12 @@ MonoBehaviour:
   m_SellPriceFactor: 1
   m_PurchasedStorageWindow: Inventory
   m_PaymentWindow: Inventory
+  m_RemoveItemAfterPurchase: 0
   m_BuySellDialogName: BuySellDialog
+  m_BuyDialogTitle: Buy
+  m_BuyDialogueDisplaySpinner: 1
+  m_BuyDialogText: How many items do you want to buy?
+  m_BuyDialogButton: Buy
   references:
     version: 1
     00000000:
@@ -346,6 +352,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+        - m_Target: {fileID: 2995848537818312473}
+          m_MethodName: Show
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Target Stats
+            m_BoolArgument: 1
+          m_CallState: 2
   - eventID: OnDeselect
     callback:
       m_PersistentCalls:
@@ -359,6 +376,17 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2995848537818312473}
+          m_MethodName: Close
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Target Stats
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!82 &8634550540918060651
@@ -457,6 +485,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2995848537818312473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8634550540918060662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfd56ac4ec1b95e478be442fe8a323c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8634550542071474442
 GameObject:
   m_ObjectHideFlags: 0

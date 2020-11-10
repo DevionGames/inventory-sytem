@@ -170,6 +170,7 @@ GameObject:
   - component: {fileID: 3959420146890985636}
   - component: {fileID: 3959420146890985641}
   - component: {fileID: 3959420146890985646}
+  - component: {fileID: 5855964220793050849}
   m_Layer: 10
   m_Name: Bank
   m_TagString: Untagged
@@ -344,15 +345,15 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 3959420146890985641}
-          m_MethodName: ShowRenderer
-          m_Mode: 1
+        - m_Target: {fileID: 5855964220793050849}
+          m_MethodName: Show
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: Target Stats
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 3959420145848102954}
@@ -370,15 +371,15 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 3959420146890985641}
-          m_MethodName: HideRenderer
-          m_Mode: 1
+        - m_Target: {fileID: 5855964220793050849}
+          m_MethodName: Close
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: Target Stats
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 3959420145848102954}
@@ -392,3 +393,15 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &5855964220793050849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3959420146890985638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfd56ac4ec1b95e478be442fe8a323c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
