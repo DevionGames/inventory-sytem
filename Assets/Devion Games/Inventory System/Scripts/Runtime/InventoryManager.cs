@@ -486,7 +486,8 @@ namespace DevionGames.InventorySystem
                 Item item = items[i];
                 item = Instantiate(item);
                 item.Stack = amounts[i];
-                modifierLists[i].Modify(item); 
+                if(i < modifierLists.Length)
+                    modifierLists[i].Modify(item); 
 
                 if (item.IsCraftable)
                 {

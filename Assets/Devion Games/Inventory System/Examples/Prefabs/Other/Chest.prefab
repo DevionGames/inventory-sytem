@@ -128,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delegates: []
   useDistance: 1.2
-  triggerType: 3
+  triggerType: 11
   key: 102
   actions:
   - id: 0

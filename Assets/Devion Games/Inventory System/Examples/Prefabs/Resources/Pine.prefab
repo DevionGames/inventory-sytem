@@ -175,7 +175,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   useDistance: 1.5
-  triggerType: 3
+  triggerType: 43
   key: 102
   actions:
   - id: 0

@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefcd19cdc9839d449772c4dce1503f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoSave: 1
+  autoSave: 0
   savingKey: Player
   savingRate: 10
   provider: 0
@@ -358,7 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1d0d5578788bb14ba70b8a002ce205b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unstackEvent: 3
+  unstackEvent: -1
   unstackKeyCode: 304
 --- !u!114 &-7427245140175711199
 MonoBehaviour:

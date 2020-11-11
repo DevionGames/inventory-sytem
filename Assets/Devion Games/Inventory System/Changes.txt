@@ -1,0 +1,5 @@
+- Remove item references in MoveItem()
+- Lock containers if Pause Item Update is true in ThirdPersonController motion
+- Unstacking event is implemented now. Key + Click / Key + Drag (See Settings > Input)
+- Changed Trigger Type to LeftClick = 1, RightClick = 2, MiddleClick = 4, Key = 8, OnTriggerEnter = 16, Raycast = 32
+        

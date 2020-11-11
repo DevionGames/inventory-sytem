@@ -208,12 +208,19 @@ namespace DevionGames.InventorySystem
                 Stack stack = InventoryManager.UI.stack;
 
                 bool isUnstacking = stack != null && stack.item != null;
+
+                if (!isUnstacking && InventoryManager.Input.unstackEvent.HasFlag<Configuration.Input.UnstackInput>(Configuration.Input.UnstackInput.OnClick) && Input.GetKey(InventoryManager.Input.unstackKeyCode) && ObservedItem.Stack > 1)
+                {
+                    Unstack();
+                    return;
+                }
+               
                 //Check if we are currently unstacking the item
                 if (isUnstacking && Container.StackOrAdd(this, stack.item) ){
                     
                     stack.item = null;
                     UICursor.Clear();
-
+         
                 }
 
                 if (isUnstacking){
@@ -266,7 +273,7 @@ namespace DevionGames.InventorySystem
             if (ObservedItem != null && !IsCooldown && Container.CanDragOut)
             {
                 //If key for unstacking items is pressed and if the stack is greater then 1, show the unstack ui.
-                if (Input.GetKey(InventoryManager.Input.unstackKeyCode) && ObservedItem.Stack > 1){
+                if (InventoryManager.Input.unstackEvent.HasFlag<Configuration.Input.UnstackInput>(Configuration.Input.UnstackInput.OnDrag) && Input.GetKey(InventoryManager.Input.unstackKeyCode) && ObservedItem.Stack > 1){
                     Unstack();
                 }else{
                     //Set the dragging slot

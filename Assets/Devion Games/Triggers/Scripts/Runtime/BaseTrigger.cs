@@ -31,7 +31,7 @@ namespace DevionGames
         //The maximum distance for trigger useage
         public float useDistance = 1.2f;
         [EnumFlags]
-        public TriggerInputType triggerType = TriggerInputType.OnClick | TriggerInputType.Key;
+        public TriggerInputType triggerType = TriggerInputType.LeftClick | TriggerInputType.Key;
         //If in range and trigger input type includes key, the key to use the trigger.
         public KeyCode key = KeyCode.F;
 
@@ -103,8 +103,11 @@ namespace DevionGames
             if (PlayerInfo.gameObject == null && triggerType.HasFlag<TriggerInputType>(TriggerInputType.OnTriggerEnter))
             {
                 Debug.LogWarning("OnTriggerEnter is only valid with a Player in scene. Please remove OnTriggerEnter in "+gameObject+".");
-                triggerType = TriggerInputType.OnClick;
+                triggerType = TriggerInputType.LeftClick;
             }
+
+            if(triggerType.HasFlag<TriggerInputType>(TriggerInputType.Raycast))
+                EventHandler.Register<bool>(gameObject, "OnCameraRaycast", OnCameraRaycast);
 
             if (gameObject == PlayerInfo.gameObject || this.useDistance == -1) {
                 InRange = true;
@@ -156,10 +159,22 @@ namespace DevionGames
             }
         }
 
+        protected virtual void OnCameraRaycast(bool state) {
+            if (!UnityTools.IsPointerOverUI() &&
+                  (triggerType.HasFlag<TriggerInputType>(TriggerInputType.LeftClick) && Input.GetMouseButtonDown(0) ||
+                  triggerType.HasFlag<TriggerInputType>(TriggerInputType.RightClick) && Input.GetMouseButtonDown(1) ||
+                  triggerType.HasFlag<TriggerInputType>(TriggerInputType.MiddleClick) && Input.GetMouseButtonDown(2)))
+            {
+                Use();
+            }
+        }
+
         public void OnPointerClick(PointerEventData eventData)
         {
-            //Check if  TriggerInputType.OnClick is included.
-            if (triggerType.HasFlag<TriggerInputType>(TriggerInputType.OnClick) && !UnityTools.IsPointerOverUI())
+            if (!UnityTools.IsPointerOverUI() && 
+                (triggerType.HasFlag<TriggerInputType>(TriggerInputType.LeftClick) && eventData.button == PointerEventData.InputButton.Left || 
+                triggerType.HasFlag<TriggerInputType>(TriggerInputType.RightClick) && eventData.button == PointerEventData.InputButton.Right || 
+                triggerType.HasFlag<TriggerInputType>(TriggerInputType.MiddleClick) && eventData.button == PointerEventData.InputButton.Middle))
             {
                 Use();
             }
@@ -428,9 +443,12 @@ namespace DevionGames
         [System.Flags]
         public enum TriggerInputType
         {
-            OnClick = 1,
-            Key = 2,
-            OnTriggerEnter = 4
+            LeftClick = 1,
+            RightClick = 2,
+            MiddleClick = 4,
+            Key = 8,
+            OnTriggerEnter = 16,
+            Raycast = 32
         }
     }
 }
