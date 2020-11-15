@@ -279,6 +279,7 @@ namespace DevionGames.InventorySystem
                     //Set the dragging slot
                     // draggedSlot = this;
                     dragObject = new DragObject(this);
+    
                 }
             }
             if (this.m_ParentScrollRect != null)
@@ -331,6 +332,9 @@ namespace DevionGames.InventorySystem
         //Try to drop the item to ground
         private void DropItem()
         {
+            if (IsCooldown)
+                return;
+
             //Get the item to drop
             Item item = dragObject != null ? dragObject.item : ObservedItem;
 

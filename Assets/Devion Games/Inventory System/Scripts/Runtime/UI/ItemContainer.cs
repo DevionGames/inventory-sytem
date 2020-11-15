@@ -1510,6 +1510,31 @@ namespace DevionGames.InventorySystem
         }
 
         /// <summary>
+        /// Get the item amount
+        /// </summary>
+        /// <param name="windowName"></param>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public static int GetItemAmount(string windowName, string nameOrId)
+        {
+            int currentAmount = 0;
+            ItemContainer[] windows = WidgetUtility.FindAll<ItemContainer>(windowName);
+            for (int j = 0; j < windows.Length; j++)
+            {
+                ItemContainer current = windows[j];
+
+              
+                Item[] items = current.GetItems(nameOrId);
+                for (int i = 0; i < items.Length; i++)
+                {
+                    if (items[i] != null)
+                        currentAmount += items[i].Stack;
+                }
+            }
+            return currentAmount;
+        }
+
+        /// <summary>
         /// Adds items to item container. This will look up for all containers ordered by priority.
         /// </summary>
         /// <param name="windowName">Name of the item container.</param>

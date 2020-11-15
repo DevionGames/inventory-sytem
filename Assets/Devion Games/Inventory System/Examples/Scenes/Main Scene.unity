@@ -8041,23 +8041,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1762179950}
     m_Modifications:
-    - target: {fileID: 2420680222564479830, guid: 8d1205197ce57bf48b0d586eccfd9e61,
-        type: 3}
-      propertyPath: m_Modifiers.Array.data[0].modifiers.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2420680222564479830, guid: 8d1205197ce57bf48b0d586eccfd9e61,
-        type: 3}
-      propertyPath: m_Modifiers.Array.data[0].modifiers.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: af5120ca8702be44fb59b6eadcd27cd0,
-        type: 2}
-    - target: {fileID: 2420680222564479830, guid: 8d1205197ce57bf48b0d586eccfd9e61,
-        type: 3}
-      propertyPath: m_Modifiers.Array.data[0].modifiers.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 51ac90cf6263a1a479a1bad8f43f1dfd,
-        type: 2}
     - target: {fileID: 4953072819454448682, guid: 8d1205197ce57bf48b0d586eccfd9e61,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8117,11 +8100,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rusty Sword
-      objectReference: {fileID: 0}
-    - target: {fileID: 8611462675627104892, guid: 8d1205197ce57bf48b0d586eccfd9e61,
-        type: 3}
-      propertyPath: triggerType
-      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d1205197ce57bf48b0d586eccfd9e61, type: 3}
@@ -17580,7 +17558,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 601443361}
   m_HandleRect: {fileID: 601443360}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -37822,7 +37800,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delegates: []
   useDistance: 0.5
-  triggerType: 4
+  triggerType: 16
   key: 102
   actions:
   - id: 0
@@ -60566,7 +60544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delegates: []
   useDistance: 0.5
-  triggerType: 4
+  triggerType: 16
   key: 102
   actions:
   - id: 0
@@ -72713,7 +72691,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 732875891}
   m_HandleRect: {fileID: 732875890}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -78022,7 +78000,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1285114968}
   m_HandleRect: {fileID: 1285114967}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -89102,51 +89080,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2062635442}
   m_CullTransparentMesh: 0
---- !u!1 &2063149137
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2063149139}
-  - component: {fileID: 2063149138}
-  m_Layer: 0
-  m_Name: Quest Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2063149138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2063149137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5d81e8eb0159234a9b2fe5a041f9fc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Database: {fileID: 11400000, guid: 685dfcc5a53027d47940f522408fcdff, type: 2}
-  dontDestroyOnLoad: 1
---- !u!4 &2063149139
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2063149137}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2069430553 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 780611a67e8e941a2b3aa96e5915a793,

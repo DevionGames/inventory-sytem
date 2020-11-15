@@ -2,4 +2,11 @@
 - Lock containers if Pause Item Update is true in ThirdPersonController motion
 - Unstacking event is implemented now. Key + Click / Key + Drag (See Settings > Input)
 - Changed Trigger Type to LeftClick = 1, RightClick = 2, MiddleClick = 4, Key = 8, OnTriggerEnter = 16, Raycast = 32
-        
+- Fixed Animation stuck when trigger is used (Cutting trees)
+- Fixed PickupItem action droping the game object always at y=1, now it does a raycast.
+- You can't drop items in cooldown anymore.
+- Fixed OnTriggerEnter option never executing in Trigger component.
+- Fixed WidgetUtility returning same windows if there are multiple parent canvases.
+- Added ICondition interface to some Trigger actions.
+- ItemContainer.GetItemAmount(string windowName, string nameOrId)
+- Fixed Jump on steep slope

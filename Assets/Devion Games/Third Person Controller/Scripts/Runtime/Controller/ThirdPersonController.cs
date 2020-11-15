@@ -723,6 +723,15 @@ namespace DevionGames
 
 		public void CheckStep ()
 		{
+			for (int i = 0; i < this.m_Motions.Count; i++)
+			{
+				MotionState motion = this.m_Motions[i];
+				if (motion.IsActive && !motion.CheckStep())
+				{
+					this.m_Slope = -1f;
+					return;
+				}
+			}
 			Vector3 velocity = this.m_Velocity;
 			velocity.y = 0f;
 			if (this.RelativeInput.sqrMagnitude > velocity.sqrMagnitude) {

@@ -49,6 +49,8 @@ namespace DevionGames
         protected delegate void EventFunction<T>(T handler, GameObject player);
         protected delegate void PointerEventFunction<T>(T handler, PointerEventData eventData);
 
+        protected bool m_CheckBlocking = true;
+
         //Is the player in range, set by OnTriggerEnter/OnTriggerExit or if trigger is attached to player in Start?
         private bool m_InRange;
         public bool InRange
@@ -119,6 +121,7 @@ namespace DevionGames
         }
 
         protected virtual void Update() {
+
             if (!InRange) { return; }
 
             //Check for key down and if trigger input type supports key.
@@ -156,6 +159,7 @@ namespace DevionGames
             {
                 //Set that player is out of range
                 InRange = false;
+
             }
         }
 
@@ -229,21 +233,34 @@ namespace DevionGames
                 return false;
             }
 
-            Vector3 targetPosition = UnityTools.GetBounds(gameObject).center;
-            Vector3 playerPosition = PlayerInfo.transform.position;
-            Bounds bounds = PlayerInfo.bounds;
-            playerPosition.y += bounds.center.y + bounds.extents.y;
-            Vector3 direction = targetPosition - playerPosition;
-            Collider collider = PlayerInfo.collider;
-            collider.enabled = false;
-            RaycastHit hit;
-            bool raycast = Physics.Raycast(playerPosition, direction, out hit);
-            collider.enabled = true;
-            if (raycast && !UnityEngine.Object.ReferenceEquals(hit.transform,transform))
+            if (this.m_CheckBlocking)
             {
-                return false;
+                Vector3 targetPosition = UnityTools.GetBounds(gameObject).center;
+                Vector3 playerPosition = PlayerInfo.transform.position;
+                Bounds bounds = PlayerInfo.bounds;
+                playerPosition.y += bounds.center.y + bounds.extents.y;
+                Vector3 direction = targetPosition - playerPosition;
+                Collider collider = PlayerInfo.collider;
+                collider.enabled = false;
+                RaycastHit hit;
+                bool raycast = Physics.Raycast(playerPosition, direction, out hit);
+                collider.enabled = true;
+                if (raycast && !UnityEngine.Object.ReferenceEquals(hit.transform, transform))
+                {
+                    return false;
+                }
             }
-            //Trigger can be used
+
+            Animator animator = PlayerInfo.animator;
+            if (PlayerInfo != null && animator != null)
+            {
+                for (int j = 0; j < animator.layerCount; j++)
+                {
+                    if (animator.IsInTransition(j))
+                        return false;
+                }
+            }               
+            //Trigger can be used  
             return true;
         }
 
@@ -263,7 +280,9 @@ namespace DevionGames
             BaseTrigger.m_TriggerInRange.Add(this);
             //InputTriggerType.OnTriggerEnter is supported
             if (triggerType.HasFlag<TriggerInputType>(TriggerInputType.OnTriggerEnter) && IsBestTrigger()){
+                this.m_CheckBlocking = false;
                 Use();
+                this.m_CheckBlocking = true;
             }
             OnCameInRange();
         }

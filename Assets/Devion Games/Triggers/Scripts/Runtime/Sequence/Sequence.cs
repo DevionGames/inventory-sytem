@@ -23,20 +23,22 @@ namespace DevionGames
 
         //Starts the task behavior
         public void Start() {
-            this.m_ActionIndex = 0;
-            this.m_Status = ActionStatus.Running;
+      
             this.m_Actions = this.m_AllActions.Where(x => x.isActiveAndEnabled).ToArray();
             for (int i = 0; i < this.m_Actions.Length; i++) {
                 this.m_Actions[i].OnSequenceStart();
             }
+            this.m_ActionIndex = 0;
+            this.m_Status = ActionStatus.Running;
         }
 
         public void Stop() {
-            this.m_Status = ActionStatus.Inactive;
+           
             for (int i = 0; i < this.m_Actions.Length; i++)
             {
                 this.m_Actions[i].OnSequenceEnd();
             }
+            this.m_Status = ActionStatus.Inactive;
         }
 
         //Ticks the custom actions using sequence implementation, returns true if the behavior is running.

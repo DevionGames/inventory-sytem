@@ -41,7 +41,7 @@ namespace DevionGames.StatSystem
 
                     this.m_Value = Mathf.Clamp(this.m_Value, this.MinValue, this.MaxValue);
                     this.CurrentValue = Mathf.Clamp(this.m_CurrentValue, this.MinValue, this.MaxValue);
-
+                    //GameState.MarkDirty();
                     this.m_Dirty = false;
                 }
                 return this.m_Value;
@@ -53,7 +53,12 @@ namespace DevionGames.StatSystem
         {
             get { return this.m_CurrentValue; }
             set
-            {this.m_CurrentValue = value; }
+            {
+                if (this.m_CurrentValue != value)
+                {
+                    this.m_CurrentValue = value;
+                }
+            }
         }
 
         [SerializeField]

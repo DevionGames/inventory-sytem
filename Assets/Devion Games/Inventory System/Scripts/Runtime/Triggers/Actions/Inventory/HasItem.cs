@@ -8,7 +8,7 @@ namespace DevionGames.InventorySystem
     [UnityEngine.Scripting.APIUpdating.MovedFromAttribute(true, null, "Assembly-CSharp")]
     [Icon("Condition Item")]
     [ComponentMenu("Inventory System/Has Item")]
-    public class HasItem : Action
+    public class HasItem : Action, ICondition
     {
         [SerializeField]
         protected ItemCondition[] requiredItems;

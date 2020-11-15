@@ -257,6 +257,11 @@ namespace DevionGames
 			return true;
 		}
 
+		public virtual bool CheckStep()
+		{
+			return true;
+		}
+
 		public virtual bool CanStop()
 		{
 			return true;

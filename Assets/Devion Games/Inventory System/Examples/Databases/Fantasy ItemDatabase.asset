@@ -2882,7 +2882,7 @@ MonoBehaviour:
     amount: 1
   properties: []
   m_UseCategoryCooldown: 1
-  m_Cooldown: 1
+  m_Cooldown: 5
   actions:
   - id: 0
   - id: 1

@@ -7,7 +7,7 @@ namespace DevionGames
     [UnityEngine.Scripting.APIUpdating.MovedFromAttribute(true, null, "Assembly-CSharp")]
     [Icon("Component")]
     [ComponentMenu("Component/Compare")]
-    public class CompareNumber : Action
+    public class CompareNumber : Action,ICondition
     {
         [SerializeField]
         private TargetType m_Target = TargetType.Player;

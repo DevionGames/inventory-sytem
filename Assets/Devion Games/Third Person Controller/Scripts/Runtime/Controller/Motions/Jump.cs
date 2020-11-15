@@ -30,7 +30,6 @@ namespace DevionGames
 		private void StartJump ()
 		{
 			if (this.IsActive) {
-				Debug.Log("Start Jump");
 				this.jumpTime = Time.time;
 				this.m_Controller.IsGrounded = false;
 				Vector3 velocity = this.m_Rigidbody.velocity;
@@ -61,7 +60,12 @@ namespace DevionGames
 			return false;
 		}
 
-		public void OnControllerGrounded (bool grounded)
+        public override bool CheckStep()
+        {
+			return false;
+        }
+
+        public void OnControllerGrounded (bool grounded)
 		{
 			if (grounded) {
 				this.lastJumpTime = Time.time;

@@ -1,4 +1,6 @@
-﻿using DevionGames.UIWidgets;
+﻿
+using DevionGames.UIWidgets;
+
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
