@@ -32,3 +32,4 @@ Inventory System is a highly flexible tool for unity. It can be used in any type
 <br>- Added ICondition interface to some Trigger actions.
 <br>- ItemContainer.GetItemAmount(string windowName, string nameOrId)
 <br>- Fixed Jump on steep slope
+<br>- Saving skill progress
