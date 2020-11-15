@@ -39,5 +39,18 @@ namespace DevionGames.InventorySystem
             bool result = (CurrentValue + this.m_FixedSuccessChance) > Random.Range(0f, 100f);
             return result;
         }
+
+        public override void GetObjectData(Dictionary<string, object> data)
+        {
+            base.GetObjectData(data);
+            data.Add("SkillValue",CurrentValue);
+        }
+
+        public override void SetObjectData(Dictionary<string, object> data)
+        {
+            base.SetObjectData(data);
+            if(data.ContainsKey("SkillValue"))
+                this.CurrentValue = System.Convert.ToSingle(data["SkillValue"]);
+        }
     }
 }

@@ -384,7 +384,7 @@ namespace DevionGames.InventorySystem
 
         public virtual void Use() { }
 
-        public void GetObjectData(Dictionary<string, object> data)
+        public virtual void GetObjectData(Dictionary<string, object> data)
         {
             data.Add("Name", this.Name);
             data.Add("Stack", this.Stack);
@@ -426,7 +426,7 @@ namespace DevionGames.InventorySystem
             }
         }
 
-        public void SetObjectData(Dictionary<string, object> data)
+        public virtual void SetObjectData(Dictionary<string, object> data)
         {
             this.Stack = System.Convert.ToInt32(data["Stack"]);
             if (data.ContainsKey("RarityIndex")) {

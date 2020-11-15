@@ -10,3 +10,4 @@
 - Added ICondition interface to some Trigger actions.
 - ItemContainer.GetItemAmount(string windowName, string nameOrId)
 - Fixed Jump on steep slope
+- Saving skill progress
