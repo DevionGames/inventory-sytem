@@ -20,4 +20,15 @@ Inventory System is a highly flexible tool for unity. It can be used in any type
 <br><br><b><a href="https://deviongames.com/inventory-system/getting-started/">Documentation</a> | <a href="https://discord.gg/y4fMXpZ">Discord</a> | <a href="https://assetstore.unity.com/packages/tools/gui/item-inventory-system-45568">Asset Store</a></b>
 
 <b>Changelog:</b>
-<br>-Remove item references in MoveItem()
+<br>- Remove item references in MoveItem()
+<br>- Lock containers if Pause Item Update is true in ThirdPersonController motion
+<br>- Unstacking event is implemented now. Key + Click / Key + Drag (See Settings > Input)
+<br>- Changed Trigger Type to LeftClick = 1, RightClick = 2, MiddleClick = 4, Key = 8, OnTriggerEnter = 16, Raycast = 32
+<br>- Fixed Animation stuck when trigger is used (Cutting trees)
+<br>- Fixed PickupItem action droping the game object always at y=1, now it does a raycast.
+<br>- You can't drop items in cooldown anymore.
+<br>- Fixed OnTriggerEnter option never executing in Trigger component.
+<br>- Fixed WidgetUtility returning same windows if there are multiple parent canvases.
+<br>- Added ICondition interface to some Trigger actions.
+<br>- ItemContainer.GetItemAmount(string windowName, string nameOrId)
+<br>- Fixed Jump on steep slope
