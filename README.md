@@ -33,3 +33,9 @@ Inventory System is a highly flexible tool for unity. It can be used in any type
 <br>- ItemContainer.GetItemAmount(string windowName, string nameOrId)
 <br>- Fixed Jump on steep slope
 <br>- Saving skill progress
+<br>- InventoryManager.HasSavedData()
+<br>- ShowProgressbar action. You can use this instead of Wait. 
+<br>- Item.AddProperty(string name, object value) and Item.RemoveProperty(string name) to add and remove properties at runtime.
+<br>- Created properties at runtime are saved now. This requires a diffrent serialization. Please delete all saved items.
+<br>- Item has an option when sold -> Can Buy Back. 
+<br>- When item is sold with Can Buy Back option set to true, it will be added to the vendors inventory and the player can buy back the item.
