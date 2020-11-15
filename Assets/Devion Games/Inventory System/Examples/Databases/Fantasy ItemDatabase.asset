@@ -23,6 +23,7 @@ MonoBehaviour:
   m_Category: {fileID: -8831619382594955781}
   m_IsSellable: 1
   m_BuyPrice: 80
+  m_CanBuyBack: 1
   m_BuyCurrency: {fileID: -2811142919616601772}
   m_SellPrice: 0
   m_SellCurrency: {fileID: -2811142919616601772}
@@ -88,6 +89,7 @@ MonoBehaviour:
   m_Category: {fileID: -5355670550631679221}
   m_IsSellable: 1
   m_BuyPrice: 21
+  m_CanBuyBack: 1
   m_BuyCurrency: {fileID: -2811142919616601772}
   m_SellPrice: 18
   m_SellCurrency: {fileID: -2811142919616601772}
@@ -225,6 +227,7 @@ MonoBehaviour:
   m_Category: {fileID: 0}
   m_IsSellable: 1
   m_BuyPrice: 0
+  m_CanBuyBack: 1
   m_BuyCurrency: {fileID: 0}
   m_SellPrice: 0
   m_SellCurrency: {fileID: 0}
@@ -410,6 +413,7 @@ MonoBehaviour:
   m_Category: {fileID: 0}
   m_IsSellable: 1
   m_BuyPrice: 0
+  m_CanBuyBack: 1
   m_BuyCurrency: {fileID: 0}
   m_SellPrice: 0
   m_SellCurrency: {fileID: 0}
@@ -472,6 +476,7 @@ MonoBehaviour:
   m_Category: {fileID: -6294223960729143046}
   m_IsSellable: 0
   m_BuyPrice: 0
+  m_CanBuyBack: 1
   m_BuyCurrency: {fileID: -2811142919616601772}
   m_SellPrice: 0
   m_SellCurrency: {fileID: -2811142919616601772}
@@ -592,6 +597,7 @@ MonoBehaviour:
   m_Category: {fileID: -7427245140175711199}
   m_IsSellable: 1
   m_BuyPrice: 3
+  m_CanBuyBack: 0
   m_BuyCurrency: {fileID: -2811142919616601772}
   m_SellPrice: 2
   m_SellCurrency: {fileID: -2811142919616601772}
@@ -650,6 +656,7 @@ MonoBehaviour:
   m_Category: {fileID: -9040799555073544844}
   m_IsSellable: 1
   m_BuyPrice: 8
+  m_CanBuyBack: 0
   m_BuyCurrency: {fileID: -2811142919616601772}
   m_SellPrice: 6
   m_SellCurrency: {fileID: -2811142919616601772}
@@ -703,6 +710,7 @@ MonoBehaviour:
   m_Category: {fileID: -3989543302354102894}
   m_IsSellable: 1
   m_BuyPrice: 0
+  m_CanBuyBack: 1
   m_BuyCurrency: {fileID: -2811142919616601772}
   m_SellPrice: 0
   m_SellCurrency: {fileID: -2811142919616601772}
@@ -1027,6 +1035,7 @@ MonoBehaviour:
   m_Category: {fileID: -8831619382594955781}
   m_IsSellable: 1
   m_BuyPrice: 322
+  m_CanBuyBack: 1
   m_BuyCurrency: {fileID: -2811142919616601772}
   m_SellPrice: 0
   m_SellCurrency: {fileID: -2811142919616601772}
@@ -1076,6 +1085,7 @@ MonoBehaviour:
   m_Category: {fileID: -8831619382594955781}
   m_IsSellable: 1
   m_BuyPrice: 0
+  m_CanBuyBack: 1
   m_BuyCurrency: {fileID: -2811142919616601772}
   m_SellPrice: 0
   m_SellCurrency: {fileID: -2811142919616601772}
@@ -1123,8 +1133,9 @@ MonoBehaviour:
   m_Prefab: {fileID: 0}
   m_Description: Be careful outside the town in the first map.
   m_Category: {fileID: 164684216256526245}
-  m_IsSellable: 1
+  m_IsSellable: 0
   m_BuyPrice: 0
+  m_CanBuyBack: 1
   m_BuyCurrency: {fileID: -2811142919616601772}
   m_SellPrice: 0
   m_SellCurrency: {fileID: -2811142919616601772}
@@ -1226,6 +1237,7 @@ MonoBehaviour:
   m_Category: {fileID: 0}
   m_IsSellable: 1
   m_BuyPrice: 0
+  m_CanBuyBack: 1
   m_BuyCurrency: {fileID: 0}
   m_SellPrice: 0
   m_SellCurrency: {fileID: 0}
@@ -1272,6 +1284,7 @@ MonoBehaviour:
   m_Category: {fileID: 8705209814584371102}
   m_IsSellable: 1
   m_BuyPrice: 19
+  m_CanBuyBack: 1
   m_BuyCurrency: {fileID: -2811142919616601772}
   m_SellPrice: 17
   m_SellCurrency: {fileID: -2811142919616601772}
@@ -1378,6 +1391,7 @@ MonoBehaviour:
   m_Category: {fileID: -7427245140175711199}
   m_IsSellable: 1
   m_BuyPrice: 4
+  m_CanBuyBack: 0
   m_BuyCurrency: {fileID: -2811142919616601772}
   m_SellPrice: 3
   m_SellCurrency: {fileID: -2811142919616601772}
@@ -1421,6 +1435,7 @@ MonoBehaviour:
   m_Category: {fileID: -9040799555073544844}
   m_IsSellable: 1
   m_BuyPrice: 6
+  m_CanBuyBack: 0
   m_BuyCurrency: {fileID: -2811142919616601772}
   m_SellPrice: 4
   m_SellCurrency: {fileID: -2811142919616601772}
@@ -1627,6 +1642,7 @@ MonoBehaviour:
   m_Category: {fileID: -9040799555073544844}
   m_IsSellable: 0
   m_BuyPrice: 10
+  m_CanBuyBack: 1
   m_BuyCurrency: {fileID: -2811142919616601772}
   m_SellPrice: 7
   m_SellCurrency: {fileID: -2811142919616601772}
@@ -1685,6 +1701,7 @@ MonoBehaviour:
   m_Category: {fileID: -5355670550631679221}
   m_IsSellable: 1
   m_BuyPrice: 18
+  m_CanBuyBack: 1
   m_BuyCurrency: {fileID: -2811142919616601772}
   m_SellPrice: 15
   m_SellCurrency: {fileID: -2811142919616601772}
@@ -1822,6 +1839,7 @@ MonoBehaviour:
   m_Category: {fileID: -7427245140175711199}
   m_IsSellable: 1
   m_BuyPrice: 6
+  m_CanBuyBack: 0
   m_BuyCurrency: {fileID: -2811142919616601772}
   m_SellPrice: 4
   m_SellCurrency: {fileID: -2811142919616601772}
@@ -1882,8 +1900,9 @@ MonoBehaviour:
   m_Prefab: {fileID: 0}
   m_Description: Furia is the town in the first map.
   m_Category: {fileID: 164684216256526245}
-  m_IsSellable: 1
+  m_IsSellable: 0
   m_BuyPrice: 0
+  m_CanBuyBack: 1
   m_BuyCurrency: {fileID: -2811142919616601772}
   m_SellPrice: 0
   m_SellCurrency: {fileID: -2811142919616601772}
@@ -1986,6 +2005,7 @@ MonoBehaviour:
   m_Category: {fileID: -9040799555073544844}
   m_IsSellable: 1
   m_BuyPrice: 12
+  m_CanBuyBack: 0
   m_BuyCurrency: {fileID: -2811142919616601772}
   m_SellPrice: 9
   m_SellCurrency: {fileID: -2811142919616601772}
@@ -2040,6 +2060,7 @@ MonoBehaviour:
   m_Category: {fileID: -6294223960729143046}
   m_IsSellable: 1
   m_BuyPrice: 22
+  m_CanBuyBack: 1
   m_BuyCurrency: {fileID: -2811142919616601772}
   m_SellPrice: 19
   m_SellCurrency: {fileID: -2811142919616601772}
@@ -2168,6 +2189,7 @@ MonoBehaviour:
   m_Category: {fileID: -3989543302354102894}
   m_IsSellable: 1
   m_BuyPrice: 0
+  m_CanBuyBack: 1
   m_BuyCurrency: {fileID: -2811142919616601772}
   m_SellPrice: 0
   m_SellCurrency: {fileID: -2811142919616601772}
@@ -2464,6 +2486,7 @@ MonoBehaviour:
   m_Category: {fileID: -7427245140175711199}
   m_IsSellable: 1
   m_BuyPrice: 1
+  m_CanBuyBack: 0
   m_BuyCurrency: {fileID: -2811142919616601772}
   m_SellPrice: 1
   m_SellCurrency: {fileID: -2811142919616601772}
@@ -2690,6 +2713,7 @@ MonoBehaviour:
   m_Category: {fileID: -8831619382594955781}
   m_IsSellable: 1
   m_BuyPrice: 124
+  m_CanBuyBack: 1
   m_BuyCurrency: {fileID: -2811142919616601772}
   m_SellPrice: 0
   m_SellCurrency: {fileID: -2811142919616601772}
@@ -2769,6 +2793,7 @@ MonoBehaviour:
   m_Category: {fileID: -8831619382594955781}
   m_IsSellable: 1
   m_BuyPrice: 0
+  m_CanBuyBack: 1
   m_BuyCurrency: {fileID: -2811142919616601772}
   m_SellPrice: 0
   m_SellCurrency: {fileID: -2811142919616601772}
@@ -2859,6 +2884,7 @@ MonoBehaviour:
   m_Category: {fileID: 171625507360801261}
   m_IsSellable: 1
   m_BuyPrice: 3
+  m_CanBuyBack: 0
   m_BuyCurrency: {fileID: -2811142919616601772}
   m_SellPrice: 2
   m_SellCurrency: {fileID: -2811142919616601772}
@@ -2957,8 +2983,9 @@ MonoBehaviour:
   m_Prefab: {fileID: 0}
   m_Description: Town in the second map.
   m_Category: {fileID: 164684216256526245}
-  m_IsSellable: 1
+  m_IsSellable: 0
   m_BuyPrice: 0
+  m_CanBuyBack: 1
   m_BuyCurrency: {fileID: -2811142919616601772}
   m_SellPrice: 0
   m_SellCurrency: {fileID: -2811142919616601772}
@@ -3076,6 +3103,7 @@ MonoBehaviour:
   m_Category: {fileID: -7427245140175711199}
   m_IsSellable: 1
   m_BuyPrice: 5
+  m_CanBuyBack: 0
   m_BuyCurrency: {fileID: -2811142919616601772}
   m_SellPrice: 3
   m_SellCurrency: {fileID: -2811142919616601772}

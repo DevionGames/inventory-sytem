@@ -39,6 +39,7 @@ namespace DevionGames.InventorySystem
         protected SerializedProperty m_Ingredients;
         protected SerializedProperty m_Properties;
         protected SerializedProperty m_IsSellable;
+        protected SerializedProperty m_CanBuyBack;
 
         protected SerializedProperty m_UseCraftingSkill;
         protected SerializedProperty m_SkillWindow;
@@ -92,6 +93,7 @@ namespace DevionGames.InventorySystem
             this.m_IsSellable = serializedObject.FindProperty("m_IsSellable");
             this.m_ShowSellOptions = new AnimBool(this.m_IsSellable.boolValue);
             this.m_ShowSellOptions.valueChanged.AddListener(new UnityAction(Repaint));
+            this.m_CanBuyBack = serializedObject.FindProperty("m_CanBuyBack");
             this.m_BuyPrice = serializedObject.FindProperty("m_BuyPrice");
             this.m_BuyCurrency = serializedObject.FindProperty("m_BuyCurrency");
             this.m_SellPrice = serializedObject.FindProperty("m_SellPrice");
@@ -239,6 +241,7 @@ namespace DevionGames.InventorySystem
                 this.m_SkillWindow.propertyPath,
                 this.m_RemoveIngredientsWhenFailed.propertyPath,
                 this.m_MinCraftingSkillValue.propertyPath,
+                this.m_CanBuyBack.propertyPath,
             };
 
 
@@ -329,6 +332,7 @@ namespace DevionGames.InventorySystem
             if (EditorGUILayout.BeginFadeGroup(this.m_ShowSellOptions.faded))
             {
                 EditorGUI.indentLevel = EditorGUI.indentLevel + 1;
+                EditorGUILayout.PropertyField(this.m_CanBuyBack);
                 EditorGUILayout.BeginHorizontal();
                 EditorGUILayout.PropertyField(this.m_BuyPrice);
                 EditorGUILayout.PropertyField(this.m_BuyCurrency, GUIContent.none);

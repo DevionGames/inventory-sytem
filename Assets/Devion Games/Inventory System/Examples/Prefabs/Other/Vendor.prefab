@@ -246,10 +246,14 @@ MonoBehaviour:
   m_PaymentWindow: Inventory
   m_RemoveItemAfterPurchase: 0
   m_BuySellDialogName: BuySellDialog
+  m_DisplaySpinner: 1
   m_BuyDialogTitle: Buy
-  m_BuyDialogueDisplaySpinner: 1
   m_BuyDialogText: How many items do you want to buy?
   m_BuyDialogButton: Buy
+  m_SellDialogTitle: Sell
+  m_SellSingleDialogText: Are you sure you want to sell this item?
+  m_SellMultipleDialogText: How many items do you want to sell?
+  m_SellDialogButton: Sell
   references:
     version: 1
     00000000:
@@ -271,7 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68165cdf1896c89479a91b2478670c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveable: 0
+  saveable: 1
   m_Items: []
   m_Amounts: 
   m_Modifiers: []

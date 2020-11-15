@@ -134,6 +134,11 @@ namespace DevionGames.InventorySystem
            // set { this.m_BuyPrice = value; }
 		}
 
+        [SerializeField]
+        private bool m_CanBuyBack = true;
+        public bool CanBuyBack { get { return this.m_CanBuyBack; } }
+
+
         [CurrencyPicker(true)]
         [SerializeField]
         private Currency m_BuyCurrency=null;
@@ -326,15 +331,23 @@ namespace DevionGames.InventorySystem
 		[SerializeField]
 		private List<ObjectProperty> properties = new List<ObjectProperty> ();
 
-		public ObjectProperty FindProperty (string name)
+        public void AddProperty(string name, object value) {
+            ObjectProperty property = new ObjectProperty();
+            property.Name = name;
+            property.SetValue(value);
+            properties.Add(property);
+        }
+
+        public void RemoveProperty(string name)
+        {
+            properties.RemoveAll(x => x.Name == name);
+        }
+
+        public ObjectProperty FindProperty (string name)
 		{
-			return properties.Find (property => property.Name == name);
+			return properties.FirstOrDefault (property => property.Name == name);
 		}
 
-		public ObjectProperty[] FindProperties (string name)
-		{
-			return properties.FindAll (property => property.Name == name).ToArray ();
-		}
 
 		public ObjectProperty[] GetProperties ()
 		{
@@ -394,13 +407,20 @@ namespace DevionGames.InventorySystem
             {
                 data.Add("Index", this.Slot.Index);
             }
+
+            List<object> objectProperties = new List<object>();
+
             foreach (ObjectProperty property in properties)
             {
+                Dictionary<string, object> propertyData = new Dictionary<string, object>();
                 if (!typeof(UnityEngine.Object).IsAssignableFrom(property.SerializedType))
                 {
-                    data.Add(property.Name, property.GetValue());
+                    propertyData.Add("Name", property.Name);
+                    propertyData.Add("Value", property.GetValue());
+                    objectProperties.Add(propertyData);
                 }
             }
+            data.Add("Properties",objectProperties);
 
             if (Slots.Count > 0)
             {
@@ -436,12 +456,22 @@ namespace DevionGames.InventorySystem
                 }
             }
 
-            foreach (ObjectProperty property in this.properties)
+            if (data.ContainsKey("Properties"))
             {
-                if (data.ContainsKey(property.Name))
+                List<object> objectProperties = data["Properties"] as List<object>;
+                for (int i = 0; i < objectProperties.Count; i++)
                 {
-                    object obj = data[property.Name];
-                    property.SetValue(obj);
+                    Dictionary<string, object> propertyData = objectProperties[i] as Dictionary<string, object>;
+                    string propertyName = (string)propertyData["Name"];
+                    object propertyValue = propertyData["Value"];
+                    ObjectProperty property = FindProperty(propertyName);
+                    if (property == null) {
+                        property = new ObjectProperty();
+                        property.Name = propertyName;
+                        properties.Add(property);
+                    }
+                    property.SetValue(propertyValue);
+
                 }
             }
 

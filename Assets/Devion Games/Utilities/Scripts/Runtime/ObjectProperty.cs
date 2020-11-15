@@ -68,38 +68,56 @@ namespace DevionGames
 
 		public void SetValue (object value)
 		{
-			if (value is string) {
+			if (value is string)
+			{
 				typeIndex = 0;
-				stringValue = (string)value;		
-			} else if (value is bool) {
+				stringValue = (string)value;
+			}
+			else if (value is bool)
+			{
 				typeIndex = 1;
 				boolValue = (bool)value;
-			} else if (value is Color) {
+			}
+			else if (value is Color)
+			{
 				typeIndex = 2;
 				colorValue = (Color)value;
-			} else if (value is float || value is double) {
+			}
+			else if (value is float || value is double)
+			{
 				typeIndex = 3;
-				floatValue = System.Convert.ToSingle (value);
-			} else if (typeof(UnityEngine.Object).IsAssignableFrom (value.GetType ())) {
+				floatValue = System.Convert.ToSingle(value);
+			}
+			else if (typeof(UnityEngine.Object).IsAssignableFrom(value.GetType()))
+			{
 				typeIndex = 4;
 				objectReferenceValue = (UnityEngine.Object)value;
-			} else if (value is int
-			           || value is uint
-			           || value is long
-			           || value is sbyte
-			           || value is byte
-			           || value is short
-			           || value is ushort
-			           || value is ulong) {
+			}
+			else if (value is int
+					 || value is uint
+					 || value is long
+					 || value is sbyte
+					 || value is byte
+					 || value is short
+					 || value is ushort
+					 || value is ulong)
+			{
 				typeIndex = 5;
-				intValue = System.Convert.ToInt32 (value);
-			} else if (value is Vector2) {
+				intValue = System.Convert.ToInt32(value);
+			}
+			else if (value is Vector2)
+			{
 				typeIndex = 6;
 				vector2Value = (Vector2)value;
-			} else if (value is Vector3) {
+			}
+			else if (value is Vector3)
+			{
 				typeIndex = 7;
 				vector3Value = (Vector3)value;
-			} 
+			}
+			else {
+				Debug.LogWarning("Type is not supported "+value);
+			}
 		}
 
 		public static string GetPropertyName (Type mType)

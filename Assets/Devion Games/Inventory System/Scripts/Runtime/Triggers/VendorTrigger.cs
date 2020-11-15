@@ -41,15 +41,26 @@ namespace DevionGames.InventorySystem
         [Header("Buy & Sell Dialog")]
         [SerializeField]
         private string m_BuySellDialogName = "BuySellDialog";
+        [SerializeField]
+        private bool m_DisplaySpinner = true;
 
+        [Header("Buy")]
         [SerializeField]
         private string m_BuyDialogTitle = "Buy";
-        [SerializeField]
-        private bool m_BuyDialogueDisplaySpinner = true;
         [SerializeField]
         private string m_BuyDialogText= "How many items do you want to buy?";
         [SerializeField]
         private string m_BuyDialogButton = "Buy";
+
+        [Header("Sell")]
+        [SerializeField]
+        private string m_SellDialogTitle = "Sell";
+        [SerializeField]
+        private string m_SellSingleDialogText = "Are you sure you want to sell this item?";
+        [SerializeField]
+        private string m_SellMultipleDialogText = "How many items do you want to sell?";
+        [SerializeField]
+        private string m_SellDialogButton = "Sell";
 
         private DialogBox m_BuySellDialog;
         private Spinner m_AmountSpinner;
@@ -129,12 +140,13 @@ namespace DevionGames.InventorySystem
            
             if (showDialog)
             {
-                this.m_AmountSpinner.gameObject.SetActive(this.m_BuyDialogueDisplaySpinner);
+                this.m_AmountSpinner.gameObject.SetActive(this.m_DisplaySpinner);
 
                 this.m_AmountSpinner.onChange.RemoveAllListeners();
                 this.m_AmountSpinner.current = 1;
                 this.m_AmountSpinner.min = 1;
-                this.m_AmountSpinner.max = this.m_RemoveItemAfterPurchase?item.Stack:int.MaxValue;
+                ObjectProperty property = item.FindProperty("BuyBack");
+                this.m_AmountSpinner.max = (this.m_RemoveItemAfterPurchase || property != null && property.boolValue)?item.Stack:int.MaxValue;
                 this.m_AmountSpinner.onChange.AddListener(delegate (float value)
                 {
                     Currency price = Instantiate(item.BuyCurrency);
@@ -205,8 +217,11 @@ namespace DevionGames.InventorySystem
                             InventoryManager.Notifications.containerFull.Show(this.m_PurchasedStorageWindow);
                             ExecuteEvent<ITriggerFailedToBuyItem>(Execute, instance, FailureCause.ContainerFull);
                         }else {
-                            if (this.m_RemoveItemAfterPurchase)
+                            ObjectProperty property = item.FindProperty("BuyBack");
+    
+                            if (this.m_RemoveItemAfterPurchase || property != null && property.boolValue)
                             {
+                                item.RemoveProperty("BuyBack");
                                 item.Container.RemoveItem(item, amount);
                             }
                             InventoryManager.Notifications.boughtItem.Show(itemInstance.Name, price.Stack+" "+price.Name);
@@ -226,9 +241,10 @@ namespace DevionGames.InventorySystem
         {
             if (showDialog)
             {
-                this.m_AmountSpinner.gameObject.SetActive(true);
+                this.m_AmountSpinner.gameObject.SetActive(this.m_DisplaySpinner);
                  if (item.Stack > 1)
                     {
+
                         this.m_AmountSpinner.onChange.RemoveAllListeners();
                         this.m_AmountSpinner.current = amount;
                         this.m_AmountSpinner.min = 1;
@@ -251,14 +267,14 @@ namespace DevionGames.InventorySystem
                     }
 
                 ExecuteEvent<ITriggerSelectSellItem>(Execute, item);
-                this.m_BuySellDialog.Show("Sell", item.Stack>1? "How many items do you want to sell?":"Are you sure you want to sell this item?", item.Icon, delegate (int result)
+                this.m_BuySellDialog.Show(this.m_SellDialogTitle, item.Stack>1?this.m_SellMultipleDialogText:this.m_SellSingleDialogText, item.Icon, delegate (int result)
                 {
                     if (result == 0)
                     {
                         SellItem(item, Mathf.RoundToInt(this.m_AmountSpinner.current), false);
                     }
                    
-                }, "Sell", "Cancel");
+                }, this.m_SellDialogButton, "Cancel");
             }
             else
             {
@@ -269,6 +285,11 @@ namespace DevionGames.InventorySystem
                 {
                     ExecuteEvent<ITriggerSoldItem>(Execute, item);
                     this.m_PaymentContainer.StackOrAdd(price);
+                    if(item.CanBuyBack)
+                        item.AddProperty("BuyBack", true);
+
+                    Trigger.currentUsedWindow.AddItem(item);
+
                     InventoryManager.Notifications.soldItem.Show((amount>1?amount.ToString()+"x":"")+item.Name, price.Stack+" "+price.Name);
                 }
                 else {
