@@ -285,11 +285,11 @@ namespace DevionGames.InventorySystem
                 {
                     ExecuteEvent<ITriggerSoldItem>(Execute, item);
                     this.m_PaymentContainer.StackOrAdd(price);
-                    if(item.CanBuyBack)
+                    if (item.CanBuyBack)
+                    {
                         item.AddProperty("BuyBack", true);
-
-                    Trigger.currentUsedWindow.AddItem(item);
-
+                        Trigger.currentUsedWindow.AddItem(item);
+                    }
                     InventoryManager.Notifications.soldItem.Show((amount>1?amount.ToString()+"x":"")+item.Name, price.Stack+" "+price.Name);
                 }
                 else {
