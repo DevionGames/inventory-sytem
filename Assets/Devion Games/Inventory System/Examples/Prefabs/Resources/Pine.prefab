@@ -188,6 +188,7 @@ MonoBehaviour:
   - id: 7
   - id: 8
   - id: 9
+  - id: 10
   references:
     version: 1
     00000000:
@@ -232,9 +233,16 @@ MonoBehaviour:
       type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.Wait
-        m_Enabled: 1
+        m_Enabled: 0
         duration: 6
     00000005:
+      type: {class: ShowProgressbar, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.ShowProgressbar
+        m_Enabled: 1
+        m_WidgetName: General Progressbar
+        m_Duration: 6
+    00000006:
       type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.SetEnabled
@@ -242,7 +250,7 @@ MonoBehaviour:
         m_Target: 1
         m_ComponentName: ThirdPersonController
         m_Enable: 1
-    00000006:
+    00000007:
       type: {class: CheckSkill, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
       data:
         m_Type: DevionGames.InventorySystem.CheckSkill
@@ -250,7 +258,7 @@ MonoBehaviour:
         m_WindowName: Skills
         m_Skill: {fileID: -9164302591508860154, guid: 1ae57b994efcab048a1bb130d4e11d83,
           type: 2}
-    00000007:
+    00000008:
       type: {class: Pickup, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
       data:
         m_Type: DevionGames.InventorySystem.Pickup
@@ -258,7 +266,7 @@ MonoBehaviour:
         m_WindowName: 
         m_DestroyWhenEmpty: 0
         m_Amount: 1
-    00000008:
+    00000009:
       type: {class: Invoke, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.Invoke
@@ -285,7 +293,7 @@ MonoBehaviour:
           m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
           m_ObjectValue: {fileID: 0}
           m_ArgumentType: 3
-    00000009:
+    0000000A:
       type: {class: Instantiate, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.Instantiate

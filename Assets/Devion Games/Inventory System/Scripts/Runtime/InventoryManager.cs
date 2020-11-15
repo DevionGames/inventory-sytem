@@ -308,6 +308,15 @@ namespace DevionGames.InventorySystem
 
         }
 
+        public static bool HasSavedData() {
+            string key = PlayerPrefs.GetString(InventoryManager.SavingLoading.savingKey, InventoryManager.SavingLoading.savingKey);
+            return InventoryManager.HasSavedData(key);
+        }
+
+        public static bool HasSavedData(string key) {
+            return !string.IsNullOrEmpty(PlayerPrefs.GetString(key + ".UI"));
+        }
+
         private static void LoadUI(string json)
         {
             if (string.IsNullOrEmpty(json)) return;

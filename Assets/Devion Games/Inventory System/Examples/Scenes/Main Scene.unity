@@ -51661,8 +51661,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Genaral UI
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4252450860970642037, guid: 7711700c499322241ad0a6161fccb38f, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7711700c499322241ad0a6161fccb38f, type: 3}
 --- !u!224 &1230757227 stripped
 RectTransform:
@@ -72691,7 +72690,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 732875891}
   m_HandleRect: {fileID: 732875890}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:

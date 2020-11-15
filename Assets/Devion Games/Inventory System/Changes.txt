@@ -11,3 +11,5 @@
 - ItemContainer.GetItemAmount(string windowName, string nameOrId)
 - Fixed Jump on steep slope
 - Saving skill progress
+- InventoryManager.HasSavedData()
+- ShowProgressbar action. You can use this instead of Wait. 
