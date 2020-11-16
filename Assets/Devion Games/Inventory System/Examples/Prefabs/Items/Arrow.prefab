@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -6046281287472468230}
   - component: {fileID: 4143129700699191362}
   - component: {fileID: 1916212355760491476}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 122
   m_CollisionDetection: 2
 --- !u!65 &7686990915806773874
 BoxCollider:
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delegates: []
   useDistance: 1.2
-  triggerType: 35
+  triggerType: 43
   key: 102
   actions:
   - id: 0
