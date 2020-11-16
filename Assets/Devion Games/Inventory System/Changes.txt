@@ -17,3 +17,4 @@
 - Created properties at runtime are saved now. This requires a diffrent serialization. Please delete all saved items.
 - Item has an option when sold -> Can Buy Back. 
 - When item is sold with Can Buy Back option set to true, it will be added to the vendors inventory and the player can buy back the item.
+- Added OnUse and OnEndUse Callbacks in EquipmentHandler

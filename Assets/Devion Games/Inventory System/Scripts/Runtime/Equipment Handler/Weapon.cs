@@ -6,6 +6,9 @@ namespace DevionGames.InventorySystem
 {
     public abstract class Weapon : VisibleItem
     {
+
+        public override string[] Callbacks => new string[] {"OnUse","OnEndUse" };
+
         [Header("Activation:")]
         [InspectorLabel("Input Name")]
         [SerializeField]
@@ -183,6 +186,9 @@ namespace DevionGames.InventorySystem
                 OnStopUse();
                 this.m_InUse = false;
                 this.m_CharacterAnimator.CrossFadeInFixedTime(this.m_IdleState, 0.15f);
+                CallbackEventData data = new CallbackEventData();
+                data.AddData("Item", this.m_CurrentEquipedItem);
+                Execute("OnEndUse", data);
             }
         }
 
@@ -200,7 +206,9 @@ namespace DevionGames.InventorySystem
         protected virtual void Use() {
             this.m_CharacterAnimator.CrossFadeInFixedTime(this.m_UseState, 0.15f);
             this.m_CharacterAnimator.Update(0f);
-
+            CallbackEventData data = new CallbackEventData();
+            data.AddData("Item", this.m_CurrentEquipedItem);
+            Execute("OnUse", data);
         }
 
         private void OnEndUse() {

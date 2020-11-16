@@ -6,7 +6,7 @@ using UnityEngine.XR;
 
 namespace DevionGames.InventorySystem
 {
-    public abstract class VisibleItem : MonoBehaviour
+    public abstract class VisibleItem : CallbackHandler
     {
         [ItemPicker(true)]
         public Item item;
@@ -19,6 +19,7 @@ namespace DevionGames.InventorySystem
         protected Camera m_Camera;
         protected Collider[] m_CharacterColliders;
         protected EquipmentHandler m_Handler;
+        protected Item m_CurrentEquipedItem;
 
         protected virtual void Start() {
           
@@ -36,6 +37,7 @@ namespace DevionGames.InventorySystem
 
         public virtual void OnItemEquip(Item item) {
             enabled = true;
+            this.m_CurrentEquipedItem = item;
             foreach (Attachment att in this.attachments)
             {
                 if (att.gameObject != null)
@@ -48,6 +50,7 @@ namespace DevionGames.InventorySystem
         }
 
         public virtual void OnItemUnEquip(Item item) {
+            this.m_CurrentEquipedItem = null;
             enabled = false;
             foreach (Attachment att in attachments)
             {

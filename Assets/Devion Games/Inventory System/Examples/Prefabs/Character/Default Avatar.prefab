@@ -3353,7 +3353,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 0.14342844
-  m_Depth: 0
+  m_Depth: 2
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 512
@@ -4433,6 +4433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47617ef9c17742a418ac1323b2041aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delegates: []
   item: {fileID: -2060425377994505070, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
   attachments:
   - region: {fileID: 5658350685615726283, guid: 1ae57b994efcab048a1bb130d4e11d83,
@@ -4455,6 +4456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468d8cb38be4be14495aa74b82052186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delegates: []
   item: {fileID: 960666660569578442, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
   attachments:
   - region: {fileID: 316844889573954113, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
@@ -4490,6 +4492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ade03ed65cb3d4bb295875358fe60c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delegates: []
   item: {fileID: -8967533827971111582, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
   attachments:
   - region: {fileID: 5658350685615726283, guid: 1ae57b994efcab048a1bb130d4e11d83,
@@ -4537,6 +4540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47617ef9c17742a418ac1323b2041aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delegates: []
   item: {fileID: -447126039411374142, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
   attachments:
   - region: {fileID: 316844889573954113, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
@@ -4558,6 +4562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47617ef9c17742a418ac1323b2041aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delegates: []
   item: {fileID: -4474190543486091594, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
   attachments:
   - region: {fileID: 316844889573954113, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
@@ -4579,6 +4584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47617ef9c17742a418ac1323b2041aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delegates: []
   item: {fileID: 2409076057030828310, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
   attachments:
   - region: {fileID: 316844889573954113, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
