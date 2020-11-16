@@ -205,7 +205,7 @@ MonoBehaviour:
         m_Enabled: 1
         m_Target: 1
         m_Position: {x: 11.94487, y: 0, z: 4.779361}
-        m_Speed: 1
+        m_Speed: 2
         m_LookAtPosition: 1
         m_UsePath: 1
     00000005:
