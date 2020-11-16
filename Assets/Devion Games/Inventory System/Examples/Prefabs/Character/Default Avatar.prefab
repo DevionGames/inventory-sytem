@@ -4797,7 +4797,7 @@ MonoBehaviour:
   m_StartType: 1
   m_StopType: 2
   m_ConsumeInputOverUI: 0
-  m_PauseItemUpdate: 1
+  m_PauseItemUpdate: 0
   m_TransitionDuration: 0.2
   m_State: 
   m_CameraPreset: Default

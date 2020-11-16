@@ -29,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8637995669017434483}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.0519466, y: -4.314418, z: 6.3845396}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delegates: []
   useDistance: 1.2
-  triggerType: 3
+  triggerType: 43
   key: 102
   actions:
   - id: 0
@@ -123,7 +123,6 @@ MonoBehaviour:
   - id: 6
   - id: 7
   - id: 8
-  - id: 9
   references:
     version: 1
     00000000:
@@ -173,19 +172,13 @@ MonoBehaviour:
         m_AnimatorState: Pickup Plant
         m_TransitionDuration: 0.2
     00000005:
-      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.Wait
-        m_Enabled: 1
-        duration: 6
-    00000006:
       type: {class: ShowProgressbar, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
       data:
         m_Type: DevionGames.InventorySystem.ShowProgressbar
         m_Enabled: 1
         m_WidgetName: General Progressbar
         m_Duration: 6
-    00000007:
+    00000006:
       type: {class: Pickup, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
       data:
         m_Type: DevionGames.InventorySystem.Pickup
@@ -193,7 +186,7 @@ MonoBehaviour:
         m_WindowName: Inventory
         m_DestroyWhenEmpty: 1
         m_Amount: 1
-    00000008:
+    00000007:
       type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.SendMessage
@@ -211,7 +204,7 @@ MonoBehaviour:
           m_ObjectValue: {fileID: 0}
           m_ArgumentType: 1
         m_Options: 1
-    00000009:
+    00000008:
       type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.SetEnabled

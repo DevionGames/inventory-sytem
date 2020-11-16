@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Linq;
-#if UNITY_POST_PROCESSING_STACK_V2
+
+//Disabled for now. Need to research how to handle URP and Postprocessing package at the same time.
+/*#if UNITY_POST_PROCESSING_STACK_V2
 using UnityEngine.Rendering.PostProcessing;
-#endif
+#endif*/
 
 
 namespace DevionGames
@@ -152,7 +152,7 @@ namespace DevionGames
         #endregion
 
         public void SetEffectAntialiasing(bool state) {
-#if UNITY_POST_PROCESSING_STACK_V2
+/*#if UNITY_POST_PROCESSING_STACK_V2
             PostProcessLayer layer = Camera.main.GetComponent<PostProcessLayer>();
             if (layer == null) { return; }
             if (state) {
@@ -160,12 +160,12 @@ namespace DevionGames
             }else{
                 layer.antialiasingMode = PostProcessLayer.Antialiasing.None;
             }
-#endif
+#endif*/
         }
 
         public void SetEffectBloom(bool state)
         {
-            #if UNITY_POST_PROCESSING_STACK_V2
+           /* #if UNITY_POST_PROCESSING_STACK_V2
             PostProcessVolume volume = Camera.main.GetComponent<PostProcessVolume>();
             if (volume == null) { return; }
             Bloom bloom;
@@ -173,12 +173,12 @@ namespace DevionGames
             {
                 bloom.active = state;
             }
-            #endif
+            #endif*/
         }
 
         public void SetEffectVignette(bool state)
         {
-#if UNITY_POST_PROCESSING_STACK_V2
+/*#if UNITY_POST_PROCESSING_STACK_V2
             PostProcessVolume volume = Camera.main.GetComponent<PostProcessVolume>();
             if (volume == null) { return; }
             Vignette vignette;
@@ -186,12 +186,12 @@ namespace DevionGames
             {
                 vignette.active = state;
             }
-#endif
+#endif*/
         }
 
         public void SetEffectAmbient(bool state)
         {
-#if UNITY_POST_PROCESSING_STACK_V2
+/*#if UNITY_POST_PROCESSING_STACK_V2
             PostProcessVolume volume = Camera.main.GetComponent<PostProcessVolume>();
             if (volume == null) { return; }
             AmbientOcclusion ambient;
@@ -199,7 +199,7 @@ namespace DevionGames
             {
                 ambient.active = state;
             }
-#endif
+#endif*/
         }
 
         public void SetAllEffects(bool state)

@@ -93553,11 +93553,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Default Avatar
       objectReference: {fileID: 0}
-    - target: {fileID: 6874675272001939313, guid: 74b0730caa51c7248ab53a1ac8a6b79b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74b0730caa51c7248ab53a1ac8a6b79b, type: 3}
 --- !u!1001 &9127377233647090990
