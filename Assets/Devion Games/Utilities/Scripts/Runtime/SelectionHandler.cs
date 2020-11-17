@@ -58,7 +58,7 @@ namespace DevionGames
         }
 
         private void CustomUpdate() {
-            if (!(this.m_CurrentSelection is null) && Vector3.Distance(this.m_Transform.position,this.m_CurrentSelection.position) > this.m_DeselectionDistance) {
+            if (!(this.m_CurrentSelection is null) && this.deselectionType.HasFlag<DeselectionInputType>(DeselectionInputType.Distance) && Vector3.Distance(this.m_Transform.position,this.m_CurrentSelection.position) > this.m_DeselectionDistance) {
                 Deselect();
             }
         }

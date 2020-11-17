@@ -131,8 +131,10 @@ namespace DevionGames.InventorySystem
         public void Add (Item item)
 		{
 			this.m_Items.Add (item);
-            this.m_Amounts.Add(item.Stack);
-            this.m_Modifiers.Add(new ItemModifierList());
+            int index = m_Items.IndexOf(item);
+
+            this.m_Amounts.Insert(index,item.Stack);
+            this.m_Modifiers.Insert(index,new ItemModifierList());
             if(onChange != null)
 			    onChange.Invoke ();
 
@@ -248,6 +250,7 @@ namespace DevionGames.InventorySystem
 
 
                             Add(mItem);
+
                             this.m_Amounts[i] = 0;
                             this.m_Modifiers[i].modifiers.Clear();
                         
@@ -264,14 +267,7 @@ namespace DevionGames.InventorySystem
                                 }
                             }
 
-                           /* if (itemData.ContainsKey("Index") && container != null)
-                            {
-                                int index = System.Convert.ToInt32(itemData["Index"]);
-                                if (container.Slots.Count > index)
-                                {
-                                    mItem.Slot = container.Slots[System.Convert.ToInt32(itemData["Index"])];
-                                }
-                            }*/
+                     
                         }
                     }
                 }

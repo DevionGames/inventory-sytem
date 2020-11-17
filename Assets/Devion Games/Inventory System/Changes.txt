@@ -19,3 +19,4 @@
 - When item is sold with Can Buy Back option set to true, it will be added to the vendors inventory and the player can buy back the item.
 - Added OnUse and OnEndUse Callbacks in EquipmentHandler
 - Tooltips for Item Editor and ItemContainer inspector fields.
+- Fixed SelectionHandler. It was deselecting based on distance even if there was no DeselectionInputType.Distance

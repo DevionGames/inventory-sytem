@@ -17558,7 +17558,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 601443361}
   m_HandleRect: {fileID: 601443360}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -77999,7 +77999,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1285114968}
   m_HandleRect: {fileID: 1285114967}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -92599,16 +92599,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 2740522862135884627, guid: 73000691bb97ca545a8d09fd0c6f5865,
+    - target: {fileID: 2740522862135884628, guid: 73000691bb97ca545a8d09fd0c6f5865,
         type: 3}
-      propertyPath: delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 872319510}
-    - target: {fileID: 2740522862135884627, guid: 73000691bb97ca545a8d09fd0c6f5865,
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2740522862135884628, guid: 73000691bb97ca545a8d09fd0c6f5865,
         type: 3}
-      propertyPath: delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 872319510}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2740522862135884628, guid: 73000691bb97ca545a8d09fd0c6f5865,
+        type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3782984955937440479, guid: 73000691bb97ca545a8d09fd0c6f5865,
         type: 3}
       propertyPath: m_AnchorMin.y

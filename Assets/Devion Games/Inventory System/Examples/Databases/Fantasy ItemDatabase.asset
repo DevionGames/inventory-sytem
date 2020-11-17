@@ -294,7 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefcd19cdc9839d449772c4dce1503f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoSave: 0
+  autoSave: 1
   savingKey: Player
   savingRate: 10
   provider: 0
@@ -312,6 +312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Vendor
   m_Items:
+  - {fileID: 8429455951140046941}
   - {fileID: 960666660569578442}
   - {fileID: -2060425377994505070}
   - {fileID: -8967533827971111582}
@@ -322,7 +323,6 @@ MonoBehaviour:
   - {fileID: 1063046599387310152}
   - {fileID: 8763039942855579107}
   - {fileID: -5663772737389988193}
-  - {fileID: 8429455951140046941}
   m_Amounts: 0100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
   m_Modifiers:
   - modifiers: []
