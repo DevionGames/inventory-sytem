@@ -321,6 +321,7 @@ namespace DevionGames.InventorySystem
 
             EditorGUILayout.Space();
             EditorGUILayout.LabelField("Properties:", EditorStyles.boldLabel);
+            EditorGUILayout.HelpBox("Properties can be used to define item specific information like stats or any custom information you want to change and save at runtime.", MessageType.Info);
             this.m_PropertyList.elementHeight = this.m_PropertyList.count == 0 ? (EditorGUIUtility.singleLineHeight + 4f) : (EditorGUIUtility.singleLineHeight + 4f) * 3;
             this.m_PropertyList.DoLayoutList();
 
@@ -391,8 +392,10 @@ namespace DevionGames.InventorySystem
                 GUILayout.BeginHorizontal();
                 GUILayout.Space(16f);
                 GUILayout.BeginVertical();
+                EditorGUILayout.HelpBox("Crafting item modifiers can be used to randomize the item when crafting.", MessageType.Info);
                 this.m_CraftingModifierList.DoLayoutList();
                 EditorGUILayout.Space();
+                EditorGUILayout.HelpBox("Required ingredients to craft this item.", MessageType.Info);
                 this.m_IngredientList.DoLayoutList();
                 GUILayout.EndVertical();
                 GUILayout.EndHorizontal();

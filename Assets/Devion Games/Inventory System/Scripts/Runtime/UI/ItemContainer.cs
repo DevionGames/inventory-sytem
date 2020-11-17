@@ -84,24 +84,29 @@ namespace DevionGames.InventorySystem
         /// The button to use item in slot
         /// </summary>
         [Header("Behaviour")]
+        [Tooltip("The button to use item in slot.")]
         [EnumFlags]
         public InputButton useButton = InputButton.Right;
         /// <summary>
         /// Sets the container as dynamic. Slots are instantiated at runtime.
         /// </summary>
+        [Tooltip("Sets the container as dynamic. Slots are instantiated at runtime.")]
         [SerializeField]
         protected bool m_DynamicContainer = false;
         /// <summary>
         /// The parent transform of slots. 
         /// </summary>
+        [Tooltip("The parent transform of slots.")]
         [SerializeField]
         protected Transform m_SlotParent;
         /// <summary>
         /// The slot prefab. This game object should contain the Slot component or a child class of Slot. 
         /// </summary>
+        [Tooltip("The slot prefab. This game object should contain the Slot component or a child class of Slot.")]
         [SerializeField]
         protected GameObject m_SlotPrefab;
 
+        [Tooltip("If true this container will be used as reference. Referenced containers don't hold the items itself, they are only referencing an item.")]
         [SerializeField]
         private bool m_UseReferences = false;
         /// <summary>
@@ -112,6 +117,7 @@ namespace DevionGames.InventorySystem
             protected set { this.m_UseReferences = value; }
         }
 
+        [Tooltip("Can the items be dragged into this container.")]
         [SerializeField]
         private bool m_CanDragIn = false;
         /// <summary>
@@ -123,6 +129,7 @@ namespace DevionGames.InventorySystem
             protected set { this.m_CanDragIn = value; }
         }
 
+        [Tooltip("Can the items be dragged out from this container.")]
         [SerializeField]
         private bool m_CanDragOut = false;
         /// <summary>
@@ -134,6 +141,7 @@ namespace DevionGames.InventorySystem
             protected set { this.m_CanDragOut = value; }
         }
 
+        [Tooltip("Can the items be dropped from this container to ground.")]
         [SerializeField]
         private bool m_CanDropItems = false;
         /// <summary>
@@ -145,6 +153,7 @@ namespace DevionGames.InventorySystem
             protected set { this.m_CanDropItems = value; }
         }
 
+        [Tooltip("Can the items be referenced from this container.")]
         [SerializeField]
         private bool m_CanReferenceItems = false;
         /// <summary>
@@ -156,6 +165,7 @@ namespace DevionGames.InventorySystem
             protected set { this.m_CanReferenceItems = value; }
         }
 
+        [Tooltip("Can the items be sold from this container.")]
         [SerializeField]
         private bool m_CanSellItems = false;
         /// <summary>
@@ -167,6 +177,7 @@ namespace DevionGames.InventorySystem
             protected set { this.m_CanSellItems = value; }
         }
 
+        [Tooltip("Can items be used from this container.")]
         [SerializeField]
         private bool m_CanUseItems = false;
         /// <summary>
@@ -178,6 +189,7 @@ namespace DevionGames.InventorySystem
             protected set { this.m_CanUseItems = value; }
         }
 
+        [Tooltip("Use context menu for item interaction.")]
         [SerializeField]
         private bool m_UseContextMenu = false;
         /// <summary>
@@ -189,6 +201,7 @@ namespace DevionGames.InventorySystem
             protected set { this.m_UseContextMenu = value; }
         }
 
+        [Tooltip("Show item tooltips?")]
         [SerializeField]
         private bool m_ShowTooltips = false;
         /// <summary>
@@ -200,11 +213,11 @@ namespace DevionGames.InventorySystem
             protected set { this.m_ShowTooltips = value; }
         }
 
-
+        [Tooltip("If true move used item. Move Conditions needs to be defined!")]
         [SerializeField]
         private bool m_MoveUsedItem = false;
         /// <summary>
-        /// If true this container will be used as reference.
+        /// If true move used item. Move Conditions needs to be defined!
         /// </summary>
         public bool MoveUsedItem
         {

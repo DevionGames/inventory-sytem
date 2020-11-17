@@ -29,6 +29,7 @@ namespace DevionGames.InventorySystem
         private void DrawInspector() {
             GUILayout.Space(3f);
             GUILayout.Label("Equipment:", EditorStyles.boldLabel);
+            EditorGUILayout.HelpBox("The equipment region defines where the item should be equiped to. Use Left Hand and Right Hand for two-handed weapons.", MessageType.Info);
             regionList.DoLayoutList();
         }
 
