@@ -1210,6 +1210,7 @@ namespace DevionGames.InventorySystem
         {
             if (index < this.m_Slots.Count)
             {
+                this.m_Slots[index].StopAllCoroutines();
                 DestroyImmediate(this.m_Slots[index].gameObject);
                 RefreshSlots();
             }
@@ -1741,7 +1742,7 @@ namespace DevionGames.InventorySystem
             ItemContainer container = WidgetUtility.Find<ItemContainer>(windowName);
             for (int i = 0; i < items.Length; i++)
             {
-                if (container.AddItem(items[i])) {
+                if (container.StackOrAdd(items[i])) {
                
                     RemoveItem(items[i]);
                 }
