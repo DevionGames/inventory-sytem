@@ -14,13 +14,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Devion Games/RPG Kit/Scenes/Create Character.unity
     guid: 5aeb5602255a4b2469eb895d12e20011
-  - enabled: 0
+  - enabled: 1
     path: Assets/Devion Games/RPG Kit/Scenes/Main Scene.unity
     guid: 1ec7bd8f44f71db47b5420126fa7366e
   - enabled: 0
     path: Assets/Devion Games/RPG Kit/Scenes/Map2.unity
     guid: 4965677e068e3ee43b5953413e0d5a03
-  - enabled: 1
+  - enabled: 0
     path: Assets/Devion Games/Quest System/Example/Scenes/Quest.unity
     guid: 1eb944ae767aa6b458e5c13e70576ab4
   m_configObjects: {}

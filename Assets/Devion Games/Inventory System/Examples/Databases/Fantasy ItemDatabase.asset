@@ -294,7 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefcd19cdc9839d449772c4dce1503f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoSave: 0
+  autoSave: 1
   savingKey: Player
   savingRate: 10
   provider: 0
@@ -633,6 +633,107 @@ MonoBehaviour:
   name: Weapon
   m_EditorColor: {r: 0.8962264, g: 0.17846043, b: 0.012682426, a: 1}
   m_Cooldown: 1
+--- !u!114 &-5242721879078471986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Id: ffa330cd-cea5-412e-bfed-83043311b538
+  m_ItemName: Sword Whirl
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: 5d8f6c97f82aa1f4d9f2ddedd3f05d50, type: 3}
+  m_Prefab: {fileID: 0}
+  m_Description: In a whirl of steel you attack all enemies in range.
+  m_Category: {fileID: -3989543302354102894}
+  m_IsSellable: 0
+  m_BuyPrice: 0
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: -2811142919616601772}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: -2811142919616601772}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 0
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 0
+  m_Cooldown: 3
+  actions:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  - id: 5
+  references:
+    version: 1
+    00000000:
+      type: {class: HasItem, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.HasItem
+        m_Enabled: 1
+        requiredItems:
+        - item: {fileID: 960666660569578442}
+          boolValue: 0
+          stringValue: Equipment
+          intValue: 0
+    00000001:
+      type: {class: IsInTransition, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.IsInTransition
+        m_Enabled: 1
+        m_Target: 1
+        layer: 3
+        invertResult: 1
+    00000002:
+      type: {class: IsName, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.IsName
+        m_Enabled: 1
+        m_Target: 1
+        layer: 3
+        name: Empty
+    00000003:
+      type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.ItemActions.Cooldown
+        m_Enabled: 1
+        item: {fileID: -5242721879078471986}
+        m_GlobalCooldown: 1
+    00000004:
+      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.CrossFade
+        m_Enabled: 1
+        m_Target: 1
+        m_AnimatorState: Sword Whirl
+        m_TransitionDuration: 0.2
+    00000005:
+      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.Wait
+        m_Enabled: 1
+        duration: 3
 --- !u!114 &-4474190543486091594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1504,6 +1605,9 @@ MonoBehaviour:
   - {fileID: 3129509250564287029}
   - {fileID: 4447567160419299934}
   - {fileID: -4423743630002525559}
+  - {fileID: -5242721879078471986}
+  - {fileID: 678841275653576696}
+  - {fileID: 4117155973668914919}
   - {fileID: -2839999955813321745}
   - {fileID: 8692695060773013855}
   - {fileID: 2033560685258441697}
@@ -1678,6 +1782,107 @@ MonoBehaviour:
         m_Enabled: 1
         m_WindowName: Alchemy
         m_DestroyWhenEmpty: 0
+--- !u!114 &678841275653576696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Id: 4a75541b-b7a8-4c5b-b9f0-b7e4de1d5021
+  m_ItemName: Sword Jump
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: 0b686e3c5bb0acb44809a4e72d303e3d, type: 3}
+  m_Prefab: {fileID: 0}
+  m_Description: Jumps forward and deals damage to enemies in front.
+  m_Category: {fileID: -3989543302354102894}
+  m_IsSellable: 0
+  m_BuyPrice: 0
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: -2811142919616601772}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: -2811142919616601772}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 0
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 0
+  m_Cooldown: 2
+  actions:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  - id: 5
+  references:
+    version: 1
+    00000000:
+      type: {class: HasItem, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.HasItem
+        m_Enabled: 1
+        requiredItems:
+        - item: {fileID: 960666660569578442}
+          boolValue: 0
+          stringValue: Equipment
+          intValue: 0
+    00000001:
+      type: {class: IsInTransition, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.IsInTransition
+        m_Enabled: 1
+        m_Target: 1
+        layer: 3
+        invertResult: 1
+    00000002:
+      type: {class: IsName, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.IsName
+        m_Enabled: 1
+        m_Target: 1
+        layer: 3
+        name: Empty
+    00000003:
+      type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.ItemActions.Cooldown
+        m_Enabled: 1
+        item: {fileID: 678841275653576696}
+        m_GlobalCooldown: 1
+    00000004:
+      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.CrossFade
+        m_Enabled: 1
+        m_Target: 1
+        m_AnimatorState: Sword Jump Attack
+        m_TransitionDuration: 0.2
+    00000005:
+      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.Wait
+        m_Enabled: 1
+        duration: 2
 --- !u!114 &960666660569578442
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2132,6 +2337,107 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Placeholder
+--- !u!114 &4117155973668914919
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Id: f0b544fe-1881-4b31-93c8-d9a54ad27266
+  m_ItemName: Sword Slash
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: 38b3b88139f32f14f86fb7a607ff1aed, type: 3}
+  m_Prefab: {fileID: 0}
+  m_Description: Left sword slash.
+  m_Category: {fileID: -3989543302354102894}
+  m_IsSellable: 0
+  m_BuyPrice: 0
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: -2811142919616601772}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: -2811142919616601772}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 0
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 0
+  m_Cooldown: 1
+  actions:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  - id: 5
+  references:
+    version: 1
+    00000000:
+      type: {class: HasItem, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.HasItem
+        m_Enabled: 1
+        requiredItems:
+        - item: {fileID: 960666660569578442}
+          boolValue: 0
+          stringValue: Equipment
+          intValue: 0
+    00000001:
+      type: {class: IsInTransition, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.IsInTransition
+        m_Enabled: 1
+        m_Target: 1
+        layer: 3
+        invertResult: 1
+    00000002:
+      type: {class: IsName, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.IsName
+        m_Enabled: 1
+        m_Target: 1
+        layer: 3
+        name: Empty
+    00000003:
+      type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.ItemActions.Cooldown
+        m_Enabled: 1
+        item: {fileID: 4117155973668914919}
+        m_GlobalCooldown: 0.5
+    00000004:
+      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.CrossFade
+        m_Enabled: 1
+        m_Target: 1
+        m_AnimatorState: Sword Slash
+        m_TransitionDuration: 0.2
+    00000005:
+      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.Wait
+        m_Enabled: 1
+        duration: 1
 --- !u!114 &4187599761675176531
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2442,8 +2748,14 @@ MonoBehaviour:
   m_Items:
   - {fileID: -4423743630002525559}
   - {fileID: 4447567160419299934}
-  m_Amounts: 0100000001000000
+  - {fileID: -5242721879078471986}
+  - {fileID: 678841275653576696}
+  - {fileID: 4117155973668914919}
+  m_Amounts: 0100000001000000010000000100000001000000
   m_Modifiers:
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
   - modifiers: []
   - modifiers: []
 --- !u!114 &6127056651903551046

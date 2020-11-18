@@ -117,6 +117,7 @@ namespace DevionGames.InventorySystem
             }
             if (!IsActive) { return; }
 
+            if (string.IsNullOrEmpty(this.m_UseInputName)) return;
 
             if (this.m_StartType != StartType.Down || !Input.GetButtonDown(this.m_UseInputName))
             {
@@ -166,7 +167,7 @@ namespace DevionGames.InventorySystem
             Ray  ray = this.m_Camera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit)) {
-                return hit.collider.GetComponent<Trigger>() ==null;
+                return hit.collider.GetComponent<BaseTrigger>() ==null;
             }
 
             return true; 

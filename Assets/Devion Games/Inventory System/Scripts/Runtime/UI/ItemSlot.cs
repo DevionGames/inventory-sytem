@@ -26,6 +26,11 @@ namespace DevionGames.InventorySystem
 		[SerializeField]
         protected Image m_CooldownOverlay;
         /// <summary>
+        /// The image to display cooldown.
+        /// </summary>
+        [SerializeField]
+        protected Text m_Cooldown;
+        /// <summary>
 		/// The text to display item description.
 		/// </summary>
 		[SerializeField]
@@ -420,10 +425,18 @@ namespace DevionGames.InventorySystem
             {
                 if (Time.time - cooldownInitTime < cooldownDuration)
                 {
+                    if (this.m_Cooldown != null) {
+                        this.m_Cooldown.text = (cooldownDuration - (Time.time - cooldownInitTime)).ToString("f1");
+                    }
                     this.m_CooldownOverlay.fillAmount = Mathf.Clamp01(1f - ((Time.time - cooldownInitTime) / cooldownDuration));
                 }else{
+                    if(this.m_Cooldown != null)
+                        this.m_Cooldown.text = string.Empty;
+
                     this.m_CooldownOverlay.fillAmount = 0f;
                 }
+
+
             }
             this.m_IsCooldown = (cooldownDuration - (Time.time - cooldownInitTime)) > 0f;
         }

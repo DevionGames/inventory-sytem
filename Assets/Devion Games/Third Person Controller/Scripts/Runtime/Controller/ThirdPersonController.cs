@@ -844,8 +844,8 @@ namespace DevionGames
 
 
 		private void PlayFootstepSound(AnimationEvent evt) {
-			if (RelativeInput.sqrMagnitude > 0.5f && evt.animatorClipInfo.weight > 0.5f)
-				PlaySound(evt.objectReferenceParameter as AudioClip, evt.floatParameter);
+			if (RelativeInput.sqrMagnitude > 0.5f && evt.animatorClipInfo.weight > 0.5f && m_Rigidbody.velocity.sqrMagnitude > 0.5f)
+				PlaySound(evt.objectReferenceParameter as AudioClip, evt.floatParameter*0.5f);
 		}
 
 		private void PlaySound(AnimationEvent evt)
