@@ -4283,6 +4283,7 @@ MonoBehaviour:
     m_MaxValue: 9999
     m_Regenerate: 0
     m_Rate: 5
+    m_DisplayDamage: 0
   - m_Name: Max Damage
     formula:
       serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.StatSystem.StatResult\",\n\t\t\"id\":\"ded9cd9c-e29a-4b4a-903f-550a1b5a6537\",\n\t\t\"name\":\"Stat
@@ -4292,6 +4293,23 @@ MonoBehaviour:
     m_MaxValue: 9999
     m_Regenerate: 0
     m_Rate: 5
+    m_DisplayDamage: 0
+  - m_Name: Melee Damage
+    formula:
+      serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.StatSystem.StatResult\",\n\t\t\"id\":\"64d3c857-abb6-43b8-b072-92b4a8373760\",\n\t\t\"name\":\"Stat
+        Result\",\n\t\t\"position\":\"v2(483.95,24.6033325)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"value\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"20899b69-1fe7-4046-b77d-62824302a219\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"delta\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t}\n\t\t},\n\t\t\"value\":0,\n\t\t\"delta\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"df7ba2fc-8ab3-4ad2-8e2b-6eb9004f4cd0\",\n\t\t\"name\":\"Get
+        Stat Value\",\n\t\t\"position\":\"v2(-63.4666748,-60.3966675)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"stat\",\n\t\t\t\t\"drawPort\":false,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.String\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"statValue\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"875f37d1-387f-4620-ab31-5527e7dcbdc2\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"DevionGames.StatSystem.Stat\"\n\t\t\t}\n\t\t},\n\t\t\"stat\":\"Min
+        Damage\"\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"e1bf4aae-fa08-4953-a0d1-e80fb541f2f6\",\n\t\t\"name\":\"Get
+        Stat Value\",\n\t\t\"position\":\"v2(-65.4666748,32.6033325)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"stat\",\n\t\t\t\t\"drawPort\":false,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.String\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"statValue\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"875f37d1-387f-4620-ab31-5527e7dcbdc2\",\n\t\t\t\t\t\t\"fieldName\":\"b\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"DevionGames.StatSystem.Stat\"\n\t\t\t}\n\t\t},\n\t\t\"stat\":\"Max
+        Damage\"\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Random\",\n\t\t\"id\":\"875f37d1-387f-4620-ab31-5527e7dcbdc2\",\n\t\t\"name\":\"Random\",\n\t\t\"position\":\"v2(168.533325,-54.3966675)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"df7ba2fc-8ab3-4ad2-8e2b-6eb9004f4cd0\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"e1bf4aae-fa08-4953-a0d1-e80fb541f2f6\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"20899b69-1fe7-4046-b77d-62824302a219\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":0,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"55f08808-9096-465f-9876-54f3ba2d90f0\",\n\t\t\"name\":\"Get
+        Stat Value\",\n\t\t\"position\":\"v2(-44.4666748,165.603333)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"stat\",\n\t\t\t\t\"drawPort\":false,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.String\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"statValue\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"d615b986-bb06-40df-9331-39821e2c22b2\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"DevionGames.StatSystem.Stat\"\n\t\t\t}\n\t\t},\n\t\t\"stat\":\"Melee
+        Attack\"\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Add\",\n\t\t\"id\":\"20899b69-1fe7-4046-b77d-62824302a219\",\n\t\t\"name\":\"Add\",\n\t\t\"position\":\"v2(327.533325,24.6033325)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"875f37d1-387f-4620-ab31-5527e7dcbdc2\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"d615b986-bb06-40df-9331-39821e2c22b2\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"64d3c857-abb6-43b8-b072-92b4a8373760\",\n\t\t\t\t\t\t\"fieldName\":\"value\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":0,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Random\",\n\t\t\"id\":\"d615b986-bb06-40df-9331-39821e2c22b2\",\n\t\t\"name\":\"Random\",\n\t\t\"position\":\"v2(168.352783,130.103333)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"55f08808-9096-465f-9876-54f3ba2d90f0\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"20899b69-1fe7-4046-b77d-62824302a219\",\n\t\t\t\t\t\t\"fieldName\":\"b\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":0,\n\t\t\"output\":0\n\t}]\n}"
+      serializedObjects: []
+    m_MinValue: 0
+    m_MaxValue: -1
+    m_Regenerate: 0
+    m_Rate: 5
+    m_DisplayDamage: 0
   - m_Name: Strength
     formula:
       serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.StatSystem.StatResult\",\n\t\t\"id\":\"861d798a-82b2-473d-9767-913858a8d59c\",\n\t\t\"name\":\"Stat
@@ -4301,6 +4319,7 @@ MonoBehaviour:
     m_MaxValue: 120
     m_Regenerate: 0
     m_Rate: 5
+    m_DisplayDamage: 0
   - m_Name: Intelligence
     formula:
       serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.StatSystem.StatResult\",\n\t\t\"id\":\"0ff559a4-e437-4012-8321-8a78357884d8\",\n\t\t\"name\":\"Stat
@@ -4310,6 +4329,7 @@ MonoBehaviour:
     m_MaxValue: 120
     m_Regenerate: 0
     m_Rate: 5
+    m_DisplayDamage: 0
   - m_Name: Dexterity
     formula:
       serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.StatSystem.StatResult\",\n\t\t\"id\":\"ab236087-841c-4080-8b34-f2f9d5dcfc16\",\n\t\t\"name\":\"Stat
@@ -4319,6 +4339,7 @@ MonoBehaviour:
     m_MaxValue: 120
     m_Regenerate: 0
     m_Rate: 5
+    m_DisplayDamage: 0
   - m_Name: Vitality
     formula:
       serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.StatSystem.StatResult\",\n\t\t\"id\":\"369f36e3-4c46-4a57-bc1e-3147a1419e04\",\n\t\t\"name\":\"Stat
@@ -4328,6 +4349,7 @@ MonoBehaviour:
     m_MaxValue: 120
     m_Regenerate: 0
     m_Rate: 5
+    m_DisplayDamage: 0
   - m_Name: Armor
     formula:
       serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"4bf9726f-57e6-40fe-be51-a48348f7d1c9\",\n\t\t\"name\":\"Get
@@ -4338,6 +4360,7 @@ MonoBehaviour:
     m_MaxValue: 120
     m_Regenerate: 0
     m_Rate: 5
+    m_DisplayDamage: 0
   - m_Name: Health
     formula:
       serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"0bac0c90-aa1a-412a-b881-2c4ec26bb4db\",\n\t\t\"name\":\"Get
@@ -4348,6 +4371,7 @@ MonoBehaviour:
     m_MaxValue: 120
     m_Regenerate: 1
     m_Rate: 5
+    m_DisplayDamage: 0
   - m_Name: Mana
     formula:
       serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"47c736bf-5a08-46d2-85d2-da7902760c39\",\n\t\t\"name\":\"Get
@@ -4358,7 +4382,8 @@ MonoBehaviour:
     m_MaxValue: 120
     m_Regenerate: 1
     m_Rate: 1
-  - m_Name: Meele Attack
+    m_DisplayDamage: 0
+  - m_Name: Melee Attack
     formula:
       serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"ef5316ca-bc73-49d7-9dd9-c986c785d24e\",\n\t\t\"name\":\"Get
         Stat Value\",\n\t\t\"position\":\"v2(-347,-27.5)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"stat\",\n\t\t\t\t\"drawPort\":false,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"String\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"statValue\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"5e387b38-76c3-4734-a5bd-749eceb4da62\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Stat\"\n\t\t\t}\n\t\t},\n\t\t\"stat\":\"Min
@@ -4372,6 +4397,7 @@ MonoBehaviour:
     m_MaxValue: 999
     m_Regenerate: 0
     m_Rate: 5
+    m_DisplayDamage: 0
   - m_Name: Ranged Attack
     formula:
       serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"ef5316ca-bc73-49d7-9dd9-c986c785d24e\",\n\t\t\"name\":\"Get
@@ -4386,6 +4412,7 @@ MonoBehaviour:
     m_MaxValue: 999
     m_Regenerate: 0
     m_Rate: 5
+    m_DisplayDamage: 0
   - m_Name: Magic Attack
     formula:
       serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"ef5316ca-bc73-49d7-9dd9-c986c785d24e\",\n\t\t\"name\":\"Get
@@ -4400,6 +4427,7 @@ MonoBehaviour:
     m_MaxValue: 999
     m_Regenerate: 0
     m_Rate: 5
+    m_DisplayDamage: 0
   - m_Name: Exp
     formula:
       serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"424a4524-9dda-47de-8c31-c41b29bf3fee\",\n\t\t\"name\":\"Get
@@ -4411,6 +4439,7 @@ MonoBehaviour:
     m_MaxValue: -1
     m_Regenerate: 0
     m_Rate: 5
+    m_DisplayDamage: 0
   - m_Name: Level
     formula:
       serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.Sqrt\",\n\t\t\"id\":\"bb9e579d-a689-4f48-8562-538a4b24ff8e\",\n\t\t\"name\":\"Sqrt\",\n\t\t\"position\":\"v2(-82,-37.5)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"value\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"8c7a489b-752d-4cac-9a7e-4abaff606096\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"81847600-4dce-444e-9ad0-22bd8341398d\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t}\n\t\t},\n\t\t\"value\":0,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Multiply\",\n\t\t\"id\":\"81847600-4dce-444e-9ad0-22bd8341398d\",\n\t\t\"name\":\"Multiply\",\n\t\t\"position\":\"v2(88,-37.5)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"bb9e579d-a689-4f48-8562-538a4b24ff8e\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"abde36bb-cab9-4bd4-868c-80001ae4189e\",\n\t\t\t\t\t\t\"fieldName\":\"value\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":0.1,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Floor\",\n\t\t\"id\":\"abde36bb-cab9-4bd4-868c-80001ae4189e\",\n\t\t\"name\":\"Floor\",\n\t\t\"position\":\"v2(249,-34.5)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"value\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"81847600-4dce-444e-9ad0-22bd8341398d\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"80d2647d-e9eb-4617-83e6-d235641d8080\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t}\n\t\t},\n\t\t\"value\":0,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Add\",\n\t\t\"id\":\"80d2647d-e9eb-4617-83e6-d235641d8080\",\n\t\t\"name\":\"Add\",\n\t\t\"position\":\"v2(376,-33.7000122)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"abde36bb-cab9-4bd4-868c-80001ae4189e\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"64d3c857-abb6-43b8-b072-92b4a8373760\",\n\t\t\t\t\t\t\"fieldName\":\"value\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":1,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatCurrentValue\",\n\t\t\"id\":\"8c7a489b-752d-4cac-9a7e-4abaff606096\",\n\t\t\"name\":\"Get
@@ -4421,6 +4450,8 @@ MonoBehaviour:
     m_MaxValue: -1
     m_Regenerate: 0
     m_Rate: 5
+    m_DisplayDamage: 0
+  m_DamageText: {fileID: 0}
 --- !u!114 &6874675272001939294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4468,7 +4499,7 @@ MonoBehaviour:
     gameObject: {fileID: 0}
   m_ActivationInputName: 
   m_ActivationType: 0
-  m_UseInputName: Fire1
+  m_UseInputName: 
   m_StartType: 1
   m_StopType: 1
   m_RightHandIKTarget: {fileID: 0}
@@ -4614,7 +4645,7 @@ MonoBehaviour:
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 1075
-  deselectionType: 13
+  deselectionType: 12
   m_DeselectionKey: 27
   m_DeselectionDistance: 10
 --- !u!114 &6874675272001939292

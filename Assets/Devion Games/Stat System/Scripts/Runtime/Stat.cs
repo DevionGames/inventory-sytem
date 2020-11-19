@@ -108,6 +108,14 @@ namespace DevionGames.StatSystem
             set { this.m_Rate = value; }
         }
 
+        [SerializeField]
+        private bool m_DisplayDamage;
+        public bool DisplayDamage
+        {
+            get { return this.m_DisplayDamage; }
+            set { this.m_DisplayDamage=value; }
+        }
+
         private StatsHandler m_Handler;
         private List<StatModifier> m_StatModifiers;
         private bool m_Dirty = true;

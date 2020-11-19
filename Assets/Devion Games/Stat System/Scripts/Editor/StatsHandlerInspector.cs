@@ -141,6 +141,8 @@ namespace DevionGames.StatSystem
 			SerializedProperty maxValue = element.FindPropertyRelative ("m_MaxValue");
 			SerializedProperty regenerate = element.FindPropertyRelative("m_Regenerate");
 			SerializedProperty regenerationRate = element.FindPropertyRelative("m_Rate");
+			SerializedProperty displayDamage = element.FindPropertyRelative("m_DisplayDamage");
+
 
 			EditorGUILayout.PropertyField (name);
 			EditorGUILayout.PropertyField(formula);
@@ -151,6 +153,8 @@ namespace DevionGames.StatSystem
 			{
 				EditorGUILayout.PropertyField(regenerationRate);
 			}
+			EditorGUILayout.PropertyField(displayDamage);
+
 
 		}
 	}

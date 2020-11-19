@@ -513,7 +513,7 @@ MonoBehaviour:
       type: {class: IsInTransition, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.IsInTransition
-        m_Enabled: 1
+        m_Enabled: 0
         m_Target: 1
         layer: 3
         invertResult: 1
@@ -521,7 +521,7 @@ MonoBehaviour:
       type: {class: IsName, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.IsName
-        m_Enabled: 1
+        m_Enabled: 0
         m_Target: 1
         layer: 3
         name: Empty
@@ -531,7 +531,7 @@ MonoBehaviour:
         m_Type: DevionGames.InventorySystem.ItemActions.Cooldown
         m_Enabled: 1
         item: {fileID: -6382214904321203751}
-        m_GlobalCooldown: 0.5
+        m_GlobalCooldown: 1.5
     00000004:
       type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
       data:
@@ -837,7 +837,6 @@ MonoBehaviour:
   - id: 3
   - id: 4
   - id: 5
-  - id: 6
   references:
     version: 1
     00000000:
@@ -855,7 +854,7 @@ MonoBehaviour:
       type: {class: IsInTransition, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.IsInTransition
-        m_Enabled: 1
+        m_Enabled: 0
         m_Target: 1
         layer: 3
         invertResult: 1
@@ -863,7 +862,7 @@ MonoBehaviour:
       type: {class: IsName, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.IsName
-        m_Enabled: 1
+        m_Enabled: 0
         m_Target: 1
         layer: 3
         name: Empty
@@ -886,14 +885,8 @@ MonoBehaviour:
         m_Type: DevionGames.CrossFade
         m_Enabled: 1
         m_Target: 1
-        m_AnimatorState: Sword Whirl
+        m_AnimatorState: Whirlwind
         m_TransitionDuration: 0.2
-    00000006:
-      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.Wait
-        m_Enabled: 1
-        duration: 3
 --- !u!114 &-4474190543486091594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1999,7 +1992,6 @@ MonoBehaviour:
   - id: 3
   - id: 4
   - id: 5
-  - id: 6
   references:
     version: 1
     00000000:
@@ -2017,7 +2009,7 @@ MonoBehaviour:
       type: {class: IsInTransition, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.IsInTransition
-        m_Enabled: 1
+        m_Enabled: 0
         m_Target: 1
         layer: 3
         invertResult: 1
@@ -2025,7 +2017,7 @@ MonoBehaviour:
       type: {class: IsName, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.IsName
-        m_Enabled: 1
+        m_Enabled: 0
         m_Target: 1
         layer: 3
         name: Empty
@@ -2048,14 +2040,8 @@ MonoBehaviour:
         m_Type: DevionGames.CrossFade
         m_Enabled: 1
         m_Target: 1
-        m_AnimatorState: Sword Jump Attack
+        m_AnimatorState: Cleave
         m_TransitionDuration: 0.2
-    00000006:
-      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.Wait
-        m_Enabled: 1
-        duration: 2
 --- !u!114 &960666660569578442
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2564,7 +2550,6 @@ MonoBehaviour:
   - id: 3
   - id: 4
   - id: 5
-  - id: 6
   references:
     version: 1
     00000000:
@@ -2582,7 +2567,7 @@ MonoBehaviour:
       type: {class: IsInTransition, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.IsInTransition
-        m_Enabled: 1
+        m_Enabled: 0
         m_Target: 1
         layer: 3
         invertResult: 1
@@ -2590,7 +2575,7 @@ MonoBehaviour:
       type: {class: IsName, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.IsName
-        m_Enabled: 1
+        m_Enabled: 0
         m_Target: 1
         layer: 3
         name: Empty
@@ -2615,12 +2600,6 @@ MonoBehaviour:
         m_Target: 1
         m_AnimatorState: Sword Slash
         m_TransitionDuration: 0.2
-    00000006:
-      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.Wait
-        m_Enabled: 1
-        duration: 1
 --- !u!114 &4187599761675176531
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using DevionGames.Graphs;
+using UnityEngine.UI;
 
 namespace DevionGames.StatSystem
 {
@@ -17,6 +18,9 @@ namespace DevionGames.StatSystem
         public float freeStatPoints = 3;
 
 		public List<Stat> stats = new List<Stat> ();
+
+        [SerializeField]
+        private GameObject m_DamageText=null;
 
         private void Awake()
         {
@@ -47,25 +51,30 @@ namespace DevionGames.StatSystem
 
         protected void TriggerAnimationEvent(AnimationEvent ev)
         {
-           // SendMessage(ev.stringParameter, SendMessageOptions.DontRequireReceiver);
+            SendMessage(ev.stringParameter,ev.objectReferenceParameter, SendMessageOptions.DontRequireReceiver);
         }
 
-      /*  private void SendDamage()
+        private void SendDamage(Object data)
         {
-            Collider[] colliders = Physics.OverlapSphere(transform.position, 2f);
+            DamageData damageData = data as DamageData;
+            Stat sendingStat = stats.FirstOrDefault(x => x.Name == damageData.sendingStat);
+            if (sendingStat == null) return;
+
+            Collider[] colliders = Physics.OverlapSphere(transform.position, damageData.maxDistance);
             for (int i = 0; i < colliders.Length; i++)
             {
                 if (colliders[i].transform != transform)
                 {
                     Vector3 direction = colliders[i].transform.position - transform.position;
                     float angle = Vector3.Angle(direction, transform.forward);
-                    if (Mathf.Abs(angle) < 60f)
+                    if (Mathf.Abs(angle) < damageData.maxAngle)
                     {
-                        colliders[i].SendMessage("OnReceiveDamage");
+                        colliders[i].SendMessage("ApplyDamage",new object[] {damageData.receivingStat, sendingStat.Value }, SendMessageOptions.DontRequireReceiver);
                     }
                 }
             }
-        }*/
+        }
+
 
 
         /// <summary>
@@ -115,6 +124,9 @@ namespace DevionGames.StatSystem
                         break;
                 }
                 UpdateStats();
+                if (stat.DisplayDamage)
+                    DisplayDamage(damage);
+
                 if (StatsManager.DefaultSettings.debugMessages && mValue < maxValue)
                 {
                     Debug.Log("[StatusSystem]Apply Damage: " + gameObject.name + " " + stat.Name + " CurrentValue:" + stat.CurrentValue + " Value:" + stat.Value +" IncrementalValue: "+stat.IncrementalValue +" Damage: " + damage);
@@ -137,6 +149,17 @@ namespace DevionGames.StatSystem
                 }
             }
             return false;
+        }
+
+        private void DisplayDamage(float damage) {
+            //TODO Pooling
+            GameObject go = Instantiate(this.m_DamageText, this.m_DamageText.transform.parent);
+            Vector3 randomizeIntensity = new Vector3(3f,2f,0f);
+            go.transform.localPosition += new Vector3(UnityEngine.Random.Range(-randomizeIntensity.x,randomizeIntensity.x), UnityEngine.Random.Range(-randomizeIntensity.y, randomizeIntensity.y), UnityEngine.Random.Range(-randomizeIntensity.z, randomizeIntensity.z));
+            Text text = go.GetComponentInChildren<Text>();
+            text.text = (damage>0?"-":"+")+Mathf.Abs(damage).ToString();
+            go.SetActive(true);
+            Destroy(go, 4f);
         }
 
         public void AddModifier(object[] data)

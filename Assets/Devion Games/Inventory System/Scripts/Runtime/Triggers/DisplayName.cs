@@ -53,9 +53,9 @@ namespace DevionGames.InventorySystem
         {
             if (
                       this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.CameraRaycast) &&
-                      !(this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.InRange) && this.m_Trigger.InRange ||
+                      !(this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.InRange) && this.m_Trigger != null && this.m_Trigger.InRange ||
                       this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.Always) ||
-                      this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.InUse) && this.m_Trigger.InUse))
+                      this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.InUse) && this.m_Trigger != null && this.m_Trigger.InUse))
             {
                 DoDisplayName(state);
             }
@@ -64,9 +64,9 @@ namespace DevionGames.InventorySystem
         public void OnMouseRaycast(bool state) {
             if (
                          this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.MouseRaycast) &&
-                         !(this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.InRange) && this.m_Trigger.InRange ||
+                         !(this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.InRange) && this.m_Trigger != null && this.m_Trigger.InRange ||
                          this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.Always) ||
-                         this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.InUse) && this.m_Trigger.InUse))
+                         this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.InUse) && this.m_Trigger != null && this.m_Trigger.InUse))
             {
                 DoDisplayName(state);
             }
@@ -119,9 +119,9 @@ namespace DevionGames.InventorySystem
             {
                 if (
                     this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.OnMouseOver) &&
-                    !(this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.InRange) && this.m_Trigger.InRange ||
+                    !(this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.InRange) && this.m_Trigger != null && this.m_Trigger.InRange ||
                     this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.Always) ||
-                    this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.InUse) && this.m_Trigger.InUse))
+                    this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.InUse) && this.m_Trigger != null && this.m_Trigger.InUse))
                 {
                     DoDisplayName(false);
                 }

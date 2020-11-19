@@ -83,6 +83,30 @@ ModelImporter:
         floatParameter: 0.4
         intParameter: 0
         messageOptions: 0
+      - time: 0.23157896
+        functionName: TriggerAnimationEvent
+        data: SendDamage
+        objectReferenceParameter: {fileID: 11400000, guid: 1e45eb698c24def4b942e831a79fef9e,
+          type: 2}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.43157896
+        functionName: TriggerAnimationEvent
+        data: SendDamage
+        objectReferenceParameter: {fileID: 11400000, guid: 1e45eb698c24def4b942e831a79fef9e,
+          type: 2}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.6673684
+        functionName: TriggerAnimationEvent
+        data: SendDamage
+        objectReferenceParameter: {fileID: 11400000, guid: 1e45eb698c24def4b942e831a79fef9e,
+          type: 2}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

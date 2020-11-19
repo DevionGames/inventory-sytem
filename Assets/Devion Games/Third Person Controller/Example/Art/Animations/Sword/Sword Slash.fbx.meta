@@ -627,8 +627,17 @@ ModelImporter:
       - time: 0.41111112
         functionName: TriggerAnimationEvent
         data: SendDamage
-        objectReferenceParameter: {instanceID: 0}
+        objectReferenceParameter: {fileID: 11400000, guid: 1e45eb698c24def4b942e831a79fef9e,
+          type: 2}
         floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.35869566
+        functionName: PlaySound
+        data: 
+        objectReferenceParameter: {fileID: 8300000, guid: a52f993decd63c347ae44221cec238a6,
+          type: 3}
+        floatParameter: 0.4
         intParameter: 0
         messageOptions: 0
       transformMask: []
