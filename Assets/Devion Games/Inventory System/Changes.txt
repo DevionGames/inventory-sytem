@@ -22,3 +22,5 @@
 - Fixed SelectionHandler. It was deselecting based on distance even if there was no DeselectionInputType.Distance
 - ItemContainer.MoveTo uses StackOrAdd now(used in Loot Window)
 - ItemSlot has a Cooldown reference, where you can reference a Text component to display cooldown
+- HasCategoryItem action
+- Meele combat spell examples

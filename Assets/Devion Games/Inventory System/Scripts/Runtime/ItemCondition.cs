@@ -9,6 +9,8 @@ namespace DevionGames.InventorySystem
     {
         [ItemPicker(true)]
         public Item item;
+        [CategoryPicker(true)]
+        public Category category;
         public bool boolValue;
         public string stringValue;
         public int intValue;

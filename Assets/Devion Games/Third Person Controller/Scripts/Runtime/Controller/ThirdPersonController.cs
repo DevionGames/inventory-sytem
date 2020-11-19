@@ -850,8 +850,7 @@ namespace DevionGames
 
 		private void PlaySound(AnimationEvent evt)
 		{
-			if (RelativeInput.sqrMagnitude > 0.5f && evt.animatorClipInfo.weight > 0.5f)
-				PlaySound(evt.objectReferenceParameter as AudioClip, evt.floatParameter);
+			PlaySound(evt.objectReferenceParameter as AudioClip, evt.floatParameter);
 		}
 
 		private void PlaySound(AudioClip clip, float volume)

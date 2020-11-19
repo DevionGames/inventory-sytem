@@ -993,6 +993,23 @@ namespace DevionGames.InventorySystem
         }
 
         /// <summary>
+        /// Check if the container has an item with category
+        /// </summary>
+        public bool HasCategoryItem(Category category)
+        {
+            for (int i = 0; i < this.m_Slots.Count; i++)
+            {
+                Slot slot = this.m_Slots[i];
+                if (!slot.IsEmpty && slot.ObservedItem.Category.Name == category.Name)
+                {
+
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
         /// Get an array of items with given id in this container.
         /// </summary>
         /// <param name="id">Item id</param>
@@ -1501,6 +1518,24 @@ namespace DevionGames.InventorySystem
 
             }
             return existingAmount >= amount;
+        }
+
+        /// <summary>
+        /// Checks in all containers named by windowName if an item with category exists.
+        /// </summary>
+        public static bool HasCategoryItem(string windowName, Category category)
+        {
+            ItemContainer[] windows = WidgetUtility.FindAll<ItemContainer>(windowName);
+            for (int j = 0; j < windows.Length; j++)
+            {
+                ItemContainer current = windows[j];
+                if (current.HasCategoryItem(category))
+                {
+                    return true;
+                }
+
+            }
+            return false;
         }
 
         /// <summary>
