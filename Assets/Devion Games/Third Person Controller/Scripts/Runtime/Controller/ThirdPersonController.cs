@@ -494,6 +494,9 @@ namespace DevionGames
 					IsAiming = !IsAiming;
 				}
 				break;
+				case AimType.Selectable:
+					IsAiming = SelectableObject.current != null;
+					break;
 			}
 
 
@@ -931,6 +934,7 @@ namespace DevionGames
 		None,
 		Button,
 		Axis,
-		Toggle
+		Toggle,
+		Selectable
 	}
 }

@@ -185,6 +185,7 @@ namespace DevionGames
                 this.m_ConsumeTurn = true;
                 this.m_ConsumeZoom = true;
             }
+            this.m_ConsumeTurn = this.m_ActivePreset.TurnButton == "None" ? true : this.m_ConsumeTurn;
 
             if (!this.m_ConsumeTurn && (string.IsNullOrEmpty(this.m_ActivePreset.TurnButton) || Input.GetButton(this.m_ActivePreset.TurnButton)))
             {
@@ -206,7 +207,6 @@ namespace DevionGames
                     this.m_MouseX = ClampAngle(this.m_MouseX, this.m_ActivePreset.YawLimit.x, this.m_ActivePreset.YawLimit.y);
                 }
                 this.m_MouseY = ClampAngle(this.m_MouseY, this.m_ActivePreset.PitchLimit.x, this.m_ActivePreset.PitchLimit.y);
-
             }
             else if (this.m_RotatedLastFrame)
             {
