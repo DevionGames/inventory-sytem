@@ -13,6 +13,19 @@ MonoBehaviour:
   m_Name: DamageData
   m_EditorClassIdentifier: 
   sendingStat: Melee Damage
+  criticalStrikeStat: Critical Strike
   receivingStat: Health
   maxDistance: 2
   maxAngle: 60
+  particleEffect: {fileID: 5305822200100292117, guid: 2aecc49ae18a147499dc13ba4b89d645,
+    type: 3}
+  offset: {x: 0, y: 1.5, z: 0}
+  randomize: {x: 0.2, y: 0.1, z: 0}
+  lifeTime: 3
+  volume: 0.7
+  hitSounds:
+  - {fileID: 8300000, guid: 0805de7e4fb0f4d03a30ae90e7c64311, type: 3}
+  - {fileID: 8300000, guid: 34aca9e3f1ade4802b9062b1380aa523, type: 3}
+  duration: 0
+  speed: 5
+  amount: {x: 0.4, y: 0.4, z: 0}

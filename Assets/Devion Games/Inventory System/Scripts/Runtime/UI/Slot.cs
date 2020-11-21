@@ -139,7 +139,7 @@ namespace DevionGames.InventorySystem
             }
 
             if (this.m_Stack != null) {
-                if (!IsEmpty){
+                if (!IsEmpty && ObservedItem.MaxStack > 1 ){
                     //Updates the stack and enables it.
                     this.m_Stack.text = ObservedItem.Stack.ToString();
                     this.m_Stack.enabled = true;

@@ -154,7 +154,12 @@ namespace DevionGames.StatSystem
 				EditorGUILayout.PropertyField(regenerationRate);
 			}
 			EditorGUILayout.PropertyField(displayDamage);
-
+			if (displayDamage.boolValue) {
+				EditorGUI.indentLevel += 1;
+				EditorGUILayout.PropertyField(element.FindPropertyRelative("m_DamageColor"));
+				EditorGUILayout.PropertyField(element.FindPropertyRelative("m_CriticalDamageColor"));
+				EditorGUI.indentLevel -= 1;
+			}
 
 		}
 	}

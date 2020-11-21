@@ -2,7 +2,7 @@
     "name": "Triggers",
     "id": "com.deviongames.triggers",
     "assetPath":"Assets/Devion Games/Triggers",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "unityVersion": "2019.4.10",
     "downloadPath": "https://deviongames.com/modules/Triggers.unitypackage",
     "author": "Konstantin Janson",
@@ -35,6 +35,13 @@
             [
                "Rigidbody.SetConstraints action",
                "AssemblyDefinition"
+            ]
+        },
+        {
+            "version": "1.0.3",
+            "changes": 
+            [
+               "Added ICodition interface"
             ]
         }
     ]

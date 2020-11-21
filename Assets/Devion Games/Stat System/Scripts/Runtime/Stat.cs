@@ -116,6 +116,23 @@ namespace DevionGames.StatSystem
             set { this.m_DisplayDamage=value; }
         }
 
+        [InspectorLabel("Default")]
+        [SerializeField]
+        private Color m_DamageColor = Color.white;
+        public Color DamageColor {
+            get { return this.m_DamageColor; }
+            set { this.m_DamageColor = value; }
+        }
+
+        [InspectorLabel("Critical")]
+        [SerializeField]
+        private Color m_CriticalDamageColor = Color.red;
+        public Color CriticalDamageColor
+        {
+            get { return this.m_CriticalDamageColor; }
+            set { this.m_CriticalDamageColor = value; }
+        }
+
         private StatsHandler m_Handler;
         private List<StatModifier> m_StatModifiers;
         private bool m_Dirty = true;

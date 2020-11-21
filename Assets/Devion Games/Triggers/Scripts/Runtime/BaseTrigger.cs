@@ -50,6 +50,7 @@ namespace DevionGames
         protected delegate void PointerEventFunction<T>(T handler, PointerEventData eventData);
 
         protected bool m_CheckBlocking = true;
+        private static bool m_PointerOverTrigger = false;
 
         //Is the player in range, set by OnTriggerEnter/OnTriggerExit or if trigger is attached to player in Start?
         private bool m_InRange;
@@ -186,6 +187,7 @@ namespace DevionGames
 
         public virtual void OnPointerEnter(PointerEventData eventData)
         {
+            BaseTrigger.m_PointerOverTrigger = true;
             if (!UnityTools.IsPointerOverUI())
             {
                 ExecuteEvent<ITriggerPointerEnter>(Execute, eventData);
@@ -194,6 +196,7 @@ namespace DevionGames
 
         public virtual void OnPointerExit(PointerEventData eventData)
         {
+            BaseTrigger.m_PointerOverTrigger = false;
             if (!UnityTools.IsPointerOverUI())
             {
                 ExecuteEvent<ITriggerPointerExit>(Execute, eventData);
@@ -357,6 +360,10 @@ namespace DevionGames
                 }
             }
             return tMin == this;
+        }
+
+        public static bool IsPointerOverTrigger() {
+            return BaseTrigger.m_PointerOverTrigger;
         }
 
         protected static void Execute(ITriggerUsedHandler handler, GameObject player)

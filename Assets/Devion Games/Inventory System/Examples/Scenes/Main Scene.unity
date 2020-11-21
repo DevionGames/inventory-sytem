@@ -1919,7 +1919,7 @@ RectTransform:
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 14, y: 0}
-  m_Pivot: {x: 1, y: 0}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &46892798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1961,7 +1961,7 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 987276368}
   m_HandleRect: {fileID: 987276367}
-  m_Direction: 3
+  m_Direction: 2
   m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
@@ -7008,6 +7008,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189020458}
   m_CullTransparentMesh: 0
+--- !u!1 &189592910
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 189592913}
+  - component: {fileID: 189592912}
+  - component: {fileID: 189592911}
+  m_Layer: 0
+  m_Name: Scene Variables
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &189592911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189592910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 995777834, guid: c8d0ad23af520fe46aabe2b1fecf6462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &189592912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189592910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1465209106, guid: c8d0ad23af520fe46aabe2b1fecf6462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"declarations":{"collection":{"$content":[],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []
+--- !u!4 &189592913
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189592910}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &189947201
 GameObject:
   m_ObjectHideFlags: 0
@@ -9015,7 +9074,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!208 &243281384
 NavMeshObstacle:
@@ -14565,7 +14624,7 @@ RectTransform:
   m_Children:
   - {fileID: 445314369}
   m_Father: {fileID: 719817200}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -21393,7 +21452,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 1
   m_UseContextMenu: 0
-  m_ShowTooltips: 0
+  m_ShowTooltips: 1
   m_MoveUsedItem: 1
   moveItemConditions:
   - window: Equipment
@@ -25524,7 +25583,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 0
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -28793,10 +28852,10 @@ RectTransform:
   - {fileID: 1614786593}
   - {fileID: 1078032085}
   - {fileID: 1691058972}
-  - {fileID: 839068487}
   - {fileID: 872319509}
   - {fileID: 2147319345}
   - {fileID: 379107558}
+  - {fileID: 839068487}
   - {fileID: 743434570}
   - {fileID: 1001353692}
   - {fileID: 1888486725}
@@ -35110,7 +35169,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 719817200}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -36116,7 +36175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &891162093
 RectTransform:
   m_ObjectHideFlags: 0
@@ -41668,7 +41727,7 @@ MonoBehaviour:
   "m_\xCDcon": {fileID: 859739745}
   m_Stack: {fileID: 1948314586}
   restrictions: []
-  m_UseKey: 57
+  m_UseKey: 285
   m_Key: {fileID: 413002764}
   m_CooldownOverlay: {fileID: 1365360527}
   m_Cooldown: {fileID: 1788398376}
@@ -43751,7 +43810,7 @@ MonoBehaviour:
   "m_\xCDcon": {fileID: 125176398}
   m_Stack: {fileID: 74744626}
   restrictions: []
-  m_UseKey: 55
+  m_UseKey: 283
   m_Key: {fileID: 555867811}
   m_CooldownOverlay: {fileID: 1936869432}
   m_Cooldown: {fileID: 617483541}
@@ -63811,7 +63870,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 0
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -69514,7 +69573,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.5803922}
   m_RaycastTarget: 1
-  m_Maskable: 0
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -71671,7 +71730,7 @@ MonoBehaviour:
   "m_\xCDcon": {fileID: 626294465}
   m_Stack: {fileID: 1068325818}
   restrictions: []
-  m_UseKey: 54
+  m_UseKey: 282
   m_Key: {fileID: 1506354570}
   m_CooldownOverlay: {fileID: 58440954}
   m_Cooldown: {fileID: 1947120593}
@@ -90777,7 +90836,7 @@ MonoBehaviour:
   "m_\xCDcon": {fileID: 816315195}
   m_Stack: {fileID: 377799468}
   restrictions: []
-  m_UseKey: 56
+  m_UseKey: 284
   m_Key: {fileID: 1028982572}
   m_CooldownOverlay: {fileID: 1246537148}
   m_Cooldown: {fileID: 636275019}
@@ -92213,7 +92272,7 @@ RectTransform:
   - {fileID: 906184646}
   - {fileID: 1543196571}
   m_Father: {fileID: 719817200}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -92424,7 +92483,7 @@ PrefabInstance:
     - target: {fileID: 864753745464015930, guid: ca461851dfacfb14e84266ca01f62690,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 864753745464015930, guid: ca461851dfacfb14e84266ca01f62690,
         type: 3}
@@ -93683,7 +93742,7 @@ PrefabInstance:
     - target: {fileID: 6076886006985249759, guid: c5a989dbac0848641bf83f0a3a2b4c42,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6076886006985249759, guid: c5a989dbac0848641bf83f0a3a2b4c42,
         type: 3}
@@ -93703,12 +93762,12 @@ PrefabInstance:
     - target: {fileID: 6076886006985249759, guid: c5a989dbac0848641bf83f0a3a2b4c42,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 639.7372
+      value: 639.737
       objectReference: {fileID: 0}
     - target: {fileID: 6076886006985249759, guid: c5a989dbac0848641bf83f0a3a2b4c42,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 119.823
+      value: 119.82303
       objectReference: {fileID: 0}
     - target: {fileID: 6076886006985249759, guid: c5a989dbac0848641bf83f0a3a2b4c42,
         type: 3}
@@ -93872,7 +93931,7 @@ PrefabInstance:
     - target: {fileID: 6874675270729213573, guid: 74b0730caa51c7248ab53a1ac8a6b79b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6874675270729213573, guid: 74b0730caa51c7248ab53a1ac8a6b79b,
         type: 3}
@@ -94433,13 +94492,15 @@ MonoBehaviour:
   stats:
   - m_Name: Health
     formula:
-      serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.StatSystem.StatResult\",\n\t\t\"id\":\"2b15ea22-5790-415d-b9a9-c5167470e305\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"value\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"delta\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t}\n\t\t},\n\t\t\"value\":500,\n\t\t\"delta\":0\n\t}]\n}"
+      serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.StatSystem.StatResult\",\n\t\t\"id\":\"2b15ea22-5790-415d-b9a9-c5167470e305\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"value\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"delta\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t}\n\t\t},\n\t\t\"value\":5000,\n\t\t\"delta\":0\n\t}]\n}"
       serializedObjects: []
     m_MinValue: 0
-    m_MaxValue: 500
+    m_MaxValue: -1
     m_Regenerate: 0
     m_Rate: 5
     m_DisplayDamage: 1
+    m_DamageColor: {r: 1, g: 0.69411767, b: 0.07058824, a: 1}
+    m_CriticalDamageColor: {r: 1, g: 0, b: 0, a: 1}
   - m_Name: Mana
     formula:
       serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.StatSystem.StatResult\",\n\t\t\"id\":\"2b15ea22-5790-415d-b9a9-c5167470e305\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"value\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"delta\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t}\n\t\t},\n\t\t\"value\":50,\n\t\t\"delta\":0\n\t}]\n}"
@@ -94449,6 +94510,8 @@ MonoBehaviour:
     m_Regenerate: 0
     m_Rate: 5
     m_DisplayDamage: 0
+    m_DamageColor: {r: 1, g: 1, b: 1, a: 1}
+    m_CriticalDamageColor: {r: 1, g: 0, b: 0, a: 1}
   m_DamageText: {fileID: 891162092}
 --- !u!114 &8634550542084073239
 MonoBehaviour:
