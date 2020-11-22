@@ -100,7 +100,9 @@ namespace DevionGames.UIWidgets
 		/// </summary>
 		/// <value><c>true</c> if this instance is open; otherwise, <c>false</c>.</value>
 		public bool IsVisible { 
-			get { 
+			get {
+				if (this.m_CanvasGroup == null)
+					this.m_CanvasGroup = GetComponent<CanvasGroup>();
 				return m_CanvasGroup.alpha == 1f; 
 			} 
 		}

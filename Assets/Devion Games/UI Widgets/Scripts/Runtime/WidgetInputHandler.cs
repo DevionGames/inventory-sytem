@@ -1,16 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace DevionGames.UIWidgets
 {
     public class WidgetInputHandler : MonoBehaviour
     {
+       // private static List<UIWidget> m_VisibilityStack = new List<UIWidget>();
         private static Dictionary<KeyCode, List<UIWidget>> m_WidgetKeyBindings;
+
+       /* private void Start()
+        {
+
+            m_VisibilityStack = WidgetUtility.FindAll<UIWidget>().Where(x => !x.IsVisible) .ToList();
+            m_VisibilityStack.ForEach(x => Debug.Log(x.Name));
+            m_VisibilityStack.OrderBy(x => x.transform.GetSiblingIndex());
+        }*/
+
+  
 
         // Update is called once per frame
         void Update()
         {
+           /* if (Input.GetKeyDown(KeyCode.Escape)) {
+                m_VisibilityStack.OrderBy(x => x.transform.GetSiblingIndex());
+                UIWidget widget= m_VisibilityStack.FirstOrDefault(x=>x.IsVisible);
+                if(widget != null)
+                    widget.Close();
+            }*/
+
             if (m_WidgetKeyBindings == null) {
                 return;
             }

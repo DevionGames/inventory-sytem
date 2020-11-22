@@ -125,7 +125,7 @@ namespace DevionGames
 
         private void UpdateInput() {
             this.m_ConsumeTurn = false;
-            this.m_ConsumeZoom = false;
+            this.m_ConsumeZoom = this.m_ActivePreset.ConsumeInputOverUI?UnityTools.IsPointerOverUI():false;
 
             if ((Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)) && EventSystem.current != null && UnityTools.IsPointerOverUI())
             {

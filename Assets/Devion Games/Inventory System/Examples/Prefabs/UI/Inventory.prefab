@@ -378,6 +378,7 @@ MonoBehaviour:
   m_UseKey: 0
   m_Key: {fileID: 0}
   m_CooldownOverlay: {fileID: 301339352822260599}
+  m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
   m_BuyPrice: {fileID: 0}
@@ -673,6 +674,7 @@ MonoBehaviour:
   m_UseKey: 0
   m_Key: {fileID: 0}
   m_CooldownOverlay: {fileID: 5136452777031117841}
+  m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
   m_BuyPrice: {fileID: 0}
@@ -1486,6 +1488,7 @@ MonoBehaviour:
   m_UseKey: 0
   m_Key: {fileID: 0}
   m_CooldownOverlay: {fileID: 8298146026766767104}
+  m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
   m_BuyPrice: {fileID: 0}
@@ -1633,6 +1636,7 @@ MonoBehaviour:
   m_UseKey: 0
   m_Key: {fileID: 0}
   m_CooldownOverlay: {fileID: 180906830188333554}
+  m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
   m_BuyPrice: {fileID: 0}
@@ -2688,6 +2692,7 @@ MonoBehaviour:
   m_UseKey: 0
   m_Key: {fileID: 0}
   m_CooldownOverlay: {fileID: 3473955839510389444}
+  m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
   m_BuyPrice: {fileID: 0}
@@ -3856,6 +3861,7 @@ MonoBehaviour:
   m_UseKey: 0
   m_Key: {fileID: 0}
   m_CooldownOverlay: {fileID: 2740522862338347576}
+  m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
   m_BuyPrice: {fileID: 0}
@@ -4605,39 +4611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bb22b138ec68f14884edf560442aaf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delegates:
-  - eventID: OnAddItem
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: PlayOneShot
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 9ef5b527d90acaa428b516bbd9fc2cc4,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: OnRemoveItem
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: PlayOneShot
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 9ef5b527d90acaa428b516bbd9fc2cc4,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+  delegates: []
   name: Inventory
   priority: 0
   m_KeyCode: 105
@@ -5559,6 +5533,7 @@ MonoBehaviour:
   m_UseKey: 0
   m_Key: {fileID: 0}
   m_CooldownOverlay: {fileID: 3948583979664784379}
+  m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
   m_BuyPrice: {fileID: 0}
@@ -5706,6 +5681,7 @@ MonoBehaviour:
   m_UseKey: 0
   m_Key: {fileID: 0}
   m_CooldownOverlay: {fileID: 7646424622255141090}
+  m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
   m_BuyPrice: {fileID: 0}
@@ -5927,6 +5903,7 @@ MonoBehaviour:
   m_UseKey: 0
   m_Key: {fileID: 0}
   m_CooldownOverlay: {fileID: 29666169545988022}
+  m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
   m_BuyPrice: {fileID: 0}
@@ -7060,6 +7037,7 @@ MonoBehaviour:
   m_UseKey: 0
   m_Key: {fileID: 0}
   m_CooldownOverlay: {fileID: 1225810048881032312}
+  m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
   m_BuyPrice: {fileID: 0}
@@ -7207,6 +7185,7 @@ MonoBehaviour:
   m_UseKey: 0
   m_Key: {fileID: 0}
   m_CooldownOverlay: {fileID: 2488544700265121939}
+  m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
   m_BuyPrice: {fileID: 0}
@@ -7802,6 +7781,7 @@ MonoBehaviour:
   m_UseKey: 0
   m_Key: {fileID: 0}
   m_CooldownOverlay: {fileID: 6215648349773724376}
+  m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
   m_BuyPrice: {fileID: 0}
@@ -8027,6 +8007,7 @@ MonoBehaviour:
   m_UseKey: 0
   m_Key: {fileID: 0}
   m_CooldownOverlay: {fileID: 7934410027602595304}
+  m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
   m_BuyPrice: {fileID: 0}
@@ -8322,6 +8303,7 @@ MonoBehaviour:
   m_UseKey: 0
   m_Key: {fileID: 0}
   m_CooldownOverlay: {fileID: 4270711702654926045}
+  m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
   m_BuyPrice: {fileID: 0}
@@ -8913,6 +8895,7 @@ MonoBehaviour:
   m_UseKey: 0
   m_Key: {fileID: 0}
   m_CooldownOverlay: {fileID: 3525543430367592142}
+  m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
   m_BuyPrice: {fileID: 0}
@@ -9360,6 +9343,7 @@ MonoBehaviour:
   m_UseKey: 0
   m_Key: {fileID: 0}
   m_CooldownOverlay: {fileID: 2318092542830423149}
+  m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
   m_BuyPrice: {fileID: 0}
@@ -9807,6 +9791,7 @@ MonoBehaviour:
   m_UseKey: 0
   m_Key: {fileID: 0}
   m_CooldownOverlay: {fileID: 4486155248444807608}
+  m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
   m_BuyPrice: {fileID: 0}
@@ -9954,6 +9939,7 @@ MonoBehaviour:
   m_UseKey: 0
   m_Key: {fileID: 0}
   m_CooldownOverlay: {fileID: 5631215495603179435}
+  m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
   m_BuyPrice: {fileID: 0}
@@ -10101,6 +10087,7 @@ MonoBehaviour:
   m_UseKey: 0
   m_Key: {fileID: 0}
   m_CooldownOverlay: {fileID: 6249858671218621964}
+  m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
   m_BuyPrice: {fileID: 0}
@@ -10396,6 +10383,7 @@ MonoBehaviour:
   m_UseKey: 0
   m_Key: {fileID: 0}
   m_CooldownOverlay: {fileID: 5351297158781625982}
+  m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
   m_BuyPrice: {fileID: 0}
@@ -10695,6 +10683,7 @@ MonoBehaviour:
   m_UseKey: 0
   m_Key: {fileID: 0}
   m_CooldownOverlay: {fileID: 5472742748370872710}
+  m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
   m_BuyPrice: {fileID: 0}
