@@ -320,6 +320,11 @@ namespace DevionGames.InventorySystem
         /// <param name="s2">Slot 2</param>
         /// <returns>True if stacking or swaping possible.</returns>
         public bool StackOrSwap(Slot s1, Slot s2) {
+            if (s1 is ItemSlot s1Slot && s1Slot.IsCooldown)
+                return false;
+            if (s2 is ItemSlot s2Slot && s2Slot.IsCooldown)
+                return false;
+
             if (s1 == s2) {
                 return false;
             }
@@ -350,7 +355,10 @@ namespace DevionGames.InventorySystem
         /// <param name="s2">Second slot</param>
         /// <returns>True if swapped.</returns>
         public bool SwapItems(Slot s1, Slot s2) {
-
+            if (s1 is ItemSlot s1Slot && s1Slot.IsCooldown)
+                return false;
+            if (s2 is ItemSlot s2Slot && s2Slot.IsCooldown)
+                return false;
             if (s2.Container.UseReferences && !s1.Container.UseReferences) {
                 return false;
             }
@@ -434,6 +442,11 @@ namespace DevionGames.InventorySystem
         /// <param name="s2">Slot 2</param>
         /// <returns>True if items can be swapped.</returns>
         public bool CanSwapItems(Slot s1, Slot s2) {
+            if (s1 is ItemSlot s1Slot && s1Slot.IsCooldown)
+                return false;
+            if (s2 is ItemSlot s2Slot && s2Slot.IsCooldown)
+                return false;
+
             List<Slot> requiredSlotsObserved = s2.Container.GetRequiredSlots(s1.ObservedItem,s2);
             if (requiredSlotsObserved.Count == 0)
             {
@@ -465,7 +478,6 @@ namespace DevionGames.InventorySystem
         {
             if (!StackItem(item) && !AddItem(item)){
 
-                Debug.Log("False");
                 return false;
             }
             return true;

@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cda3b9d89a55f143bf4546d43b708d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DisplayType: 34
+  m_DisplayType: 8
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Offset: {x: 0, y: 0, z: 0}
 --- !u!114 &5604447963439490772

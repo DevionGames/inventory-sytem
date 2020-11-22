@@ -24,3 +24,10 @@
 - ItemSlot has a Cooldown reference, where you can reference a Text component to display cooldown
 - HasCategoryItem action
 - Meele combat spell examples
+- Trigger collider is created as child
+- Adds automaticaly TriggerRaycaster to main camera if null
+- Requires now TriggerRaycaster for any TriggerType.
+- Combined DisplayName.DisplayType OnMouseOver = 8, CameraRaycast = 16, MouseRaycast = 32 to Raycast = 8
+- Above Trigger changes allow now to have a collider with Is Trigger set to true and still receive events. (Bush example, you can now walk through it)
+- Fixed item swap when in cooldown
+- Fixed Unstack when in cooldown

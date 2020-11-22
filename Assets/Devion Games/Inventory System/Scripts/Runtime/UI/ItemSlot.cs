@@ -96,7 +96,7 @@ namespace DevionGames.InventorySystem
 		/// </summary>
 		protected virtual void Update()
         {
-            if (Input.GetKeyDown(m_UseKey) && !UnityTools.IsPointerOverUI() && !BaseTrigger.IsPointerOverTrigger())
+            if (Input.GetKeyDown(m_UseKey) && !UnityTools.IsPointerOverUI() && !TriggerRaycaster.IsPointerOverTrigger())
             {
                 Use();
             }

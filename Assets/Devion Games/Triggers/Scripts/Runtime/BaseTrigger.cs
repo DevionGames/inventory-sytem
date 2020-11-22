@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 namespace DevionGames
 {
     [UnityEngine.Scripting.APIUpdating.MovedFromAttribute(true, null, "Assembly-CSharp")]
-    public abstract class BaseTrigger : CallbackHandler, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
+    public abstract class BaseTrigger : CallbackHandler, IPointerEnterHandler, IPointerExitHandler
     {
         //Player GameObject, overrride this and set 
         public abstract PlayerInfo PlayerInfo { get; }
@@ -50,7 +50,6 @@ namespace DevionGames
         protected delegate void PointerEventFunction<T>(T handler, PointerEventData eventData);
 
         protected bool m_CheckBlocking = true;
-        private static bool m_PointerOverTrigger = false;
 
         //Is the player in range, set by OnTriggerEnter/OnTriggerExit or if trigger is attached to player in Start?
         private bool m_InRange;
@@ -109,8 +108,10 @@ namespace DevionGames
                 triggerType = TriggerInputType.LeftClick;
             }
 
-            if(triggerType.HasFlag<TriggerInputType>(TriggerInputType.Raycast))
-                EventHandler.Register<bool>(gameObject, "OnCameraRaycast", OnCameraRaycast);
+            if (triggerType.HasFlag<TriggerInputType>(TriggerInputType.Raycast))
+            {
+                EventHandler.Register<int>(gameObject, "OnPoinerClickTrigger", OnPointerTriggerClick);
+            }
 
             if (gameObject == PlayerInfo.gameObject || this.useDistance == -1) {
                 InRange = true;
@@ -120,6 +121,7 @@ namespace DevionGames
                 CreateTriggerCollider();
             }
         }
+
 
         protected virtual void Update() {
 
@@ -164,30 +166,20 @@ namespace DevionGames
             }
         }
 
-        protected virtual void OnCameraRaycast(bool state) {
+        private void OnPointerTriggerClick(int button)
+        {
             if (!UnityTools.IsPointerOverUI() &&
-                  (triggerType.HasFlag<TriggerInputType>(TriggerInputType.LeftClick) && Input.GetMouseButtonDown(0) ||
-                  triggerType.HasFlag<TriggerInputType>(TriggerInputType.RightClick) && Input.GetMouseButtonDown(1) ||
-                  triggerType.HasFlag<TriggerInputType>(TriggerInputType.MiddleClick) && Input.GetMouseButtonDown(2)))
+                   triggerType.HasFlag<TriggerInputType>(TriggerInputType.LeftClick) && button == 0 ||
+                   triggerType.HasFlag<TriggerInputType>(TriggerInputType.RightClick) && button == 1 ||
+                   triggerType.HasFlag<TriggerInputType>(TriggerInputType.MiddleClick) && button == 2)
             {
                 Use();
             }
         }
 
-        public void OnPointerClick(PointerEventData eventData)
-        {
-            if (!UnityTools.IsPointerOverUI() && 
-                (triggerType.HasFlag<TriggerInputType>(TriggerInputType.LeftClick) && eventData.button == PointerEventData.InputButton.Left || 
-                triggerType.HasFlag<TriggerInputType>(TriggerInputType.RightClick) && eventData.button == PointerEventData.InputButton.Right || 
-                triggerType.HasFlag<TriggerInputType>(TriggerInputType.MiddleClick) && eventData.button == PointerEventData.InputButton.Middle))
-            {
-                Use();
-            }
-        }
 
         public virtual void OnPointerEnter(PointerEventData eventData)
         {
-            BaseTrigger.m_PointerOverTrigger = true;
             if (!UnityTools.IsPointerOverUI())
             {
                 ExecuteEvent<ITriggerPointerEnter>(Execute, eventData);
@@ -196,7 +188,6 @@ namespace DevionGames
 
         public virtual void OnPointerExit(PointerEventData eventData)
         {
-            BaseTrigger.m_PointerOverTrigger = false;
             if (!UnityTools.IsPointerOverUI())
             {
                 ExecuteEvent<ITriggerPointerExit>(Execute, eventData);
@@ -216,6 +207,7 @@ namespace DevionGames
             this.InUse = true;
             return true;
         }
+
 
         //Can the trigger be used?
         public virtual bool CanUse()
@@ -246,7 +238,9 @@ namespace DevionGames
                 Collider collider = PlayerInfo.collider;
                 collider.enabled = false;
                 RaycastHit hit;
-                bool raycast = Physics.Raycast(playerPosition, direction, out hit);
+
+                LayerMask layerMask = Physics.DefaultRaycastLayers;
+                bool raycast = Physics.Raycast(playerPosition, direction,out hit, float.PositiveInfinity, layerMask, QueryTriggerInteraction.Collide);
                 collider.enabled = true;
                 if (raycast && !UnityEngine.Object.ReferenceEquals(hit.transform, transform))
                 {
@@ -316,6 +310,9 @@ namespace DevionGames
         protected virtual void CreateTriggerCollider()
         {
             Vector3 position = Vector3.zero;
+            GameObject handlerGameObject = new GameObject("TriggerRangeHandler");
+            handlerGameObject.transform.SetParent(transform,false);
+            handlerGameObject.layer = 2;
 
             Collider collider = GetComponent<Collider>();
             if (collider != null)
@@ -325,11 +322,17 @@ namespace DevionGames
                 position = transform.InverseTransformPoint(position);
             }
 
-            SphereCollider sphereCollider = gameObject.AddComponent<SphereCollider>();
+            SphereCollider sphereCollider = handlerGameObject.AddComponent<SphereCollider>();
             sphereCollider.isTrigger = true;
             sphereCollider.center = position;
             Vector3 scale = transform.lossyScale;
             sphereCollider.radius = useDistance / Mathf.Max(scale.x, scale.y, scale.z);
+
+            Rigidbody rigidbody = GetComponent<Rigidbody>();
+            if (rigidbody == null) {
+                rigidbody =gameObject.AddComponent<Rigidbody>();
+                rigidbody.isKinematic = true;
+            }
         }
 
         /*Returns true if this is the best trigger. Used for TriggerInputType.Key and TriggerInputType.OnTriggerEnter
@@ -360,10 +363,6 @@ namespace DevionGames
                 }
             }
             return tMin == this;
-        }
-
-        public static bool IsPointerOverTrigger() {
-            return BaseTrigger.m_PointerOverTrigger;
         }
 
         protected static void Execute(ITriggerUsedHandler handler, GameObject player)

@@ -39,3 +39,10 @@ Inventory System is a highly flexible tool for unity. It can be used in any type
 <br>- Created properties at runtime are saved now. This requires a diffrent serialization. Please delete all saved items.
 <br>- Item has an option when sold -> Can Buy Back. 
 <br>- When item is sold with Can Buy Back option set to true, it will be added to the vendors inventory and the player can buy back the item.
+<br>- Trigger collider is created as child
+<br>- Adds automaticaly TriggerRaycaster to main camera if null
+<br>- Requires now TriggerRaycaster for any TriggerType.
+<br>- Combined DisplayName.DisplayType OnMouseOver = 8, CameraRaycast = 16, MouseRaycast = 32 to Raycast = 8
+<br>- Above Trigger changes allow now to have a collider with Is Trigger set to true and still receive events. (Bush example, you can now walk through it)
+<br>- Fixed item swap when in cooldown
+<br>- Fixed Unstack when in cooldown

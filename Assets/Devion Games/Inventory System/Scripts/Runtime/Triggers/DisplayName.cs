@@ -6,12 +6,12 @@ using UnityEngine.EventSystems;
 
 namespace DevionGames.InventorySystem
 {
-    public class DisplayName : MonoBehaviour, ITriggerCameInRange, ITriggerUsedHandler, ITriggerUnUsedHandler, ITriggerWentOutOfRange, ITriggerPointerEnter, ITriggerPointerExit
+    public class DisplayName : MonoBehaviour, ITriggerCameInRange, ITriggerUsedHandler, ITriggerUnUsedHandler, ITriggerWentOutOfRange
     {
         //When to display name?
         [SerializeField]
         [EnumFlags]
-        protected DisplayNameType m_DisplayType = DisplayNameType.InRange | DisplayNameType.OnMouseOver;
+        protected DisplayNameType m_DisplayType = DisplayNameType.Raycast;
         //Color to display name
         [SerializeField]
         protected Color m_Color = Color.white;
@@ -37,8 +37,9 @@ namespace DevionGames.InventorySystem
         private void Start()
         {
             m_Trigger = GetComponent<BaseTrigger>();
-            EventHandler.Register<bool>(gameObject, "OnCameraRaycast", OnCameraRaycast);
-            EventHandler.Register<bool>(gameObject, "OnMouseRaycast", OnMouseRaycast);
+            EventHandler.Register(gameObject, "OnPointerEnterTrigger", OnPointerEnterTrigger);
+            EventHandler.Register(gameObject, "OnPointerExitTrigger", OnPointerExitTrigger);
+
 
             if (this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.Always))
                 DoDisplayName(true);
@@ -49,26 +50,25 @@ namespace DevionGames.InventorySystem
             DoDisplayName(false);
         }
 
-        public void OnCameraRaycast(bool state)
+        public void OnPointerEnterTrigger()
         {
-            if (
-                      this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.CameraRaycast) &&
-                      !(this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.InRange) && this.m_Trigger != null && this.m_Trigger.InRange ||
-                      this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.Always) ||
-                      this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.InUse) && this.m_Trigger != null && this.m_Trigger.InUse))
+            if (this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.Raycast) &&   
+                !(this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.InRange) && this.m_Trigger != null && this.m_Trigger.InRange ||
+                this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.Always) ||   
+                this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.InUse) && this.m_Trigger != null && this.m_Trigger.InUse))
             {
-                DoDisplayName(state);
+                DoDisplayName(true);
             }
         }
 
-        public void OnMouseRaycast(bool state) {
-            if (
-                         this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.MouseRaycast) &&
-                         !(this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.InRange) && this.m_Trigger != null && this.m_Trigger.InRange ||
-                         this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.Always) ||
-                         this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.InUse) && this.m_Trigger != null && this.m_Trigger.InUse))
+        public void OnPointerExitTrigger()
+        {
+            if (this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.Raycast) &&
+                !(this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.InRange) && this.m_Trigger != null && this.m_Trigger.InRange || 
+                this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.Always) ||   
+                this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.InUse) && this.m_Trigger != null && this.m_Trigger.InUse))
             {
-                DoDisplayName(state);
+                DoDisplayName(false);
             }
         }
 
@@ -102,31 +102,6 @@ namespace DevionGames.InventorySystem
             }
         }
 
-        public void OnPointerEnter(PointerEventData eventData)
-        {
-            if (!UnityTools.IsPointerOverUI())
-            {
-                if (this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.OnMouseOver))
-                {        
-                    DoDisplayName(true);
-                }
-            }
-        }
-
-        public void OnPointerExit(PointerEventData eventData)
-        {
-            if (!UnityTools.IsPointerOverUI())
-            {
-                if (
-                    this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.OnMouseOver) &&
-                    !(this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.InRange) && this.m_Trigger != null && this.m_Trigger.InRange ||
-                    this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.Always) ||
-                    this.m_DisplayType.HasFlag<DisplayNameType>(DisplayNameType.InUse) && this.m_Trigger != null && this.m_Trigger.InUse))
-                {
-                    DoDisplayName(false);
-                }
-            }
-        }
 
         [System.Flags]
         public enum DisplayNameType
@@ -134,9 +109,7 @@ namespace DevionGames.InventorySystem
             Always = 1,
             InRange = 2,
             InUse = 4,
-            OnMouseOver = 8,
-            CameraRaycast = 16,
-            MouseRaycast = 32
+            Raycast = 8,
         }
     }
 }

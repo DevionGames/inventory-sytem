@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cda3b9d89a55f143bf4546d43b708d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DisplayType: 34
+  m_DisplayType: 8
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Offset: {x: 0, y: 0.4, z: 0}
 --- !u!114 &7650208012899672282
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delegates: []
   useDistance: 2
-  triggerType: 3
+  triggerType: 43
   key: 102
   actions:
   - id: 0
@@ -167,11 +167,13 @@ MonoBehaviour:
         requiredItems:
         - item: {fileID: -447126039411374142, guid: 1ae57b994efcab048a1bb130d4e11d83,
             type: 2}
+          category: {fileID: 0}
           boolValue: 0
           stringValue: Equipment
           intValue: 0
         - item: {fileID: -3323905948889970588, guid: 1ae57b994efcab048a1bb130d4e11d83,
             type: 2}
+          category: {fileID: 0}
           boolValue: 0
           stringValue: Skills
           intValue: 0

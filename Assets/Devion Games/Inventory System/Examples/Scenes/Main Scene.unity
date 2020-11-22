@@ -17083,7 +17083,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 601443361}
   m_HandleRect: {fileID: 601443360}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -72846,7 +72846,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 732875891}
   m_HandleRect: {fileID: 732875890}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -98539,7 +98539,6 @@ GameObject:
   - component: {fileID: 4883860387399675787}
   - component: {fileID: 4883860387399675790}
   - component: {fileID: 4883860387399675895}
-  - component: {fileID: 5748508296798700954}
   m_Layer: 8
   m_Name: Third Person Camera (Controller 1)
   m_TagString: MainCamera
@@ -98655,21 +98654,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50330e38a8605404a8c5b29a00c5e3e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5748508296798700954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4883860387399675892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abbe7ce45b455e74fa33e1b0943b3cb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 3379
 --- !u!1001 &5950059694114694606
 PrefabInstance:
   m_ObjectHideFlags: 0
