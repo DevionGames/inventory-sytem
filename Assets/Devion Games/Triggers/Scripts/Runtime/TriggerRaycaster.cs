@@ -16,7 +16,6 @@ namespace DevionGames
 
         private Transform m_Transform;
         private GameObject m_LastCameraHit;
-        private GameObject m_LastMouseHit;
 
         private static bool m_PointerOverTrigger = false;
 
@@ -63,6 +62,7 @@ namespace DevionGames
                     m_LastCameraHit = hit.collider.gameObject;
                     EventHandler.Execute<int>(m_LastCameraHit, "OnPoinerClickTrigger", button);
                 }
+                
                 TriggerRaycaster.m_PointerOverTrigger = true;
             }
             else
@@ -71,8 +71,8 @@ namespace DevionGames
                 {
                     EventHandler.Execute(m_LastCameraHit, "OnPointerExitTrigger");
                     m_LastCameraHit = null;
-                    TriggerRaycaster.m_PointerOverTrigger = false;
                 }
+                TriggerRaycaster.m_PointerOverTrigger = false;
             }
 
 

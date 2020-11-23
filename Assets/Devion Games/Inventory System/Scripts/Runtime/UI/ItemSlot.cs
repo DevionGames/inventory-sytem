@@ -81,6 +81,8 @@ namespace DevionGames.InventorySystem
         }
         protected Coroutine m_DelayTooltipCoroutine;
         protected ScrollRect m_ParentScrollRect;
+        protected bool m_IsMouseKey;
+
 
         protected override void Start()
         {
@@ -89,6 +91,7 @@ namespace DevionGames.InventorySystem
             if (this.m_Key != null){
                 this.m_Key.text = UnityTools.KeyToCaption(this.m_UseKey);
             }
+            this.m_IsMouseKey = m_UseKey == KeyCode.Mouse0 || m_UseKey == KeyCode.Mouse1 || m_UseKey == KeyCode.Mouse2;
         }
 
         /// <summary>
@@ -96,9 +99,10 @@ namespace DevionGames.InventorySystem
 		/// </summary>
 		protected virtual void Update()
         {
-            if (Input.GetKeyDown(m_UseKey) && !UnityTools.IsPointerOverUI() && !TriggerRaycaster.IsPointerOverTrigger())
+            if (Input.GetKeyDown(m_UseKey) && !UnityTools.IsPointerOverUI())
             {
-                Use();
+                if(!(this.m_IsMouseKey && TriggerRaycaster.IsPointerOverTrigger()))
+                    Use();
             }
             if (Container != null && Container.IsVisible)
             {

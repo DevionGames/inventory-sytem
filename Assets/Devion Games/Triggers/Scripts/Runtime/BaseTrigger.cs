@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 namespace DevionGames
 {
     [UnityEngine.Scripting.APIUpdating.MovedFromAttribute(true, null, "Assembly-CSharp")]
-    public abstract class BaseTrigger : CallbackHandler, IPointerEnterHandler, IPointerExitHandler
+    public abstract class BaseTrigger : CallbackHandler
     {
         //Player GameObject, overrride this and set 
         public abstract PlayerInfo PlayerInfo { get; }
@@ -18,8 +18,6 @@ namespace DevionGames
             get
             {
                 return new[] {
-                    "OnPointerEnter",
-                    "OnPointerExit",
                     "OnTriggerUsed",
                     "OnTriggerUnUsed",
                     "OnCameInRange",
@@ -108,10 +106,7 @@ namespace DevionGames
                 triggerType = TriggerInputType.LeftClick;
             }
 
-            if (triggerType.HasFlag<TriggerInputType>(TriggerInputType.Raycast))
-            {
-                EventHandler.Register<int>(gameObject, "OnPoinerClickTrigger", OnPointerTriggerClick);
-            }
+            EventHandler.Register<int>(gameObject, "OnPoinerClickTrigger", OnPointerTriggerClick);
 
             if (gameObject == PlayerInfo.gameObject || this.useDistance == -1) {
                 InRange = true;
@@ -174,23 +169,6 @@ namespace DevionGames
                    triggerType.HasFlag<TriggerInputType>(TriggerInputType.MiddleClick) && button == 2)
             {
                 Use();
-            }
-        }
-
-
-        public virtual void OnPointerEnter(PointerEventData eventData)
-        {
-            if (!UnityTools.IsPointerOverUI())
-            {
-                ExecuteEvent<ITriggerPointerEnter>(Execute, eventData);
-            }
-        }
-
-        public virtual void OnPointerExit(PointerEventData eventData)
-        {
-            if (!UnityTools.IsPointerOverUI())
-            {
-                ExecuteEvent<ITriggerPointerExit>(Execute, eventData);
             }
         }
 
@@ -385,16 +363,6 @@ namespace DevionGames
             handler.OnWentOutOfRange(player);
         }
 
-        protected static void Execute(ITriggerPointerEnter handler, PointerEventData eventData)
-        {
-            handler.OnPointerEnter(eventData);
-        }
-
-        protected static void Execute(ITriggerPointerExit handler, PointerEventData eventData)
-        {
-            handler.OnPointerExit(eventData);
-        }
-
         //Execute event
         protected void ExecuteEvent<T>(EventFunction<T> func, bool includeDisabled = false) where T : ITriggerEventHandler
         {
@@ -456,8 +424,6 @@ namespace DevionGames
         protected virtual void RegisterCallbacks()
         {
             this.m_CallbackHandlers = new Dictionary<Type, string>();
-            this.m_CallbackHandlers.Add(typeof(ITriggerPointerEnter), "OnPointerEnter");
-            this.m_CallbackHandlers.Add(typeof(ITriggerPointerExit), "OnPointerExit");
             this.m_CallbackHandlers.Add(typeof(ITriggerUsedHandler), "OnTriggerUsed");
             this.m_CallbackHandlers.Add(typeof(ITriggerUnUsedHandler), "OnTriggerUnUsed");
             this.m_CallbackHandlers.Add(typeof(ITriggerCameInRange), "OnCameInRange");
@@ -473,7 +439,6 @@ namespace DevionGames
             MiddleClick = 4,
             Key = 8,
             OnTriggerEnter = 16,
-            Raycast = 32
         }
     }
 }

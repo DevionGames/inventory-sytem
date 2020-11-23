@@ -21393,7 +21393,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 1
   m_UseContextMenu: 0
-  m_ShowTooltips: 1
+  m_ShowTooltips: 0
   m_MoveUsedItem: 1
   moveItemConditions:
   - window: Equipment
@@ -41823,7 +41823,7 @@ MonoBehaviour:
   "m_\xCDcon": {fileID: 859739745}
   m_Stack: {fileID: 1948314586}
   restrictions: []
-  m_UseKey: 285
+  m_UseKey: 323
   m_Key: {fileID: 413002764}
   m_CooldownOverlay: {fileID: 1365360527}
   m_Cooldown: {fileID: 1788398376}
