@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 namespace DevionGames.UIWidgets
 {
@@ -95,6 +96,7 @@ namespace DevionGames.UIWidgets
         [SerializeField]
 		protected bool m_DeactivateOnClose = true;
 
+
 		/// <summary>
 		/// Gets a value indicating whether this widget is visible.
 		/// </summary>
@@ -122,13 +124,16 @@ namespace DevionGames.UIWidgets
 
 		private TweenRunner<FloatTween> m_AlphaTweenRunner;
 		private TweenRunner<Vector3Tween> m_ScaleTweenRunner;
-       
-        private void Awake ()
+
+		protected Scrollbar[] m_Scrollbars;
+
+		private void Awake ()
 		{
 			//Register the KeyCode to show or close the widget.
 			WidgetInputHandler.RegisterInput(this.m_KeyCode, this);
 			m_RectTransform = GetComponent<RectTransform> ();
 			m_CanvasGroup = GetComponent<CanvasGroup> ();
+			this.m_Scrollbars = GetComponentsInChildren<Scrollbar>();
 
 			if (!IsVisible) {
 				//Set local scale to zero, when widget is not visible. Used to correctly animate the widget.
@@ -142,6 +147,7 @@ namespace DevionGames.UIWidgets
 				this.m_ScaleTweenRunner = new TweenRunner<Vector3Tween> ();
 			this.m_ScaleTweenRunner.Init (this);
             m_IsShowing = IsVisible;
+
 			OnAwake ();
 		}
 
@@ -186,6 +192,11 @@ namespace DevionGames.UIWidgets
 			WidgetUtility.PlaySound (this.m_ShowSound, 1.0f);
 			m_CanvasGroup.interactable = true;
 			m_CanvasGroup.blocksRaycasts = true;
+			Canvas.ForceUpdateCanvases();
+			for (int i = 0; i < this.m_Scrollbars.Length; i++)
+			{
+				this.m_Scrollbars[i].value = 1f;
+			}
 			Execute("OnShow", new CallbackEventData());
 		}
 

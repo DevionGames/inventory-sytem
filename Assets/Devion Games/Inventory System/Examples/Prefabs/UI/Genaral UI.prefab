@@ -816,6 +816,7 @@ MonoBehaviour:
   m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 0
+  m_UnlockMouseOnShow: 0
   m_UpdatePosition: 1
   m_PositionOffset: {x: 130, y: 0}
   m_Title: {fileID: 4048924478165523278}
@@ -1420,6 +1421,7 @@ MonoBehaviour:
   m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
+  m_UnlockMouseOnShow: 0
   progressbar: {fileID: 1230253682}
   progressLabel: {fileID: 0}
   format: F0
@@ -1893,6 +1895,7 @@ MonoBehaviour:
   m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
+  m_UnlockMouseOnShow: 0
   useButton: 0
   m_DynamicContainer: 0
   m_SlotParent: {fileID: 0}
@@ -1966,7 +1969,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 192.5, y: 0}
-  m_SizeDelta: {x: 235, y: 0}
+  m_SizeDelta: {x: 235.00002, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2490664490752958152
 CanvasRenderer:
@@ -5575,6 +5578,7 @@ MonoBehaviour:
   m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
+  m_UnlockMouseOnShow: 0
   autoClose: 1
   title: {fileID: 9064443664015226305}
   text: {fileID: 369923975246259799}
@@ -6015,6 +6019,7 @@ MonoBehaviour:
   m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
+  m_UnlockMouseOnShow: 0
   m_MenuItemPrefab: {fileID: 8081286545037135099}
 --- !u!114 &8081286544023738425
 MonoBehaviour:
@@ -6619,6 +6624,7 @@ MonoBehaviour:
   m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
+  m_UnlockMouseOnShow: 0
   m_DynamicContainer: 1
   m_SlotParent: {fileID: 8081286545528522090}
   m_SlotPrefab: {fileID: 8081286544665902705}
@@ -6778,6 +6784,7 @@ MonoBehaviour:
   m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 0
+  m_UnlockMouseOnShow: 0
   m_UpdatePosition: 1
   m_PositionOffset: {x: 0, y: 0}
   m_Title: {fileID: 1745296145}
@@ -6850,7 +6857,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8081286545738311331}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

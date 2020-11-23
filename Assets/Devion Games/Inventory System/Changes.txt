@@ -31,3 +31,5 @@
 - Above Trigger changes allow now to have a collider with Is Trigger set to true and still receive events. (Bush example, you can now walk through it)
 - Fixed item swap when in cooldown
 - Fixed Unstack when in cooldown
+- Flexible Slot sizes
+- Removed Raycast option in Trigger, it is used by default.

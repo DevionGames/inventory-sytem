@@ -287,11 +287,12 @@ namespace DevionGames.InventorySystem
                 }else{
                     //Set the dragging slot
                     // draggedSlot = this;
-                    dragObject = new DragObject(this);
+                    if(base.m_Ícon == null || eventData.pointerCurrentRaycast.gameObject == base.m_Ícon.gameObject)
+                        dragObject = new DragObject(this);
     
                 }
             }
-            if (this.m_ParentScrollRect != null)
+            if (this.m_ParentScrollRect != null && dragObject == null)
             {
                 this.m_ParentScrollRect.OnBeginDrag(eventData);
             }

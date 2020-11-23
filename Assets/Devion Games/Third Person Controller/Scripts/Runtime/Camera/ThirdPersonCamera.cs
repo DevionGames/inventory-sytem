@@ -51,7 +51,7 @@ namespace DevionGames
 		private Canvas m_CrosshairCanvas;
 		private Image m_CrosshairImage;
         private bool m_RotatedLastFrame;
-        private bool m_ControllerActive=true;
+        private bool m_CharacterControllerActive=true;
 
 		private void Start ()
 		{
@@ -87,19 +87,19 @@ namespace DevionGames
 		}
 
         private void OnSetControllerActive(bool active) {
-            this.m_ControllerActive = active;
+            this.m_CharacterControllerActive = active;
         }
 
 		private void LateUpdate ()
 		{
-             UpdateInput();
-            if(!this.m_ControllerActive)
+            UpdateInput();
+            if(!this.m_CharacterControllerActive)
                 UpdateTransform();
         }
 
 		public void FixedUpdate ()
 		{
-            if(this.m_ControllerActive)
+            if (this.m_CharacterControllerActive)
                UpdateTransform();
 		}
 
@@ -221,7 +221,6 @@ namespace DevionGames
                 this.m_ActivePreset.Zoom = Mathf.Clamp(this.m_ActivePreset.Zoom, this.m_ActivePreset.ZoomLimit.x - this.m_ActivePreset.Distance, this.m_ActivePreset.ZoomLimit.y - this.m_ActivePreset.Distance);
             }
         }
-
 
         private float ClampAngle (float angle, float min, float max)
 		{
