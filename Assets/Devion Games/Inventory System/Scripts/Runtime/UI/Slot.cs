@@ -115,6 +115,8 @@ namespace DevionGames.InventorySystem
                 }
             };
 
+            if (this.m_Stack != null)
+                this.m_Stack.raycastTarget = false;
         }
 
         /// <summary>

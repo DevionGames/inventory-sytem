@@ -87,6 +87,9 @@ namespace DevionGames.InventorySystem
         protected override void Start()
         {
             base.Start();
+            if (this.m_CooldownOverlay != null)
+                this.m_CooldownOverlay.raycastTarget = false;
+
             this.m_ParentScrollRect = GetComponentInParent<ScrollRect>();
             if (this.m_Key != null){
                 this.m_Key.text = UnityTools.KeyToCaption(this.m_UseKey);
@@ -287,7 +290,7 @@ namespace DevionGames.InventorySystem
                 }else{
                     //Set the dragging slot
                     // draggedSlot = this;
-
+                    Debug.Log(eventData.pointerCurrentRaycast.gameObject);
                     if(base.m_Ícon == null || !base.m_Ícon.raycastTarget || eventData.pointerCurrentRaycast.gameObject == base.m_Ícon.gameObject)
                         dragObject = new DragObject(this);
     
