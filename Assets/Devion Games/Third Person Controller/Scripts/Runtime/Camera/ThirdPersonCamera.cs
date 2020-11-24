@@ -11,7 +11,7 @@ namespace DevionGames
 		private bool m_DontDestroyOnLoad = true;
 		[SerializeField]
 		private Transform m_Target = null;
-        private Transform Target {
+        public Transform Target {
             get {
                 GameObject target = GameObject.FindGameObjectWithTag("Player");
                 if (target != null)
@@ -50,6 +50,7 @@ namespace DevionGames
 
 		private Canvas m_CrosshairCanvas;
 		private Image m_CrosshairImage;
+        private bool m_CrosshairActive;
         private bool m_RotatedLastFrame;
         private bool m_CharacterControllerActive=true;
 
@@ -85,6 +86,25 @@ namespace DevionGames
             EventHandler.Register<bool>(Target.gameObject, "OnSetControllerActive", OnSetControllerActive);
             
 		}
+
+        private void OnEnable()
+        {
+            //SendMessage("Focus", false, SendMessageOptions.DontRequireReceiver);
+            if (this.m_CrosshairImage != null)
+            {
+                this.m_CrosshairImage.gameObject.SetActive(this.m_CrosshairActive);
+            }
+                
+        }
+
+        private void OnDisable()
+        {
+           // SendMessage("Focus", true, SendMessageOptions.DontRequireReceiver);
+            if (this.m_CrosshairImage != null) {
+                this.m_CrosshairActive = this.m_CrosshairImage.gameObject.activeSelf;
+                this.m_CrosshairImage.gameObject.SetActive(false);
+            }
+        }
 
         private void OnSetControllerActive(bool active) {
             this.m_CharacterControllerActive = active;

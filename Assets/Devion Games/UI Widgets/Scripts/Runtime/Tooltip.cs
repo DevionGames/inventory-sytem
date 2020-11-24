@@ -61,8 +61,9 @@ namespace DevionGames.UIWidgets{
             }
         }
 
-        protected virtual void Update()
+        protected override void Update()
         {
+            base.Update();
             if (this.m_UpdatePosition && m_CanvasGroup.alpha > 0f && _updatePosition)
             {
                 UpdatePosition();

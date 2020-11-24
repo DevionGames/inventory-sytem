@@ -4621,6 +4621,10 @@ MonoBehaviour:
   m_CloseSound: {fileID: 0}
   m_Focus: 1
   m_DeactivateOnClose: 1
+  m_ShowAndHideCursor: 1
+  m_CloseOnMove: 1
+  m_Deactivate: 306
+  m_FocusPlayer: 1
   useButton: 2
   m_DynamicContainer: 0
   m_SlotParent: {fileID: 2740522860500275141}

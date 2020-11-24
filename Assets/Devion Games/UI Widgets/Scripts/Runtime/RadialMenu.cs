@@ -20,8 +20,9 @@ namespace DevionGames.UIWidgets
 		private List<MenuItem> itemCache = new List<MenuItem> ();
 
 
-		protected virtual void Update ()
+		protected override void Update ()
 		{
+			base.Update();
 			if (m_CanvasGroup.alpha > 0f && (Input.GetMouseButtonUp (0) || Input.GetMouseButtonUp (1) || Input.GetMouseButtonUp (2))) {
 
 				var pointer = new PointerEventData (EventSystem.current);

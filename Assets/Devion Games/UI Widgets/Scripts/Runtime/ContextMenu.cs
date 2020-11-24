@@ -20,8 +20,9 @@ namespace DevionGames.UIWidgets
 			base.Show ();
 		}
 
-		protected virtual void Update ()
+		protected override void Update ()
 		{
+			base.Update();
 			if (m_CanvasGroup.alpha > 0f && (Input.GetMouseButtonDown (0) || Input.GetMouseButtonDown (1) || Input.GetMouseButtonDown (2))) {
 
 				var pointer = new PointerEventData (EventSystem.current);

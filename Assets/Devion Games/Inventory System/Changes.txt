@@ -33,3 +33,4 @@
 - Fixed Unstack when in cooldown
 - Flexible Slot sizes
 - Removed Raycast option in Trigger, it is used by default.
+- Second style UI behavior example
