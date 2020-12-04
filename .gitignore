@@ -59,6 +59,8 @@ sysinfo.txt
 crashlytics-build.properties
 
 
+# Utility AI
+/[Aa]ssets/Devion Games/Utility AI*
 # Quest System
 /[Aa]ssets/Devion Games/Quest System*
 # Login System
