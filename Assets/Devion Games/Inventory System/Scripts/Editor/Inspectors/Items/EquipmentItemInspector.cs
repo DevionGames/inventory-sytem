@@ -14,6 +14,7 @@ namespace DevionGames.InventorySystem
         protected override void OnEnable()
         {
             base.OnEnable();
+            if (target == null) return;
             this.regionList = new ReorderableList(serializedObject, serializedObject.FindProperty("m_Region"), true, true, true, true);
             this.regionList.drawHeaderCallback = (Rect rect) => {
                 EditorGUI.LabelField(rect, "Equipment Region");
@@ -25,6 +26,7 @@ namespace DevionGames.InventorySystem
                 EditorGUI.PropertyField(rect, element, GUIContent.none, true);
             };
         }
+
 
         private void DrawInspector() {
             GUILayout.Space(3f);
