@@ -32,6 +32,19 @@ namespace DevionGames
 					axis = 1
 				});
 			}
+			if (!AxisDefined("No Control"))
+			{
+				AddAxis(new InputAxis()
+				{
+					name = "No Control",
+					positiveButton = "left ctrl",
+					gravity = 1000,
+					dead = 0.1f,
+					sensitivity = 1000f,
+					type = AxisType.KeyOrMouseButton,
+					axis = 1
+				});
+			}
 		}
 
 		private static SerializedProperty GetChildProperty (SerializedProperty parent, string name)
