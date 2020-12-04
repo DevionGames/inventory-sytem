@@ -2,7 +2,7 @@
     "name": "Utilities",
     "id": "com.deviongames.utilities",
     "assetPath":"Assets/Devion Games/Utilities",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "unityVersion": "2019.4.10",
     "downloadPath": "https://deviongames.com/modules/Utilities.unitypackage",
     "author": "Konstantin Janson",
@@ -83,6 +83,13 @@
             "changes": 
             [
                 "AssemblyDefinition"
+            ]
+        }, 
+        {
+            "version": "1.0.9",
+            "changes": 
+            [
+                "GetSerializedFields includes [SerializeReference] attribute"
             ]
         }
     ]

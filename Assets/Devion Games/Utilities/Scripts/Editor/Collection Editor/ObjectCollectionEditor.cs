@@ -50,7 +50,6 @@ namespace DevionGames
         {
             int index = Items.IndexOf(item);
             this.m_SerializedObject.Update();
-           // EditorTools.PropertyElementField(this.m_SerializedProperty, index);
 
             SerializedProperty element = this.m_SerializedProperty.GetArrayElementAtIndex(index);
             object value = element.GetValue();
@@ -76,8 +75,8 @@ namespace DevionGames
             T value = (T)System.Activator.CreateInstance(typeof(T));
             this.m_SerializedObject.Update();
             this.m_SerializedProperty.arraySize++;
+            this.m_SerializedProperty.GetArrayElementAtIndex(this.m_SerializedProperty.arraySize - 1).managedReferenceValue = value;
             this.m_SerializedObject.ApplyModifiedProperties();
-            this.m_SerializedProperty.GetArrayElementAtIndex(this.m_SerializedProperty.arraySize - 1).SetValue(value);
         }
 
         protected override void Remove(T item)

@@ -2,7 +2,7 @@
     "name": "Third Person Controller",
     "id": "com.deviongames.controllers",
     "assetPath":"Assets/Devion Games/Third Person Controller",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "unityVersion": "2019.4.10",
     "downloadPath": "https://deviongames.com/modules/ThirdPersonController.unitypackage",
     "author": "Konstantin Janson",
@@ -69,6 +69,13 @@
             [
                 "Do not check default animator states if target state is empty",
                 "AssemblyDefinition"
+            ]
+        }, 
+        {
+            "version": "1.0.7",
+            "changes": 
+            [
+                "Auto add No Control input button"
             ]
         }
     ]
