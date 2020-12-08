@@ -36,7 +36,9 @@ namespace DevionGames.UIWidgets
         protected override void OnStart()
         {
             base.OnStart();
-            m_IconParent = icon.GetComponentInParent<LayoutElement>().gameObject;
+            if(icon != null)
+                m_IconParent = icon.GetComponentInParent<LayoutElement>().gameObject;
+
         }
 
         public virtual void Show(NotificationOptions settings, UnityAction<int> result, params string[] buttons)
