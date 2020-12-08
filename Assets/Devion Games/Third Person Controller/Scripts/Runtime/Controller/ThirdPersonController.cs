@@ -813,8 +813,8 @@ namespace DevionGames
                 this.m_Animator.SetFloat("Forward Input", 0f);
                 this.m_Animator.SetFloat("Horizontal Input", 0f);
                 this.m_Rigidbody.velocity = Vector3.zero;
-
             }
+			enabled = active;
 		}
 
         public void SetMotionEnabled(object[] data) {

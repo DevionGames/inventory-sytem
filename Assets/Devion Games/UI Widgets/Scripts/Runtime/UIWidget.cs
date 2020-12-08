@@ -18,7 +18,7 @@ namespace DevionGames.UIWidgets
 		/// </summary>
 		[Tooltip("Name of the widget. You can find a reference to a widget with WidgetUtility.Find<T>(name).")]
 		[SerializeField]
-		private new string name;
+		protected new string name;
 
 		/// <summary>
 		/// Gets or sets the name.
@@ -56,7 +56,7 @@ namespace DevionGames.UIWidgets
         [Header("Appearence")]
 		[Tooltip("Key to show or close this widget.")]
         [SerializeField]
-        private KeyCode m_KeyCode = KeyCode.None;
+        protected KeyCode m_KeyCode = KeyCode.None;
 
 		[Tooltip("Easing equation type used to tween this widget.")]
 		[SerializeField]
@@ -67,7 +67,7 @@ namespace DevionGames.UIWidgets
         /// </summary>
 		[Tooltip("The duration to tween this widget.")]
 		[SerializeField]
-		private float m_Duration = 0.7f;
+		protected float m_Duration = 0.7f;
 
         /// <summary>
         /// The AudioClip that will be played when this widget shows.
@@ -88,7 +88,7 @@ namespace DevionGames.UIWidgets
 		/// </summary>
 		[Tooltip("Focus the widget. This will bring the widget to front when it is shown.")]
 		[SerializeField]
-        private bool m_Focus = true;
+        protected bool m_Focus = true;
 
         /// <summary>
         /// If true deactivates the gameobject when closed.
@@ -156,7 +156,7 @@ namespace DevionGames.UIWidgets
 			this.m_Scrollbars = GetComponentsInChildren<Scrollbar>();
 			this.m_CameraTransform = Camera.main.transform;
 			this.m_CameraController = this.m_CameraTransform.GetComponent("ThirdPersonCamera") as MonoBehaviour;
-			
+
 			if (!IsVisible) {
 				//Set local scale to zero, when widget is not visible. Used to correctly animate the widget.
 				m_RectTransform.localScale = Vector3.zero;
@@ -200,7 +200,6 @@ namespace DevionGames.UIWidgets
 				Close();
 			}
 		}
-
 
 		/// <summary>
 		/// Show this widget.

@@ -30,8 +30,8 @@ namespace DevionGames.UIWidgets
         /// </summary>
         public Button button;
 
-        private List<Button> buttonCache = new List<Button>();
-        private GameObject m_IconParent;
+        protected List<Button> buttonCache = new List<Button>();
+        protected GameObject m_IconParent;
 
         protected override void OnStart()
         {

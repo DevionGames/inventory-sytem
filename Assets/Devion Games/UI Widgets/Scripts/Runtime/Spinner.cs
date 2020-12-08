@@ -8,7 +8,7 @@ namespace DevionGames.UIWidgets{
 	public class Spinner : MonoBehaviour {
 		public float changeDelay = 0.1f;
 		[SerializeField]
-		private float m_Current;
+		protected float m_Current;
 		public float current{
 			get{
 				return this.m_Current;
@@ -30,7 +30,7 @@ namespace DevionGames.UIWidgets{
 		public SpinnerEvent onChange=new SpinnerEvent();
 		public SpinnerTextEvent m_OnChange=new SpinnerTextEvent();
 
-		private IEnumerator coroutine;
+		protected IEnumerator coroutine;
 
         public void SetCurrent(string value) {
             if (string.IsNullOrEmpty(value)) {

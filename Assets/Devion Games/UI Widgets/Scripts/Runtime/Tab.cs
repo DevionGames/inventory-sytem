@@ -12,9 +12,9 @@ namespace DevionGames.UIWidgets{
 		public TabEvent onSelect=new TabEvent();
 		public TabEvent onDeselect = new TabEvent ();
 
-		private Button m_Button;
-        private Image m_Image;
-        private Color m_DefaultColor;
+		protected Button m_Button;
+        protected Image m_Image;
+        protected Color m_DefaultColor;
 		// Use this for initialization
 		private void Awake () {
 			m_Button = GetComponent<Button> ();
