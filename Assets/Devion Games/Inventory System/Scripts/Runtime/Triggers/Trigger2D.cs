@@ -27,6 +27,9 @@ namespace DevionGames.InventorySystem
         protected override void CreateTriggerCollider()
         {
             Vector2 position = Vector2.zero;
+            GameObject handlerGameObject = new GameObject("TriggerRangeHandler");
+            handlerGameObject.transform.SetParent(transform, false);
+            handlerGameObject.layer = 2;
 
             Collider2D collider = GetComponent<Collider2D>();
             if (collider != null)
@@ -41,6 +44,13 @@ namespace DevionGames.InventorySystem
             circleCollider.offset = position;
             Vector3 scale = transform.lossyScale;
             circleCollider.radius = useDistance / Mathf.Max(scale.x, scale.y);
+
+            Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
+            if (rigidbody == null)
+            {
+                rigidbody = gameObject.AddComponent<Rigidbody2D>();
+                rigidbody.isKinematic = true;
+            }
         }
 
         protected virtual void OnTriggerEnter2D(Collider2D other)

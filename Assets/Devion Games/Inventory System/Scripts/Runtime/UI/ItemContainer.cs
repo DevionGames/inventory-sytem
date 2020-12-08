@@ -313,6 +313,17 @@ namespace DevionGames.InventorySystem
             this.Collection = GetComponent<ItemCollection>();
         }
 
+        public override void Show()
+        {
+            base.Show();
+            Trigger trigger = GetComponent<Trigger>();
+            if (trigger != null) {
+                Trigger.currentUsedTrigger = trigger;
+                Trigger.currentUsedWindow = this;
+            }
+             
+        }
+
         /// <summary>
         /// Stacks the item from s2 to s1. If stacking is not possible, swap the items.
         /// </summary>

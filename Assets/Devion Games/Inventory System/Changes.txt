@@ -1,0 +1,1 @@
+- Crafting Window works now using Appearence Key Code

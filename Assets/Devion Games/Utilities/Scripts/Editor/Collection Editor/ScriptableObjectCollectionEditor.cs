@@ -25,10 +25,14 @@ namespace DevionGames
 
 		protected Editor editor;
 
-		public ScriptableObjectCollectionEditor (UnityEngine.Object target, List<T> items)
+		protected bool m_UseInspectorDefaultMargins = false;
+        protected override bool UseInspectorDefaultMargins  => this.m_UseInspectorDefaultMargins; 
+
+		public ScriptableObjectCollectionEditor (UnityEngine.Object target, List<T> items, bool useInspectorDefaultMargins=true)
 		{
 			this.target = target;
 			this.items = items;
+			this.m_UseInspectorDefaultMargins = useInspectorDefaultMargins;
         }
 
 		protected override bool MatchesSearch(T item, string search)

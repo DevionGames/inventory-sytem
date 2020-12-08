@@ -42,6 +42,8 @@ namespace DevionGames{
 
 		protected virtual bool CanDuplicate => true;
 
+		protected virtual bool UseInspectorDefaultMargins => true;
+
 		public virtual string ToolbarName => GetType().IsGenericType ? 
 			ObjectNames.NicifyVariableName(GetType().GetGenericArguments()[0].Name) : 
 			ObjectNames.NicifyVariableName(GetType().Name.Replace("Editor", ""));
@@ -260,7 +262,7 @@ namespace DevionGames{
 		protected virtual void DrawContent(Rect position) {
 			
 			GUILayout.BeginArea(position, "", Styles.centerPane);
-			m_ScrollPosition = GUILayout.BeginScrollView(m_ScrollPosition, EditorStyles.inspectorDefaultMargins);
+			m_ScrollPosition = GUILayout.BeginScrollView(m_ScrollPosition, UseInspectorDefaultMargins?EditorStyles.inspectorDefaultMargins: GUIStyle.none);
 			if (selectedItem != null)
 			{
 				DrawItem(selectedItem);

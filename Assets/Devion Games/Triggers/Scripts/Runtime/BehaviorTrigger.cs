@@ -76,7 +76,6 @@ namespace DevionGames
             //Set the trigger in use
             this.InUse = true;
             this.m_ActionBehavior.Start();
-            
             return true;
         }
 
