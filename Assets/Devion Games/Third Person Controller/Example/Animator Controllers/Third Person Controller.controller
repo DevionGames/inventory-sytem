@@ -522,7 +522,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   condition: 0
   sound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
-  volume: 1
+  audioMixerGroup: {fileID: 8643709756097329450, guid: 08813bea6fa2f304d8179aec903c1bd9,
+    type: 2}
+  volume: 0.7
   normalizedPlayTime: 0
 --- !u!1102 &-477009309764625636
 AnimatorState:
@@ -594,61 +596,61 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Horizontal Input
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Yaw Input
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Int Value
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Float Value
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Bool Value
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Force
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Leg
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Item ID
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Moving
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -712,6 +714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   condition: 1
   sound: {fileID: 8300000, guid: 918ed223f99554540b79acc4fbb7219f, type: 3}
+  audioMixerGroup: {fileID: 0}
   volume: 0.1
   normalizedPlayTime: 0.4
 --- !u!114 &114086251830286782
@@ -743,6 +746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   condition: 1
   sound: {fileID: 8300000, guid: 1236f44b0917fa54ea07eae551b6dacb, type: 3}
+  audioMixerGroup: {fileID: 0}
   volume: 0.1
   normalizedPlayTime: 0.4
 --- !u!114 &114529103664783678
@@ -759,6 +763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   condition: 1
   sound: {fileID: 8300000, guid: 1236f44b0917fa54ea07eae551b6dacb, type: 3}
+  audioMixerGroup: {fileID: 0}
   volume: 0.1
   normalizedPlayTime: 0.4
 --- !u!114 &114788813667315758
@@ -3689,7 +3694,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   condition: 0
   sound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
-  volume: 1
+  audioMixerGroup: {fileID: 8643709756097329450, guid: 08813bea6fa2f304d8179aec903c1bd9,
+    type: 2}
+  volume: 0.7
   normalizedPlayTime: 0
 --- !u!1102 &2699849617799839464
 AnimatorState:
@@ -3877,6 +3884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   condition: 0
   sound: {fileID: 8300000, guid: 84403b72b65b31d43841c7ce8ded074b, type: 3}
+  audioMixerGroup: {fileID: 0}
   volume: 1
   normalizedPlayTime: 0
 --- !u!1109 &8942005515883008791

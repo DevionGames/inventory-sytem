@@ -11,10 +11,6 @@ namespace DevionGames
         [HideInInspector]
         [SerializeField]
         private string m_Type;
-
-        protected PlayerInfo playerInfo;
-        protected GameObject gameObject;
-
         [HideInInspector]
         [SerializeField]
         private bool m_Enabled = true;
@@ -25,16 +21,23 @@ namespace DevionGames
 
         public bool isActiveAndEnabled { get { return enabled && gameObject.activeSelf; } }
 
+        protected PlayerInfo playerInfo;
+        protected GameObject gameObject;
+        protected Blackboard blackboard;
+
         public Action() {
             this.m_Type = GetType().FullName;
         }
 
-        public void Initialize(GameObject gameObject, PlayerInfo playerInfo) {
+        public void Initialize(GameObject gameObject, PlayerInfo playerInfo, Blackboard blackboard) {
             this.gameObject = gameObject;
             this.playerInfo = playerInfo;
+            this.blackboard = blackboard; 
         }
 
         public abstract ActionStatus OnUpdate();
+
+        public virtual void Update() { }
 
         public virtual void OnStart(){}
 

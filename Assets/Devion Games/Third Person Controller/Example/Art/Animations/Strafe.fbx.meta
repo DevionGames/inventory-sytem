@@ -551,41 +551,37 @@ ModelImporter:
       curves: []
       events:
       - time: 0.17283939
-        functionName: PlayFootstepSound
+        functionName: Footsteps
         data: 
-        objectReferenceParameter: {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9,
-          type: 3}
-        floatParameter: 0.3
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.45679015
-        functionName: PlayFootstepSound
+        functionName: Footsteps
         data: 
-        objectReferenceParameter: {fileID: 8300000, guid: 5a9383dda6cabc047b7a297602e93eb4,
-          type: 3}
-        floatParameter: 0.3
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.69547313
-        functionName: PlayFootstepSound
+        functionName: Footsteps
         data: 
-        objectReferenceParameter: {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d,
-          type: 3}
-        floatParameter: 0.3
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.92592597
-        functionName: PlayFootstepSound
+        functionName: Footsteps
         data: 
-        objectReferenceParameter: {fileID: 8300000, guid: e9714160ce34f2b4ab63ff8c27bd68e1,
-          type: 3}
-        floatParameter: 0.3
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
         intParameter: 0
         messageOptions: 0
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 56
     - serializedVersion: 16
       name: Strafe Left
       takeName: _59_a_U1_M_P_RapidStrafe_90HipsRightFaceFwd__Fb_p90_No_0_PJ_2
@@ -612,35 +608,31 @@ ModelImporter:
       curves: []
       events:
       - time: 0.1934155
-        functionName: PlayFootstepSound
+        functionName: Footsteps
         data: 
-        objectReferenceParameter: {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9,
-          type: 3}
-        floatParameter: 0.3
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.43621403
-        functionName: PlayFootstepSound
+        functionName: Footsteps
         data: 
-        objectReferenceParameter: {fileID: 8300000, guid: 5a9383dda6cabc047b7a297602e93eb4,
-          type: 3}
-        floatParameter: 0.3
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.6913579
-        functionName: PlayFootstepSound
+        functionName: Footsteps
         data: 
-        objectReferenceParameter: {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d,
-          type: 3}
-        floatParameter: 0.3
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.95473254
-        functionName: PlayFootstepSound
+        functionName: Footsteps
         data: 
-        objectReferenceParameter: {fileID: 8300000, guid: e9714160ce34f2b4ab63ff8c27bd68e1,
-          type: 3}
-        floatParameter: 0.3
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
         intParameter: 0
         messageOptions: 0
       transformMask:

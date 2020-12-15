@@ -122,6 +122,7 @@ namespace DevionGames.InventorySystem
 					return a.Category.Name.CompareTo(b.Category.Name); 
 				});
 				Select(selected);
+				
 			});
 		}
 

@@ -35,7 +35,7 @@ namespace DevionGames
             List<ITriggerEventHandler> list = new List<ITriggerEventHandler>(this.m_TriggerEvents);
             list.AddRange(actions.Where(x => x is ITriggerEventHandler).Cast<ITriggerEventHandler>());
             this.m_TriggerEvents = list.ToArray();
-            this.m_ActionBehavior = new Sequence(gameObject, PlayerInfo, actions.ToArray());
+            this.m_ActionBehavior = new Sequence(gameObject, PlayerInfo, GetComponent<Blackboard>(), actions.ToArray());
             
         }
 
@@ -51,6 +51,7 @@ namespace DevionGames
             }
             //Update task behavior, set in use if it is running
             this.InUse = this.m_ActionBehavior.Tick();
+
         }
 
         protected override void OnTriggerUsed()

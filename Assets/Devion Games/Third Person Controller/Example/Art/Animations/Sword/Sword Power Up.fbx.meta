@@ -58,7 +58,15 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.08055841
+        functionName: PlayAudio
+        data: SFX
+        objectReferenceParameter: {fileID: 8300000, guid: 3f87cbaa2b2487d4990e477ff9a2c4d2,
+          type: 3}
+        floatParameter: 1
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

@@ -147,6 +147,7 @@ namespace DevionGames.InventorySystem
                     EditorUtility.SetDirty(this.m_Target);
             }
             GUILayout.FlexibleSpace();
+
             DoAddButton();
             GUILayout.Space(10f);
 
@@ -170,13 +171,14 @@ namespace DevionGames.InventorySystem
         {
             GUIStyle buttonStyle = new GUIStyle("AC Button");
             GUIContent buttonContent = new GUIContent("Add " + this.m_ElementType.Name);
-            Rect buttonRect = GUILayoutUtility.GetRect(buttonContent, buttonStyle, GUILayout.ExpandWidth(true));
-            buttonRect.x = buttonRect.width * 0.5f - buttonStyle.fixedWidth * 0.5f;
-            buttonRect.width = buttonStyle.fixedWidth;
-            if (GUI.Button(buttonRect, buttonContent, buttonStyle))
-            {
-                AddObjectWindow.ShowWindow(buttonRect, this.m_ElementType, Add, CreateScript);
-            }
+             Rect buttonRect = GUILayoutUtility.GetRect(buttonContent, buttonStyle, GUILayout.ExpandWidth(true));
+             buttonRect.x = buttonRect.width * 0.5f - buttonStyle.fixedWidth * 0.5f;
+             buttonRect.width = buttonStyle.fixedWidth;
+
+             if (GUI.Button(buttonRect, buttonContent, buttonStyle))
+             {
+                 AddObjectWindow.ShowWindow(buttonRect, this.m_ElementType, Add, CreateScript);
+             }
         }
 
         private void OnPlaymodeStateChange(PlayModeStateChange stateChange)

@@ -551,25 +551,23 @@ ModelImporter:
       curves: []
       events:
       - time: 0.44032878
-        functionName: PlayFootstepSound
+        functionName: Footsteps
         data: 
-        objectReferenceParameter: {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9,
-          type: 3}
-        floatParameter: 0.4
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.94238746
-        functionName: PlayFootstepSound
+        functionName: Footsteps
         data: 
-        objectReferenceParameter: {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d,
-          type: 3}
-        floatParameter: 0.4
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
         intParameter: 0
         messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 165
     - serializedVersion: 16
       name: Run Backward Turn Left
       takeName: _25_a_U1_M_P_RunBackward_NtrlFaceFwd__Fb_p0_No_0_PJ_4
@@ -596,19 +594,17 @@ ModelImporter:
       curves: []
       events:
       - time: 0.45678976
-        functionName: PlayFootstepSound
+        functionName: Footsteps
         data: 
-        objectReferenceParameter: {fileID: 8300000, guid: 5a9383dda6cabc047b7a297602e93eb4,
-          type: 3}
-        floatParameter: 0.4
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.9917704
-        functionName: PlayFootstepSound
+        functionName: Footsteps
         data: 
-        objectReferenceParameter: {fileID: 8300000, guid: e9714160ce34f2b4ab63ff8c27bd68e1,
-          type: 3}
-        floatParameter: 0.4
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
         intParameter: 0
         messageOptions: 0
       transformMask:
@@ -772,7 +768,7 @@ ModelImporter:
         weight: 1
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 165
     - serializedVersion: 16
       name: Run Backward Turn Right
       takeName: _25_a_U1_M_P_RunBackward_NtrlFaceFwd__Fb_p0_No_0_PJ_4
@@ -799,19 +795,17 @@ ModelImporter:
       curves: []
       events:
       - time: 0.44856012
-        functionName: PlayFootstepSound
+        functionName: Footsteps
         data: 
-        objectReferenceParameter: {fileID: 8300000, guid: 5a9383dda6cabc047b7a297602e93eb4,
-          type: 3}
-        floatParameter: 0.4
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.9691715
-        functionName: PlayFootstepSound
+        functionName: Footsteps
         data: 
-        objectReferenceParameter: {fileID: 8300000, guid: e9714160ce34f2b4ab63ff8c27bd68e1,
-          type: 3}
-        floatParameter: 0.4
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
         intParameter: 0
         messageOptions: 0
       transformMask:

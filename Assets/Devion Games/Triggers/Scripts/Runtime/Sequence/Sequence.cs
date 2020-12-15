@@ -11,11 +11,11 @@ namespace DevionGames
         private readonly IAction[] m_AllActions;
         private IAction[] m_Actions;
 
-        public Sequence(GameObject gameObject, PlayerInfo playerInfo, IAction[] actions) {
+        public Sequence(GameObject gameObject, PlayerInfo playerInfo, Blackboard blackboard, IAction[] actions) {
             this.m_AllActions = actions;
             for (int i = 0; i < this.m_AllActions.Length; i++)
             {
-                this.m_AllActions[i].Initialize(gameObject, playerInfo);
+                this.m_AllActions[i].Initialize(gameObject, playerInfo, blackboard);
             }
             this.m_Status = ActionStatus.Inactive;
             this.m_ActionStatus = ActionStatus.Inactive;
@@ -39,6 +39,14 @@ namespace DevionGames
                 this.m_Actions[i].OnSequenceEnd();
             }
             this.m_Status = ActionStatus.Inactive;
+        }
+
+        public void Update()
+        {
+            for (int i = 0; i < this.m_Actions.Length; i++)
+            {
+                this.m_Actions[i].Update();
+            }
         }
 
         //Ticks the custom actions using sequence implementation, returns true if the behavior is running.

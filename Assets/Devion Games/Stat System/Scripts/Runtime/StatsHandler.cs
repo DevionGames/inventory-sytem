@@ -3,6 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using DevionGames.Graphs;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 namespace DevionGames.StatSystem
 {
@@ -21,6 +22,8 @@ namespace DevionGames.StatSystem
 
         [SerializeField]
         private GameObject m_DamageText=null;
+
+        private AudioSource m_AudioSource;
 
         private void Awake()
         {
@@ -66,13 +69,16 @@ namespace DevionGames.StatSystem
             {
                 if (colliders[i].transform != transform)
                 {
-                    Vector3 direction = colliders[i].transform.position - transform.position;
+
+                    Vector3 direction = colliders[i].transform.root.position - transform.position;
                     float angle = Vector3.Angle(direction, transform.forward);
                     if (Mathf.Abs(angle) < damageData.maxAngle)
                     {
-                        StatsHandler receiver = colliders[i].GetComponent<StatsHandler>();
-                        if(receiver != null)
+                        StatsHandler receiver = colliders[i].GetComponentInParent<StatsHandler>();
+
+                        if(receiver != null && receiver.enabled)
                         {
+
                             Stat criticalStrikeStat = stats.FirstOrDefault(x => x.Name == damageData.criticalStrikeStat);
 
                             bool criticaleStrike = criticalStrikeStat!= null && criticalStrikeStat.Value > UnityEngine.Random.Range(0f, 100f);
@@ -81,6 +87,7 @@ namespace DevionGames.StatSystem
                                 damage *= 2f;
 
                             receiver.ApplyDamageInternal(damageData.receivingStat, damage, 0, criticaleStrike);
+
                             if (damageData.particleEffect != null)
                             {
                                 Vector3 pos = colliders[i].ClosestPoint(transform.position + damageData.offset);
@@ -95,7 +102,8 @@ namespace DevionGames.StatSystem
 
                             CameraEffects.Shake(damageData.duration, damageData.speed, damageData.amount);
                             if(damageData.hitSounds.Length > 0)
-                                UnityTools.PlaySound(damageData.hitSounds[UnityEngine.Random.Range(0,damageData.hitSounds.Length)],damageData.volume);
+                                PlaySound(damageData.hitSounds[UnityEngine.Random.Range(0,damageData.hitSounds.Length)],damageData.audioMixerGroup, damageData.volumeScale);
+
                         }
                        
                     }
@@ -103,6 +111,14 @@ namespace DevionGames.StatSystem
             }
         }
 
+        private void PlaySound(AudioClip clip,AudioMixerGroup audioMixerGroup,  float volumeSclae) {
+            if (this.m_AudioSource == null) {
+                this.m_AudioSource = gameObject.AddComponent<AudioSource>();
+            }
+            this.m_AudioSource.outputAudioMixerGroup = audioMixerGroup;
+            this.m_AudioSource.PlayOneShot(clip, volumeSclae);
+
+        }
 
 
         /// <summary>

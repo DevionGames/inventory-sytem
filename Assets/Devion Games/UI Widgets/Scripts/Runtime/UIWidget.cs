@@ -233,7 +233,7 @@ namespace DevionGames.UIWidgets
 						m_PreviousCameraControllerEnabled = m_CameraController.enabled;
 				}
 				m_CurrentVisibleWidgets.Add(this);
-				if (m_CameraController != null && !Input.GetKey(this.m_Deactivate))
+				if (m_CameraController != null && !Input.GetKey(this.m_Deactivate) && m_CurrentVisibleWidgets.Count == 1)
 				{
 					this.m_CameraController.enabled = false;
 					if(this.m_FocusPlayer)

@@ -494,8 +494,6 @@ MonoBehaviour:
   - id: 4
   - id: 5
   - id: 6
-  - id: 7
-  - id: 8
   references:
     version: 1
     00000000:
@@ -510,29 +508,13 @@ MonoBehaviour:
           stringValue: Equipment
           intValue: 0
     00000001:
-      type: {class: IsInTransition, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.IsInTransition
-        m_Enabled: 0
-        m_Target: 1
-        layer: 3
-        invertResult: 1
-    00000002:
-      type: {class: IsName, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.IsName
-        m_Enabled: 0
-        m_Target: 1
-        layer: 3
-        name: Empty
-    00000003:
       type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
       data:
         m_Type: DevionGames.InventorySystem.ItemActions.Cooldown
         m_Enabled: 1
         item: {fileID: -6382214904321203751}
         m_GlobalCooldown: 1.5
-    00000004:
+    00000002:
       type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.SendMessage
@@ -550,13 +532,13 @@ MonoBehaviour:
           m_ObjectValue: {fileID: 0}
           m_ArgumentType: 1
         m_Options: 1
-    00000005:
+    00000003:
       type: {class: LookForward, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.LookForward
         m_Enabled: 1
         m_Target: 1
-    00000006:
+    00000004:
       type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.CrossFade
@@ -564,13 +546,13 @@ MonoBehaviour:
         m_Target: 1
         m_AnimatorState: Rampage
         m_TransitionDuration: 0.15
-    00000007:
+    00000005:
       type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.Wait
         m_Enabled: 1
         duration: 2
-    00000008:
+    00000006:
       type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.SendMessage
@@ -676,6 +658,7 @@ MonoBehaviour:
         m_Target: 1
         m_ParameterName: Forward Input
         m_Value: 0
+        m_DampTime: 0
     00000002:
       type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
       data:
@@ -835,8 +818,6 @@ MonoBehaviour:
   - id: 1
   - id: 2
   - id: 3
-  - id: 4
-  - id: 5
   references:
     version: 1
     00000000:
@@ -851,35 +832,19 @@ MonoBehaviour:
           stringValue: Equipment
           intValue: 0
     00000001:
-      type: {class: IsInTransition, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.IsInTransition
-        m_Enabled: 0
-        m_Target: 1
-        layer: 3
-        invertResult: 1
-    00000002:
-      type: {class: IsName, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.IsName
-        m_Enabled: 0
-        m_Target: 1
-        layer: 3
-        name: Empty
-    00000003:
       type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
       data:
         m_Type: DevionGames.InventorySystem.ItemActions.Cooldown
         m_Enabled: 1
         item: {fileID: -5242721879078471986}
         m_GlobalCooldown: 1
-    00000004:
+    00000002:
       type: {class: LookForward, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.LookForward
         m_Enabled: 1
         m_Target: 1
-    00000005:
+    00000003:
       type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.CrossFade
@@ -1749,34 +1714,34 @@ MonoBehaviour:
   items:
   - {fileID: -2060425377994505070}
   - {fileID: 8429455951140046941}
-  - {fileID: 6234106693565876968}
-  - {fileID: 1063046599387310152}
-  - {fileID: -5663772737389988193}
   - {fileID: 8763039942855579107}
   - {fileID: -1175442255857385599}
+  - {fileID: 1063046599387310152}
+  - {fileID: -5663772737389988193}
+  - {fileID: 6234106693565876968}
+  - {fileID: 960666660569578442}
   - {fileID: -6266380644497530537}
   - {fileID: 3129509250564287029}
-  - {fileID: 4447567160419299934}
+  - {fileID: -9164302591508860154}
+  - {fileID: 7113904374044846821}
+  - {fileID: -2920532131010319874}
+  - {fileID: -3323905948889970588}
+  - {fileID: 6595735557147903839}
   - {fileID: -4423743630002525559}
-  - {fileID: -6382214904321203751}
-  - {fileID: -5242721879078471986}
-  - {fileID: 4117155973668914919}
-  - {fileID: 678841275653576696}
+  - {fileID: 4447567160419299934}
   - {fileID: 1337782666225268451}
+  - {fileID: -5242721879078471986}
+  - {fileID: 678841275653576696}
+  - {fileID: 4117155973668914919}
+  - {fileID: -6382214904321203751}
   - {fileID: -2839999955813321745}
   - {fileID: 8692695060773013855}
   - {fileID: 2033560685258441697}
-  - {fileID: 529780001783015153}
-  - {fileID: -447126039411374142}
   - {fileID: -4474190543486091594}
   - {fileID: 2409076057030828310}
-  - {fileID: 960666660569578442}
+  - {fileID: -447126039411374142}
+  - {fileID: 529780001783015153}
   - {fileID: -8967533827971111582}
-  - {fileID: -2920532131010319874}
-  - {fileID: -3323905948889970588}
-  - {fileID: -9164302591508860154}
-  - {fileID: 6595735557147903839}
-  - {fileID: 7113904374044846821}
   currencies:
   - {fileID: -2811142919616601772}
   - {fileID: -6442420119529586086}
@@ -1991,8 +1956,6 @@ MonoBehaviour:
   - id: 1
   - id: 2
   - id: 3
-  - id: 4
-  - id: 5
   references:
     version: 1
     00000000:
@@ -2007,35 +1970,19 @@ MonoBehaviour:
           stringValue: Equipment
           intValue: 0
     00000001:
-      type: {class: IsInTransition, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.IsInTransition
-        m_Enabled: 0
-        m_Target: 1
-        layer: 3
-        invertResult: 1
-    00000002:
-      type: {class: IsName, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.IsName
-        m_Enabled: 0
-        m_Target: 1
-        layer: 3
-        name: Empty
-    00000003:
       type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
       data:
         m_Type: DevionGames.InventorySystem.ItemActions.Cooldown
         m_Enabled: 1
         item: {fileID: 678841275653576696}
         m_GlobalCooldown: 1
-    00000004:
+    00000002:
       type: {class: LookForward, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.LookForward
         m_Enabled: 1
         m_Target: 1
-    00000005:
+    00000003:
       type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.CrossFade
@@ -2280,7 +2227,6 @@ MonoBehaviour:
   - id: 4
   - id: 5
   - id: 6
-  - id: 7
   references:
     version: 1
     00000000:
@@ -2308,19 +2254,12 @@ MonoBehaviour:
         m_Value: 60
         m_ModType: 0
     00000003:
-      type: {class: Play, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.Play
-        m_Enabled: 1
-        m_Clip: {fileID: 8300000, guid: 3f87cbaa2b2487d4990e477ff9a2c4d2, type: 3}
-        m_Volume: 5.8
-    00000004:
       type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.Wait
         m_Enabled: 1
         duration: 1
-    00000005:
+    00000004:
       type: {class: Instantiate, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.Instantiate
@@ -2331,13 +2270,13 @@ MonoBehaviour:
         m_BoneName: 
         m_Offset: {x: 0, y: 0, z: 0}
         m_IgnorePlayerCollision: 1
-    00000006:
+    00000005:
       type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.Wait
         m_Enabled: 1
         duration: 17
-    00000007:
+    00000006:
       type: {class: AddModifier, ns: DevionGames.StatSystem, asm: DevionGames.StatSystem}
       data:
         m_Type: DevionGames.StatSystem.AddModifier
@@ -2668,8 +2607,6 @@ MonoBehaviour:
   - id: 1
   - id: 2
   - id: 3
-  - id: 4
-  - id: 5
   references:
     version: 1
     00000000:
@@ -2684,35 +2621,19 @@ MonoBehaviour:
           stringValue: Equipment
           intValue: 0
     00000001:
-      type: {class: IsInTransition, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.IsInTransition
-        m_Enabled: 0
-        m_Target: 1
-        layer: 3
-        invertResult: 1
-    00000002:
-      type: {class: IsName, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.IsName
-        m_Enabled: 0
-        m_Target: 1
-        layer: 3
-        name: Empty
-    00000003:
       type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
       data:
         m_Type: DevionGames.InventorySystem.ItemActions.Cooldown
         m_Enabled: 1
         item: {fileID: 4117155973668914919}
         m_GlobalCooldown: 0.5
-    00000004:
+    00000002:
       type: {class: LookForward, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.LookForward
         m_Enabled: 1
         m_Target: 1
-    00000005:
+    00000003:
       type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.CrossFade

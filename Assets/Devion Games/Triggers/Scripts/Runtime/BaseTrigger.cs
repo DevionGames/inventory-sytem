@@ -126,6 +126,8 @@ namespace DevionGames
             if (Input.GetKeyDown(key) && triggerType.HasFlag<TriggerInputType>(TriggerInputType.Key) && InRange && IsBestTrigger()){
                 Use();
             }
+
+     
         }
 
         protected virtual void OnDestroy()
@@ -222,7 +224,7 @@ namespace DevionGames
                 collider.enabled = true;
                 if (raycast && !UnityEngine.Object.ReferenceEquals(hit.transform, transform))
                 {
-                    return false;
+                  //  return false;
                 }
             }
 

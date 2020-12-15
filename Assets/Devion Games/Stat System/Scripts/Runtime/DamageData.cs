@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Audio;
 
 namespace DevionGames.StatSystem
 {
@@ -14,6 +13,7 @@ namespace DevionGames.StatSystem
         public string receivingStat = "Health";
 
         public float maxDistance = 2f;
+        [Range(0f,360f)]
         public float maxAngle = 60f;
 
         [HeaderLine("Particles")]
@@ -23,7 +23,9 @@ namespace DevionGames.StatSystem
         public float lifeTime = 3f;
 
         [HeaderLine("Sounds")]
-        public float volume = 0.7f;
+        public AudioMixerGroup audioMixerGroup;
+        [Range(0f,1f)]
+        public float volumeScale = 0.7f;
         public AudioClip[] hitSounds;
 
         [HeaderLine("Camera Shake")]

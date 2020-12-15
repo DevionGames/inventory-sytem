@@ -62,7 +62,7 @@ namespace DevionGames.InventorySystem
         /// The item container that holds this slot
         /// </summary>
         public ItemContainer Container {
-            get { return this.m_Container;}
+            get {return this.m_Container;}
             set { this.m_Container = value; }
         }
 
@@ -87,7 +87,7 @@ namespace DevionGames.InventorySystem
         }
 
         protected virtual void Start() {
-
+            
             Container.OnAddItem += (Item item, Slot slot) => {
                 if (slot == this)
                 {

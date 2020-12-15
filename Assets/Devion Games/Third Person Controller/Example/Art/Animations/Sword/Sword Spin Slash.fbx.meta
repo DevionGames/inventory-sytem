@@ -60,11 +60,11 @@ ModelImporter:
       curves: []
       events:
       - time: 0.26509959
-        functionName: PlaySound
-        data: 
+        functionName: PlayAudio
+        data: SFX
         objectReferenceParameter: {fileID: 8300000, guid: a52f993decd63c347ae44221cec238a6,
           type: 3}
-        floatParameter: 0.4
+        floatParameter: 1
         intParameter: 0
         messageOptions: 0
       - time: 0.42391306

@@ -22,7 +22,9 @@ MonoBehaviour:
   offset: {x: 0, y: 1.5, z: 0}
   randomize: {x: 0.2, y: 0.1, z: 0}
   lifeTime: 3
-  volume: 0.7
+  audioMixerGroup: {fileID: 8643709756097329450, guid: 08813bea6fa2f304d8179aec903c1bd9,
+    type: 2}
+  volumeScale: 0.7
   hitSounds:
   - {fileID: 8300000, guid: 0805de7e4fb0f4d03a30ae90e7c64311, type: 3}
   - {fileID: 8300000, guid: 34aca9e3f1ade4802b9062b1380aa523, type: 3}

@@ -11,6 +11,8 @@ namespace DevionGames.StatSystem
 	[System.Serializable]
 	public class Stat: IJsonSerializable, IBehavior
 	{
+        public Action<Stat> onChange;
+
         [SerializeField]
 		private string m_Name = "New Stat";
 		public string Name {
@@ -57,6 +59,7 @@ namespace DevionGames.StatSystem
                 if (this.m_CurrentValue != value)
                 {
                     this.m_CurrentValue = value;
+                    onChange?.Invoke(this);
                 }
             }
         }
@@ -138,7 +141,6 @@ namespace DevionGames.StatSystem
         private bool m_Dirty = true;
 
 
-
         public Stat ()
 		{
             this.m_StatModifiers = new List<StatModifier>();
@@ -162,6 +164,14 @@ namespace DevionGames.StatSystem
             }
             if(this.m_Regenerate)
                 handler.StartCoroutine(Regeneration());
+
+            Blackboard blackboard = handler.GetComponent<Blackboard>();
+            if (blackboard != null) {
+                onChange += (Stat stat)=>{ 
+                    blackboard.SetValue<float>("Current "+ Name, stat.CurrentValue);
+                    blackboard.SetValue<float>("Max " + Name, stat.Value);
+                };
+            }
         }
 
         private IEnumerator Regeneration()
@@ -169,14 +179,16 @@ namespace DevionGames.StatSystem
             while (this.m_Regenerate)
             {
                 yield return new WaitForSeconds(this.m_Rate);
+                if (this.m_Handler.enabled)
+                {
+                    float mValue = CurrentValue;
+                    float maxValue = Value;
 
-                float mValue =  CurrentValue;
-                float maxValue = Value;
-
-                mValue += 1;
-                mValue = Mathf.Clamp(mValue, 0, maxValue);
-                CurrentValue = mValue;
-                this.m_Handler.UpdateStats();
+                    mValue += 1;
+                    mValue = Mathf.Clamp(mValue, 0, maxValue);
+                    CurrentValue = mValue;
+                    this.m_Handler.UpdateStats();
+                }
             }
         }
 

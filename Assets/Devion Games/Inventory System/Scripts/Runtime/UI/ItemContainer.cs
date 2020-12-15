@@ -931,7 +931,8 @@ namespace DevionGames.InventorySystem
                         NotifyRemoveItem(item, item.Stack, this.m_Slots[i]);
                         if (this.m_DynamicContainer)
                         {
-                            DestroyImmediate(this.m_Slots[i].gameObject);
+                            if(!(this.m_Slots[i] is CurrencySlot))
+                                DestroyImmediate(this.m_Slots[i].gameObject);
                         }
                     }
                 }
@@ -976,8 +977,8 @@ namespace DevionGames.InventorySystem
                         //OnRemoveItem(item, item.Stack, this.m_Slots[i]);
                         NotifyRemoveItem(item, item.Stack, this.m_Slots[i]);
                     }
-                   
-                    DestroyImmediate(this.m_Slots[i].gameObject);
+                    if(!(this.m_Slots[i] is CurrencySlot))
+                        DestroyImmediate(this.m_Slots[i].gameObject);
                 }
                 RefreshSlots();
             }
@@ -1211,7 +1212,9 @@ namespace DevionGames.InventorySystem
         {
             if (this.m_DynamicContainer && this.m_SlotParent != null)
             {
-                this.m_Slots = this.m_SlotParent.GetComponentsInChildren<Slot>(true).Where(x=>x.GetComponentsInParent<ItemContainer>(true).FirstOrDefault() == this).ToList();
+                //removed to check only parent children because of currency slot in Loot Window
+               // this.m_Slots = this.m_SlotParent.GetComponentsInChildren<Slot>(true).Where(x=>x.GetComponentsInParent<ItemContainer>(true).FirstOrDefault() == this).ToList();
+                this.m_Slots = GetComponentsInChildren<Slot>(true).Where(x => x.GetComponentsInParent<ItemContainer>(true).FirstOrDefault() == this).ToList();
                 this.m_Slots.Remove(this.m_SlotPrefab.GetComponent<Slot>());
             }
             else

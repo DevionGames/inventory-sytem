@@ -49,7 +49,8 @@ namespace DevionGames.InventorySystem
             {
                 m_RequiredItemList.DoLayoutList();
             }catch  {
-                this.m_ListMap.Remove(property.propertyPath);
+                if(Event.current.type == EventType.Repaint)
+                    this.m_ListMap.Remove(property.propertyPath);
             }
             EditorGUILayout.Space();
 

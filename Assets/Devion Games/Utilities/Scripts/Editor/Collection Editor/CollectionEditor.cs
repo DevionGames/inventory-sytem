@@ -20,7 +20,8 @@ namespace DevionGames{
 		protected Vector2 m_ScrollPosition;
 		protected string m_SearchString=string.Empty;
 		protected Vector2 m_SidebarScrollPosition;
-
+		
+		private bool m_StartDrag;
 		private bool m_Drag;
 		private Rect m_DragRect = Rect.zero;
 
@@ -136,7 +137,7 @@ namespace DevionGames{
 					}
 
 					//Context Click
-					if (h.rect.Contains(Event.current.mousePosition) && Event.current.type == EventType.MouseDown && Event.current.button==1)
+					/*if (h.rect.Contains(Event.current.mousePosition) && Event.current.type == EventType.MouseDown && Event.current.button==1)
 					{
 						GenericMenu contextMenu = new GenericMenu();
 						if(CanRemove)
@@ -160,7 +161,7 @@ namespace DevionGames{
 						AddContextItem(contextMenu);
 						contextMenu.ShowAsContext();
 						Event.current.Use();
-					}
+					}*/
 
 					GUI.Label(h.rect, GUIContent.none, Styles.selectButton);
 					Rect rect = h.rect;
@@ -168,6 +169,7 @@ namespace DevionGames{
 					if (rect.Contains(Event.current.mousePosition) && Event.current.type == EventType.MouseDown && Event.current.button == 0) {
 						GUI.FocusControl("");
 						Select(currentItem);
+						this.m_StartDrag = true;
 						Event.current.Use();
 					}
 					DrawItemLabel(i, currentItem);
@@ -181,10 +183,22 @@ namespace DevionGames{
 
 			switch (Event.current.rawType)
 			{
+				case EventType.MouseDown:
+					if(Event.current.button == 1)
+					for (int j = 0; j < rects.Count; j++)
+					{
+						if (rects[j].Contains(Event.current.mousePosition))
+						{
+								ShowContextMenu(Items[j]);
+								break;
+						}
+					}
+					break;
 				case EventType.MouseUp:
 					if (this.m_Drag)
 					{
 						this.m_Drag = false;
+						this.m_StartDrag = false;
 						for (int j = 0; j < rects.Count; j++)
 						{
 							Rect rect = rects[j];
@@ -207,15 +221,19 @@ namespace DevionGames{
 								break;
 							}
 						}
+						Event.current.Use();
 					}
 					break;
 				case EventType.MouseDrag:
-					for (int j = 0; j < rects.Count; j++)
+					if (this.m_StartDrag)
 					{
-						if (rects[j].Contains(Event.current.mousePosition))
+						for (int j = 0; j < rects.Count; j++)
 						{
-							this.m_Drag = true;
-							break;
+							if (rects[j].Contains(Event.current.mousePosition))
+							{
+								this.m_Drag = true;
+								break;
+							}
 						}
 					}
 					break;
@@ -255,6 +273,34 @@ namespace DevionGames{
 
 			GUILayout.EndScrollView();
 			GUILayout.EndArea();
+		}
+
+		private void ShowContextMenu(T currentItem) {
+			GenericMenu contextMenu = new GenericMenu();
+			if (CanRemove)
+				contextMenu.AddItem(new GUIContent("Delete"), false, delegate { Remove(currentItem); });
+			if (CanDuplicate)
+				contextMenu.AddItem(new GUIContent("Duplicate"), false, delegate { Duplicate(currentItem); });
+			int oldIndex = Items.IndexOf(currentItem);
+			if (CanMove(currentItem, oldIndex - 1))
+			{
+				contextMenu.AddItem(new GUIContent("Move Up"), false, delegate { MoveUp(currentItem); });
+			}
+			else
+			{
+				contextMenu.AddDisabledItem(new GUIContent("Move Up"));
+			}
+			if (CanMove(currentItem, oldIndex + 1))
+			{
+				contextMenu.AddItem(new GUIContent("Move Down"), false, delegate { MoveDown(currentItem); });
+			}
+			else
+			{
+				contextMenu.AddDisabledItem(new GUIContent("Move Down"));
+			}
+
+			AddContextItem(contextMenu);
+			contextMenu.ShowAsContext();
 		}
 
 		protected virtual void AddContextItem(GenericMenu menu) { }

@@ -13,6 +13,8 @@ namespace DevionGames
         private string m_ParameterName = "Forward Input";
         [SerializeField]
         private float m_Value = 1f;
+        [SerializeField]
+        private float m_DampTime = 0f;
 
         private Animator m_Animator;
 
@@ -23,6 +25,9 @@ namespace DevionGames
 
         public override ActionStatus OnUpdate()
         {
+            if (this.m_DampTime > 0f)
+                return ActionStatus.Success;
+
             if (m_Animator == null)
             {
                 Debug.LogWarning("Missing Component of type Animator!");
@@ -31,6 +36,19 @@ namespace DevionGames
             this.m_Animator.SetFloat(this.m_ParameterName, this.m_Value);
 
             return ActionStatus.Success;
+        }
+
+        public override void Update()
+        {
+            if (this.m_DampTime <= 0f)
+                return;
+
+            if (m_Animator == null)
+            {
+                Debug.LogWarning("Missing Component of type Animator!");
+                return;
+            }
+            this.m_Animator.SetFloat(this.m_ParameterName, this.m_Value, this.m_DampTime, Time.deltaTime);
         }
     }
 }
