@@ -1,3 +1,6 @@
 - Crafting Window works now using Appearence Key Code, if Trigger is attached to ItemContainer.
 - InventoryManager.Serialize(ref string uiData, ref string sceneData) 
 - Callbacks are not executed when game is loading
+- Fix loosing focus when edit name of item.
+- ItemContainerPopulator this will add items from ItemGroup to ItemContainer by name.(Allows diffrent start inventories, spells... based on character)
+- AudioEventListener this will play audio from animations. (Function: PlayAudio Float: VolumeScale String: AudioMixerGroup Object: AudioClip)

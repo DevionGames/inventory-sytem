@@ -1722,25 +1722,25 @@ MonoBehaviour:
   - {fileID: 960666660569578442}
   - {fileID: -6266380644497530537}
   - {fileID: 3129509250564287029}
+  - {fileID: -3323905948889970588}
+  - {fileID: -2920532131010319874}
+  - {fileID: 6595735557147903839}
   - {fileID: -9164302591508860154}
   - {fileID: 7113904374044846821}
-  - {fileID: -2920532131010319874}
-  - {fileID: -3323905948889970588}
-  - {fileID: 6595735557147903839}
-  - {fileID: -4423743630002525559}
-  - {fileID: 4447567160419299934}
-  - {fileID: 1337782666225268451}
-  - {fileID: -5242721879078471986}
-  - {fileID: 678841275653576696}
   - {fileID: 4117155973668914919}
+  - {fileID: 678841275653576696}
+  - {fileID: -5242721879078471986}
   - {fileID: -6382214904321203751}
+  - {fileID: 4447567160419299934}
+  - {fileID: -4423743630002525559}
+  - {fileID: 1337782666225268451}
   - {fileID: -2839999955813321745}
   - {fileID: 8692695060773013855}
   - {fileID: 2033560685258441697}
+  - {fileID: 529780001783015153}
   - {fileID: -4474190543486091594}
   - {fileID: 2409076057030828310}
   - {fileID: -447126039411374142}
-  - {fileID: 529780001783015153}
   - {fileID: -8967533827971111582}
   currencies:
   - {fileID: -2811142919616601772}
@@ -1781,6 +1781,7 @@ MonoBehaviour:
   - {fileID: -4213577332647146612}
   - {fileID: -3796731219101042533}
   - {fileID: 5365859910722360372}
+  - {fileID: 8059426944790288259}
   settings:
   - {fileID: -3817802777368614781}
   - {fileID: -8057506047932969836}
@@ -3402,6 +3403,24 @@ MonoBehaviour:
   m_Modifiers:
   - modifiers: []
   - modifiers: []
+  - modifiers: []
+--- !u!114 &8059426944790288259
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28fccac83a2fa2245991bffe45a6cdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_GroupName: Start Inventory
+  m_Items:
+  - {fileID: 8429455951140046941}
+  m_Amounts: 05000000
+  m_Modifiers:
   - modifiers: []
 --- !u!114 &8429455951140046941
 MonoBehaviour:

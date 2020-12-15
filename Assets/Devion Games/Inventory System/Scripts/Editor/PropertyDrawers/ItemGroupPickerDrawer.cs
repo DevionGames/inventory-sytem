@@ -15,6 +15,7 @@ namespace DevionGames.InventorySystem{
 
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
+            EditorGUI.BeginProperty(position, label, property);
             ItemGroup current = (ItemGroup)property.GetValue();//GetCurrent(property);
             CheckForDatabase(current);
 
@@ -31,6 +32,7 @@ namespace DevionGames.InventorySystem{
             }
 
             DoSelection(position, property, label, current);
+            EditorGUI.EndProperty();
         }
 
         protected override void DoSelection(Rect position, SerializedProperty property, GUIContent label, ItemGroup current)
@@ -38,8 +40,8 @@ namespace DevionGames.InventorySystem{
             if (!string.IsNullOrEmpty(label.text))
             {
                 EditorGUI.LabelField(position, label);
-                position.x += EditorGUIUtility.labelWidth;
-                position.width = Screen.width - EditorGUIUtility.labelWidth - 18 * 2;
+                position.x += EditorGUIUtility.labelWidth+2f;
+                position.width = position.width - EditorGUIUtility.labelWidth -2f;
             }
             if (GUI.Button(position, current != null ? current.Name : "Database", EditorStyles.objectField))
             {
