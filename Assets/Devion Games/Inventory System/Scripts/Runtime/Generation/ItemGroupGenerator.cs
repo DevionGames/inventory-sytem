@@ -10,7 +10,7 @@ namespace DevionGames.InventorySystem
     {
         [ItemGroupPicker]
         [SerializeField]
-        private ItemGroup m_From=null;
+        private ItemGroup m_From = null;
         [SerializeField]
         private List<ScriptableObject> m_Filters = new List<ScriptableObject>();
         [SerializeField]

@@ -15,6 +15,8 @@ namespace DevionGames.InventorySystem
         protected override void OnEnable()
         {
             base.OnEnable();
+            if (target == null) return;
+
             this.m_FixedSuccessChance = serializedObject.FindProperty("m_FixedSuccessChance");
             this.m_GainModifier = serializedObject.FindProperty("m_GainModifier");
 
@@ -24,15 +26,6 @@ namespace DevionGames.InventorySystem
         {
             ScriptGUI();
             serializedObject.Update();
-            if (string.IsNullOrEmpty(this.m_ItemName.stringValue))
-            {
-                EditorGUILayout.HelpBox("Name field can't be empty. Please enter a unique name.", MessageType.Error);
-            }
-            else if (InventorySystemEditor.instance != null && InventorySystemEditor.Database.items.Any(x => !x.Equals(target) && x.Name == (target as Item).Name))
-            {
-                EditorGUILayout.HelpBox("Duplicate name. Item names need to be unique.", MessageType.Error);
-            }
-
 
             EditorGUILayout.PropertyField(this.m_ItemName, new GUIContent("Name"));
             EditorGUILayout.PropertyField(this.m_UseItemNameAsDisplayName, new GUIContent("Use name as display name"));

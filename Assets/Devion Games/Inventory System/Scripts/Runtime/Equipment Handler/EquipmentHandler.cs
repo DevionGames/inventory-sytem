@@ -11,6 +11,8 @@ namespace DevionGames.InventorySystem
         private string m_WindowName = "Equipment";
 
         [SerializeField]
+        private ItemDatabase m_Database;
+        [SerializeField]
         private List<EquipmentBone> m_Bones= new List<EquipmentBone>();
         public List<EquipmentBone> Bones
         {
@@ -30,19 +32,6 @@ namespace DevionGames.InventorySystem
 
         private void Start()
         {
-           /* if (transform.root != transform)
-            {
-                EquipmentHandler handler = transform.root.gameObject.GetComponent<EquipmentHandler>();
-                if (handler == null)
-                {
-                    handler = transform.root.gameObject.AddComponent<EquipmentHandler>();
-                }
-                handler.m_VisibleItems = m_VisibleItems;
-
-                Destroy(this);
-                return;
-            }*/
-           
             this.m_EquipmentContainer = WidgetUtility.Find<ItemContainer>(this.m_WindowName);
             if (this.m_EquipmentContainer != null)
             {

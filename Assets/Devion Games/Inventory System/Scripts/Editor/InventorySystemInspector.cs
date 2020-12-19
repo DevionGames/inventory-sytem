@@ -45,6 +45,9 @@ namespace DevionGames.InventorySystem
 
         public void OnDisable()
         {
+            if (this.m_Database != null) {
+                EditorPrefs.SetString("ItemDatabasePath",AssetDatabase.GetAssetPath(this.m_Database));
+            }
             if (m_ChildEditors != null)
             {
                 for (int i = 0; i < m_ChildEditors.Count; i++)
@@ -80,16 +83,49 @@ namespace DevionGames.InventorySystem
             EditorGUILayout.Space();
             GUILayout.BeginHorizontal();
             GUILayout.FlexibleSpace();
-            if (GUILayout.Button(this.m_Database != null ? this.m_Database.name : "Null", EditorStyles.objectField))
-            {
 
-            }
-
+            SelectDatabaseButton();
+           
             if (this.m_ChildEditors != null)
                 toolbarIndex = GUILayout.Toolbar(toolbarIndex, toolbarNames, GUILayout.MinWidth(200));
 
             GUILayout.FlexibleSpace();
             GUILayout.EndHorizontal();
+        }
+
+        private void SelectDatabaseButton() {
+            GUIStyle buttonStyle = EditorStyles.objectField;
+            GUIContent buttonContent = new GUIContent(this.m_Database != null ? this.m_Database.name : "Null");
+            Rect buttonRect = GUILayoutUtility.GetRect(180f,18f);
+            if (GUI.Button(buttonRect, buttonContent, buttonStyle))
+            {
+                ObjectPickerWindow.ShowWindow(buttonRect, typeof(ItemDatabase), 
+                    (UnityEngine.Object obj)=> { 
+                        this.m_Database = obj as ItemDatabase;
+                        ResetChildEditors();
+                    }, 
+                    ()=> {
+                        ItemDatabase db = EditorTools.CreateAsset<ItemDatabase>(true);
+                        if (db != null)
+                        {
+                            CreateDefaultCategory(db);
+                            this.m_Database = db;
+                            ResetChildEditors();
+                        }
+                    });
+            }
+        }
+
+        private static void CreateDefaultCategory(ItemDatabase database)
+        {
+            Category category = ScriptableObject.CreateInstance<Category>();
+            category.Name = "None";
+            category.hideFlags = HideFlags.HideInHierarchy;
+            AssetDatabase.AddObjectToAsset(category, database);
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
+            database.categories.Add(category);
+            EditorUtility.SetDirty(database);
         }
 
         private void ResetChildEditors() {

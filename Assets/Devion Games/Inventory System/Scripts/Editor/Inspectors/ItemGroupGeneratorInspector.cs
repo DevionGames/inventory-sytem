@@ -59,32 +59,41 @@ namespace DevionGames.InventorySystem
             };
 
             this.m_FilterList.onAddDropdownCallback = (Rect rect, ReorderableList list) => {
+
                 GenericMenu menu = new GenericMenu();
-                for (int i = 0; i < InventorySystemEditor.Database.categories.Count; i++) {
-                    Category category = InventorySystemEditor.Database.categories[i];
-                    menu.AddItem(new GUIContent("Category/"+category.Name),false, delegate {
-                        serializedObject.Update();
-                        this.m_Filters.InsertArrayElementAtIndex(this.m_Filters.arraySize);
-                        SerializedProperty property = this.m_Filters.GetArrayElementAtIndex(this.m_Filters.arraySize-1);
-                        property.objectReferenceValue = category;
-                        serializedObject.ApplyModifiedProperties();
-                    });
-                }
-                for (int i = 0; i < InventorySystemEditor.Database.raritys.Count; i++)
+                string[] guids = AssetDatabase.FindAssets("t:ItemDatabase");
+                for (int i = 0; i < guids.Length; i++)
                 {
-                    Rarity rarity = InventorySystemEditor.Database.raritys[i];
-                    menu.AddItem(new GUIContent("Rarity/" + rarity.Name), false, delegate {
-                        serializedObject.Update();
-                        this.m_Filters.InsertArrayElementAtIndex(this.m_Filters.arraySize);
-                        SerializedProperty property = this.m_Filters.GetArrayElementAtIndex(this.m_Filters.arraySize - 1);
-                        property.objectReferenceValue = rarity;
-                        serializedObject.ApplyModifiedProperties();
-                    });
+                    string path = AssetDatabase.GUIDToAssetPath(guids[i]);
+                    ItemDatabase database = AssetDatabase.LoadAssetAtPath(path, typeof(ItemDatabase)) as ItemDatabase;
+                    for (int j = 0; j < database.categories.Count; j++) {
+                        Category category = database.categories[j];
+                        menu.AddItem(new GUIContent(database.name + "/Category/" + database.categories[j].Name), false, () => {
+                            serializedObject.Update();
+                            this.m_Filters.InsertArrayElementAtIndex(this.m_Filters.arraySize);
+                            SerializedProperty property = this.m_Filters.GetArrayElementAtIndex(this.m_Filters.arraySize - 1);
+                            property.objectReferenceValue = category;
+                            serializedObject.ApplyModifiedProperties();
+                        });
+                    }
+                    for (int j = 0; j < database.raritys.Count; j++)
+                    {
+                        Rarity rarity = database.raritys[j];
+                        menu.AddItem(new GUIContent(database.name + "/Rarity/" + database.raritys[j].Name), false, () => {
+                            serializedObject.Update();
+                            this.m_Filters.InsertArrayElementAtIndex(this.m_Filters.arraySize);
+                            SerializedProperty property = this.m_Filters.GetArrayElementAtIndex(this.m_Filters.arraySize - 1);
+                            property.objectReferenceValue = rarity;
+                            serializedObject.ApplyModifiedProperties();
+                        });
+                    }
                 }
                 menu.DropDown(rect);
             };
 
         }
+
+
 
         private void CreateModifierList(string title, SerializedObject serializedObject, SerializedProperty property)
         {

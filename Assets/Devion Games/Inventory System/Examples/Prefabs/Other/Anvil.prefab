@@ -171,7 +171,7 @@ MonoBehaviour:
           boolValue: 0
           stringValue: Equipment
           intValue: 0
-        - item: {fileID: -3323905948889970588, guid: 1ae57b994efcab048a1bb130d4e11d83,
+        - item: {fileID: 4594666206616667452, guid: e1f045c49e197e3439b99da9edbc5ba3,
             type: 2}
           category: {fileID: 0}
           boolValue: 0
@@ -200,6 +200,7 @@ MonoBehaviour:
         m_Target: 1
         m_ParameterName: Forward Input
         m_Value: 1
+        m_DampTime: 0
     00000004:
       type: {class: MoveTowards, ns: DevionGames, asm: DevionGames.Triggers}
       data:
@@ -218,6 +219,7 @@ MonoBehaviour:
         m_Target: 1
         m_ParameterName: Forward Input
         m_Value: 0
+        m_DampTime: 0
     00000006:
       type: {class: LookAtTrigger, ns: DevionGames, asm: DevionGames.Triggers}
       data:

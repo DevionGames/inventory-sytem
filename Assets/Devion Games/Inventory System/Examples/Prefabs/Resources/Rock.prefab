@@ -171,7 +171,7 @@ MonoBehaviour:
           boolValue: 0
           stringValue: Equipment
           intValue: 0
-        - item: {fileID: 6595735557147903839, guid: 1ae57b994efcab048a1bb130d4e11d83,
+        - item: {fileID: -7886543208416861863, guid: e1f045c49e197e3439b99da9edbc5ba3,
             type: 2}
           category: {fileID: 0}
           boolValue: 0
@@ -248,7 +248,7 @@ MonoBehaviour:
         m_Type: DevionGames.InventorySystem.CheckSkill
         m_Enabled: 1
         m_WindowName: Skills
-        m_Skill: {fileID: 6595735557147903839, guid: 1ae57b994efcab048a1bb130d4e11d83,
+        m_Skill: {fileID: -7886543208416861863, guid: e1f045c49e197e3439b99da9edbc5ba3,
           type: 2}
     00000008:
       type: {class: Pickup, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}

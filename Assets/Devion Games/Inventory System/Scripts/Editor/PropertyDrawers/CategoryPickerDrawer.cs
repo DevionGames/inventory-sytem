@@ -7,10 +7,8 @@ namespace DevionGames.InventorySystem{
 	[CustomPropertyDrawer(typeof(CategoryPickerAttribute))]
 	public class CategoryPickerDrawer : PickerDrawer<Category> {
 
-		protected override List<Category> Items {
-			get {
-				return Database.categories;
-			}
+		protected override List<Category> GetItems(ItemDatabase database) {
+			return database.categories;
 		}
 		
 

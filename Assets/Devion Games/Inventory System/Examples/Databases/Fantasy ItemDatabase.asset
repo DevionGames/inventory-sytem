@@ -1,56 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9164302591508860154
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a9a3ee254b78a64481dccedbfd4ba41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Id: 328c9708-0135-44ee-8000-39309dfa737b
-  m_ItemName: Lumberjacking
-  m_UseItemNameAsDisplayName: 1
-  m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: 81e9ec1d21e1f8f43a06e7e75c17fc37, type: 3}
-  m_Prefab: {fileID: 0}
-  m_Description: As your skill improves, your chance of successfully harvesting wood
-    from a given tree increases.
-  m_Category: {fileID: -8831619382594955781}
-  m_IsSellable: 1
-  m_BuyPrice: 80
-  m_CanBuyBack: 1
-  m_BuyCurrency: {fileID: -2811142919616601772}
-  m_SellPrice: 0
-  m_SellCurrency: {fileID: -2811142919616601772}
-  m_Stack: 1
-  m_MaxStack: 1
-  m_IsDroppable: 1
-  m_DropSound: {fileID: 0}
-  m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients: []
-  properties: []
-  m_UseCategoryCooldown: 1
-  m_Cooldown: 1
-  actions: []
-  m_FixedSuccessChance: 50
-  m_GainModifier: {fileID: 11400000, guid: ab8c15d98d0de6d448b589d24bbb0eef, type: 2}
-  references:
-    version: 1
 --- !u!114 &-9040799555073544844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -61,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
-  m_Name: 
+  m_Name: Tool
   m_EditorClassIdentifier: 
   name: Tool
   m_EditorColor: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
@@ -76,7 +25,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6132cc3558d117f4bbad4651b2dbdba7, type: 3}
-  m_Name: 
+  m_Name: Bow
   m_EditorClassIdentifier: 
   m_Id: d498fc18-b018-47fb-a353-5f61052108a4
   m_ItemName: Bow
@@ -102,7 +51,8 @@ MonoBehaviour:
   m_CraftingDuration: 5
   m_UseCraftingSkill: 1
   m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: -3323905948889970588}
+  m_CraftingSkill: {fileID: 4594666206616667452, guid: e1f045c49e197e3439b99da9edbc5ba3,
+    type: 2}
   m_RemoveIngredientsWhenFailed: 1
   m_MinCraftingSkillValue: 4
   m_CraftingAnimatorState: Blacksmithy
@@ -215,7 +165,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9b8ce84b90caa548ba4d29381f5d494, type: 3}
-  m_Name: 
+  m_Name: Gold
   m_EditorClassIdentifier: 
   m_Id: 0d1cc315-7f58-4f30-a344-863a5f05e37a
   m_ItemName: Gold
@@ -251,21 +201,6 @@ MonoBehaviour:
   currencyConversions:
   - factor: 100
     currency: {fileID: -6442420119529586086}
---- !u!114 &-8831619382594955781
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: Skills
-  m_EditorColor: {r: 0, g: 0, b: 0, a: 0}
-  m_Cooldown: 1
 --- !u!114 &-8373593952731256949
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -308,7 +243,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28fccac83a2fa2245991bffe45a6cdd1, type: 3}
-  m_Name: 
+  m_Name: Vendor
   m_EditorClassIdentifier: 
   m_GroupName: Vendor
   m_Items:
@@ -346,7 +281,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8f5f34ef39fbec438e689ea49ddb023, type: 3}
-  m_Name: 
+  m_Name: Torso
   m_EditorClassIdentifier: 
   name: Torso
 --- !u!114 &-8057506047932969836
@@ -373,7 +308,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
-  m_Name: 
+  m_Name: Material
   m_EditorClassIdentifier: 
   name: Material
   m_EditorColor: {r: 0.36739054, g: 0.6037736, b: 0.4591628, a: 1}
@@ -388,7 +323,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8f5f34ef39fbec438e689ea49ddb023, type: 3}
-  m_Name: 
+  m_Name: Ring
   m_EditorClassIdentifier: 
   name: Ring
 --- !u!114 &-6442420119529586086
@@ -401,7 +336,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9b8ce84b90caa548ba4d29381f5d494, type: 3}
-  m_Name: 
+  m_Name: Silver
   m_EditorClassIdentifier: 
   m_Id: 3ab54e42-a79e-43d1-a07d-e0fbe98e4da5
   m_ItemName: Silver
@@ -439,137 +374,6 @@ MonoBehaviour:
     currency: {fileID: -2811142919616601772}
   - factor: 0.01
     currency: {fileID: -8859189835947310016}
---- !u!114 &-6382214904321203751
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Id: 4ebb63c9-d2a0-46b1-8f03-4d9e807077ea
-  m_ItemName: Rampage
-  m_UseItemNameAsDisplayName: 1
-  m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: 38b3b88139f32f14f86fb7a607ff1aed, type: 3}
-  m_Prefab: {fileID: 0}
-  m_Description: '[Requires Melee Weapon]
-
-    Unleashes a series of 3 brutal strikes.'
-  m_Category: {fileID: -3989543302354102894}
-  m_IsSellable: 0
-  m_BuyPrice: 0
-  m_CanBuyBack: 1
-  m_BuyCurrency: {fileID: -2811142919616601772}
-  m_SellPrice: 0
-  m_SellCurrency: {fileID: -2811142919616601772}
-  m_Stack: 1
-  m_MaxStack: 1
-  m_IsDroppable: 0
-  m_DropSound: {fileID: 0}
-  m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients: []
-  properties: []
-  m_UseCategoryCooldown: 0
-  m_Cooldown: 4
-  actions:
-  - id: 0
-  - id: 1
-  - id: 2
-  - id: 3
-  - id: 4
-  - id: 5
-  - id: 6
-  references:
-    version: 1
-    00000000:
-      type: {class: HasCategoryItem, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
-      data:
-        m_Type: DevionGames.InventorySystem.HasCategoryItem
-        m_Enabled: 1
-        requiredItems:
-        - item: {fileID: 0}
-          category: {fileID: 5270022900184783660}
-          boolValue: 0
-          stringValue: Equipment
-          intValue: 0
-    00000001:
-      type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
-      data:
-        m_Type: DevionGames.InventorySystem.ItemActions.Cooldown
-        m_Enabled: 1
-        item: {fileID: -6382214904321203751}
-        m_GlobalCooldown: 1.5
-    00000002:
-      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.SendMessage
-        m_Enabled: 1
-        m_Target: 1
-        methodName: SetIK
-        m_Argument:
-          m_BoolValue: 0
-          m_IntValue: 0
-          m_FloatValue: 0
-          m_StringValue: 
-          m_Vector2Value: {x: 0, y: 0}
-          m_Vector3Value: {x: 0, y: 0, z: 0}
-          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
-          m_ObjectValue: {fileID: 0}
-          m_ArgumentType: 1
-        m_Options: 1
-    00000003:
-      type: {class: LookForward, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.LookForward
-        m_Enabled: 1
-        m_Target: 1
-    00000004:
-      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.CrossFade
-        m_Enabled: 1
-        m_Target: 1
-        m_AnimatorState: Rampage
-        m_TransitionDuration: 0.15
-    00000005:
-      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.Wait
-        m_Enabled: 1
-        duration: 2
-    00000006:
-      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.SendMessage
-        m_Enabled: 1
-        m_Target: 1
-        methodName: SetIK
-        m_Argument:
-          m_BoolValue: 1
-          m_IntValue: 0
-          m_FloatValue: 0
-          m_StringValue: 
-          m_Vector2Value: {x: 0, y: 0}
-          m_Vector3Value: {x: 0, y: 0, z: 0}
-          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
-          m_ObjectValue: {fileID: 0}
-          m_ArgumentType: 1
-        m_Options: 1
 --- !u!114 &-6294223960729143046
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -580,7 +384,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
-  m_Name: 
+  m_Name: None
   m_EditorClassIdentifier: 
   name: None
   m_EditorColor: {r: 1, g: 1, b: 1, a: 0}
@@ -595,7 +399,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
-  m_Name: 
+  m_Name: Home Rune
   m_EditorClassIdentifier: 
   m_Id: c3599c25-74e3-46fd-97b7-c55ea09e6945
   m_ItemName: Home Rune
@@ -716,7 +520,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: 
+  m_Name: Wood
   m_EditorClassIdentifier: 
   m_Id: 7104b05e-6d4e-4447-87bd-aad3db602483
   m_ItemName: Wood
@@ -760,98 +564,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
-  m_Name: 
+  m_Name: Weapon
   m_EditorClassIdentifier: 
   name: Weapon
   m_EditorColor: {r: 0.8962264, g: 0.17846043, b: 0.012682426, a: 1}
   m_Cooldown: 1
---- !u!114 &-5242721879078471986
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Id: ffa330cd-cea5-412e-bfed-83043311b538
-  m_ItemName: Whirlwind
-  m_UseItemNameAsDisplayName: 1
-  m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: 689cfa66960522b42967dfe06ccab49f, type: 3}
-  m_Prefab: {fileID: 0}
-  m_Description: '[Requires Melee Weapon]
-
-    In a whirl of steel you attack all
-    enemies in range.'
-  m_Category: {fileID: -3989543302354102894}
-  m_IsSellable: 0
-  m_BuyPrice: 0
-  m_CanBuyBack: 1
-  m_BuyCurrency: {fileID: -2811142919616601772}
-  m_SellPrice: 0
-  m_SellCurrency: {fileID: -2811142919616601772}
-  m_Stack: 1
-  m_MaxStack: 1
-  m_IsDroppable: 0
-  m_DropSound: {fileID: 0}
-  m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients: []
-  properties: []
-  m_UseCategoryCooldown: 0
-  m_Cooldown: 3
-  actions:
-  - id: 0
-  - id: 1
-  - id: 2
-  - id: 3
-  references:
-    version: 1
-    00000000:
-      type: {class: HasCategoryItem, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
-      data:
-        m_Type: DevionGames.InventorySystem.HasCategoryItem
-        m_Enabled: 1
-        requiredItems:
-        - item: {fileID: 0}
-          category: {fileID: 5270022900184783660}
-          boolValue: 0
-          stringValue: Equipment
-          intValue: 0
-    00000001:
-      type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
-      data:
-        m_Type: DevionGames.InventorySystem.ItemActions.Cooldown
-        m_Enabled: 1
-        item: {fileID: -5242721879078471986}
-        m_GlobalCooldown: 1
-    00000002:
-      type: {class: LookForward, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.LookForward
-        m_Enabled: 1
-        m_Target: 1
-    00000003:
-      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.CrossFade
-        m_Enabled: 1
-        m_Target: 1
-        m_AnimatorState: Whirlwind
-        m_TransitionDuration: 0.2
 --- !u!114 &-4474190543486091594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -862,7 +579,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6132cc3558d117f4bbad4651b2dbdba7, type: 3}
-  m_Name: 
+  m_Name: Axe
   m_EditorClassIdentifier: 
   m_Id: deaf6164-418d-4a18-bc10-d1cb6580f1e4
   m_ItemName: Axe
@@ -888,7 +605,8 @@ MonoBehaviour:
   m_CraftingDuration: 3
   m_UseCraftingSkill: 1
   m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: -3323905948889970588}
+  m_CraftingSkill: {fileID: 4594666206616667452, guid: e1f045c49e197e3439b99da9edbc5ba3,
+    type: 2}
   m_RemoveIngredientsWhenFailed: 1
   m_MinCraftingSkillValue: 0
   m_CraftingAnimatorState: Blacksmithy
@@ -907,226 +625,6 @@ MonoBehaviour:
   - {fileID: 316844889573954113}
   references:
     version: 1
---- !u!114 &-4423743630002525559
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Id: 5bf4d465-0a9f-4bae-b804-60cbc81d48b5
-  m_ItemName: Healing
-  m_UseItemNameAsDisplayName: 1
-  m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: 4fb083f2779c6a54b83359c8e1f645ae, type: 3}
-  m_Prefab: {fileID: 100010, guid: 1b80c9f94defa634487a6d9f6e386f6a, type: 3}
-  m_Description: Restores your health by 13 points.
-  m_Category: {fileID: -3989543302354102894}
-  m_IsSellable: 1
-  m_BuyPrice: 0
-  m_CanBuyBack: 1
-  m_BuyCurrency: {fileID: -2811142919616601772}
-  m_SellPrice: 0
-  m_SellCurrency: {fileID: -2811142919616601772}
-  m_Stack: 1
-  m_MaxStack: 1
-  m_IsDroppable: 0
-  m_DropSound: {fileID: 0}
-  m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients: []
-  properties: []
-  m_UseCategoryCooldown: 0
-  m_Cooldown: 5
-  actions:
-  - id: 0
-  - id: 1
-  - id: 2
-  - id: 3
-  - id: 4
-  - id: 5
-  - id: 6
-  - id: 7
-  - id: 8
-  - id: 9
-  references:
-    version: 1
-    00000000:
-      type: {class: InvokeNotify, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
-      data:
-        m_Type: 
-        m_Enabled: 1
-        m_Target: 1
-        m_ComponentName: StatsHandler
-        m_MethodName: CanApplyDamage
-        m_Arguments:
-        - m_BoolValue: 0
-          m_IntValue: 0
-          m_FloatValue: 0
-          m_StringValue: Mana
-          m_Vector2Value: {x: 0, y: 0}
-          m_Vector3Value: {x: 0, y: 0, z: 0}
-          m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
-          m_ObjectValue: {fileID: 0}
-          m_ArgumentType: 4
-        - m_BoolValue: 0
-          m_IntValue: 0
-          m_FloatValue: 5
-          m_StringValue: 
-          m_Vector2Value: {x: 0, y: 0}
-          m_Vector3Value: {x: 0, y: 0, z: 0}
-          m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
-          m_ObjectValue: {fileID: 0}
-          m_ArgumentType: 3
-        m_FailureNotification:
-          title: 
-          text: I don't have enough mana!
-          color: {r: 1, g: 1, b: 1, a: 1}
-          icon: {fileID: 0}
-          delay: 2
-          duration: 2
-          ignoreTimeScale: 1
-    00000001:
-      type: {class: Invoke, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: 
-        m_Enabled: 1
-        m_Target: 1
-        m_ComponentName: StatsHandler
-        m_MethodName: ApplyDamage
-        m_Arguments:
-        - m_BoolValue: 0
-          m_IntValue: 0
-          m_FloatValue: 0
-          m_StringValue: Mana
-          m_Vector2Value: {x: 0, y: 0}
-          m_Vector3Value: {x: 0, y: 0, z: 0}
-          m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
-          m_ObjectValue: {fileID: 0}
-          m_ArgumentType: 4
-        - m_BoolValue: 0
-          m_IntValue: 0
-          m_FloatValue: 5
-          m_StringValue: 
-          m_Vector2Value: {x: 0, y: 0}
-          m_Vector3Value: {x: 0, y: 0, z: 0}
-          m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
-          m_ObjectValue: {fileID: 0}
-          m_ArgumentType: 3
-    00000002:
-      type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
-      data:
-        m_Type: 
-        m_Enabled: 1
-        item: {fileID: -4423743630002525559}
-        m_GlobalCooldown: 5
-    00000003:
-      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: 
-        m_Enabled: 1
-        m_Target: 1
-        methodName: SetIK
-        m_Argument:
-          m_BoolValue: 0
-          m_IntValue: 0
-          m_FloatValue: 0
-          m_StringValue: 
-          m_Vector2Value: {x: 0, y: 0}
-          m_Vector3Value: {x: 0, y: 0, z: 0}
-          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
-          m_ObjectValue: {fileID: 0}
-          m_ArgumentType: 1
-        m_Options: 1
-    00000004:
-      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: 
-        m_Enabled: 1
-        m_Target: 1
-        m_AnimatorState: Healing
-        m_TransitionDuration: 0.2
-    00000005:
-      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: 
-        m_Enabled: 1
-        duration: 0.5
-    00000006:
-      type: {class: Instantiate, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: 
-        m_Enabled: 1
-        m_Target: 1
-        m_Original: {fileID: 100010, guid: 1b80c9f94defa634487a6d9f6e386f6a, type: 3}
-        m_BoneName: 
-        m_Offset: {x: 0, y: 0, z: 0}
-        m_IgnorePlayerCollision: 1
-    00000007:
-      type: {class: Invoke, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: 
-        m_Enabled: 1
-        m_Target: 1
-        m_ComponentName: StatsHandler
-        m_MethodName: ApplyDamage
-        m_Arguments:
-        - m_BoolValue: 0
-          m_IntValue: 0
-          m_FloatValue: 0
-          m_StringValue: Health
-          m_Vector2Value: {x: 0, y: 0}
-          m_Vector3Value: {x: 0, y: 0, z: 0}
-          m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
-          m_ObjectValue: {fileID: 0}
-          m_ArgumentType: 4
-        - m_BoolValue: 0
-          m_IntValue: 0
-          m_FloatValue: -13
-          m_StringValue: 
-          m_Vector2Value: {x: 0, y: 0}
-          m_Vector3Value: {x: 0, y: 0, z: 0}
-          m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
-          m_ObjectValue: {fileID: 0}
-          m_ArgumentType: 3
-    00000008:
-      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: 
-        m_Enabled: 1
-        duration: 1.2
-    00000009:
-      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: 
-        m_Enabled: 1
-        m_Target: 1
-        methodName: SetIK
-        m_Argument:
-          m_BoolValue: 1
-          m_IntValue: 0
-          m_FloatValue: 0
-          m_StringValue: 
-          m_Vector2Value: {x: 0, y: 0}
-          m_Vector3Value: {x: 0, y: 0, z: 0}
-          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
-          m_ObjectValue: {fileID: 0}
-          m_ArgumentType: 1
-        m_Options: 1
 --- !u!114 &-4242386034172315359
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1154,7 +652,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28fccac83a2fa2245991bffe45a6cdd1, type: 3}
-  m_Name: 
+  m_Name: Alchemy
   m_EditorClassIdentifier: 
   m_GroupName: Alchemy
   m_Items:
@@ -1162,21 +660,6 @@ MonoBehaviour:
   m_Amounts: 01000000
   m_Modifiers:
   - modifiers: []
---- !u!114 &-3989543302354102894
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: Spells
-  m_EditorColor: {r: 0, g: 0, b: 0, a: 0}
-  m_Cooldown: 1
 --- !u!114 &-3817802777368614781
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1204,7 +687,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28fccac83a2fa2245991bffe45a6cdd1, type: 3}
-  m_Name: 
+  m_Name: Loot
   m_EditorClassIdentifier: 
   m_GroupName: Loot
   m_Items:
@@ -1232,106 +715,6 @@ MonoBehaviour:
   - modifiers: []
   - modifiers: []
   - modifiers: []
---- !u!114 &-3323905948889970588
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a9a3ee254b78a64481dccedbfd4ba41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Id: e4f98e95-2c8c-42b2-b020-9b7f9ab982d6
-  m_ItemName: Blacksmithy
-  m_UseItemNameAsDisplayName: 1
-  m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: f6293f20fd85aa143bead12afd67ebbb, type: 3}
-  m_Prefab: {fileID: 0}
-  m_Description: Increases the chance to craft an item.
-  m_Category: {fileID: -8831619382594955781}
-  m_IsSellable: 1
-  m_BuyPrice: 322
-  m_CanBuyBack: 1
-  m_BuyCurrency: {fileID: -2811142919616601772}
-  m_SellPrice: 0
-  m_SellCurrency: {fileID: -2811142919616601772}
-  m_Stack: 1
-  m_MaxStack: 1
-  m_IsDroppable: 1
-  m_DropSound: {fileID: 0}
-  m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients: []
-  properties: []
-  m_UseCategoryCooldown: 1
-  m_Cooldown: 1
-  actions: []
-  m_FixedSuccessChance: 50
-  m_GainModifier: {fileID: 11400000, guid: 444722d6eb4ecd243aa83015e96c5485, type: 2}
-  references:
-    version: 1
---- !u!114 &-2920532131010319874
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a9a3ee254b78a64481dccedbfd4ba41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Id: b694ddfb-5dbf-481f-b72c-a22ac94d819a
-  m_ItemName: Swordsmanship
-  m_UseItemNameAsDisplayName: 1
-  m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: 5fd50594014b70e48bd6993443d46b32, type: 3}
-  m_Prefab: {fileID: 0}
-  m_Description: Swordsmanship increases your damage and hit chance.
-  m_Category: {fileID: -8831619382594955781}
-  m_IsSellable: 1
-  m_BuyPrice: 0
-  m_CanBuyBack: 1
-  m_BuyCurrency: {fileID: -2811142919616601772}
-  m_SellPrice: 0
-  m_SellCurrency: {fileID: -2811142919616601772}
-  m_Stack: 1
-  m_MaxStack: 1
-  m_IsDroppable: 1
-  m_DropSound: {fileID: 0}
-  m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients: []
-  properties: []
-  m_UseCategoryCooldown: 1
-  m_Cooldown: 1
-  actions: []
-  m_FixedSuccessChance: 50
-  m_GainModifier: {fileID: 11400000, guid: c1992775e12652140b4d346619cbf34f, type: 2}
-  references:
-    version: 1
 --- !u!114 &-2839999955813321745
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1342,7 +725,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
-  m_Name: 
+  m_Name: Lohra
   m_EditorClassIdentifier: 
   m_Id: 07046059-4d5f-45d7-bbbf-5b7912bf8134
   m_ItemName: Lohra
@@ -1444,7 +827,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9b8ce84b90caa548ba4d29381f5d494, type: 3}
-  m_Name: 
+  m_Name: Copper
   m_EditorClassIdentifier: 
   m_Id: e558a93c-b67f-478f-b363-8a58b51ae9b4
   m_ItemName: Copper
@@ -1490,7 +873,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6132cc3558d117f4bbad4651b2dbdba7, type: 3}
-  m_Name: 
+  m_Name: Shield
   m_EditorClassIdentifier: 
   m_Id: 77eb276e-4388-4545-9fe6-b513438e9719
   m_ItemName: Shield
@@ -1516,7 +899,8 @@ MonoBehaviour:
   m_CraftingDuration: 5
   m_UseCraftingSkill: 1
   m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: -3323905948889970588}
+  m_CraftingSkill: {fileID: 4594666206616667452, guid: e1f045c49e197e3439b99da9edbc5ba3,
+    type: 2}
   m_RemoveIngredientsWhenFailed: 1
   m_MinCraftingSkillValue: 7.7
   m_CraftingAnimatorState: Blacksmithy
@@ -1584,7 +968,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8f5f34ef39fbec438e689ea49ddb023, type: 3}
-  m_Name: 
+  m_Name: Head
   m_EditorClassIdentifier: 
   name: Head
 --- !u!114 &-1175442255857385599
@@ -1597,7 +981,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: 
+  m_Name: Scoparius
   m_EditorClassIdentifier: 
   m_Id: 344ba9ba-a2e4-4bf8-b120-830bbdfca227
   m_ItemName: Scoparius
@@ -1641,7 +1025,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6132cc3558d117f4bbad4651b2dbdba7, type: 3}
-  m_Name: 
+  m_Name: Hammer
   m_EditorClassIdentifier: 
   m_Id: 7f88be02-e6ca-4ec2-b89f-4f5febd3dcf5
   m_ItemName: Hammer
@@ -1667,7 +1051,8 @@ MonoBehaviour:
   m_CraftingDuration: 3
   m_UseCraftingSkill: 1
   m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: -3323905948889970588}
+  m_CraftingSkill: {fileID: 4594666206616667452, guid: e1f045c49e197e3439b99da9edbc5ba3,
+    type: 2}
   m_RemoveIngredientsWhenFailed: 1
   m_MinCraftingSkillValue: 0
   m_CraftingAnimatorState: Blacksmithy
@@ -1696,7 +1081,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8f5f34ef39fbec438e689ea49ddb023, type: 3}
-  m_Name: 
+  m_Name: Shoulders
   m_EditorClassIdentifier: 
   name: Shoulders
 --- !u!114 &11400000
@@ -1722,25 +1107,13 @@ MonoBehaviour:
   - {fileID: 960666660569578442}
   - {fileID: -6266380644497530537}
   - {fileID: 3129509250564287029}
-  - {fileID: -3323905948889970588}
-  - {fileID: -2920532131010319874}
-  - {fileID: 6595735557147903839}
-  - {fileID: -9164302591508860154}
-  - {fileID: 7113904374044846821}
-  - {fileID: 4117155973668914919}
-  - {fileID: 678841275653576696}
-  - {fileID: -5242721879078471986}
-  - {fileID: -6382214904321203751}
-  - {fileID: 4447567160419299934}
-  - {fileID: -4423743630002525559}
-  - {fileID: 1337782666225268451}
   - {fileID: -2839999955813321745}
   - {fileID: 8692695060773013855}
   - {fileID: 2033560685258441697}
+  - {fileID: -447126039411374142}
   - {fileID: 529780001783015153}
   - {fileID: -4474190543486091594}
   - {fileID: 2409076057030828310}
-  - {fileID: -447126039411374142}
   - {fileID: -8967533827971111582}
   currencies:
   - {fileID: -2811142919616601772}
@@ -1752,15 +1125,13 @@ MonoBehaviour:
   - {fileID: 7388703754817051196}
   - {fileID: 8829102310862775636}
   categories:
-  - {fileID: 171625507360801261}
   - {fileID: -6294223960729143046}
+  - {fileID: 171625507360801261}
   - {fileID: 8705209814584371102}
   - {fileID: -5355670550631679221}
   - {fileID: -9040799555073544844}
   - {fileID: -7427245140175711199}
-  - {fileID: -3989543302354102894}
   - {fileID: 164684216256526245}
-  - {fileID: -8831619382594955781}
   - {fileID: 5270022900184783660}
   equipments:
   - {fileID: -1474344929657048262}
@@ -1776,19 +1147,15 @@ MonoBehaviour:
   itemGroups:
   - {fileID: 8981082385679816718}
   - {fileID: -8192587188366231400}
-  - {fileID: 6066131165606410366}
   - {fileID: 7990749027154876597}
   - {fileID: -4213577332647146612}
   - {fileID: -3796731219101042533}
-  - {fileID: 5365859910722360372}
-  - {fileID: 8059426944790288259}
   settings:
   - {fileID: -3817802777368614781}
   - {fileID: -8057506047932969836}
   - {fileID: 9220062648813220349}
   - {fileID: -8216026199854185599}
   - {fileID: -4242386034172315359}
-  folders: []
 --- !u!114 &7481220999571344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1799,7 +1166,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8f5f34ef39fbec438e689ea49ddb023, type: 3}
-  m_Name: 
+  m_Name: Feet
   m_EditorClassIdentifier: 
   name: Feet
 --- !u!114 &164684216256526245
@@ -1812,7 +1179,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
-  m_Name: 
+  m_Name: Teleporter
   m_EditorClassIdentifier: 
   name: Teleporter
   m_EditorColor: {r: 0, g: 0, b: 0, a: 0}
@@ -1827,7 +1194,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
-  m_Name: 
+  m_Name: Consumable
   m_EditorClassIdentifier: 
   name: Consumable
   m_EditorColor: {r: 1, g: 0.8296584, b: 0, a: 1}
@@ -1842,7 +1209,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8f5f34ef39fbec438e689ea49ddb023, type: 3}
-  m_Name: 
+  m_Name: Right Hand
   m_EditorClassIdentifier: 
   name: Right Hand
 --- !u!114 &529780001783015153
@@ -1855,7 +1222,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
-  m_Name: 
+  m_Name: Bowl
   m_EditorClassIdentifier: 
   m_Id: 63bb00df-e2e8-4e6e-8552-bb9d27049d1b
   m_ItemName: Bowl
@@ -1881,7 +1248,8 @@ MonoBehaviour:
   m_CraftingDuration: 2
   m_UseCraftingSkill: 1
   m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: -3323905948889970588}
+  m_CraftingSkill: {fileID: 4594666206616667452, guid: e1f045c49e197e3439b99da9edbc5ba3,
+    type: 2}
   m_RemoveIngredientsWhenFailed: 1
   m_MinCraftingSkillValue: 4
   m_CraftingAnimatorState: Blacksmithy
@@ -1904,93 +1272,6 @@ MonoBehaviour:
         m_Enabled: 1
         m_WindowName: Alchemy
         m_DestroyWhenEmpty: 0
---- !u!114 &678841275653576696
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Id: 4a75541b-b7a8-4c5b-b9f0-b7e4de1d5021
-  m_ItemName: Cleave
-  m_UseItemNameAsDisplayName: 1
-  m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: 999fb9081b153d14f974e8b7e62e765c, type: 3}
-  m_Prefab: {fileID: 0}
-  m_Description: '[Requires Melee Weapon]
-
-    Jumps forward and deals damage to
-    enemies in front.'
-  m_Category: {fileID: -3989543302354102894}
-  m_IsSellable: 0
-  m_BuyPrice: 0
-  m_CanBuyBack: 1
-  m_BuyCurrency: {fileID: -2811142919616601772}
-  m_SellPrice: 0
-  m_SellCurrency: {fileID: -2811142919616601772}
-  m_Stack: 1
-  m_MaxStack: 1
-  m_IsDroppable: 0
-  m_DropSound: {fileID: 0}
-  m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients: []
-  properties: []
-  m_UseCategoryCooldown: 0
-  m_Cooldown: 2
-  actions:
-  - id: 0
-  - id: 1
-  - id: 2
-  - id: 3
-  references:
-    version: 1
-    00000000:
-      type: {class: HasCategoryItem, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
-      data:
-        m_Type: DevionGames.InventorySystem.HasCategoryItem
-        m_Enabled: 1
-        requiredItems:
-        - item: {fileID: 0}
-          category: {fileID: 5270022900184783660}
-          boolValue: 0
-          stringValue: Equipment
-          intValue: 0
-    00000001:
-      type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
-      data:
-        m_Type: DevionGames.InventorySystem.ItemActions.Cooldown
-        m_Enabled: 1
-        item: {fileID: 678841275653576696}
-        m_GlobalCooldown: 1
-    00000002:
-      type: {class: LookForward, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.LookForward
-        m_Enabled: 1
-        m_Target: 1
-    00000003:
-      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.CrossFade
-        m_Enabled: 1
-        m_Target: 1
-        m_AnimatorState: Cleave
-        m_TransitionDuration: 0.2
 --- !u!114 &960666660569578442
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2001,7 +1282,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6132cc3558d117f4bbad4651b2dbdba7, type: 3}
-  m_Name: 
+  m_Name: Rusty Sword
   m_EditorClassIdentifier: 
   m_Id: de6b9e9e-9c60-4ba8-a61c-3a6d7a0e5e65
   m_ItemName: Rusty Sword
@@ -2027,7 +1308,8 @@ MonoBehaviour:
   m_CraftingDuration: 3
   m_UseCraftingSkill: 1
   m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: -3323905948889970588}
+  m_CraftingSkill: {fileID: 4594666206616667452, guid: e1f045c49e197e3439b99da9edbc5ba3,
+    type: 2}
   m_RemoveIngredientsWhenFailed: 1
   m_MinCraftingSkillValue: 1
   m_CraftingAnimatorState: Blacksmithy
@@ -2139,7 +1421,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: 
+  m_Name: Nail
   m_EditorClassIdentifier: 
   m_Id: 77052a30-3511-4faf-bbf6-12ab39f5d855
   m_ItemName: Nail
@@ -2165,7 +1447,8 @@ MonoBehaviour:
   m_CraftingDuration: 3
   m_UseCraftingSkill: 1
   m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: -3323905948889970588}
+  m_CraftingSkill: {fileID: 4594666206616667452, guid: e1f045c49e197e3439b99da9edbc5ba3,
+    type: 2}
   m_RemoveIngredientsWhenFailed: 0
   m_MinCraftingSkillValue: 0
   m_CraftingAnimatorState: Blacksmithy
@@ -2175,117 +1458,6 @@ MonoBehaviour:
   - item: {fileID: 8763039942855579107}
     amount: 1
   properties: []
---- !u!114 &1337782666225268451
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Id: e7af1b90-6359-4e6b-854a-08d3e387fe8c
-  m_ItemName: Critical Strike
-  m_UseItemNameAsDisplayName: 1
-  m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: 2d034c37f8148c849b278b3ac169a82b, type: 3}
-  m_Prefab: {fileID: 0}
-  m_Description: Increases your critical strike by 60% for 18 seconds.
-  m_Category: {fileID: -3989543302354102894}
-  m_IsSellable: 0
-  m_BuyPrice: 0
-  m_CanBuyBack: 1
-  m_BuyCurrency: {fileID: -2811142919616601772}
-  m_SellPrice: 0
-  m_SellCurrency: {fileID: -2811142919616601772}
-  m_Stack: 1
-  m_MaxStack: 1
-  m_IsDroppable: 0
-  m_DropSound: {fileID: 0}
-  m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients: []
-  properties: []
-  m_UseCategoryCooldown: 0
-  m_Cooldown: 20
-  actions:
-  - id: 0
-  - id: 1
-  - id: 2
-  - id: 3
-  - id: 4
-  - id: 5
-  - id: 6
-  references:
-    version: 1
-    00000000:
-      type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
-      data:
-        m_Type: DevionGames.InventorySystem.ItemActions.Cooldown
-        m_Enabled: 1
-        item: {fileID: 1337782666225268451}
-        m_GlobalCooldown: 0.5
-    00000001:
-      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.CrossFade
-        m_Enabled: 1
-        m_Target: 1
-        m_AnimatorState: Power Up
-        m_TransitionDuration: 0.2
-    00000002:
-      type: {class: AddModifier, ns: DevionGames.StatSystem, asm: DevionGames.StatSystem}
-      data:
-        m_Type: DevionGames.StatSystem.AddModifier
-        m_Enabled: 1
-        m_Target: 1
-        m_StatName: Critical Strike
-        m_Value: 60
-        m_ModType: 0
-    00000003:
-      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.Wait
-        m_Enabled: 1
-        duration: 1
-    00000004:
-      type: {class: Instantiate, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.Instantiate
-        m_Enabled: 1
-        m_Target: 0
-        m_Original: {fileID: 4307183168818881248, guid: 4586b6b9da842354fbb0f42d7f059219,
-          type: 3}
-        m_BoneName: 
-        m_Offset: {x: 0, y: 0, z: 0}
-        m_IgnorePlayerCollision: 1
-    00000005:
-      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.Wait
-        m_Enabled: 1
-        duration: 17
-    00000006:
-      type: {class: AddModifier, ns: DevionGames.StatSystem, asm: DevionGames.StatSystem}
-      data:
-        m_Type: DevionGames.StatSystem.AddModifier
-        m_Enabled: 1
-        m_Target: 1
-        m_StatName: Critical Strike
-        m_Value: -60
-        m_ModType: 0
 --- !u!114 &1459171670829712994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2296,7 +1468,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bd508013dff080478b54adc05db11e1, type: 3}
-  m_Name: 
+  m_Name: Common
   m_EditorClassIdentifier: 
   name: Common
   m_UseAsNamePrefix: 0
@@ -2314,7 +1486,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
-  m_Name: 
+  m_Name: Furia
   m_EditorClassIdentifier: 
   m_Id: 55fc7dcb-4995-4046-8c76-700f8d888b79
   m_ItemName: Furia
@@ -2416,7 +1588,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6132cc3558d117f4bbad4651b2dbdba7, type: 3}
-  m_Name: 
+  m_Name: Pickaxe
   m_EditorClassIdentifier: 
   m_Id: cacbc413-2b42-4006-8a72-17f51df5d864
   m_ItemName: Pickaxe
@@ -2442,7 +1614,8 @@ MonoBehaviour:
   m_CraftingDuration: 5
   m_UseCraftingSkill: 1
   m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: -3323905948889970588}
+  m_CraftingSkill: {fileID: 4594666206616667452, guid: e1f045c49e197e3439b99da9edbc5ba3,
+    type: 2}
   m_RemoveIngredientsWhenFailed: 1
   m_MinCraftingSkillValue: 0
   m_CraftingAnimatorState: Blacksmithy
@@ -2471,7 +1644,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
-  m_Name: 
+  m_Name: 'Recipe: Bow'
   m_EditorClassIdentifier: 
   m_Id: 152288af-0366-4252-a6e3-792bda51b22a
   m_ItemName: 'Recipe: Bow'
@@ -2553,95 +1726,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8f5f34ef39fbec438e689ea49ddb023, type: 3}
-  m_Name: 
+  m_Name: Placeholder
   m_EditorClassIdentifier: 
   name: Placeholder
---- !u!114 &4117155973668914919
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Id: f0b544fe-1881-4b31-93c8-d9a54ad27266
-  m_ItemName: Slam
-  m_UseItemNameAsDisplayName: 1
-  m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: 0b686e3c5bb0acb44809a4e72d303e3d, type: 3}
-  m_Prefab: {fileID: 0}
-  m_Description: '[Requires Melee Weapon]
-
-    Slams an opponent.'
-  m_Category: {fileID: -3989543302354102894}
-  m_IsSellable: 0
-  m_BuyPrice: 0
-  m_CanBuyBack: 1
-  m_BuyCurrency: {fileID: -2811142919616601772}
-  m_SellPrice: 0
-  m_SellCurrency: {fileID: -2811142919616601772}
-  m_Stack: 1
-  m_MaxStack: 1
-  m_IsDroppable: 0
-  m_DropSound: {fileID: 0}
-  m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients: []
-  properties: []
-  m_UseCategoryCooldown: 0
-  m_Cooldown: 1
-  actions:
-  - id: 0
-  - id: 1
-  - id: 2
-  - id: 3
-  references:
-    version: 1
-    00000000:
-      type: {class: HasCategoryItem, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
-      data:
-        m_Type: DevionGames.InventorySystem.HasCategoryItem
-        m_Enabled: 1
-        requiredItems:
-        - item: {fileID: 0}
-          category: {fileID: 5270022900184783660}
-          boolValue: 0
-          stringValue: Equipment
-          intValue: 0
-    00000001:
-      type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
-      data:
-        m_Type: DevionGames.InventorySystem.ItemActions.Cooldown
-        m_Enabled: 1
-        item: {fileID: 4117155973668914919}
-        m_GlobalCooldown: 0.5
-    00000002:
-      type: {class: LookForward, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.LookForward
-        m_Enabled: 1
-        m_Target: 1
-    00000003:
-      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.CrossFade
-        m_Enabled: 1
-        m_Target: 1
-        m_AnimatorState: Sword Slash
-        m_TransitionDuration: 0.2
 --- !u!114 &4187599761675176531
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2669,7 +1756,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bd508013dff080478b54adc05db11e1, type: 3}
-  m_Name: 
+  m_Name: Junk
   m_EditorClassIdentifier: 
   name: Junk
   m_UseAsNamePrefix: 0
@@ -2677,205 +1764,6 @@ MonoBehaviour:
   chance: 100
   multiplier: 1
   m_PriceMultiplier: 1
---- !u!114 &4447567160419299934
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
-  m_Name: (Clone)
-  m_EditorClassIdentifier: 
-  m_Id: 5bf4d465-0a9f-4bae-b804-60cbc81d48b5
-  m_ItemName: Arcane Ball
-  m_UseItemNameAsDisplayName: 1
-  m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: ec24783658f55204083d307b3f27395e, type: 3}
-  m_Prefab: {fileID: 100014, guid: d6f72918cc3dd004584674be2b246697, type: 3}
-  m_Description: Cast a magical arcane ball.
-  m_Category: {fileID: -3989543302354102894}
-  m_IsSellable: 1
-  m_BuyPrice: 0
-  m_CanBuyBack: 1
-  m_BuyCurrency: {fileID: -2811142919616601772}
-  m_SellPrice: 0
-  m_SellCurrency: {fileID: -2811142919616601772}
-  m_Stack: 1
-  m_MaxStack: 1
-  m_IsDroppable: 0
-  m_DropSound: {fileID: 0}
-  m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients: []
-  properties: []
-  m_UseCategoryCooldown: 0
-  m_Cooldown: 3
-  actions:
-  - id: 0
-  - id: 1
-  - id: 2
-  - id: 3
-  - id: 4
-  - id: 5
-  - id: 6
-  - id: 7
-  - id: 8
-  - id: 9
-  references:
-    version: 1
-    00000000:
-      type: {class: InvokeNotify, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
-      data:
-        m_Type: 
-        m_Enabled: 1
-        m_Target: 1
-        m_ComponentName: StatsHandler
-        m_MethodName: CanApplyDamage
-        m_Arguments:
-        - m_BoolValue: 0
-          m_IntValue: 0
-          m_FloatValue: 0
-          m_StringValue: Mana
-          m_Vector2Value: {x: 0, y: 0}
-          m_Vector3Value: {x: 0, y: 0, z: 0}
-          m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
-          m_ObjectValue: {fileID: 0}
-          m_ArgumentType: 4
-        - m_BoolValue: 0
-          m_IntValue: 0
-          m_FloatValue: 4
-          m_StringValue: 
-          m_Vector2Value: {x: 0, y: 0}
-          m_Vector3Value: {x: 0, y: 0, z: 0}
-          m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
-          m_ObjectValue: {fileID: 0}
-          m_ArgumentType: 3
-        m_FailureNotification:
-          title: 
-          text: I don't have enough mana!
-          color: {r: 1, g: 1, b: 1, a: 1}
-          icon: {fileID: 0}
-          delay: 2
-          duration: 2
-          ignoreTimeScale: 1
-    00000001:
-      type: {class: Invoke, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: 
-        m_Enabled: 1
-        m_Target: 1
-        m_ComponentName: StatsHandler
-        m_MethodName: ApplyDamage
-        m_Arguments:
-        - m_BoolValue: 0
-          m_IntValue: 0
-          m_FloatValue: 0
-          m_StringValue: Mana
-          m_Vector2Value: {x: 0, y: 0}
-          m_Vector3Value: {x: 0, y: 0, z: 0}
-          m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
-          m_ObjectValue: {fileID: 0}
-          m_ArgumentType: 4
-        - m_BoolValue: 0
-          m_IntValue: 0
-          m_FloatValue: 4
-          m_StringValue: 
-          m_Vector2Value: {x: 0, y: 0}
-          m_Vector3Value: {x: 0, y: 0, z: 0}
-          m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
-          m_ObjectValue: {fileID: 0}
-          m_ArgumentType: 3
-    00000002:
-      type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
-      data:
-        m_Type: 
-        m_Enabled: 1
-        item: {fileID: 4447567160419299934}
-        m_GlobalCooldown: 3
-    00000003:
-      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: 
-        m_Enabled: 1
-        m_Target: 1
-        methodName: SetIK
-        m_Argument:
-          m_BoolValue: 0
-          m_IntValue: 0
-          m_FloatValue: 0
-          m_StringValue: 
-          m_Vector2Value: {x: 0, y: 0}
-          m_Vector3Value: {x: 0, y: 0, z: 0}
-          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
-          m_ObjectValue: {fileID: 0}
-          m_ArgumentType: 1
-        m_Options: 1
-    00000004:
-      type: {class: LookForward, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: 
-        m_Enabled: 1
-        m_Target: 1
-    00000005:
-      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: 
-        m_Enabled: 1
-        m_Target: 1
-        m_AnimatorState: Arcane Ball
-        m_TransitionDuration: 0.2
-    00000006:
-      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: 
-        m_Enabled: 1
-        duration: 1.2
-    00000007:
-      type: {class: Instantiate, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: 
-        m_Enabled: 1
-        m_Target: 1
-        m_Original: {fileID: 100014, guid: d6f72918cc3dd004584674be2b246697, type: 3}
-        m_BoneName: Spawnpoint
-        m_Offset: {x: 0, y: 0, z: 0}
-        m_IgnorePlayerCollision: 1
-    00000008:
-      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: 
-        m_Enabled: 1
-        duration: 1.2
-    00000009:
-      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: 
-        m_Enabled: 1
-        m_Target: 1
-        methodName: SetIK
-        m_Argument:
-          m_BoolValue: 1
-          m_IntValue: 0
-          m_FloatValue: 0
-          m_StringValue: 
-          m_Vector2Value: {x: 0, y: 0}
-          m_Vector3Value: {x: 0, y: 0, z: 0}
-          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
-          m_ObjectValue: {fileID: 0}
-          m_ArgumentType: 1
-        m_Options: 1
 --- !u!114 &5092307033516734736
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2900,31 +1788,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
-  m_Name: 
+  m_Name: Melee Weapon
   m_EditorClassIdentifier: 
   name: Melee Weapon
   m_EditorColor: {r: 0.8962264, g: 0.17846043, b: 0.012682426, a: 1}
   m_Cooldown: 2
---- !u!114 &5365859910722360372
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28fccac83a2fa2245991bffe45a6cdd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_GroupName: Skills
-  m_Items:
-  - {fileID: -2920532131010319874}
-  - {fileID: 7113904374044846821}
-  m_Amounts: 0100000001000000
-  m_Modifiers:
-  - modifiers: []
-  - modifiers: []
 --- !u!114 &5658350685615726283
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2935,7 +1803,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8f5f34ef39fbec438e689ea49ddb023, type: 3}
-  m_Name: 
+  m_Name: Left Hand
   m_EditorClassIdentifier: 
   name: Left Hand
 --- !u!114 &5786703032187707280
@@ -2948,39 +1816,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8f5f34ef39fbec438e689ea49ddb023, type: 3}
-  m_Name: 
+  m_Name: Amulet
   m_EditorClassIdentifier: 
   name: Amulet
---- !u!114 &6066131165606410366
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28fccac83a2fa2245991bffe45a6cdd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_GroupName: Spells
-  m_Items:
-  - {fileID: -4423743630002525559}
-  - {fileID: 4447567160419299934}
-  - {fileID: -5242721879078471986}
-  - {fileID: 678841275653576696}
-  - {fileID: 4117155973668914919}
-  - {fileID: -6382214904321203751}
-  - {fileID: 1337782666225268451}
-  m_Amounts: 01000000010000000100000001000000010000000100000001000000
-  m_Modifiers:
-  - modifiers: []
-  - modifiers: []
-  - modifiers: []
-  - modifiers: []
-  - modifiers: []
-  - modifiers: []
-  - modifiers: []
 --- !u!114 &6127056651903551046
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3008,7 +1846,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: 
+  m_Name: Arrow
   m_EditorClassIdentifier: 
   m_Id: 5607774a-5409-412d-916a-54ed6692f441
   m_ItemName: Arrow
@@ -3233,57 +2071,6 @@ MonoBehaviour:
     delay: 2
     duration: 2
     ignoreTimeScale: 1
---- !u!114 &6595735557147903839
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a9a3ee254b78a64481dccedbfd4ba41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Id: 8d6ade66-001d-4481-a70b-7db0a93db87d
-  m_ItemName: Mining
-  m_UseItemNameAsDisplayName: 1
-  m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: 575a1e2821f78e24bb70f3ba24d83bde, type: 3}
-  m_Prefab: {fileID: 0}
-  m_Description: Mining increases your chance of successfully harvest stones and
-    ores.
-  m_Category: {fileID: -8831619382594955781}
-  m_IsSellable: 1
-  m_BuyPrice: 124
-  m_CanBuyBack: 1
-  m_BuyCurrency: {fileID: -2811142919616601772}
-  m_SellPrice: 0
-  m_SellCurrency: {fileID: -2811142919616601772}
-  m_Stack: 1
-  m_MaxStack: 1
-  m_IsDroppable: 1
-  m_DropSound: {fileID: 0}
-  m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients: []
-  properties: []
-  m_UseCategoryCooldown: 1
-  m_Cooldown: 1
-  actions: []
-  m_FixedSuccessChance: 50
-  m_GainModifier: {fileID: 11400000, guid: 469cf9288efaed44a9d0eb78c6b58840, type: 2}
-  references:
-    version: 1
 --- !u!114 &7014612192586799646
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3294,7 +2081,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8f5f34ef39fbec438e689ea49ddb023, type: 3}
-  m_Name: 
+  m_Name: Legs
   m_EditorClassIdentifier: 
   name: Legs
 --- !u!114 &7065967425890585217
@@ -3314,56 +2101,6 @@ MonoBehaviour:
   queriesHitTriggers: 0
   debugMessages: 1
   showAllComponents: 0
---- !u!114 &7113904374044846821
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a9a3ee254b78a64481dccedbfd4ba41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Id: ef8c1dd7-2e04-4e14-838b-a24f50712dae
-  m_ItemName: Archery
-  m_UseItemNameAsDisplayName: 1
-  m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: 5d7061fc7da05ce44add317708ec7215, type: 3}
-  m_Prefab: {fileID: 0}
-  m_Description: Archery increases your damage and hit chance.
-  m_Category: {fileID: -8831619382594955781}
-  m_IsSellable: 1
-  m_BuyPrice: 0
-  m_CanBuyBack: 1
-  m_BuyCurrency: {fileID: -2811142919616601772}
-  m_SellPrice: 0
-  m_SellCurrency: {fileID: -2811142919616601772}
-  m_Stack: 1
-  m_MaxStack: 1
-  m_IsDroppable: 1
-  m_DropSound: {fileID: 0}
-  m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients: []
-  properties: []
-  m_UseCategoryCooldown: 1
-  m_Cooldown: 1
-  actions: []
-  m_FixedSuccessChance: 50
-  m_GainModifier: {fileID: 11400000, guid: 4b4c88aca3f41b5428addc167494186f, type: 2}
-  references:
-    version: 1
 --- !u!114 &7388703754817051196
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3374,7 +2111,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bd508013dff080478b54adc05db11e1, type: 3}
-  m_Name: 
+  m_Name: Rare
   m_EditorClassIdentifier: 
   name: Rare
   m_UseAsNamePrefix: 1
@@ -3392,7 +2129,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28fccac83a2fa2245991bffe45a6cdd1, type: 3}
-  m_Name: 
+  m_Name: Teleporter
   m_EditorClassIdentifier: 
   m_GroupName: Teleporter
   m_Items:
@@ -3404,24 +2141,6 @@ MonoBehaviour:
   - modifiers: []
   - modifiers: []
   - modifiers: []
---- !u!114 &8059426944790288259
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28fccac83a2fa2245991bffe45a6cdd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_GroupName: Start Inventory
-  m_Items:
-  - {fileID: 8429455951140046941}
-  m_Amounts: 05000000
-  m_Modifiers:
-  - modifiers: []
 --- !u!114 &8429455951140046941
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3432,7 +2151,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
-  m_Name: 
+  m_Name: Health Potion
   m_EditorClassIdentifier: 
   m_Id: 71139cc0-8276-4974-ab21-d551b4c013dd
   m_ItemName: Health Potion
@@ -3456,10 +2175,11 @@ MonoBehaviour:
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 1
   m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
+  m_UseCraftingSkill: 1
   m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
+  m_CraftingSkill: {fileID: -2308325603847997442, guid: e1f045c49e197e3439b99da9edbc5ba3,
+    type: 2}
+  m_RemoveIngredientsWhenFailed: 1
   m_MinCraftingSkillValue: 0
   m_CraftingAnimatorState: 
   m_CraftingModifier:
@@ -3534,7 +2254,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
-  m_Name: 
+  m_Name: Seraphina
   m_EditorClassIdentifier: 
   m_Id: 08ccfdf8-7007-4ce8-80e9-c7614f351595
   m_ItemName: Seraphina
@@ -3636,7 +2356,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
-  m_Name: 
+  m_Name: Armor
   m_EditorClassIdentifier: 
   name: Armor
   m_EditorColor: {r: 0.81960785, g: 0.6627451, b: 0.4, a: 1}
@@ -3651,7 +2371,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: 
+  m_Name: Iron
   m_EditorClassIdentifier: 
   m_Id: e893343b-3f8d-430c-85af-5a9ef62ed18c
   m_ItemName: Iron
@@ -3695,7 +2415,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bd508013dff080478b54adc05db11e1, type: 3}
-  m_Name: 
+  m_Name: Legendary
   m_EditorClassIdentifier: 
   name: Legendary
   m_UseAsNamePrefix: 1
@@ -3713,7 +2433,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28fccac83a2fa2245991bffe45a6cdd1, type: 3}
-  m_Name: 
+  m_Name: Blacksmithy
   m_EditorClassIdentifier: 
   m_GroupName: Blacksmithy
   m_Items:

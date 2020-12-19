@@ -7,10 +7,8 @@ namespace DevionGames.InventorySystem{
 	[CustomPropertyDrawer(typeof(EquipmentPickerAttribute))]
 	public class EquipmentPickerDrawer : PickerDrawer<EquipmentRegion> {
 
-		protected override List<EquipmentRegion> Items {
-			get {
-				return Database.equipments;
-			}
+		protected override List<EquipmentRegion> GetItems(ItemDatabase database) {
+			return database.equipments;
 		}
 	}
 }

@@ -128,9 +128,9 @@ namespace DevionGames.InventorySystem
             }
         }
 
-        public void Add (Item item)
+        public void Add (Item item, bool allowStacking = false)
 		{
-			this.m_Items.Add (item);
+            this.m_Items.Add (item);
             int index = m_Items.IndexOf(item);
 
             this.m_Amounts.Insert(index,item.Stack);
@@ -140,7 +140,9 @@ namespace DevionGames.InventorySystem
 
 		}
 
-		public bool Remove (Item item)
+     
+
+        public bool Remove (Item item)
 		{
             int index = m_Items.IndexOf(item);
             

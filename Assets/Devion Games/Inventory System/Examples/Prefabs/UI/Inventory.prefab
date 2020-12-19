@@ -4611,7 +4611,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bb22b138ec68f14884edf560442aaf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delegates: []
+  delegates:
+  - eventID: OnAddItem
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_MethodName: PlayOneShot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: 9ef5b527d90acaa428b516bbd9fc2cc4,
+              type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: OnRemoveItem
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_MethodName: PlayOneShot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: 9ef5b527d90acaa428b516bbd9fc2cc4,
+              type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   name: Inventory
   priority: 0
   m_KeyCode: 105
@@ -4665,13 +4697,9 @@ MonoBehaviour:
   - {fileID: -6266380644497530537, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
   - {fileID: -2811142919616601772, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
   - {fileID: -6442420119529586086, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
-  - {fileID: 8429455951140046941, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
   - {fileID: 529780001783015153, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
-  - {fileID: -4474190543486091594, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
-  m_Amounts: 010000002d00000001000000050000000100000001000000
+  m_Amounts: 010000002d0000000100000001000000
   m_Modifiers:
-  - modifiers: []
-  - modifiers: []
   - modifiers: []
   - modifiers: []
   - modifiers: []
@@ -4700,7 +4728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Categories:
-  - {fileID: -3989543302354102894, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
+  - {fileID: -3989543302354102894, guid: 0049234d696d6d54cbdfa5d0775e5081, type: 2}
   - {fileID: 164684216256526245, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
   invert: 1
 --- !u!1 &2740522862338347526

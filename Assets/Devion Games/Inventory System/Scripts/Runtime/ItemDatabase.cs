@@ -14,7 +14,6 @@ namespace DevionGames.InventorySystem{
         public List<ItemGroup> itemGroups = new List<ItemGroup>();
         public List<Configuration.Settings> settings = new List<Configuration.Settings>();
 
-		public List<string> folders = new List<string>();
 		public List<Item> allItems {
 			get {
 				List<Item> all = new List<Item>(items);
@@ -35,6 +34,15 @@ namespace DevionGames.InventorySystem{
 
 		public ItemGroup GetItemGroup(string name) {
 			return itemGroups.First(x => x.Name == name);
+		}
+
+		public void Merge(ItemDatabase database) {
+			items.AddRange(database.items.Where(y => !items.Any(z => z.Name == y.Name)));
+			currencies.AddRange(database.currencies.Where(y => !currencies.Any(z => z.Name == y.Name)));
+			raritys.AddRange(database.raritys.Where(y => !raritys.Any(z => z.Name == y.Name)));
+			categories.AddRange(database.categories.Where(y => !categories.Any(z => z.Name == y.Name)));
+			equipments.AddRange(database.equipments.Where(y => !equipments.Any(z => z.Name == y.Name)));
+			itemGroups.AddRange(database.itemGroups.Where(y => !itemGroups.Any(z => z.Name == y.Name)));
 		}
 	}
 }

@@ -32,12 +32,12 @@ namespace DevionGames.InventorySystem
             this.m_SearchString = "All";
 
 			//Fix old items without category
-			for (int i = 0; i < this.items.Count; i++) {
+			/*for (int i = 0; i < this.items.Count; i++) {
 				if (this.items[i].Category == null && InventorySystemEditor.Database.categories.Count > 0) {
 					this.items[i].Category = InventorySystemEditor.Database.categories[0];
 					EditorUtility.SetDirty(this.items[i]);
 				}
-			}
+			}*/
         }
 
 		protected override void Create()
@@ -73,10 +73,15 @@ namespace DevionGames.InventorySystem
 			return (item.Name.ToLower ().Contains (search.ToLower ()) || m_SearchString == searchFilter || search.ToLower() == item.GetType().Name.ToLower()) && (searchFilter == "All" || item.Category.Name == searchFilter);
 		}
 
-		protected override bool HasConfigurationErrors(Item item)
+		protected override string HasConfigurationErrors(Item item)
 		{
-			return Items.Any(x => !x.Equals(item) && x.Name == item.Name) ||
-				string.IsNullOrEmpty(item.Name);
+			if (string.IsNullOrEmpty(item.Name))
+				return "Name field can't be empty. Please enter a unique name.";
+
+			if (Items.Any(x => !x.Equals(item) && x.Name == item.Name))
+				return "Duplicate name. Item names need to be unique.";
+
+			return string.Empty;
 		}
 
         protected override void Duplicate(Item item)
@@ -96,12 +101,14 @@ namespace DevionGames.InventorySystem
         {
             Item item = (Item)ScriptableObject.CreateInstance(type);
 			item.hideFlags = HideFlags.HideInHierarchy;
-			if (InventorySystemEditor.Database.categories.Count > 0) {
-				item.Category = InventorySystemEditor.Database.categories[0];
+			ItemDatabase database = target as ItemDatabase;
+
+			if (database.categories.Count > 0) {
+				item.Category = database.categories[0];
 			}
-			if (InventorySystemEditor.Database.currencies.Count > 0) {
-				item.SellCurrency = InventorySystemEditor.Database.currencies[0];
-				item.BuyCurrency = InventorySystemEditor.Database.currencies[0];
+			if (database.currencies.Count > 0) {
+				item.SellCurrency = database.currencies[0];
+				item.BuyCurrency = database.currencies[0];
 			}
 
 			AssetDatabase.AddObjectToAsset(item, target);

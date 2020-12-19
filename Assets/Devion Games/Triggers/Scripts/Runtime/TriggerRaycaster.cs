@@ -63,7 +63,6 @@ namespace DevionGames
                 {
                     m_LastCameraHit = current;
                     EventHandler.Execute<int>(m_LastCameraHit, "OnPoinerClickTrigger", button);
-                    Debug.Log("Hit"+this.m_LastCameraHit.name);
                 }
                 
                 TriggerRaycaster.m_PointerOverTrigger = true;

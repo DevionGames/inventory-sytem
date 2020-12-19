@@ -4047,6 +4047,14 @@ MonoBehaviour:
   m_MovementFriction: {fileID: 13400000, guid: d80c3a53c8996074bbbe4f091ae77911, type: 2}
   m_StepFriction: {fileID: 13400000, guid: d80c3a53c8996074bbbe4f091ae77911, type: 2}
   m_AirFriction: {fileID: 13400000, guid: d80c3a53c8996074bbbe4f091ae77911, type: 2}
+  m_AudioMixerGroup: {fileID: -4332386921672122867, guid: 08813bea6fa2f304d8179aec903c1bd9,
+    type: 2}
+  m_FootstepClips:
+  - {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
+  - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
+  - {fileID: 8300000, guid: 5a9383dda6cabc047b7a297602e93eb4, type: 3}
+  - {fileID: 8300000, guid: e9714160ce34f2b4ab63ff8c27bd68e1, type: 3}
+  m_UseChildAnimator: 0
   m_ForwardDampTime: 0.15
   m_HorizontalDampTime: 0.15
   m_Motions:
@@ -4222,6 +4230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_WindowName: Equipment
+  m_Database: {fileID: 0}
   m_Bones:
   - region: {fileID: -1474344929657048262, guid: 1ae57b994efcab048a1bb130d4e11d83,
       type: 2}

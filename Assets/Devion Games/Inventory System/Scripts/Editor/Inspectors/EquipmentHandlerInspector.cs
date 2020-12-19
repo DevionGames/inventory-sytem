@@ -15,11 +15,13 @@ namespace DevionGames.InventorySystem
         private SerializedProperty m_Script;
         private SerializedProperty m_WindowName;
         private GameObject gameObject;
+        private SerializedProperty m_Database;
 
         private void OnEnable()
         {
             this.m_Script = serializedObject.FindProperty("m_Script");
             this.m_WindowName = serializedObject.FindProperty("m_WindowName");
+            this.m_Database = serializedObject.FindProperty("m_Database");
             EquipmentHandler handler = target as EquipmentHandler;
             gameObject = handler.gameObject;
 
@@ -82,13 +84,7 @@ namespace DevionGames.InventorySystem
 
             if (EditorTools.RightArrowButton(new GUIContent("Bones"), GUILayout.Height(24f)))
             {
-
-                if (InventorySystemEditor.Database == null){
-                    InventorySystemEditor.SelectDatabase(delegate { UtilityInstanceWindow.CloseWindow(); ShowBoneMap(); });
-                }
-                else {
-                    ShowBoneMap();
-                }
+                ShowBoneMap();
             }
 
             if (EditorTools.RightArrowButton(new GUIContent("Items"), GUILayout.Height(24f)))
@@ -106,9 +102,16 @@ namespace DevionGames.InventorySystem
         {
             UtilityInstanceWindow.ShowWindow("Bones", delegate ()
             {
+
+                SelectDatabaseButton();
+                GUILayout.Space(3f);  
+                ItemDatabase database = this.m_Database.objectReferenceValue as ItemDatabase;
+                if (database == null)
+                    return;
+
                 List<EquipmentHandler.EquipmentBone> bones = (target as EquipmentHandler).Bones;
-                var firstNotSecond = InventorySystemEditor.Database.equipments.Except(bones.Select(x => x.region)).ToList();
-                var secondNotFirst = bones.Select(x => x.region).Except(InventorySystemEditor.Database.equipments).ToList();
+                var firstNotSecond = database.equipments.Except(bones.Select(x => x.region)).ToList();
+                var secondNotFirst = bones.Select(x => x.region).Except(database.equipments).ToList();
 
                 for (int i = 0; i < firstNotSecond.Count; i++)
                 {
@@ -119,7 +122,6 @@ namespace DevionGames.InventorySystem
                 {
                     bones.RemoveAll(x => x.region == secondNotFirst[i]);
                 }
-             
 
                 SerializedProperty property = serializedObject.FindProperty("m_Bones");
                 serializedObject.Update();
@@ -141,6 +143,30 @@ namespace DevionGames.InventorySystem
             });
         }
 
+
+        private void SelectDatabaseButton()
+        {
+            EditorGUILayout.BeginHorizontal();
+            EditorGUILayout.LabelField("Database", GUILayout.Width(120f));
+            ItemDatabase database = this.m_Database.objectReferenceValue as ItemDatabase;
+            GUIStyle buttonStyle = EditorStyles.objectField;
+            GUIContent buttonContent = new GUIContent(database != null ? database.name : "Null");
+            Rect buttonRect = GUILayoutUtility.GetRect(buttonContent,buttonStyle);
+            //buttonRect = EditorGUI.PrefixLabel(buttonRect, new GUIContent("Database"));
+            if (GUI.Button(buttonRect, buttonContent, buttonStyle))
+            {
+                ObjectPickerWindow.ShowWindow(buttonRect, typeof(ItemDatabase),
+                    (UnityEngine.Object obj) => {
+                        serializedObject.Update();
+                        this.m_Database.objectReferenceValue = obj;
+                        serializedObject.ApplyModifiedProperties();
+                    },
+                    () => {
+                      
+                    });
+            }
+            EditorGUILayout.EndHorizontal();
+        }
 
         private SerializedProperty InsertEquipmentBone(EquipmentRegion region) {
             SerializedProperty bones = serializedObject.FindProperty("m_Bones");

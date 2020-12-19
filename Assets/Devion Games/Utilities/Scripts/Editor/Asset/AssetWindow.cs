@@ -59,16 +59,40 @@ namespace DevionGames
                 window.m_Editors.Add(editor);
             }
             window.FixMissingAssets();
-            EditorApplication.playModeStateChanged += OnPlaymodeStateChange;
+          //  EditorApplication.playModeStateChanged += OnPlaymodeStateChange;
             window.ShowUtility();
         }
 
-        protected static void OnPlaymodeStateChange(PlayModeStateChange state) {
+        private void OnEnable()
+        {
+            AssemblyReloadEvents.afterAssemblyReload += OnAfterAssemblyReload;
+            EditorApplication.playModeStateChanged += OnPlayModeStateChanged;
+        }
+
+        private void OnDisable()
+        {
+            AssemblyReloadEvents.afterAssemblyReload -= OnAfterAssemblyReload;
+            EditorApplication.playModeStateChanged -= OnPlayModeStateChanged;
+        }
+
+
+        protected virtual void OnPlayModeStateChanged(PlayModeStateChange state)
+        {
+            Close();
+        }
+
+        protected virtual void OnAfterAssemblyReload()
+        {
+            Close();
+        }
+
+
+        /*protected static void OnPlaymodeStateChange(PlayModeStateChange state) {
             AssetWindow[] objArray = Resources.FindObjectsOfTypeAll<AssetWindow>();
             for (int i = 0; i < objArray.Length; i++) {
                 objArray[i].Close();
             }
-        }
+        }*/
 
         protected virtual void OnGUI()
         {

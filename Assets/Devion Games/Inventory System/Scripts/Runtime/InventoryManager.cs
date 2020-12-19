@@ -13,7 +13,12 @@ namespace DevionGames.InventorySystem
 {
 	public class InventoryManager : MonoBehaviour
 	{
-		private static InventoryManager m_Current;
+        /// <summary>
+		/// Don't destroy this object instance when loading new scenes.
+		/// </summary>
+		public bool dontDestroyOnLoad = true;
+
+        private static InventoryManager m_Current;
 
 		/// <summary>
 		/// The InventoryManager singleton object. This object is set inside Awake()
@@ -42,6 +47,9 @@ namespace DevionGames.InventorySystem
 				return null;
 			}
 		}
+
+        [SerializeField]
+        private ItemDatabase[] m_ChildDatabases= null;
 
         private static Default m_DefaultSettings;
         public static Default DefaultSettings {
@@ -125,11 +133,6 @@ namespace DevionGames.InventorySystem
             }
         }
 
-		/// <summary>
-		/// Don't destroy this object instance when loading new scenes.
-		/// </summary>
-		public bool dontDestroyOnLoad = true;
-
         [HideInInspector]
         public UnityEvent onDataLoaded;
         [HideInInspector]
@@ -163,7 +166,13 @@ namespace DevionGames.InventorySystem
                     PhysicsRaycaster physicsRaycaster = Camera.main.gameObject.AddComponent<PhysicsRaycaster>();
                     physicsRaycaster.eventMask = Physics.DefaultRaycastLayers;
                 }
-           
+
+                this.m_Database = ScriptableObject.Instantiate(this.m_Database);
+                for (int i = 0; i < this.m_ChildDatabases.Length; i++) {
+                    ItemDatabase child = this.m_ChildDatabases[i];
+                    this.m_Database.Merge(child);
+                }
+
                 m_PrefabCache = new Dictionary<string, GameObject>();
                 UnityEngine.SceneManagement.SceneManager.activeSceneChanged += ChangedActiveScene;
 

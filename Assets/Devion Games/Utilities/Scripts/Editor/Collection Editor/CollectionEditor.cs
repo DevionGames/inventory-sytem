@@ -114,7 +114,7 @@ namespace DevionGames{
 					continue;
 				}
 				
-				using (var h = new EditorGUILayout.HorizontalScope(Styles.selectButton, GUILayout.Height(25)))
+				using (var h = new EditorGUILayout.HorizontalScope(Styles.selectButton, GUILayout.Height(25f)))
 				{
 					Color backgroundColor = GUI.backgroundColor;
 					Color textColor = Styles.selectButtonText.normal.textColor;
@@ -132,37 +132,6 @@ namespace DevionGames{
 						Styles.selectButtonText.fontStyle = FontStyle.Normal;
 					}
 
-					if (HasConfigurationErrors(currentItem)) {
-						GUI.backgroundColor = Styles.warningColor;
-					}
-
-					//Context Click
-					/*if (h.rect.Contains(Event.current.mousePosition) && Event.current.type == EventType.MouseDown && Event.current.button==1)
-					{
-						GenericMenu contextMenu = new GenericMenu();
-						if(CanRemove)
-							contextMenu.AddItem(new GUIContent("Delete"), false, delegate { Remove(currentItem); });
-						if (CanDuplicate)
-							contextMenu.AddItem(new GUIContent("Duplicate"), false, delegate { Duplicate(currentItem); });
-						int oldIndex = Items.IndexOf(currentItem);
-						if (CanMove(currentItem, oldIndex - 1))
-						{
-							contextMenu.AddItem(new GUIContent("Move Up"), false, delegate { MoveUp(currentItem); });
-						}else {
-							contextMenu.AddDisabledItem(new GUIContent("Move Up"));
-						}
-						if (CanMove(currentItem, oldIndex + 1))
-						{
-							contextMenu.AddItem(new GUIContent("Move Down"), false, delegate { MoveDown(currentItem); });
-						}else {
-							contextMenu.AddDisabledItem(new GUIContent("Move Down"));
-						}
-
-						AddContextItem(contextMenu);
-						contextMenu.ShowAsContext();
-						Event.current.Use();
-					}*/
-
 					GUI.Label(h.rect, GUIContent.none, Styles.selectButton);
 					Rect rect = h.rect;
 					rect.width -= LIST_RESIZE_WIDTH * 0.5f;
@@ -174,6 +143,13 @@ namespace DevionGames{
 					}
 					DrawItemLabel(i, currentItem);
 
+					string error = HasConfigurationErrors(currentItem);
+					if (!string.IsNullOrEmpty(error))
+					{
+						GUI.backgroundColor = Styles.warningColor;
+						Rect errorRect = new Rect(h.rect.width - 20f, h.rect.y+4.5f, 16f, 16f);
+						GUI.Label(errorRect, new GUIContent("",error), (GUIStyle)"CN EntryWarnIconSmall");
+					}
 					GUI.backgroundColor = backgroundColor;
 					Styles.selectButtonText.normal.textColor = textColor;
 					Styles.selectButtonText.fontStyle = FontStyle.Normal;
@@ -340,8 +316,8 @@ namespace DevionGames{
 		/// </summary>
 		/// <param name="item"></param>
 		/// <returns></returns>
-		protected virtual bool HasConfigurationErrors(T item) {
-			return false;
+		protected virtual string HasConfigurationErrors(T item) {
+			return string.Empty;
 		}
 
 		/// <summary>
@@ -496,6 +472,7 @@ namespace DevionGames{
 			public static Color activeColor;
 			public static Color warningColor;
 			public static GUIStyle dragInsertion;
+			public static Texture2D errorIcon;
 
 			public static GUIStyle indicatorColor;
 
@@ -513,6 +490,7 @@ namespace DevionGames{
 				hoverColor = EditorGUIUtility.isProSkin ? new Color(0.266f, 0.266f, 0.266f, 1f):new Color(0.69f,0.69f,0.69f,1f);
 				activeColor = EditorGUIUtility.isProSkin ? new Color(0.172f, 0.364f, 0.529f, 1f):new Color(0.243f,0.459f,0.761f,1f);
 				warningColor = new Color(0.9f,0.37f,0.32f,1f);
+				errorIcon = EditorGUIUtility.LoadRequired("console.erroricon") as Texture2D;
 
 				minusButton = new GUIStyle ("OL Minus"){
 					margin=new RectOffset(0,0,4,0)

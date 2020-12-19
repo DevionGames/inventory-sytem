@@ -27,9 +27,9 @@ namespace DevionGames.InventorySystem
             this.m_Modifiers = serializedObject.FindProperty("m_Modifiers");
 
 
-            if (this.m_Items.arraySize > 0) {
+           /* if (this.m_Items.arraySize > 0) {
                 CheckForDatabase(this.m_Items.GetArrayElementAtIndex(0).objectReferenceValue);
-            }
+            }*/
             CreateItemList(serializedObject, this.m_Items);
         }
 
@@ -125,7 +125,7 @@ namespace DevionGames.InventorySystem
             };
         }
 
-        private void CheckForDatabase(Object current)
+       /* private void CheckForDatabase(Object current)
         {
             if (InventorySystemEditor.Database == null && current != null)
             {
@@ -152,7 +152,7 @@ namespace DevionGames.InventorySystem
 
                 }
             }
-        }
+        }*/
 
         public override void OnInspectorGUI ()
 		{
@@ -163,7 +163,7 @@ namespace DevionGames.InventorySystem
 			serializedObject.Update ();
             EditorGUILayout.PropertyField(savebale);
 			GUILayout.Space (3f);
-			m_ItemList.elementHeight = (InventorySystemEditor.Database != null && (InventorySystemEditor.Database.items.Count > 0 || InventorySystemEditor.Database.currencies.Count>0) || m_ItemList.count == 0 ? 21 : (30 + EditorGUIUtility.singleLineHeight + 4));
+			//m_ItemList.elementHeight = (InventorySystemEditor.Database != null && (InventorySystemEditor.Database.items.Count > 0 || InventorySystemEditor.Database.currencies.Count>0) || m_ItemList.count == 0 ? 21 : (30 + EditorGUIUtility.singleLineHeight + 4));
 			m_ItemList.DoLayoutList ();
             EditorGUILayout.Space();
             if (this.m_ModifierList != null)

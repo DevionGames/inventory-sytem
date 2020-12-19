@@ -1,0 +1,1527 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8373593952731256949
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cefcd19cdc9839d449772c4dce1503f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoSave: 0
+  savingKey: Player
+  savingRate: 60
+  provider: 0
+--- !u!114 &-8216026199854185599
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cefcd19cdc9839d449772c4dce1503f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoSave: 1
+  savingKey: Player
+  savingRate: 10
+  provider: 0
+--- !u!114 &-8057506047932969836
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d0d5578788bb14ba70b8a002ce205b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unstackEvent: -1
+  unstackKeyCode: 304
+--- !u!114 &-6382214904321203751
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
+  m_Name: Rampage
+  m_EditorClassIdentifier: 
+  m_Id: 4ebb63c9-d2a0-46b1-8f03-4d9e807077ea
+  m_ItemName: Rampage
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: 38b3b88139f32f14f86fb7a607ff1aed, type: 3}
+  m_Prefab: {fileID: 0}
+  m_Description: '[Requires Melee Weapon]
+
+    Unleashes a series of 3 brutal strikes.'
+  m_Category: {fileID: -3989543302354102894}
+  m_IsSellable: 0
+  m_BuyPrice: 0
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: 0}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: 0}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 0
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 0
+  m_Cooldown: 4
+  actions:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  - id: 5
+  - id: 6
+  references:
+    version: 1
+    00000000:
+      type: {class: HasCategoryItem, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.HasCategoryItem
+        m_Enabled: 1
+        requiredItems:
+        - item: {fileID: 0}
+          category: {fileID: 5270022900184783660, guid: 1ae57b994efcab048a1bb130d4e11d83,
+            type: 2}
+          boolValue: 0
+          stringValue: Equipment
+          intValue: 0
+    00000001:
+      type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.ItemActions.Cooldown
+        m_Enabled: 1
+        item: {fileID: -6382214904321203751}
+        m_GlobalCooldown: 1.5
+    00000002:
+      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.SendMessage
+        m_Enabled: 1
+        m_Target: 1
+        methodName: SetIK
+        m_Argument:
+          m_BoolValue: 0
+          m_IntValue: 0
+          m_FloatValue: 0
+          m_StringValue: 
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 1
+        m_Options: 1
+    00000003:
+      type: {class: LookForward, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.LookForward
+        m_Enabled: 1
+        m_Target: 1
+    00000004:
+      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.CrossFade
+        m_Enabled: 1
+        m_Target: 1
+        m_AnimatorState: Rampage
+        m_TransitionDuration: 0.15
+    00000005:
+      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.Wait
+        m_Enabled: 1
+        duration: 2
+    00000006:
+      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.SendMessage
+        m_Enabled: 1
+        m_Target: 1
+        methodName: SetIK
+        m_Argument:
+          m_BoolValue: 1
+          m_IntValue: 0
+          m_FloatValue: 0
+          m_StringValue: 
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 1
+        m_Options: 1
+--- !u!114 &-6294223960729143046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
+  m_Name: None
+  m_EditorClassIdentifier: 
+  name: None
+  m_EditorColor: {r: 1, g: 1, b: 1, a: 0}
+  m_Cooldown: 1
+--- !u!114 &-5242721879078471986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
+  m_Name: Whirlwind
+  m_EditorClassIdentifier: 
+  m_Id: ffa330cd-cea5-412e-bfed-83043311b538
+  m_ItemName: Whirlwind
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: 689cfa66960522b42967dfe06ccab49f, type: 3}
+  m_Prefab: {fileID: 0}
+  m_Description: '[Requires Melee Weapon]
+
+    In a whirl of steel you attack all
+    enemies in range.'
+  m_Category: {fileID: -3989543302354102894}
+  m_IsSellable: 0
+  m_BuyPrice: 0
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: 0}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: 0}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 0
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 0
+  m_Cooldown: 3
+  actions:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  references:
+    version: 1
+    00000000:
+      type: {class: HasCategoryItem, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.HasCategoryItem
+        m_Enabled: 1
+        requiredItems:
+        - item: {fileID: 0}
+          category: {fileID: 5270022900184783660, guid: 1ae57b994efcab048a1bb130d4e11d83,
+            type: 2}
+          boolValue: 0
+          stringValue: Equipment
+          intValue: 0
+    00000001:
+      type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.ItemActions.Cooldown
+        m_Enabled: 1
+        item: {fileID: -5242721879078471986}
+        m_GlobalCooldown: 1
+    00000002:
+      type: {class: LookForward, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.LookForward
+        m_Enabled: 1
+        m_Target: 1
+    00000003:
+      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.CrossFade
+        m_Enabled: 1
+        m_Target: 1
+        m_AnimatorState: Whirlwind
+        m_TransitionDuration: 0.2
+--- !u!114 &-4423743630002525559
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
+  m_Name: Healing
+  m_EditorClassIdentifier: 
+  m_Id: 5bf4d465-0a9f-4bae-b804-60cbc81d48b5
+  m_ItemName: Healing
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: 4fb083f2779c6a54b83359c8e1f645ae, type: 3}
+  m_Prefab: {fileID: 100010, guid: 1b80c9f94defa634487a6d9f6e386f6a, type: 3}
+  m_Description: Restores your health by 13 points.
+  m_Category: {fileID: -3989543302354102894}
+  m_IsSellable: 0
+  m_BuyPrice: 0
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: 0}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: 0}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 0
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 0
+  m_Cooldown: 5
+  actions:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  - id: 5
+  - id: 6
+  - id: 7
+  - id: 8
+  - id: 9
+  references:
+    version: 1
+    00000000:
+      type: {class: InvokeNotify, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: 
+        m_Enabled: 1
+        m_Target: 1
+        m_ComponentName: StatsHandler
+        m_MethodName: CanApplyDamage
+        m_Arguments:
+        - m_BoolValue: 0
+          m_IntValue: 0
+          m_FloatValue: 0
+          m_StringValue: Mana
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 4
+        - m_BoolValue: 0
+          m_IntValue: 0
+          m_FloatValue: 5
+          m_StringValue: 
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 3
+        m_FailureNotification:
+          title: 
+          text: I don't have enough mana!
+          color: {r: 1, g: 1, b: 1, a: 1}
+          icon: {fileID: 0}
+          delay: 2
+          duration: 2
+          ignoreTimeScale: 1
+    00000001:
+      type: {class: Invoke, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: 
+        m_Enabled: 1
+        m_Target: 1
+        m_ComponentName: StatsHandler
+        m_MethodName: ApplyDamage
+        m_Arguments:
+        - m_BoolValue: 0
+          m_IntValue: 0
+          m_FloatValue: 0
+          m_StringValue: Mana
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 4
+        - m_BoolValue: 0
+          m_IntValue: 0
+          m_FloatValue: 5
+          m_StringValue: 
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 3
+    00000002:
+      type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: 
+        m_Enabled: 1
+        item: {fileID: -4423743630002525559}
+        m_GlobalCooldown: 5
+    00000003:
+      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: 
+        m_Enabled: 1
+        m_Target: 1
+        methodName: SetIK
+        m_Argument:
+          m_BoolValue: 0
+          m_IntValue: 0
+          m_FloatValue: 0
+          m_StringValue: 
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 1
+        m_Options: 1
+    00000004:
+      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: 
+        m_Enabled: 1
+        m_Target: 1
+        m_AnimatorState: Healing
+        m_TransitionDuration: 0.2
+    00000005:
+      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: 
+        m_Enabled: 1
+        duration: 0.5
+    00000006:
+      type: {class: Instantiate, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: 
+        m_Enabled: 1
+        m_Target: 1
+        m_Original: {fileID: 100010, guid: 1b80c9f94defa634487a6d9f6e386f6a, type: 3}
+        m_BoneName: 
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_IgnorePlayerCollision: 1
+    00000007:
+      type: {class: Invoke, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: 
+        m_Enabled: 1
+        m_Target: 1
+        m_ComponentName: StatsHandler
+        m_MethodName: ApplyDamage
+        m_Arguments:
+        - m_BoolValue: 0
+          m_IntValue: 0
+          m_FloatValue: 0
+          m_StringValue: Health
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 4
+        - m_BoolValue: 0
+          m_IntValue: 0
+          m_FloatValue: -13
+          m_StringValue: 
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 3
+    00000008:
+      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: 
+        m_Enabled: 1
+        duration: 1.2
+    00000009:
+      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: 
+        m_Enabled: 1
+        m_Target: 1
+        methodName: SetIK
+        m_Argument:
+          m_BoolValue: 1
+          m_IntValue: 0
+          m_FloatValue: 0
+          m_StringValue: 
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 1
+        m_Options: 1
+--- !u!114 &-4242386034172315359
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d75ad62c39bcb4544a7ae046cdfd8b59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contextMenuName: ContextMenu
+  tooltipName: Tooltip
+  sellPriceTooltipName: Sell Price Tooltip
+  stackName: Stack
+  notificationName: Notification
+--- !u!114 &-3989543302354102894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
+  m_Name: Spells
+  m_EditorClassIdentifier: 
+  name: Spells
+  m_EditorColor: {r: 0, g: 0, b: 0, a: 0}
+  m_Cooldown: 1
+--- !u!114 &-3817802777368614781
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a031a30894f085742887ec331ba7d697, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+  maxDropDistance: 1
+  queriesHitTriggers: 0
+  debugMessages: 1
+  showAllComponents: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138669a60fd8dc345859b20ddc2ad589, type: 3}
+  m_Name: Spells Database
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: -4423743630002525559}
+  - {fileID: 4447567160419299934}
+  - {fileID: -6382214904321203751}
+  - {fileID: 1337782666225268451}
+  - {fileID: 678841275653576696}
+  - {fileID: 4117155973668914919}
+  - {fileID: -5242721879078471986}
+  currencies: []
+  raritys: []
+  categories:
+  - {fileID: -6294223960729143046}
+  - {fileID: -3989543302354102894}
+  equipments: []
+  itemGroups:
+  - {fileID: 6066131165606410366}
+  settings:
+  - {fileID: -3817802777368614781}
+  - {fileID: -8057506047932969836}
+  - {fileID: 9220062648813220349}
+  - {fileID: -8216026199854185599}
+  - {fileID: -4242386034172315359}
+--- !u!114 &678841275653576696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
+  m_Name: Cleave
+  m_EditorClassIdentifier: 
+  m_Id: 4a75541b-b7a8-4c5b-b9f0-b7e4de1d5021
+  m_ItemName: Cleave
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: 999fb9081b153d14f974e8b7e62e765c, type: 3}
+  m_Prefab: {fileID: 0}
+  m_Description: '[Requires Melee Weapon]
+
+    Jumps forward and deals damage to
+    enemies in front.'
+  m_Category: {fileID: -3989543302354102894}
+  m_IsSellable: 0
+  m_BuyPrice: 0
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: 0}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: 0}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 0
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 0
+  m_Cooldown: 2
+  actions:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  references:
+    version: 1
+    00000000:
+      type: {class: HasCategoryItem, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.HasCategoryItem
+        m_Enabled: 1
+        requiredItems:
+        - item: {fileID: 0}
+          category: {fileID: 5270022900184783660, guid: 1ae57b994efcab048a1bb130d4e11d83,
+            type: 2}
+          boolValue: 0
+          stringValue: Equipment
+          intValue: 0
+    00000001:
+      type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.ItemActions.Cooldown
+        m_Enabled: 1
+        item: {fileID: 678841275653576696}
+        m_GlobalCooldown: 1
+    00000002:
+      type: {class: LookForward, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.LookForward
+        m_Enabled: 1
+        m_Target: 1
+    00000003:
+      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.CrossFade
+        m_Enabled: 1
+        m_Target: 1
+        m_AnimatorState: Cleave
+        m_TransitionDuration: 0.2
+--- !u!114 &1337782666225268451
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
+  m_Name: Critical Strike
+  m_EditorClassIdentifier: 
+  m_Id: e7af1b90-6359-4e6b-854a-08d3e387fe8c
+  m_ItemName: Critical Strike
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: 2d034c37f8148c849b278b3ac169a82b, type: 3}
+  m_Prefab: {fileID: 0}
+  m_Description: Increases your critical strike by 60% for 18 seconds.
+  m_Category: {fileID: -3989543302354102894}
+  m_IsSellable: 0
+  m_BuyPrice: 0
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: 0}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: 0}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 0
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 0
+  m_Cooldown: 20
+  actions:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  - id: 5
+  - id: 6
+  references:
+    version: 1
+    00000000:
+      type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.ItemActions.Cooldown
+        m_Enabled: 1
+        item: {fileID: 1337782666225268451}
+        m_GlobalCooldown: 0.5
+    00000001:
+      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.CrossFade
+        m_Enabled: 1
+        m_Target: 1
+        m_AnimatorState: Power Up
+        m_TransitionDuration: 0.2
+    00000002:
+      type: {class: AddModifier, ns: DevionGames.StatSystem, asm: DevionGames.StatSystem}
+      data:
+        m_Type: DevionGames.StatSystem.AddModifier
+        m_Enabled: 1
+        m_Target: 1
+        m_StatName: Critical Strike
+        m_Value: 60
+        m_ModType: 0
+    00000003:
+      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.Wait
+        m_Enabled: 1
+        duration: 1
+    00000004:
+      type: {class: Instantiate, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.Instantiate
+        m_Enabled: 1
+        m_Target: 0
+        m_Original: {fileID: 4307183168818881248, guid: 4586b6b9da842354fbb0f42d7f059219,
+          type: 3}
+        m_BoneName: 
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_IgnorePlayerCollision: 1
+    00000005:
+      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.Wait
+        m_Enabled: 1
+        duration: 17
+    00000006:
+      type: {class: AddModifier, ns: DevionGames.StatSystem, asm: DevionGames.StatSystem}
+      data:
+        m_Type: DevionGames.StatSystem.AddModifier
+        m_Enabled: 1
+        m_Target: 1
+        m_StatName: Critical Strike
+        m_Value: -60
+        m_ModType: 0
+--- !u!114 &4117155973668914919
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
+  m_Name: Slam
+  m_EditorClassIdentifier: 
+  m_Id: f0b544fe-1881-4b31-93c8-d9a54ad27266
+  m_ItemName: Slam
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: 0b686e3c5bb0acb44809a4e72d303e3d, type: 3}
+  m_Prefab: {fileID: 0}
+  m_Description: '[Requires Melee Weapon]
+
+    Slams an opponent.'
+  m_Category: {fileID: -3989543302354102894}
+  m_IsSellable: 0
+  m_BuyPrice: 0
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: 0}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: 0}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 0
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 0
+  m_Cooldown: 1
+  actions:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  references:
+    version: 1
+    00000000:
+      type: {class: HasCategoryItem, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.HasCategoryItem
+        m_Enabled: 1
+        requiredItems:
+        - item: {fileID: 0}
+          category: {fileID: 5270022900184783660, guid: 1ae57b994efcab048a1bb130d4e11d83,
+            type: 2}
+          boolValue: 0
+          stringValue: Equipment
+          intValue: 0
+    00000001:
+      type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.ItemActions.Cooldown
+        m_Enabled: 1
+        item: {fileID: 4117155973668914919}
+        m_GlobalCooldown: 0.5
+    00000002:
+      type: {class: LookForward, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.LookForward
+        m_Enabled: 1
+        m_Target: 1
+    00000003:
+      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.CrossFade
+        m_Enabled: 1
+        m_Target: 1
+        m_AnimatorState: Sword Slash
+        m_TransitionDuration: 0.2
+--- !u!114 &4187599761675176531
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d75ad62c39bcb4544a7ae046cdfd8b59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contextMenuName: ContextMenu
+  tooltipName: Tooltip
+  sellPriceTooltipName: Sell Price Tooltip
+  stackName: Stack
+  notificationName: Notification
+--- !u!114 &4447567160419299934
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
+  m_Name: Arcane Ball
+  m_EditorClassIdentifier: 
+  m_Id: 5bf4d465-0a9f-4bae-b804-60cbc81d48b5
+  m_ItemName: Arcane Ball
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: ec24783658f55204083d307b3f27395e, type: 3}
+  m_Prefab: {fileID: 100014, guid: d6f72918cc3dd004584674be2b246697, type: 3}
+  m_Description: Cast a magical arcane ball.
+  m_Category: {fileID: -3989543302354102894}
+  m_IsSellable: 0
+  m_BuyPrice: 0
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: 0}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: 0}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 0
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 0
+  m_Cooldown: 3
+  actions:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  - id: 5
+  - id: 6
+  - id: 7
+  - id: 8
+  - id: 9
+  references:
+    version: 1
+    00000000:
+      type: {class: InvokeNotify, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: 
+        m_Enabled: 1
+        m_Target: 1
+        m_ComponentName: StatsHandler
+        m_MethodName: CanApplyDamage
+        m_Arguments:
+        - m_BoolValue: 0
+          m_IntValue: 0
+          m_FloatValue: 0
+          m_StringValue: Mana
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 4
+        - m_BoolValue: 0
+          m_IntValue: 0
+          m_FloatValue: 4
+          m_StringValue: 
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 3
+        m_FailureNotification:
+          title: 
+          text: I don't have enough mana!
+          color: {r: 1, g: 1, b: 1, a: 1}
+          icon: {fileID: 0}
+          delay: 2
+          duration: 2
+          ignoreTimeScale: 1
+    00000001:
+      type: {class: Invoke, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: 
+        m_Enabled: 1
+        m_Target: 1
+        m_ComponentName: StatsHandler
+        m_MethodName: ApplyDamage
+        m_Arguments:
+        - m_BoolValue: 0
+          m_IntValue: 0
+          m_FloatValue: 0
+          m_StringValue: Mana
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 4
+        - m_BoolValue: 0
+          m_IntValue: 0
+          m_FloatValue: 4
+          m_StringValue: 
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 3
+    00000002:
+      type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: 
+        m_Enabled: 1
+        item: {fileID: 4447567160419299934}
+        m_GlobalCooldown: 3
+    00000003:
+      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: 
+        m_Enabled: 1
+        m_Target: 1
+        methodName: SetIK
+        m_Argument:
+          m_BoolValue: 0
+          m_IntValue: 0
+          m_FloatValue: 0
+          m_StringValue: 
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 1
+        m_Options: 1
+    00000004:
+      type: {class: LookForward, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: 
+        m_Enabled: 1
+        m_Target: 1
+    00000005:
+      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: 
+        m_Enabled: 1
+        m_Target: 1
+        m_AnimatorState: Arcane Ball
+        m_TransitionDuration: 0.2
+    00000006:
+      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: 
+        m_Enabled: 1
+        duration: 1.2
+    00000007:
+      type: {class: Instantiate, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: 
+        m_Enabled: 1
+        m_Target: 1
+        m_Original: {fileID: 100014, guid: d6f72918cc3dd004584674be2b246697, type: 3}
+        m_BoneName: Spawnpoint
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_IgnorePlayerCollision: 1
+    00000008:
+      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: 
+        m_Enabled: 1
+        duration: 1.2
+    00000009:
+      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: 
+        m_Enabled: 1
+        m_Target: 1
+        methodName: SetIK
+        m_Argument:
+          m_BoolValue: 1
+          m_IntValue: 0
+          m_FloatValue: 0
+          m_StringValue: 
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 1
+        m_Options: 1
+--- !u!114 &5092307033516734736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d0d5578788bb14ba70b8a002ce205b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unstackEvent: -1
+  unstackKeyCode: 304
+--- !u!114 &6066131165606410366
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28fccac83a2fa2245991bffe45a6cdd1, type: 3}
+  m_Name: Spells
+  m_EditorClassIdentifier: 
+  m_GroupName: Spells
+  m_Items:
+  - {fileID: -4423743630002525559}
+  - {fileID: 4447567160419299934}
+  - {fileID: -5242721879078471986}
+  - {fileID: 678841275653576696}
+  - {fileID: 4117155973668914919}
+  - {fileID: -6382214904321203751}
+  - {fileID: 1337782666225268451}
+  m_Amounts: 01000000010000000100000001000000010000000100000001000000
+  m_Modifiers:
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
+--- !u!114 &6127056651903551046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a031a30894f085742887ec331ba7d697, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+  maxDropDistance: 3
+  queriesHitTriggers: 0
+  debugMessages: 1
+  showAllComponents: 0
+--- !u!114 &6503011437292745313
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d75ad62c39bcb4544a7ae046cdfd8b59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contextMenuName: ContextMenu
+  tooltipName: Tooltip
+  sellPriceTooltipName: Sell Price Tooltip
+  stackName: Stack
+  notificationName: Notification
+--- !u!114 &6580122338069936885
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3872ca8d5c2640d40b898af499332431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  containerFull:
+    title: 
+    text: Your {0} is full!
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  failedRestriction:
+    title: 
+    text: '{0} can''t be added to {1}.'
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  missingItem:
+    title: 
+    text: This action requires {0}.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  missingCategoryItem:
+    title: 
+    text: This action requires {0}.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  inCooldown:
+    title: 
+    text: '{0} is in cooldown for {1} seconds!'
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  selectItem:
+    title: 
+    text: Select an item you would like to craft.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  alreadyCrafting:
+    title: 
+    text: You are already crafting.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  craftedItem:
+    title: 
+    text: Successfully crafted {0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  missingIngredient:
+    title: 
+    text: You don't have all ingredients to craft this item!
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  failedToCraft:
+    title: 
+    text: You failed to craft {0}.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  missingSkillToCraft:
+    title: 
+    text: You don't have the skill to craft this item!
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  requiresHigherSkill:
+    title: 
+    text: Your {0} is to low to craft {1}.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  soldItem:
+    title: 
+    text: Sold {0} for {1}.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  boughtItem:
+    title: 
+    text: Bought {0} for {1}.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  noCurrencyToBuy:
+    title: 
+    text: You don't have enough coins.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  cantSellItem:
+    title: 
+    text: You can't sell this {0}!
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  toFarAway:
+    title: 
+    text: This is to far away!
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  inUse:
+    title: 
+    text: My life is already fairly busy.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  empty:
+    title: 
+    text: There is nothing to be found here.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  skillGain:
+    title: 
+    text: Your {0} increased by {1}% to {2}%.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+--- !u!114 &7065967425890585217
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a031a30894f085742887ec331ba7d697, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+  maxDropDistance: 3
+  queriesHitTriggers: 0
+  debugMessages: 1
+  showAllComponents: 0
+--- !u!114 &9220062648813220349
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3872ca8d5c2640d40b898af499332431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  containerFull:
+    title: 
+    text: '{0} is full!'
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  failedRestriction:
+    title: 
+    text: '{0} can''t be added to {1}.'
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  missingItem:
+    title: 
+    text: This action requires {0}.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  missingCategoryItem:
+    title: 
+    text: This action requires {0}.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  inCooldown:
+    title: 
+    text: '{0} is in cooldown for {1} seconds!'
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  selectItem:
+    title: 
+    text: Select an item you would like to craft.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  alreadyCrafting:
+    title: 
+    text: You are already crafting.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  craftedItem:
+    title: 
+    text: Successfully crafted {0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  missingIngredient:
+    title: 
+    text: You don't have all ingredients to craft this item!
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  failedToCraft:
+    title: 
+    text: You failed to craft {0}.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  missingSkillToCraft:
+    title: 
+    text: You don't have the skill to craft this item!
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  requiresHigherSkill:
+    title: 
+    text: You don't have the skill to craft this item!
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  soldItem:
+    title: 
+    text: Sold {0} for {1}.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  boughtItem:
+    title: 
+    text: Bought {0} for {1}.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  noCurrencyToBuy:
+    title: 
+    text: You don't have enough coins.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  cantSellItem:
+    title: 
+    text: You can't sell this {0}!
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  toFarAway:
+    title: 
+    text: This is to far away!
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  inUse:
+    title: 
+    text: My life is already fairly busy.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  empty:
+    title: 
+    text: There is nothing to be found here.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  skillGain:
+    title: 
+    text: Your {0} increased by {1}% to {2}%.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1

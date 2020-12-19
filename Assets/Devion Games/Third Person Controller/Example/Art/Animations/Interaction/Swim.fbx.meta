@@ -561,19 +561,19 @@ ModelImporter:
       curves: []
       events:
       - time: 0.2677966
-        functionName: PlaySound
-        data: 
+        functionName: PlayAudio
+        data: SFX
         objectReferenceParameter: {fileID: 8300000, guid: 1046c6fd806e3d5459d60140e0e66def,
           type: 3}
-        floatParameter: 0.5
+        floatParameter: 1
         intParameter: 0
         messageOptions: 0
       - time: 0.74915254
-        functionName: PlaySound
-        data: 
+        functionName: PlayAudio
+        data: SFX
         objectReferenceParameter: {fileID: 8300000, guid: 1046c6fd806e3d5459d60140e0e66def,
           type: 3}
-        floatParameter: 0.5
+        floatParameter: 1
         intParameter: 0
         messageOptions: 0
       transformMask:
@@ -764,19 +764,19 @@ ModelImporter:
       curves: []
       events:
       - time: 0.2779661
-        functionName: PlaySound
-        data: 
+        functionName: PlayAudio
+        data: SFX
         objectReferenceParameter: {fileID: 8300000, guid: 1046c6fd806e3d5459d60140e0e66def,
           type: 3}
-        floatParameter: 0.5
+        floatParameter: 1
         intParameter: 0
         messageOptions: 0
       - time: 0.779661
-        functionName: PlaySound
-        data: 
+        functionName: PlayAudio
+        data: SFX
         objectReferenceParameter: {fileID: 8300000, guid: 1046c6fd806e3d5459d60140e0e66def,
           type: 3}
-        floatParameter: 0.5
+        floatParameter: 1
         intParameter: 0
         messageOptions: 0
       transformMask:
@@ -967,19 +967,19 @@ ModelImporter:
       curves: []
       events:
       - time: 0.30508474
-        functionName: PlaySound
-        data: 
+        functionName: PlayAudio
+        data: SFX
         objectReferenceParameter: {fileID: 8300000, guid: 1046c6fd806e3d5459d60140e0e66def,
           type: 3}
-        floatParameter: 0.5
+        floatParameter: 1
         intParameter: 0
         messageOptions: 0
       - time: 0.75932205
-        functionName: PlaySound
-        data: 
+        functionName: PlayAudio
+        data: SFX
         objectReferenceParameter: {fileID: 8300000, guid: 1046c6fd806e3d5459d60140e0e66def,
           type: 3}
-        floatParameter: 0.5
+        floatParameter: 1
         intParameter: 0
         messageOptions: 0
       transformMask:
