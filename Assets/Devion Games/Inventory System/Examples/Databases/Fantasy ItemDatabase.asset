@@ -504,6 +504,7 @@ MonoBehaviour:
         m_Enabled: 1
         m_Target: 1
         m_Position: {x: 0, y: 0, z: 0}
+        m_SetCameraRelative: 0
     00000008:
       type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}
       data:
@@ -811,6 +812,7 @@ MonoBehaviour:
         m_Enabled: 1
         m_Target: 1
         m_Position: {x: 20.65, y: 0.018, z: -21.71}
+        m_SetCameraRelative: 1
     00000006:
       type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}
       data:
@@ -1572,6 +1574,7 @@ MonoBehaviour:
         m_Enabled: 1
         m_Target: 1
         m_Position: {x: -3.45, y: 0.018, z: 10.92}
+        m_SetCameraRelative: 1
     00000006:
       type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}
       data:
@@ -2340,6 +2343,7 @@ MonoBehaviour:
         m_Enabled: 1
         m_Target: 1
         m_Position: {x: -3.45, y: 0.018, z: 3.96}
+        m_SetCameraRelative: 1
     00000006:
       type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}
       data:
