@@ -56,7 +56,5 @@ namespace DevionGames.InventorySystem
 			}
 			return selectableObjects;
 		}
-
-
 	}
 }

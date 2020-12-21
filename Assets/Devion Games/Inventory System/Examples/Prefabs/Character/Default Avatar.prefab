@@ -3942,6 +3942,7 @@ GameObject:
   - component: {fileID: 6874675272001939286}
   - component: {fileID: 6874675272001939288}
   - component: {fileID: 2528819391161695290}
+  - component: {fileID: 3822375038413334922}
   m_Layer: 9
   m_Name: Default Avatar
   m_TagString: Player
@@ -3956,7 +3957,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6874675272001939313}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4030,7 +4031,7 @@ MonoBehaviour:
   m_ForwardInput: Vertical
   m_HorizontalInput: Horizontal
   m_SpeedMultiplier: 1
-  m_AimType: 1
+  m_AimType: 4
   m_AimInput: Fire2
   m_AimRotation: 20
   m_RotationSpeed: 10
@@ -4230,7 +4231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_WindowName: Equipment
-  m_Database: {fileID: 0}
+  m_Database: {fileID: 11400000, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
   m_Bones:
   - region: {fileID: -1474344929657048262, guid: 1ae57b994efcab048a1bb130d4e11d83,
       type: 2}
@@ -4890,6 +4891,22 @@ MonoBehaviour:
   m_State: 
   m_CameraPreset: Default
   m_SpeedMultiplier: 2
+--- !u!114 &3822375038413334922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6874675272001939313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 513845fc43758c844b6ae7855d36d4ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AudioGroups:
+  - name: SFX
+    m_AudioMixerGroup: {fileID: 8643709756097329450, guid: 08813bea6fa2f304d8179aec903c1bd9,
+      type: 2}
 --- !u!1 &6874675272017889070
 GameObject:
   m_ObjectHideFlags: 0

@@ -208,7 +208,7 @@ namespace DevionGames
                 return false;
             }
 
-            if (this.m_CheckBlocking)
+           /* if (this.m_CheckBlocking)
             {
                 Vector3 targetPosition = UnityTools.GetBounds(gameObject).center;
                 Vector3 playerPosition = PlayerInfo.transform.position;
@@ -224,9 +224,9 @@ namespace DevionGames
                 collider.enabled = true;
                 if (raycast && !UnityEngine.Object.ReferenceEquals(hit.transform, transform))
                 {
-                  //  return false;
+                    return false;
                 }
-            }
+            }*/
 
             Animator animator = PlayerInfo.animator;
             if (PlayerInfo != null && animator != null)

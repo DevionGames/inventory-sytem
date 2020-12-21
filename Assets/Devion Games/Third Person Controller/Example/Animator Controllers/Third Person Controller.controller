@@ -714,8 +714,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   condition: 1
   sound: {fileID: 8300000, guid: 918ed223f99554540b79acc4fbb7219f, type: 3}
-  audioMixerGroup: {fileID: 0}
-  volume: 0.1
+  audioMixerGroup: {fileID: 8643709756097329450, guid: 08813bea6fa2f304d8179aec903c1bd9,
+    type: 2}
+  volume: 1
   normalizedPlayTime: 0.4
 --- !u!114 &114086251830286782
 MonoBehaviour:
@@ -746,8 +747,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   condition: 1
   sound: {fileID: 8300000, guid: 1236f44b0917fa54ea07eae551b6dacb, type: 3}
-  audioMixerGroup: {fileID: 0}
-  volume: 0.1
+  audioMixerGroup: {fileID: 8643709756097329450, guid: 08813bea6fa2f304d8179aec903c1bd9,
+    type: 2}
+  volume: 1
   normalizedPlayTime: 0.4
 --- !u!114 &114529103664783678
 MonoBehaviour:
@@ -763,8 +765,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   condition: 1
   sound: {fileID: 8300000, guid: 1236f44b0917fa54ea07eae551b6dacb, type: 3}
-  audioMixerGroup: {fileID: 0}
-  volume: 0.1
+  audioMixerGroup: {fileID: 8643709756097329450, guid: 08813bea6fa2f304d8179aec903c1bd9,
+    type: 2}
+  volume: 1
   normalizedPlayTime: 0.4
 --- !u!114 &114788813667315758
 MonoBehaviour:
@@ -3535,7 +3538,7 @@ AnimatorStateMachine:
     m_Position: {x: 264, y: 288, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102402374695320734}
-    m_Position: {x: 264, y: 336, z: 0}
+    m_Position: {x: 260, y: 340, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102913229806761022}
     m_Position: {x: 264, y: 384, z: 0}

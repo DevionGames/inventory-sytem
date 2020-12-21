@@ -258,8 +258,10 @@ MonoBehaviour:
   - {fileID: 1063046599387310152}
   - {fileID: 8763039942855579107}
   - {fileID: -5663772737389988193}
-  m_Amounts: 0100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  - {fileID: 529780001783015153}
+  m_Amounts: 010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
   m_Modifiers:
+  - modifiers: []
   - modifiers: []
   - modifiers: []
   - modifiers: []
@@ -1233,7 +1235,7 @@ MonoBehaviour:
     type: 3}
   m_Description: Tool used for Alchemy.
   m_Category: {fileID: -9040799555073544844}
-  m_IsSellable: 0
+  m_IsSellable: 1
   m_BuyPrice: 10
   m_CanBuyBack: 1
   m_BuyCurrency: {fileID: -2811142919616601772}

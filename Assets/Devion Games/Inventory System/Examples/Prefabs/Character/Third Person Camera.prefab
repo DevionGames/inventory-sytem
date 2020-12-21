@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 864753745464015935}
   - component: {fileID: 864753745464015939}
   - component: {fileID: 864753745464015934}
+  - component: {fileID: 4271042539272334253}
   - component: {fileID: 864753745464015931}
-  - component: {fileID: 864753745464015938}
   - component: {fileID: 1611634223}
+  - component: {fileID: 864753745464015938}
   m_Layer: 8
   m_Name: Third Person Camera
   m_TagString: MainCamera
@@ -31,7 +32,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 864753745464015937}
-  m_LocalRotation: {x: 0.14143686, y: 0, z: 0, w: 0.9899473}
+  m_LocalRotation: {x: 0.14143318, y: -1.6694369e-19, z: -0.000000016860147, w: 0.98994786}
   m_LocalPosition: {x: 0, y: 2.96, z: -3.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -69,7 +70,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1847
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -208,6 +209,28 @@ MonoBehaviour:
   m_DontDestroyOnLoad: 0
   m_Target: {fileID: 0}
   m_Presets:
+  - m_Name: No Control
+    m_InputName: No Control
+    m_Activation: 2
+    m_Crosshair: {fileID: 0}
+    m_Offset: {x: 0.1, y: 2}
+    m_Distance: 2.5
+    m_TurnButton: None
+    m_TurnSpeed: 0
+    m_TurnSmoothing: 0.05
+    m_YawLimit: {x: -180, y: 180}
+    m_PitchLimit: {x: -60, y: 60}
+    m_VisibilityDelta: 0.3
+    m_ZoomSpeed: 0
+    m_ZoomLimit: {x: 1.5, y: 6}
+    m_ZoomSmoothing: 0.1
+    m_MoveSmoothing: 0.07
+    m_CursorMode: 0
+    m_ConsumeInputOverUI: 1
+    m_CollisionLayer:
+      serializedVersion: 2
+      m_Bits: 1
+    m_CollisionRadius: 0.4
   - m_Name: ChangeHeight
     m_InputName: 
     m_Activation: 1
@@ -230,35 +253,13 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 1
     m_CollisionRadius: 0.4
-  - m_Name: Focused
-    m_InputName: Fire2
-    m_Activation: 2
-    m_Crosshair: {fileID: 21300000, guid: 576e7db613e9d024fb1ac68e765255bf, type: 3}
-    m_Offset: {x: 0.5, y: 1.7}
-    m_Distance: 1
-    m_TurnButton: 
-    m_TurnSpeed: 1.5
-    m_TurnSmoothing: 0.05
-    m_YawLimit: {x: -180, y: 180}
-    m_PitchLimit: {x: -30, y: 60}
-    m_VisibilityDelta: 0.3
-    m_ZoomSpeed: 5
-    m_ZoomLimit: {x: 1, y: 1}
-    m_ZoomSmoothing: 0.1
-    m_MoveSmoothing: 0.07
-    m_CursorMode: 1
-    m_ConsumeInputOverUI: 1
-    m_CollisionLayer:
-      serializedVersion: 2
-      m_Bits: 1
-    m_CollisionRadius: 0.4
   - m_Name: Default
     m_InputName: 
     m_Activation: 0
-    m_Crosshair: {fileID: 0}
-    m_Offset: {x: 0, y: 1.5}
+    m_Crosshair: {fileID: 21300000, guid: 576e7db613e9d024fb1ac68e765255bf, type: 3}
+    m_Offset: {x: 0.1, y: 2}
     m_Distance: 2.5
-    m_TurnButton: Fire1
+    m_TurnButton: 
     m_TurnSpeed: 1.5
     m_TurnSmoothing: 0.05
     m_YawLimit: {x: -180, y: 180}
@@ -268,12 +269,29 @@ MonoBehaviour:
     m_ZoomLimit: {x: 1.5, y: 6}
     m_ZoomSmoothing: 0.1
     m_MoveSmoothing: 0.07
-    m_CursorMode: 0
+    m_CursorMode: 1
     m_ConsumeInputOverUI: 1
     m_CollisionLayer:
       serializedVersion: 2
       m_Bits: 1
     m_CollisionRadius: 0.1
+--- !u!114 &4271042539272334253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864753745464015937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dd46e2d6dcd3514b8d1bcbfdc9e99e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OffsetPosition: {x: 0, y: 1, z: 0}
+  m_Pitch: 22
+  m_Distance: 2
+  m_Speed: 5
+  m_SpinTarget: 1
 --- !u!114 &864753745464015931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,18 +308,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1331
   m_MaxRayIntersections: 0
---- !u!114 &864753745464015938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 864753745464015937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50330e38a8605404a8c5b29a00c5e3e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1611634223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,3 +323,15 @@ MonoBehaviour:
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 3379
+--- !u!114 &864753745464015938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864753745464015937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50330e38a8605404a8c5b29a00c5e3e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
