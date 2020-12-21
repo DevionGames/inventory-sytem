@@ -7,7 +7,16 @@ namespace DevionGames.InventorySystem
     public abstract class Weapon : VisibleItem
     {
 
-        public override string[] Callbacks => new string[] {"OnUse","OnEndUse" };
+        public override string[] Callbacks
+        {
+            get
+            {
+                List<string> callbacks = new List<string>(base.Callbacks);
+                callbacks.Add("OnUse");
+                callbacks.Add("OnEndUse");
+                return callbacks.ToArray();
+            }
+        }
 
         [Header("Activation:")]
         [InspectorLabel("Input Name")]

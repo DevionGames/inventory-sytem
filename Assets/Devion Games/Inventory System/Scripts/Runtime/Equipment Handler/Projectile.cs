@@ -11,6 +11,9 @@ namespace DevionGames.InventorySystem
         [SerializeField]
         private float m_DestructDelay = 10f;
 
+        [SerializeField]
+        private Object m_Data=null;
+
         private Rigidbody m_Rigidbody;
         private Collider m_Collider;
 
@@ -23,18 +26,18 @@ namespace DevionGames.InventorySystem
 
 
         //Changed to OnCollisionStay for close shooting.
-        private void OnCollisionStay(Collision collision)
+       /* private void OnCollisionStay(Collision collision)
         {
             if (!isActiveAndEnabled) return;
                 OnHit(collision.transform, collision.GetContact(0).point);
-        }
+        }*/
 
-        /*private void OnCollisionEnter(Collision collision)
+        private void OnCollisionEnter(Collision collision)
         {
 
             if (!isActiveAndEnabled) return;
               OnHit(collision.transform,collision.GetContact(0).point);
-        }*/
+        }
 
         private void OnHit(Transform hit, Vector3 position) {
             this.m_Collider.enabled = false;
@@ -42,6 +45,7 @@ namespace DevionGames.InventorySystem
             this.m_Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
             transform.position = position;
             transform.parent = hit;
+            EventHandler.Execute(InventoryManager.current.PlayerInfo.gameObject, "SendDamage", hit.gameObject, this.m_Data);
             if (this.m_AutoDestruct)
                 Destroy(gameObject, this.m_DestructDelay);
         }

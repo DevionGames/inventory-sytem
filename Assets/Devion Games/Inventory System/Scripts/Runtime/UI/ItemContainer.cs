@@ -760,6 +760,7 @@ namespace DevionGames.InventorySystem
         /// <returns></returns>
         public virtual Item[] ReplaceItem(int index, Item item)
         {
+           
             List<Item> list = new List<Item>();
             if (index < this.m_Slots.Count)
             {

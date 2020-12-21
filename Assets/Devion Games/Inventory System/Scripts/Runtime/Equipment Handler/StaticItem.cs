@@ -6,6 +6,6 @@ namespace DevionGames.InventorySystem
 {
     public class StaticItem : VisibleItem
     {
-        public override string[] Callbacks => new string[0];
+       // public override string[] Callbacks => new string[0];
     }
 }

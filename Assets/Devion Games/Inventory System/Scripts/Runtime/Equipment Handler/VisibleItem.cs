@@ -8,6 +8,10 @@ namespace DevionGames.InventorySystem
 {
     public abstract class VisibleItem : CallbackHandler
     {
+
+        public override string[] Callbacks => new string[] { "OnEquip", "OnUnEquip" };
+
+
         [ItemPicker(true)]
         public Item item;
 
@@ -47,6 +51,9 @@ namespace DevionGames.InventorySystem
                     att.Instantiate(this.m_Handler);
                 }
             }
+            CallbackEventData data = new CallbackEventData();
+            data.AddData("Item", item);
+            Execute("OnEquip", data);
         }
 
         public virtual void OnItemUnEquip(Item item) {
@@ -59,6 +66,9 @@ namespace DevionGames.InventorySystem
                     att.gameObject.SetActive(false);
                 }
             }
+            CallbackEventData data = new CallbackEventData();
+            data.AddData("Item", item);
+            Execute("OnUnEquip", data);
         }
 
         protected void IgnoreCollision(GameObject gameObject) {

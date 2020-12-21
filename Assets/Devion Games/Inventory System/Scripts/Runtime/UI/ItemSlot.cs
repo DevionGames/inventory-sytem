@@ -290,7 +290,6 @@ namespace DevionGames.InventorySystem
                 }else{
                     //Set the dragging slot
                     // draggedSlot = this;
-                    Debug.Log(eventData.pointerCurrentRaycast.gameObject);
                     if(base.m_Ícon == null || !base.m_Ícon.raycastTarget || eventData.pointerCurrentRaycast.gameObject == base.m_Ícon.gameObject)
                         dragObject = new DragObject(this);
     

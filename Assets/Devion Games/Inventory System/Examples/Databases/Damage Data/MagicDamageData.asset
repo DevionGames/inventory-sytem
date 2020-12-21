@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd212400f57b8b94493af21a4a9fdb74, type: 3}
-  m_Name: DamageDataShake
+  m_Name: MagicDamageData
   m_EditorClassIdentifier: 
-  sendingStat: Melee Damage
+  sendingStat: Magic Damage
   criticalStrikeStat: Critical Strike
   receivingStat: Health
   maxDistance: 2
   maxAngle: 60
-  particleEffect: {fileID: 5305822200100292117, guid: 2aecc49ae18a147499dc13ba4b89d645,
+  particleEffect: {fileID: 2818637365737192169, guid: 40802eeb63ef7c943819b95ac7c7a645,
     type: 3}
   offset: {x: 0, y: 1.5, z: 0}
   randomize: {x: 0.2, y: 0.1, z: 0}
@@ -28,6 +28,6 @@ MonoBehaviour:
   hitSounds:
   - {fileID: 8300000, guid: 0805de7e4fb0f4d03a30ae90e7c64311, type: 3}
   - {fileID: 8300000, guid: 34aca9e3f1ade4802b9062b1380aa523, type: 3}
-  duration: 0.4
+  duration: 0
   speed: 5
   amount: {x: 0.4, y: 0.4, z: 0}

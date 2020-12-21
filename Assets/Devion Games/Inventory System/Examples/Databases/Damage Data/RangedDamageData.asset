@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd212400f57b8b94493af21a4a9fdb74, type: 3}
-  m_Name: DamageData
+  m_Name: RangedDamageData
   m_EditorClassIdentifier: 
-  sendingStat: Melee Damage
+  sendingStat: Ranged Damage
   criticalStrikeStat: Critical Strike
   receivingStat: Health
   maxDistance: 2
