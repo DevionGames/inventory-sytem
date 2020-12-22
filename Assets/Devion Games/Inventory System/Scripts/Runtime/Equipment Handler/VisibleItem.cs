@@ -53,6 +53,7 @@ namespace DevionGames.InventorySystem
             }
             CallbackEventData data = new CallbackEventData();
             data.AddData("Item", item);
+            data.AddData("Attachments", this.attachments);
             Execute("OnEquip", data);
         }
 
@@ -68,6 +69,7 @@ namespace DevionGames.InventorySystem
             }
             CallbackEventData data = new CallbackEventData();
             data.AddData("Item", item);
+            data.AddData("Attachments", this.attachments);
             Execute("OnUnEquip", data);
         }
 
