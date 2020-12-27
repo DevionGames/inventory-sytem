@@ -345,6 +345,12 @@ namespace DevionGames.InventorySystem
         //Try to drop the item to ground
         private void DropItem()
         {
+            if (Container.IsLocked)
+            {
+                InventoryManager.Notifications.inUse.Show();
+                return;
+            }
+
             if (IsCooldown)
                 return;
 
@@ -372,6 +378,7 @@ namespace DevionGames.InventorySystem
                     Vector3 worldPos = hit.point;
                     Vector3 diff = worldPos - position;
                     float distance = diff.magnitude;
+                    //if player is null this does not work!
                     if (distance > (InventoryManager.DefaultSettings.maxDropDistance - (transform.localScale.x / 2)))
                     {
                         position = position + (diff / distance) * InventoryManager.DefaultSettings.maxDropDistance;
@@ -454,6 +461,12 @@ namespace DevionGames.InventorySystem
         /// </summary>
         public override void Use()
         {
+            if (Container.IsLocked)
+            {
+                InventoryManager.Notifications.inUse.Show();
+                return;
+            }
+
             Container.NotifyTryUseItem(ObservedItem, this);
             //Check if the item can be used.
             if (CanUse())

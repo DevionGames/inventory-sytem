@@ -10,6 +10,8 @@ namespace DevionGames.UIWidgets
 		[SerializeField]
 		protected Image progressbar;
 		[SerializeField]
+		protected Text m_ProgressbarTitle;
+		[SerializeField]
 		protected Text progressLabel;
 		[SerializeField]
 		protected string format = "F0";
@@ -27,13 +29,24 @@ namespace DevionGames.UIWidgets
 			}
 		}
 
-		public override void Show ()
+		public override void Show()
 		{
+			this.Show("");
+		}
+
+		public virtual void Show(string title)
+		{
+			if (this.m_ProgressbarTitle != null) {
+				this.m_ProgressbarTitle.text = title;
+			}
 			progressbar.fillAmount = 0f;
-			if (progressLabel != null) {
+			if (progressLabel != null)
+			{
 				progressLabel.text = "0%";
 			}
-			base.Show ();
+			base.Show();
 		}
+
+		
 	}
 }

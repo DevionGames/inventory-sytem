@@ -233,6 +233,7 @@ MonoBehaviour:
         m_Type: DevionGames.InventorySystem.ShowProgressbar
         m_Enabled: 1
         m_WidgetName: General Progressbar
+        m_Title: Mining Iron
         m_Duration: 8
     00000006:
       type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}

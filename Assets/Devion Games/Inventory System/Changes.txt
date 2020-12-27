@@ -4,3 +4,9 @@
 - Fix loosing focus when edit name of item.
 - ItemContainerPopulator this will add items from ItemGroup to ItemContainer by name.(Allows diffrent start inventories, spells... based on character)
 - AudioEventListener this will play audio from animations. (Function: PlayAudio Float: VolumeScale String: AudioMixerGroup Object: AudioClip)
+- DeathHandler
+- Moved ItemContainer.Lock to UIWidget.Lock
+- When a widget is locked, player can't use items.
+- Multi database support
+- Changed appearence of picker allowing mix databases
+- EquipmentHandler callbacks

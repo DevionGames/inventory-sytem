@@ -43,7 +43,6 @@ namespace DevionGames.StatSystem
 
                     this.m_Value = Mathf.Clamp(this.m_Value, this.MinValue, this.MaxValue);
                     this.CurrentValue = Mathf.Clamp(this.m_CurrentValue, this.MinValue, this.MaxValue);
-                    //GameState.MarkDirty();
                     this.m_Dirty = false;
                 }
                 return this.m_Value;

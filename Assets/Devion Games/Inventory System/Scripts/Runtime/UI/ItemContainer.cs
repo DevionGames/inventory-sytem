@@ -299,13 +299,7 @@ namespace DevionGames.InventorySystem
             }
         }
 
-        protected bool m_IsLocked = false;
-        public bool IsLocked {
-            get { return this.m_IsLocked; }
-        }
 
-        protected MonoBehaviour m_ThirdPersonController;
-        
         protected override void OnAwake()
         {
             if (this.m_SlotPrefab != null){
@@ -314,20 +308,6 @@ namespace DevionGames.InventorySystem
             RefreshSlots();
             RegisterCallbacks();
             this.Collection = GetComponent<ItemCollection>();
-        }
-
-        protected override void OnStart()
-        {
-            if(InventoryManager.current.PlayerInfo.gameObject != null)
-                this.m_ThirdPersonController = InventoryManager.current.PlayerInfo.gameObject.GetComponent("ThirdPersonController") as MonoBehaviour;
-        }
-
-        protected override void Update()
-        {
-            if (this.m_ShowAndHideCursor && this.IsVisible && this.m_CloseOnMove && (this.m_ThirdPersonController == null || this.m_ThirdPersonController.enabled) && (Input.GetAxis("Vertical") != 0f || Input.GetAxis("Horizontal") != 0f) && !Input.GetKey(this.m_Deactivate))
-            {
-                Close();
-            }
         }
 
         public override void Show()
@@ -1841,10 +1821,6 @@ namespace DevionGames.InventorySystem
         public void NotifyRemoveItem(Item item, int amount, Slot slot) {
             if (InventoryManager.IsLoaded)
                 OnRemoveItem(item, amount, slot);
-        }
-
-        public void Lock(bool state) {
-            this.m_IsLocked = state;
         }
 
         public void MoveTo(string windowName)

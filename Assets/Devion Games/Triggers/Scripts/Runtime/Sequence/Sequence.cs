@@ -6,6 +6,8 @@ namespace DevionGames
     public class Sequence 
     {
         private ActionStatus m_Status;
+        public ActionStatus Status { get => this.m_Status; }
+
         private int m_ActionIndex;
         private ActionStatus m_ActionStatus;
         private readonly IAction[] m_AllActions;

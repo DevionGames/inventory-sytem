@@ -114,6 +114,7 @@ namespace DevionGames.UIWidgets
 		protected static bool m_PreviousCursorVisibility;
 		protected Transform m_CameraTransform;
 		protected MonoBehaviour m_CameraController;
+		protected MonoBehaviour m_ThirdPersonController;
 		protected static bool m_PreviousCameraControllerEnabled;
 		protected static List<UIWidget> m_CurrentVisibleWidgets=new List<UIWidget>();
 
@@ -147,6 +148,13 @@ namespace DevionGames.UIWidgets
 
 		protected Scrollbar[] m_Scrollbars;
 
+		protected bool m_IsLocked = false;
+		public bool IsLocked
+		{
+			get { return this.m_IsLocked; }
+		}
+
+
 		private void Awake ()
 		{
 			//Register the KeyCode to show or close the widget.
@@ -156,6 +164,11 @@ namespace DevionGames.UIWidgets
 			this.m_Scrollbars = GetComponentsInChildren<Scrollbar>();
 			this.m_CameraTransform = Camera.main.transform;
 			this.m_CameraController = this.m_CameraTransform.GetComponent("ThirdPersonCamera") as MonoBehaviour;
+			PlayerInfo playerInfo = new PlayerInfo("Player");
+
+			if (playerInfo.gameObject != null)
+				this.m_ThirdPersonController = playerInfo.gameObject.GetComponent("ThirdPersonController") as MonoBehaviour;
+
 
 			if (!IsVisible) {
 				//Set local scale to zero, when widget is not visible. Used to correctly animate the widget.
@@ -196,7 +209,8 @@ namespace DevionGames.UIWidgets
 		}
 
 		protected virtual void Update() {
-			if (this.m_ShowAndHideCursor && this.IsVisible && this.m_CloseOnMove && (Input.GetAxis("Vertical") != 0f || Input.GetAxis("Horizontal") != 0f) && !Input.GetKey(this.m_Deactivate)) { 
+			if (this.m_ShowAndHideCursor && this.IsVisible && this.m_CloseOnMove && (this.m_ThirdPersonController == null || this.m_ThirdPersonController.enabled) && (Input.GetAxis("Vertical") != 0f || Input.GetAxis("Horizontal") != 0f) && !Input.GetKey(this.m_Deactivate))
+			{
 				Close();
 			}
 		}
@@ -236,7 +250,7 @@ namespace DevionGames.UIWidgets
 				if (m_CameraController != null &&  !Input.GetKey(this.m_Deactivate) && m_CurrentVisibleWidgets.Count == 1)
 				{
 					this.m_CameraController.enabled = false;
-					if(this.m_FocusPlayer)
+					if(this.m_FocusPlayer && !this.m_IsLocked)
 						this.m_CameraController.SendMessage("Focus", true, SendMessageOptions.DontRequireReceiver);
 				}
 				Cursor.lockState = CursorLockMode.None;
@@ -342,6 +356,19 @@ namespace DevionGames.UIWidgets
 		protected virtual void OnDestroy() {
 			//Unregister input key
 			WidgetInputHandler.UnregisterInput(this.m_KeyCode, this);
+		}
+
+		public void Lock(bool state)
+		{
+			this.m_IsLocked = state;
+		}
+
+		public static void LockAll(bool state) {
+			UIWidget[] widgets = WidgetUtility.FindAll<UIWidget>();
+			for (int i = 0; i < widgets.Length; i++)
+			{
+				widgets[i].Lock(state);
+			}
 		}
 	}
 }
