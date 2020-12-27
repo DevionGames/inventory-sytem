@@ -10,3 +10,5 @@
 - Multi database support
 - Changed appearence of picker allowing mix databases
 - EquipmentHandler callbacks
+- AnimationEventSender that extends from StateMachineBehaviour can be used to send events for OnStateEnter, OnStateExit, OnStateUpdate (used for VisualItem > Weapon)
+- Linked AudioMixer to Settings sliders

@@ -176,7 +176,7 @@ namespace DevionGames.InventorySystem
             Ray  ray = this.m_Camera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit)) {
-                BaseTrigger trigger = hit.collider.GetComponent<BaseTrigger>();
+                BaseTrigger trigger = hit.collider.GetComponentInParent<BaseTrigger>();
 
                 return trigger == null || !trigger.enabled;
             }

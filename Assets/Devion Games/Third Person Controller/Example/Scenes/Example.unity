@@ -507,54 +507,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1042028118}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &440406480 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8277663194983554772, guid: 07c05240867455c47887199078a82e2c,
-    type: 3}
-  m_PrefabInstance: {fileID: 5792820102444301303}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &440406481
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 440406480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 519f6d56fa1bb3b409a519c9a7a198a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FriendlyName: Attack
-  m_InputName: Fire1
-  m_StartType: 1
-  m_StopType: 1
-  m_ConsumeInputOverUI: 0
-  m_TransitionDuration: 0.2
-  m_State: Sword Slash
-  m_CameraPreset: Default
-  m_RecurrenceDelay: 0.2
---- !u!114 &440406494
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 440406480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 519f6d56fa1bb3b409a519c9a7a198a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FriendlyName: Attack
-  m_InputName: Fire1
-  m_StartType: 1
-  m_StopType: 1
-  m_ConsumeInputOverUI: 0
-  m_TransitionDuration: 0.2
-  m_State: Sword Slash
-  m_CameraPreset: Default
-  m_RecurrenceDelay: 0.2
 --- !u!1001 &446968077
 PrefabInstance:
   m_ObjectHideFlags: 0
