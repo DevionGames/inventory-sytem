@@ -65,7 +65,7 @@ namespace DevionGames.StatSystem
         protected void TriggerAnimationEvent(AnimationEvent ev)
         {
             if(ev.animatorClipInfo.weight > 0.5f)
-            SendMessage(ev.stringParameter,ev.objectReferenceParameter, SendMessageOptions.DontRequireReceiver);
+                SendMessage(ev.stringParameter,ev.objectReferenceParameter, SendMessageOptions.DontRequireReceiver);
         }
 
         //Received by animation
@@ -73,6 +73,7 @@ namespace DevionGames.StatSystem
         {
             DamageData damageData = data as DamageData;
             if (damageData == null) return;
+            damageData.sender = gameObject;
 
             Collider[] colliders = Physics.OverlapSphere(transform.position, damageData.maxDistance);
 
@@ -94,6 +95,10 @@ namespace DevionGames.StatSystem
             StatsHandler receiverHandler = receiver.GetComponent<StatsHandler>();
             DamageData damageData = data as DamageData;
 
+            //Exclude self tag, needs some kind of frieds tag system
+            if (gameObject.tag == receiver.tag)
+                return;
+
             if (receiverHandler != null && receiverHandler.enabled && damageData != null)
             {
                 Stat sendingStat = stats.FirstOrDefault(x => x.Name == damageData.sendingStat);
@@ -107,6 +112,7 @@ namespace DevionGames.StatSystem
                     damage *= 2f;
 
                 receiverHandler.ApplyDamageInternal(damageData.receivingStat, damage, 0, criticaleStrike);
+                EventHandler.Execute(receiver, "OnGetHit",gameObject,damageData.receivingStat,damage);
 
                 if (damageData.particleEffect != null)
                 {

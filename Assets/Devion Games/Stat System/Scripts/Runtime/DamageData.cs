@@ -32,5 +32,8 @@ namespace DevionGames.StatSystem
         public float duration = 0.4f;
         public float speed = 5f;
         public Vector3 amount = new Vector3(0.4f,0.4f);
+
+        [System.NonSerialized]
+        public GameObject sender;
     }
 }
