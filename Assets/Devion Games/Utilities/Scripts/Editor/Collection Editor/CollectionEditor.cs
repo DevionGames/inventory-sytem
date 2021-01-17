@@ -45,9 +45,17 @@ namespace DevionGames{
 
 		protected virtual bool UseInspectorDefaultMargins => true;
 
-		public virtual string ToolbarName => GetType().IsGenericType ? 
+		private string m_ToolbarName;
+
+		public virtual string ToolbarName => !string.IsNullOrEmpty(this.m_ToolbarName) ? this.m_ToolbarName: (GetType().IsGenericType ? 
 			ObjectNames.NicifyVariableName(GetType().GetGenericArguments()[0].Name) : 
-			ObjectNames.NicifyVariableName(GetType().Name.Replace("Editor", ""));
+			ObjectNames.NicifyVariableName(GetType().Name.Replace("Editor", "")));
+
+		public CollectionEditor() { }
+
+		public CollectionEditor(string title) {
+			this.m_ToolbarName = title;
+		}
 
 		public virtual void OnEnable() {
 			string prefix = "CollectionEditor." + ToolbarName + ".";

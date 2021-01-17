@@ -26,9 +26,13 @@ namespace DevionGames
 		protected Editor editor;
 
 		protected bool m_UseInspectorDefaultMargins = false;
-        protected override bool UseInspectorDefaultMargins  => this.m_UseInspectorDefaultMargins; 
+        protected override bool UseInspectorDefaultMargins  => this.m_UseInspectorDefaultMargins;
 
-		public ScriptableObjectCollectionEditor (UnityEngine.Object target, List<T> items, bool useInspectorDefaultMargins=true)
+		public ScriptableObjectCollectionEditor(UnityEngine.Object target, List<T> items, bool useInspectorDefaultMargins = true):this(string.Empty, target, items, useInspectorDefaultMargins)
+		{
+		}
+
+		public ScriptableObjectCollectionEditor (string title, UnityEngine.Object target, List<T> items, bool useInspectorDefaultMargins=true):base(title)
 		{
 			this.target = target;
 			this.items = items;
@@ -47,7 +51,7 @@ namespace DevionGames
 				GenericMenu menu = new GenericMenu ();
 				foreach (Type type in types) {
 					Type mType = type;
-					menu.AddItem (new GUIContent (mType.Name), false, delegate() {
+					menu.AddItem (new GUIContent (ObjectNames.NicifyVariableName(mType.Name)), false, delegate() {
 						CreateItem (mType);
 					});		
 				}

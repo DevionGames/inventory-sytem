@@ -260,8 +260,6 @@ MonoBehaviour:
   m_Modifiers:
   - modifiers:
     - {fileID: 11400000, guid: af5120ca8702be44fb59b6eadcd27cd0, type: 2}
-  - modifiers:
-    - {fileID: 11400000, guid: af5120ca8702be44fb59b6eadcd27cd0, type: 2}
   onChange:
     m_PersistentCalls:
       m_Calls: []

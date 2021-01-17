@@ -164,13 +164,13 @@ namespace DevionGames.StatSystem
             if(this.m_Regenerate)
                 handler.StartCoroutine(Regeneration());
 
-            Blackboard blackboard = handler.GetComponent<Blackboard>();
+            /*Blackboard blackboard = handler.GetComponent<Blackboard>();
             if (blackboard != null) {
                 onChange += (Stat stat)=>{ 
                     blackboard.SetValue<float>("Current "+ Name, stat.CurrentValue);
                     blackboard.SetValue<float>("Max " + Name, stat.Value);
                 };
-            }
+            }*/
         }
 
         private IEnumerator Regeneration()

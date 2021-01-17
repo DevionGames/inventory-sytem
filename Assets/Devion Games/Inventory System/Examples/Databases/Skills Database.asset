@@ -507,6 +507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
   m_Name: Skills
   m_EditorClassIdentifier: 
+  m_Parent: {fileID: 0}
   name: Skills
   m_EditorColor: {r: 0, g: 0, b: 0, a: 0}
   m_Cooldown: 1
@@ -676,6 +677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
   m_Name: None
   m_EditorClassIdentifier: 
+  m_Parent: {fileID: 0}
   name: None
   m_EditorColor: {r: 0, g: 0, b: 0, a: 0}
   m_Cooldown: 1

@@ -19214,6 +19214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Speed: 15
+  m_LookAtCameraForward: 1
   m_AutoDestruct: 0
   m_DestructDelay: 10
 --- !u!114 &-4840136951558197365

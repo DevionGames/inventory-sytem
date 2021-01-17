@@ -42,16 +42,16 @@ namespace DevionGames.StatSystem
             UpdateStats();
             Refresh();
             EventHandler.Register<GameObject, Object>(gameObject, "SendDamage", SendDamage);
-            EventHandler.Register<Blackboard>(gameObject,"TargetContext", UpdateContext);
+            //EventHandler.Register<Blackboard>(gameObject,"TargetContext", UpdateContext);
         }
 
-        private void UpdateContext(Blackboard blackboard)
+        /*private void UpdateContext(Blackboard blackboard)
         {
             for (int i = 0; i < stats.Count; i++) {
                 blackboard.SetValue<float>("Target Current " + stats[i].Name,stats[i].CurrentValue);
                 blackboard.SetValue<float>("Target Max " + stats[i].Name, stats[i].Value);
             }
-        }
+        }*/
 
         public void UpdateStats()
         {
@@ -295,6 +295,13 @@ namespace DevionGames.StatSystem
 				stat.Refresh ();
 			}
 		}
+
+        public void Refresh(string statName)
+        {
+            Stat stat = GetStat(statName);
+            if (stat != null)
+                stat.Refresh();
+        }
 
         public void GetObjectData(Dictionary<string, object> data)
         {

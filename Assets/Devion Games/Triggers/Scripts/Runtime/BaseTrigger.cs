@@ -335,6 +335,11 @@ namespace DevionGames
                 if (dir != Vector3.zero)
                    angle = Quaternion.Angle(PlayerInfo.transform.rotation, Quaternion.LookRotation(dir));
 
+                //Pickup items only in front
+               /*if (angle > 90) {
+                   continue;
+                }
+                Debug.Log(Vector3.Angle(t.transform.position - PlayerInfo.transform.position, PlayerInfo.transform.forward)+" != "+angle);*/
                 float dist = Vector3.Distance(t.transform.position, currentPos) * angle;
                 if (dist < minDist)
                 {

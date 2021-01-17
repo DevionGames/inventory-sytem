@@ -120,7 +120,15 @@ namespace DevionGames
                 }
                 EditorGUI.PropertyField(rect, element.FindPropertyRelative("m_Name"));
                 rect.y = rect.y +verticalOffset+defaultHeight;
-                EditorGUI.PropertyField(rect, element.FindPropertyRelative("m_Value"),true);
+
+                SerializedProperty elementValue = element.FindPropertyRelative("m_Value");
+                if (elementValue != null)
+                {
+                    EditorGUI.PropertyField(rect, elementValue, true);
+                }
+                else {
+                    EditorGUI.LabelField(rect,"Runtime Value");
+                }
     
             };
             this.m_VariableList.drawElementBackgroundCallback = (Rect rect, int index, bool isActive, bool isFocused) => {

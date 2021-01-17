@@ -154,6 +154,18 @@ namespace DevionGames
 
             if (this.m_Root == null)
             {
+                GUIContent nullContent = new GUIContent("Null");
+                Rect rect2 = GUILayoutUtility.GetRect(nullContent, ObjectPickerWindow.m_Styles.elementButton, GUILayout.Height(20f));
+                GUI.backgroundColor = (rect2.Contains(Event.current.mousePosition) ? GUI.backgroundColor : new Color(0, 0, 0, 0.0f));
+
+                if (GUI.Button(rect2, nullContent, ObjectPickerWindow.m_Styles.elementButton))
+                {
+                    onSelectCallback?.Invoke(null);
+                    Close();
+                }
+                GUI.Label(new Rect(rect2.x, rect2.y, 20f, 20f), EditorGUIUtility.LoadRequired("d_ScriptableObject On Icon") as Texture2D);
+
+
                 GUIContent createContent = new GUIContent("Create New " + this.m_Type.Name);
                 Rect rect1 = GUILayoutUtility.GetRect(createContent, ObjectPickerWindow.m_Styles.elementButton, GUILayout.Height(20f));
                 GUI.backgroundColor = (rect1.Contains(Event.current.mousePosition) ? GUI.backgroundColor : new Color(0, 0, 0, 0.0f));
@@ -164,6 +176,8 @@ namespace DevionGames
                     Close();
                 }
                 GUI.Label(new Rect(rect1.x, rect1.y, 20f, 20f), EditorGUIUtility.LoadRequired("d_ScriptableObject On Icon") as Texture2D);
+
+
             }
             EditorGUILayout.EndScrollView();
         }

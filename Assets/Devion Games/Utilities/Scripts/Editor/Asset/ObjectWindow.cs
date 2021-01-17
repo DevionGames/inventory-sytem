@@ -221,7 +221,10 @@ namespace DevionGames
             });
             menu.AddSeparator(string.Empty);
             menu.AddItem(new GUIContent("Remove " + this.m_ElementType.Name), false, delegate { 
-                this.m_List.RemoveAt(index); 
+                this.m_List.RemoveAt(index);
+                if (this.m_Target != null)
+                    EditorUtility.SetDirty(this.m_Target);
+
                 if (onChange != null)
                     onChange.Invoke();
             });
@@ -233,6 +236,8 @@ namespace DevionGames
                     object value = this.m_List[index];
                     this.m_List.RemoveAt(index);
                     this.m_List.Insert(index - 1, value);
+                    if (this.m_Target != null)
+                        EditorUtility.SetDirty(this.m_Target);
                     if (onChange != null)
                         onChange.Invoke();
                 });
@@ -249,6 +254,8 @@ namespace DevionGames
                     object value = this.m_List[index];
                     this.m_List.RemoveAt(index);
                     this.m_List.Insert(index + 1, value);
+                    if (this.m_Target != null)
+                        EditorUtility.SetDirty(this.m_Target);
                     if (onChange != null)
                         onChange.Invoke();
                 });
@@ -278,6 +285,9 @@ namespace DevionGames
                         fields[i].SetValue(instance, value);
                     }
                     this.m_List.Insert(index + 1, instance);
+                    if (this.m_Target != null)
+                        EditorUtility.SetDirty(this.m_Target);
+
                     if (onChange != null)
                         onChange.Invoke();
                 });
@@ -293,6 +303,9 @@ namespace DevionGames
                             object value = fields[i].GetValue(ObjectWindow.m_ObjectToCopy);
                             fields[i].SetValue(instance, value);
                         }
+                        if (this.m_Target != null)
+                            EditorUtility.SetDirty(this.m_Target);
+
                         if (onChange != null)
                             onChange.Invoke();
                     });

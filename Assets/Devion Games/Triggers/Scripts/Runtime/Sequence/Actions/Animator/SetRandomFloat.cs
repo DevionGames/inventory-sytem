@@ -17,6 +17,8 @@ namespace DevionGames
         private float m_Min = 0;
         [SerializeField]
         private float m_Max = 1;
+        [SerializeField]
+        private bool m_RoundToInt = false;
 
         private Animator m_Animator;
 
@@ -35,7 +37,12 @@ namespace DevionGames
                 Debug.LogWarning("Missing Component of type Animator!");
                 return ActionStatus.Failure;
             }
-            this.m_Animator.SetFloat(this.m_ParameterName, Random.Range(this.m_Min,this.m_Max));
+
+            float random = Random.Range(this.m_Min, this.m_Max);
+            if (this.m_RoundToInt) {
+                random = Mathf.Round(random);
+            }
+            this.m_Animator.SetFloat(this.m_ParameterName, random);
 
             return ActionStatus.Success;
         }
@@ -50,7 +57,12 @@ namespace DevionGames
                 Debug.LogWarning("Missing Component of type Animator!");
                 return;
             }
-            this.m_Animator.SetFloat(this.m_ParameterName, Random.Range(this.m_Min, this.m_Max), this.m_DampTime, Time.deltaTime);
+            float random = Random.Range(this.m_Min, this.m_Max);
+            if (this.m_RoundToInt)
+            {
+                random = Mathf.Round(random);
+            }
+            this.m_Animator.SetFloat(this.m_ParameterName, random, this.m_DampTime, Time.deltaTime);
         }
     }
 }

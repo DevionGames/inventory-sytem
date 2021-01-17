@@ -5,7 +5,7 @@ using UnityEngine;
 namespace DevionGames
 {
 
-    [ComponentMenu("Blackboard/SetFloatvariable")]
+    [ComponentMenu("Blackboard/Set Float Variable")]
     public class SetFloatVariable : Action
     {
         [SerializeField]

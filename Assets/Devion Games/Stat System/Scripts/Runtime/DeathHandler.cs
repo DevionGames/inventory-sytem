@@ -14,6 +14,8 @@ namespace DevionGames.StatSystem
         [SerializeField]
         protected string m_DeathState="Death";
         [SerializeField]
+        protected bool m_Respawn = true;
+        [SerializeField]
         protected string m_RespawnState = "Free Movement";
         [SerializeField]
         protected string m_RespawnTag = "Respawn";
@@ -55,11 +57,13 @@ namespace DevionGames.StatSystem
         }
 
         protected virtual void OnDeath() {
-            this.m_Animator.CrossFadeInFixedTime(this.m_DeathState, 0.15f);
             this.m_Handler.enabled = false;
             UIWidget.LockAll(true);
             EventHandler.Execute("OnDeath", gameObject);
             Execute("OnDeath", new CallbackEventData());
+
+            this.m_Animator.CrossFadeInFixedTime(this.m_DeathState, 0f);
+          
             StartCoroutine(RespawnTimer());
         }
 
@@ -88,8 +92,7 @@ namespace DevionGames.StatSystem
 
             Execute("OnRespawn", new CallbackEventData());
             this.m_Handler.enabled = true;
-            this.m_Animator.CrossFadeInFixedTime(this.m_RespawnState, 0.15f);
-            this.m_Handler.Refresh();
+            this.m_Animator.CrossFadeInFixedTime(this.m_RespawnState, 0f);
             UIWidget.LockAll(false);
         }
 

@@ -17,6 +17,7 @@ namespace DevionGames
 		}
 
 		public T GetValue<T>(Variable variable) {
+
 			if (variable != null)
 			{
 				if (!variable.isShared)
@@ -26,6 +27,7 @@ namespace DevionGames
 				if (p != null)
 					return (T)p.RawValue;
 			}
+			
 			return default(T);
 		}
 
@@ -40,6 +42,23 @@ namespace DevionGames
 			{
 				AddVariable<T>(name, value);
 			}
+		}
+
+		public void SetValue(string name, object value, Type type)
+		{
+			Variable variable = GetVariable(name);
+			if (variable != null)
+			{
+				variable.RawValue = value;
+			}
+			else
+			{
+				AddVariable(name, value,type);
+			}
+		}
+
+		public bool DeleteVariable(string name) {
+			return this.m_Variables.RemoveAll(x => x.name == name) > 0;
 		}
 
 		public Variable GetVariable(string name) {
@@ -103,7 +122,10 @@ namespace DevionGames
 			else if (typeof(Vector3).IsAssignableFrom(type))
 			{
 				variable = new Vector3Variable(name);
-			}
+			}else if (typeof(ArrayList).IsAssignableFrom(type))
+            {
+				variable = new ArrayListVariable(name);
+            }
 
 			if (variable != null)
 			{

@@ -10,6 +10,8 @@ namespace DevionGames
         [SerializeField]
         private float m_Speed = 5f;
         [SerializeField]
+        private bool m_LookAtCameraForward=true;
+        [SerializeField]
         private bool m_AutoDestruct = true;
         [SerializeField]
         private float m_DestructDelay = 10f;
@@ -25,11 +27,14 @@ namespace DevionGames
             if (this.m_AutoDestruct)
                 Destroy(gameObject, this.m_DestructDelay);
 
-            Vector3 forward = Camera.main.transform.forward;
-            if (forward.sqrMagnitude != 0.0f)
+            if (this.m_LookAtCameraForward)
             {
-                forward.Normalize();
-                transform.LookAt(transform.position + forward);
+                Vector3 forward = Camera.main.transform.forward;
+                if (forward.sqrMagnitude != 0.0f)
+                {
+                    forward.Normalize();
+                    transform.LookAt(transform.position + forward);
+                }
             }
         }
 

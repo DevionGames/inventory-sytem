@@ -190,6 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
   m_Name: None
   m_EditorClassIdentifier: 
+  m_Parent: {fileID: 0}
   name: None
   m_EditorColor: {r: 1, g: 1, b: 1, a: 0}
   m_Cooldown: 1
@@ -530,6 +531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
   m_Name: Spells
   m_EditorClassIdentifier: 
+  m_Parent: {fileID: 0}
   name: Spells
   m_EditorColor: {r: 0, g: 0, b: 0, a: 0}
   m_Cooldown: 1
@@ -725,16 +727,29 @@ MonoBehaviour:
   - id: 4
   - id: 5
   - id: 6
+  - id: 7
   references:
     version: 1
     00000000:
+      type: {class: HasCategoryItem, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.HasCategoryItem
+        m_Enabled: 1
+        requiredItems:
+        - item: {fileID: 0}
+          category: {fileID: -5355670550631679221, guid: 1ae57b994efcab048a1bb130d4e11d83,
+            type: 2}
+          boolValue: 0
+          stringValue: Equipment
+          intValue: 0
+    00000001:
       type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
       data:
         m_Type: DevionGames.InventorySystem.ItemActions.Cooldown
         m_Enabled: 1
         item: {fileID: 1337782666225268451}
         m_GlobalCooldown: 0.5
-    00000001:
+    00000002:
       type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.CrossFade
@@ -742,7 +757,7 @@ MonoBehaviour:
         m_Target: 1
         m_AnimatorState: Power Up
         m_TransitionDuration: 0.2
-    00000002:
+    00000003:
       type: {class: AddModifier, ns: DevionGames.StatSystem, asm: DevionGames.StatSystem}
       data:
         m_Type: DevionGames.StatSystem.AddModifier
@@ -751,13 +766,13 @@ MonoBehaviour:
         m_StatName: Critical Strike
         m_Value: 60
         m_ModType: 0
-    00000003:
+    00000004:
       type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.Wait
         m_Enabled: 1
         duration: 1
-    00000004:
+    00000005:
       type: {class: Instantiate, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.Instantiate
@@ -768,13 +783,13 @@ MonoBehaviour:
         m_BoneName: 
         m_Offset: {x: 0, y: 0, z: 0}
         m_IgnorePlayerCollision: 1
-    00000005:
+    00000006:
       type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.Wait
         m_Enabled: 1
         duration: 17
-    00000006:
+    00000007:
       type: {class: AddModifier, ns: DevionGames.StatSystem, asm: DevionGames.StatSystem}
       data:
         m_Type: DevionGames.StatSystem.AddModifier

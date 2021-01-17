@@ -1029,7 +1029,10 @@ namespace DevionGames.InventorySystem
             for (int i = 0; i < this.m_Slots.Count; i++)
             {
                 Slot slot = this.m_Slots[i];
-                if (!slot.IsEmpty && slot.ObservedItem.Category.Name == category.Name)
+                if(!slot.IsEmpty)
+                    Debug.Log(category.Name +" "+slot.ObservedItem.Category.Name);
+
+                if (!slot.IsEmpty && category.IsAssignable(slot.ObservedItem.Category))//slot.ObservedItem.Category.Name == category.Name)
                 {
 
                     return true;
@@ -1209,7 +1212,16 @@ namespace DevionGames.InventorySystem
                 Slot slot = this.m_Slots[i];
                 slot.Index = i;
                 slot.Container = this;
-                slot.restrictions.AddRange(restrictions);
+
+                //slot.restrictions.AddRange(restrictions); 
+                //15.01.2021 Loop through all restrictions and check it is already added.
+                for (int j = 0; j < restrictions.Count; j++)
+                {
+                    if (!slot.restrictions.Contains(restrictions[j]))
+                    {
+                        slot.restrictions.Add(restrictions[j]);
+                    }
+                }
             }
         }
 

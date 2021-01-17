@@ -4698,8 +4698,10 @@ MonoBehaviour:
   - {fileID: -2811142919616601772, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
   - {fileID: -6442420119529586086, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
   - {fileID: 529780001783015153, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
-  m_Amounts: 010000002d0000000100000001000000
+  - {fileID: -1175442255857385599, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
+  m_Amounts: 010000002d00000001000000010000000a000000
   m_Modifiers:
+  - modifiers: []
   - modifiers: []
   - modifiers: []
   - modifiers: []

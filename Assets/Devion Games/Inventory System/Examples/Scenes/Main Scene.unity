@@ -14041,48 +14041,6 @@ PrefabInstance:
       propertyPath: delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1666936384}
-    - target: {fileID: 2740522862135884629, guid: 73000691bb97ca545a8d09fd0c6f5865,
-        type: 3}
-      propertyPath: m_Items.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740522862135884629, guid: 73000691bb97ca545a8d09fd0c6f5865,
-        type: 3}
-      propertyPath: m_Modifiers.Array.size
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740522862135884629, guid: 73000691bb97ca545a8d09fd0c6f5865,
-        type: 3}
-      propertyPath: m_Modifiers.Array.data[5].modifiers.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740522862135884629, guid: 73000691bb97ca545a8d09fd0c6f5865,
-        type: 3}
-      propertyPath: m_Modifiers.Array.data[6].modifiers.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740522862135884629, guid: 73000691bb97ca545a8d09fd0c6f5865,
-        type: 3}
-      propertyPath: m_Amounts.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740522862135884629, guid: 73000691bb97ca545a8d09fd0c6f5865,
-        type: 3}
-      propertyPath: m_Items.Array.data[4]
-      value: 
-      objectReference: {fileID: -1175442255857385599, guid: 1ae57b994efcab048a1bb130d4e11d83,
-        type: 2}
-    - target: {fileID: 2740522862135884629, guid: 73000691bb97ca545a8d09fd0c6f5865,
-        type: 3}
-      propertyPath: m_Modifiers.Array.data[6].modifiers.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 3451d08e25b81ff4eb586aa4fb61a191,
-        type: 2}
-    - target: {fileID: 2740522862135884629, guid: 73000691bb97ca545a8d09fd0c6f5865,
-        type: 3}
-      propertyPath: m_Amounts.Array.data[4]
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 3782984955937440479, guid: 73000691bb97ca545a8d09fd0c6f5865,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -57513,7 +57471,7 @@ MonoBehaviour:
   delegates: []
   useDistance: -1
   triggerType: 0
-  key: 102
+  key: 107
   actions:
   - id: 0
   m_RequiredIngredientsWindow: Inventory

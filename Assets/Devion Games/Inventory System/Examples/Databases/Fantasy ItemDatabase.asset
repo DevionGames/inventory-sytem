@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
   m_Name: Tool
   m_EditorClassIdentifier: 
+  m_Parent: {fileID: 0}
   name: Tool
   m_EditorColor: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
   m_Cooldown: 1
@@ -312,6 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
   m_Name: Material
   m_EditorClassIdentifier: 
+  m_Parent: {fileID: 0}
   name: Material
   m_EditorColor: {r: 0.36739054, g: 0.6037736, b: 0.4591628, a: 1}
   m_Cooldown: 1
@@ -388,6 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
   m_Name: None
   m_EditorClassIdentifier: 
+  m_Parent: {fileID: 0}
   name: None
   m_EditorColor: {r: 1, g: 1, b: 1, a: 0}
   m_Cooldown: 1
@@ -569,6 +572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
   m_Name: Weapon
   m_EditorClassIdentifier: 
+  m_Parent: {fileID: 0}
   name: Weapon
   m_EditorColor: {r: 0.8962264, g: 0.17846043, b: 0.012682426, a: 1}
   m_Cooldown: 1
@@ -1133,10 +1137,10 @@ MonoBehaviour:
   - {fileID: 171625507360801261}
   - {fileID: 8705209814584371102}
   - {fileID: -5355670550631679221}
+  - {fileID: 5270022900184783660}
   - {fileID: -9040799555073544844}
   - {fileID: -7427245140175711199}
   - {fileID: 164684216256526245}
-  - {fileID: 5270022900184783660}
   equipments:
   - {fileID: -1474344929657048262}
   - {fileID: -327638963660831434}
@@ -1185,6 +1189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
   m_Name: Teleporter
   m_EditorClassIdentifier: 
+  m_Parent: {fileID: 0}
   name: Teleporter
   m_EditorColor: {r: 0, g: 0, b: 0, a: 0}
   m_Cooldown: 1
@@ -1200,6 +1205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
   m_Name: Consumable
   m_EditorClassIdentifier: 
+  m_Parent: {fileID: 0}
   name: Consumable
   m_EditorColor: {r: 1, g: 0.8296584, b: 0, a: 1}
   m_Cooldown: 3
@@ -1795,6 +1801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
   m_Name: Melee Weapon
   m_EditorClassIdentifier: 
+  m_Parent: {fileID: -5355670550631679221}
   name: Melee Weapon
   m_EditorColor: {r: 0.8962264, g: 0.17846043, b: 0.012682426, a: 1}
   m_Cooldown: 2
@@ -2364,6 +2371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
   m_Name: Armor
   m_EditorClassIdentifier: 
+  m_Parent: {fileID: 0}
   name: Armor
   m_EditorColor: {r: 0.81960785, g: 0.6627451, b: 0.4, a: 1}
   m_Cooldown: 1

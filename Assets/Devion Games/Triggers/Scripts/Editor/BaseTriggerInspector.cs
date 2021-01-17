@@ -55,6 +55,8 @@ namespace DevionGames
         protected virtual void OnSceneGUI()
         {
             BaseTrigger trigger = (BaseTrigger)target;
+            if (!trigger.isActiveAndEnabled) return;
+
             Vector3 position = trigger.transform.position;
 
             Collider collider = trigger.GetComponent<Collider>();
