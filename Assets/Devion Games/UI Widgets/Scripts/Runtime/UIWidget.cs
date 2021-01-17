@@ -10,7 +10,7 @@ namespace DevionGames.UIWidgets
 	/// Your custom widgets should extend from this class or from child classes. 
 	/// This way you can always track existing widgets by name in your game using WidgetUtility.Find<T>(name).
 	/// </summary>
-	[RequireComponent (typeof(CanvasGroup))]
+	[RequireComponent(typeof(CanvasGroup))]
 	public class UIWidget : CallbackHandler
 	{
 		/// <summary>
@@ -25,49 +25,53 @@ namespace DevionGames.UIWidgets
 		/// </summary>
 		/// <value>The name.</value>
 		public string Name {
-			get{ return name; }
-			set{ name = value; }
+			get { return name; }
+			set { name = value; }
 		}
 
 		/// <summary>
 		/// Callbacks for Inspector.
 		/// </summary>
-        public override string[] Callbacks
-        {
-            get
-            {
-                return new string[]{
-                    "OnShow",
-                    "OnClose",
-                };
-            }
-        }
+		public override string[] Callbacks
+		{
+			get
+			{
+				return new string[]{
+					"OnShow",
+					"OnClose",
+				};
+			}
+		}
 
 		/// <summary>
 		/// Widgets with higher priority will be prefered when used with WidgetUtility.Find<T>(name).
 		/// </summary>
 		[Tooltip("Widgets with higher priority will be prefered when used with WidgetUtility.Find<T>(name).")]
-        [Range (0, 100)]
+		[Range(0, 100)]
 		public int priority;
 
-        /// <summary>
-        /// Key to toggle show and close
-        /// </summary>
-        [Header("Appearence")]
+		/// <summary>
+		/// Key to toggle show and close
+		/// </summary>
+		[Header("Appearence")]
 		[Tooltip("Key to show or close this widget.")]
-        [SerializeField]
-        protected KeyCode m_KeyCode = KeyCode.None;
+		[SerializeField]
+		protected KeyCode m_KeyCode = KeyCode.None;
 
 		[Tooltip("Easing equation type used to tween this widget.")]
 		[SerializeField]
-		private EasingEquations.EaseType m_EaseType= EasingEquations.EaseType.EaseInOutBack;
+		private EasingEquations.EaseType m_EaseType = EasingEquations.EaseType.EaseInOutBack;
 
-        /// <summary>
-        /// The duration to tween this widget.
-        /// </summary>
+		/// <summary>
+		/// The duration to tween this widget.
+		/// </summary>
 		[Tooltip("The duration to tween this widget.")]
 		[SerializeField]
 		protected float m_Duration = 0.7f;
+
+		[SerializeField]
+		protected bool m_IgnoreTimeScale = true;
+		public bool IgnoreTimeScale { get { return this.m_IgnoreTimeScale; } }
 
         /// <summary>
         /// The AudioClip that will be played when this widget shows.
@@ -177,7 +181,7 @@ namespace DevionGames.UIWidgets
 			if (this.m_AlphaTweenRunner == null)
 				this.m_AlphaTweenRunner = new TweenRunner<FloatTween> ();
 			this.m_AlphaTweenRunner.Init (this);
-			
+
 			if (this.m_ScaleTweenRunner == null)
 				this.m_ScaleTweenRunner = new TweenRunner<Vector3Tween> ();
 			this.m_ScaleTweenRunner.Init (this);
@@ -300,7 +304,8 @@ namespace DevionGames.UIWidgets
 					easeType = m_EaseType,
 					duration = m_Duration,
 					startValue = startValue,
-					targetValue = targetValue
+					targetValue = targetValue,
+					ignoreTimeScale = m_IgnoreTimeScale
 				};
 
 				alphaTween.AddOnChangedCallback ((float value) => {
@@ -324,8 +329,9 @@ namespace DevionGames.UIWidgets
                 easeType = m_EaseType,
                 duration = m_Duration,
                 startValue = startValue,
-                targetValue = targetValue
-            };
+                targetValue = targetValue,
+				ignoreTimeScale = m_IgnoreTimeScale
+			};
             scaleTween.AddOnChangedCallback((Vector3 value) => {
                 m_RectTransform.localScale = value;
             });

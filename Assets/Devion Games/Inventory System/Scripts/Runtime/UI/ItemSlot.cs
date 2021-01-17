@@ -159,7 +159,7 @@ namespace DevionGames.InventorySystem
             yield return true;
             while (time < delay)
             {
-                time += Time.deltaTime;
+                time += Container.IgnoreTimeScale?Time.unscaledDeltaTime: Time.deltaTime;
                 yield return true;
             }
             if (InventoryManager.UI.tooltip != null && ObservedItem != null)
