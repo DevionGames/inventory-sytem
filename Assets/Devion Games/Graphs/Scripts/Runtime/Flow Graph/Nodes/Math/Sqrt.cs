@@ -5,6 +5,7 @@ using UnityEngine;
 namespace DevionGames.Graphs
 {
     [System.Serializable]
+    [ComponentMenu("Math/Sqrt")]
     [NodeStyle("Icons/Sqrt",false, "Math")]
     public class Sqrt : FlowNode
     {

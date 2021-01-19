@@ -5,6 +5,7 @@ using UnityEngine;
 namespace DevionGames.Graphs
 {
     [System.Serializable]
+    [ComponentMenu("Math/Round")]
     [NodeStyle("Icons/Round",false, "Math")]
     public class Round : FlowNode
     {

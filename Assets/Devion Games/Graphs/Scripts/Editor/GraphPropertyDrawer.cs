@@ -15,7 +15,7 @@ namespace DevionGames.Graphs
             EditorGUI.BeginProperty(position, label, property);
             if (GUI.Button(position, label,EditorStyles.objectField)) {
                 GraphEditorWindow window = GraphEditorWindow.ShowWindow();
-                IBehavior behavior = (IBehavior)property.GetParent();
+                IGraphProvider behavior = (IGraphProvider)property.GetParent();
                 window.Load<T>(behavior, property.serializedObject.targetObject);
                 
             }

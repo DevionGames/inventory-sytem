@@ -5,6 +5,7 @@ using UnityEngine;
 namespace DevionGames.Graphs
 {
     [System.Serializable]
+    [ComponentMenu("Math/Add")]
     [NodeStyle(true, "Math")]
     public class Ceil : FlowNode
     {

@@ -68,14 +68,11 @@ namespace DevionGames.Graphs
 
         public virtual void OnBeforeSerialize()
         {
-            Debug.Log("OnBeforeSerialize");
             SaveSelection();
         }
 
-
         public virtual void OnAfterDeserialize()
         {
-            Debug.Log("OnAfterDeserialize");
             LoadSelection();
         }
 

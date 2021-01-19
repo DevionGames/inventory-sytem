@@ -2,6 +2,9 @@
 
 namespace DevionGames.Graphs
 {
+
+    [System.Serializable]
+    [ComponentMenu("Math/Subtract")]
     [NodeStyle("Icons/Subtract",false,"Math")]
     public class Subtract : FlowNode
     {

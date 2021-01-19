@@ -14,3 +14,4 @@
 - Linked AudioMixer to Settings sliders
 - Fixed bug when item was moved, global restrictions were readded.
 - IgnoreTimeScale option for UIWidget
+- Fixed copy/paste in stats formula graph

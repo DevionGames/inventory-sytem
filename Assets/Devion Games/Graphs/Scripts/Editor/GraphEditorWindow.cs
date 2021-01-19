@@ -18,7 +18,7 @@ namespace DevionGames.Graphs
 		[SerializeReference]
 		private IGraphView m_GraphView;
 		private UnityEngine.Object m_TargetObject;
-		private IBehavior m_Behavior;
+		private IGraphProvider m_Behavior;
 		private string[] commandNames = new string[] {"OnStartDrag", "OnEndDrag" };
 
 
@@ -36,13 +36,25 @@ namespace DevionGames.Graphs
 
 
 		protected virtual void OnPlayModeStateChanged(PlayModeStateChange state)
-        {	
-			Close();
+        {
+			if (this.m_TargetObject is IGraphProvider)
+			{
+				Load(this.m_GraphView.GetType(), this.m_TargetObject as IGraphProvider, this.m_TargetObject);
+			}else {
+				Close();
+			}
 		}
 
 		protected virtual void OnAfterAssemblyReload()
 		{
-			Close();
+			if (this.m_TargetObject is IGraphProvider)
+			{
+				Load(this.m_GraphView.GetType(), this.m_TargetObject as IGraphProvider, this.m_TargetObject);
+			}
+			else
+			{
+				Close();
+			}
 		}
 
 		private void Update()
@@ -77,12 +89,12 @@ namespace DevionGames.Graphs
 		}
 
 
-		public void Load<T>(IBehavior behavior, UnityEngine.Object target)
+		public void Load<T>(IGraphProvider behavior, UnityEngine.Object target)
 		{
 			Load(typeof(T), behavior, target);
 		}
 
-		public void Load(Type type,IBehavior behavior, UnityEngine.Object target)
+		public void Load(Type type,IGraphProvider behavior, UnityEngine.Object target)
 		{
 			if (behavior == null)
 				Close();

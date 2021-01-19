@@ -342,6 +342,9 @@ namespace DevionGames.Graphs
             {
                 headerSize = EditorStyles.label.CalcSize(new GUIContent(ObjectNames.NicifyVariableName(node.name)));
                 headerSize.x += NODE_CONTENT_OFFSET * 2;
+                if (headerSize.x > NODE_MIN_WIDTH)
+                    headerSize.x += NODE_CONTENT_OFFSET;
+
                 if (icon != null) { headerSize.x += icon.width+NODE_CONTENT_OFFSET; }
                 headerSize.y = NODE_HEADER_HEIGHT;
             }
@@ -460,13 +463,15 @@ namespace DevionGames.Graphs
         {
             Graph copy = new Graph();
             copy.serializationData = this.m_Graph.serializationData;
-            for (int i = 0; i < this.m_Selection.Count; i++) {
-                copy.serializationData.Replace(this.m_Selection[i].id,System.Guid.NewGuid().ToString());
-            }
             GraphUtility.Load(copy);
+           
             Node[] toDelete = copy.nodes.Where(x => !this.m_Selection.Exists(y => x.id == y.id)).ToArray();
             GraphUtility.RemoveNodes(copy, toDelete.Cast<FlowNode>().ToArray());
             GraphUtility.Save(copy);
+            for (int i = 0; i < copy.nodes.Count; i++)
+            {
+                copy.serializationData = copy.serializationData.Replace(copy.nodes[i].id, System.Guid.NewGuid().ToString());
+            }
             this.m_Copy = copy.serializationData;
         }
 

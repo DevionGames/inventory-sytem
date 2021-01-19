@@ -9,7 +9,7 @@ using System.Linq;
 namespace DevionGames.StatSystem
 {
 	[System.Serializable]
-	public class Stat: IJsonSerializable, IBehavior
+	public class Stat: IJsonSerializable, IGraphProvider
 	{
         public Action<Stat> onChange;
 

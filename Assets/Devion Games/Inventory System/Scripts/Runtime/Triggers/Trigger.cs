@@ -28,11 +28,12 @@ namespace DevionGames.InventorySystem
         protected delegate void ItemEventFunction<T>(T handler, Item item, GameObject player);
         protected delegate void FailureItemEventFunction<T>(T handler, Item item, GameObject player, FailureCause failureCause);
 
-       
+        //Deprecate use SendMessage with Use
         //used for UI Button reference
         public void StartUse() {
             Use();
         }
+
 
         public void StartUse(ItemContainer window)
         {

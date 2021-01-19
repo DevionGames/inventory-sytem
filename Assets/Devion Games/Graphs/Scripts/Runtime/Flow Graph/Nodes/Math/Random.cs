@@ -3,6 +3,7 @@
 namespace DevionGames.Graphs
 {
     [System.Serializable]
+    [ComponentMenu("Math/Random")]
     [NodeStyle( true, "Math")]
     public class Random : FlowNode
     {

@@ -5,7 +5,7 @@ namespace DevionGames.Graphs
     public class FormulaGraph : FlowGraph
     {
         public FormulaGraph() {
-            GraphUtility.AddNode(this, typeof(Result));
+            GraphUtility.AddNode(this, typeof(FormulaOutput));
         }
     }
 }

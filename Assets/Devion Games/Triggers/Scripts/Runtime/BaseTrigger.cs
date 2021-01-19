@@ -236,7 +236,7 @@ namespace DevionGames
                     if (animator.IsInTransition(j))
                         return false;
                 }
-            }               
+            }
             //Trigger can be used  
             return true;
         }

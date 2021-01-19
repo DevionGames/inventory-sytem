@@ -2,9 +2,9 @@
 
 namespace DevionGames.Graphs
 {
-    [NodeStyle(false)]
+    [NodeStyle(true)]
     [System.Serializable]
-    public class Result : EventNode
+    public class FormulaOutput : EventNode
     {
         [Input(false,true)]
         public float result;

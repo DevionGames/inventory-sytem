@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace DevionGames.Graphs
 {
-    public interface IBehavior 
+    public interface IGraphProvider 
     {
         Graph GetGraph();
     }
