@@ -10,11 +10,14 @@ namespace DevionGames.InventorySystem
     public class EquipmentItemInspector :  UsableItemInspector
     {
         private ReorderableList regionList;
+        private SerializedProperty m_OverrideEquipPrefab;
 
         protected override void OnEnable()
         {
             base.OnEnable();
             if (target == null) return;
+            this.m_OverrideEquipPrefab = serializedObject.FindProperty("m_OverrideEquipPrefab");
+
             this.regionList = new ReorderableList(serializedObject, serializedObject.FindProperty("m_Region"), true, true, true, true);
             this.regionList.drawHeaderCallback = (Rect rect) => {
                 EditorGUI.LabelField(rect, "Equipment Region");
@@ -29,8 +32,9 @@ namespace DevionGames.InventorySystem
 
 
         private void DrawInspector() {
-            GUILayout.Space(3f);
+            GUILayout.Space(5f);
             GUILayout.Label("Equipment:", EditorStyles.boldLabel);
+            EditorGUILayout.PropertyField(this.m_OverrideEquipPrefab);
             EditorGUILayout.HelpBox("The equipment region defines where the item should be equiped to. Use Left Hand and Right Hand for two-handed weapons.", MessageType.Info);
             regionList.DoLayoutList();
         }

@@ -79,9 +79,17 @@ namespace DevionGames.InventorySystem
                 VisibleItem visibleItem = this.m_VisibleItems[i];
                 if (visibleItem.item.Id == item.Id) {
                     visibleItem.OnItemEquip(item);
-                    break;
+                    return;
                 }
-            } 
+            }
+
+            StaticItem staticItem = gameObject.AddComponent<StaticItem>();
+            staticItem.item = InventoryManager.Database.items.Find(x=>x.Id== item.Id);
+            VisibleItem.Attachment attachment = new VisibleItem.Attachment();
+            attachment.prefab = item.EquipPrefab;
+            attachment.region = item.Region[0];
+            staticItem.attachments = new VisibleItem.Attachment[1] { attachment};
+            staticItem.OnItemEquip(item);
         }
 
         public void UnEquipItem(EquipmentItem item)

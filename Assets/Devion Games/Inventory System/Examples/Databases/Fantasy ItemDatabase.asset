@@ -151,6 +151,7 @@ MonoBehaviour:
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
   actions: []
+  m_OverrideEquipPrefab: {fileID: 0}
   m_Region:
   - {fileID: 5658350685615726283}
   - {fileID: 316844889573954113}
@@ -628,6 +629,7 @@ MonoBehaviour:
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
   actions: []
+  m_OverrideEquipPrefab: {fileID: 0}
   m_Region:
   - {fileID: 316844889573954113}
   references:
@@ -962,6 +964,7 @@ MonoBehaviour:
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
   actions: []
+  m_OverrideEquipPrefab: {fileID: 0}
   m_Region:
   - {fileID: 5658350685615726283}
   references:
@@ -1075,6 +1078,7 @@ MonoBehaviour:
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
   actions: []
+  m_OverrideEquipPrefab: {fileID: 0}
   m_Region:
   - {fileID: 316844889573954113}
   references:
@@ -1417,6 +1421,7 @@ MonoBehaviour:
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
   actions: []
+  m_OverrideEquipPrefab: {fileID: 0}
   m_Region:
   - {fileID: 316844889573954113}
   references:
@@ -1641,6 +1646,7 @@ MonoBehaviour:
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
   actions: []
+  m_OverrideEquipPrefab: {fileID: 0}
   m_Region:
   - {fileID: 316844889573954113}
   references:
