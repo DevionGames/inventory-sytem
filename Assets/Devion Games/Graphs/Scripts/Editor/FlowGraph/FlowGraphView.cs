@@ -229,8 +229,8 @@ namespace DevionGames.Graphs
                 Rect portRect = GetPortRect(port);
                 GUIStyle portStyle = (port.Connections.Count() > 0 || this.m_ConnectingPort == port) ? Styles.portConnected : Styles.port;
 
-                if(port.direction== PortDirection.Output && EditorApplication.isPlaying)
-                    GUI.Label(new Rect(portRect.x,portRect.y-18f,50f,20f),node.OnRequestValue(port).ToString());
+                /*if(port.direction== PortDirection.Output && EditorApplication.isPlaying)
+                    GUI.Label(new Rect(portRect.x,portRect.y-18f,50f,20f),node.OnRequestValue(port).ToString());*/
 
                 if (Event.current.type == EventType.Repaint && port.drawPort)
                 {
