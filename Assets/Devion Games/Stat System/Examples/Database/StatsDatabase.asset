@@ -487,8 +487,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StatName: Health
   m_BaseValue: 45
-  m_InheritBaseValue: 0
-  m_OverrideBaseValue: 5000
+  m_InheritBaseValue: 1
+  m_OverrideBaseValue: 0
   m_FormulaGraph:
     serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"57f69780-631b-42b8-92e2-1b47d6e6eb4d\",\n\t\t\"name\":\"Formula
       Output\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"a7549998-4593-470e-9558-eeeddf364d5f\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"a7549998-4593-470e-9558-eeeddf364d5f\",\n\t\t\"name\":\"Get
