@@ -229,6 +229,121 @@ MonoBehaviour:
   m_StartCurrentValue: 1
   references:
     version: 1
+--- !u!114 &-2116689027291203776
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7fa876b74660644a2c2fa15bf08877, type: 3}
+  m_Name: Dead
+  m_EditorClassIdentifier: 
+  m_StatEffectName: Dead
+  m_Repeat: 1
+  m_Actions:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  - id: 5
+  - id: 6
+  - id: 7
+  - id: 8
+  references:
+    version: 1
+    00000000:
+      type: {class: CompareTag, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.CompareTag
+        m_Enabled: 1
+        m_Target: 0
+        m_Tag: Player
+    00000001:
+      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.CrossFade
+        m_Enabled: 1
+        m_Target: 0
+        m_AnimatorState: Dead
+        m_TransitionDuration: 0.2
+    00000002:
+      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.SendMessage
+        m_Enabled: 1
+        m_Target: 0
+        methodName: SetControllerActive
+        m_Argument:
+          m_BoolValue: 0
+          m_IntValue: 0
+          m_FloatValue: 0
+          m_StringValue: 
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 1
+        m_Options: 1
+    00000003:
+      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.Wait
+        m_Enabled: 1
+        duration: 1.5
+    00000004:
+      type: {class: ShowProgressbar, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.ShowProgressbar
+        m_Enabled: 1
+        m_WidgetName: General Progressbar
+        m_Title: Respawn
+        m_Duration: 5
+    00000005:
+      type: {class: SetPositionToTarget, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.SetPositionToTarget
+        m_Enabled: 1
+        m_Target: 0
+        m_Tag: Respawn
+        m_DefaultPosition: {x: 0, y: 0, z: 0}
+        m_SetCameraRelative: 1
+    00000006:
+      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.CrossFade
+        m_Enabled: 1
+        m_Target: 0
+        m_AnimatorState: Empty
+        m_TransitionDuration: 0.2
+    00000007:
+      type: {class: Refresh, ns: DevionGames.StatSystem, asm: DevionGames.StatSystem}
+      data:
+        m_Type: DevionGames.StatSystem.Refresh
+        m_Enabled: 1
+        m_Target: 0
+        m_StatName: Health
+    00000008:
+      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.SendMessage
+        m_Enabled: 1
+        m_Target: 0
+        methodName: SetControllerActive
+        m_Argument:
+          m_BoolValue: 1
+          m_IntValue: 0
+          m_FloatValue: 0
+          m_StringValue: 
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 1
+        m_Options: 1
 --- !u!114 &-2005598942081263570
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -332,6 +447,7 @@ MonoBehaviour:
   effects:
   - {fileID: -4664889271903601789}
   - {fileID: -2005598942081263570}
+  - {fileID: -2116689027291203776}
   settings:
   - {fileID: 4982296566304714759}
   - {fileID: -6710374462731137879}
@@ -509,12 +625,20 @@ MonoBehaviour:
         m_Actions:
           actions:
           - id: 1
+          - id: 2
     00000001:
       type: {class: Log, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.Log
         m_Enabled: 1
         m_Message: Dead
+    00000002:
+      type: {class: AddEffect, ns: DevionGames.StatSystem, asm: DevionGames.StatSystem}
+      data:
+        m_Type: DevionGames.StatSystem.AddEffect
+        m_Enabled: 1
+        m_Target: 0
+        m_Effect: {fileID: -2116689027291203776}
 --- !u!114 &4454703591542203765
 MonoBehaviour:
   m_ObjectHideFlags: 1
