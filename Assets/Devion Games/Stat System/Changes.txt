@@ -1,0 +1,9 @@
+- Global editor
+- Diffrent stat types (Stat, Attribute, Level)
+- Stat Effects
+- Stat Callbacks in editor
+- Removed Min Value property
+- Changed Max Value property to Cap
+- Changed StatFormula to FormulaGraph
+- Moved display damage properties to DamageData
+- Free stat points is a stat, for easier adding /removing value

@@ -6,25 +6,14 @@ namespace DevionGames.StatSystem
 {
     public class SelectableUIStat : UIStat
     {
-        protected override StatsHandler handler {
-            get {
-                if (SelectableObject.current != null) {
-                    return SelectableObject.current.GetComponent<StatsHandler>();
-
-                }
-                return null;
-            }
-        }
-
-        protected override Stat stat
+        protected override StatsHandler GetStatsHandler()
         {
-            get
+            if (SelectableObject.current != null)
             {
-                if (handler != null)
-                    return handler.GetStat(this.m_StatName);
+                return SelectableObject.current.GetComponent<StatsHandler>();
 
-                return null;
             }
+            return null;
         }
     }
 }

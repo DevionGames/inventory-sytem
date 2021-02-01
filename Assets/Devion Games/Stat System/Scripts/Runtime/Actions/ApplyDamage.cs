@@ -4,7 +4,9 @@ using UnityEngine;
 
 namespace DevionGames.StatSystem
 {
+    [UnityEngine.Scripting.APIUpdating.MovedFromAttribute(true, null, "Assembly-CSharp")]
     [ComponentMenu("Stat System/Apply Damage")]
+    [System.Serializable]
     public class ApplyDamage : Action
     {
         [SerializeField]

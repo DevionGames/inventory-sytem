@@ -4,7 +4,9 @@ using UnityEngine;
 
 namespace DevionGames.StatSystem
 {
+    [UnityEngine.Scripting.APIUpdating.MovedFromAttribute(true, null, "Assembly-CSharp")]
     [ComponentMenu("Stat System/Add Modifier")]
+    [System.Serializable]
     public class AddModifier : Action
     {
         [SerializeField]
@@ -27,7 +29,10 @@ namespace DevionGames.StatSystem
 
         public override ActionStatus OnUpdate()
         {
-            this.m_Handler.AddModifier(this.m_StatName, this.m_Value, this.m_ModType, this.m_Handler.gameObject);
+            Stat stat = this.m_Handler.GetStat(this.m_StatName);
+            if (stat == null) return ActionStatus.Failure;
+
+            stat.AddModifier(new StatModifier(this.m_Value, this.m_ModType, this.m_Handler.gameObject));
             return ActionStatus.Success;
         }
 

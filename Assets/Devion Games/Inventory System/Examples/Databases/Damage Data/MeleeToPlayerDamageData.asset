@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd212400f57b8b94493af21a4a9fdb74, type: 3}
+  m_Script: {fileID: 11500000, guid: 0cd286d4e521ac74a86e8a55427a1917, type: 3}
   m_Name: MeleeToPlayerDamageData
   m_EditorClassIdentifier: 
   sendingStat: Melee Damage
@@ -22,8 +22,7 @@ MonoBehaviour:
   offset: {x: 0, y: 1, z: 0}
   randomize: {x: 0, y: 0.2, z: 0}
   lifeTime: 3
-  audioMixerGroup: {fileID: 8643709756097329450, guid: 08813bea6fa2f304d8179aec903c1bd9,
-    type: 2}
+  audioMixerGroup: {fileID: 0}
   volumeScale: 0.43
   hitSounds:
   - {fileID: 8300000, guid: 0805de7e4fb0f4d03a30ae90e7c64311, type: 3}

@@ -27,12 +27,6 @@ namespace DevionGames.InventorySystem
             this.m_Items = serializedObject.FindProperty("m_Items");
             this.m_Modifiers = serializedObject.FindProperty("m_Modifiers");
 
-
-          /*  if (this.m_Items.arraySize > 0)
-            {
-                CheckForDatabase(this.m_Items.GetArrayElementAtIndex(0).objectReferenceValue);
-            }*/
-
             CreateItemList(serializedObject, this.m_Items);
         }
 
@@ -64,10 +58,11 @@ namespace DevionGames.InventorySystem
                 rect.x += rect.width + 2f;
                 rect.width = 50f;
 
-                if (EditorApplication.isPlaying)
+                /* Resets group amount to 1 in playmode
+                 * if (EditorApplication.isPlaying)
                 {
                     amount.intValue = element.objectReferenceValue != null ? (element.objectReferenceValue as Item).Stack : amount.intValue;
-                }
+                }*/
                 EditorGUI.PropertyField(rect, amount, GUIContent.none);
 
             };
@@ -141,67 +136,5 @@ namespace DevionGames.InventorySystem
 
 
         }
-
-       /* private void CheckForDatabase(Object current)
-        {
-            if (InventorySystemEditor.Database == null && current != null)
-            {
-                if (EditorApplication.isPlaying)
-                {
-                    InventorySystemEditor.Database = InventoryManager.Database;
-                }
-
-                ItemDatabase[] databases = EditorTools.FindAssets<ItemDatabase>();
-
-                for (int i = 0; i < databases.Length; i++)
-                {
-                    if (typeof(Item).IsAssignableFrom(current.GetType()))
-                    {
-
-                        if (databases[i].items.Contains((Item)current))
-                        {
-                            InventorySystemEditor.Database = databases[i];
-                            break;
-                        }
-                    }
-                    if (typeof(Currency).IsAssignableFrom(current.GetType()))
-                    {
-
-                        if (databases[i].currencies.Contains((Currency)current))
-                        {
-                            InventorySystemEditor.Database = databases[i];
-                            break;
-                        }
-                    }
-                    if (typeof(EquipmentRegion).IsAssignableFrom(current.GetType()))
-                    {
-
-                        if (databases[i].equipments.Contains((EquipmentRegion)current))
-                        {
-                            InventorySystemEditor.Database = databases[i];
-                            break;
-                        }
-                    }
-                    if (typeof(Rarity).IsAssignableFrom(current.GetType()))
-                    {
-
-                        if (databases[i].raritys.Contains((Rarity)current))
-                        {
-                            InventorySystemEditor.Database = databases[i];
-                            break;
-                        }
-                    }
-                    if (typeof(Category).IsAssignableFrom(current.GetType()))
-                    {
-
-                        if (databases[i].categories.Contains((Category)current))
-                        {
-                            InventorySystemEditor.Database = databases[i];
-                            break;
-                        }
-                    }
-                }
-            }
-        }*/
     }
 }

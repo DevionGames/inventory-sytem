@@ -15,3 +15,7 @@
 - Fixed bug when item was moved, global restrictions were readded.
 - IgnoreTimeScale option for UIWidget
 - Fixed copy/paste in stats formula graph
+- Renamed Graph.IBehavior to Graph.IGraphProvider
+- Renamed Graph.Result to Graph.FormulaOutput
+- Formula Asset
+- Rework StatSystem

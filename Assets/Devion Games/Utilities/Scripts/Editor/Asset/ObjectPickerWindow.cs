@@ -30,13 +30,14 @@ namespace DevionGames
         public ObjectPickerWindow.SelectCallbackDelegate onSelectCallback;
         public delegate void CreateCallbackDelegate();
         public ObjectPickerWindow.CreateCallbackDelegate onCreateCallback;
+        private bool m_AcceptNull;
 
-        public static void ShowWindow<T>(Rect buttonRect, ObjectPickerWindow.SelectCallbackDelegate selectCallback, ObjectPickerWindow.CreateCallbackDelegate createCallback)
+        public static void ShowWindow<T>(Rect buttonRect, ObjectPickerWindow.SelectCallbackDelegate selectCallback, ObjectPickerWindow.CreateCallbackDelegate createCallback, bool acceptNull=false)
         {
-            ShowWindow(buttonRect, typeof(T), selectCallback, createCallback);
+            ShowWindow(buttonRect, typeof(T), selectCallback, createCallback,acceptNull);
         }
 
-        public static void ShowWindow(Rect buttonRect, Type type, ObjectPickerWindow.SelectCallbackDelegate selectCallback, ObjectPickerWindow.CreateCallbackDelegate createCallback)
+        public static void ShowWindow(Rect buttonRect, Type type, ObjectPickerWindow.SelectCallbackDelegate selectCallback, ObjectPickerWindow.CreateCallbackDelegate createCallback, bool acceptNull=false)
         {
             ObjectPickerWindow window = ScriptableObject.CreateInstance<ObjectPickerWindow>();
             buttonRect = GUIToScreenRect(buttonRect);
@@ -44,10 +45,11 @@ namespace DevionGames
             window.BuildSelectableObjects(type);
             window.onSelectCallback = selectCallback;
             window.onCreateCallback = createCallback;
+            window.m_AcceptNull = acceptNull;
             window.ShowAsDropDown(buttonRect, new Vector2(buttonRect.width, 200f));
         }
 
-        public static void ShowWindow(Rect buttonRect,Type type, Dictionary<UnityEngine.Object,List<UnityEngine.Object>> selectableObjects, ObjectPickerWindow.SelectCallbackDelegate selectCallback, ObjectPickerWindow.CreateCallbackDelegate createCallback)
+        public static void ShowWindow(Rect buttonRect,Type type, Dictionary<UnityEngine.Object,List<UnityEngine.Object>> selectableObjects, ObjectPickerWindow.SelectCallbackDelegate selectCallback, ObjectPickerWindow.CreateCallbackDelegate createCallback, bool acceptNull=false)
         {
             ObjectPickerWindow window = ScriptableObject.CreateInstance<ObjectPickerWindow>();
             buttonRect = GUIToScreenRect(buttonRect);
@@ -56,6 +58,7 @@ namespace DevionGames
             window.m_SelectChildren = true;
             window.onSelectCallback = selectCallback;
             window.onCreateCallback = createCallback;
+            window.m_AcceptNull = acceptNull;
             window.ShowAsDropDown(buttonRect, new Vector2(buttonRect.width, 200f));
         }
 
@@ -154,17 +157,19 @@ namespace DevionGames
 
             if (this.m_Root == null)
             {
-                GUIContent nullContent = new GUIContent("Null");
-                Rect rect2 = GUILayoutUtility.GetRect(nullContent, ObjectPickerWindow.m_Styles.elementButton, GUILayout.Height(20f));
-                GUI.backgroundColor = (rect2.Contains(Event.current.mousePosition) ? GUI.backgroundColor : new Color(0, 0, 0, 0.0f));
-
-                if (GUI.Button(rect2, nullContent, ObjectPickerWindow.m_Styles.elementButton))
+                if (this.m_AcceptNull)
                 {
-                    onSelectCallback?.Invoke(null);
-                    Close();
-                }
-                GUI.Label(new Rect(rect2.x, rect2.y, 20f, 20f), EditorGUIUtility.LoadRequired("d_ScriptableObject On Icon") as Texture2D);
+                    GUIContent nullContent = new GUIContent("Null");
+                    Rect rect2 = GUILayoutUtility.GetRect(nullContent, ObjectPickerWindow.m_Styles.elementButton, GUILayout.Height(20f));
+                    GUI.backgroundColor = (rect2.Contains(Event.current.mousePosition) ? GUI.backgroundColor : new Color(0, 0, 0, 0.0f));
 
+                    if (GUI.Button(rect2, nullContent, ObjectPickerWindow.m_Styles.elementButton))
+                    {
+                        onSelectCallback?.Invoke(null);
+                        Close();
+                    }
+                    GUI.Label(new Rect(rect2.x, rect2.y, 20f, 20f), EditorGUIUtility.LoadRequired("d_ScriptableObject On Icon") as Texture2D);
+                }
 
                 GUIContent createContent = new GUIContent("Create New " + this.m_Type.Name);
                 Rect rect1 = GUILayoutUtility.GetRect(createContent, ObjectPickerWindow.m_Styles.elementButton, GUILayout.Height(20f));

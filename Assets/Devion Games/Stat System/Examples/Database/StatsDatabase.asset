@@ -1,0 +1,736 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7160182056493623654
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3a845730d6a9d41bf6a379795de496, type: 3}
+  m_Name: Melee Attack
+  m_EditorClassIdentifier: 
+  m_StatName: Melee Attack
+  m_BaseValue: 0
+  m_InheritBaseValue: 1
+  m_OverrideBaseValue: 0
+  m_FormulaGraph:
+    serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"8237ebe9-0a1a-478c-8cf6-5601d3a28728\",\n\t\t\"name\":\"Formula
+      Output\",\n\t\t\"position\":\"v2(448,3)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"defe5a76-c541-47d5-a5b1-ee3b380d2e26\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"001cc334-2989-42da-a88b-d28dbfdd9ecc\",\n\t\t\"name\":\"Get
+      Stat Value\",\n\t\t\"position\":\"v2(-364,-100)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"stat\",\n\t\t\t\t\"drawPort\":false,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.String\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"statValue\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"ffb4ed39-ae0c-42f5-8abf-36910b41c42a\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"DevionGames.StatSystem.Stat\"\n\t\t\t}\n\t\t},\n\t\t\"stat\":\"Min
+      Damage\"\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"b7cda40f-599f-41b3-bf23-b18456f45f62\",\n\t\t\"name\":\"Get
+      Stat Value\",\n\t\t\"position\":\"v2(-366,2)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"stat\",\n\t\t\t\t\"drawPort\":false,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.String\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"statValue\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"ffb4ed39-ae0c-42f5-8abf-36910b41c42a\",\n\t\t\t\t\t\t\"fieldName\":\"b\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"DevionGames.StatSystem.Stat\"\n\t\t\t}\n\t\t},\n\t\t\"stat\":\"Max
+      Damage\"\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Add\",\n\t\t\"id\":\"ffb4ed39-ae0c-42f5-8abf-36910b41c42a\",\n\t\t\"name\":\"Add\",\n\t\t\"position\":\"v2(-147,-68)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"001cc334-2989-42da-a88b-d28dbfdd9ecc\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"b7cda40f-599f-41b3-bf23-b18456f45f62\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"62256b82-007d-47e3-82a1-54e1e06a399e\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":0,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Divide\",\n\t\t\"id\":\"62256b82-007d-47e3-82a1-54e1e06a399e\",\n\t\t\"name\":\"Divide\",\n\t\t\"position\":\"v2(-7,-68)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"ffb4ed39-ae0c-42f5-8abf-36910b41c42a\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"62867c20-3c07-401e-b218-5c55b64b186f\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":2,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Multiply\",\n\t\t\"id\":\"62867c20-3c07-401e-b218-5c55b64b186f\",\n\t\t\"name\":\"Multiply\",\n\t\t\"position\":\"v2(148,39)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"62256b82-007d-47e3-82a1-54e1e06a399e\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"48d0c671-f351-4e23-9a28-3b6c3a3eff3b\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"defe5a76-c541-47d5-a5b1-ee3b380d2e26\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":0,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"b3b4537c-3f50-4cdd-ba92-a9ce243dd7ca\",\n\t\t\"name\":\"Get
+      Stat Value\",\n\t\t\"position\":\"v2(-381,159)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"stat\",\n\t\t\t\t\"drawPort\":false,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.String\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"statValue\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"2e296246-5df7-48dc-aa34-edb53b108a24\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"DevionGames.StatSystem.Stat\"\n\t\t\t}\n\t\t},\n\t\t\"stat\":\"Strength\"\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Add\",\n\t\t\"id\":\"2e296246-5df7-48dc-aa34-edb53b108a24\",\n\t\t\"name\":\"Add\",\n\t\t\"position\":\"v2(-195,160)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"b3b4537c-3f50-4cdd-ba92-a9ce243dd7ca\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"48d0c671-f351-4e23-9a28-3b6c3a3eff3b\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":1,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Divide\",\n\t\t\"id\":\"48d0c671-f351-4e23-9a28-3b6c3a3eff3b\",\n\t\t\"name\":\"Divide\",\n\t\t\"position\":\"v2(-38,160)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"2e296246-5df7-48dc-aa34-edb53b108a24\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"62867c20-3c07-401e-b218-5c55b64b186f\",\n\t\t\t\t\t\t\"fieldName\":\"b\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":100,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Multiply\",\n\t\t\"id\":\"defe5a76-c541-47d5-a5b1-ee3b380d2e26\",\n\t\t\"name\":\"Multiply\",\n\t\t\"position\":\"v2(291,39)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"62867c20-3c07-401e-b218-5c55b64b186f\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"8237ebe9-0a1a-478c-8cf6-5601d3a28728\",\n\t\t\t\t\t\t\"fieldName\":\"result\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":1.5,\n\t\t\"output\":0\n\t}]\n}"
+    serializedObjects: []
+  m_Cap: -1
+  m_Callbacks: []
+  references:
+    version: 1
+--- !u!114 &-6710374462731137879
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a29d4407d3c62454487e7e741f64e4da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-4885797470720747453
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3a845730d6a9d41bf6a379795de496, type: 3}
+  m_Name: Intelligence
+  m_EditorClassIdentifier: 
+  m_StatName: Intelligence
+  m_BaseValue: 2
+  m_InheritBaseValue: 1
+  m_OverrideBaseValue: 0
+  m_FormulaGraph:
+    serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"d2ff21cd-aebe-4e8e-91a4-a41be2f1a0fc\",\n\t\t\"name\":\"Formula
+      Output\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t}]\n}"
+    serializedObjects: []
+  m_Cap: -1
+  m_Callbacks: []
+  references:
+    version: 1
+--- !u!114 &-4664889271903601789
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7fa876b74660644a2c2fa15bf08877, type: 3}
+  m_Name: Regenerate Health
+  m_EditorClassIdentifier: 
+  m_StatEffectName: Regenerate Health
+  m_Repeat: -1
+  m_Actions:
+  - id: 0
+  - id: 1
+  - id: 2
+  references:
+    version: 1
+    00000000:
+      type: {class: Compare, ns: DevionGames.StatSystem, asm: DevionGames.StatSystem}
+      data:
+        m_Type: DevionGames.StatSystem.Compare
+        m_Enabled: 1
+        m_Target: 0
+        m_StatName: Health
+        m_ValueType: 1
+        m_Condition: 0
+        m_Value: 0
+    00000001:
+      type: {class: ApplyDamage, ns: DevionGames.StatSystem, asm: DevionGames.StatSystem}
+      data:
+        m_Type: DevionGames.StatSystem.ApplyDamage
+        m_Enabled: 1
+        m_Target: 0
+        m_StatName: Health
+        m_Value: -1
+    00000002:
+      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.Wait
+        m_Enabled: 1
+        duration: 3
+--- !u!114 &-4240061784426487929
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3a845730d6a9d41bf6a379795de496, type: 3}
+  m_Name: Vitality
+  m_EditorClassIdentifier: 
+  m_StatName: Vitality
+  m_BaseValue: 3
+  m_InheritBaseValue: 1
+  m_OverrideBaseValue: 5
+  m_FormulaGraph:
+    serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"3b21cbb3-b407-47f8-bd2d-479e26a5a809\",\n\t\t\"name\":\"Formula
+      Output\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t}]\n}"
+    serializedObjects: []
+  m_Cap: -1
+  m_Callbacks: []
+  references:
+    version: 1
+--- !u!114 &-3951915076032632442
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3a845730d6a9d41bf6a379795de496, type: 3}
+  m_Name: Magic Damage
+  m_EditorClassIdentifier: 
+  m_StatName: Magic Damage
+  m_BaseValue: 0
+  m_InheritBaseValue: 1
+  m_OverrideBaseValue: 0
+  m_FormulaGraph:
+    serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"b261791a-bd57-45cb-a970-af08b2d18245\",\n\t\t\"name\":\"Formula
+      Output\",\n\t\t\"position\":\"v2(362,38)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"cf4d703a-3fca-4c16-8fec-2505cccdf4bd\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"46e14899-1c0a-4602-a062-9d393207b333\",\n\t\t\"name\":\"Get
+      Stat Value\",\n\t\t\"position\":\"v2(-179.5,-37.5)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"stat\",\n\t\t\t\t\"drawPort\":false,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.String\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"statValue\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"3228b433-f1aa-49ca-b25c-6c48b2f76daf\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"DevionGames.StatSystem.Stat\"\n\t\t\t}\n\t\t},\n\t\t\"stat\":\"Min
+      Damage\"\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"d40e6bb6-f419-4a91-b8e3-3f78a58924be\",\n\t\t\"name\":\"Get
+      Stat Value\",\n\t\t\"position\":\"v2(-182.5,52.5)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"stat\",\n\t\t\t\t\"drawPort\":false,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.String\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"statValue\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"3228b433-f1aa-49ca-b25c-6c48b2f76daf\",\n\t\t\t\t\t\t\"fieldName\":\"b\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"DevionGames.StatSystem.Stat\"\n\t\t\t}\n\t\t},\n\t\t\"stat\":\"Max
+      Damage\"\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Random\",\n\t\t\"id\":\"3228b433-f1aa-49ca-b25c-6c48b2f76daf\",\n\t\t\"name\":\"Random\",\n\t\t\"position\":\"v2(43.5,-44.5)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"46e14899-1c0a-4602-a062-9d393207b333\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"d40e6bb6-f419-4a91-b8e3-3f78a58924be\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"cf4d703a-3fca-4c16-8fec-2505cccdf4bd\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":0,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"064f2a95-6edf-4092-8d83-49b36243b81c\",\n\t\t\"name\":\"Get
+      Stat Value\",\n\t\t\"position\":\"v2(-182.5,176.5)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"stat\",\n\t\t\t\t\"drawPort\":false,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.String\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"statValue\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"4dbe44a7-1cab-4da4-93e2-866261452c99\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"DevionGames.StatSystem.Stat\"\n\t\t\t}\n\t\t},\n\t\t\"stat\":\"Magic
+      Attack\"\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Random\",\n\t\t\"id\":\"4dbe44a7-1cab-4da4-93e2-866261452c99\",\n\t\t\"name\":\"Random\",\n\t\t\"position\":\"v2(39.5,142.5)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"064f2a95-6edf-4092-8d83-49b36243b81c\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"cf4d703a-3fca-4c16-8fec-2505cccdf4bd\",\n\t\t\t\t\t\t\"fieldName\":\"b\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":0,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Add\",\n\t\t\"id\":\"cf4d703a-3fca-4c16-8fec-2505cccdf4bd\",\n\t\t\"name\":\"Add\",\n\t\t\"position\":\"v2(215.5,37.5)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"3228b433-f1aa-49ca-b25c-6c48b2f76daf\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"4dbe44a7-1cab-4da4-93e2-866261452c99\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"b261791a-bd57-45cb-a970-af08b2d18245\",\n\t\t\t\t\t\t\"fieldName\":\"result\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":0,\n\t\t\"output\":0\n\t}]\n}"
+    serializedObjects: []
+  m_Cap: -1
+  m_Callbacks: []
+  references:
+    version: 1
+--- !u!114 &-3807886726308682672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3524a7a6338447643bb4fc31fe9b46e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoSave: 1
+  savingKey: Player
+  savingRate: 10
+  provider: 0
+--- !u!114 &-3727109656883785614
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3a845730d6a9d41bf6a379795de496, type: 3}
+  m_Name: Dexterity
+  m_EditorClassIdentifier: 
+  m_StatName: Dexterity
+  m_BaseValue: 4
+  m_InheritBaseValue: 1
+  m_OverrideBaseValue: 0
+  m_FormulaGraph:
+    serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"6a5f8b29-cbee-4b70-9575-fc7155dbd388\",\n\t\t\"name\":\"Formula
+      Output\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t}]\n}"
+    serializedObjects: []
+  m_Cap: -1
+  m_Callbacks: []
+  references:
+    version: 1
+--- !u!114 &-2558327947788714437
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02216d51560172d4683cc5fcfc0eb1a7, type: 3}
+  m_Name: Mana
+  m_EditorClassIdentifier: 
+  m_StatName: Mana
+  m_BaseValue: 28
+  m_InheritBaseValue: 1
+  m_OverrideBaseValue: 0
+  m_FormulaGraph:
+    serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"57f69780-631b-42b8-92e2-1b47d6e6eb4d\",\n\t\t\"name\":\"Formula
+      Output\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"a7549998-4593-470e-9558-eeeddf364d5f\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"a7549998-4593-470e-9558-eeeddf364d5f\",\n\t\t\"name\":\"Get
+      Stat Value\",\n\t\t\"position\":\"v2(-193,35)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"stat\",\n\t\t\t\t\"drawPort\":false,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.String\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"statValue\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"57f69780-631b-42b8-92e2-1b47d6e6eb4d\",\n\t\t\t\t\t\t\"fieldName\":\"result\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"DevionGames.StatSystem.Stat\"\n\t\t\t}\n\t\t},\n\t\t\"stat\":\"Intelligence\"\n\t}]\n}"
+    serializedObjects: []
+  m_Cap: -1
+  m_Callbacks: []
+  m_StartCurrentValue: 1
+  references:
+    version: 1
+--- !u!114 &-2005598942081263570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7fa876b74660644a2c2fa15bf08877, type: 3}
+  m_Name: Regenerate Mana
+  m_EditorClassIdentifier: 
+  m_StatEffectName: Regenerate Mana
+  m_Repeat: -1
+  m_Actions:
+  - id: 0
+  - id: 1
+  - id: 2
+  references:
+    version: 1
+    00000000:
+      type: {class: Compare, ns: DevionGames.StatSystem, asm: DevionGames.StatSystem}
+      data:
+        m_Type: DevionGames.StatSystem.Compare
+        m_Enabled: 1
+        m_Target: 0
+        m_StatName: Health
+        m_ValueType: 1
+        m_Condition: 0
+        m_Value: 0
+    00000001:
+      type: {class: ApplyDamage, ns: DevionGames.StatSystem, asm: DevionGames.StatSystem}
+      data:
+        m_Type: DevionGames.StatSystem.ApplyDamage
+        m_Enabled: 1
+        m_Target: 0
+        m_StatName: Mana
+        m_Value: -1
+    00000002:
+      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.Wait
+        m_Enabled: 1
+        duration: 3
+--- !u!114 &-433383825001297444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3a845730d6a9d41bf6a379795de496, type: 3}
+  m_Name: Free Points
+  m_EditorClassIdentifier: 
+  m_StatName: Free Points
+  m_BaseValue: 0
+  m_InheritBaseValue: 1
+  m_OverrideBaseValue: 0
+  m_FormulaGraph:
+    serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"0c97986d-c907-44fa-8541-163ee239975c\",\n\t\t\"name\":\"Formula
+      Output\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t}]\n}"
+    serializedObjects: []
+  m_Cap: -1
+  m_Callbacks: []
+  references:
+    version: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89aa2fece5950184cad8801c581ffdc6, type: 3}
+  m_Name: StatsDatabase
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: -433383825001297444}
+  - {fileID: 840039421740592421}
+  - {fileID: -4240061784426487929}
+  - {fileID: -4885797470720747453}
+  - {fileID: -3727109656883785614}
+  - {fileID: 780142526111815381}
+  - {fileID: 4191169994067471883}
+  - {fileID: -2558327947788714437}
+  - {fileID: 6190093544345854043}
+  - {fileID: 8638698396938483210}
+  - {fileID: 372347744615070254}
+  - {fileID: 1155190571332550951}
+  - {fileID: -7160182056493623654}
+  - {fileID: 8019179891300680543}
+  - {fileID: 1770301744684594855}
+  - {fileID: 6418017515403310313}
+  - {fileID: 4454703591542203765}
+  - {fileID: -3951915076032632442}
+  - {fileID: 7004165821522531148}
+  effects:
+  - {fileID: -4664889271903601789}
+  - {fileID: -2005598942081263570}
+  settings:
+  - {fileID: 4982296566304714759}
+  - {fileID: -6710374462731137879}
+  - {fileID: -3807886726308682672}
+  - {fileID: 517730002756451154}
+--- !u!114 &372347744615070254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3a845730d6a9d41bf6a379795de496, type: 3}
+  m_Name: Min Damage
+  m_EditorClassIdentifier: 
+  m_StatName: Min Damage
+  m_BaseValue: 1
+  m_InheritBaseValue: 1
+  m_OverrideBaseValue: 0
+  m_FormulaGraph:
+    serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"93f97569-15f2-4bcc-9421-e3d63f45e1b9\",\n\t\t\"name\":\"Formula
+      Output\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t}]\n}"
+    serializedObjects: []
+  m_Cap: -1
+  m_Callbacks: []
+  references:
+    version: 1
+--- !u!114 &517730002756451154
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82d4ca062c9d012409b2b20ecc604755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notificationName: Notification
+  dialogBoxName: Dialog Box
+--- !u!114 &780142526111815381
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3a845730d6a9d41bf6a379795de496, type: 3}
+  m_Name: Armor
+  m_EditorClassIdentifier: 
+  m_StatName: Armor
+  m_BaseValue: 12
+  m_InheritBaseValue: 1
+  m_OverrideBaseValue: 0
+  m_FormulaGraph:
+    serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"5c773410-02ef-4c04-95e8-4b36569cde09\",\n\t\t\"name\":\"Formula
+      Output\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"2294c75d-1afc-4049-936b-4a93ef1ea8eb\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"2294c75d-1afc-4049-936b-4a93ef1ea8eb\",\n\t\t\"name\":\"Get
+      Stat Value\",\n\t\t\"position\":\"v2(-203,36)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"stat\",\n\t\t\t\t\"drawPort\":false,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.String\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"statValue\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"5c773410-02ef-4c04-95e8-4b36569cde09\",\n\t\t\t\t\t\t\"fieldName\":\"result\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"DevionGames.StatSystem.Stat\"\n\t\t\t}\n\t\t},\n\t\t\"stat\":\"Strength\"\n\t}]\n}"
+    serializedObjects: []
+  m_Cap: -1
+  m_Callbacks: []
+  references:
+    version: 1
+--- !u!114 &840039421740592421
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3a845730d6a9d41bf6a379795de496, type: 3}
+  m_Name: Strength
+  m_EditorClassIdentifier: 
+  m_StatName: Strength
+  m_BaseValue: 5
+  m_InheritBaseValue: 1
+  m_OverrideBaseValue: 0
+  m_FormulaGraph:
+    serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"4f74e1b1-2c58-4003-883e-fb273f66b5b2\",\n\t\t\"name\":\"Formula
+      Output\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t}]\n}"
+    serializedObjects: []
+  m_Cap: -1
+  m_Callbacks: []
+  references:
+    version: 1
+--- !u!114 &1155190571332550951
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3a845730d6a9d41bf6a379795de496, type: 3}
+  m_Name: Max Damage
+  m_EditorClassIdentifier: 
+  m_StatName: Max Damage
+  m_BaseValue: 2
+  m_InheritBaseValue: 1
+  m_OverrideBaseValue: 0
+  m_FormulaGraph:
+    serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"93f97569-15f2-4bcc-9421-e3d63f45e1b9\",\n\t\t\"name\":\"Formula
+      Output\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t}]\n}"
+    serializedObjects: []
+  m_Cap: -1
+  m_Callbacks: []
+  references:
+    version: 1
+--- !u!114 &1770301744684594855
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3a845730d6a9d41bf6a379795de496, type: 3}
+  m_Name: Magic Attack
+  m_EditorClassIdentifier: 
+  m_StatName: Magic Attack
+  m_BaseValue: 0
+  m_InheritBaseValue: 1
+  m_OverrideBaseValue: 0
+  m_FormulaGraph:
+    serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"d0e98c94-dd18-4aef-9044-46cd47c1529b\",\n\t\t\"name\":\"Formula
+      Output\",\n\t\t\"position\":\"v2(441,-1)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"249b52b1-d902-40ef-8288-13c0f207f325\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"70b62eab-89e3-4051-87ef-582924d5144d\",\n\t\t\"name\":\"Get
+      Stat Value\",\n\t\t\"position\":\"v2(-105.5,2.5)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"stat\",\n\t\t\t\t\"drawPort\":false,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.String\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"statValue\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"675446a1-4a03-4eea-94f2-4ec56181d0fd\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"DevionGames.StatSystem.Stat\"\n\t\t\t}\n\t\t},\n\t\t\"stat\":\"Intelligence\"\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Add\",\n\t\t\"id\":\"675446a1-4a03-4eea-94f2-4ec56181d0fd\",\n\t\t\"name\":\"Add\",\n\t\t\"position\":\"v2(101.5,3.5)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"70b62eab-89e3-4051-87ef-582924d5144d\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"249b52b1-d902-40ef-8288-13c0f207f325\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":1,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Multiply\",\n\t\t\"id\":\"249b52b1-d902-40ef-8288-13c0f207f325\",\n\t\t\"name\":\"Multiply\",\n\t\t\"position\":\"v2(257.5,3.5)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"675446a1-4a03-4eea-94f2-4ec56181d0fd\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"d0e98c94-dd18-4aef-9044-46cd47c1529b\",\n\t\t\t\t\t\t\"fieldName\":\"result\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":3.84,\n\t\t\"output\":0\n\t}]\n}"
+    serializedObjects: []
+  m_Cap: -1
+  m_Callbacks: []
+  references:
+    version: 1
+--- !u!114 &4191169994067471883
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02216d51560172d4683cc5fcfc0eb1a7, type: 3}
+  m_Name: Health
+  m_EditorClassIdentifier: 
+  m_StatName: Health
+  m_BaseValue: 45
+  m_InheritBaseValue: 0
+  m_OverrideBaseValue: 5000
+  m_FormulaGraph:
+    serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"57f69780-631b-42b8-92e2-1b47d6e6eb4d\",\n\t\t\"name\":\"Formula
+      Output\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"a7549998-4593-470e-9558-eeeddf364d5f\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"a7549998-4593-470e-9558-eeeddf364d5f\",\n\t\t\"name\":\"Get
+      Stat Value\",\n\t\t\"position\":\"v2(-193,35)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"stat\",\n\t\t\t\t\"drawPort\":false,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.String\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"statValue\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"57f69780-631b-42b8-92e2-1b47d6e6eb4d\",\n\t\t\t\t\t\t\"fieldName\":\"result\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"DevionGames.StatSystem.Stat\"\n\t\t\t}\n\t\t},\n\t\t\"stat\":\"Vitality\"\n\t}]\n}"
+    serializedObjects: []
+  m_Cap: -1
+  m_Callbacks:
+  - id: 0
+  m_StartCurrentValue: 1
+  references:
+    version: 1
+    00000000:
+      type: {class: StatCallback, ns: DevionGames.StatSystem, asm: DevionGames.StatSystem}
+      data:
+        m_ValueType: 1
+        m_Condition: 3
+        m_Value: 0
+        m_Actions:
+          actions:
+          - id: 1
+    00000001:
+      type: {class: Log, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.Log
+        m_Enabled: 1
+        m_Message: Dead
+--- !u!114 &4454703591542203765
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3a845730d6a9d41bf6a379795de496, type: 3}
+  m_Name: Ranged Damage
+  m_EditorClassIdentifier: 
+  m_StatName: Ranged Damage
+  m_BaseValue: 0
+  m_InheritBaseValue: 1
+  m_OverrideBaseValue: 0
+  m_FormulaGraph:
+    serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"b261791a-bd57-45cb-a970-af08b2d18245\",\n\t\t\"name\":\"Formula
+      Output\",\n\t\t\"position\":\"v2(362,38)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"cf4d703a-3fca-4c16-8fec-2505cccdf4bd\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"46e14899-1c0a-4602-a062-9d393207b333\",\n\t\t\"name\":\"Get
+      Stat Value\",\n\t\t\"position\":\"v2(-179.5,-37.5)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"stat\",\n\t\t\t\t\"drawPort\":false,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.String\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"statValue\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"3228b433-f1aa-49ca-b25c-6c48b2f76daf\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"DevionGames.StatSystem.Stat\"\n\t\t\t}\n\t\t},\n\t\t\"stat\":\"Min
+      Damage\"\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"d40e6bb6-f419-4a91-b8e3-3f78a58924be\",\n\t\t\"name\":\"Get
+      Stat Value\",\n\t\t\"position\":\"v2(-182.5,52.5)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"stat\",\n\t\t\t\t\"drawPort\":false,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.String\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"statValue\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"3228b433-f1aa-49ca-b25c-6c48b2f76daf\",\n\t\t\t\t\t\t\"fieldName\":\"b\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"DevionGames.StatSystem.Stat\"\n\t\t\t}\n\t\t},\n\t\t\"stat\":\"Max
+      Damage\"\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Random\",\n\t\t\"id\":\"3228b433-f1aa-49ca-b25c-6c48b2f76daf\",\n\t\t\"name\":\"Random\",\n\t\t\"position\":\"v2(43.5,-44.5)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"46e14899-1c0a-4602-a062-9d393207b333\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"d40e6bb6-f419-4a91-b8e3-3f78a58924be\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"cf4d703a-3fca-4c16-8fec-2505cccdf4bd\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":0,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"064f2a95-6edf-4092-8d83-49b36243b81c\",\n\t\t\"name\":\"Get
+      Stat Value\",\n\t\t\"position\":\"v2(-178.5,176.5)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"stat\",\n\t\t\t\t\"drawPort\":false,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.String\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"statValue\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"4dbe44a7-1cab-4da4-93e2-866261452c99\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"DevionGames.StatSystem.Stat\"\n\t\t\t}\n\t\t},\n\t\t\"stat\":\"Ranged
+      Attack\"\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Random\",\n\t\t\"id\":\"4dbe44a7-1cab-4da4-93e2-866261452c99\",\n\t\t\"name\":\"Random\",\n\t\t\"position\":\"v2(39.5,142.5)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"064f2a95-6edf-4092-8d83-49b36243b81c\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"cf4d703a-3fca-4c16-8fec-2505cccdf4bd\",\n\t\t\t\t\t\t\"fieldName\":\"b\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":0,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Add\",\n\t\t\"id\":\"cf4d703a-3fca-4c16-8fec-2505cccdf4bd\",\n\t\t\"name\":\"Add\",\n\t\t\"position\":\"v2(215.5,37.5)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"3228b433-f1aa-49ca-b25c-6c48b2f76daf\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"4dbe44a7-1cab-4da4-93e2-866261452c99\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"b261791a-bd57-45cb-a970-af08b2d18245\",\n\t\t\t\t\t\t\"fieldName\":\"result\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":0,\n\t\t\"output\":0\n\t}]\n}"
+    serializedObjects: []
+  m_Cap: -1
+  m_Callbacks: []
+  references:
+    version: 1
+--- !u!114 &4982296566304714759
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 377ed21bfe7d31c47ada9734d30c4187, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugMessages: 1
+--- !u!114 &6190093544345854043
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e8e4373b2194149be68530f644e8ad, type: 3}
+  m_Name: Level
+  m_EditorClassIdentifier: 
+  m_StatName: Level
+  m_BaseValue: 1
+  m_InheritBaseValue: 1
+  m_OverrideBaseValue: 0
+  m_FormulaGraph:
+    serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"56c59ebf-78db-4f44-9302-d065eb6bfc40\",\n\t\t\"name\":\"Formula
+      Output\",\n\t\t\"position\":\"v2(35,3)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t}]\n}"
+    serializedObjects: []
+  m_Cap: 99
+  m_Callbacks:
+  - id: 0
+  m_Experience: {fileID: 8638698396938483210}
+  references:
+    version: 1
+    00000000:
+      type: {class: StatCallback, ns: DevionGames.StatSystem, asm: DevionGames.StatSystem}
+      data:
+        m_ValueType: 0
+        m_Condition: 0
+        m_Value: 0
+        m_Actions:
+          actions:
+          - id: 1
+    00000001:
+      type: {class: AddValue, ns: DevionGames.StatSystem, asm: DevionGames.StatSystem}
+      data:
+        m_Type: DevionGames.StatSystem.AddValue
+        m_Enabled: 1
+        m_Target: 0
+        m_StatName: Free Points
+        m_Value: 3
+--- !u!114 &6418017515403310313
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3a845730d6a9d41bf6a379795de496, type: 3}
+  m_Name: Melee Damage
+  m_EditorClassIdentifier: 
+  m_StatName: Melee Damage
+  m_BaseValue: 0
+  m_InheritBaseValue: 1
+  m_OverrideBaseValue: 0
+  m_FormulaGraph:
+    serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"b261791a-bd57-45cb-a970-af08b2d18245\",\n\t\t\"name\":\"Formula
+      Output\",\n\t\t\"position\":\"v2(362,38)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"cf4d703a-3fca-4c16-8fec-2505cccdf4bd\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"46e14899-1c0a-4602-a062-9d393207b333\",\n\t\t\"name\":\"Get
+      Stat Value\",\n\t\t\"position\":\"v2(-179.5,-37.5)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"stat\",\n\t\t\t\t\"drawPort\":false,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.String\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"statValue\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"3228b433-f1aa-49ca-b25c-6c48b2f76daf\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"DevionGames.StatSystem.Stat\"\n\t\t\t}\n\t\t},\n\t\t\"stat\":\"Min
+      Damage\"\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"d40e6bb6-f419-4a91-b8e3-3f78a58924be\",\n\t\t\"name\":\"Get
+      Stat Value\",\n\t\t\"position\":\"v2(-182.5,52.5)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"stat\",\n\t\t\t\t\"drawPort\":false,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.String\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"statValue\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"3228b433-f1aa-49ca-b25c-6c48b2f76daf\",\n\t\t\t\t\t\t\"fieldName\":\"b\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"DevionGames.StatSystem.Stat\"\n\t\t\t}\n\t\t},\n\t\t\"stat\":\"Max
+      Damage\"\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Random\",\n\t\t\"id\":\"3228b433-f1aa-49ca-b25c-6c48b2f76daf\",\n\t\t\"name\":\"Random\",\n\t\t\"position\":\"v2(43.5,-44.5)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"46e14899-1c0a-4602-a062-9d393207b333\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"d40e6bb6-f419-4a91-b8e3-3f78a58924be\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"cf4d703a-3fca-4c16-8fec-2505cccdf4bd\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":0,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"064f2a95-6edf-4092-8d83-49b36243b81c\",\n\t\t\"name\":\"Get
+      Stat Value\",\n\t\t\"position\":\"v2(-178.5,176.5)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"stat\",\n\t\t\t\t\"drawPort\":false,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.String\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"statValue\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"4dbe44a7-1cab-4da4-93e2-866261452c99\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"DevionGames.StatSystem.Stat\"\n\t\t\t}\n\t\t},\n\t\t\"stat\":\"Melee
+      Attack\"\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Random\",\n\t\t\"id\":\"4dbe44a7-1cab-4da4-93e2-866261452c99\",\n\t\t\"name\":\"Random\",\n\t\t\"position\":\"v2(39.5,142.5)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"064f2a95-6edf-4092-8d83-49b36243b81c\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"cf4d703a-3fca-4c16-8fec-2505cccdf4bd\",\n\t\t\t\t\t\t\"fieldName\":\"b\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":0,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Add\",\n\t\t\"id\":\"cf4d703a-3fca-4c16-8fec-2505cccdf4bd\",\n\t\t\"name\":\"Add\",\n\t\t\"position\":\"v2(215.5,37.5)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"3228b433-f1aa-49ca-b25c-6c48b2f76daf\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"4dbe44a7-1cab-4da4-93e2-866261452c99\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"b261791a-bd57-45cb-a970-af08b2d18245\",\n\t\t\t\t\t\t\"fieldName\":\"result\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":0,\n\t\t\"output\":0\n\t}]\n}"
+    serializedObjects: []
+  m_Cap: -1
+  m_Callbacks: []
+  references:
+    version: 1
+--- !u!114 &7004165821522531148
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3a845730d6a9d41bf6a379795de496, type: 3}
+  m_Name: Critical Strike
+  m_EditorClassIdentifier: 
+  m_StatName: Critical Strike
+  m_BaseValue: 20
+  m_InheritBaseValue: 1
+  m_OverrideBaseValue: 0
+  m_FormulaGraph:
+    serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"21106729-a4a6-473f-bc95-e5613e3bc37a\",\n\t\t\"name\":\"Formula
+      Output\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t}]\n}"
+    serializedObjects: []
+  m_Cap: -1
+  m_Callbacks: []
+  references:
+    version: 1
+--- !u!114 &7226637242341218706
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3a845730d6a9d41bf6a379795de496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StatName: New Stat
+  m_BaseValue: 0
+  m_InheritBaseValue: 1
+  m_OverrideBaseValue: 0
+  m_FormulaGraph:
+    serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"4cc00210-935e-4435-9320-b7cbab7d9978\",\n\t\t\"name\":\"Formula
+      Output\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t}]\n}"
+    serializedObjects: []
+  m_Cap: -1
+  m_Callbacks: []
+  references:
+    version: 1
+--- !u!114 &8019179891300680543
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3a845730d6a9d41bf6a379795de496, type: 3}
+  m_Name: Ranged Attack
+  m_EditorClassIdentifier: 
+  m_StatName: Ranged Attack
+  m_BaseValue: 0
+  m_InheritBaseValue: 1
+  m_OverrideBaseValue: 0
+  m_FormulaGraph:
+    serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"8237ebe9-0a1a-478c-8cf6-5601d3a28728\",\n\t\t\"name\":\"Formula
+      Output\",\n\t\t\"position\":\"v2(448,3)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"defe5a76-c541-47d5-a5b1-ee3b380d2e26\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"001cc334-2989-42da-a88b-d28dbfdd9ecc\",\n\t\t\"name\":\"Get
+      Stat Value\",\n\t\t\"position\":\"v2(-364,-100)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"stat\",\n\t\t\t\t\"drawPort\":false,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.String\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"statValue\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"ffb4ed39-ae0c-42f5-8abf-36910b41c42a\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"DevionGames.StatSystem.Stat\"\n\t\t\t}\n\t\t},\n\t\t\"stat\":\"Min
+      Damage\"\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"b7cda40f-599f-41b3-bf23-b18456f45f62\",\n\t\t\"name\":\"Get
+      Stat Value\",\n\t\t\"position\":\"v2(-366,2)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"stat\",\n\t\t\t\t\"drawPort\":false,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.String\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"statValue\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"ffb4ed39-ae0c-42f5-8abf-36910b41c42a\",\n\t\t\t\t\t\t\"fieldName\":\"b\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"DevionGames.StatSystem.Stat\"\n\t\t\t}\n\t\t},\n\t\t\"stat\":\"Max
+      Damage\"\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Add\",\n\t\t\"id\":\"ffb4ed39-ae0c-42f5-8abf-36910b41c42a\",\n\t\t\"name\":\"Add\",\n\t\t\"position\":\"v2(-147,-68)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"001cc334-2989-42da-a88b-d28dbfdd9ecc\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"b7cda40f-599f-41b3-bf23-b18456f45f62\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"62256b82-007d-47e3-82a1-54e1e06a399e\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":0,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Divide\",\n\t\t\"id\":\"62256b82-007d-47e3-82a1-54e1e06a399e\",\n\t\t\"name\":\"Divide\",\n\t\t\"position\":\"v2(-7,-68)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"ffb4ed39-ae0c-42f5-8abf-36910b41c42a\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"62867c20-3c07-401e-b218-5c55b64b186f\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":2,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Multiply\",\n\t\t\"id\":\"62867c20-3c07-401e-b218-5c55b64b186f\",\n\t\t\"name\":\"Multiply\",\n\t\t\"position\":\"v2(148,39)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"62256b82-007d-47e3-82a1-54e1e06a399e\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"48d0c671-f351-4e23-9a28-3b6c3a3eff3b\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"defe5a76-c541-47d5-a5b1-ee3b380d2e26\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":0,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"b3b4537c-3f50-4cdd-ba92-a9ce243dd7ca\",\n\t\t\"name\":\"Get
+      Stat Value\",\n\t\t\"position\":\"v2(-381,159)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"stat\",\n\t\t\t\t\"drawPort\":false,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.String\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"statValue\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"2e296246-5df7-48dc-aa34-edb53b108a24\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"DevionGames.StatSystem.Stat\"\n\t\t\t}\n\t\t},\n\t\t\"stat\":\"Dexterity\"\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Add\",\n\t\t\"id\":\"2e296246-5df7-48dc-aa34-edb53b108a24\",\n\t\t\"name\":\"Add\",\n\t\t\"position\":\"v2(-195,160)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"b3b4537c-3f50-4cdd-ba92-a9ce243dd7ca\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"48d0c671-f351-4e23-9a28-3b6c3a3eff3b\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":1,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Divide\",\n\t\t\"id\":\"48d0c671-f351-4e23-9a28-3b6c3a3eff3b\",\n\t\t\"name\":\"Divide\",\n\t\t\"position\":\"v2(-38,160)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"2e296246-5df7-48dc-aa34-edb53b108a24\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"62867c20-3c07-401e-b218-5c55b64b186f\",\n\t\t\t\t\t\t\"fieldName\":\"b\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":100,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Multiply\",\n\t\t\"id\":\"defe5a76-c541-47d5-a5b1-ee3b380d2e26\",\n\t\t\"name\":\"Multiply\",\n\t\t\"position\":\"v2(291,39)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"62867c20-3c07-401e-b218-5c55b64b186f\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"8237ebe9-0a1a-478c-8cf6-5601d3a28728\",\n\t\t\t\t\t\t\"fieldName\":\"result\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":1.5,\n\t\t\"output\":0\n\t}]\n}"
+    serializedObjects: []
+  m_Cap: -1
+  m_Callbacks: []
+  references:
+    version: 1
+--- !u!114 &8638698396938483210
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02216d51560172d4683cc5fcfc0eb1a7, type: 3}
+  m_Name: Exp
+  m_EditorClassIdentifier: 
+  m_StatName: Exp
+  m_BaseValue: 0
+  m_InheritBaseValue: 1
+  m_OverrideBaseValue: 0
+  m_FormulaGraph:
+    serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"faedd6e1-31c6-42f1-ace2-6c996a0e6b7b\",\n\t\t\"name\":\"Formula
+      Output\",\n\t\t\"position\":\"v2(402,-33)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"c0040511-36a0-4c6b-90a8-14b83e2b1156\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"cc07c9ec-6e27-487c-b424-f473b2ffcaa7\",\n\t\t\"name\":\"Get
+      Stat Value\",\n\t\t\"position\":\"v2(-459,39)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"stat\",\n\t\t\t\t\"drawPort\":false,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.String\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"statValue\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"d5e0031a-1b1e-45b5-95ba-f78d514ba19b\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"DevionGames.StatSystem.Stat\"\n\t\t\t}\n\t\t},\n\t\t\"stat\":\"Level\"\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Add\",\n\t\t\"id\":\"d5e0031a-1b1e-45b5-95ba-f78d514ba19b\",\n\t\t\"name\":\"Add\",\n\t\t\"position\":\"v2(-277,40)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"cc07c9ec-6e27-487c-b424-f473b2ffcaa7\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"c49452e7-26fb-4294-8c29-c4e3d873d574\",\n\t\t\t\t\t\t\"fieldName\":\"f\"\n\t\t\t\t\t},\n\t\t\t\t\t\"1\":{\n\t\t\t\t\t\t\"nodeId\":\"dee56a92-7a59-4ea6-ba4c-0b8cab886457\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":1,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Pow\",\n\t\t\"id\":\"c49452e7-26fb-4294-8c29-c4e3d873d574\",\n\t\t\"name\":\"Pow\",\n\t\t\"position\":\"v2(-94,-75)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"f\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"d5e0031a-1b1e-45b5-95ba-f78d514ba19b\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"p\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"381dc030-b1a2-48be-bc6b-3f5a27fd77d1\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"f\":0,\n\t\t\"p\":2,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Multiply\",\n\t\t\"id\":\"381dc030-b1a2-48be-bc6b-3f5a27fd77d1\",\n\t\t\"name\":\"Multiply\",\n\t\t\"position\":\"v2(56,-75)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"c49452e7-26fb-4294-8c29-c4e3d873d574\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"c0040511-36a0-4c6b-90a8-14b83e2b1156\",\n\t\t\t\t\t\t\"fieldName\":\"a\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":500,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Multiply\",\n\t\t\"id\":\"dee56a92-7a59-4ea6-ba4c-0b8cab886457\",\n\t\t\"name\":\"Multiply\",\n\t\t\"position\":\"v2(61,40)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"d5e0031a-1b1e-45b5-95ba-f78d514ba19b\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"c0040511-36a0-4c6b-90a8-14b83e2b1156\",\n\t\t\t\t\t\t\"fieldName\":\"b\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":500,\n\t\t\"output\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.Subtract\",\n\t\t\"id\":\"c0040511-36a0-4c6b-90a8-14b83e2b1156\",\n\t\t\"name\":\"Subtract\",\n\t\t\"position\":\"v2(241.583313,-34.6666565)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"a\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"381dc030-b1a2-48be-bc6b-3f5a27fd77d1\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"b\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"dee56a92-7a59-4ea6-ba4c-0b8cab886457\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t},\n\t\t\t\"2\":{\n\t\t\t\t\"fieldName\":\"output\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Multiple\",\n\t\t\t\t\"direction\":\"Output\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"faedd6e1-31c6-42f1-ace2-6c996a0e6b7b\",\n\t\t\t\t\t\t\"fieldName\":\"result\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"a\":0,\n\t\t\"b\":0,\n\t\t\"output\":0\n\t}]\n}"
+    serializedObjects: []
+  m_Cap: -1
+  m_Callbacks: []
+  m_StartCurrentValue: 0
+  references:
+    version: 1

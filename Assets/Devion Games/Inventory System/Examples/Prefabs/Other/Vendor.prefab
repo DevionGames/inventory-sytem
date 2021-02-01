@@ -90,10 +90,10 @@ GameObject:
   - component: {fileID: 8634550540918060660}
   - component: {fileID: 8634550540918060661}
   - component: {fileID: 8634550540918060654}
-  - component: {fileID: 8634550540918060652}
   - component: {fileID: 8634550540918060653}
   - component: {fileID: 8634550540918060651}
   - component: {fileID: 2995848537818312473}
+  - component: {fileID: 1210604487578541925}
   m_Layer: 10
   m_Name: Vendor
   m_TagString: Untagged
@@ -296,45 +296,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ItemGroup: {fileID: -8192587188366231400, guid: 1ae57b994efcab048a1bb130d4e11d83,
     type: 2}
---- !u!114 &8634550540918060652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8634550540918060662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd17f227152a86f4ead9c0317bc6dd9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HandlerName: Target Stats
-  saveable: 0
-  freeStatPoints: 3
-  stats:
-  - m_Name: Health
-    formula:
-      serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.StatSystem.StatResult\",\n\t\t\"id\":\"2b15ea22-5790-415d-b9a9-c5167470e305\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"value\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"delta\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t}\n\t\t},\n\t\t\"value\":50,\n\t\t\"delta\":0\n\t}]\n}"
-      serializedObjects: []
-    m_MinValue: 0
-    m_MaxValue: 50
-    m_Regenerate: 0
-    m_Rate: 5
-    m_DisplayDamage: 0
-    m_DamageColor: {r: 1, g: 1, b: 1, a: 1}
-    m_CriticalDamageColor: {r: 1, g: 0, b: 0, a: 1}
-  - m_Name: Mana
-    formula:
-      serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.StatSystem.StatResult\",\n\t\t\"id\":\"2b15ea22-5790-415d-b9a9-c5167470e305\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"value\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"delta\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t}\n\t\t},\n\t\t\"value\":50,\n\t\t\"delta\":0\n\t}]\n}"
-      serializedObjects: []
-    m_MinValue: 0
-    m_MaxValue: 50
-    m_Regenerate: 0
-    m_Rate: 5
-    m_DisplayDamage: 0
-    m_DamageColor: {r: 1, g: 1, b: 1, a: 1}
-    m_CriticalDamageColor: {r: 1, g: 0, b: 0, a: 1}
-  m_DamageText: {fileID: 0}
 --- !u!114 &8634550540918060653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,6 +470,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd56ac4ec1b95e478be442fe8a323c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1210604487578541925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8634550540918060662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 133910983bb31cf4a91c777fe7ef0ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HandlerName: Target Stats
+  saveable: 0
+  m_Stats:
+  - {fileID: -4240061784426487929, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  - {fileID: -4885797470720747453, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  - {fileID: 4191169994067471883, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  - {fileID: -2558327947788714437, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  m_Effects: []
 --- !u!1 &8634550542071474442
 GameObject:
   m_ObjectHideFlags: 0

@@ -1606,7 +1606,6 @@ namespace DevionGames.InventorySystem
             {
                 ItemContainer current = windows[j];
 
-
                 Item item = current.GetItems(nameOrId).FirstOrDefault();
                 if (item != null)
                     return item;

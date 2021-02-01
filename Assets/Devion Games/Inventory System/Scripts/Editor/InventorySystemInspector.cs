@@ -39,6 +39,8 @@ namespace DevionGames.InventorySystem
                     this.m_Database = AssetDatabase.LoadAssetAtPath<ItemDatabase>(path);
                 }
             }
+            toolbarIndex = EditorPrefs.GetInt("InventoryToolbarIndex");
+
             ResetChildEditors();
 
         }
@@ -48,6 +50,8 @@ namespace DevionGames.InventorySystem
             if (this.m_Database != null) {
                 EditorPrefs.SetString("ItemDatabasePath",AssetDatabase.GetAssetPath(this.m_Database));
             }
+            EditorPrefs.SetInt("InventoryToolbarIndex",toolbarIndex);
+
             if (m_ChildEditors != null)
             {
                 for (int i = 0; i < m_ChildEditors.Count; i++)

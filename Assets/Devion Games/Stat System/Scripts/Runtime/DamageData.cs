@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Audio;
 
 namespace DevionGames.StatSystem
@@ -15,6 +16,15 @@ namespace DevionGames.StatSystem
         public float maxDistance = 2f;
         [Range(0f,360f)]
         public float maxAngle = 60f;
+        public bool displayDamage = false;
+        [Compound("displayDamage")]
+        public GameObject damagePrefab;
+        [Compound("displayDamage")]
+        public Color damageColor = Color.yellow;
+        [Compound("displayDamage")]
+        public Color criticalDamageColor = Color.red;
+        [Compound("displayDamage")]
+        public Vector3 intensity = new Vector3(3f, 2f, 0f);
 
         [HeaderLine("Particles")]
         public GameObject particleEffect;

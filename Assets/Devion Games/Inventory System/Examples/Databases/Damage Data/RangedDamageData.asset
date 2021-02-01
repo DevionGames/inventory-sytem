@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd212400f57b8b94493af21a4a9fdb74, type: 3}
+  m_Script: {fileID: 11500000, guid: 0cd286d4e521ac74a86e8a55427a1917, type: 3}
   m_Name: RangedDamageData
   m_EditorClassIdentifier: 
   sendingStat: Ranged Damage
@@ -17,6 +17,12 @@ MonoBehaviour:
   receivingStat: Health
   maxDistance: 2
   maxAngle: 60
+  displayDamage: 1
+  damagePrefab: {fileID: 136123868827291778, guid: 9f441d7fb91d2764faa5837835062f6e,
+    type: 3}
+  damageColor: {r: 1, g: 0.69411767, b: 0.07058824, a: 1}
+  criticalDamageColor: {r: 1, g: 0, b: 0, a: 1}
+  intensity: {x: 3, y: 2, z: 0}
   particleEffect: {fileID: 5305822200100292117, guid: 2aecc49ae18a147499dc13ba4b89d645,
     type: 3}
   offset: {x: 0, y: 1.5, z: 0}

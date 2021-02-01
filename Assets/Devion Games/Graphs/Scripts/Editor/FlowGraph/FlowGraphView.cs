@@ -184,7 +184,9 @@ namespace DevionGames.Graphs
                         {
                             value = EditorGUI.FloatField(fieldRect, (float)value);
                         } else if (port.fieldType == typeof(string)) {
-                            value = EditorGUI.TextField(fieldRect,(string)value);
+                            value = EditorGUI.TextField(fieldRect, (string)value);
+                        } else if (port.fieldType == typeof(AnimationCurve)) {
+                            value = EditorGUI.CurveField(fieldRect,(AnimationCurve) value);
                         }
                         if (EditorGUI.EndChangeCheck())
                         {
@@ -208,7 +210,7 @@ namespace DevionGames.Graphs
                 }
 
 
-                if (Event.current.type == EventType.Repaint && port.drawPort)
+                if (Event.current.type == EventType.Repaint )// && port.drawPort)
                 {
                     if (i > 0 && i < node.Ports.Count - 1)
                     {
@@ -285,10 +287,15 @@ namespace DevionGames.Graphs
                     FieldInfo field = node.GetType().GetField(port.fieldName);
 
                     object value = field.GetValue(node);
-                    Vector2 temp = EditorStyles.textField.CalcSize(new GUIContent(value.ToString()));
-                    temp.x = Mathf.Clamp(temp.x,15f,float.MaxValue);
-                    if (temp.x > fieldWidth)
-                        fieldWidth = temp.x;
+                    float x = EditorGUIUtility.fieldWidth+20f;
+                    if (UnityTools.IsNumeric(value) || value is string)
+                    {
+                        Vector2 temp = EditorStyles.textField.CalcSize(new GUIContent(value.ToString()));
+                        x = Mathf.Clamp(temp.x, 15f, float.MaxValue); 
+                    }
+                   
+                    if (x > fieldWidth)
+                        fieldWidth = x;
                 }
             }
             return fieldWidth;

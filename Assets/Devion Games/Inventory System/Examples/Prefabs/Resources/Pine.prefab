@@ -282,7 +282,7 @@ MonoBehaviour:
           m_ArgumentType: 4
         - m_BoolValue: 0
           m_IntValue: 0
-          m_FloatValue: -30
+          m_FloatValue: -300
           m_StringValue: 
           m_Vector2Value: {x: 0, y: 0}
           m_Vector3Value: {x: 0, y: 0, z: 0}

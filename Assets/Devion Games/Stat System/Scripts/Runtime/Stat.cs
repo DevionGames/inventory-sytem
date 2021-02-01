@@ -1,207 +1,90 @@
-﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.Events;
-using System.Collections.Generic;
+﻿using DevionGames.Graphs;
 using System;
-using DevionGames.Graphs;
-using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace DevionGames.StatSystem
 {
-	[System.Serializable]
-	public class Stat: IJsonSerializable, IGraphProvider
-	{
-        public Action<Stat> onChange;
+    [System.Serializable]
+    public class Stat : ScriptableObject, INameable, IGraphProvider, IJsonSerializable
+    {
+        public System.Action onValueChange;
+        private System.Action onValueChangeInternal;
+
+        [InspectorLabel("Name")]
+        [SerializeField]
+        protected string m_StatName = "New Stat";
+        public string Name { get => this.m_StatName; set => this.m_StatName=value; }
 
         [SerializeField]
-		private string m_Name = "New Stat";
-		public string Name {
-			get {
-				return this.m_Name;
-			}
-		}
+        protected float m_BaseValue;
+        [HideInInspector]
+        [SerializeField]
+        protected bool m_InheritBaseValue = true;
+        [InspectorLabel("Base Value")]
+        [HideInInspector]
+        [SerializeField]
+        protected float m_OverrideBaseValue;
 
-        private float m_BaseValue = 0f;
+        [SerializeField]
+        protected FormulaGraph m_FormulaGraph;
+        [SerializeField]
+        protected float m_Cap = -1;
+        [SerializeReference]
+        protected List<StatCallback> m_Callbacks = new List<StatCallback>();
 
-        public StatFormula formula;
+        [System.NonSerialized]
+        protected float m_Value;
+        public float Value { get => this.m_Value; }
 
-        private float m_IncrementalValue = 0f;
-        public float IncrementalValue {
-            get { return this.m_IncrementalValue; }
-            set{this.m_IncrementalValue = value;}
-        }
+        protected List<StatModifier> m_StatModifiers= new List<StatModifier>();
+        protected StatsHandler m_StatsHandler;
 
-        private float m_LastBaseValue;
-        private float m_Value;
-
-        public float Value {
-			get{
-                if (this.m_Dirty || this.m_LastBaseValue != this.m_BaseValue)
-                {
-                    this.m_LastBaseValue = this.m_BaseValue;
-                    this.m_Value = CalculateFinalValue();
-
-                    this.m_Value = Mathf.Clamp(this.m_Value, this.MinValue, this.MaxValue);
-                    this.CurrentValue = Mathf.Clamp(this.m_CurrentValue, this.MinValue, this.MaxValue);
-                    this.m_Dirty = false;
-                }
-                return this.m_Value;
-            }
-		}
-
-        private float m_CurrentValue;
-        public float CurrentValue
+        public virtual void Initialize(StatsHandler handler)
         {
-            get { return this.m_CurrentValue; }
-            set
-            {
-                if (this.m_CurrentValue != value)
-                {
-                    this.m_CurrentValue = value;
-                    onChange?.Invoke(this);
-                }
-            }
-        }
+            this.m_StatsHandler = handler;
+            if (!this.m_InheritBaseValue)
+                this.m_BaseValue = this.m_OverrideBaseValue;
 
-        [SerializeField]
-        private float m_MinValue;
-        public float MinValue
-        {
-            get { return this.m_MinValue; }
-            set
-            {this.m_MinValue = value;}
-        }
+            List<StatNode> statNodes = this.m_FormulaGraph.FindNodesOfType<StatNode>();
 
-        private float m_Delta=0f;
-        public float NormalizedValue {
-            get {
-                return (CurrentValue-this.m_Delta) / (Value-this.m_Delta); 
-            }
-        }
-
-        [SerializeField]
-		private float m_MaxValue = -1f;
-		public float MaxValue {
-			get{
-                if (this.m_MaxValue < 0f) {
-                    return float.PositiveInfinity;
-                }
-                return this.m_MaxValue; 
-            
-            }
-			set {this.m_MaxValue = value;}
-		}
-
-        [SerializeField]
-        private bool m_Regenerate = false;
-        public bool Regenerate {
-            get { return this.m_Regenerate; }
-            set { 
-                this.m_Regenerate = value;
-                if (this.m_Regenerate)
-                    m_Handler.StartCoroutine(Regeneration());
-            }
-        }
-
-        [SerializeField]
-        private float m_Rate = 5f;
-        public float Rate {
-            get { return this.m_Rate; }
-            set { this.m_Rate = value; }
-        }
-
-        [SerializeField]
-        private bool m_DisplayDamage;
-        public bool DisplayDamage
-        {
-            get { return this.m_DisplayDamage; }
-            set { this.m_DisplayDamage=value; }
-        }
-
-        [InspectorLabel("Default")]
-        [SerializeField]
-        private Color m_DamageColor = Color.white;
-        public Color DamageColor {
-            get { return this.m_DamageColor; }
-            set { this.m_DamageColor = value; }
-        }
-
-        [InspectorLabel("Critical")]
-        [SerializeField]
-        private Color m_CriticalDamageColor = Color.red;
-        public Color CriticalDamageColor
-        {
-            get { return this.m_CriticalDamageColor; }
-            set { this.m_CriticalDamageColor = value; }
-        }
-
-        private StatsHandler m_Handler;
-        private List<StatModifier> m_StatModifiers;
-        private bool m_Dirty = true;
-
-
-        public Stat ()
-		{
-            this.m_StatModifiers = new List<StatModifier>();
-        }
-
-		public Stat (Stat other)
-		{
-			CopyFrom (other);
-		}
-
-        public void Initialize(StatsHandler handler) {
-            this.m_Handler = handler;
-            List<GetStat> statNodes = new List<GetStat>();
-            for (int i = 0; i < handler.stats.Count; i++)
-            {
-                statNodes.AddRange(formula.nodes.Where(x => typeof(GetStat).IsAssignableFrom(x.GetType())).Cast<GetStat>());
-            }
             for (int i = 0; i < statNodes.Count; i++)
             {
-                statNodes[i].statValue = handler.GetStat(statNodes[i].stat.Trim());
+                Stat referencedStat = handler.GetStat(statNodes[i].stat.Trim());
+                statNodes[i].statValue = referencedStat;
+                referencedStat.onValueChangeInternal += CalculateValue;
             }
-            if(this.m_Regenerate)
-                handler.StartCoroutine(Regeneration());
-
-            /*Blackboard blackboard = handler.GetComponent<Blackboard>();
-            if (blackboard != null) {
-                onChange += (Stat stat)=>{ 
-                    blackboard.SetValue<float>("Current "+ Name, stat.CurrentValue);
-                    blackboard.SetValue<float>("Max " + Name, stat.Value);
-                };
-            }*/
-        }
-
-        private IEnumerator Regeneration()
-        {
-            while (this.m_Regenerate)
+        
+            for (int i = 0; i < this.m_Callbacks.Count; i++)
             {
-                yield return new WaitForSeconds(this.m_Rate);
-                if (this.m_Handler.enabled)
-                {
-                    float mValue = CurrentValue;
-                    float maxValue = Value;
-
-                    mValue += 1;
-                    mValue = Mathf.Clamp(mValue, 0, maxValue);
-                    CurrentValue = mValue;
-                    this.m_Handler.UpdateStats();
-                }
+                this.m_Callbacks[i].Initialize(handler, this);
             }
         }
 
-        public void UpdateBaseValue(StatsHandler handler) {
-            StatResult result = formula.nodes.Find(x => x.GetType() == typeof(StatResult)) as StatResult;
-            this.m_BaseValue = result.GetInputValue<float>("value", result.value)+this.m_IncrementalValue;
-            this.m_Delta = result.GetInputValue<float>("delta", result.delta);
+        public virtual void ApplyStartValues() {
+            CalculateValue();
         }
 
-        private float CalculateFinalValue()
-        {
-            float finalValue = this.m_BaseValue;
-            float sumPercentAdd = 0;
+        public void Add(float amount) {
+            this.m_BaseValue += amount;
+            this.m_BaseValue = Mathf.Clamp(this.m_BaseValue, 0, float.MaxValue);
+            CalculateValue();
+        }
 
+        public void Subtract(float amount) {
+            this.m_BaseValue -= amount;
+            this.m_BaseValue = Mathf.Clamp(this.m_BaseValue, 0, float.MaxValue);
+            CalculateValue();
+        }
+
+        public void CalculateValue() {
+            CalculateValue(true);
+        }
+
+        public void CalculateValue(bool invokeCallbacks) {
+            float finalValue = this.m_BaseValue + this.m_FormulaGraph;
+            float sumPercentAdd = 0f;
             this.m_StatModifiers.Sort((x, y) => x.Type.CompareTo(y.Type));
 
             for (int i = 0; i < this.m_StatModifiers.Count; i++)
@@ -217,35 +100,45 @@ namespace DevionGames.StatSystem
 
                     if (i + 1 >= this.m_StatModifiers.Count || this.m_StatModifiers[i + 1].Type != StatModType.PercentAdd)
                     {
-                        finalValue *= 1 + sumPercentAdd;
-                        sumPercentAdd = 0;
+                        finalValue *= 1f + sumPercentAdd;
+                        sumPercentAdd = 0f;
                     }
                 }
                 else if (mod.Type == StatModType.PercentMult)
                 {
-                    finalValue *= 1 + mod.Value;
+                    finalValue *= 1f + mod.Value;
                 }
             }
-           // Debug.Log(Name+": "+finalValue+" "+this.m_BaseValue);
-            return (float)Math.Round(finalValue, 4);
+            if (this.m_Cap >= 0)
+                finalValue = Mathf.Clamp(finalValue, 0, this.m_Cap);
+
+
+
+            if (this.m_Value != finalValue)
+            {
+                this.m_Value = finalValue;
+                if(invokeCallbacks)
+                    onValueChange?.Invoke();
+
+                onValueChangeInternal?.Invoke();
+            }
         }
 
         public void AddModifier(StatModifier modifier)
         {
-            this.m_Dirty = true;
             this.m_StatModifiers.Add(modifier);
+            CalculateValue();
         }
 
         public bool RemoveModifier(StatModifier modifier)
         {
             if (this.m_StatModifiers.Remove(modifier))
             {
-                this.m_Dirty = true;
+                CalculateValue();
                 return true;
             }
             return false;
         }
-
 
         public bool RemoveModifiersFromSource(object source)
         {
@@ -253,44 +146,32 @@ namespace DevionGames.StatSystem
 
             if (numRemovals > 0)
             {
-                this.m_Dirty = true;
+                CalculateValue();
                 return true;
             }
             return false;
         }
 
-        public void CopyFrom (Stat other)
-		{
-			this.m_Name = other.Name;
-			this.m_MaxValue = other.MaxValue;
-			this.m_Value = other.Value;
-			this.m_CurrentValue = other.CurrentValue;
-            this.m_IncrementalValue = other.m_IncrementalValue;
-            this.m_StatModifiers = new List<StatModifier>(other.m_StatModifiers);
-		}
-
-		public void Refresh ()
-		{
-			CurrentValue = Value;
-		}
-
-        public void GetObjectData(Dictionary<string, object> data)
-        {
-            data.Add("Name",this.m_Name);
-            data.Add("IncrementalValue", this.m_IncrementalValue);
-            data.Add("CurrentValue",this.m_CurrentValue);
-        }
-
-        public void SetObjectData(Dictionary<string, object> data)
-        {
-            this.IncrementalValue = System.Convert.ToSingle(data["IncrementalValue"]); 
-            this.m_CurrentValue = System.Convert.ToSingle(data["CurrentValue"]);
-
-        }
-
         public Graph GetGraph()
         {
-            return formula;
+            return this.m_FormulaGraph;
         }
-	}
+
+        public override string ToString()
+        {
+            return this.m_StatName+": "+this.Value.ToString();
+        }
+
+        public virtual void GetObjectData(Dictionary<string, object> data)
+        {
+            data.Add("Name", this.m_StatName);
+            data.Add("BaseValue", this.m_BaseValue);
+        }
+
+        public virtual void SetObjectData(Dictionary<string, object> data)
+        {
+            this.m_BaseValue = System.Convert.ToSingle(data["BaseValue"]);
+            CalculateValue(false);
+        }
+    }
 }

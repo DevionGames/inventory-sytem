@@ -5,7 +5,6 @@ using UnityEngine;
 
 namespace DevionGames.StatSystem
 {
-
     public enum StatModType
     {
         Flat,
@@ -18,21 +17,25 @@ namespace DevionGames.StatSystem
         public object source;
 
         private float m_Value;
-        public float Value {
-            get {
+        public float Value
+        {
+            get
+            {
                 return this.m_Value;
             }
         }
 
         private StatModType m_Type;
-        public StatModType Type {
-            get {
+        public StatModType Type
+        {
+            get
+            {
                 return this.m_Type;
             }
         }
 
-        public StatModifier():this(0f,StatModType.Flat, null){
-
+        public StatModifier() : this(0f, StatModType.Flat, null)
+        {
         }
 
         public StatModifier(float value, StatModType type, object source)

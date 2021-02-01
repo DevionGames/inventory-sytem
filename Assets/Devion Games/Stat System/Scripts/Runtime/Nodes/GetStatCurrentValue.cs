@@ -1,22 +1,18 @@
-﻿using DevionGames.StatSystem;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace DevionGames.Graphs
 {
-    [NodeStyle(true, "Stats")]
+    [ComponentMenu("Stat System/Get Stat Current Value")]
     [System.Serializable]
-    public class GetStatCurrentValue : GetStat
+    public class GetStatCurrentValue : StatNode
     {
-
         public override object OnRequestValue(Port port)
         {
             if (statValue == null)
             {
-                Debug.LogError("Please ensure a stat named "+stat+" is added to the StatsHandler.");
+                Debug.LogError("Please ensure a stat named " + stat + " is added to the StatsHandler.");
             }
-            return statValue.CurrentValue;
+            return ((StatSystem.Attribute)statValue).CurrentValue;
         }
     }
 }

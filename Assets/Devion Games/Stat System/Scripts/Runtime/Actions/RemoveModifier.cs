@@ -4,7 +4,9 @@ using UnityEngine;
 
 namespace DevionGames.StatSystem
 {
+    [UnityEngine.Scripting.APIUpdating.MovedFromAttribute(true, null, "Assembly-CSharp")]
     [ComponentMenu("Stat System/Add Modifier")]
+    [System.Serializable]
     public class RemoveModifier : Action
     {
         [SerializeField]
@@ -23,7 +25,9 @@ namespace DevionGames.StatSystem
 
         public override ActionStatus OnUpdate()
         {
-            this.m_Handler.RemoveModifiersFromSource(this.m_StatName, this.m_Handler.gameObject);
+            Stat stat = this.m_Handler.GetStat(this.m_StatName);
+            if (stat == null) return ActionStatus.Failure;
+            stat.RemoveModifiersFromSource(this.m_Handler.gameObject);
             return ActionStatus.Success;
         }
 

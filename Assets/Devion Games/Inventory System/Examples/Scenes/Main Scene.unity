@@ -357,16 +357,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1715125}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 908963d3c45e95948bf1fb06ac8e8482, type: 3}
+  m_Script: {fileID: 11500000, guid: ae04f0e99f6620c43bc06379115a0584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_StatsHandler: Player Stats
-  m_StatName: Health
-  statName: {fileID: 0}
-  statBar: {fileID: 0}
-  statBarFade: {fileID: 0}
-  currentValue: {fileID: 462796627}
-  value: {fileID: 1245783013}
+  m_Stat: {fileID: 4191169994067471883, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  m_FreePoints: {fileID: 0}
+  m_StatName: {fileID: 0}
+  m_StatBar: {fileID: 0}
+  m_StatBarFade: {fileID: 0}
+  m_CurrentValue: {fileID: 462796627}
+  m_Value: {fileID: 1245783013}
   m_IncrementButton: {fileID: 0}
 --- !u!114 &1715128
 MonoBehaviour:
@@ -2289,7 +2290,7 @@ PrefabInstance:
     - target: {fileID: 4674094184343768570, guid: 7711700c499322241ad0a6161fccb38f,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 234.99998
+      value: 235
       objectReference: {fileID: 0}
     - target: {fileID: 4674094184343768570, guid: 7711700c499322241ad0a6161fccb38f,
         type: 3}
@@ -3996,16 +3997,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 52663947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 908963d3c45e95948bf1fb06ac8e8482, type: 3}
+  m_Script: {fileID: 11500000, guid: ae04f0e99f6620c43bc06379115a0584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_StatsHandler: Player Stats
-  m_StatName: Armor
-  statName: {fileID: 931395321}
-  statBar: {fileID: 0}
-  statBarFade: {fileID: 0}
-  currentValue: {fileID: 0}
-  value: {fileID: 166919919}
+  m_Stat: {fileID: 780142526111815381, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  m_FreePoints: {fileID: 0}
+  m_StatName: {fileID: 0}
+  m_StatBar: {fileID: 0}
+  m_StatBarFade: {fileID: 0}
+  m_CurrentValue: {fileID: 0}
+  m_Value: {fileID: 166919919}
   m_IncrementButton: {fileID: 0}
 --- !u!114 &52663950
 MonoBehaviour:
@@ -4250,16 +4252,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 64026469}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 908963d3c45e95948bf1fb06ac8e8482, type: 3}
+  m_Script: {fileID: 11500000, guid: ae04f0e99f6620c43bc06379115a0584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_StatsHandler: Player Stats
-  m_StatName: Mana
-  statName: {fileID: 0}
-  statBar: {fileID: 1621161381}
-  statBarFade: {fileID: 1222411226}
-  currentValue: {fileID: 0}
-  value: {fileID: 0}
+  m_Stat: {fileID: -2558327947788714437, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  m_FreePoints: {fileID: 0}
+  m_StatName: {fileID: 0}
+  m_StatBar: {fileID: 1621161381}
+  m_StatBarFade: {fileID: 1222411226}
+  m_CurrentValue: {fileID: 0}
+  m_Value: {fileID: 0}
   m_IncrementButton: {fileID: 0}
 --- !u!114 &64026472
 MonoBehaviour:
@@ -17069,7 +17072,7 @@ GameObject:
   - component: {fileID: 374982194}
   - component: {fileID: 374982193}
   m_Layer: 5
-  m_Name: Healthbar
+  m_Name: Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20633,7 +20636,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -515.88806, y: 115.283}
+  m_AnchoredPosition: {x: -518.19, y: 115.86}
   m_SizeDelta: {x: 289.31, y: 387.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &469300639
@@ -23187,7 +23190,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2
 --- !u!222 &505614241
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32295,16 +32298,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 690293997}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 908963d3c45e95948bf1fb06ac8e8482, type: 3}
+  m_Script: {fileID: 11500000, guid: ae04f0e99f6620c43bc06379115a0584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_StatsHandler: Player Stats
-  m_StatName: Intelligence
-  statName: {fileID: 1465958782}
-  statBar: {fileID: 0}
-  statBarFade: {fileID: 0}
-  currentValue: {fileID: 0}
-  value: {fileID: 1202001957}
+  m_Stat: {fileID: -4885797470720747453, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  m_FreePoints: {fileID: -433383825001297444, guid: 294a0f3c3623873439762c5f55d6af2a,
+    type: 2}
+  m_StatName: {fileID: 0}
+  m_StatBar: {fileID: 0}
+  m_StatBarFade: {fileID: 0}
+  m_CurrentValue: {fileID: 0}
+  m_Value: {fileID: 1202001957}
   m_IncrementButton: {fileID: 1534862179}
 --- !u!114 &690294000
 MonoBehaviour:
@@ -33869,7 +33874,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2
 --- !u!222 &726237176
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34346,16 +34351,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 732842010}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 908963d3c45e95948bf1fb06ac8e8482, type: 3}
+  m_Script: {fileID: 11500000, guid: ae04f0e99f6620c43bc06379115a0584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_StatsHandler: Player Stats
-  m_StatName: Meele Attack
-  statName: {fileID: 2009486246}
-  statBar: {fileID: 0}
-  statBarFade: {fileID: 0}
-  currentValue: {fileID: 0}
-  value: {fileID: 390539115}
+  m_Stat: {fileID: -7160182056493623654, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  m_FreePoints: {fileID: 0}
+  m_StatName: {fileID: 0}
+  m_StatBar: {fileID: 0}
+  m_StatBarFade: {fileID: 0}
+  m_CurrentValue: {fileID: 0}
+  m_Value: {fileID: 390539115}
   m_IncrementButton: {fileID: 0}
 --- !u!114 &732842013
 MonoBehaviour:
@@ -35409,16 +35415,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 773461251}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 908963d3c45e95948bf1fb06ac8e8482, type: 3}
+  m_Script: {fileID: 11500000, guid: ae04f0e99f6620c43bc06379115a0584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_StatsHandler: Player Stats
-  m_StatName: Mana
-  statName: {fileID: 0}
-  statBar: {fileID: 0}
-  statBarFade: {fileID: 0}
-  currentValue: {fileID: 1900285178}
-  value: {fileID: 1899232139}
+  m_Stat: {fileID: -2558327947788714437, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  m_FreePoints: {fileID: 0}
+  m_StatName: {fileID: 0}
+  m_StatBar: {fileID: 0}
+  m_StatBarFade: {fileID: 0}
+  m_CurrentValue: {fileID: 1900285178}
+  m_Value: {fileID: 1899232139}
   m_IncrementButton: {fileID: 0}
 --- !u!114 &773461254
 MonoBehaviour:
@@ -36186,7 +36193,7 @@ GameObject:
   - component: {fileID: 787139345}
   - component: {fileID: 787139344}
   m_Layer: 5
-  m_Name: Value
+  m_Name: Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36235,7 +36242,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.69
+  m_FillAmount: 0.65
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -39234,16 +39241,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 846865285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 908963d3c45e95948bf1fb06ac8e8482, type: 3}
+  m_Script: {fileID: 11500000, guid: ae04f0e99f6620c43bc06379115a0584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_StatsHandler: Player Stats
-  m_StatName: Level
-  statName: {fileID: 0}
-  statBar: {fileID: 0}
-  statBarFade: {fileID: 0}
-  currentValue: {fileID: 0}
-  value: {fileID: 846865289}
+  m_Stat: {fileID: 6190093544345854043, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  m_FreePoints: {fileID: 0}
+  m_StatName: {fileID: 0}
+  m_StatBar: {fileID: 0}
+  m_StatBarFade: {fileID: 0}
+  m_CurrentValue: {fileID: 0}
+  m_Value: {fileID: 846865289}
   m_IncrementButton: {fileID: 0}
 --- !u!114 &846865288
 MonoBehaviour:
@@ -40099,10 +40107,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 868999085}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76f0fe1b839b8744c817a0969f7db871, type: 3}
+  m_Script: {fileID: 11500000, guid: 43aaf274875e0fe408ec4a5d8ef6ce65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Configurations: {fileID: 11400000, guid: 9dafa1af3ec9ecb4aacd129aa1f64b5e, type: 2}
+  m_Database: {fileID: 11400000, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
   dontDestroyOnLoad: 1
 --- !u!4 &868999087
 Transform:
@@ -40613,42 +40621,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 930106021}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &891162092
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 891162093}
-  m_Layer: 10
-  m_Name: Floating Damage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &891162093
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 891162092}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 8536336667938123183}
-  m_Father: {fileID: 8536336667633811529}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 36.526615, y: 9.59153}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &893582901
 GameObject:
   m_ObjectHideFlags: 0
@@ -42600,7 +42572,7 @@ GameObject:
   - component: {fileID: 940443788}
   - component: {fileID: 940443787}
   m_Layer: 5
-  m_Name: Value Fade
+  m_Name: Fade Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42620,10 +42592,10 @@ RectTransform:
   m_Father: {fileID: 1104766214}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000047683716, y: 0.000061035156}
-  m_SizeDelta: {x: 192.84, y: 11}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &940443787
 MonoBehaviour:
@@ -44202,16 +44174,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 964654132}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 908963d3c45e95948bf1fb06ac8e8482, type: 3}
+  m_Script: {fileID: 11500000, guid: ae04f0e99f6620c43bc06379115a0584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_StatsHandler: Player Stats
-  m_StatName: Ranged Attack
-  statName: {fileID: 1837679542}
-  statBar: {fileID: 0}
-  statBarFade: {fileID: 0}
-  currentValue: {fileID: 0}
-  value: {fileID: 1525299598}
+  m_Stat: {fileID: 8019179891300680543, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  m_FreePoints: {fileID: 0}
+  m_StatName: {fileID: 0}
+  m_StatBar: {fileID: 0}
+  m_StatBarFade: {fileID: 0}
+  m_CurrentValue: {fileID: 0}
+  m_Value: {fileID: 1525299598}
   m_IncrementButton: {fileID: 0}
 --- !u!114 &964654135
 MonoBehaviour:
@@ -45358,7 +45331,7 @@ GameObject:
   - component: {fileID: 998771601}
   - component: {fileID: 998771600}
   m_Layer: 5
-  m_Name: Healthbar Fade
+  m_Name: Fade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50532,16 +50505,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1104766213}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 908963d3c45e95948bf1fb06ac8e8482, type: 3}
+  m_Script: {fileID: 11500000, guid: ae04f0e99f6620c43bc06379115a0584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_StatsHandler: Player Stats
-  m_StatName: Health
-  statName: {fileID: 0}
-  statBar: {fileID: 1623739830}
-  statBarFade: {fileID: 940443787}
-  currentValue: {fileID: 0}
-  value: {fileID: 0}
+  m_Stat: {fileID: 4191169994067471883, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  m_FreePoints: {fileID: 0}
+  m_StatName: {fileID: 0}
+  m_StatBar: {fileID: 1623739830}
+  m_StatBarFade: {fileID: 940443787}
+  m_CurrentValue: {fileID: 0}
+  m_Value: {fileID: 0}
   m_IncrementButton: {fileID: 0}
 --- !u!114 &1104766216
 MonoBehaviour:
@@ -51471,16 +51445,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1124293202}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 908963d3c45e95948bf1fb06ac8e8482, type: 3}
+  m_Script: {fileID: 11500000, guid: ae04f0e99f6620c43bc06379115a0584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_StatsHandler: Player Stats
-  m_StatName: Vitality
-  statName: {fileID: 1808627398}
-  statBar: {fileID: 0}
-  statBarFade: {fileID: 0}
-  currentValue: {fileID: 0}
-  value: {fileID: 1036755364}
+  m_Stat: {fileID: -4240061784426487929, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  m_FreePoints: {fileID: -433383825001297444, guid: 294a0f3c3623873439762c5f55d6af2a,
+    type: 2}
+  m_StatName: {fileID: 0}
+  m_StatBar: {fileID: 0}
+  m_StatBarFade: {fileID: 0}
+  m_CurrentValue: {fileID: 0}
+  m_Value: {fileID: 1036755364}
   m_IncrementButton: {fileID: 114823384}
 --- !u!114 &1124293205
 MonoBehaviour:
@@ -54836,7 +54812,7 @@ GameObject:
   - component: {fileID: 1222411227}
   - component: {fileID: 1222411226}
   m_Layer: 5
-  m_Name: Value Fade
+  m_Name: Fade Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55730,7 +55706,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 304.2, y: 153.29999}
-  m_SizeDelta: {x: 260.26, y: 65.434395}
+  m_SizeDelta: {x: 260.26, y: 64.89801}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1237054198
 MonoBehaviour:
@@ -56654,16 +56630,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1262815357}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 908963d3c45e95948bf1fb06ac8e8482, type: 3}
+  m_Script: {fileID: 11500000, guid: ae04f0e99f6620c43bc06379115a0584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_StatsHandler: Player Stats
-  m_StatName: Strength
-  statName: {fileID: 1551923181}
-  statBar: {fileID: 0}
-  statBarFade: {fileID: 0}
-  currentValue: {fileID: 0}
-  value: {fileID: 1444923370}
+  m_Stat: {fileID: 840039421740592421, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  m_FreePoints: {fileID: -433383825001297444, guid: 294a0f3c3623873439762c5f55d6af2a,
+    type: 2}
+  m_StatName: {fileID: 0}
+  m_StatBar: {fileID: 0}
+  m_StatBarFade: {fileID: 0}
+  m_CurrentValue: {fileID: 0}
+  m_Value: {fileID: 1444923370}
   m_IncrementButton: {fileID: 1320957639}
 --- !u!114 &1262815360
 MonoBehaviour:
@@ -60950,7 +60928,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: d5c1f7c36945d3d46bf3e0bb0318c628, type: 3}
-  m_Type: 2
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -60958,7 +60936,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2
 --- !u!222 &1349841862
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -67708,16 +67686,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1481821398}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 908963d3c45e95948bf1fb06ac8e8482, type: 3}
+  m_Script: {fileID: 11500000, guid: ae04f0e99f6620c43bc06379115a0584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_StatsHandler: Player Stats
-  m_StatName: Dexterity
-  statName: {fileID: 1817902459}
-  statBar: {fileID: 0}
-  statBarFade: {fileID: 0}
-  currentValue: {fileID: 0}
-  value: {fileID: 1361300077}
+  m_Stat: {fileID: -3727109656883785614, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  m_FreePoints: {fileID: -433383825001297444, guid: 294a0f3c3623873439762c5f55d6af2a,
+    type: 2}
+  m_StatName: {fileID: 0}
+  m_StatBar: {fileID: 0}
+  m_StatBarFade: {fileID: 0}
+  m_CurrentValue: {fileID: 0}
+  m_Value: {fileID: 1361300077}
   m_IncrementButton: {fileID: 1218883562}
 --- !u!114 &1481821401
 MonoBehaviour:
@@ -68574,16 +68554,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1498804997}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 908963d3c45e95948bf1fb06ac8e8482, type: 3}
+  m_Script: {fileID: 11500000, guid: ae04f0e99f6620c43bc06379115a0584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_StatsHandler: Player Stats
-  m_StatName: Magic Attack
-  statName: {fileID: 234292187}
-  statBar: {fileID: 0}
-  statBarFade: {fileID: 0}
-  currentValue: {fileID: 0}
-  value: {fileID: 1559361996}
+  m_Stat: {fileID: 1770301744684594855, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  m_FreePoints: {fileID: 0}
+  m_StatName: {fileID: 0}
+  m_StatBar: {fileID: 0}
+  m_StatBarFade: {fileID: 0}
+  m_CurrentValue: {fileID: 0}
+  m_Value: {fileID: 1559361996}
   m_IncrementButton: {fileID: 0}
 --- !u!114 &1498805000
 MonoBehaviour:
@@ -72975,7 +72956,7 @@ GameObject:
   - component: {fileID: 1621161382}
   - component: {fileID: 1621161381}
   m_Layer: 5
-  m_Name: Value
+  m_Name: Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73197,7 +73178,7 @@ GameObject:
   - component: {fileID: 1623739831}
   - component: {fileID: 1623739830}
   m_Layer: 5
-  m_Name: Value
+  m_Name: Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86288,6 +86269,7 @@ GameObject:
   - component: {fileID: 1904488154}
   - component: {fileID: 1904488156}
   - component: {fileID: 1904488155}
+  - component: {fileID: 1904488157}
   m_Layer: 5
   m_Name: Mana
   m_TagString: Untagged
@@ -86353,6 +86335,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1904488153}
   m_CullTransparentMesh: 0
+--- !u!114 &1904488157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904488153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 619131029f0909447b041074b83247bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StatsHandler: Target Stats
+  m_Stat: {fileID: -2558327947788714437, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  m_FreePoints: {fileID: 0}
+  m_StatName: {fileID: 0}
+  m_StatBar: {fileID: 93060077}
+  m_StatBarFade: {fileID: 0}
+  m_CurrentValue: {fileID: 0}
+  m_Value: {fileID: 0}
+  m_IncrementButton: {fileID: 0}
 --- !u!1 &1904904537
 GameObject:
   m_ObjectHideFlags: 0
@@ -88852,10 +88855,10 @@ GameObject:
   - component: {fileID: 1962566629}
   - component: {fileID: 1962566628}
   - component: {fileID: 1962566627}
-  - component: {fileID: 1962566626}
   - component: {fileID: 1962566625}
   - component: {fileID: 1962566624}
   - component: {fileID: 1962566623}
+  - component: {fileID: 1962566626}
   m_Layer: 10
   m_Name: Skill Trainer
   m_TagString: Untagged
@@ -89061,36 +89064,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1962566621}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd17f227152a86f4ead9c0317bc6dd9f, type: 3}
+  m_Script: {fileID: 11500000, guid: 133910983bb31cf4a91c777fe7ef0ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_HandlerName: Target Stats
   saveable: 0
-  freeStatPoints: 3
-  stats:
-  - m_Name: Health
-    formula:
-      serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.StatSystem.StatResult\",\n\t\t\"id\":\"2b15ea22-5790-415d-b9a9-c5167470e305\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"value\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"delta\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t}\n\t\t},\n\t\t\"value\":50,\n\t\t\"delta\":0\n\t}]\n}"
-      serializedObjects: []
-    m_MinValue: 0
-    m_MaxValue: 50
-    m_Regenerate: 0
-    m_Rate: 5
-    m_DisplayDamage: 0
-    m_DamageColor: {r: 1, g: 1, b: 1, a: 1}
-    m_CriticalDamageColor: {r: 1, g: 0, b: 0, a: 1}
-  - m_Name: Mana
-    formula:
-      serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.StatSystem.StatResult\",\n\t\t\"id\":\"2b15ea22-5790-415d-b9a9-c5167470e305\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"value\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"delta\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t}\n\t\t},\n\t\t\"value\":50,\n\t\t\"delta\":0\n\t}]\n}"
-      serializedObjects: []
-    m_MinValue: 0
-    m_MaxValue: 50
-    m_Regenerate: 0
-    m_Rate: 5
-    m_DisplayDamage: 0
-    m_DamageColor: {r: 1, g: 1, b: 1, a: 1}
-    m_CriticalDamageColor: {r: 1, g: 0, b: 0, a: 1}
-  m_DamageText: {fileID: 0}
+  m_Stats:
+  - {fileID: -4240061784426487929, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  - {fileID: -4885797470720747453, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  - {fileID: 4191169994067471883, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  - {fileID: -2558327947788714437, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  m_Effects: []
 --- !u!114 &1962566627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93226,16 +93210,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 2064499188}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc9194c6b97be964cb8ca957814434b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 619131029f0909447b041074b83247bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_StatsHandler: Target Stats
-  m_StatName: Health
-  statName: {fileID: 0}
-  statBar: {fileID: 374982193}
-  statBarFade: {fileID: 998771600}
-  currentValue: {fileID: 0}
-  value: {fileID: 0}
+  m_Stat: {fileID: 4191169994067471883, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  m_FreePoints: {fileID: 0}
+  m_StatName: {fileID: 0}
+  m_StatBar: {fileID: 374982193}
+  m_StatBarFade: {fileID: 998771600}
+  m_CurrentValue: {fileID: 0}
+  m_Value: {fileID: 0}
   m_IncrementButton: {fileID: 0}
 --- !u!114 &2064499191
 MonoBehaviour:
@@ -95399,16 +95384,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 2118234285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 908963d3c45e95948bf1fb06ac8e8482, type: 3}
+  m_Script: {fileID: 11500000, guid: ae04f0e99f6620c43bc06379115a0584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_StatsHandler: Player Stats
-  m_StatName: Exp
-  statName: {fileID: 0}
-  statBar: {fileID: 787139344}
-  statBarFade: {fileID: 0}
-  currentValue: {fileID: 0}
-  value: {fileID: 0}
+  m_Stat: {fileID: 8638698396938483210, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  m_FreePoints: {fileID: 0}
+  m_StatName: {fileID: 0}
+  m_StatBar: {fileID: 787139344}
+  m_StatBarFade: {fileID: 0}
+  m_CurrentValue: {fileID: 0}
+  m_Value: {fileID: 0}
   m_IncrementButton: {fileID: 0}
 --- !u!114 &2118234288
 MonoBehaviour:
@@ -96865,11 +96851,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Default Avatar
       objectReference: {fileID: 0}
-    - target: {fileID: 6874675272001939313, guid: 74b0730caa51c7248ab53a1ac8a6b79b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74b0730caa51c7248ab53a1ac8a6b79b, type: 3}
 --- !u!1001 &2808841244219796222
@@ -97197,8 +97178,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.027}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
-  m_Children:
-  - {fileID: 891162093}
+  m_Children: []
   m_Father: {fileID: 8634550542084073226}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -97279,120 +97259,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreRaycast: 1
---- !u!114 &8536336667938123176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8536336667938123180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
---- !u!222 &8536336667938123177
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8536336667938123180}
-  m_CullTransparentMesh: 0
---- !u!1 &8536336667938123180
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8536336667938123183}
-  - component: {fileID: 8536336667938123177}
-  - component: {fileID: 8536336667938123182}
-  - component: {fileID: 8536336667938123176}
-  - component: {fileID: 8536336667938123181}
-  m_Layer: 10
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!95 &8536336667938123181
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8536336667938123180}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a35f11c0f40103b44b8c3c980d622db5, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8536336667938123182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8536336667938123180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.8980392, g: 0.7921569, b: 0.18039216, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 300
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: -12
---- !u!224 &8536336667938123183
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8536336667938123180}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.27}
-  m_LocalScale: {x: -0.1, y: 0.1, z: 0.1}
-  m_Children: []
-  m_Father: {fileID: 891162093}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 152.89925, y: 95.914185}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8634550541106788464
 GameObject:
   m_ObjectHideFlags: 0
@@ -97563,10 +97429,10 @@ GameObject:
   - component: {fileID: 8634550542084073224}
   - component: {fileID: 8634550542084073225}
   - component: {fileID: 8634550542084073237}
-  - component: {fileID: 8634550542084073238}
   - component: {fileID: 8634550542084073239}
   - component: {fileID: 8634550542084073233}
   - component: {fileID: 2995848536903958115}
+  - component: {fileID: 8634550542084073229}
   m_Layer: 10
   m_Name: Dummy
   m_TagString: Untagged
@@ -97574,6 +97440,41 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!114 &8634550542084073229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8634550542084073228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 133910983bb31cf4a91c777fe7ef0ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HandlerName: Target Stats
+  saveable: 0
+  m_Stats:
+  - {fileID: -433383825001297444, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  - {fileID: 840039421740592421, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  - {fileID: -4240061784426487929, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  - {fileID: -4885797470720747453, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  - {fileID: -3727109656883785614, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  - {fileID: 780142526111815381, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  - {fileID: 4191169994067471883, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  - {fileID: -2558327947788714437, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  - {fileID: 6190093544345854043, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  - {fileID: 8638698396938483210, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  - {fileID: 372347744615070254, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  - {fileID: 1155190571332550951, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  - {fileID: -7160182056493623654, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  - {fileID: 8019179891300680543, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  - {fileID: 1770301744684594855, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  - {fileID: 6418017515403310313, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  - {fileID: 4454703591542203765, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  - {fileID: -3951915076032632442, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  - {fileID: 7004165821522531148, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  m_Effects: []
 --- !u!82 &8634550542084073233
 AudioSource:
   m_ObjectHideFlags: 0
@@ -97685,45 +97586,6 @@ MonoBehaviour:
   m_DisplayType: 34
   m_Color: {r: 1, g: 0.6956745, b: 0.07058823, a: 1}
   m_Offset: {x: 0, y: 0.9, z: 0}
---- !u!114 &8634550542084073238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8634550542084073228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd17f227152a86f4ead9c0317bc6dd9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HandlerName: Target Stats
-  saveable: 0
-  freeStatPoints: 3
-  stats:
-  - m_Name: Health
-    formula:
-      serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.StatSystem.StatResult\",\n\t\t\"id\":\"2b15ea22-5790-415d-b9a9-c5167470e305\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"value\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"delta\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t}\n\t\t},\n\t\t\"value\":5000,\n\t\t\"delta\":0\n\t}]\n}"
-      serializedObjects: []
-    m_MinValue: 0
-    m_MaxValue: -1
-    m_Regenerate: 0
-    m_Rate: 5
-    m_DisplayDamage: 1
-    m_DamageColor: {r: 1, g: 0.69411767, b: 0.07058824, a: 1}
-    m_CriticalDamageColor: {r: 1, g: 0, b: 0, a: 1}
-  - m_Name: Mana
-    formula:
-      serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.StatSystem.StatResult\",\n\t\t\"id\":\"2b15ea22-5790-415d-b9a9-c5167470e305\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"value\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t},\n\t\t\t\"1\":{\n\t\t\t\t\"fieldName\":\"delta\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":true,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"Single\"\n\t\t\t}\n\t\t},\n\t\t\"value\":50,\n\t\t\"delta\":0\n\t}]\n}"
-      serializedObjects: []
-    m_MinValue: 0
-    m_MaxValue: 50
-    m_Regenerate: 0
-    m_Rate: 5
-    m_DisplayDamage: 0
-    m_DamageColor: {r: 1, g: 1, b: 1, a: 1}
-    m_CriticalDamageColor: {r: 1, g: 0, b: 0, a: 1}
-  m_DamageText: {fileID: 891162092}
 --- !u!114 &8634550542084073239
 MonoBehaviour:
   m_ObjectHideFlags: 0
