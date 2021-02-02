@@ -167,7 +167,19 @@ namespace DevionGames.StatSystem
             if (results.Length > 0)
             {
                 string data = JsonSerializer.Serialize(results);
-                
+
+              
+                //Required for Select Character Scene in RPG Kit, Workaound to display stats without StatsHandler
+                foreach (StatsHandler handler in results)
+                {
+                    foreach (Stat stat in handler.m_Stats)
+                    {
+                        PlayerPrefs.SetFloat(key + ".Stats." + handler.HandlerName + "." + stat.Name + ".Value", stat.Value);
+                        if(stat is Attribute attribute)
+                            PlayerPrefs.SetFloat(key + ".Stats." + handler.HandlerName + "." + stat.Name + ".CurrentValue", attribute.CurrentValue);
+                    }
+                }
+
                 PlayerPrefs.SetString(key+".Stats", data);
 
                 List<string> keys = PlayerPrefs.GetString("StatSystemSavedKeys").Split(';').ToList();
@@ -197,6 +209,7 @@ namespace DevionGames.StatSystem
 
             List<StatsHandler> results = Object.FindObjectsOfType<StatsHandler>().Where(x => x.saveable).ToList();
             List<object> list = MiniJSON.Deserialize(data) as List<object>;
+
             for (int i = 0; i < list.Count; i++)
             {
                 Dictionary<string, object> handlerData = list[i] as Dictionary<string, object>;

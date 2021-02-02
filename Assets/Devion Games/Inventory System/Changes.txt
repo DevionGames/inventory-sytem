@@ -19,3 +19,4 @@
 - Renamed Graph.Result to Graph.FormulaOutput
 - Formula Asset
 - Rework StatSystem
+- Automatically add StaticItem to EquipmentHandler if none exists for that item in runtime. You can override the prefab that should be attached in editor.

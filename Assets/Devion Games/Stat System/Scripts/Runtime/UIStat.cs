@@ -91,5 +91,27 @@ namespace DevionGames.StatSystem
 				this.m_IncrementButton.gameObject.SetActive(freePoints.Value > 0?true:false);
 			}
 		}
-    }
+
+		private void OnCharacterLoaded(CallbackEventData data)
+		{
+			if (GetComponentInParent(data.GetData("Slot").GetType()) != (Component)data.GetData("Slot"))
+			{
+				return;
+			}
+			
+			string key = data.GetData("CharacterName") + ".Stats." + this.m_StatsHandler + "." + this.m_Stat.Name;
+			if (PlayerPrefs.HasKey(key + ".Value"))
+			{
+				float value = PlayerPrefs.GetFloat(key + ".Value");
+				if (this.m_Value != null)
+					this.m_Value.text = value.ToString();
+			}
+			if (PlayerPrefs.HasKey(key + ".CurrentValue"))
+			{
+				float currentValue = PlayerPrefs.GetFloat(key + ".CurrentValue");
+				if (this.m_CurrentValue != null)
+					this.m_CurrentValue.text = currentValue.ToString();
+			}
+		}
+	}
 }
