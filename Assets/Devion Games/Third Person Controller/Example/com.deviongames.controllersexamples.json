@@ -2,7 +2,7 @@
     "name": "Third Person Controller Examples",
     "id": "com.deviongames.controllersexamples",
     "assetPath":"Assets/Devion Games/Third Person Controller/Example",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "unityVersion": "2019.4.10",
     "downloadPath": "https://deviongames.com/modules/ThirdPersonControllerExamples.unitypackage",
     "author": "Konstantin Janson",
@@ -64,6 +64,13 @@
             [
                 "Combat animations",
                 "Combat animation events"
+            ]
+        }, 
+        {
+            "version": "1.0.6",
+            "changes": 
+            [
+                "Update for Third Person Controller 1.0.8"
             ]
         }
     ]

@@ -2,7 +2,7 @@
     "name": "Graphs",
     "id": "com.deviongames.graphs",
     "assetPath":"Assets/Devion Games/Graphs",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "unityVersion": "2019.4.10",
     "downloadPath": "https://deviongames.com/modules/Graphs.unitypackage",
     "author": "Konstantin Janson",
@@ -47,6 +47,14 @@
             "changes": 
             [
                 "AssemblyDefinition"
+            ]
+        },
+        {
+            "version": "1.0.5",
+            "changes": 
+            [
+                "Renamed Graph.IBehavior to Graph.IGraphProvider",
+                "Renamed Graph.Result to Graph.FormulaOutput"
             ]
         }
     ]

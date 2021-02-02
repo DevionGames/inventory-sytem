@@ -2,7 +2,7 @@
     "name": "Triggers",
     "id": "com.deviongames.triggers",
     "assetPath":"Assets/Devion Games/Triggers",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "unityVersion": "2019.4.10",
     "downloadPath": "https://deviongames.com/modules/Triggers.unitypackage",
     "author": "Konstantin Janson",
@@ -56,6 +56,13 @@
                "Requires now TriggerRaycaster for any TriggerType.",
                "Above Trigger changes allow now to have a collider with Is Trigger set to true and still receive events. (Bush example, you can now walk through it)",
                "Removed Raycast option in Trigger, it is used by default."
+            ]
+        },
+        {
+            "version": "1.0.5",
+            "changes": 
+            [
+               "Extended Action Library"
             ]
         }
     ]

@@ -4316,7 +4316,7 @@ MonoBehaviour:
     gameObject: {fileID: 0}
   m_ActivationInputName: 
   m_ActivationType: 0
-  m_UseInputName: 
+  m_UseInputName: Fire1
   m_StartType: 1
   m_StopType: 1
   m_RightHandIKTarget: {fileID: 0}

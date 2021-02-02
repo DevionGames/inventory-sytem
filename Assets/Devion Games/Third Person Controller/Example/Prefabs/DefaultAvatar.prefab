@@ -1488,7 +1488,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AudioGroups:
   - name: SFX
-    m_AudioMixerGroup: {fileID: 0}
+    m_AudioMixerGroup: {fileID: 8643709756097329450, guid: 08813bea6fa2f304d8179aec903c1bd9,
+      type: 2}
 --- !u!1 &8277663195043397579
 GameObject:
   m_ObjectHideFlags: 0

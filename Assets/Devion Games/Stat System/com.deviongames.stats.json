@@ -2,7 +2,7 @@
 	"name": "Stat System",
 	"id": "com.deviongames.stats",
 	"assetPath":"Assets/Devion Games/Stat System",
-	"version": "1.0.8",
+	"version": "1.0.9",
 	"unityVersion": "2019.4.10",
 	"downloadPath": "https://deviongames.com/modules/StatSystem.unitypackage",
 	"author": "Konstantin Janson",
@@ -96,6 +96,21 @@
                 "Requires Triggers package",
                 "AddModifier action",
                 "RemoveModifier action"
+            ]
+        }, 
+        {
+            "version": "1.0.9",
+            "changes": 
+            [
+                "Global editor",
+                "Diffrent stat types (Stat, Attribute, Level)",
+                "Stat Effects",
+                "Stat Callbacks in editor",
+                "Removed Min Value property",
+                "Changed Max Value property to Cap",
+                "Changed StatFormula to FormulaGraph",
+                "Moved display damage properties to DamageData",
+                "Free stat points is a stat, for easier adding /removing value"
             ]
         }
     ]
