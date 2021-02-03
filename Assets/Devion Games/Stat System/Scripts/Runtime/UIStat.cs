@@ -33,8 +33,19 @@ namespace DevionGames.StatSystem
 		private Stat stat;
 		private Stat freePoints;
 
+		protected virtual void Start() {
+			if (this.m_IncrementButton != null)
+			{
+				this.m_IncrementButton.onClick.AddListener(delegate () {
+					stat.Add(1f);
+					freePoints.Subtract(1f);
+				});
+			}
+		}
+
 		protected virtual void Update() {
-			if (stat == null) {
+			//TODO BETTER FIX, SelectableUIStat is displaying same values for all enemies
+			//if (stat == null) {
 				StatsHandler handler = GetStatsHandler();
 				if (handler == null)
 					return;
@@ -44,15 +55,7 @@ namespace DevionGames.StatSystem
 
 				if (this.m_StatName != null)
 					this.m_StatName.text = this.stat.Name;
-
-				if (this.m_IncrementButton != null && freePoints != null)
-				{
-					this.m_IncrementButton.onClick.AddListener(delegate () {
-						stat.Add(1f);
-						freePoints.Subtract(1f);
-					});
-				}
-			}
+		//	}
 			Repaint();
 		}
 

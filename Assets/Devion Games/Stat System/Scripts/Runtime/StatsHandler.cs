@@ -275,6 +275,22 @@ namespace DevionGames.StatSystem
             return false;
         }
 
+        public float GetStatValue(string name)
+        {
+            Stat stat = GetStat(name);
+            if (stat != null)
+                return stat.Value;
+            return 0f;
+        }
+
+        public float GetStatCurrentValue(string name)
+        {
+            Stat stat = GetStat(name);
+            if (stat != null && stat is Attribute attribute)
+                return attribute.CurrentValue;
+            return 0f;
+        }
+
         public void GetObjectData(Dictionary<string, object> data)
         {
             data.Add("Name", m_HandlerName);
