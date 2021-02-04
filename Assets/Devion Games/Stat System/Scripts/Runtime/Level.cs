@@ -11,9 +11,9 @@ namespace DevionGames.StatSystem
         [SerializeField]
         protected Attribute m_Experience;
 
-        public override void Initialize(StatsHandler handler)
+        public override void Initialize(StatsHandler handler, StatOverride statOverride)
         {
-            base.Initialize(handler);
+            base.Initialize(handler, statOverride);
             this.m_Experience = handler.GetStat(this.m_Experience.Name) as Attribute;
             this.m_Experience.onCurrentValueChange += () =>
             {

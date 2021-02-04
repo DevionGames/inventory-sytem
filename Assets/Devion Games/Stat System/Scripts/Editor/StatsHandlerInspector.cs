@@ -15,6 +15,8 @@ namespace DevionGames.StatSystem
         protected SerializedProperty m_Effects;
         protected ReorderableList m_EffectsList;
 
+        protected SerializedProperty m_StatOverrides;
+
         protected virtual void OnEnable() {
             if (target == null) return;
             this.m_Script = serializedObject.FindProperty("m_Script");
@@ -22,6 +24,7 @@ namespace DevionGames.StatSystem
             this.m_StatList = CreateList("Stats", serializedObject, this.m_Stats);
             this.m_Effects = serializedObject.FindProperty("m_Effects");
             this.m_EffectsList = CreateList("Effects", serializedObject, this.m_Effects);
+            this.m_StatOverrides = serializedObject.FindProperty("m_StatOverrides");
 
             int selectedStatIndex = EditorPrefs.GetInt("SelectedStatIndex." + target.GetInstanceID(), -1);
             this.m_StatList.index = selectedStatIndex;
@@ -44,10 +47,31 @@ namespace DevionGames.StatSystem
 
             this.m_StatList.DoLayoutList();
 
+            if (this.m_StatOverrides.arraySize < this.m_Stats.arraySize)
+            {
+                for (int i = this.m_StatOverrides.arraySize; i < this.m_Stats.arraySize; i++)
+                {
+                    this.m_StatOverrides.InsertArrayElementAtIndex(i);
+                }
+            }
+
             int selectedStatIndex = this.m_StatList.index;
             if (selectedStatIndex > -1 && this.m_Stats.arraySize > 0)
             {
-                SerializedProperty stat = this.m_Stats.GetArrayElementAtIndex(selectedStatIndex);
+                SerializedProperty statOverride = this.m_StatOverrides.GetArrayElementAtIndex(selectedStatIndex);
+                SerializedProperty overrideBaseValue = statOverride.FindPropertyRelative("overrideBaseValue");
+                SerializedProperty baseValue = statOverride.FindPropertyRelative("baseValue");
+              
+                EditorGUILayout.PropertyField(overrideBaseValue);
+                if (overrideBaseValue.boolValue)
+                {
+                    EditorGUI.indentLevel += 1;
+                    EditorGUILayout.PropertyField(baseValue);
+                    EditorGUI.indentLevel -= 1;
+                }
+               
+
+                /*SerializedProperty stat = this.m_Stats.GetArrayElementAtIndex(selectedStatIndex);
                 if (stat.objectReferenceValue != null)
                 {
                     SerializedObject statObj = new SerializedObject(stat.objectReferenceValue);
@@ -62,7 +86,7 @@ namespace DevionGames.StatSystem
                         EditorGUI.indentLevel -= 1;
                     }
                     statObj.ApplyModifiedProperties();
-                }
+                }*/
             }
 
 

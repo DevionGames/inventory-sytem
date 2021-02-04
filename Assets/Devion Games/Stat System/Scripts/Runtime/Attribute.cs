@@ -27,9 +27,9 @@ namespace DevionGames.StatSystem
             }
         }
 
-        public override void Initialize(StatsHandler handler)
+        public override void Initialize(StatsHandler handler, StatOverride statOverride)
         {
-            base.Initialize(handler);
+            base.Initialize(handler, statOverride);
             onValueChange += () =>
             {
                 CurrentValue = Mathf.Clamp(CurrentValue, 0f, Value);

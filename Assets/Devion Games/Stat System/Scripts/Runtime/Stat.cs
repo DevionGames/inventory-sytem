@@ -19,13 +19,13 @@ namespace DevionGames.StatSystem
 
         [SerializeField]
         protected float m_BaseValue;
-        [HideInInspector]
+       /* [HideInInspector]
         [SerializeField]
         protected bool m_InheritBaseValue = true;
         [InspectorLabel("Base Value")]
         [HideInInspector]
         [SerializeField]
-        protected float m_OverrideBaseValue;
+        protected float m_OverrideBaseValue;*/
 
         [SerializeField]
         protected FormulaGraph m_FormulaGraph;
@@ -41,11 +41,12 @@ namespace DevionGames.StatSystem
         protected List<StatModifier> m_StatModifiers= new List<StatModifier>();
         protected StatsHandler m_StatsHandler;
 
-        public virtual void Initialize(StatsHandler handler)
+        public virtual void Initialize(StatsHandler handler, StatOverride statOverride)
         {
             this.m_StatsHandler = handler;
-            if (!this.m_InheritBaseValue)
-                this.m_BaseValue = this.m_OverrideBaseValue;
+            
+            if (statOverride.overrideBaseValue)
+                this.m_BaseValue = statOverride.baseValue;
 
             List<StatNode> statNodes = this.m_FormulaGraph.FindNodesOfType<StatNode>();
 
@@ -173,5 +174,13 @@ namespace DevionGames.StatSystem
             this.m_BaseValue = System.Convert.ToSingle(data["BaseValue"]);
             CalculateValue(false);
         }
+    }
+
+    [System.Serializable]
+    public class StatOverride
+    {
+        public bool overrideBaseValue = false;
+        public float baseValue;
+
     }
 }

@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StatName: Melee Attack
   m_BaseValue: 0
-  m_InheritBaseValue: 1
-  m_OverrideBaseValue: 0
   m_FormulaGraph:
     serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"8237ebe9-0a1a-478c-8cf6-5601d3a28728\",\n\t\t\"name\":\"Formula
       Output\",\n\t\t\"position\":\"v2(448,3)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"defe5a76-c541-47d5-a5b1-ee3b380d2e26\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"001cc334-2989-42da-a88b-d28dbfdd9ecc\",\n\t\t\"name\":\"Get
@@ -55,8 +53,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StatName: Intelligence
   m_BaseValue: 2
-  m_InheritBaseValue: 1
-  m_OverrideBaseValue: 0
   m_FormulaGraph:
     serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"d2ff21cd-aebe-4e8e-91a4-a41be2f1a0fc\",\n\t\t\"name\":\"Formula
       Output\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t}]\n}"
@@ -123,8 +119,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StatName: Vitality
   m_BaseValue: 3
-  m_InheritBaseValue: 1
-  m_OverrideBaseValue: 5
   m_FormulaGraph:
     serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"3b21cbb3-b407-47f8-bd2d-479e26a5a809\",\n\t\t\"name\":\"Formula
       Output\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t}]\n}"
@@ -147,8 +141,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StatName: Magic Damage
   m_BaseValue: 0
-  m_InheritBaseValue: 1
-  m_OverrideBaseValue: 0
   m_FormulaGraph:
     serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"b261791a-bd57-45cb-a970-af08b2d18245\",\n\t\t\"name\":\"Formula
       Output\",\n\t\t\"position\":\"v2(362,38)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"cf4d703a-3fca-4c16-8fec-2505cccdf4bd\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"46e14899-1c0a-4602-a062-9d393207b333\",\n\t\t\"name\":\"Get
@@ -193,8 +185,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StatName: Dexterity
   m_BaseValue: 4
-  m_InheritBaseValue: 1
-  m_OverrideBaseValue: 0
   m_FormulaGraph:
     serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"6a5f8b29-cbee-4b70-9575-fc7155dbd388\",\n\t\t\"name\":\"Formula
       Output\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t}]\n}"
@@ -217,8 +207,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StatName: Mana
   m_BaseValue: 28
-  m_InheritBaseValue: 1
-  m_OverrideBaseValue: 0
   m_FormulaGraph:
     serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"57f69780-631b-42b8-92e2-1b47d6e6eb4d\",\n\t\t\"name\":\"Formula
       Output\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"a7549998-4593-470e-9558-eeeddf364d5f\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"a7549998-4593-470e-9558-eeeddf364d5f\",\n\t\t\"name\":\"Get
@@ -402,8 +390,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StatName: Free Points
   m_BaseValue: 3
-  m_InheritBaseValue: 1
-  m_OverrideBaseValue: 0
   m_FormulaGraph:
     serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"0c97986d-c907-44fa-8541-163ee239975c\",\n\t\t\"name\":\"Formula
       Output\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t}]\n}"
@@ -467,8 +453,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StatName: Min Damage
   m_BaseValue: 1
-  m_InheritBaseValue: 1
-  m_OverrideBaseValue: 0
   m_FormulaGraph:
     serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"93f97569-15f2-4bcc-9421-e3d63f45e1b9\",\n\t\t\"name\":\"Formula
       Output\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t}]\n}"
@@ -505,8 +489,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StatName: Armor
   m_BaseValue: 12
-  m_InheritBaseValue: 1
-  m_OverrideBaseValue: 0
   m_FormulaGraph:
     serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"5c773410-02ef-4c04-95e8-4b36569cde09\",\n\t\t\"name\":\"Formula
       Output\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"2294c75d-1afc-4049-936b-4a93ef1ea8eb\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"2294c75d-1afc-4049-936b-4a93ef1ea8eb\",\n\t\t\"name\":\"Get
@@ -530,8 +512,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StatName: Strength
   m_BaseValue: 5
-  m_InheritBaseValue: 1
-  m_OverrideBaseValue: 0
   m_FormulaGraph:
     serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"4f74e1b1-2c58-4003-883e-fb273f66b5b2\",\n\t\t\"name\":\"Formula
       Output\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t}]\n}"
@@ -554,8 +534,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StatName: Max Damage
   m_BaseValue: 2
-  m_InheritBaseValue: 1
-  m_OverrideBaseValue: 0
   m_FormulaGraph:
     serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"93f97569-15f2-4bcc-9421-e3d63f45e1b9\",\n\t\t\"name\":\"Formula
       Output\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t}]\n}"
@@ -578,8 +556,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StatName: Magic Attack
   m_BaseValue: 0
-  m_InheritBaseValue: 1
-  m_OverrideBaseValue: 0
   m_FormulaGraph:
     serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"d0e98c94-dd18-4aef-9044-46cd47c1529b\",\n\t\t\"name\":\"Formula
       Output\",\n\t\t\"position\":\"v2(441,-1)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"249b52b1-d902-40ef-8288-13c0f207f325\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"70b62eab-89e3-4051-87ef-582924d5144d\",\n\t\t\"name\":\"Get
@@ -603,8 +579,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StatName: Health
   m_BaseValue: 45
-  m_InheritBaseValue: 0
-  m_OverrideBaseValue: 50
   m_FormulaGraph:
     serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"57f69780-631b-42b8-92e2-1b47d6e6eb4d\",\n\t\t\"name\":\"Formula
       Output\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"a7549998-4593-470e-9558-eeeddf364d5f\",\n\t\t\t\t\t\t\"fieldName\":\"statValue\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"a7549998-4593-470e-9558-eeeddf364d5f\",\n\t\t\"name\":\"Get
@@ -653,8 +627,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StatName: Ranged Damage
   m_BaseValue: 0
-  m_InheritBaseValue: 1
-  m_OverrideBaseValue: 0
   m_FormulaGraph:
     serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"b261791a-bd57-45cb-a970-af08b2d18245\",\n\t\t\"name\":\"Formula
       Output\",\n\t\t\"position\":\"v2(362,38)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"cf4d703a-3fca-4c16-8fec-2505cccdf4bd\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"46e14899-1c0a-4602-a062-9d393207b333\",\n\t\t\"name\":\"Get
@@ -696,8 +668,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StatName: Level
   m_BaseValue: 1
-  m_InheritBaseValue: 1
-  m_OverrideBaseValue: 0
   m_FormulaGraph:
     serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"56c59ebf-78db-4f44-9302-d065eb6bfc40\",\n\t\t\"name\":\"Formula
       Output\",\n\t\t\"position\":\"v2(35,3)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t}]\n}"
@@ -739,8 +709,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StatName: Melee Damage
   m_BaseValue: 0
-  m_InheritBaseValue: 1
-  m_OverrideBaseValue: 0
   m_FormulaGraph:
     serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"b261791a-bd57-45cb-a970-af08b2d18245\",\n\t\t\"name\":\"Formula
       Output\",\n\t\t\"position\":\"v2(362,38)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"cf4d703a-3fca-4c16-8fec-2505cccdf4bd\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"46e14899-1c0a-4602-a062-9d393207b333\",\n\t\t\"name\":\"Get
@@ -769,8 +737,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StatName: Critical Strike
   m_BaseValue: 20
-  m_InheritBaseValue: 1
-  m_OverrideBaseValue: 0
   m_FormulaGraph:
     serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"21106729-a4a6-473f-bc95-e5613e3bc37a\",\n\t\t\"name\":\"Formula
       Output\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t}]\n}"
@@ -793,8 +759,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StatName: New Stat
   m_BaseValue: 0
-  m_InheritBaseValue: 1
-  m_OverrideBaseValue: 0
   m_FormulaGraph:
     serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"4cc00210-935e-4435-9320-b7cbab7d9978\",\n\t\t\"name\":\"Formula
       Output\",\n\t\t\"position\":\"v2(0,0)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t}]\n}"
@@ -817,8 +781,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StatName: Ranged Attack
   m_BaseValue: 0
-  m_InheritBaseValue: 1
-  m_OverrideBaseValue: 0
   m_FormulaGraph:
     serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"8237ebe9-0a1a-478c-8cf6-5601d3a28728\",\n\t\t\"name\":\"Formula
       Output\",\n\t\t\"position\":\"v2(448,3)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"defe5a76-c541-47d5-a5b1-ee3b380d2e26\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"001cc334-2989-42da-a88b-d28dbfdd9ecc\",\n\t\t\"name\":\"Get
@@ -846,8 +808,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StatName: Exp
   m_BaseValue: 0
-  m_InheritBaseValue: 1
-  m_OverrideBaseValue: 0
   m_FormulaGraph:
     serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"faedd6e1-31c6-42f1-ace2-6c996a0e6b7b\",\n\t\t\"name\":\"Formula
       Output\",\n\t\t\"position\":\"v2(402,-33)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"c0040511-36a0-4c6b-90a8-14b83e2b1156\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"cc07c9ec-6e27-487c-b424-f473b2ffcaa7\",\n\t\t\"name\":\"Get

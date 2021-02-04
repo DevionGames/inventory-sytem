@@ -20,6 +20,10 @@ namespace DevionGames.StatSystem
         [StatPicker]
         [SerializeField]
         public List<Stat> m_Stats = new List<Stat>();
+        [HideInInspector]
+        [SerializeField]
+        private List<StatOverride> m_StatOverrides = new List<StatOverride>();
+
         [SerializeField]
         protected List<StatEffect> m_Effects = new List<StatEffect>();
         public System.Action onUpdate;
@@ -29,9 +33,18 @@ namespace DevionGames.StatSystem
         {
             for (int i = 0; i < this.m_Stats.Count; i++)
                 this.m_Stats[i] = Instantiate(this.m_Stats[i]);
-            
+
+
+            if (this.m_StatOverrides.Count < this.m_Stats.Count)
+            {
+                for (int i = this.m_StatOverrides.Count; i < this.m_Stats.Count; i++)
+                {
+                    this.m_StatOverrides.Insert(i, new StatOverride());
+                }
+            }
+
             for (int i = 0; i < this.m_Stats.Count; i++)
-                this.m_Stats[i].Initialize(this);
+                this.m_Stats[i].Initialize(this,this.m_StatOverrides[i]);
 
             for (int i = 0; i < this.m_Stats.Count; i++)
                 this.m_Stats[i].ApplyStartValues();
@@ -329,5 +342,7 @@ namespace DevionGames.StatSystem
                 }
             }
         }
+   
+
     }
 }

@@ -11,8 +11,7 @@ namespace DevionGames.StatSystem
     {
         protected SerializedProperty m_Script;
         protected SerializedProperty m_Callbacks;
-        protected SerializedProperty m_BaseOverrideValue;
-        
+       
         protected virtual void OnEnable()
         {
             if (target == null) return;

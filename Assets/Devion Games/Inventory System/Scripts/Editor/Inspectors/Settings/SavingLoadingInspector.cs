@@ -121,7 +121,7 @@ namespace DevionGames.InventorySystem.Configuration
 
                     if (EditorTools.Foldout(key, new GUIContent(key),keyMenu)){
                         EditorTools.BeginIndent(1, true);
-
+                        Debug.Log(key);
                         if (!string.IsNullOrEmpty(uiData)){
                             GenericMenu uiMenu = new GenericMenu();
                             uiMenu.AddItem(new GUIContent("Delete UI"), false, () => {
