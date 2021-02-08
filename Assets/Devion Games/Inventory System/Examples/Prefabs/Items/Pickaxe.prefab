@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6690933546455859465}
   - component: {fileID: 4809886487464942057}
   - component: {fileID: 5501577422708072527}
-  - component: {fileID: 7331264400094229473}
+  - component: {fileID: 6480860146132846612}
   - component: {fileID: 1163774210356663465}
   - component: {fileID: 3702814337640128081}
   m_Layer: 0
@@ -80,7 +80,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7331264400094229473
+--- !u!114 &6480860146132846612
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,12 +89,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2446829401942333329}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cda3b9d89a55f143bf4546d43b708d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 95ff8949b55037043a6183d61fd8dcff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DisplayType: 8
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Offset: {x: 0, y: 0, z: 0}
+  m_Title: Pickaxe
+  m_Instruction: Pickup
 --- !u!114 &1163774210356663465
 MonoBehaviour:
   m_ObjectHideFlags: 0

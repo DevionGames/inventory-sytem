@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 785524564529816220}
   - component: {fileID: 554148269089934673}
   - component: {fileID: 1416957583751146433}
-  - component: {fileID: -435225407176701946}
+  - component: {fileID: 8448476249707929044}
   - component: {fileID: 3053280592713682540}
   - component: {fileID: 4840787856461777305}
   m_Layer: 0
@@ -113,7 +113,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-435225407176701946
+--- !u!114 &8448476249707929044
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,12 +122,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8122114857979880778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cda3b9d89a55f143bf4546d43b708d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 95ff8949b55037043a6183d61fd8dcff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DisplayType: 8
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Offset: {x: 0, y: 0, z: 0}
+  m_Title: Iron Ingot
+  m_Instruction: Pickup
 --- !u!114 &3053280592713682540
 MonoBehaviour:
   m_ObjectHideFlags: 0

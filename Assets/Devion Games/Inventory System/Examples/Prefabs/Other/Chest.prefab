@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3056294474021234515}
   - component: {fileID: 3056294474021234516}
   - component: {fileID: 2498390288172186934}
-  - component: {fileID: 2958970040400336317}
+  - component: {fileID: 4175816066791337660}
   - component: {fileID: 3056294474021234527}
   - component: {fileID: 3056294474021234512}
   - component: {fileID: 442802685}
@@ -99,7 +99,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.0107985, y: 6.0967517, z: 3.75}
   m_Center: {x: -0.0017236471, y: 3.0483692, z: -0.75}
---- !u!114 &2958970040400336317
+--- !u!114 &4175816066791337660
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,12 +108,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3056294474021234518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cda3b9d89a55f143bf4546d43b708d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 95ff8949b55037043a6183d61fd8dcff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DisplayType: 8
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Offset: {x: 0, y: 0.3, z: 0}
+  m_Title: Chest
+  m_Instruction: Open
 --- !u!114 &3056294474021234527
 MonoBehaviour:
   m_ObjectHideFlags: 0

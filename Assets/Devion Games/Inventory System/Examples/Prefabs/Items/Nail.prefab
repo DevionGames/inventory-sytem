@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5155910175362152108}
   - component: {fileID: 8208996464965943931}
   - component: {fileID: 2079895603619544617}
-  - component: {fileID: -583287125771890968}
+  - component: {fileID: 2621410817041110749}
   - component: {fileID: 1528573803714978751}
   - component: {fileID: 1110561109274616509}
   m_Layer: 0
@@ -113,7 +113,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-583287125771890968
+--- !u!114 &2621410817041110749
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,12 +122,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8526908806523285250}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cda3b9d89a55f143bf4546d43b708d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 95ff8949b55037043a6183d61fd8dcff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DisplayType: 8
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Offset: {x: 0, y: 0, z: 0}
+  m_Title: Nail
+  m_Instruction: Pickup
 --- !u!114 &1528573803714978751
 MonoBehaviour:
   m_ObjectHideFlags: 0

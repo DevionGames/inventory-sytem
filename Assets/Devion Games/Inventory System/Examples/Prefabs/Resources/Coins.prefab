@@ -1433,7 +1433,7 @@ GameObject:
   - component: {fileID: 2074223619}
   - component: {fileID: 2074223616}
   - component: {fileID: 2074223615}
-  - component: {fileID: -612313035464714545}
+  - component: {fileID: 5098841082679400256}
   - component: {fileID: 4931618418664310269}
   - component: {fileID: 1829521137817796037}
   m_Layer: 0
@@ -1506,7 +1506,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.31, y: 0.28, z: 0.05}
   m_Center: {x: 0, y: -0, z: -0}
---- !u!114 &-612313035464714545
+--- !u!114 &5098841082679400256
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1515,12 +1515,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2074223614}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cda3b9d89a55f143bf4546d43b708d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 95ff8949b55037043a6183d61fd8dcff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DisplayType: 8
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Offset: {x: 0, y: 0, z: 0}
+  m_Title: Coins
+  m_Instruction: Pickup
 --- !u!114 &4931618418664310269
 MonoBehaviour:
   m_ObjectHideFlags: 0

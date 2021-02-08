@@ -21,7 +21,6 @@ namespace DevionGames.InventorySystem
 
         protected BaseTrigger m_Trigger;
 
-
         protected virtual void DoDisplayName(bool state)
         {
             if (state)

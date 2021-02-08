@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8182773773601587906}
   - component: {fileID: 6072243048757048728}
   - component: {fileID: 6410022881207189298}
-  - component: {fileID: 1901774327}
+  - component: {fileID: -9003487426039036294}
   - component: {fileID: 1165384963586084222}
   - component: {fileID: 8431522341766763773}
   - component: {fileID: 379513609958229008}
@@ -98,7 +98,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300004, guid: dfbca7c1b32489d419cf375566fae25a, type: 3}
---- !u!114 &1901774327
+--- !u!114 &-9003487426039036294
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,12 +107,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8637995669017434483}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cda3b9d89a55f143bf4546d43b708d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 95ff8949b55037043a6183d61fd8dcff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DisplayType: 8
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Offset: {x: 0, y: 0, z: 0}
+  m_Title: Bush
+  m_Instruction: Harvest
 --- !u!114 &1165384963586084222
 MonoBehaviour:
   m_ObjectHideFlags: 0

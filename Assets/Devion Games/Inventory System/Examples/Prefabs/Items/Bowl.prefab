@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1332847968068153002}
   - component: {fileID: 4609814832669488598}
   - component: {fileID: 8526055323680340666}
-  - component: {fileID: -4244028847111802564}
+  - component: {fileID: -1267083460335020864}
   - component: {fileID: 7469636722330649568}
   - component: {fileID: 8912062079263800403}
   - component: {fileID: 2225438275881385005}
@@ -98,7 +98,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 02f05bd07b76e134b9ce1d218a95057a, type: 3}
---- !u!114 &-4244028847111802564
+--- !u!114 &-1267083460335020864
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,12 +107,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6550093729711604389}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cda3b9d89a55f143bf4546d43b708d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 95ff8949b55037043a6183d61fd8dcff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DisplayType: 8
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Offset: {x: 0, y: 0, z: 0}
+  m_Title: Bowl
+  m_Instruction: Pickup
 --- !u!114 &7469636722330649568
 MonoBehaviour:
   m_ObjectHideFlags: 0

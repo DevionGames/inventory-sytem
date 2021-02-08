@@ -250,7 +250,8 @@ namespace DevionGames
             OnWentOutOfRange();
         }
 
-        protected virtual void OnCameInRange() { }
+        protected virtual void OnCameInRange() { 
+        }
 
         private void NotifyCameInRange() {
             ExecuteEvent<ITriggerCameInRange>(Execute, true);
@@ -317,7 +318,7 @@ namespace DevionGames
 
         /*Returns true if this is the best trigger. Used for TriggerInputType.Key and TriggerInputType.OnTriggerEnter
           Calculated based on distance and rotation of the player to the trigger.*/
-        protected virtual bool IsBestTrigger()
+        public virtual bool IsBestTrigger()
         {
             if (gameObject == PlayerInfo.gameObject)
             {
