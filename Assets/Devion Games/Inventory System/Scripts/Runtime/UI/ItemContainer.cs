@@ -363,6 +363,7 @@ namespace DevionGames.InventorySystem
         /// <param name="s2">Second slot</param>
         /// <returns>True if swapped.</returns>
         public bool SwapItems(Slot s1, Slot s2) {
+
             if (s1 is ItemSlot s1Slot && s1Slot.IsCooldown)
                 return false;
             if (s2 is ItemSlot s2Slot && s2Slot.IsCooldown)
@@ -394,6 +395,7 @@ namespace DevionGames.InventorySystem
 
             if (CanMoveItems(itemsInRequiredSlotsObserved, willBeFreeSlotsObserved, s1,s1.Container, ref moveLocationsObserved) && CanMoveItems(itemsInRequiredSlots, willBeFreeSlots,s2, s2.Container, ref moveLocations))
             {
+             //   Debug.Log(s1.Container.Name+":"+s1.ObservedItem+" "+s2.Container.Name+": "+s2.ObservedItem);
                 if (!s1.Container.UseReferences || !s2.Container.CanReferenceItems)
                 {
                     for (int i = 0; i < itemsInRequiredSlots.Length; i++)
@@ -1029,8 +1031,6 @@ namespace DevionGames.InventorySystem
             for (int i = 0; i < this.m_Slots.Count; i++)
             {
                 Slot slot = this.m_Slots[i];
-                if(!slot.IsEmpty)
-                    Debug.Log(category.Name +" "+slot.ObservedItem.Category.Name);
 
                 if (!slot.IsEmpty && category.IsAssignable(slot.ObservedItem.Category))//slot.ObservedItem.Category.Name == category.Name)
                 {

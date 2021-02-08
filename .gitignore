@@ -75,3 +75,5 @@ crashlytics-build.properties
 /[Aa]ssets/Devion Games/RPG UI*
 # Bolt
 /[Aa]ssets/Ludiq*
+# Asset Store Tools
+/[Aa]ssets/AssetStoreTools*

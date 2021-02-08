@@ -102,7 +102,7 @@ namespace DevionGames.InventorySystem
 
         protected override void Update()
         {
-            if (this.m_Pause || !this.m_Handler.enabled || UnityTools.IsPointerOverUI() || !this.m_CharacterAnimator.GetCurrentAnimatorStateInfo(0).IsTag("Default")) {
+            if (this.m_Pause || !this.m_Handler.enabled || UnityTools.IsPointerOverUI() || !this.m_CharacterAnimator.GetCurrentAnimatorStateInfo(0).IsTag("Default") || ItemSlot.dragObject != null) {
 
                 return; 
             }
@@ -127,7 +127,7 @@ namespace DevionGames.InventorySystem
 
             if (this.m_StartType != StartType.Down || !Input.GetButtonDown(this.m_UseInputName))
             {
-                if (this.m_StopType == StopType.Up && Input.GetButtonUp(this.m_UseInputName))
+                if (this.m_StopType == StopType.Up && (Input.GetButtonUp(this.m_UseInputName) || !Input.GetButton(this.m_UseInputName)))
                 {
                     this.TryStopUse();
                 }
@@ -198,6 +198,8 @@ namespace DevionGames.InventorySystem
                 CallbackEventData data = new CallbackEventData();
                 data.AddData("Item", this.m_CurrentEquipedItem);
                 Execute("OnEndUse", data);
+                //this.m_CharacterAnimator.CrossFadeInFixedTime("Empty", 0.15f);
+                this.m_CharacterAnimator.SetBool("Item Use",false);
             }
         }
 
@@ -218,6 +220,7 @@ namespace DevionGames.InventorySystem
             CallbackEventData data = new CallbackEventData();
             data.AddData("Item", this.m_CurrentEquipedItem);
             Execute("OnUse", data);
+            this.m_CharacterAnimator.SetBool("Item Use", true);
         }
 
         private void OnEndUse() {
@@ -251,6 +254,8 @@ namespace DevionGames.InventorySystem
                 this.m_CharacterAnimator.CrossFadeInFixedTime(this.m_IdleState, 0.15f);
                 this.m_InUse = false;
             } else {
+
+                this.m_CharacterAnimator.SetBool("Item Use", false);
                 this.m_CharacterAnimator.SetInteger("Item ID",0);
                 for (int j = 0; j < this.m_DefaultStates.Length; j++)
                 {

@@ -194,16 +194,19 @@ namespace DevionGames.StatSystem
 
         private void DisplayDamage(GameObject prefab, float damage, Color color, Vector3 intensity)
         {
-            Canvas canvas = GetComponentInChildren<Canvas>(); 
+            Canvas canvas = GetComponentInChildren<Canvas>();
             //TODO Pooling
-            GameObject go = Instantiate(prefab, canvas.transform);
-            go.transform.localPosition += new Vector3(UnityEngine.Random.Range(-intensity.x, intensity.x), UnityEngine.Random.Range(-intensity.y, intensity.y), UnityEngine.Random.Range(-intensity.z, intensity.z));
-            Text text = go.GetComponentInChildren<Text>();
-            text.color = color;
-            text.text = (damage > 0 ? "-" : "+") + Mathf.Abs(damage).ToString();
+            if (canvas != null)
+            {
+                GameObject go = Instantiate(prefab, canvas.transform);
+                go.transform.localPosition += new Vector3(UnityEngine.Random.Range(-intensity.x, intensity.x), UnityEngine.Random.Range(-intensity.y, intensity.y), UnityEngine.Random.Range(-intensity.z, intensity.z));
+                Text text = go.GetComponentInChildren<Text>();
+                text.color = color;
+                text.text = (damage > 0 ? "-" : "+") + Mathf.Abs(damage).ToString();
 
-            go.SetActive(true);
-            Destroy(go, 4f);
+                go.SetActive(true);
+                Destroy(go, 4f);
+            }
         }
 
         private void PlaySound(AudioClip clip, AudioMixerGroup audioMixerGroup, float volumeSclae)

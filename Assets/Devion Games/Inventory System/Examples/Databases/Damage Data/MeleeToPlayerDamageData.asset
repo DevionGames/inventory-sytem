@@ -17,12 +17,18 @@ MonoBehaviour:
   receivingStat: Health
   maxDistance: 2
   maxAngle: 60
+  displayDamage: 0
+  damagePrefab: {fileID: 0}
+  damageColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  criticalDamageColor: {r: 1, g: 0, b: 0, a: 1}
+  intensity: {x: 3, y: 2, z: 0}
   particleEffect: {fileID: 5242244599635571793, guid: ed771e6afeed0294fbe35b682ea19bfc,
     type: 3}
   offset: {x: 0, y: 1, z: 0}
   randomize: {x: 0, y: 0.2, z: 0}
   lifeTime: 3
-  audioMixerGroup: {fileID: 0}
+  audioMixerGroup: {fileID: 8643709756097329450, guid: 08813bea6fa2f304d8179aec903c1bd9,
+    type: 2}
   volumeScale: 0.43
   hitSounds:
   - {fileID: 8300000, guid: 0805de7e4fb0f4d03a30ae90e7c64311, type: 3}

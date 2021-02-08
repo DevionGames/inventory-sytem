@@ -223,6 +223,7 @@ namespace DevionGames.InventorySystem
                     {
                         if (moveToContainer.CanSwapItems(moveToContainer.Slots[j],this) && moveToContainer.SwapItems(moveToContainer.Slots[j], this))
                         {
+                            Debug.Log("Swap worked");
                             return true;
                         }
                     }
@@ -244,7 +245,7 @@ namespace DevionGames.InventorySystem
             {
                 if (!restrictions[i].CanAddItem(item))
                 {
-                   // Debug.Log("Can't add item: "+item.Name+" to "+Container.Name+" Failed in: "+restrictions[i]);
+                    Debug.Log("Can't add item: "+item.Name+" to "+Container.Name+" Failed in: "+restrictions[i]);
                     return false;
                 }
             }

@@ -4317,8 +4317,8 @@ MonoBehaviour:
   m_ActivationInputName: 
   m_ActivationType: 0
   m_UseInputName: Fire1
-  m_StartType: 1
-  m_StopType: 1
+  m_StartType: 2
+  m_StopType: 0
   m_RightHandIKTarget: {fileID: 0}
   m_RightHandIKWeight: 1
   m_RightHandIKSpeed: 1
@@ -4327,7 +4327,7 @@ MonoBehaviour:
   m_LeftHandIKSpeed: 1
   m_ItemID: 1
   m_IdleState: Sword and Shield Movement
-  m_UseState: Sword Slash
+  m_UseState: Sword Attack
 --- !u!114 &6874675272001939308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4706,6 +4706,45 @@ MonoBehaviour:
   - {fileID: 4454703591542203765, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
   - {fileID: -3951915076032632442, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
   - {fileID: 7004165821522531148, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+  m_StatOverrides:
+  - overrideBaseValue: 0
+    baseValue: 0
+  - overrideBaseValue: 0
+    baseValue: 0
+  - overrideBaseValue: 0
+    baseValue: 0
+  - overrideBaseValue: 0
+    baseValue: 0
+  - overrideBaseValue: 0
+    baseValue: 0
+  - overrideBaseValue: 0
+    baseValue: 0
+  - overrideBaseValue: 0
+    baseValue: 0
+  - overrideBaseValue: 0
+    baseValue: 0
+  - overrideBaseValue: 0
+    baseValue: 0
+  - overrideBaseValue: 0
+    baseValue: 0
+  - overrideBaseValue: 0
+    baseValue: 0
+  - overrideBaseValue: 0
+    baseValue: 0
+  - overrideBaseValue: 0
+    baseValue: 0
+  - overrideBaseValue: 0
+    baseValue: 0
+  - overrideBaseValue: 0
+    baseValue: 0
+  - overrideBaseValue: 0
+    baseValue: 0
+  - overrideBaseValue: 0
+    baseValue: 0
+  - overrideBaseValue: 0
+    baseValue: 0
+  - overrideBaseValue: 0
+    baseValue: 0
   m_Effects:
   - {fileID: -4664889271903601789, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
   - {fileID: -2005598942081263570, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
