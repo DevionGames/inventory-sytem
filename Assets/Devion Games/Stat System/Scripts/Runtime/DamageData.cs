@@ -39,9 +39,26 @@ namespace DevionGames.StatSystem
         public AudioClip[] hitSounds;
 
         [HeaderLine("Camera Shake")]
+        [InspectorLabel("Enabled")]
+        public bool enableShake;
+        [Compound("enableShake")]
         public float duration = 0.4f;
+        [Compound("enableShake")]
         public float speed = 5f;
+        [Compound("enableShake")]
         public Vector3 amount = new Vector3(0.4f,0.4f);
+
+        [HeaderLine("Knockback")]
+        [InspectorLabel("Enabled")]
+        public bool enableKnockback;
+        [Compound("enableKnockback")]
+        public float knockbackChance = 0.7f;
+        [Compound("enableKnockback")]
+        public float knockbackStrength = 30f;
+        [Compound("enableKnockback")]
+        public float knockbackAcceleration = 50f;
+        [Compound("enableKnockback")]
+        public float knockbackDuration = 1f;
 
         [System.NonSerialized]
         public GameObject sender;

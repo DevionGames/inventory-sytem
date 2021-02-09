@@ -11,11 +11,12 @@ namespace DevionGames
     {
         [SerializeField]
         private TargetType m_Target = TargetType.Self;
-
+        [SerializeField]
+        private float m_Delay = 0f;
         public override ActionStatus OnUpdate()
         {
             GameObject target = GetTarget(this.m_Target);
-            GameObject.Destroy(target);
+            GameObject.Destroy(target,this.m_Delay);
             return ActionStatus.Success;
         }
     }

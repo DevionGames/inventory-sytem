@@ -969,6 +969,53 @@ MonoBehaviour:
   - {fileID: 5658350685615726283}
   references:
     version: 1
+--- !u!114 &-1922893622408926672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
+  m_Name: Fence
+  m_EditorClassIdentifier: 
+  m_Id: a0593e45-5af2-4d3f-a3d9-90940b558994
+  m_ItemName: Fence
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: e536de7f3a37f304e81955e8deefe154, type: 3}
+  m_Prefab: {fileID: 9131482177403923620, guid: 9fd2646d1f1c356469e7fc4105ef4aae,
+    type: 3}
+  m_Description: A fence can be placed on ground. Rotate with E.
+  m_Category: {fileID: -6294223960729143046}
+  m_IsSellable: 1
+  m_BuyPrice: 10
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: -2811142919616601772}
+  m_SellPrice: 8
+  m_SellCurrency: {fileID: -2811142919616601772}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 1
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 1
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 1
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 4594666206616667452, guid: e1f045c49e197e3439b99da9edbc5ba3,
+    type: 2}
+  m_RemoveIngredientsWhenFailed: 1
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients:
+  - item: {fileID: -5663772737389988193}
+    amount: 3
+  properties: []
 --- !u!114 &-1474344929657048262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1127,6 +1174,7 @@ MonoBehaviour:
   - {fileID: -4474190543486091594}
   - {fileID: 2409076057030828310}
   - {fileID: -8967533827971111582}
+  - {fileID: -1922893622408926672}
   currencies:
   - {fileID: -2811142919616601772}
   - {fileID: -6442420119529586086}

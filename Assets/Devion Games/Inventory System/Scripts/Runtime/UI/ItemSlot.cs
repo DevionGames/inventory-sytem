@@ -403,6 +403,10 @@ namespace DevionGames.InventorySystem
                     collection.Clear();
                     collection.Add(item);
                 }
+                PlaceItem placeItem = go.GetComponentInChildren<PlaceItem>(true);
+                if (placeItem != null)
+                    placeItem.enabled = true;
+
                 ItemContainer.RemoveItemCompletely(item);
                 Container.NotifyDropItem(item, go);
             }

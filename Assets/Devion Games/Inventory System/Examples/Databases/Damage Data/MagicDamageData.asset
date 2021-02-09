@@ -34,6 +34,12 @@ MonoBehaviour:
   hitSounds:
   - {fileID: 8300000, guid: 0805de7e4fb0f4d03a30ae90e7c64311, type: 3}
   - {fileID: 8300000, guid: 34aca9e3f1ade4802b9062b1380aa523, type: 3}
+  enableShake: 0
   duration: 0
   speed: 5
   amount: {x: 0.4, y: 0.4, z: 0}
+  enableKnockback: 0
+  knockbackChance: 0.7
+  knockbackStrength: 30
+  knockbackAcceleration: 50
+  knockbackDuration: 1

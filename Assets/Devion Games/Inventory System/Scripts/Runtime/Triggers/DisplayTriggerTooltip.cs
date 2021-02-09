@@ -17,12 +17,13 @@ namespace DevionGames.InventorySystem
 
         private void Start()
         {
-            m_Trigger = GetComponent<BaseTrigger>();
+            m_Trigger = GetComponentInChildren<BaseTrigger>(true);
             this.m_Tooltip = WidgetUtility.Find<TriggerTooltip>("Trigger Tooltip");
         }
 
         private void Update()
         {
+
             if (this.m_Trigger.InRange && this.m_Trigger.IsBestTrigger())
             {
                 DoDisplayTooltip(true);

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
@@ -189,8 +190,33 @@ namespace DevionGames.StatSystem
 
                 if (damageData.displayDamage)
                     receiverHandler.DisplayDamage(damageData.damagePrefab,damage,criticaleStrike?damageData.criticalDamageColor:damageData.damageColor,damageData.intensity);
+               
+                if (damageData.enableKnockback && damageData.knockbackChance > Random.Range(0f,1f))
+                {
+                    StartCoroutine(Knockback(receiver, damageData));
+                }
             }
         }
+
+        private IEnumerator Knockback(GameObject receiver, DamageData damageData) {
+            NavMeshAgent agent = receiver.GetComponent<NavMeshAgent>();
+            if (agent == null) yield break;
+            Vector3 direction = receiver.transform.position - transform.position;
+            float speed = agent.speed;
+            float angularSpeed = agent.angularSpeed;
+            float acceleration = agent.acceleration;
+            agent.speed = damageData.knockbackStrength;
+            agent.angularSpeed = 0f;
+            agent.acceleration = damageData.knockbackAcceleration;
+            agent.SetDestination(receiver.transform.position+direction.normalized);
+            yield return new WaitForSeconds(damageData.knockbackAcceleration);
+            if (agent == null) yield break;
+            agent.speed = speed;
+            agent.angularSpeed = angularSpeed;
+            agent.acceleration = acceleration;
+        }
+
+        
 
         private void DisplayDamage(GameObject prefab, float damage, Color color, Vector3 intensity)
         {
