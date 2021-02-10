@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace DevionGames.InventorySystem
 {
-    public class DisplayTriggerTooltip : MonoBehaviour, ITriggerWentOutOfRange
+    public class DisplayTriggerTooltip : MonoBehaviour, ITriggerWentOutOfRange, ITriggerUsedHandler
     {
         [SerializeField]
         protected string m_Title;
@@ -24,7 +24,7 @@ namespace DevionGames.InventorySystem
         private void Update()
         {
 
-            if (this.m_Trigger.InRange && this.m_Trigger.IsBestTrigger())
+            if (!this.m_Trigger.InUse && this.m_Trigger.InRange && this.m_Trigger.IsBestTrigger())
             {
                 DoDisplayTooltip(true);
             }
@@ -50,6 +50,11 @@ namespace DevionGames.InventorySystem
         }
 
         public void OnWentOutOfRange(GameObject player)
+        {
+            DoDisplayTooltip(false);
+        }
+
+        public void OnTriggerUsed(GameObject player)
         {
             DoDisplayTooltip(false);
         }
