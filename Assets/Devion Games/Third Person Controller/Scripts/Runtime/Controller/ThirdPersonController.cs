@@ -880,9 +880,12 @@ namespace DevionGames
 
 
 		private void Footsteps(AnimationEvent evt) {
-
-			if (this.m_IsGrounded && m_Rigidbody.velocity.sqrMagnitude > 0.5f && this.m_FootstepClips.Count > 0)
+			if (!this.m_Animator.GetCurrentAnimatorStateInfo(1).IsName("Empty")) {
+				return;
+			}
+			if (this.m_IsGrounded && m_Rigidbody.velocity.sqrMagnitude > 0.5f && this.m_FootstepClips.Count > 0 && evt.animatorClipInfo.weight > 0.5f)
 			{
+				
 				float volume = evt.animatorClipInfo.weight;
 				AudioClip clip = this.m_FootstepClips[UnityEngine.Random.Range(0,this.m_FootstepClips.Count)];
 				PlaySound(clip, volume);

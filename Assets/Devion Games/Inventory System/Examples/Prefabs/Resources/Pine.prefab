@@ -187,6 +187,7 @@ MonoBehaviour:
   - id: 7
   - id: 8
   - id: 9
+  m_Interruptable: 1
   references:
     version: 1
     00000000:

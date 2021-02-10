@@ -183,8 +183,9 @@ namespace DevionGames.StatSystem
                     GameObject effect = Instantiate(damageData.particleEffect, pos, Quaternion.LookRotation(relativePos, Vector3.up));
                     Destroy(effect, damageData.lifeTime);
                 }
+                if(damageData.enableShake)
+                    CameraEffects.Shake(damageData.duration, damageData.speed, damageData.amount);
 
-                CameraEffects.Shake(damageData.duration, damageData.speed, damageData.amount);
                 if (damageData.hitSounds.Length > 0)
                     receiverHandler.PlaySound(damageData.hitSounds[UnityEngine.Random.Range(0, damageData.hitSounds.Length)], damageData.audioMixerGroup, damageData.volumeScale);
 
@@ -201,6 +202,9 @@ namespace DevionGames.StatSystem
         private IEnumerator Knockback(GameObject receiver, DamageData damageData) {
             NavMeshAgent agent = receiver.GetComponent<NavMeshAgent>();
             if (agent == null) yield break;
+           /* Animator animator = receiver.GetComponent<Animator>();
+            animator.ResetTrigger("Hit");
+            animator.SetTrigger("Hit");*/
             Vector3 direction = receiver.transform.position - transform.position;
             float speed = agent.speed;
             float angularSpeed = agent.angularSpeed;

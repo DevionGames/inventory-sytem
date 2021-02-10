@@ -15,6 +15,7 @@ namespace DevionGames
         void OnEnd();
         void OnSequenceEnd();
 
+        void OnInterrupt();
 
     }
 }

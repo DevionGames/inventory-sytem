@@ -33,9 +33,9 @@ namespace DevionGames.UIWidgets
         protected List<Button> buttonCache = new List<Button>();
         protected GameObject m_IconParent;
 
-        protected override void OnStart()
+        protected override void OnAwake()
         {
-            base.OnStart();
+            base.OnAwake();
             if(icon != null)
                 m_IconParent = icon.GetComponentInParent<LayoutElement>().gameObject;
 

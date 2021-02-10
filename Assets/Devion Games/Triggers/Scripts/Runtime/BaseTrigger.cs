@@ -243,7 +243,7 @@ namespace DevionGames
 
         protected virtual void OnWentOutOfRange() { }
 
-        private void NotifyWentOutOfRange(){
+        protected void NotifyWentOutOfRange(){
             ExecuteEvent<ITriggerWentOutOfRange>(Execute, true);
             BaseTrigger.m_TriggerInRange.Remove(this);
             this.InUse = false;
@@ -253,7 +253,7 @@ namespace DevionGames
         protected virtual void OnCameInRange() { 
         }
 
-        private void NotifyCameInRange() {
+        protected void NotifyCameInRange() {
             ExecuteEvent<ITriggerCameInRange>(Execute, true);
             BaseTrigger.m_TriggerInRange.Add(this);
             //InputTriggerType.OnTriggerEnter is supported
@@ -275,7 +275,7 @@ namespace DevionGames
 
         protected virtual void OnTriggerUnUsed() { }
 
-        private void NotifyUnUsed() {
+        protected void NotifyUnUsed() {
             ExecuteEvent<ITriggerUnUsedHandler>(Execute, true);
             BaseTrigger.currentUsedTrigger = null;
             OnTriggerUnUsed();

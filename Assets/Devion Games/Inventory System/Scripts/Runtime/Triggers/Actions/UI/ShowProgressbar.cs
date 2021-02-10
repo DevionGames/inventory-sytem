@@ -52,5 +52,11 @@ namespace DevionGames.InventorySystem
             this.m_Widget.SetProgress(this.m_Time / this.m_Duration);
             return ActionStatus.Running;
         }
+
+        public override void OnInterrupt()
+        {
+            if (this.m_Widget != null)
+                this.m_Widget.Close();
+        }
     }
 }

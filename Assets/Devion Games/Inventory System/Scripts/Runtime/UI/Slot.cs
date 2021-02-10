@@ -223,7 +223,6 @@ namespace DevionGames.InventorySystem
                     {
                         if (moveToContainer.CanSwapItems(moveToContainer.Slots[j],this) && moveToContainer.SwapItems(moveToContainer.Slots[j], this))
                         {
-                            Debug.Log("Swap worked");
                             return true;
                         }
                     }

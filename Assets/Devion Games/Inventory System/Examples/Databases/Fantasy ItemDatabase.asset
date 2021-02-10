@@ -450,6 +450,7 @@ MonoBehaviour:
   - id: 6
   - id: 7
   - id: 8
+  - id: 9
   references:
     version: 1
     00000000:
@@ -510,6 +511,14 @@ MonoBehaviour:
         m_Position: {x: 0, y: 0, z: 0}
         m_SetCameraRelative: 0
     00000008:
+      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.CrossFade
+        m_Enabled: 1
+        m_Target: 1
+        m_AnimatorState: Empty
+        m_TransitionDuration: 0.2
+    00000009:
       type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.SetEnabled

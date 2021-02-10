@@ -35,12 +35,18 @@ namespace DevionGames
         }
 
         public void Stop() {
-           
             for (int i = 0; i < this.m_Actions.Length; i++)
             {
                 this.m_Actions[i].OnSequenceEnd();
             }
             this.m_Status = ActionStatus.Inactive;
+        }
+
+        public void Interrupt() {
+            for (int i = 0; i < this.m_Actions.Length; i++)
+            {
+                this.m_Actions[i].OnInterrupt();
+            }
         }
 
         public void Update()

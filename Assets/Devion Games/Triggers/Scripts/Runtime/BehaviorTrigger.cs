@@ -12,6 +12,8 @@ namespace DevionGames
 
         [SerializeReference]
         public List<Action> actions = new List<Action>();
+        [SerializeField]
+        protected bool m_Interruptable=false;
 
         //Task behavior that runs custom actions
         private Sequence m_ActionBehavior;
@@ -36,7 +38,6 @@ namespace DevionGames
             list.AddRange(actions.Where(x => x is ITriggerEventHandler).Cast<ITriggerEventHandler>());
             this.m_TriggerEvents = list.ToArray();
             this.m_ActionBehavior = new Sequence(gameObject, PlayerInfo, GetComponent<Blackboard>(), actions.ToArray());
-            
         }
 
         //Called once per frame
@@ -49,9 +50,24 @@ namespace DevionGames
             {
                 Use();
             }
+            if (this.m_Interruptable && this.InUse && (Mathf.Abs(Input.GetAxis("Horizontal")) > 0.5f || Mathf.Abs(Input.GetAxis("Vertical")) > 0.5f))
+            {
+                this.m_ActionBehavior.Interrupt();
+                NotifyInterrupted();
+                return;
+            }
             //Update task behavior, set in use if it is running
             this.InUse = this.m_ActionBehavior.Tick();
 
+        }
+
+        protected void NotifyInterrupted() {
+            NotifyUnUsed();
+            OnTriggerInterrupted();
+        }
+
+        protected virtual void OnTriggerInterrupted() { 
+        
         }
 
         protected override void OnTriggerUsed()

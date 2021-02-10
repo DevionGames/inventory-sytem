@@ -47,6 +47,8 @@ namespace DevionGames
 
         public virtual void OnSequenceEnd(){}
 
+        public virtual void OnInterrupt() { }
+
         protected GameObject GetTarget(TargetType type)
         {
             return type == TargetType.Player ? playerInfo.gameObject : gameObject;

@@ -17,11 +17,14 @@ namespace DevionGames
         private bool m_Enable=false;
 
         private Behaviour m_Component;
+        private bool m_IsEnabled;
 
         public override void OnStart()
         {
             GameObject target = GetTarget(this.m_Target);
             this.m_Component = target.GetComponent(this.m_ComponentName) as Behaviour;
+            if (this.m_Component != null)
+                this.m_IsEnabled = this.m_Component.enabled;
         }
 
         public override ActionStatus OnUpdate()
@@ -33,6 +36,12 @@ namespace DevionGames
             }
             this.m_Component.enabled = this.m_Enable;
             return ActionStatus.Success;
+        }
+
+        public override void OnInterrupt()
+        {
+            if (this.m_Component != null)
+                this.m_Component.enabled = this.m_IsEnabled;
         }
     }
 }

@@ -63,6 +63,8 @@ namespace DevionGames.InventorySystem
         private Progressbar m_Progressbar;
         private Spinner m_AmountSpinner;
 
+        private Coroutine coroutine;
+
         protected override void Start()
         {
             base.Start();
@@ -97,6 +99,19 @@ namespace DevionGames.InventorySystem
                 this.m_Progressbar.SetProgress(GetCraftingProgress());
             }
             
+        }
+
+        protected override void OnTriggerInterrupted()
+        {
+            StopAllCoroutines();
+            this.m_IsCrafting = false;
+            this.m_Progressbar.SetProgress(0f);
+            GameObject user = InventoryManager.current.PlayerInfo.gameObject;
+            if (user != null)
+                user.SendMessage("SetControllerActive", true, SendMessageOptions.DontRequireReceiver);
+
+            LoadCachedAnimatorStates();
+
         }
 
         private float GetCraftingProgress()
@@ -163,7 +178,7 @@ namespace DevionGames.InventorySystem
 
             }
             //this.m_RequiredIngredientsContainer.Lock(true);
-            StartCoroutine(CraftItems(item, amount));
+           coroutine= StartCoroutine(CraftItems(item, amount));
             ExecuteEvent<ITriggerCraftStart>(Execute, item);
 
         }
