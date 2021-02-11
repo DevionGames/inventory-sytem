@@ -817,7 +817,7 @@ namespace DevionGames
 
 		private void TryStartMotion (MotionState motion)
 		{
-            if (!motion.IsActive && motion.CanStart ()) {
+            if (!motion.IsActive && motion.CanStart () && this.m_Animator.GetCurrentAnimatorStateInfo(1).IsName("Empty")) {
                 if (!string.IsNullOrEmpty (motion.GetDestinationState ())) {
 					for (int j = 0; j < this.m_Motions.Count; j++) {
 						if (this.m_Motions [j].IsActive && this.m_Motions [j].Layer == motion.Layer && !string.IsNullOrEmpty (this.m_Motions [j].GetDestinationState ())) {

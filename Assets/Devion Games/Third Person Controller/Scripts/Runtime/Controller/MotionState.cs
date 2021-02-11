@@ -214,7 +214,6 @@ namespace DevionGames
 			string destinationState = GetDestinationState ();
 			if (!string.IsNullOrEmpty (destinationState)) {
 				m_Animator.CrossFadeInFixedTime (destinationState, TransitionDuration);
-
 			}
 	
 			//Debug.Log("Start Motion " + FriendlyName);

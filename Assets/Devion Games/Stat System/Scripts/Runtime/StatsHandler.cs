@@ -196,15 +196,19 @@ namespace DevionGames.StatSystem
                 {
                     StartCoroutine(Knockback(receiver, damageData));
                 }
+
+                Animator animator = receiver.GetComponent<Animator>();
+                if ( animator != null && animator.GetCurrentAnimatorStateInfo(0).IsName("Locomotion") && !animator.IsInTransition(0))
+                {
+                    animator.SetTrigger("Hit");
+                }
             }
         }
 
         private IEnumerator Knockback(GameObject receiver, DamageData damageData) {
             NavMeshAgent agent = receiver.GetComponent<NavMeshAgent>();
             if (agent == null) yield break;
-           /* Animator animator = receiver.GetComponent<Animator>();
-            animator.ResetTrigger("Hit");
-            animator.SetTrigger("Hit");*/
+          
             Vector3 direction = receiver.transform.position - transform.position;
             float speed = agent.speed;
             float angularSpeed = agent.angularSpeed;

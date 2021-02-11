@@ -241,6 +241,8 @@ MonoBehaviour:
   - id: 6
   - id: 7
   - id: 8
+  - id: 9
+  - id: 10
   references:
     version: 1
     00000000:
@@ -259,6 +261,14 @@ MonoBehaviour:
         m_AnimatorState: Dead
         m_TransitionDuration: 0.2
     00000002:
+      type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.SetEnabled
+        m_Enabled: 1
+        m_Target: 0
+        m_ComponentName: EquipmentHandler
+        m_Enable: 0
+    00000003:
       type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.SendMessage
@@ -276,13 +286,13 @@ MonoBehaviour:
           m_ObjectValue: {fileID: 0}
           m_ArgumentType: 1
         m_Options: 1
-    00000003:
+    00000004:
       type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.Wait
         m_Enabled: 1
         duration: 1.5
-    00000004:
+    00000005:
       type: {class: ShowProgressbar, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
       data:
         m_Type: DevionGames.InventorySystem.ShowProgressbar
@@ -290,7 +300,7 @@ MonoBehaviour:
         m_WidgetName: General Progressbar
         m_Title: Respawn
         m_Duration: 5
-    00000005:
+    00000006:
       type: {class: SetPositionToTarget, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.SetPositionToTarget
@@ -299,7 +309,7 @@ MonoBehaviour:
         m_Tag: Respawn
         m_DefaultPosition: {x: 0, y: 0, z: 0}
         m_SetCameraRelative: 1
-    00000006:
+    00000007:
       type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.CrossFade
@@ -307,14 +317,14 @@ MonoBehaviour:
         m_Target: 0
         m_AnimatorState: Empty
         m_TransitionDuration: 0.2
-    00000007:
+    00000008:
       type: {class: Refresh, ns: DevionGames.StatSystem, asm: DevionGames.StatSystem}
       data:
         m_Type: DevionGames.StatSystem.Refresh
         m_Enabled: 1
         m_Target: 0
         m_StatName: Health
-    00000008:
+    00000009:
       type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.SendMessage
@@ -332,6 +342,14 @@ MonoBehaviour:
           m_ObjectValue: {fileID: 0}
           m_ArgumentType: 1
         m_Options: 1
+    0000000A:
+      type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.SetEnabled
+        m_Enabled: 1
+        m_Target: 0
+        m_ComponentName: EquipmentHandler
+        m_Enable: 1
 --- !u!114 &-2005598942081263570
 MonoBehaviour:
   m_ObjectHideFlags: 1

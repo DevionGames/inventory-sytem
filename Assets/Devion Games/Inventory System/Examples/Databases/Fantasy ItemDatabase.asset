@@ -509,7 +509,7 @@ MonoBehaviour:
         m_Enabled: 1
         m_Target: 1
         m_Position: {x: 0, y: 0, z: 0}
-        m_SetCameraRelative: 0
+        m_SetCameraRelative: 1
     00000008:
       type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
       data:

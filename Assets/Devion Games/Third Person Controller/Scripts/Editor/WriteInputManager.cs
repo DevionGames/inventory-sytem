@@ -45,6 +45,19 @@ namespace DevionGames
 					axis = 1
 				});
 			}
+			if (!AxisDefined("Evade"))
+			{
+				AddAxis(new InputAxis()
+				{
+					name = "Evade",
+					positiveButton = "left alt",
+					gravity = 1000,
+					dead = 0.1f,
+					sensitivity = 1000f,
+					type = AxisType.KeyOrMouseButton,
+					axis = 1
+				});
+			}
 		}
 
 		private static SerializedProperty GetChildProperty (SerializedProperty parent, string name)
@@ -78,9 +91,8 @@ namespace DevionGames
 		{
 			KeyOrMouseButton = 0,
 			MouseMovement = 1,
-			JoystickAxis = 2}
-
-		;
+			JoystickAxis = 2
+		};
 
 		public class InputAxis
 		{

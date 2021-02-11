@@ -95,6 +95,6 @@ namespace DevionGames.StatSystem
         Greater,
         GreaterOrEqual,
         Less,
-        LessOrEqual
+        LessOrEqual,
     }
 }
