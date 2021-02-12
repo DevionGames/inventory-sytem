@@ -143,6 +143,7 @@ MonoBehaviour:
   useDistance: 1.2
   triggerType: 43
   key: 102
+  actionTemplate: {fileID: 11400000, guid: 4114e50432580d84b861b4d87c2a1c2a, type: 2}
   actions:
   - id: 0
   - id: 1
@@ -151,6 +152,7 @@ MonoBehaviour:
   - id: 4
   - id: 5
   - id: 6
+  m_Interruptable: 0
   references:
     version: 1
     00000000:

@@ -8,6 +8,7 @@ namespace DevionGames
     [UnityEngine.Scripting.APIUpdating.MovedFromAttribute(true, null, "Assembly-CSharp")]
     public class BehaviorTrigger : BaseTrigger
     {
+        public ActionTemplate actionTemplate;
         //Actions to run when the trigger is used.
 
         [SerializeReference]
@@ -37,7 +38,9 @@ namespace DevionGames
             List<ITriggerEventHandler> list = new List<ITriggerEventHandler>(this.m_TriggerEvents);
             list.AddRange(actions.Where(x => x is ITriggerEventHandler).Cast<ITriggerEventHandler>());
             this.m_TriggerEvents = list.ToArray();
-            this.m_ActionBehavior = new Sequence(gameObject, PlayerInfo, GetComponent<Blackboard>(), actions.ToArray());
+            if(actionTemplate != null)
+                actionTemplate = Instantiate(actionTemplate);
+            this.m_ActionBehavior = new Sequence(gameObject, PlayerInfo, GetComponent<Blackboard>(), actionTemplate != null? actionTemplate.actions.ToArray() : actions.ToArray());
         }
 
         //Called once per frame
