@@ -22,7 +22,8 @@ namespace DevionGames
         public override void OnStart()
         {
             this.m_ShortNameHash = Animator.StringToHash(this.m_AnimatorState);
-            this.m_Animator = this.m_Target == TargetType.Self ? gameObject.GetComponent<Animator>() : playerInfo.animator; 
+            
+            this.m_Animator = this.m_Target == TargetType.Self ? gameObject.GetComponentInChildren<Animator>() : playerInfo.animator; 
         }
 
         public override ActionStatus OnUpdate()

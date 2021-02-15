@@ -76,7 +76,7 @@ namespace DevionGames
             {
                 if (this.m_Animator == null && this.gameObject != null)
                 {
-                    this.m_Animator = this.gameObject.GetComponent<Animator>();
+                    this.m_Animator = this.gameObject.GetComponentInChildren<Animator>();
                 }
                 return this.m_Animator;
             }

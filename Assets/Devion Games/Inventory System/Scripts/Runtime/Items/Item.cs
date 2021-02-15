@@ -407,8 +407,10 @@ namespace DevionGames.InventorySystem
             {
                 propertyValue = property.vector2Value.x + "-" + property.vector2Value.y;
             }
-            else
-            {
+            else if (property.SerializedType== typeof(string)) {
+                propertyValue = property.stringValue;
+            }
+            else {
                 propertyValue = ((UnityTools.IsNumeric(property.GetValue()) && System.Convert.ToSingle(property.GetValue()) > 0f) ? "+" : "-");
                 propertyValue += (UnityTools.IsNumeric(property.GetValue()) ? Mathf.Abs(System.Convert.ToSingle(property.GetValue())) : property.GetValue()).ToString();
             }

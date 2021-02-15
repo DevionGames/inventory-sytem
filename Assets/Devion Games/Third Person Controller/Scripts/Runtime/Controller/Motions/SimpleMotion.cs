@@ -16,7 +16,13 @@ namespace DevionGames
 			lastUsedTime = Time.time;
 		}
 
-		public override bool CanStart ()
+
+        public override void OnStart()
+        {
+           
+        }
+
+        public override bool CanStart ()
 		{
 			
 			return (Time.time > lastUsedTime + this.m_RecurrenceDelay);

@@ -237,8 +237,10 @@ MonoBehaviour:
   useDistance: 1.5
   triggerType: 43
   key: 102
+  actionTemplate: {fileID: 0}
   actions:
   - id: 0
+  m_Interruptable: 0
   m_BuyPriceFactor: 1
   m_SellPriceFactor: 1
   m_PurchasedStorageWindow: Inventory

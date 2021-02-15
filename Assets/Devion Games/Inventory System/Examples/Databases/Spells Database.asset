@@ -572,6 +572,7 @@ MonoBehaviour:
   - {fileID: 678841275653576696}
   - {fileID: 4117155973668914919}
   - {fileID: -5242721879078471986}
+  - {fileID: 3676597254134110875}
   currencies: []
   raritys: []
   categories:
@@ -798,6 +799,136 @@ MonoBehaviour:
         m_StatName: Critical Strike
         m_Value: -60
         m_ModType: 0
+--- !u!114 &3676597254134110875
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
+  m_Name: Air Burst
+  m_EditorClassIdentifier: 
+  m_Id: 0ac1a888-f34f-4da0-a140-68315cf72977
+  m_ItemName: Air Burst
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: 15d5122f2a394f1409403e7a7983b233, type: 3}
+  m_Prefab: {fileID: 7834113853119435232, guid: 4cc9f3750a13d25438b01048783f1021,
+    type: 3}
+  m_Description: Damages all targets in range.
+  m_Category: {fileID: -3989543302354102894}
+  m_IsSellable: 0
+  m_BuyPrice: 0
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: 0}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: 0}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 0
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 0
+  m_Cooldown: 2
+  actions:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  - id: 5
+  references:
+    version: 1
+    00000000:
+      type: {class: InvokeNotify, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.InvokeNotify
+        m_Enabled: 1
+        m_Target: 1
+        m_ComponentName: StatsHandler
+        m_MethodName: CanApplyDamage
+        m_Arguments:
+        - m_BoolValue: 0
+          m_IntValue: 0
+          m_FloatValue: 0
+          m_StringValue: Mana
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 4
+        - m_BoolValue: 0
+          m_IntValue: 0
+          m_FloatValue: 3
+          m_StringValue: 
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 3
+        m_FailureNotification:
+          title: 
+          text: I don't have enough mana!
+          color: {r: 1, g: 1, b: 1, a: 1}
+          icon: {fileID: 0}
+          delay: 2
+          duration: 2
+          ignoreTimeScale: 1
+    00000001:
+      type: {class: ApplyDamage, ns: DevionGames.StatSystem, asm: DevionGames.StatSystem}
+      data:
+        m_Type: DevionGames.StatSystem.ApplyDamage
+        m_Enabled: 1
+        m_Target: 1
+        m_StatName: Mana
+        m_Value: 3
+    00000002:
+      type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.ItemActions.Cooldown
+        m_Enabled: 1
+        item: {fileID: 3676597254134110875}
+        m_GlobalCooldown: 2
+    00000003:
+      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.CrossFade
+        m_Enabled: 1
+        m_Target: 1
+        m_AnimatorState: Air Burst
+        m_TransitionDuration: 0.2
+    00000004:
+      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.Wait
+        m_Enabled: 1
+        duration: 0.6
+    00000005:
+      type: {class: Instantiate, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.Instantiate
+        m_Enabled: 1
+        m_Target: 0
+        m_Original: {fileID: 7834113853119435232, guid: 4cc9f3750a13d25438b01048783f1021,
+          type: 3}
+        m_BoneName: 
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_IgnorePlayerCollision: 1
 --- !u!114 &4117155973668914919
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1066,7 +1197,7 @@ MonoBehaviour:
       data:
         m_Type: 
         m_Enabled: 1
-        duration: 1.2
+        duration: 0.8
     00000007:
       type: {class: Instantiate, ns: DevionGames, asm: DevionGames.Triggers}
       data:
@@ -1136,8 +1267,10 @@ MonoBehaviour:
   - {fileID: 4117155973668914919}
   - {fileID: -6382214904321203751}
   - {fileID: 1337782666225268451}
-  m_Amounts: 01000000010000000100000001000000010000000100000001000000
+  - {fileID: 3676597254134110875}
+  m_Amounts: 0100000001000000010000000100000001000000010000000100000001000000
   m_Modifiers:
+  - modifiers: []
   - modifiers: []
   - modifiers: []
   - modifiers: []

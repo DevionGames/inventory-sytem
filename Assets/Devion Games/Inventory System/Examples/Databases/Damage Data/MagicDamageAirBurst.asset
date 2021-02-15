@@ -10,35 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd286d4e521ac74a86e8a55427a1917, type: 3}
-  m_Name: MeleeDamageDataShake
+  m_Name: MagicDamageAirBurst
   m_EditorClassIdentifier: 
-  sendingStat: Melee Damage
+  sendingStat: Magic Damage
   criticalStrikeStat: Critical Strike
   receivingStat: Health
-  maxDistance: 1.6
-  maxAngle: 60
+  maxDistance: 2.4
+  maxAngle: 360
   displayDamage: 1
   damagePrefab: {fileID: 136123868827291778, guid: 9f441d7fb91d2764faa5837835062f6e,
     type: 3}
   damageColor: {r: 1, g: 0.69411767, b: 0.07058824, a: 1}
   criticalDamageColor: {r: 1, g: 0, b: 0, a: 1}
   intensity: {x: 3, y: 2, z: 0}
-  particleEffect: {fileID: 5305822200100292117, guid: 2aecc49ae18a147499dc13ba4b89d645,
+  particleEffect: {fileID: 936039990444351457, guid: c487cb21ff8b0654cb684860669379ae,
     type: 3}
-  offset: {x: 0, y: 1.5, z: 0}
-  randomize: {x: 0.2, y: 0.1, z: 0}
+  offset: {x: 0, y: 1, z: 0}
+  randomize: {x: 0, y: 0.5, z: 0}
   lifeTime: 3
   audioMixerGroup: {fileID: 8643709756097329450, guid: 08813bea6fa2f304d8179aec903c1bd9,
     type: 2}
-  volumeScale: 0.7
+  volumeScale: 0.3
   hitSounds:
   - {fileID: 8300000, guid: 0805de7e4fb0f4d03a30ae90e7c64311, type: 3}
   - {fileID: 8300000, guid: 34aca9e3f1ade4802b9062b1380aa523, type: 3}
   enableShake: 1
-  duration: 0.4
+  duration: 0.3
   speed: 5
   amount: {x: 0.4, y: 0.4, z: 0}
-  enableKnockback: 1
+  enableKnockback: 0
   knockbackChance: 0.7
   knockbackStrength: 30
   knockbackAcceleration: 50

@@ -5,7 +5,7 @@ namespace DevionGames.StatSystem
     [UnityEngine.Scripting.APIUpdating.MovedFromAttribute(true, null, "Assembly-CSharp")]
     [ComponentMenu("Stat System/Compare")]
     [System.Serializable]
-    public class Compare : Action
+    public class Compare : Action, ICondition
     {
         [SerializeField]
         private TargetType m_Target = TargetType.Player;

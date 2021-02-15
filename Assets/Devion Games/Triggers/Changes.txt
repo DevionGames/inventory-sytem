@@ -1,0 +1,1 @@
+- Animator actions search for child animator if root is null

@@ -3944,6 +3944,7 @@ GameObject:
   - component: {fileID: 2528819391161695290}
   - component: {fileID: 3822375038413334922}
   - component: {fileID: 4334598826948491884}
+  - component: {fileID: 2261407755553446188}
   m_Layer: 9
   m_Name: Default Avatar
   m_TagString: Player
@@ -4067,6 +4068,7 @@ MonoBehaviour:
   - {fileID: 6874675272001939285}
   - {fileID: 6874675272001939286}
   - {fileID: 2528819391161695290}
+  - {fileID: 2261407755553446188}
 --- !u!114 &6874675272001939293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4748,6 +4750,28 @@ MonoBehaviour:
   m_Effects:
   - {fileID: -4664889271903601789, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
   - {fileID: -2005598942081263570, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
+--- !u!114 &2261407755553446188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6874675272001939313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 519f6d56fa1bb3b409a519c9a7a198a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FriendlyName: Evade
+  m_InputName: Evade
+  m_StartType: 1
+  m_StopType: 1
+  m_ConsumeInputOverUI: 0
+  m_PauseItemUpdate: 1
+  m_TransitionDuration: 0.2
+  m_State: Evade
+  m_CameraPreset: Default
+  m_RecurrenceDelay: 0.2
 --- !u!1 &6874675272017889070
 GameObject:
   m_ObjectHideFlags: 0

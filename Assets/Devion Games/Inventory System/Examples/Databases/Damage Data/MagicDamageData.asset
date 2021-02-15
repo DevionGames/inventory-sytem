@@ -15,7 +15,7 @@ MonoBehaviour:
   sendingStat: Magic Damage
   criticalStrikeStat: Critical Strike
   receivingStat: Health
-  maxDistance: 2
+  maxDistance: 1.6
   maxAngle: 60
   displayDamage: 1
   damagePrefab: {fileID: 136123868827291778, guid: 9f441d7fb91d2764faa5837835062f6e,

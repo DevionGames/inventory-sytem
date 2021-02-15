@@ -40,7 +40,7 @@ namespace DevionGames.InventorySystem
 
         }
 
-        public override bool CanAddItem(Item item)
+        public override bool CanAddItem(Item item )
         {
             return base.CanAddItem(item) && typeof(Currency).IsAssignableFrom(item.GetType());
         }

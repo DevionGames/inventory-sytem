@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using DevionGames.UIWidgets;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,5 +21,6 @@ namespace DevionGames.InventorySystem
         }
 
         public abstract bool CanAddItem(Item item);
+
     }
 }

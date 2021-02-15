@@ -23,7 +23,11 @@ namespace DevionGames.InventorySystem
 
         public override ActionStatus OnUpdate()
         {
-            return ItemContainer.CanAddItems(this.m_WindowName,this.m_ItemCollection.ToArray())? ActionStatus.Success: ActionStatus.Failure;
+            bool result = ItemContainer.CanAddItems(this.m_WindowName, this.m_ItemCollection.ToArray());
+            if (!result) {
+                InventoryManager.Notifications.containerFull.Show(this.m_WindowName);
+            }
+            return result? ActionStatus.Success: ActionStatus.Failure;
         }
     }
 

@@ -244,7 +244,6 @@ namespace DevionGames.InventorySystem
             {
                 if (!restrictions[i].CanAddItem(item))
                 {
-                    Debug.Log("Can't add item: "+item.Name+" to "+Container.Name+" Failed in: "+restrictions[i]);
                     return false;
                 }
             }

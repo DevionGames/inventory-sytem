@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: Magic Damage
   m_EditorClassIdentifier: 
   m_StatName: Magic Damage
-  m_BaseValue: 0
+  m_BaseValue: 20
   m_FormulaGraph:
     serializationData: "{\n\t\"Nodes\":[{\n\t\t\"Type\":\"DevionGames.Graphs.FormulaOutput\",\n\t\t\"id\":\"b261791a-bd57-45cb-a970-af08b2d18245\",\n\t\t\"name\":\"Formula
       Output\",\n\t\t\"position\":\"v2(362,38)\",\n\t\t\"m_Ports\":{\n\t\t\t\"0\":{\n\t\t\t\t\"fieldName\":\"result\",\n\t\t\t\t\"drawPort\":true,\n\t\t\t\t\"label\":false,\n\t\t\t\t\"capacity\":\"Single\",\n\t\t\t\t\"direction\":\"Input\",\n\t\t\t\t\"m_Connections\":{\n\t\t\t\t\t\"0\":{\n\t\t\t\t\t\t\"nodeId\":\"cf4d703a-3fca-4c16-8fec-2505cccdf4bd\",\n\t\t\t\t\t\t\"fieldName\":\"output\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"m_FieldTypeName\":\"System.Single\"\n\t\t\t}\n\t\t},\n\t\t\"result\":0\n\t},{\n\t\t\"Type\":\"DevionGames.Graphs.GetStatValue\",\n\t\t\"id\":\"46e14899-1c0a-4602-a062-9d393207b333\",\n\t\t\"name\":\"Get
@@ -705,6 +705,7 @@ MonoBehaviour:
         m_Actions:
           actions:
           - id: 1
+          - id: 2
     00000001:
       type: {class: AddValue, ns: DevionGames.StatSystem, asm: DevionGames.StatSystem}
       data:
@@ -713,6 +714,11 @@ MonoBehaviour:
         m_Target: 0
         m_StatName: Free Points
         m_Value: 3
+    00000002:
+      type: {class: UpdateQuestIndicators, ns: DevionGames.QuestSystem, asm: DevionGames.QuestSystem}
+      data:
+        m_Type: DevionGames.QuestSystem.UpdateQuestIndicators
+        m_Enabled: 1
 --- !u!114 &6418017515403310313
 MonoBehaviour:
   m_ObjectHideFlags: 1

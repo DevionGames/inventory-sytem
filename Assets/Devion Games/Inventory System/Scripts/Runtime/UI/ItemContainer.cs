@@ -363,7 +363,6 @@ namespace DevionGames.InventorySystem
         /// <param name="s2">Second slot</param>
         /// <returns>True if swapped.</returns>
         public bool SwapItems(Slot s1, Slot s2) {
-
             if (s1 is ItemSlot s1Slot && s1Slot.IsCooldown)
                 return false;
             if (s2 is ItemSlot s2Slot && s2Slot.IsCooldown)
@@ -599,18 +598,18 @@ namespace DevionGames.InventorySystem
         {
             List<Slot> reservedSlots = new List<Slot>();
             List<Item> checkedItems = new List<Item>(items);
-
             for (int i = checkedItems.Count - 1; i >= 0; i--)
             {
                 Item current = checkedItems[i];
                 List<Slot> requiredSlots = container.GetRequiredSlots(current, preferredSlot);
                 for (int j = 0; j < requiredSlots.Count; j++)
                 {
-                   // Debug.Log("CanMove : "+(requiredSlots[j].IsEmpty || slotsWillBeFree.Contains(requiredSlots[j]))+" "+ requiredSlots[j].CanAddItem(current) +" "+ !reservedSlots.Contains(requiredSlots[j]));
-
+                    // Debug.Log("CanMove : "+(requiredSlots[j].IsEmpty || slotsWillBeFree.Contains(requiredSlots[j]))+" "+ requiredSlots[j].CanAddItem(current) +" "+ !reservedSlots.Contains(requiredSlots[j]));
+                  
                     if ((requiredSlots[j].IsEmpty || slotsWillBeFree.Contains(requiredSlots[j])) && requiredSlots[j].CanAddItem(current) && !reservedSlots.Contains(requiredSlots[j]))
                     {
                         //Debug.Log("CanMove : "+container.Name+" "+requiredSlots[j].Index);
+                        
                         reservedSlots.Add(requiredSlots[j]);
                         checkedItems.RemoveAt(i);
                         moveLocations.Add(requiredSlots[j], current);
@@ -645,6 +644,8 @@ namespace DevionGames.InventorySystem
                     }
                 }
             }
+       
+
             return checkedItems.Count == 0;
         }
 
@@ -658,7 +659,6 @@ namespace DevionGames.InventorySystem
             if (item == null) { return true; }
             List<Slot> requiredSlots = GetRequiredSlots(item);
             Slot slot = this.m_Slots[index];
-
             if (requiredSlots.Count > 0)
             {
                 if (!requiredSlots.Contains(slot)) { return false; }
@@ -695,8 +695,20 @@ namespace DevionGames.InventorySystem
         /// <returns>Returns true if the item can be added.</returns>
         public virtual bool CanAddItem(Item item, out Slot slot, bool createSlot = false)
         {
+        
+
             slot = null;
             if (item == null) { return true; }
+           /* for (int i = 0; i < restrictions.Count; i++)
+            {
+                if (!restrictions[i].CanAddItem(item))
+                {
+                    NotificationOptions message = restrictions[i].GetNotification();
+                    if (message != null)
+                        message.Show();
+                    return false;
+                }
+            }*/
 
             List<Slot> requiredSlots = GetRequiredSlots(item);
             if (requiredSlots.Count > 0)
@@ -731,7 +743,6 @@ namespace DevionGames.InventorySystem
                 }
                 return true;
             }
-
             return false;
         }
 
@@ -749,7 +760,6 @@ namespace DevionGames.InventorySystem
             {
                 Slot slot = this.m_Slots[index];
                 List<Slot> slotsForItem = GetRequiredSlots(item, slot);
-           
                 if (slotsForItem.Count == 0 && slot.CanAddItem(item))
                     slotsForItem.Add(slot);
 
