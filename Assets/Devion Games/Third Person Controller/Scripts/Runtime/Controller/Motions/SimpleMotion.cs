@@ -19,7 +19,7 @@ namespace DevionGames
 
         public override void OnStart()
         {
-           
+			this.m_Animator.CrossFade("Empty",0.15f);
         }
 
         public override bool CanStart ()
@@ -33,8 +33,9 @@ namespace DevionGames
             return false;
         }
 
-        private void OnEndUse() {
+       /* private void OnEndUse() {
+			Debug.Log("OnEndUse!");
             this.StopMotion(true);
-        }
+        }*/
 	}
 }

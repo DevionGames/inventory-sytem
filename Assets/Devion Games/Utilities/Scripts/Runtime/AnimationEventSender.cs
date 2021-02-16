@@ -11,6 +11,18 @@ namespace DevionGames
         [SerializeField]
         private string m_EventName="OnEndUse";
 
+        public override void OnStateMachineEnter(Animator animator, int stateMachinePathHash)
+        {
+            if (this.m_Type == AnimationEventType.OnStateMachineEnter)
+                animator.SendMessage(this.m_EventName, SendMessageOptions.DontRequireReceiver);
+        }
+
+        public override void OnStateMachineExit(Animator animator, int stateMachinePathHash)
+        {
+            if (this.m_Type == AnimationEventType.OnStateMachineExit)
+                animator.SendMessage(this.m_EventName, SendMessageOptions.DontRequireReceiver);
+        }
+
         public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
             if (this.m_Type == AnimationEventType.OnStateEnter)
@@ -19,6 +31,7 @@ namespace DevionGames
 
         public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
+            
             if (this.m_Type == AnimationEventType.OnStateUpdate)
                 animator.SendMessage(this.m_EventName, SendMessageOptions.DontRequireReceiver);
         }
@@ -32,7 +45,9 @@ namespace DevionGames
         public enum AnimationEventType { 
             OnStateEnter,
             OnStateUpdate,
-            OnStateExit
+            OnStateExit,
+            OnStateMachineEnter,
+            OnStateMachineExit
         }
     }
 }

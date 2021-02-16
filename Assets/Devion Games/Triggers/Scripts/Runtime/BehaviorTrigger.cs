@@ -55,8 +55,8 @@ namespace DevionGames
             }
             if (this.m_Interruptable && this.InUse && (Mathf.Abs(Input.GetAxis("Horizontal")) > 0.5f || Mathf.Abs(Input.GetAxis("Vertical")) > 0.5f))
             {
-                this.m_ActionBehavior.Interrupt();
                 NotifyInterrupted();
+                this.m_ActionBehavior.Interrupt();  
                 return;
             }
             //Update task behavior, set in use if it is running
@@ -65,7 +65,8 @@ namespace DevionGames
         }
 
         protected void NotifyInterrupted() {
-            NotifyUnUsed();
+            this.InUse = false;
+          //  NotifyUnUsed();
             OnTriggerInterrupted();
         }
 

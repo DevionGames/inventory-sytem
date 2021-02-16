@@ -88,8 +88,8 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.8303117
-        functionName: OnEndUse
+      - time: 0.82710433
+        functionName: StopMotion
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
@@ -125,7 +125,7 @@ ModelImporter:
       curves: []
       events:
       - time: 0.8301152
-        functionName: OnEndUse
+        functionName: StopMotion
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
@@ -161,7 +161,7 @@ ModelImporter:
       curves: []
       events:
       - time: 0.83116883
-        functionName: OnEndUse
+        functionName: StopMotion
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
@@ -197,7 +197,7 @@ ModelImporter:
       curves: []
       events:
       - time: 0.83116883
-        functionName: OnEndUse
+        functionName: StopMotion
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
@@ -233,7 +233,7 @@ ModelImporter:
       curves: []
       events:
       - time: 0.83116883
-        functionName: OnEndUse
+        functionName: StopMotion
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
@@ -269,7 +269,7 @@ ModelImporter:
       curves: []
       events:
       - time: 0.83116883
-        functionName: OnEndUse
+        functionName: StopMotion
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
@@ -305,7 +305,7 @@ ModelImporter:
       curves: []
       events:
       - time: 0.83116883
-        functionName: OnEndUse
+        functionName: StopMotion
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
@@ -341,7 +341,7 @@ ModelImporter:
       curves: []
       events:
       - time: 0.83116883
-        functionName: OnEndUse
+        functionName: StopMotion
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

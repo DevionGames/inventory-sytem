@@ -102,8 +102,8 @@ namespace DevionGames.InventorySystem
 
         protected override void Update()
         {
-            if (this.m_Pause || !this.m_Handler.enabled || UnityTools.IsPointerOverUI() || !this.m_CharacterAnimator.GetCurrentAnimatorStateInfo(0).IsTag("Default") || ItemSlot.dragObject != null) {
-
+            if (this.m_Pause || !this.m_Handler.enabled || UnityTools.IsPointerOverUI() || !this.m_CharacterAnimator.GetCurrentAnimatorStateInfo(0).IsTag("Default") || ItemSlot.dragObject != null) {         
+                this.m_CharacterAnimator.SetBool("Item Use",false);
                 return; 
             }
  
@@ -158,6 +158,8 @@ namespace DevionGames.InventorySystem
             if (!this.m_InUse && CanUse()) {
                 StartUse();
             }
+            if(this.m_InUse)
+                this.m_CharacterAnimator.SetBool("Item Use", true);
         }
 
         protected virtual bool CanUse() {
@@ -170,6 +172,9 @@ namespace DevionGames.InventorySystem
                 }
                    
             }
+
+            if (!this.m_CharacterAnimator.GetCurrentAnimatorStateInfo(1).IsTag("Interruptable")) return false;
+
             Ray  ray = this.m_Camera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit)) {

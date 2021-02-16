@@ -179,6 +179,7 @@ namespace DevionGames
 			if (!this.m_IsActive || !force && !this.CanStop ()) {
 				return;
 			}
+
 			if(PauseItemUpdate)
 				SendMessage("PauseItemUpdate", false, SendMessageOptions.DontRequireReceiver);
 			this.m_IsActive = false;

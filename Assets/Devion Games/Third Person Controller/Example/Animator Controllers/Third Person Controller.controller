@@ -460,7 +460,9 @@ AnimatorStateMachine:
     m_Position: {x: 360, y: 60, z: 0}
   m_AnyStateTransitions: []
   m_EntryTransitions: []
-  m_StateMachineTransitions: {}
+  m_StateMachineTransitions:
+  - first: {fileID: 7950247800565430408}
+    second: []
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 100, y: -60, z: 0}
   m_EntryPosition: {x: 100, y: -10, z: 0}
@@ -630,6 +632,20 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &-4542420472536806179
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6922a532d382f41b8a56ce11e18f95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Type: 2
+  m_EventName: StopMotion
 --- !u!1101 &-4526768241718959782
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -798,7 +814,7 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 0}
-  m_Tag: 
+  m_Tag: Interruptable
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
@@ -967,7 +983,7 @@ AnimatorState:
   m_TimeParameterActive: 0
   m_Motion: {fileID: -203655887218126122, guid: 869c0092b1e4f084da7d80f0a377a0cd,
     type: 3}
-  m_Tag: 
+  m_Tag: Interruptable
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
@@ -4569,7 +4585,8 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: -4542420472536806179}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 1
   m_WriteDefaultValues: 1
@@ -4608,7 +4625,7 @@ AnimatorState:
   m_TimeParameterActive: 0
   m_Motion: {fileID: -203655887218126122, guid: 76504f057fde4414eb995362411aa05d,
     type: 3}
-  m_Tag: 
+  m_Tag: Interruptable
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
@@ -4799,7 +4816,7 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 598c2be6b51739a46ba583e522d27aca, type: 3}
-  m_Tag: 
+  m_Tag: Interruptable
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
