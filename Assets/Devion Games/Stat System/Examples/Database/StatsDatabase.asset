@@ -705,7 +705,6 @@ MonoBehaviour:
         m_Actions:
           actions:
           - id: 1
-          - id: 2
     00000001:
       type: {class: AddValue, ns: DevionGames.StatSystem, asm: DevionGames.StatSystem}
       data:
@@ -714,11 +713,6 @@ MonoBehaviour:
         m_Target: 0
         m_StatName: Free Points
         m_Value: 3
-    00000002:
-      type: {class: UpdateQuestIndicators, ns: DevionGames.QuestSystem, asm: DevionGames.QuestSystem}
-      data:
-        m_Type: DevionGames.QuestSystem.UpdateQuestIndicators
-        m_Enabled: 1
 --- !u!114 &6418017515403310313
 MonoBehaviour:
   m_ObjectHideFlags: 1
