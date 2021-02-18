@@ -176,6 +176,7 @@ MonoBehaviour:
   useDistance: 1.5
   triggerType: 43
   key: 102
+  actionTemplate: {fileID: 0}
   actions:
   - id: 0
   - id: 1

@@ -212,6 +212,7 @@ namespace DevionGames.InventorySystem
 
                 object value = System.Activator.CreateInstance(list[index].GetType());
                 list[index] = value;
+                EditorUtility.SetDirty(target);
             });
             menu.AddSeparator(string.Empty);
             menu.AddItem(new GUIContent("Remove " + this.m_ElementType.Name), false, delegate { list.RemoveAt(index); EditorUtility.SetDirty(target); });
@@ -222,6 +223,7 @@ namespace DevionGames.InventorySystem
                     object value = list[index];
                     list.RemoveAt(index);
                     list.Insert(index - 1, value);
+                    EditorUtility.SetDirty(target);
                 });
             }
             else
@@ -236,6 +238,7 @@ namespace DevionGames.InventorySystem
                     object value = list[index];
                     list.RemoveAt(index);
                     list.Insert(index + 1, value);
+                    EditorUtility.SetDirty(target);
                 });
             }
             else
@@ -259,6 +262,7 @@ namespace DevionGames.InventorySystem
                         fields[i].SetValue(instance, value);
                     }
                     list.Insert(index + 1, instance);
+                    EditorUtility.SetDirty(target);
                 });
 
                 if (list[index].GetType() == m_ObjectToCopy.GetType())
@@ -272,6 +276,7 @@ namespace DevionGames.InventorySystem
                             object value = fields[i].GetValue(m_ObjectToCopy);
                             fields[i].SetValue(instance, value);
                         }
+                        EditorUtility.SetDirty(target);
                     });
                 }
                 else

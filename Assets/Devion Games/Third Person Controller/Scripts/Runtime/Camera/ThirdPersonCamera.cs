@@ -278,6 +278,7 @@ namespace DevionGames
 			this.m_CrosshairImage = crosshairGameObject.AddComponent<Image> ();
 			crosshairGameObject.transform.SetParent (canvasGameObject.transform, false);
 			crosshairGameObject.SetActive (false);
+            canvasGameObject.AddComponent<DontDestroyOnLoad>();
 		}
 	}
 }

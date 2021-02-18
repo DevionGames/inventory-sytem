@@ -15,6 +15,7 @@ namespace DevionGames
 
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
+
             this.m_Actions = property.FindPropertyRelative("actions");
             GUILayout.BeginHorizontal();
             GUILayout.Space(20);
@@ -116,10 +117,12 @@ namespace DevionGames
 
                 object value = System.Activator.CreateInstance(list[index].GetType());
                 list[index] = value;
+                EditorUtility.SetDirty(this.m_Actions.serializedObject.targetObject);
             });
             menu.AddSeparator(string.Empty);
             menu.AddItem(new GUIContent("Remove"), false, delegate {
                 list.RemoveAt(index);
+                EditorUtility.SetDirty(this.m_Actions.serializedObject.targetObject);
             });
 
             if (index > 0)
@@ -128,6 +131,7 @@ namespace DevionGames
                     object value = list[index];
                     list.RemoveAt(index);
                     list.Insert(index - 1, value);
+                    EditorUtility.SetDirty(this.m_Actions.serializedObject.targetObject);
                 });
             }
             else
@@ -142,6 +146,7 @@ namespace DevionGames
                     object value = list[index];
                     list.RemoveAt(index);
                     list.Insert(index + 1, value);
+                    EditorUtility.SetDirty(this.m_Actions.serializedObject.targetObject);
                 });
             }
             else

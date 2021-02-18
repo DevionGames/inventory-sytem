@@ -115,6 +115,7 @@ namespace DevionGames
 
                 object value = System.Activator.CreateInstance(list[index].GetType());
                 list[index] = value;
+                EditorUtility.SetDirty(target);
             });
             menu.AddSeparator(string.Empty);
             menu.AddItem(new GUIContent("Remove"), false, delegate {
@@ -130,6 +131,7 @@ namespace DevionGames
                     object value = list[index];
                     list.RemoveAt(index);
                     list.Insert(index - 1, value);
+                    EditorUtility.SetDirty(target);
                 });
             }
             else
@@ -144,6 +146,7 @@ namespace DevionGames
                     object value = list[index];
                     list.RemoveAt(index);
                     list.Insert(index + 1, value);
+                    EditorUtility.SetDirty(target);
                 });
             }
             else

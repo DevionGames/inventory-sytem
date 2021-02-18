@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefcd19cdc9839d449772c4dce1503f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoSave: 1
+  autoSave: 0
   savingKey: Player
   savingRate: 10
   provider: 0
@@ -318,6 +318,98 @@ MonoBehaviour:
   name: Material
   m_EditorColor: {r: 0.36739054, g: 0.6037736, b: 0.4591628, a: 1}
   m_Cooldown: 1
+--- !u!114 &-7220855601628582702
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
+  m_Name: Cooked Fish
+  m_EditorClassIdentifier: 
+  m_Id: b8e232f7-1e50-4547-a6ac-29e39a576bc7
+  m_ItemName: Cooked Fish
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: d3316fbdddb3b5246996a2fcad5c47d9, type: 3}
+  m_Prefab: {fileID: 2655642475562369736, guid: c041592fa5250614ca2cfef13669bda9,
+    type: 3}
+  m_Description: A tasty fish
+  m_Category: {fileID: 171625507360801261}
+  m_IsSellable: 1
+  m_BuyPrice: 5
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: -2811142919616601772}
+  m_SellPrice: 4
+  m_SellCurrency: {fileID: -2811142919616601772}
+  m_Stack: 1
+  m_MaxStack: 60
+  m_IsDroppable: 1
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 1
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: 
+  m_CraftingModifier:
+    modifiers: []
+  ingredients:
+  - item: {fileID: 3253036230510403830}
+    amount: 1
+  properties: []
+  m_UseCategoryCooldown: 1
+  m_Cooldown: 1
+  actions:
+  - id: 0
+  - id: 1
+  - id: 2
+  references:
+    version: 1
+    00000000:
+      type: {class: ReduceStack, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.ItemActions.ReduceStack
+        m_Enabled: 1
+        item: {fileID: -7220855601628582702}
+        m_Amount: 1
+    00000001:
+      type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.ItemActions.Cooldown
+        m_Enabled: 1
+        item: {fileID: -7220855601628582702}
+        m_GlobalCooldown: 0
+    00000002:
+      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.Wait
+        m_Enabled: 1
+        duration: 3
+--- !u!114 &-6792406410246170895
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28fccac83a2fa2245991bffe45a6cdd1, type: 3}
+  m_Name: Cooking
+  m_EditorClassIdentifier: 
+  m_GroupName: Cooking
+  m_Items:
+  - {fileID: -7220855601628582702}
+  m_Amounts: 01000000
+  m_Modifiers:
+  - modifiers: []
 --- !u!114 &-6642204398173666289
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1184,6 +1276,9 @@ MonoBehaviour:
   - {fileID: 2409076057030828310}
   - {fileID: -8967533827971111582}
   - {fileID: -1922893622408926672}
+  - {fileID: 480903752669161454}
+  - {fileID: 3253036230510403830}
+  - {fileID: -7220855601628582702}
   currencies:
   - {fileID: -2811142919616601772}
   - {fileID: -6442420119529586086}
@@ -1219,6 +1314,7 @@ MonoBehaviour:
   - {fileID: 7990749027154876597}
   - {fileID: -4213577332647146612}
   - {fileID: -3796731219101042533}
+  - {fileID: -6792406410246170895}
   settings:
   - {fileID: -3817802777368614781}
   - {fileID: -8057506047932969836}
@@ -1283,6 +1379,50 @@ MonoBehaviour:
   m_Name: Right Hand
   m_EditorClassIdentifier: 
   name: Right Hand
+--- !u!114 &480903752669161454
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
+  m_Name: Campfire
+  m_EditorClassIdentifier: 
+  m_Id: 339f8764-c475-4643-a265-e84195a571b7
+  m_ItemName: Campfire
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: 693293c396231194abeef3171f977485, type: 3}
+  m_Prefab: {fileID: 4297410541953718099, guid: 233c66a6349a8c141972c04334801bca,
+    type: 3}
+  m_Description: 
+  m_Category: {fileID: -6294223960729143046}
+  m_IsSellable: 0
+  m_BuyPrice: 0
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: -2811142919616601772}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: -2811142919616601772}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 1
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
 --- !u!114 &529780001783015153
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1790,6 +1930,55 @@ MonoBehaviour:
         m_Enabled: 1
         item: {fileID: 3129509250564287029}
         m_Amount: 1
+--- !u!114 &3253036230510403830
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
+  m_Name: Raw Fish
+  m_EditorClassIdentifier: 
+  m_Id: 69f39855-4d9a-4c06-85b7-7f0bb59075d7
+  m_ItemName: Raw Fish
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: 24ce0f2633d3bab4e9ba1db561b8b567, type: 3}
+  m_Prefab: {fileID: 5363674059850198200, guid: f759c16df3c7ec044a2aaa23d3c77645,
+    type: 3}
+  m_Description: A fish that can be cooked.
+  m_Category: {fileID: -7427245140175711199}
+  m_IsSellable: 1
+  m_BuyPrice: 3
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: -2811142919616601772}
+  m_SellPrice: 2
+  m_SellCurrency: {fileID: -2811142919616601772}
+  m_Stack: 1
+  m_MaxStack: 60
+  m_IsDroppable: 1
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 1
+  m_Cooldown: 1
+  actions: []
+  references:
+    version: 1
 --- !u!114 &3254584067454643436
 MonoBehaviour:
   m_ObjectHideFlags: 1

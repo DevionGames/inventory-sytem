@@ -92,6 +92,9 @@ namespace DevionGames
             AssemblyReloadEvents.afterAssemblyReload -= OnAfterAssemblyReload;
             EditorApplication.playModeStateChanged -= OnPlaymodeStateChange;
             Selection.selectionChanged -= OnSelectionChange;
+            GameObject prefab = PrefabUtility.GetNearestPrefabInstanceRoot(m_Target);
+            if (prefab != null)
+                PrefabUtility.ApplyPrefabInstance(prefab, InteractionMode.AutomatedAction);
         }
 
         private void Update()
@@ -169,7 +172,9 @@ namespace DevionGames
                     EditorGUI.indentLevel -= 1;
                 }
                 if (EditorGUI.EndChangeCheck())
+                {
                     EditorUtility.SetDirty(this.m_Target);
+                }
             }
             this.m_SerializedObject.ApplyModifiedProperties();
         }
@@ -202,10 +207,15 @@ namespace DevionGames
                 this.m_SerializedProperty.arraySize++;
                 this.m_SerializedProperty.GetArrayElementAtIndex(this.m_SerializedProperty.arraySize - 1).managedReferenceValue = value;
                 this.m_SerializedObject.ApplyModifiedProperties();
-            }else {
+                GameObject prefab = PrefabUtility.GetNearestPrefabInstanceRoot(m_Target);
+                if(prefab != null)
+                    PrefabUtility.ApplyPrefabInstance(prefab, InteractionMode.AutomatedAction);
+            }
+            else {
                 this.m_List.Add(value);
                 onChange.Invoke();
             }
+
         }
 
 

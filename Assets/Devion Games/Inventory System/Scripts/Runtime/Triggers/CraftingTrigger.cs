@@ -73,6 +73,7 @@ namespace DevionGames.InventorySystem
             this.m_Progressbar = WidgetUtility.Find<Progressbar>(this.m_CraftingProgressbar);
         }
 
+
         public override bool OverrideUse(Slot slot, Item item)
         {
 
@@ -111,7 +112,7 @@ namespace DevionGames.InventorySystem
                 user.SendMessage("SetControllerActive", true, SendMessageOptions.DontRequireReceiver);
 
             LoadCachedAnimatorStates();
-
+    
         }
 
         private float GetCraftingProgress()

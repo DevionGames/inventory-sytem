@@ -48,6 +48,7 @@ namespace DevionGames
         protected delegate void PointerEventFunction<T>(T handler, PointerEventData eventData);
 
         protected bool m_CheckBlocking = true;
+        protected bool m_Started = false;
 
         //Is the player in range, set by OnTriggerEnter/OnTriggerExit or if trigger is attached to player in Start?
         private bool m_InRange;
@@ -115,6 +116,20 @@ namespace DevionGames
                 //Create trigger collider
                 CreateTriggerCollider();
             }
+            this.m_Started = true;
+        }
+
+        protected virtual void OnDisable() {
+            if (Time.frameCount > 0){
+                this.InRange = false;
+            }
+        }
+
+        protected virtual void OnEnable()
+        {
+           
+            if (Time.frameCount > 0 && this.m_Started && PlayerInfo.transform != null)
+                InRange = Vector3.Distance(transform.position, PlayerInfo.transform.position) <= this.useDistance;
         }
 
 
@@ -126,8 +141,6 @@ namespace DevionGames
             if (Input.GetKeyDown(key) && triggerType.HasFlag<TriggerInputType>(TriggerInputType.Key) && InRange && IsBestTrigger()){
                 Use();
             }
-
-     
         }
 
         protected virtual void OnDestroy()

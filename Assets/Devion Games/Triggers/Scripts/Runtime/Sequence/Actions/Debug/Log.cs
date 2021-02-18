@@ -6,6 +6,7 @@ namespace DevionGames
 {
     [UnityEngine.Scripting.APIUpdating.MovedFromAttribute(true, null, "Assembly-CSharp")]
     [ComponentMenu("Debug/Log")]
+    [System.Serializable]
     public class Log : Action
     {
         [SerializeField]

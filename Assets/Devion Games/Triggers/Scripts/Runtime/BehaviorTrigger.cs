@@ -64,6 +64,32 @@ namespace DevionGames
 
         }
 
+        protected override void OnDisable()
+        {
+            if (Time.frameCount > 0)
+            {
+                if (this.m_Interruptable && this.InUse) {
+                    NotifyInterrupted();
+                    this.m_ActionBehavior.Interrupt();
+                }
+                this.InRange = false;
+            }
+        }
+
+        protected override void OnDestroy()
+        {
+
+            if (Time.frameCount > 0)
+            {
+                if (this.m_Interruptable && this.InUse)
+                {
+                    NotifyInterrupted();
+                    this.m_ActionBehavior.Interrupt();
+                }
+                this.InRange = false;
+            }
+        }
+
         protected void NotifyInterrupted() {
             this.InUse = false;
           //  NotifyUnUsed();
