@@ -50,7 +50,7 @@ namespace DevionGames.InventorySystem
             EditorGUILayout.PropertyField(this.m_BuyPrice, new GUIContent("Price"));
             EditorGUILayout.PropertyField(this.m_BuyCurrency, GUIContent.none);
             EditorGUILayout.EndHorizontal();
-
+            DrawCooldownGUI();
             ActionGUI();
             serializedObject.ApplyModifiedProperties();
         }

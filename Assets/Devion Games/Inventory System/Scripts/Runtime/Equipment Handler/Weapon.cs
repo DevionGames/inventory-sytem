@@ -208,6 +208,7 @@ namespace DevionGames.InventorySystem
             }
         }
 
+
         protected virtual void OnStopUse() { }
 
         protected void StartUse()
@@ -226,6 +227,12 @@ namespace DevionGames.InventorySystem
             data.AddData("Item", this.m_CurrentEquipedItem);
             Execute("OnUse", data);
             this.m_CharacterAnimator.SetBool("Item Use", true);
+        }
+
+        private void UseItem()
+        {
+            if (this.m_IsActive)
+                (this.m_CurrentEquipedItem as EquipmentItem).Use();
         }
 
         private void OnEndUse() {

@@ -255,6 +255,22 @@ MonoBehaviour:
         m_WindowName: Skills
         m_Skill: {fileID: 6305893422732665131, guid: e1f045c49e197e3439b99da9edbc5ba3,
           type: 2}
+        m_SuccessNotification:
+          title: 
+          text: 
+          color: {r: 1, g: 1, b: 1, a: 1}
+          icon: {fileID: 0}
+          delay: 2
+          duration: 2
+          ignoreTimeScale: 1
+        m_FailureNotification:
+          title: 
+          text: 
+          color: {r: 1, g: 1, b: 1, a: 1}
+          icon: {fileID: 0}
+          delay: 2
+          duration: 2
+          ignoreTimeScale: 1
     00000007:
       type: {class: Pickup, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
       data:

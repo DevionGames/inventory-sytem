@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using System.Linq;
 
 namespace DevionGames.UIWidgets
 {
@@ -18,7 +19,7 @@ namespace DevionGames.UIWidgets
 		protected MenuItem m_Item = null;
 
 		private List<MenuItem> itemCache = new List<MenuItem> ();
-
+		private GameObject m_Target;
 
 		protected override void Update ()
 		{
@@ -29,15 +30,23 @@ namespace DevionGames.UIWidgets
 				pointer.position = Input.mousePosition;
 				var raycastResults = new List<RaycastResult> ();
 				EventSystem.current.RaycastAll (pointer, raycastResults);
-				if (raycastResults.Count > 0) {
-					raycastResults [0].gameObject.SendMessage ("Press", SendMessageOptions.DontRequireReceiver);
-				}
-				Close ();
+				List<GameObject> results = raycastResults.Select(x => x.gameObject).ToList();
+
+				if (results.Count > 0 && results.Contains(this.m_Target)) {
+					results [0].SendMessage ("Press", SendMessageOptions.DontRequireReceiver);
+                }else
+					Close ();
 			}
 		}
 
-		public virtual void Show (Sprite[] icons, UnityAction<int> result)
+        public virtual void Show (GameObject target, Sprite[] icons, UnityAction<int> result)
 		{
+			if (this.m_Target == target) {
+				Close();
+				return;
+			}
+				
+			this.m_Target = target;
 			for (int i = 0; i < itemCache.Count; i++) {
 				itemCache [i].gameObject.SetActive (false);
 			}
@@ -58,7 +67,13 @@ namespace DevionGames.UIWidgets
 			}
 		}
 
-		public override void Show ()
+        public override void Close()
+        {
+            base.Close();
+			this.m_Target = null;
+        }
+
+        public override void Show ()
 		{
 			m_RectTransform.position = Input.mousePosition;
 			base.Show ();

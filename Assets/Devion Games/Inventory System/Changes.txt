@@ -1,0 +1,11 @@
+- Notification widget got a new reference Text for time
+- Implemented Swordsmanship and Archery
+- Implemented Fishing and Cooking
+- Placeable Items
+- Interruprable Triggers
+- Combo integration
+- Spells override item use
+- Animator actions search for child animator if root is null
+- Campfire example(Setup to use wood to ignite fire)
+- Secondary Weapon/ Shield slots(Switch with R by default)
+- New Trigger Tooltips with use key and instruction labels

@@ -499,7 +499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92bde263616b0bd40948af0403c2a867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delay: 10
+  m_Delay: 60
   m_Combonent: {fileID: 3308444880410422792}
   m_Enable: 1
 --- !u!1 &4297410541967844005

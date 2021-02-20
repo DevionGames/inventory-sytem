@@ -41,7 +41,6 @@ namespace DevionGames.InventorySystem
                 }
                 this.m_EquipmentContainer.OnAddItem += OnAddItem;
                 this.m_EquipmentContainer.OnRemoveItem += OnRemoveItem;
-
                 UpdateEquipment();
                 if (InventoryManager.current != null) {
                     InventoryManager.current.onDataLoaded.AddListener(UpdateEquipment);
@@ -51,6 +50,7 @@ namespace DevionGames.InventorySystem
 
         private void OnAddItem(Item item, Slot slot)
         {
+            Debug.Log("OnEquip");
             if (item != null && item is EquipmentItem)
             {
                 EquipItem(item as EquipmentItem);
@@ -75,6 +75,7 @@ namespace DevionGames.InventorySystem
                     SendMessage("AddModifier", new object[] { property.Name, value, (value <= 1f && value >= -1f) ? 1 : 0, item }, SendMessageOptions.DontRequireReceiver);
                 }
             }
+
             for (int i = 0; i < this.m_VisibleItems.Count; i++) {
                 VisibleItem visibleItem = this.m_VisibleItems[i];
                 if (visibleItem.item.Id == item.Id) {

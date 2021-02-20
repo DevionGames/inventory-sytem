@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace DevionGames
 {
+	/// <summary>
+	/// Note: Swimming will only work if the SwimTrigger size is set to 1, collider size can be any.
+	/// </summary>
 	public class Swim : MotionState
 	{
 		[SerializeField]

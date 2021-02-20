@@ -7,6 +7,3 @@
 - Changed StatFormula to FormulaGraph
 - Moved display damage properties to DamageData
 - Free stat points is a stat, for easier adding /removing value
-
-TODO:
-- Removing actions does not always work needs SetDirty

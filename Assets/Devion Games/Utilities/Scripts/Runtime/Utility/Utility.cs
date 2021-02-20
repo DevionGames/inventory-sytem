@@ -202,6 +202,11 @@ namespace DevionGames
 			return false;
 		}
 
+		public static bool Contains(this LayerMask mask, int layer)
+		{
+			return mask == (mask | (1 << layer));
+		}
+
 		private static Assembly[] GetLoadedAssemblies()
 		{
 #if NETFX_CORE

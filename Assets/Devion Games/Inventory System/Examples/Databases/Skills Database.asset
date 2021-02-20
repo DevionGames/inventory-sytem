@@ -62,14 +62,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28fccac83a2fa2245991bffe45a6cdd1, type: 3}
-  m_Name: Skills
+  m_Name: Passive Skills
   m_EditorClassIdentifier: 
   m_GroupName: Skills
   m_Items:
   - {fileID: -1079133913141893833}
   - {fileID: 7032449652308580212}
-  m_Amounts: 0100000001000000
+  - {fileID: 5770177478895120047}
+  m_Amounts: 010000000100000001000000
   m_Modifiers:
+  - modifiers: []
   - modifiers: []
   - modifiers: []
 --- !u!114 &-7312117745076897454
@@ -120,7 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoSave: 0
   savingKey: Player
-  savingRate: 60
+  savingRate: 10
   provider: 0
 --- !u!114 &-2308325603847997442
 MonoBehaviour:
@@ -467,6 +469,7 @@ MonoBehaviour:
   - {fileID: -1079133913141893833}
   - {fileID: -904524929377059290}
   - {fileID: -2308325603847997442}
+  - {fileID: 5770177478895120047}
   currencies: []
   raritys: []
   categories:
@@ -560,6 +563,57 @@ MonoBehaviour:
   actions: []
   m_FixedSuccessChance: 50
   m_GainModifier: {fileID: 11400000, guid: 469cf9288efaed44a9d0eb78c6b58840, type: 2}
+  references:
+    version: 1
+--- !u!114 &5770177478895120047
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9a3ee254b78a64481dccedbfd4ba41, type: 3}
+  m_Name: Fishing
+  m_EditorClassIdentifier: 
+  m_Id: f2d38910-c426-41c8-bfc1-150af3d2baf5
+  m_ItemName: Fishing
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: 24ce0f2633d3bab4e9ba1db561b8b567, type: 3}
+  m_Prefab: {fileID: 0}
+  m_Description: Increases the chance to successfully catch a fish.
+  m_Category: {fileID: 4301833095063581124}
+  m_IsSellable: 1
+  m_BuyPrice: 21
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: -2811142919616601772, guid: 1ae57b994efcab048a1bb130d4e11d83,
+    type: 2}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: 0}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 1
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 1
+  m_Cooldown: 5
+  actions: []
+  m_FixedSuccessChance: 50
+  m_GainModifier: {fileID: 11400000, guid: 46f3d22ada8c5dc44ada009bcf58c573, type: 2}
   references:
     version: 1
 --- !u!114 &6305893422732665131

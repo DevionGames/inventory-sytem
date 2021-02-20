@@ -6,6 +6,6 @@ namespace DevionGames
 {
 	public class SwimTrigger:MonoBehaviour
 	{
-		
+
 	}
 }

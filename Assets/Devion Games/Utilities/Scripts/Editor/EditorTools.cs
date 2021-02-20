@@ -283,20 +283,25 @@ namespace DevionGames{
             if (target != null) {
                 title = new GUIContent(ObjectNames.NicifyVariableName(target.GetType().Name));
             }
-            return Titlebar(title, target, null);
+            return Titlebar(target != null ? target.GetHashCode().ToString() : "",title, target, null);
         }
 
         public static bool Titlebar(object target, GenericMenu menu)
+        {
+            return Titlebar(target != null ? target.GetHashCode().ToString() : "", target, menu);
+        }
+
+        public static bool Titlebar(string hash, object target, GenericMenu menu)
         {
             GUIContent title = new GUIContent("Missing Script");
             if (target != null)
             {
                 title = new GUIContent(ObjectNames.NicifyVariableName(target.GetType().Name));
             }
-            return Titlebar(title, target, menu);
+            return Titlebar(hash, title, target, menu);
         }
 
-        public static bool Titlebar(GUIContent content, object target, GenericMenu menu)
+        public static bool Titlebar(string hash, GUIContent content, object target, GenericMenu menu)
         {
 
             int controlID = EditorGUIUtility.GetControlID(FocusType.Passive);
@@ -369,7 +374,7 @@ namespace DevionGames{
                  menu.ShowAsContext();
              }
 
-             bool isFolded = EditorPrefs.GetBool("TitlebarFold" + (target != null?target.GetHashCode().ToString():""), true);
+             bool isFolded = EditorPrefs.GetBool("TitlebarFold" + hash, true);
              if (eventType != EventType.MouseDown)
              {
                  if (eventType == EventType.Repaint)
@@ -382,7 +387,7 @@ namespace DevionGames{
              bool flag = DoToggleForward(position, controlID, isFolded, GUIContent.none, GUIStyle.none);
              if (flag != isFolded)
              {
-                 EditorPrefs.SetBool("TitlebarFold" +(target != null ? target.GetHashCode().ToString() : ""), flag);
+                 EditorPrefs.SetBool("TitlebarFold" +hash, flag);
              }
              return flag;
         }

@@ -150,13 +150,38 @@ MonoBehaviour:
     color: {r: 0, g: 0.764151, b: 0.15606005, a: 1}
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
-  actions: []
+  actions:
+  - id: 0
   m_OverrideEquipPrefab: {fileID: 0}
   m_Region:
   - {fileID: 5658350685615726283}
   - {fileID: 316844889573954113}
   references:
     version: 1
+    00000000:
+      type: {class: CheckSkill, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.CheckSkill
+        m_Enabled: 1
+        m_WindowName: Skills
+        m_Skill: {fileID: 7032449652308580212, guid: e1f045c49e197e3439b99da9edbc5ba3,
+          type: 2}
+        m_SuccessNotification:
+          title: 
+          text: 
+          color: {r: 1, g: 1, b: 1, a: 1}
+          icon: {fileID: 0}
+          delay: 2
+          duration: 2
+          ignoreTimeScale: 1
+        m_FailureNotification:
+          title: 
+          text: 
+          color: {r: 1, g: 1, b: 1, a: 1}
+          icon: {fileID: 0}
+          delay: 2
+          duration: 2
+          ignoreTimeScale: 1
 --- !u!114 &-8859189835947310016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -231,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefcd19cdc9839d449772c4dce1503f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoSave: 0
+  autoSave: 1
   savingKey: Player
   savingRate: 10
   provider: 0
@@ -261,8 +286,12 @@ MonoBehaviour:
   - {fileID: 8763039942855579107}
   - {fileID: -5663772737389988193}
   - {fileID: 529780001783015153}
-  m_Amounts: 010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  - {fileID: 757395598172549354}
+  - {fileID: -1922893622408926672}
+  m_Amounts: 0100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
   m_Modifiers:
+  - modifiers: []
+  - modifiers: []
   - modifiers: []
   - modifiers: []
   - modifiers: []
@@ -1279,6 +1308,7 @@ MonoBehaviour:
   - {fileID: 480903752669161454}
   - {fileID: 3253036230510403830}
   - {fileID: -7220855601628582702}
+  - {fileID: 757395598172549354}
   currencies:
   - {fileID: -2811142919616601772}
   - {fileID: -6442420119529586086}
@@ -1483,6 +1513,59 @@ MonoBehaviour:
         m_Enabled: 1
         m_WindowName: Alchemy
         m_DestroyWhenEmpty: 0
+--- !u!114 &757395598172549354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6132cc3558d117f4bbad4651b2dbdba7, type: 3}
+  m_Name: Fishing Rod
+  m_EditorClassIdentifier: 
+  m_Id: 919d8817-da77-4903-8e55-98f9c81884de
+  m_ItemName: Fishing Rod
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: 2ce6832fc1867d940ab6f4f871d0df34, type: 3}
+  m_Prefab: {fileID: 2583769445098824402, guid: 889b596f02ef6534690cb9390fb35ee0,
+    type: 3}
+  m_Description: With the fishing rod you can catch fishes in water.
+  m_Category: {fileID: -9040799555073544844}
+  m_IsSellable: 1
+  m_BuyPrice: 20
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: -2811142919616601772}
+  m_SellPrice: 18
+  m_SellCurrency: {fileID: -2811142919616601772}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 1
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 1
+  m_Cooldown: 1
+  actions: []
+  m_OverrideEquipPrefab: {fileID: 0}
+  m_Region:
+  - {fileID: 316844889573954113}
+  - {fileID: 5658350685615726283}
+  references:
+    version: 1
 --- !u!114 &960666660569578442
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1617,12 +1700,37 @@ MonoBehaviour:
     color: {r: 0, g: 0.764151, b: 0.15606005, a: 1}
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
-  actions: []
+  actions:
+  - id: 0
   m_OverrideEquipPrefab: {fileID: 0}
   m_Region:
   - {fileID: 316844889573954113}
   references:
     version: 1
+    00000000:
+      type: {class: CheckSkill, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.CheckSkill
+        m_Enabled: 1
+        m_WindowName: Skills
+        m_Skill: {fileID: -1079133913141893833, guid: e1f045c49e197e3439b99da9edbc5ba3,
+          type: 2}
+        m_SuccessNotification:
+          title: 
+          text: 
+          color: {r: 1, g: 1, b: 1, a: 1}
+          icon: {fileID: 0}
+          delay: 2
+          duration: 2
+          ignoreTimeScale: 1
+        m_FailureNotification:
+          title: 
+          text: 
+          color: {r: 1, g: 1, b: 1, a: 1}
+          icon: {fileID: 0}
+          delay: 2
+          duration: 2
+          ignoreTimeScale: 1
 --- !u!114 &1063046599387310152
 MonoBehaviour:
   m_ObjectHideFlags: 1

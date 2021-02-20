@@ -11,6 +11,11 @@ namespace DevionGames.UIWidgets{
         [SerializeField]
 		protected Text m_Text;
         /// <summary>
+        /// Notification text to display
+        /// </summary>
+        [SerializeField]
+        protected Text m_Time;
+        /// <summary>
         /// Notification icon to show.
         /// </summary>
         [SerializeField]
@@ -24,8 +29,14 @@ namespace DevionGames.UIWidgets{
 
                 if (this.m_Text != null)
                 {
-                    this.m_Text.text = (string.IsNullOrEmpty(container.timeFormat)?"":"["+DateTime.Now.ToString(container.timeFormat)+"] ")+ WidgetUtility.ColorString(ObservedItem.text, ObservedItem.color);
+                    this.m_Text.text = WidgetUtility.ColorString(ObservedItem.text, ObservedItem.color);
                     DelayCrossFade(this.m_Text, ObservedItem);
+                }
+
+                if (this.m_Time != null)
+                {
+                    this.m_Time.text = (string.IsNullOrEmpty(container.timeFormat) ? "" : "[" + DateTime.Now.ToString(container.timeFormat) + "] ");
+                    DelayCrossFade(this.m_Time, ObservedItem);
                 }
 
                 if (this.m_Icon != null)

@@ -17,6 +17,10 @@ namespace DevionGames.InventorySystem
         [ItemPicker(true)]
         [SerializeField]
         private Skill m_Skill= null;
+        [SerializeField]
+        private NotificationOptions m_SuccessNotification = null;
+        [SerializeField]
+        private NotificationOptions m_FailureNotification = null;
 
         private ItemContainer m_ItemContainer;
 
@@ -35,8 +39,14 @@ namespace DevionGames.InventorySystem
 
             Skill current = (Skill)this.m_ItemContainer.GetItems(this.m_Skill.Id).FirstOrDefault();
             if(current != null){
-                return current.CheckSkill() ? ActionStatus.Success : ActionStatus.Failure;
+                if (!current.CheckSkill()) {
+                    if (this.m_FailureNotification != null && !string.IsNullOrEmpty(this.m_FailureNotification.text))
+                        this.m_FailureNotification.Show();
+                    return ActionStatus.Failure;
+                }
             }
+            if (this.m_SuccessNotification != null && !string.IsNullOrEmpty(this.m_SuccessNotification.text))
+                this.m_SuccessNotification.Show();
             return ActionStatus.Success;
         }
     }

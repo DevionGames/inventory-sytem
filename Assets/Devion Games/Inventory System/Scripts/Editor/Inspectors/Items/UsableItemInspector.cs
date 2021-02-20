@@ -91,6 +91,10 @@ namespace DevionGames.InventorySystem
 
         private void DrawInspector() {
 
+            DrawCooldownGUI();
+        }
+
+        protected void DrawCooldownGUI() {
             EditorGUILayout.PropertyField(this.m_UseCategoryCooldown);
             this.m_ShowCategoryCooldownOptions.target = !this.m_UseCategoryCooldown.boolValue;
             if (EditorGUILayout.BeginFadeGroup(this.m_ShowCategoryCooldownOptions.faded))
@@ -114,7 +118,7 @@ namespace DevionGames.InventorySystem
                 if (this.m_Target != null)
                     Undo.RecordObject(this.m_Target, "Item Action");
 
-                if (EditorTools.Titlebar(value, ElementContextMenu(this.m_List, i)))
+                if (EditorTools.Titlebar((target.GetInstanceID()+i).ToString(),value, ElementContextMenu(this.m_List, i)))
                 {
                     EditorGUI.indentLevel += 1;
                     EditorGUI.BeginDisabledGroup(true);
@@ -133,12 +137,12 @@ namespace DevionGames.InventorySystem
                         foreach (var child in action.EnumerateChildProperties())
                         {
                             //Need to find a better way to disable TargetType on Item, it should be always Player   
-                            EditorGUI.BeginDisabledGroup(child.name == "m_Target");
+                           // EditorGUI.BeginDisabledGroup(child.name == "m_Target");
                             EditorGUILayout.PropertyField(
                                 child,
                                 includeChildren: true
                             );
-                            EditorGUI.EndDisabledGroup();
+                           // EditorGUI.EndDisabledGroup();
                         }
                     }
                     EditorGUI.indentLevel -= 1;

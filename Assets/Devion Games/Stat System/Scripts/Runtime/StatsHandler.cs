@@ -172,6 +172,8 @@ namespace DevionGames.StatSystem
                 receiverHandler.ApplyDamage(damageData.receivingStat, damage);
                 EventHandler.Execute(receiver, "OnGetHit", gameObject, damageData.receivingStat, damage);
 
+                SendMessage("UseItem", SendMessageOptions.DontRequireReceiver);
+
                 if (damageData.particleEffect != null)
                 {
                     Vector3 pos = receiver.GetComponent<Collider>().ClosestPoint(transform.position + damageData.offset);
