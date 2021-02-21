@@ -252,6 +252,7 @@ namespace DevionGames.StatSystem
                 this.m_AudioSource = gameObject.AddComponent<AudioSource>();
             }
             this.m_AudioSource.outputAudioMixerGroup = audioMixerGroup;
+            this.m_AudioSource.spatialBlend = 1f;
             this.m_AudioSource.PlayOneShot(clip, volumeSclae);
 
         }

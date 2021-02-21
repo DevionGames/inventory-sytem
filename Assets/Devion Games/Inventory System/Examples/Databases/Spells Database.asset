@@ -99,8 +99,6 @@ MonoBehaviour:
   - id: 2
   - id: 3
   - id: 4
-  - id: 5
-  - id: 6
   references:
     version: 1
     00000000:
@@ -123,30 +121,12 @@ MonoBehaviour:
         item: {fileID: -6382214904321203751}
         m_GlobalCooldown: 1.5
     00000002:
-      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.SendMessage
-        m_Enabled: 1
-        m_Target: 1
-        methodName: SetIK
-        m_Argument:
-          m_BoolValue: 0
-          m_IntValue: 0
-          m_FloatValue: 0
-          m_StringValue: 
-          m_Vector2Value: {x: 0, y: 0}
-          m_Vector3Value: {x: 0, y: 0, z: 0}
-          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
-          m_ObjectValue: {fileID: 0}
-          m_ArgumentType: 1
-        m_Options: 1
-    00000003:
       type: {class: LookForward, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.LookForward
         m_Enabled: 1
         m_Target: 1
-    00000004:
+    00000003:
       type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.CrossFade
@@ -154,30 +134,12 @@ MonoBehaviour:
         m_Target: 1
         m_AnimatorState: Rampage
         m_TransitionDuration: 0.15
-    00000005:
+    00000004:
       type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.Wait
         m_Enabled: 1
         duration: 2
-    00000006:
-      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.SendMessage
-        m_Enabled: 1
-        m_Target: 1
-        methodName: SetIK
-        m_Argument:
-          m_BoolValue: 1
-          m_IntValue: 0
-          m_FloatValue: 0
-          m_StringValue: 
-          m_Vector2Value: {x: 0, y: 0}
-          m_Vector3Value: {x: 0, y: 0, z: 0}
-          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
-          m_ObjectValue: {fileID: 0}
-          m_ArgumentType: 1
-        m_Options: 1
 --- !u!114 &-6294223960729143046
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -338,6 +300,7 @@ MonoBehaviour:
   - id: 7
   - id: 8
   - id: 9
+  - id: 10
   references:
     version: 1
     00000000:
@@ -410,23 +373,14 @@ MonoBehaviour:
         item: {fileID: -4423743630002525559}
         m_GlobalCooldown: 5
     00000003:
-      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
+      type: {class: SetFloat, ns: DevionGames, asm: DevionGames.Triggers}
       data:
-        m_Type: 
+        m_Type: DevionGames.SetFloat
         m_Enabled: 1
         m_Target: 1
-        methodName: SetIK
-        m_Argument:
-          m_BoolValue: 0
-          m_IntValue: 0
-          m_FloatValue: 0
-          m_StringValue: 
-          m_Vector2Value: {x: 0, y: 0}
-          m_Vector3Value: {x: 0, y: 0, z: 0}
-          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
-          m_ObjectValue: {fileID: 0}
-          m_ArgumentType: 1
-        m_Options: 1
+        m_ParameterName: Speed Multiplier
+        m_Value: 1.5
+        m_DampTime: 0
     00000004:
       type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
       data:
@@ -438,10 +392,25 @@ MonoBehaviour:
     00000005:
       type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
       data:
+        m_Type: DevionGames.Wait
+        m_Enabled: 1
+        duration: 0.3
+    00000006:
+      type: {class: Play, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.Play
+        m_Enabled: 1
+        m_Clip: {fileID: 8300000, guid: b1fe5449a2cb6794f87f3c1950f42263, type: 3}
+        m_AudioMixerGroup: {fileID: 8643709756097329450, guid: 08813bea6fa2f304d8179aec903c1bd9,
+          type: 2}
+        m_Volume: 0.3
+    00000007:
+      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
         m_Type: 
         m_Enabled: 1
-        duration: 0.5
-    00000006:
+        duration: 0.2
+    00000008:
       type: {class: Instantiate, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: 
@@ -451,7 +420,7 @@ MonoBehaviour:
         m_BoneName: 
         m_Offset: {x: 0, y: 0, z: 0}
         m_IgnorePlayerCollision: 1
-    00000007:
+    00000009:
       type: {class: Invoke, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: 
@@ -478,30 +447,12 @@ MonoBehaviour:
           m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
           m_ObjectValue: {fileID: 0}
           m_ArgumentType: 3
-    00000008:
+    0000000A:
       type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: 
         m_Enabled: 1
         duration: 1.2
-    00000009:
-      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: 
-        m_Enabled: 1
-        m_Target: 1
-        methodName: SetIK
-        m_Argument:
-          m_BoolValue: 1
-          m_IntValue: 0
-          m_FloatValue: 0
-          m_StringValue: 
-          m_Vector2Value: {x: 0, y: 0}
-          m_Vector3Value: {x: 0, y: 0, z: 0}
-          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
-          m_ObjectValue: {fileID: 0}
-          m_ArgumentType: 1
-        m_Options: 1
 --- !u!114 &-4242386034172315359
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -552,6 +503,150 @@ MonoBehaviour:
   queriesHitTriggers: 0
   debugMessages: 1
   showAllComponents: 0
+--- !u!114 &-194854561785592449
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
+  m_Name: Thorn Storm
+  m_EditorClassIdentifier: 
+  m_Id: c37fa519-3023-41ee-9ed7-f2601dd0c375
+  m_ItemName: Thorn Storm
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: 5d8f6c97f82aa1f4d9f2ddedd3f05d50, type: 3}
+  m_Prefab: {fileID: 100006, guid: 3c862a2b5d5ff714bb42577484016571, type: 3}
+  m_Description: Cast a Thorn Storm at location.
+  m_Category: {fileID: -3989543302354102894}
+  m_IsSellable: 0
+  m_BuyPrice: 0
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: -2811142919616601772, guid: 1ae57b994efcab048a1bb130d4e11d83,
+    type: 2}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: -2811142919616601772, guid: 1ae57b994efcab048a1bb130d4e11d83,
+    type: 2}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 0
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 0
+  m_Cooldown: 4
+  actions:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  - id: 5
+  - id: 6
+  - id: 7
+  references:
+    version: 1
+    00000000:
+      type: {class: InvokeNotify, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.InvokeNotify
+        m_Enabled: 1
+        m_Target: 1
+        m_ComponentName: StatsHandler
+        m_MethodName: CanApplyDamage
+        m_Arguments:
+        - m_BoolValue: 0
+          m_IntValue: 0
+          m_FloatValue: 0
+          m_StringValue: Mana
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 4
+        - m_BoolValue: 0
+          m_IntValue: 0
+          m_FloatValue: 4
+          m_StringValue: 
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 3
+        m_FailureNotification:
+          title: 
+          text: I don't have enough mana!
+          color: {r: 1, g: 1, b: 1, a: 1}
+          icon: {fileID: 0}
+          delay: 2
+          duration: 2
+          ignoreTimeScale: 1
+    00000001:
+      type: {class: ApplyDamage, ns: DevionGames.StatSystem, asm: DevionGames.StatSystem}
+      data:
+        m_Type: DevionGames.StatSystem.ApplyDamage
+        m_Enabled: 1
+        m_Target: 1
+        m_StatName: Mana
+        m_Value: 4
+    00000002:
+      type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.ItemActions.Cooldown
+        m_Enabled: 1
+        item: {fileID: -194854561785592449}
+        m_GlobalCooldown: 1
+    00000003:
+      type: {class: SetFloat, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.SetFloat
+        m_Enabled: 1
+        m_Target: 1
+        m_ParameterName: Speed Multiplier
+        m_Value: 2
+        m_DampTime: 0
+    00000004:
+      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.CrossFade
+        m_Enabled: 1
+        m_Target: 1
+        m_AnimatorState: Healing
+        m_TransitionDuration: 0.2
+    00000005:
+      type: {class: LookForward, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.LookForward
+        m_Enabled: 1
+        m_Target: 1
+    00000006:
+      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.Wait
+        m_Enabled: 1
+        duration: 0.6
+    00000007:
+      type: {class: InstantiateAtMouse, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.InstantiateAtMouse
+        m_Enabled: 1
+        m_Original: {fileID: 100006, guid: 3c862a2b5d5ff714bb42577484016571, type: 3}
+        m_IgnorePlayerCollision: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -573,6 +668,7 @@ MonoBehaviour:
   - {fileID: 4117155973668914919}
   - {fileID: -5242721879078471986}
   - {fileID: 3676597254134110875}
+  - {fileID: -194854561785592449}
   currencies: []
   raritys: []
   categories:
@@ -818,7 +914,7 @@ MonoBehaviour:
   m_Icon: {fileID: 21300000, guid: 15d5122f2a394f1409403e7a7983b233, type: 3}
   m_Prefab: {fileID: 7834113853119435232, guid: 4cc9f3750a13d25438b01048783f1021,
     type: 3}
-  m_Description: Damages all targets in range.
+  m_Description: Damages all targets 2x in range.
   m_Category: {fileID: -3989543302354102894}
   m_IsSellable: 0
   m_BuyPrice: 0
@@ -852,6 +948,9 @@ MonoBehaviour:
   - id: 3
   - id: 4
   - id: 5
+  - id: 6
+  - id: 7
+  - id: 8
   references:
     version: 1
     00000000:
@@ -905,20 +1004,44 @@ MonoBehaviour:
         item: {fileID: 3676597254134110875}
         m_GlobalCooldown: 2
     00000003:
+      type: {class: SetFloat, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.SetFloat
+        m_Enabled: 1
+        m_Target: 1
+        m_ParameterName: Speed Multiplier
+        m_Value: 2
+        m_DampTime: 0
+    00000004:
       type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.CrossFade
         m_Enabled: 1
         m_Target: 1
-        m_AnimatorState: Air Burst
+        m_AnimatorState: Healing
         m_TransitionDuration: 0.2
-    00000004:
+    00000005:
       type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.Wait
         m_Enabled: 1
-        duration: 0.6
-    00000005:
+        duration: 0.4
+    00000006:
+      type: {class: Play, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.Play
+        m_Enabled: 1
+        m_Clip: {fileID: 8300000, guid: a37f1a80841448b46b7d4af0675c3139, type: 3}
+        m_AudioMixerGroup: {fileID: 8643709756097329450, guid: 08813bea6fa2f304d8179aec903c1bd9,
+          type: 2}
+        m_Volume: 0.3
+    00000007:
+      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.Wait
+        m_Enabled: 1
+        duration: 0.2
+    00000008:
       type: {class: Instantiate, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.Instantiate
@@ -1087,8 +1210,6 @@ MonoBehaviour:
   - id: 5
   - id: 6
   - id: 7
-  - id: 8
-  - id: 9
   references:
     version: 1
     00000000:
@@ -1161,30 +1282,12 @@ MonoBehaviour:
         item: {fileID: 4447567160419299934}
         m_GlobalCooldown: 3
     00000003:
-      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: 
-        m_Enabled: 1
-        m_Target: 1
-        methodName: SetIK
-        m_Argument:
-          m_BoolValue: 0
-          m_IntValue: 0
-          m_FloatValue: 0
-          m_StringValue: 
-          m_Vector2Value: {x: 0, y: 0}
-          m_Vector3Value: {x: 0, y: 0, z: 0}
-          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
-          m_ObjectValue: {fileID: 0}
-          m_ArgumentType: 1
-        m_Options: 1
-    00000004:
       type: {class: LookForward, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: 
         m_Enabled: 1
         m_Target: 1
-    00000005:
+    00000004:
       type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: 
@@ -1192,13 +1295,13 @@ MonoBehaviour:
         m_Target: 1
         m_AnimatorState: Arcane Ball
         m_TransitionDuration: 0.2
-    00000006:
+    00000005:
       type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: 
         m_Enabled: 1
         duration: 0.8
-    00000007:
+    00000006:
       type: {class: Instantiate, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: 
@@ -1208,30 +1311,12 @@ MonoBehaviour:
         m_BoneName: Spawnpoint
         m_Offset: {x: 0, y: 0, z: 0}
         m_IgnorePlayerCollision: 1
-    00000008:
+    00000007:
       type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: 
         m_Enabled: 1
         duration: 1.2
-    00000009:
-      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: 
-        m_Enabled: 1
-        m_Target: 1
-        methodName: SetIK
-        m_Argument:
-          m_BoolValue: 1
-          m_IntValue: 0
-          m_FloatValue: 0
-          m_StringValue: 
-          m_Vector2Value: {x: 0, y: 0}
-          m_Vector3Value: {x: 0, y: 0, z: 0}
-          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
-          m_ObjectValue: {fileID: 0}
-          m_ArgumentType: 1
-        m_Options: 1
 --- !u!114 &5092307033516734736
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1268,8 +1353,10 @@ MonoBehaviour:
   - {fileID: -6382214904321203751}
   - {fileID: 1337782666225268451}
   - {fileID: 3676597254134110875}
-  m_Amounts: 0100000001000000010000000100000001000000010000000100000001000000
+  - {fileID: -194854561785592449}
+  m_Amounts: 010000000100000001000000010000000100000001000000010000000100000001000000
   m_Modifiers:
+  - modifiers: []
   - modifiers: []
   - modifiers: []
   - modifiers: []

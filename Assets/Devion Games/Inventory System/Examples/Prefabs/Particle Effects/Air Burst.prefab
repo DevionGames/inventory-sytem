@@ -9423,9 +9423,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7834113853119073728}
-  - component: {fileID: 5792847533346594029}
+  - component: {fileID: 4994401103066445465}
   m_Layer: 0
-  m_Name: Radius Smoke
+  m_Name: Air Burst
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9446,7 +9446,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5792847533346594029
+--- !u!114 &4994401103066445465
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9455,7 +9455,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7834113853119435232}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b16f08d89689c6459c9c7fc56f26601, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c1126889d6eec24eaa2cb268b19bc83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyTime: 3
+  m_StartDelay: 0.3
+  m_Radius: 2
+  m_Repeat: 1
+  m_RepeatDelay: 1
+  m_Data: {fileID: 11400000, guid: c9b54f89a9d123947abc85e520b243f3, type: 2}

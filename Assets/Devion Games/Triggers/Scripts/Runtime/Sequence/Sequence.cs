@@ -57,7 +57,59 @@ namespace DevionGames
             }
         }
 
-        //Ticks the custom actions using sequence implementation, returns true if the behavior is running.
+        //Just a test, for discord support
+      /*  public bool Tick()
+        {
+            if (this.m_Status == ActionStatus.Running || this.m_Status== ActionStatus.SkipNext)
+            {
+                if (this.m_ActionIndex >= this.m_Actions.Length)
+                {
+                    this.m_ActionIndex = 0;
+                }
+
+                while (this.m_ActionIndex < this.m_Actions.Length)
+                {
+                    if (this.m_ActionStatus != ActionStatus.Running)
+                    {
+
+                        this.m_Actions[m_ActionIndex].OnStart();
+                    }
+                    this.m_ActionStatus = this.m_Actions[this.m_ActionIndex].OnUpdate();
+
+                    if (this.m_ActionStatus != ActionStatus.Running)
+                    {
+                        this.m_Actions[m_ActionIndex].OnEnd();
+                    }
+
+
+                    if (this.m_ActionStatus == ActionStatus.SkipNext)
+                    {
+                       m_ActionIndex+=2;
+
+                    }
+                  
+                    if (this.m_ActionStatus == ActionStatus.Success)
+                    {
+                        ++m_ActionIndex;
+
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                this.m_Status = this.m_ActionStatus;
+                if (this.m_Status != ActionStatus.Running) {
+                    
+                    for (int i = 0; i < this.m_Actions.Length; i++)
+                    {
+                        this.m_Actions[i].OnSequenceEnd();
+                    }
+                }
+            }
+            return this.m_Status == ActionStatus.Running || this.m_Status== ActionStatus.SkipNext;
+        }*/
+
         public bool Tick()
         {
             if (this.m_Status == ActionStatus.Running)
@@ -92,8 +144,9 @@ namespace DevionGames
                     }
                 }
                 this.m_Status = this.m_ActionStatus;
-                if (this.m_Status != ActionStatus.Running) {
-                    
+                if (this.m_Status != ActionStatus.Running)
+                {
+
                     for (int i = 0; i < this.m_Actions.Length; i++)
                     {
                         this.m_Actions[i].OnSequenceEnd();
@@ -102,6 +155,5 @@ namespace DevionGames
             }
             return this.m_Status == ActionStatus.Running;
         }
-
     }
 }

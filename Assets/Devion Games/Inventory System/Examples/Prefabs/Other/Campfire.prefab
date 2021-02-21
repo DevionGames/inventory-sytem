@@ -246,6 +246,7 @@ MonoBehaviour:
   - id: 3
   - id: 4
   - id: 5
+  - id: 6
   m_Interruptable: 0
   references:
     version: 1
@@ -306,6 +307,13 @@ MonoBehaviour:
         m_Target: 0
         m_ComponentName: TimedEnable
         m_Enable: 1
+    00000006:
+      type: {class: Play, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.Play
+        m_Enabled: 1
+        m_Clip: {fileID: 8300000, guid: 90b3c10095a0df54085c59b46b19f18a, type: 3}
+        m_Volume: 0.4
 --- !u!114 &4207056754354467310
 MonoBehaviour:
   m_ObjectHideFlags: 0
