@@ -45,7 +45,8 @@ namespace DevionGames
         public void Interrupt() {
             for (int i = 0; i <= this.m_ActionIndex; i++)
             {
-                this.m_Actions[i].OnInterrupt();
+                if(i < this.m_Actions.Length)
+                    this.m_Actions[i].OnInterrupt();
             }
         }
 

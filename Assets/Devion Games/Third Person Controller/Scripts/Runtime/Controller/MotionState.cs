@@ -292,7 +292,7 @@ namespace DevionGames
 			while (elapsedTime < time) {
 				transform.position = Vector3.Lerp (startingPosition, position, (elapsedTime / time));
 				transform.rotation = Quaternion.Slerp (startingRotation, rotation, (elapsedTime / time));
-				elapsedTime += Time.deltaTime;
+				elapsedTime += Time.fixedDeltaTime;
 				yield return new WaitForEndOfFrame ();
 			}
 			this.m_InPosition = true;

@@ -26,7 +26,7 @@ namespace DevionGames.InventorySystem
             this.m_ItemCollection.onChange.AddListener(delegate () {
                 if (this.m_ItemCollection.IsEmpty && this.m_DestroyWhenEmpty)
                 {
-                    InventoryManager.Destroy(gameObject);
+                    GameObject.Destroy(gameObject,0.1f);
                 }
             });
 

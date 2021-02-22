@@ -44,11 +44,11 @@ namespace DevionGames
             float angle = Vector3.Angle(this.m_Transform.forward, directionToTarget);
             if (Mathf.Abs(angle) < 90  && this.m_ControllerActive && this.m_Controller.isActiveAndEnabled && ik)
             {
-                this.m_Weight = Mathf.Lerp(this.m_Weight, 1, Time.deltaTime);
+                this.m_Weight = Mathf.Lerp(this.m_Weight, 1f, Time.deltaTime);
             }
             else
             {
-                this.m_Weight = Mathf.Lerp(this.m_Weight, 0, Time.deltaTime);
+                this.m_Weight = Mathf.Lerp(this.m_Weight, 0f, Time.deltaTime*2f);
             }
         }
 

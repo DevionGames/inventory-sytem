@@ -69,8 +69,10 @@ MonoBehaviour:
   - {fileID: -1079133913141893833}
   - {fileID: 7032449652308580212}
   - {fileID: 5770177478895120047}
-  m_Amounts: 010000000100000001000000
+  - {fileID: -2308325603847997442}
+  m_Amounts: 01000000010000000100000001000000
   m_Modifiers:
+  - modifiers: []
   - modifiers: []
   - modifiers: []
   - modifiers: []

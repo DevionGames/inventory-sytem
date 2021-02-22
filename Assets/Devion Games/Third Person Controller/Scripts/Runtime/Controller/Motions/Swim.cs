@@ -5,7 +5,7 @@ using UnityEngine;
 namespace DevionGames
 {
 	/// <summary>
-	/// Note: Swimming will only work if the SwimTrigger size is set to 1, collider size can be any.
+	/// Note: Swimming will only work if the MotionTrigger/SwimTrigger size is set to 1, collider size can be any.
 	/// </summary>
 	public class Swim : MotionState
 	{
@@ -13,15 +13,16 @@ namespace DevionGames
 		private float m_HeightOffset=-1.57f;
 		[SerializeField]
 		private float m_OffsetSmoothing = 0.1f;
+		[InspectorLabel("Trigger")]
+		[SerializeField]
+		private string m_TriggerName = "Ladder";
 
-		private SwimTrigger m_Trigger;
+		private MotionTrigger m_Trigger;
 		private float m_SmoothOffset;
 		private float m_SmoothVelocity;
 
         private float m_HeightAdjustment = 0f;//-0.3f;
    
-
-
 		public override void OnStart ()
 		{
 			this.m_Rigidbody.useGravity = false;
@@ -59,8 +60,6 @@ namespace DevionGames
 			return false;
 		}
 
-	
-
 		public override bool UpdateVelocity (ref Vector3 velocity)
 		{
 
@@ -85,19 +84,20 @@ namespace DevionGames
 			return false;
 		}
 
-		private void OnTriggerEnter (Collider other)
+		private void OnTriggerEnter(Collider other)
 		{
-			SwimTrigger trigger = other.GetComponent<SwimTrigger> ();
-			if (StartType == StartType.Automatic && trigger != null) {
+			MotionTrigger trigger = other.GetComponent<MotionTrigger>();
+			if (StartType == StartType.Automatic && trigger != null && (trigger.triggerName == this.m_TriggerName || trigger is SwimTrigger))
+			{
 				this.m_Trigger = trigger;
 
 			}
 		}
 
-		private void OnTriggerExit (Collider other)
+		private void OnTriggerExit(Collider other)
 		{
-			if(this.m_Trigger == other.GetComponent<SwimTrigger>())
-			this.m_Trigger = null;
+			if (this.m_Trigger == other.GetComponent<MotionTrigger>())
+				this.m_Trigger = null;
 		}
 	}
 }

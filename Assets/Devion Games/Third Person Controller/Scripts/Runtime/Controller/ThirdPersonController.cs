@@ -411,7 +411,15 @@ namespace DevionGames
 			}
 		}
 
-        private void Awake()
+		public Vector3 RootMotionForce
+		{
+			get
+			{
+				return this.m_RootMotionForce;
+			}
+		}
+
+		private void Awake()
         {
 			//Physics.queriesHitTriggers = false;
 			if (this.m_DontDestroyOnLoad)

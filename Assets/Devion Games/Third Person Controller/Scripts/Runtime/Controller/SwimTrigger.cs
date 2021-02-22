@@ -4,7 +4,8 @@ using UnityEngine;
 
 namespace DevionGames
 {
-	public class SwimTrigger:MonoBehaviour
+	//Should be deprecated
+	public class SwimTrigger:MotionTrigger
 	{
 
 	}

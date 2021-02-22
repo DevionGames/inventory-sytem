@@ -386,7 +386,7 @@ MonoBehaviour:
   m_CraftingSkill: {fileID: 0}
   m_RemoveIngredientsWhenFailed: 0
   m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: 
+  m_CraftingAnimatorState: Cooking
   m_CraftingModifier:
     modifiers: []
   ingredients:
@@ -399,6 +399,7 @@ MonoBehaviour:
   - id: 0
   - id: 1
   - id: 2
+  - id: 3
   references:
     version: 1
     00000000:
@@ -409,13 +410,21 @@ MonoBehaviour:
         item: {fileID: -7220855601628582702}
         m_Amount: 1
     00000001:
+      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.CrossFade
+        m_Enabled: 1
+        m_Target: 1
+        m_AnimatorState: Eat
+        m_TransitionDuration: 0.2
+    00000002:
       type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
       data:
         m_Type: DevionGames.InventorySystem.ItemActions.Cooldown
         m_Enabled: 1
         item: {fileID: -7220855601628582702}
         m_GlobalCooldown: 0
-    00000002:
+    00000003:
       type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.Wait
@@ -2553,7 +2562,7 @@ MonoBehaviour:
     type: 2}
   m_RemoveIngredientsWhenFailed: 1
   m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: 
+  m_CraftingAnimatorState: Cooking
   m_CraftingModifier:
     modifiers: []
   ingredients:
@@ -2567,6 +2576,7 @@ MonoBehaviour:
   - id: 1
   - id: 2
   - id: 3
+  - id: 4
   references:
     version: 1
     00000000:
@@ -2604,13 +2614,21 @@ MonoBehaviour:
         item: {fileID: 8429455951140046941}
         m_Amount: 1
     00000002:
+      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.CrossFade
+        m_Enabled: 1
+        m_Target: 1
+        m_AnimatorState: Drink
+        m_TransitionDuration: 0.2
+    00000003:
       type: {class: Cooldown, ns: DevionGames.InventorySystem.ItemActions, asm: DevionGames.InventorySystem}
       data:
         m_Type: 
         m_Enabled: 1
         item: {fileID: 8429455951140046941}
         m_GlobalCooldown: 0.5
-    00000003:
+    00000004:
       type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: 
