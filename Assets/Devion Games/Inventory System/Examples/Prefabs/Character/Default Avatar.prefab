@@ -687,13 +687,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6874675270176852256}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64a9b84f6de6a0b42a70239e817976a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_AutoDestruct: 1
-  m_DestructDelay: 10
+  m_DestructDelay: 3
+  m_StartDirection: 1
+  m_StartPositionOffset: {x: 0, y: 0.5, z: 0}
+  m_Speed: 25
+  m_FollowTarget: 0
+  m_SelectBestTarget: 1
+  m_MaxDistance: 20
+  m_FieldOfView: 90
+  m_TurnSpeed: -1
+  m_DestroyOnCollision: 1
+  m_DestroyDelay: 2
   m_Data: {fileID: 11400000, guid: 767c2c350208504478cc7f4a286a4b9b, type: 2}
 --- !u!1 &6874675270189706749
 GameObject:
@@ -3945,6 +3955,7 @@ GameObject:
   - component: {fileID: 3822375038413334922}
   - component: {fileID: 4334598826948491884}
   - component: {fileID: 2261407755553446188}
+  - component: {fileID: 1232263015}
   m_Layer: 9
   m_Name: Default Avatar
   m_TagString: Player
@@ -4271,6 +4282,7 @@ MonoBehaviour:
   - {fileID: 6874675272001939297}
   - {fileID: 6874675272001939298}
   - {fileID: 6874675272001939299}
+  - {fileID: 1232263015}
 --- !u!114 &6874675272001939294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4458,15 +4470,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delegates: []
   selectionType: 27
-  m_SelectionDistance: 10
+  m_SelectionDistance: 20
   m_SelectionKey: 102
   m_RaycastOffset: {x: 0, y: 1, z: 0}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 1075
-  deselectionType: 12
+  deselectionType: 28
   m_DeselectionKey: 27
-  m_DeselectionDistance: 10
+  m_DeselectionDistance: 20
 --- !u!114 &6874675272001939292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4747,6 +4759,8 @@ MonoBehaviour:
     baseValue: 0
   - overrideBaseValue: 0
     baseValue: 0
+  - overrideBaseValue: 0
+    baseValue: 0
   m_Effects:
   - {fileID: -4664889271903601789, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
   - {fileID: -2005598942081263570, guid: 294a0f3c3623873439762c5f55d6af2a, type: 2}
@@ -4772,6 +4786,28 @@ MonoBehaviour:
   m_State: Evade
   m_CameraPreset: Default
   m_RecurrenceDelay: 0.2
+--- !u!114 &1232263015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6874675272001939313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47617ef9c17742a418ac1323b2041aac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delegates: []
+  item: {fileID: 757395598172549354, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
+  attachments:
+  - region: {fileID: 316844889573954113, guid: 1ae57b994efcab048a1bb130d4e11d83, type: 2}
+    prefab: {fileID: 2583769445098824402, guid: 889b596f02ef6534690cb9390fb35ee0,
+      type: 3}
+    position: {x: 0.055, y: 0.016, z: -0.213}
+    rotation: {x: 10.213941, y: 272.26666, z: 276.76434}
+    scale: {x: 1, y: 1, z: 1}
+    gameObject: {fileID: 0}
 --- !u!1 &6874675272017889070
 GameObject:
   m_ObjectHideFlags: 0

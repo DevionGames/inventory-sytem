@@ -86,6 +86,7 @@ namespace DevionGames.StatSystem
 
 			if (this.m_Value != null)
 			{
+
 				this.m_Value.text = stat.Value.ToString();
 			}
 			

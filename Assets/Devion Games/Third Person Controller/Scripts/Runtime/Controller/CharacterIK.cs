@@ -58,7 +58,6 @@ namespace DevionGames
 
         private void SetIK(bool state) {
             ik = state;
-            Debug.Log(ik);
         }
 
         private void OnAnimatorIK(int layer)

@@ -96,6 +96,7 @@ namespace DevionGames
 
 		private void OnTriggerExit (Collider other)
 		{
+			if(this.m_Trigger == other.GetComponent<SwimTrigger>())
 			this.m_Trigger = null;
 		}
 	}

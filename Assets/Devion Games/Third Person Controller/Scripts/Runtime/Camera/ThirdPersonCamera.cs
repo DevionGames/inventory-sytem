@@ -274,6 +274,8 @@ namespace DevionGames
 			this.m_CrosshairCanvas = canvasGameObject.AddComponent<Canvas> ();
 			this.m_CrosshairCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
             this.m_CrosshairCanvas.pixelPerfect = true;
+            this.m_CrosshairCanvas.overrideSorting = true;
+            this.m_CrosshairCanvas.sortingOrder = 100;
 			GameObject crosshairGameObject = new GameObject ("Crosshair");
 			this.m_CrosshairImage = crosshairGameObject.AddComponent<Image> ();
 			crosshairGameObject.transform.SetParent (canvasGameObject.transform, false);
