@@ -3956,6 +3956,9 @@ GameObject:
   - component: {fileID: 4334598826948491884}
   - component: {fileID: 2261407755553446188}
   - component: {fileID: 1232263015}
+  - component: {fileID: 2001715536}
+  - component: {fileID: 2001715569}
+  - component: {fileID: 214992086}
   m_Layer: 9
   m_Name: Default Avatar
   m_TagString: Player
@@ -4055,7 +4058,7 @@ MonoBehaviour:
   m_SlopeLimit: 65
   m_GroundLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 2049
   m_SkinWidth: 0.08
   m_IdleFriction: {fileID: 13400000, guid: e4e0ce1e5c243ba4dbd81130e5e4bebf, type: 2}
   m_MovementFriction: {fileID: 13400000, guid: d80c3a53c8996074bbbe4f091ae77911, type: 2}
@@ -4073,6 +4076,8 @@ MonoBehaviour:
   m_HorizontalDampTime: 0.15
   m_Motions:
   - {fileID: 6874675272001939280}
+  - {fileID: 2001715536}
+  - {fileID: 2001715569}
   - {fileID: 6874675272001939281}
   - {fileID: 6874675272001939283}
   - {fileID: 6874675272001939284}
@@ -4080,6 +4085,7 @@ MonoBehaviour:
   - {fileID: 6874675272001939286}
   - {fileID: 2528819391161695290}
   - {fileID: 2261407755553446188}
+  - {fileID: 214992086}
 --- !u!114 &6874675272001939293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4188,6 +4194,7 @@ MonoBehaviour:
   m_CameraPreset: Default
   m_HeightOffset: -1.57
   m_OffsetSmoothing: 0.1
+  m_TriggerName: Ladder
 --- !u!114 &6874675272001939303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4524,6 +4531,7 @@ MonoBehaviour:
   m_CameraPreset: Default
   m_HeightOffset: -1.57
   m_OffsetSmoothing: 0.1
+  m_TriggerName: Ladder
 --- !u!114 &6874675272001939281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4808,6 +4816,92 @@ MonoBehaviour:
     rotation: {x: 10.213941, y: 272.26666, z: 276.76434}
     scale: {x: 1, y: 1, z: 1}
     gameObject: {fileID: 0}
+--- !u!114 &2001715536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6874675272001939313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c84a0405e1bdd3c4f9b02459e905c5b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FriendlyName: Climb
+  m_InputName: 
+  m_StartType: 0
+  m_StopType: 1
+  m_ConsumeInputOverUI: 0
+  m_PauseItemUpdate: 1
+  m_TransitionDuration: 0.1
+  m_State: Climb
+  m_CameraPreset: Default
+  m_ClimbMask:
+    serializedVersion: 2
+    m_Bits: 2048
+  m_MinForwardInput: 0
+  m_MinHeight: 0.8
+  m_MaxHeight: 1.2
+  m_MaxDistance: 0.5
+  m_ExtraForce: {x: 0, y: 0.1, z: 0.1}
+  m_IKLeftHandOffset: {x: 0.266, y: 0.02, z: 0.1}
+  m_IKRightHandOffset: {x: 0.266, y: 0.02, z: 0.1}
+  m_UpdateLookAt: 0
+--- !u!114 &2001715569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6874675272001939313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae54773973b8ba4aaeccbd7fe20742f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FriendlyName: Ladder
+  m_InputName: 
+  m_StartType: 0
+  m_StopType: 0
+  m_ConsumeInputOverUI: 0
+  m_PauseItemUpdate: 1
+  m_TransitionDuration: 0.1
+  m_State: Ladder
+  m_CameraPreset: Default
+  m_TriggerName: Ladder
+--- !u!114 &214992086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6874675272001939313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c84a0405e1bdd3c4f9b02459e905c5b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FriendlyName: Auto Jump
+  m_InputName: 
+  m_StartType: 0
+  m_StopType: 1
+  m_ConsumeInputOverUI: 0
+  m_PauseItemUpdate: 1
+  m_TransitionDuration: 0.1
+  m_State: Auto Jump
+  m_CameraPreset: Default
+  m_ClimbMask:
+    serializedVersion: 2
+    m_Bits: 2048
+  m_MinForwardInput: 0.3
+  m_MinHeight: 0.5
+  m_MaxHeight: 0.8
+  m_MaxDistance: 0.5
+  m_ExtraForce: {x: 0, y: 0.2, z: 0}
+  m_IKLeftHandOffset: {x: 0, y: 0.01, z: 0.05}
+  m_IKRightHandOffset: {x: 0, y: 0.01, z: 0.05}
+  m_UpdateLookAt: 1
 --- !u!1 &6874675272017889070
 GameObject:
   m_ObjectHideFlags: 0

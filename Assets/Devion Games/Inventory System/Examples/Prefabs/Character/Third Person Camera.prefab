@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 864753745464015931}
   - component: {fileID: 1611634223}
   - component: {fileID: 864753745464015938}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Third Person Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1847
+    m_Bits: 5943
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0

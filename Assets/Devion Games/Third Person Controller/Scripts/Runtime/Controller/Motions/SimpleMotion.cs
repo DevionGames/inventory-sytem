@@ -28,10 +28,12 @@ namespace DevionGames
 			return (Time.time > lastUsedTime + this.m_RecurrenceDelay);
 		}
 
-        public override bool UpdateAnimatorIK(int layer)
+
+
+       /* public override bool UpdateAnimatorIK(int layer)
         {
-            return false;
-        }
+            return true;
+        }*/
 
        /* private void OnEndUse() {
 			Debug.Log("OnEndUse!");

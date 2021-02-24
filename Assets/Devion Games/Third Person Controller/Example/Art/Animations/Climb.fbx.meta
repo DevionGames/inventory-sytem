@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9cb50996c1741844f9141fb5612b0824
+guid: 1819178c7b3b6694eac2d82834243989
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
@@ -467,7 +467,7 @@ ModelImporter:
     second: TongueTip
   - first:
       74: 7400000
-    second: Jump On
+    second: Climb
   - first:
       95: 9500000
     second: //RootNode
@@ -484,9 +484,9 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: "Avatar Rig Configuration mis-match. Bone length in configuration
-      does not match position in animation file:\n\t'LeftLeg' : position error =
-      7.696520 mm\n\t'LeftFoot' : position error = 15.233778 mm\n"
+    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Bone length in
+      copied configuration does not match position in animation file:\n\t'LeftLeg'
+      : position error = 7.696520 mm\n\t'LeftFoot' : position error = 15.233778 mm\n"
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -502,14 +502,14 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Jump On
-      takeName: _213_Run_JumpUpLow_Stride_Run
+      name: Climb
+      takeName: _211_Run_JumpUpMedium_2Hands_Run
       internalID: 0
-      firstFrame: 213
-      lastFrame: 230
+      firstFrame: 201
+      lastFrame: 229
       wrapMode: 0
-      orientationOffsetY: 11.74
-      level: 0
+      orientationOffsetY: 11.55
+      level: -0.01
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
@@ -526,7 +526,21 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.8343197
+      - time: 0.041332353
+        functionName: SetIKWeight
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 1
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.37671235
+        functionName: SetIKWeight
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.83252543
         functionName: StopMotion
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -536,7 +550,7 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 200
+      additiveReferencePoseFrame: 165
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -1310,11 +1324,12 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 0
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 2ab0893f5bba9b243b65e309e78089d0,
+    type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 2
   additionalBone: 0
   userData: 
   assetBundleName: 

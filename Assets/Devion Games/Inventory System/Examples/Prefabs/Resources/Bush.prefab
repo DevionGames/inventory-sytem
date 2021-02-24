@@ -180,7 +180,7 @@ MonoBehaviour:
         m_Type: DevionGames.CrossFade
         m_Enabled: 1
         m_Target: 1
-        m_AnimatorState: Pickup Plant
+        m_AnimatorState: Start Pickup
         m_TransitionDuration: 0.2
     00000005:
       type: {class: ShowProgressbar, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}

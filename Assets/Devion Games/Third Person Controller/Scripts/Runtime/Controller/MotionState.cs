@@ -220,6 +220,17 @@ namespace DevionGames
 			//Debug.Log("Start Motion " + FriendlyName);
 		}
 
+		public bool IsPlaying() {
+			int layers = this.m_Animator.layerCount;
+			string destinationState = GetDestinationState();
+			for (int i = 0; i < layers; i++) {
+				AnimatorStateInfo info = this.m_Animator.GetCurrentAnimatorStateInfo(i);
+				if (info.IsName(destinationState))
+					return true;
+			}
+			return false;
+		}
+
 
 		public virtual bool CanStart()
 		{
