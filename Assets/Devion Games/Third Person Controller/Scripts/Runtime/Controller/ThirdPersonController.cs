@@ -735,7 +735,7 @@ namespace DevionGames
 					}
 					if (!active && this.m_Animator.GetCurrentAnimatorStateInfo (j).shortNameHash != this.m_LayerStateMap [j].shortNameHash && !this.m_Animator.IsInTransition (j)) {
 						//Debug.Log("Current: "+this.m_Animator.GetCurrentAnimatorClipInfo(j)[0].clip.name);
-                        this.m_Animator.CrossFadeInFixedTime (this.m_LayerStateMap [j].shortNameHash, 0.2f);
+                        this.m_Animator.CrossFadeInFixedTime (this.m_LayerStateMap [j].shortNameHash, 0.3f);
 						//this.m_Animator.Update(0f);
 						//Debug.Log("Next: " + this.m_Animator.GetNextAnimatorClipInfo(j)[0].clip.name);
 					}

@@ -23,6 +23,8 @@ namespace DevionGames
 		[SerializeField]
 		private Vector3 m_IKRightHandOffset = new Vector3(0.266f, 0.01f, 0.05f);
 		[SerializeField]
+		private float m_IKWeightSpeed = 8f;
+		[SerializeField]
 		private bool m_UpdateLookAt = false;
 
 
@@ -200,7 +202,9 @@ namespace DevionGames
 			}
 			Vector3 rootMotion = this.m_Controller.RootMotionForce;
 			rootMotion += transform.TransformDirection(this.m_ExtraForce);
-			
+			float force = this.m_Animator.GetFloat("Force");
+			rootMotion += transform.forward * force;
+
 			if (Mathf.Abs(this.transform.position.y - this.m_FinalHeight) < 0.05f)
 			{
 				rootMotion.y = 0f;
@@ -210,12 +214,12 @@ namespace DevionGames
 				transform.position = position;
 			}
 
-			this.m_IKCurrentWeight = Mathf.Lerp(this.m_IKCurrentWeight, this.m_IKWeight, Time.fixedDeltaTime * 8f);
+			this.m_IKCurrentWeight = Mathf.Lerp(this.m_IKCurrentWeight, this.m_IKWeight, Time.fixedDeltaTime * this.m_IKWeightSpeed);
 			velocity = rootMotion;
 			return false;
         }
 
-		private void SetIKWeight(float weight)
+        private void SetIKWeight(float weight)
 		{
 			this.m_IKWeight = weight;
 		}
