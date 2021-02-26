@@ -14,12 +14,14 @@ namespace DevionGames.InventorySystem.Configuration
 
         private void OnEnable()
         {
+            if (target == null) return;
             this.m_Script = serializedObject.FindProperty("m_Script");
             this.m_ShowAllComponents = serializedObject.FindProperty("showAllComponents");
         }
 
         public override void OnInspectorGUI()
         {
+            if (target == null) return;
             EditorGUI.BeginDisabledGroup(true);
             EditorGUILayout.PropertyField(this.m_Script);
             EditorGUI.EndDisabledGroup();

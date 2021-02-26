@@ -19215,7 +19215,7 @@ MonoBehaviour:
   m_AutoDestruct: 1
   m_DestructDelay: 15
   m_StartDirection: 1
-  m_StartPositionOffset: {x: 0.1, y: 0.4, z: 0}
+  m_StartPositionOffset: {x: 0.1, y: 0.7, z: 0}
   m_Speed: 15
   m_FollowTarget: 1
   m_SelectBestTarget: 1

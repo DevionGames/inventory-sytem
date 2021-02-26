@@ -1846,7 +1846,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6874675270884209681}
   m_LocalRotation: {x: -0.31359568, y: -0.05979005, z: -0.05755224, w: 0.94592327}
-  m_LocalPosition: {x: -0.05899991, y: 0.627, z: 0.5690001}
+  m_LocalPosition: {x: 0.44, y: 0.524, z: 0.283}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6874675271806514473}
@@ -3959,6 +3959,7 @@ GameObject:
   - component: {fileID: 2001715536}
   - component: {fileID: 2001715569}
   - component: {fileID: 214992086}
+  - component: {fileID: 96590540}
   m_Layer: 9
   m_Name: Default Avatar
   m_TagString: Player
@@ -4076,6 +4077,7 @@ MonoBehaviour:
   m_HorizontalDampTime: 0.15
   m_Motions:
   - {fileID: 6874675272001939280}
+  - {fileID: 96590540}
   - {fileID: 2001715536}
   - {fileID: 2001715569}
   - {fileID: 6874675272001939281}
@@ -4847,6 +4849,7 @@ MonoBehaviour:
   m_ExtraForce: {x: 0, y: 0.1, z: 0.1}
   m_IKLeftHandOffset: {x: 0.266, y: 0.02, z: 0.1}
   m_IKRightHandOffset: {x: 0.266, y: 0.02, z: 0.1}
+  m_IKWeightSpeed: 8
   m_UpdateLookAt: 0
 --- !u!114 &2001715569
 MonoBehaviour:
@@ -4901,7 +4904,41 @@ MonoBehaviour:
   m_ExtraForce: {x: 0, y: 0.2, z: 0}
   m_IKLeftHandOffset: {x: 0, y: 0.01, z: 0.05}
   m_IKRightHandOffset: {x: 0, y: 0.01, z: 0.05}
+  m_IKWeightSpeed: 8
   m_UpdateLookAt: 1
+--- !u!114 &96590540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6874675272001939313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c84a0405e1bdd3c4f9b02459e905c5b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FriendlyName: Climb Ladder
+  m_InputName: 
+  m_StartType: 0
+  m_StopType: 1
+  m_ConsumeInputOverUI: 0
+  m_PauseItemUpdate: 1
+  m_TransitionDuration: 0.2
+  m_State: Climb Ladder
+  m_CameraPreset: Default
+  m_ClimbMask:
+    serializedVersion: 2
+    m_Bits: 4096
+  m_MinForwardInput: 0.5
+  m_MinHeight: 1.3
+  m_MaxHeight: 1.6
+  m_MaxDistance: 0.5
+  m_ExtraForce: {x: 0, y: 1.5, z: 0}
+  m_IKLeftHandOffset: {x: 0.2, y: 0.05, z: 0}
+  m_IKRightHandOffset: {x: 0.2, y: 0.05, z: 0}
+  m_IKWeightSpeed: 8
+  m_UpdateLookAt: 0
 --- !u!1 &6874675272017889070
 GameObject:
   m_ObjectHideFlags: 0

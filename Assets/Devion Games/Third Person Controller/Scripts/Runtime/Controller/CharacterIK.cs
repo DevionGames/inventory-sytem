@@ -74,8 +74,8 @@ namespace DevionGames
 
             if (layer == 0)
             {
-               // this.m_Animator.SetLookAtPosition(this.m_AimPosition);
-                //this.m_Animator.SetLookAtWeight(this.m_Weight, this.m_BodyWeight, this.m_HeadWeight, this.m_EyesWeight, this.m_ClampWeight);
+                this.m_Animator.SetLookAtPosition(this.m_AimPosition);
+                this.m_Animator.SetLookAtWeight(this.m_Weight, this.m_BodyWeight, this.m_HeadWeight, this.m_EyesWeight, this.m_ClampWeight);
             }
         }
     }

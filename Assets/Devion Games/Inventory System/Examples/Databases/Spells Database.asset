@@ -1300,7 +1300,7 @@ MonoBehaviour:
       data:
         m_Type: 
         m_Enabled: 1
-        duration: 0.8
+        duration: 0.6
     00000006:
       type: {class: Instantiate, ns: DevionGames, asm: DevionGames.Triggers}
       data:

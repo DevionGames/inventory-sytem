@@ -22,6 +22,7 @@ namespace DevionGames
 		private int m_ClickCount;
 
 		private GameObject m_GameObject;
+		private List<MotionState> m_NotReferencedMotions;
 
 		private void OnEnable ()
 		{
@@ -46,6 +47,13 @@ namespace DevionGames
 			MotionState[] states = this.m_Controller.GetComponents<MotionState> ();
 			for (int i = 0; i < states.Length; i++) {
 				states [i].hideFlags = HideFlags.HideInInspector;
+			}
+
+			this.m_NotReferencedMotions = new List<MotionState>();
+			for (int i = 0; i < states.Length; i++) {
+				if (!this.m_Controller.Motions.Contains(states[i])) {
+					this.m_NotReferencedMotions.Add(states[i]);
+				}
 			}
 
 
@@ -102,7 +110,31 @@ namespace DevionGames
 			EditorGUILayout.PropertyField (this.m_Script);
 			GUI.enabled = enabled;
 			DrawPropertiesExcluding (serializedObject, "m_Script", "m_Motions");
-			GUILayout.Space (10f);
+			GUILayout.Space(10f);
+			if (this.m_NotReferencedMotions.Count > 0)
+			{
+				EditorGUILayout.HelpBox("There are unreferenced motions! You should add them to the motions list or remove.", MessageType.Warning);
+				EditorGUILayout.BeginHorizontal();
+				if (GUILayout.Button("Add")) {
+					this.m_Controller.Motions.AddRange(this.m_NotReferencedMotions);
+					EditorUtility.SetDirty(this.m_Controller);
+					OnDisable();
+					OnEnable();
+				}
+
+				if (GUILayout.Button("Remove")) {
+					for (int i = 0; i < m_NotReferencedMotions.Count; i++) {
+						DestroyImmediate(this.m_NotReferencedMotions[i]);
+					}
+					EditorUtility.SetDirty(this.m_Controller);
+					OnDisable();
+					OnEnable();
+				}
+
+				EditorGUILayout.EndHorizontal();
+			}
+
+
 			if (this.m_MotionList != null) {
 				GUILayout.Space (3f);
 				this.m_MotionList.DoLayoutList ();
