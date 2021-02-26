@@ -1,7 +1,7 @@
 {
 	"name": "Standard Assets",
 	"id": "com.deviongames.standardassets",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"assetPath":"Assets/Devion Games/Standard Assets",
 	"unityVersion": "2019.4.1",
 	"downloadPath": "https://deviongames.com/modules/StandardAssets.unitypackage",
@@ -31,6 +31,13 @@
             "changes": 
             [
                 "WaterSimple file name was not named the same as class name."
+            ]
+        }, 
+        {
+            "version": "1.0.3",
+            "changes": 
+            [
+                "Updated water package"
             ]
         }
     ]

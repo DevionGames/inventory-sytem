@@ -2,7 +2,7 @@
     "name": "Triggers",
     "id": "com.deviongames.triggers",
     "assetPath":"Assets/Devion Games/Triggers",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "unityVersion": "2019.4.10",
     "downloadPath": "https://deviongames.com/modules/Triggers.unitypackage",
     "author": "Konstantin Janson",
@@ -63,6 +63,15 @@
             "changes": 
             [
                "Extended Action Library"
+            ]
+        },
+        {
+            "version": "1.0.6",
+            "changes": 
+            [
+               "Extended Action Library",
+               "Animator actions search for child animator if root is null",
+               "Interruptable"
             ]
         }
     ]

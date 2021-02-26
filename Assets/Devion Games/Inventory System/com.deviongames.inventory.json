@@ -2,7 +2,7 @@
     "name": "Inventory System",
     "id": "com.deviongames.inventory",
         "assetPath":"Assets/Devion Games/Inventory System",
-    "version": "2.1.2",
+    "version": "2.1.3",
     "unityVersion": "2019.4.10",
     "assetStore": "",
     "downloadPath": "https://deviongames.com/modules/InventorySystem.unitypackage",
@@ -390,6 +390,30 @@
                 "Formula Asset",
                 "Rework StatSystem",
                 "Automatically add StaticItem to EquipmentHandler if none exists for that item in runtime. You can override the prefab that should be attached in editor."
+            ]
+        },
+        {
+            "version": "2.1.3",
+            "changes": 
+            [
+               "Notification widget got a new reference Text for time",
+               "Implemented Swordsmanship and Archery",
+               "Implemented Fishing and Cooking",
+               "Placeable Items",
+               "Interruprable Triggers",
+               "Combo integration",
+               "Spells override item use",
+               "Animator actions search for child animator if root is null",
+               "Campfire example(Setup to use wood to ignite fire)",
+               "Secondary Weapon/ Shield slots(Switch with R by default)",
+               "New Trigger Tooltips with use key and instruction labels",
+               "ThirdPersonController Evade with left alt",
+               "ThirdPersonController Climb",
+               "ThirdPersonController Ladder",
+               "Action Template for Triggers",
+               "Fixed Corsshair not appearing when switching scenes",
+               "New spell examples",
+               "Rework Projectile to support follow target and aoe"
             ]
         }
     ]

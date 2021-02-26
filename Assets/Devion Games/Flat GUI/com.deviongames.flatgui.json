@@ -2,7 +2,7 @@
     "name": "Flat GUI",
     "id": "com.deviongames.flatgui",
     "assetPath":"Assets/Devion Games/Flat GUI",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "unityVersion": "2019.4.1",
     "downloadPath": "https://deviongames.com/modules/FlatGUI.unitypackage",
     "author": "Konstantin Janson",
@@ -24,6 +24,13 @@
             [
                 "Updated to Devion Games website.",
                 "Changed asset path from Unitycoding/Package to Devion Games/Package"
+            ]
+        }, 
+        {
+            "version": "1.0.2",
+            "changes": 
+            [
+                "Compass Textures"
             ]
         }
     ]

@@ -1,2 +1,5 @@
 - Combo integration
 - Spells override item use
+- Evade
+- Climb
+- Ladder
