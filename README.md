@@ -1,4 +1,4 @@
-# Item & Inventory System 2.1.3 preview
+# Item & Inventory System 2.1.4 preview
 Inventory System is a highly flexible tool for unity. It can be used in any type of game genres such as RPG, FPS, RTS, Platformer and many more. It comes with full source code, allowing you to change anything and extend it as you wish.
 <br><br>• Organized Project
 <br>• Intuitive Editor
