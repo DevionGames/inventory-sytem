@@ -104,12 +104,14 @@ namespace DevionGames.UIWidgets
 		[Tooltip("Enables Cursor when this window is shown. Hides it again when the window is closed or character moves.")]
 		[SerializeField]
 		protected bool m_ShowAndHideCursor = false;
+		[SerializeField]
+		protected string m_CameraPreset = "UI";
 		[Tooltip("Close this widget when the player moves.")]
 		[SerializeField]
 		protected bool m_CloseOnMove = true;
-		[Tooltip("When the key is pressed, show and hide cursor funtionality will be disabled.")]
+		/*[Tooltip("When the key is pressed, show and hide cursor funtionality will be disabled.")]
 		[SerializeField]
-		protected KeyCode m_Deactivate= KeyCode.LeftControl;
+		protected KeyCode m_Deactivate= KeyCode.LeftControl;*/
 		[Tooltip("This option allows to focus and rotate player. This functionality only works with the included ThirdPersonCamera and FocusTarget component!")]
 		[SerializeField]
 		protected bool m_FocusPlayer = false;
@@ -213,7 +215,7 @@ namespace DevionGames.UIWidgets
 		}
 
 		protected virtual void Update() {
-			if (this.m_ShowAndHideCursor && this.IsVisible && this.m_CloseOnMove && (this.m_ThirdPersonController == null || this.m_ThirdPersonController.enabled) && (Input.GetAxis("Vertical") != 0f || Input.GetAxis("Horizontal") != 0f) && !Input.GetKey(this.m_Deactivate))
+			if (this.m_ShowAndHideCursor && this.IsVisible && this.m_CloseOnMove && (this.m_ThirdPersonController == null || this.m_ThirdPersonController.enabled) && (Input.GetAxis("Vertical") != 0f || Input.GetAxis("Horizontal") != 0f))
 			{
 				Close();
 			}
@@ -244,21 +246,23 @@ namespace DevionGames.UIWidgets
 				this.m_Scrollbars[i].value = 1f;
 			}
 			if (this.m_ShowAndHideCursor) {
-				if (m_CurrentVisibleWidgets.Count == 0) {
+				/*if (m_CurrentVisibleWidgets.Count == 0) {
 					m_PreviousCursorLockMode = Cursor.lockState;
 					m_PreviousCursorVisibility = Cursor.visible;
 					if (m_CameraController != null)
 						m_PreviousCameraControllerEnabled = m_CameraController.enabled;
-				}
+				}*/
 				m_CurrentVisibleWidgets.Add(this);
-				if (m_CameraController != null &&  !Input.GetKey(this.m_Deactivate) && m_CurrentVisibleWidgets.Count == 1)
+				if (m_CameraController != null && m_CurrentVisibleWidgets.Count == 1)
 				{
-					this.m_CameraController.enabled = false;
+					//this.m_CameraController.enabled = false;
+					this.m_CameraTransform.SendMessage("Activate", this.m_CameraPreset, SendMessageOptions.DontRequireReceiver);
+
 					if(this.m_FocusPlayer && !this.m_IsLocked)
 						this.m_CameraController.SendMessage("Focus", true, SendMessageOptions.DontRequireReceiver);
 				}
-				Cursor.lockState = CursorLockMode.None;
-				Cursor.visible = true;
+				//Cursor.lockState = CursorLockMode.None;
+				//Cursor.visible = true;
 			}
 
 			Execute("OnShow", new CallbackEventData());
@@ -282,11 +286,12 @@ namespace DevionGames.UIWidgets
 			if (this.m_ShowAndHideCursor) {
 				m_CurrentVisibleWidgets.Remove(this);
 				if (m_CurrentVisibleWidgets.Count == 0) {
-					Cursor.lockState = m_PreviousCursorLockMode;
-					Cursor.visible = m_PreviousCursorVisibility;
+					//Cursor.lockState = m_PreviousCursorLockMode;
+					//Cursor.visible = m_PreviousCursorVisibility;
 					if (this.m_CameraController != null)
 					{
-						this.m_CameraController.enabled = m_PreviousCameraControllerEnabled;
+						this.m_CameraTransform.SendMessage("Deactivate", this.m_CameraPreset, SendMessageOptions.DontRequireReceiver);
+						//this.m_CameraController.enabled = m_PreviousCameraControllerEnabled;
 						if (this.m_CameraController.enabled && this.m_FocusPlayer) {
 							this.m_CameraController.SendMessage("Focus", false, SendMessageOptions.DontRequireReceiver);
 						}

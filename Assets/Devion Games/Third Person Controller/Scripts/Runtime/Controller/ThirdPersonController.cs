@@ -825,7 +825,11 @@ namespace DevionGames
 
 		private void TryStartMotion (MotionState motion)
 		{
-            if (!motion.IsActive && motion.CanStart ()  && this.m_Animator.GetCurrentAnimatorStateInfo(1).IsTag("Interruptable")) {
+			if (motion.Layer > 0 && !this.m_Animator.GetCurrentAnimatorStateInfo(motion.Layer).IsTag("Interruptable")) {
+				return;
+			}
+
+            if (!motion.IsActive && motion.CanStart ()) {
 				if (!string.IsNullOrEmpty (motion.GetDestinationState ())) {
 					for (int j = 0; j < this.m_Motions.Count; j++) {
 						if (this.m_Motions [j].IsActive && this.m_Motions [j].Layer == motion.Layer && !string.IsNullOrEmpty (this.m_Motions [j].GetDestinationState ())) {

@@ -157,6 +157,8 @@ namespace DevionGames
 			element.FindPropertyRelative ("m_Name").stringValue = list.serializedProperty.arraySize==1?"Default":"Camera Preset";
 			element.FindPropertyRelative ("m_Offset").vector2Value = new Vector2 (0f, 1.5f);
 			element.FindPropertyRelative ("m_Distance").floatValue = 2.5f;
+			element.FindPropertyRelative("m_InheritDistance").boolValue = true;
+
 			element.FindPropertyRelative ("m_YawLimit").vector2Value = new Vector2 (-180f, 180f);
 			element.FindPropertyRelative ("m_PitchLimit").vector2Value = new Vector2 (-60f, 60f);
 			element.FindPropertyRelative ("m_TurnSpeed").floatValue = 2f;

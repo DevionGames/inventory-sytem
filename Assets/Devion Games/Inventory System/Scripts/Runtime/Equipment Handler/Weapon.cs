@@ -170,10 +170,9 @@ namespace DevionGames.InventorySystem
                    ( this.m_CharacterAnimator.GetCurrentAnimatorStateInfo(i).IsName(this.m_UseState) || this.m_CharacterAnimator.IsInTransition(i))) {
                     return false;
                 }
-                   
             }
 
-            if (!this.m_CharacterAnimator.GetCurrentAnimatorStateInfo(1).IsTag("Interruptable")) return false;
+            if (!this.m_CharacterAnimator.GetCurrentAnimatorStateInfo(GetUseLayer()).IsTag("Interruptable")) return false;
 
             Ray  ray = this.m_Camera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -184,6 +183,18 @@ namespace DevionGames.InventorySystem
             }
 
             return true; 
+        }
+
+        protected int GetUseLayer() {
+            int layers = this.m_CharacterAnimator.layerCount;
+            for (int i = 0; i < layers; i++)
+            {
+                if (this.m_CharacterAnimator.HasState(i, Animator.StringToHash(this.m_UseState)))
+                {
+                    return i;
+                }
+            }
+            return -1;
         }
 
         private void TryStopUse() {

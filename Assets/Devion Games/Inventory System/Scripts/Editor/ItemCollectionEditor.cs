@@ -137,7 +137,9 @@ namespace DevionGames.InventorySystem
 		{
 			GUILayout.BeginHorizontal();
 			Color color = GUI.backgroundColor;
+			if(item.Category != null)
 			GUI.backgroundColor = item.Category.EditorColor;
+
 			Texture2D icon = null;
 			if (item.Icon != null)
 				icon = item.Icon.texture;

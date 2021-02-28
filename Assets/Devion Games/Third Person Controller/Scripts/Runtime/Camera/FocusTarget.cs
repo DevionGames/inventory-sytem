@@ -17,11 +17,26 @@ namespace DevionGames
 
         [SerializeField]
         private bool m_SpinTarget = true;
+        [SerializeField]
+        private string m_SpinButton = "Fire3";
 
         private bool m_Focus;
         private ThirdPersonCamera m_ThirdPersonCamera;
         private bool m_TargetRotationFinished = false;
         private bool m_GUIClick;
+
+        public delegate void FucusDelegate(bool state);
+        /// <summary>
+        /// Called when an item is added to the container.
+        /// </summary>
+        public event FucusDelegate OnFocusChange;
+
+        public bool Focused {
+            get { return this.m_Focus; }
+            set {
+                Focus(value);
+            }
+        }
 
         private void Start()
         {
@@ -59,25 +74,27 @@ namespace DevionGames
                         this.m_GUIClick = false;
                     }
 
-                    if (Input.GetMouseButton(0) && !this.m_GUIClick)
+                    if (Input.GetButton(this.m_SpinButton) && !this.m_GUIClick)
                     {
                         float input = Input.GetAxis("Mouse X") * -this.m_Speed; 
                         target.Rotate(0, input, 0, Space.World);
                     }
                 }
-   
-
             }
         }
 
         private void Focus(bool focus)
         {
+            if (this.m_Focus == focus)
+                return;
+
             this.m_Focus = focus;
             this.m_TargetRotationFinished = false;
             this.m_GUIClick = false;
             if (this.m_Focus) {
                 this.m_ThirdPersonCamera.Target.SendMessage("Deselect", SendMessageOptions.DontRequireReceiver);
             }
+            OnFocusChange?.Invoke(focus);
         }
     }
 }

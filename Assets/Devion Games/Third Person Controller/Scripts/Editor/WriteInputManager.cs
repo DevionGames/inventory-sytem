@@ -32,11 +32,11 @@ namespace DevionGames
 					axis = 1
 				});
 			}
-			if (!AxisDefined("No Control"))
+			if (!AxisDefined("Left Control"))
 			{
 				AddAxis(new InputAxis()
 				{
-					name = "No Control",
+					name = "Left Control",
 					positiveButton = "left ctrl",
 					gravity = 1000,
 					dead = 0.1f,
@@ -45,6 +45,20 @@ namespace DevionGames
 					axis = 1
 				});
 			}
+			if (!AxisDefined("Mouse Control"))
+			{
+				AddAxis(new InputAxis()
+				{
+					name = "Mouse Control",
+					positiveButton = "m",
+					gravity = 1000,
+					dead = 0.1f,
+					sensitivity = 1000f,
+					type = AxisType.KeyOrMouseButton,
+					axis = 1
+				});
+			}
+
 			if (!AxisDefined("Evade"))
 			{
 				AddAxis(new InputAxis()

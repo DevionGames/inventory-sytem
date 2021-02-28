@@ -1516,12 +1516,11 @@ MonoBehaviour:
   references:
     version: 1
     00000000:
-      type: {class: ShowWindow, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      type: {class: Show, ns: DevionGames, asm: Assembly-CSharp}
       data:
-        m_Type: DevionGames.InventorySystem.ShowWindow
+        m_Type: DevionGames.Show
         m_Enabled: 1
-        m_WindowName: Alchemy
-        m_DestroyWhenEmpty: 0
+        m_WidgetName: Alchemy
 --- !u!114 &757395598172549354
 MonoBehaviour:
   m_ObjectHideFlags: 1

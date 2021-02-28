@@ -19,6 +19,8 @@ namespace DevionGames
 		private Vector2 m_Offset = new Vector2 (0.25f, 1.5f);
 		[SerializeField]
 		private float m_Distance = 2.5f;
+		[SerializeField]
+		private bool m_InheritDistance = true;
 
 		[HeaderLine ("Input")]
 		[SerializeField]
@@ -35,7 +37,6 @@ namespace DevionGames
 		private Vector2 m_PitchLimit = new Vector2 (-60, 60);
         [SerializeField]
         private float m_VisibilityDelta = 0.3f;
-
 
 		[SerializeField]
 		private float m_ZoomSpeed = 5f;
@@ -102,6 +103,18 @@ namespace DevionGames
 			}
 			set { 
 				this.m_Distance = value;
+			}
+		}
+
+		public bool InheritDistance
+		{
+			get
+			{
+				return this.m_InheritDistance;
+			}
+			set
+			{
+				this.m_InheritDistance = value;
 			}
 		}
 

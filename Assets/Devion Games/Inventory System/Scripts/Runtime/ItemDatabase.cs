@@ -44,5 +44,14 @@ namespace DevionGames.InventorySystem{
 			equipments.AddRange(database.equipments.Where(y => !equipments.Any(z => z.Name == y.Name)));
 			itemGroups.AddRange(database.itemGroups.Where(y => !itemGroups.Any(z => z.Name == y.Name)));
 		}
+
+		public void RemoveNullReferences() {
+			this.items.RemoveAll(x => x == null);
+			this.currencies.RemoveAll(x => x == null);
+			this.raritys.RemoveAll(x => x == null);
+			this.categories.RemoveAll(x => x == null);
+			this.equipments.RemoveAll(x => x == null);
+			this.itemGroups.RemoveAll(x => x == null);
+		}
 	}
 }

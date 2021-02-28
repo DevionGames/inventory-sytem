@@ -2,6 +2,7 @@
 using UnityEngine.EventSystems;
 using System.Collections;
 using UnityEngine.UI;
+using System.Linq;
 
 namespace DevionGames
 {
@@ -53,8 +54,17 @@ namespace DevionGames
         private bool m_CrosshairActive;
         private bool m_RotatedLastFrame;
         private bool m_CharacterControllerActive=true;
+        private FocusTarget m_FocusTarget;
+        private bool m_Focus;
 
-		private void Start ()
+        private void Awake()
+        {
+            this.m_FocusTarget = GetComponent<FocusTarget>();
+            if (this.m_FocusTarget != null) 
+                this.m_FocusTarget.OnFocusChange += OnFucusTarget;
+        }
+
+        private void Start ()
 		{
 			this.m_Transform = transform;
 			if (this.m_Transform.parent != null) {
@@ -74,13 +84,17 @@ namespace DevionGames
 			}
 
 			ApplyCrosshair (this.m_ActivePreset.Crosshair);
-			this.m_MouseY = this.Target.eulerAngles.x;
-			this.m_MouseX = this.Target.eulerAngles.y;
-			Vector3 targetPosition = this.Target.position + this.m_ActivePreset.Offset.x * this.m_Transform.right + this.m_ActivePreset.Offset.y * this.Target.up;
+            /*this.m_MouseY = this.Target.eulerAngles.x;
+			this.m_MouseX = this.Target.eulerAngles.y;*/
+            this.m_MouseY = this.m_Transform.eulerAngles.x;
+            this.m_MouseX = this.m_Transform.eulerAngles.y;
+
+            Vector3 targetPosition = this.Target.position + this.m_ActivePreset.Offset.x * this.m_Transform.right + this.m_ActivePreset.Offset.y * this.Target.up;
 			this.m_SmoothZoom = this.m_ActivePreset.Distance + this.m_ActivePreset.Zoom;
 			Vector3 direction = -this.m_SmoothZoom * this.m_Transform.forward;
 			Vector3 desiredPosition = targetPosition + direction;
 			this.m_Transform.position = desiredPosition;
+
 			Cursor.lockState = this.m_ActivePreset.CursorMode;
 			Cursor.visible = this.m_ActivePreset.CursorMode == CursorLockMode.Locked?false:true;
             EventHandler.Register<bool>(Target.gameObject, "OnSetControllerActive", OnSetControllerActive);
@@ -106,12 +120,33 @@ namespace DevionGames
             }
         }
 
+        private void OnFucusTarget(bool state) {
+            if (state)
+            {
+                if (this.m_CrosshairImage != null)
+                {
+                    this.m_CrosshairActive = this.m_CrosshairImage.gameObject.activeSelf;
+                    this.m_CrosshairImage.gameObject.SetActive(false);
+                }
+            }else {
+                if (this.m_CrosshairImage != null)
+                {
+                    this.m_CrosshairImage.gameObject.SetActive(this.m_CrosshairActive);
+                }
+            }
+            this.m_Focus = state;
+        }
+
         private void OnSetControllerActive(bool active) {
             this.m_CharacterControllerActive = active;
         }
 
-		private void LateUpdate ()
+
+        private void LateUpdate ()
 		{
+            if (this.m_Focus)
+                return;
+
             UpdateInput();
             if(!this.m_CharacterControllerActive)
                 UpdateTransform();
@@ -119,6 +154,9 @@ namespace DevionGames
 
 		public void FixedUpdate ()
 		{
+            if (this.m_Focus)
+                return;
+
             if (this.m_CharacterControllerActive)
                UpdateTransform();
 		}
@@ -127,6 +165,7 @@ namespace DevionGames
         {
             this.m_SmoothX = Mathf.SmoothDamp(this.m_SmoothX, this.m_MouseX, ref this.m_SmoothXVelocity, this.m_ActivePreset.TurnSmoothing);
             this.m_SmoothY = Mathf.SmoothDamp(this.m_SmoothY, this.m_MouseY, ref this.m_SmoothYVelocity, this.m_ActivePreset.TurnSmoothing);
+ 
             this.m_Transform.rotation = Quaternion.Euler(this.m_SmoothY, this.m_SmoothX, 0f);
 
             this.m_SmoothZoom = Mathf.SmoothDamp(this.m_SmoothZoom, this.m_ActivePreset.Distance + this.m_ActivePreset.Zoom, ref this.m_ZoomVelocity, this.m_ActivePreset.ZoomSmoothing);
@@ -193,7 +232,12 @@ namespace DevionGames
                 {
                     if (this.m_ActivePreset != preset)
                     {
+                        float currentZoom = this.m_ActivePreset.Zoom;
+
                         this.m_ActivePreset = preset;
+                        Cursor.visible = this.m_ActivePreset.CursorMode == CursorLockMode.Locked ? false : true;
+                        if (this.m_ActivePreset.InheritDistance)
+                            this.m_ActivePreset.Zoom = currentZoom;
                         ApplyCrosshair(this.m_ActivePreset.Crosshair);
                     }
                     break;
@@ -239,6 +283,22 @@ namespace DevionGames
             {
                 this.m_ActivePreset.Zoom -= Input.GetAxis("Mouse ScrollWheel") * this.m_ActivePreset.ZoomSpeed;
                 this.m_ActivePreset.Zoom = Mathf.Clamp(this.m_ActivePreset.Zoom, this.m_ActivePreset.ZoomLimit.x - this.m_ActivePreset.Distance, this.m_ActivePreset.ZoomLimit.y - this.m_ActivePreset.Distance);
+            }
+        }
+
+        public void Activate(string preset) {
+            CameraSettings settings = Presets.Where(x => x.Name == preset).FirstOrDefault();
+            if (settings != null)
+            {
+                settings.IsActive = true;
+            }
+        }
+
+        public void Deactivate(string preset) {
+            CameraSettings settings = Presets.Where(x => x.Name == preset).FirstOrDefault();
+            if (settings != null && settings.Name != "Default")
+            {
+                settings.IsActive = false;
             }
         }
 

@@ -39,6 +39,7 @@ namespace DevionGames.InventorySystem
                     }
                 });
             }
+            
         }
 
         public void OnTriggerUnUsed(GameObject player)

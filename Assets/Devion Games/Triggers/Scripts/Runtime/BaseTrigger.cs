@@ -68,6 +68,7 @@ namespace DevionGames
                     }else{
                         NotifyWentOutOfRange();
                     }
+                    Debug.Log(name+" "+value);
                 }
             }
         }
@@ -128,7 +129,7 @@ namespace DevionGames
         protected virtual void OnEnable()
         {
            
-            if (Time.frameCount > 0 && this.m_Started && PlayerInfo.transform != null)
+            if (Time.frameCount > 0 && this.m_Started && PlayerInfo.transform != null && useDistance > -1)
                 InRange = Vector3.Distance(transform.position, PlayerInfo.transform.position) <= this.useDistance;
         }
 

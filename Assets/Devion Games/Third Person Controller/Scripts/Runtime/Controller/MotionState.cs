@@ -186,11 +186,13 @@ namespace DevionGames
 			OnStop ();
 			if(!string.IsNullOrEmpty(GetDestinationState()))
 				m_Controller.CheckDefaultAnimatorStates();
-			CameraSettings preset = this.m_Camera.Presets.Where(x => x.Name == CameraPreset).FirstOrDefault();
+
+			this.m_Camera.Deactivate(CameraPreset);
+			/*CameraSettings preset = this.m_Camera.Presets.Where(x => x.Name == CameraPreset).FirstOrDefault();
 			if (preset != null && preset.Name != "Default")
 			{
 				preset.IsActive = false;
-			}
+			}*/
 			//Debug.Log("Stop Motion "+FriendlyName);
 
 		}
@@ -205,11 +207,12 @@ namespace DevionGames
 
 			OnStart ();
 
-			CameraSettings preset = this.m_Camera.Presets.Where(x => x.Name == CameraPreset).FirstOrDefault();
+			this.m_Camera.Activate(CameraPreset);
+			/*CameraSettings preset = this.m_Camera.Presets.Where(x => x.Name == CameraPreset).FirstOrDefault();
 			if (preset != null)
 			{
 				preset.IsActive = true;
-			}
+			}*/
 
 
 			string destinationState = GetDestinationState ();

@@ -50,7 +50,6 @@ namespace DevionGames.InventorySystem
 
         private void OnAddItem(Item item, Slot slot)
         {
-            Debug.Log("OnEquip");
             if (item != null && item is EquipmentItem)
             {
                 EquipItem(item as EquipmentItem);

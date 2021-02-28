@@ -72,7 +72,8 @@ namespace DevionGames
                     NotifyInterrupted();
                     this.m_ActionBehavior.Interrupt();
                 }
-                this.InRange = false;
+                if(useDistance > -1)
+                    this.InRange = false;
             }
         }
 
