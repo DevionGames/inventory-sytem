@@ -148,7 +148,7 @@ namespace DevionGames.InventorySystem
         public bool CanBuyBack { get { return this.m_CanBuyBack; } }
 
         [Tooltip("The buy currency. You can also use a lower currency, it will be auto converted. 120 Copper will be converted to 1 Silver and 20 Copper.")]
-        [CurrencyPicker(true)]
+        [CurrencyPicker]
         [SerializeField]
         private Currency m_BuyCurrency=null;
 
@@ -166,7 +166,7 @@ namespace DevionGames.InventorySystem
 		}
 
         [Tooltip("The sell currency. You can also use a lower currency, it will be auto converted. 120 Copper will be converted to 1 Silver and 20 Copper.")]
-        [CurrencyPicker(true)]
+        [CurrencyPicker]
         [SerializeField]
         private Currency m_SellCurrency= null;
 
@@ -272,7 +272,7 @@ namespace DevionGames.InventorySystem
         }
 
         [Tooltip("What skill should be used when crafting? The current players skill will be searched in skill window set above.")]
-        [ItemPicker(true)]
+        [ItemPicker]
         [SerializeField]
         private Skill m_CraftingSkill = null;
         public Skill CraftingSkill {
@@ -518,7 +518,7 @@ namespace DevionGames.InventorySystem
         [System.Serializable]
         public class Ingredient
         {
-            [ItemPicker(true)]
+            [ItemPicker]
             public Item item;
             public int amount = 1;
         }

@@ -12,7 +12,7 @@ namespace DevionGames.InventorySystem
         public override string[] Callbacks => new string[] { "OnEquip", "OnUnEquip" };
 
 
-        [ItemPicker(true)]
+        [ItemPicker]
         public Item item;
 
         [SerializeField]
@@ -83,7 +83,7 @@ namespace DevionGames.InventorySystem
 
         [System.Serializable]
         public class Attachment {
-            [EquipmentPicker(true)]
+            [EquipmentPicker]
             public EquipmentRegion region;
             public GameObject prefab;
             public Vector3 position;

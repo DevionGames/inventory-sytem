@@ -7,7 +7,7 @@ namespace DevionGames.InventorySystem.Restrictions
 {
     public class EquipmentRegion : Restriction
     {
-        [EquipmentPicker(true)]
+        [EquipmentPicker]
         public DevionGames.InventorySystem.EquipmentRegion region;
 
         public override bool CanAddItem(Item item)

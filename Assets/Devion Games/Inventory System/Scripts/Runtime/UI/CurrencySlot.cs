@@ -11,7 +11,7 @@ namespace DevionGames.InventorySystem
         /// <summary>
         /// Currency this slot is holding
         /// </summary>
-        [CurrencyPicker(true)]
+        [CurrencyPicker]
         [SerializeField]
         protected Currency m_Currency;
         /// <summary>

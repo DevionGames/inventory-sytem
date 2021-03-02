@@ -14,7 +14,7 @@ namespace DevionGames.InventorySystem
         [SerializeField]
         private string m_WindowName = "Skills";
 
-        [ItemPicker(true)]
+        [ItemPicker]
         [SerializeField]
         private Skill m_Skill= null;
         [SerializeField]

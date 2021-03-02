@@ -1,0 +1,1 @@
+- Integrated camera preset option to UI Widgets

@@ -7,9 +7,9 @@ namespace DevionGames.InventorySystem
     [System.Serializable]
     public class ItemCondition
     {
-        [ItemPicker(true)]
+        [ItemPicker]
         public Item item;
-        [CategoryPicker(true)]
+        [CategoryPicker]
         public Category category;
         public bool boolValue;
         public string stringValue;

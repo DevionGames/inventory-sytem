@@ -7,7 +7,7 @@ namespace DevionGames.InventorySystem
     [System.Serializable]
     public class ItemGeneratorData
     {
-        [ItemPicker(true)]
+        [ItemPicker]
         public Item item;
         public int minStack = 1;
         public int maxStack = 1;

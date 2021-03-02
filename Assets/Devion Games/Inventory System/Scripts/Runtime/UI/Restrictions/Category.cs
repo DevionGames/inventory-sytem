@@ -6,7 +6,7 @@ namespace DevionGames.InventorySystem.Restrictions
 {
     public class Category : Restriction
     {
-        [CategoryPicker(true)]
+        [CategoryPicker]
         [SerializeField]
         private DevionGames.InventorySystem.Category[] m_Categories = null;
         [SerializeField]

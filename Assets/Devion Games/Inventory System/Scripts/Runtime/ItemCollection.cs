@@ -10,7 +10,7 @@ namespace DevionGames.InventorySystem
 	public class ItemCollection : MonoBehaviour, IEnumerable<Item>, IJsonSerializable
     {
         public bool saveable = true;
-		[ItemPicker (true)]
+		[ItemPicker]
 		[SerializeField]
         [FormerlySerializedAs("items")]
         protected List<Item> m_Items = new List<Item> ();

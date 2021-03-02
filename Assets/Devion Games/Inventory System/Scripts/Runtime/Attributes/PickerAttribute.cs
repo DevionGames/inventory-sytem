@@ -4,12 +4,13 @@ using System.Collections;
 
 namespace DevionGames.InventorySystem{
 	public class PickerAttribute : PropertyAttribute {
-		public bool utility;
+
+		public bool acceptNull;
 
 		public PickerAttribute():this(false){}
 		
-		public PickerAttribute(bool utility){
-			this.utility = utility; 
+		public PickerAttribute(bool acceptNull){
+			this.acceptNull = acceptNull;
 		}
 	}
 }

@@ -1,1 +1,1 @@
-- Animator actions search for child animator if root is null
+- Implemented to set BehaviorTrigger.InUse when ShowWindow was called outside.

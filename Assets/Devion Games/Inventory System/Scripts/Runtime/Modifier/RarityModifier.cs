@@ -8,7 +8,7 @@ namespace DevionGames.InventorySystem
     [System.Serializable]
     public class RarityModifier : ItemModifier
     {
-        [RarityPicker(true)]
+        [RarityPicker]
         [SerializeField]
         protected List<Rarity> m_Rarities = new List<Rarity>();
 

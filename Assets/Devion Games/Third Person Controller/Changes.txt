@@ -1,5 +1,3 @@
-- Combo integration
-- Spells override item use
-- Evade
-- Climb
-- Ladder
+- Interuptable layer index in Animator Controller can be any now (was only index = 1 possible)
+- Spin Button option in FocusTarget
+- Inherit distance option when switching between camera presets
