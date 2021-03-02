@@ -4726,6 +4726,7 @@ MonoBehaviour:
   actionTemplate: {fileID: 0}
   actions:
   - id: 0
+  - id: 1
   m_Interruptable: 1
   m_RequiredIngredientsWindow: Inventory
   m_ResultStorageWindow: Inventory
@@ -4733,6 +4734,18 @@ MonoBehaviour:
   references:
     version: 1
     00000000:
+      type: {class: HasItem, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.HasItem
+        m_Enabled: 1
+        requiredItems:
+        - item: {fileID: 9165992345120903733, guid: e1f045c49e197e3439b99da9edbc5ba3,
+            type: 2}
+          category: {fileID: 0}
+          boolValue: 0
+          stringValue: Skills
+          intValue: 0
+    00000001:
       type: {class: ShowWindow, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
       data:
         m_Type: DevionGames.InventorySystem.ShowWindow

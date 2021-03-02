@@ -35,6 +35,8 @@ namespace DevionGames
         }
 
         public void Stop() {
+            if (this.m_Actions == null) return;
+
             for (int i = 0; i < this.m_Actions.Length; i++)
             {
                 this.m_Actions[i].OnSequenceEnd();
@@ -43,6 +45,7 @@ namespace DevionGames
         }
 
         public void Interrupt() {
+            if (this.m_Actions == null) return;
             for (int i = 0; i <= this.m_ActionIndex; i++)
             {
                 if(i < this.m_Actions.Length)

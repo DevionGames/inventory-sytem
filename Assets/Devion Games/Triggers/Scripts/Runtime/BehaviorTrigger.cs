@@ -53,14 +53,14 @@ namespace DevionGames
             {
                 Use();
             }
-            if (this.m_Interruptable && this.InUse && (Mathf.Abs(Input.GetAxis("Horizontal")) > 0.5f || Mathf.Abs(Input.GetAxis("Vertical")) > 0.5f))
+            if (this.m_Interruptable && (this.InUse || this.actions.Count == 0) && (Mathf.Abs(Input.GetAxis("Horizontal")) > 0.5f || Mathf.Abs(Input.GetAxis("Vertical")) > 0.5f))
             {
                 NotifyInterrupted();
                 this.m_ActionBehavior.Interrupt();  
                 return;
             }
             //Update task behavior, set in use if it is running
-            this.InUse = this.m_ActionBehavior.Tick();
+            this.InUse = this.m_ActionBehavior.Tick() || (actions.Count == 0 && (this.actionTemplate == null || actionTemplate.actions.Count==0));
 
         }
 
@@ -93,7 +93,6 @@ namespace DevionGames
 
         protected void NotifyInterrupted() {
             this.InUse = false;
-          //  NotifyUnUsed();
             OnTriggerInterrupted();
         }
 

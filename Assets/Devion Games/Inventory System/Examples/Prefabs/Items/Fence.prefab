@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 2049
   maxHeightDiffrence: 0.3
   maxDistance: 10
   rotate: 101
@@ -135,9 +135,11 @@ MonoBehaviour:
   useDistance: 1.2
   triggerType: 8
   key: 102
+  actionTemplate: {fileID: 0}
   actions:
   - id: 0
   - id: 1
+  m_Interruptable: 0
   references:
     version: 1
     00000000:

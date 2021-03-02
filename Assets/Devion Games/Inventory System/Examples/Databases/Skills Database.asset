@@ -70,8 +70,10 @@ MonoBehaviour:
   - {fileID: 7032449652308580212}
   - {fileID: 5770177478895120047}
   - {fileID: -2308325603847997442}
-  m_Amounts: 01000000010000000100000001000000
+  - {fileID: 9165992345120903733}
+  m_Amounts: 0100000001000000010000000100000001000000
   m_Modifiers:
+  - modifiers: []
   - modifiers: []
   - modifiers: []
   - modifiers: []
@@ -472,6 +474,7 @@ MonoBehaviour:
   - {fileID: -904524929377059290}
   - {fileID: -2308325603847997442}
   - {fileID: 5770177478895120047}
+  - {fileID: 9165992345120903733}
   currencies: []
   raritys: []
   categories:
@@ -737,3 +740,54 @@ MonoBehaviour:
   name: None
   m_EditorColor: {r: 0, g: 0, b: 0, a: 0}
   m_Cooldown: 1
+--- !u!114 &9165992345120903733
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9a3ee254b78a64481dccedbfd4ba41, type: 3}
+  m_Name: Cooking
+  m_EditorClassIdentifier: 
+  m_Id: f8c1c8d2-32f9-4187-a472-972f85b32bef
+  m_ItemName: Cooking
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: d3316fbdddb3b5246996a2fcad5c47d9, type: 3}
+  m_Prefab: {fileID: 0}
+  m_Description: Increases the chance to successfully cook meal.
+  m_Category: {fileID: 4301833095063581124}
+  m_IsSellable: 1
+  m_BuyPrice: 35
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: -2811142919616601772, guid: 1ae57b994efcab048a1bb130d4e11d83,
+    type: 2}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: 0}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 1
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 1
+  m_Cooldown: 1
+  actions: []
+  m_FixedSuccessChance: 50
+  m_GainModifier: {fileID: 11400000, guid: 008ca9312f640ab42bc1de739c2d0a78, type: 2}
+  references:
+    version: 1

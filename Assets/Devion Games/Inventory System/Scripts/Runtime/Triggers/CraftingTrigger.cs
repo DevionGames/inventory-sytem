@@ -63,7 +63,7 @@ namespace DevionGames.InventorySystem
         private Progressbar m_Progressbar;
         private Spinner m_AmountSpinner;
 
-        private Coroutine coroutine;
+
 
         protected override void Start()
         {
@@ -71,6 +71,12 @@ namespace DevionGames.InventorySystem
             this.m_ResultStorageContainer = WidgetUtility.Find<ItemContainer>(this.m_ResultStorageWindow);
             this.m_RequiredIngredientsContainer = WidgetUtility.Find<ItemContainer>(this.m_RequiredIngredientsWindow);
             this.m_Progressbar = WidgetUtility.Find<Progressbar>(this.m_CraftingProgressbar);
+
+            ItemContainer container = GetComponent<ItemContainer>();
+            if (container != null) {
+                container.RegisterListener("OnShow", (CallbackEventData ev) => { InUse = true;  });
+                container.RegisterListener("OnClose", (CallbackEventData ev) => { InUse = false; });
+            }
         }
 
 
@@ -179,7 +185,7 @@ namespace DevionGames.InventorySystem
 
             }
             //this.m_RequiredIngredientsContainer.Lock(true);
-           coroutine= StartCoroutine(CraftItems(item, amount));
+            StartCoroutine(CraftItems(item, amount));
             ExecuteEvent<ITriggerCraftStart>(Execute, item);
 
         }

@@ -288,8 +288,10 @@ MonoBehaviour:
   - {fileID: 529780001783015153}
   - {fileID: 757395598172549354}
   - {fileID: -1922893622408926672}
-  m_Amounts: 0100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  - {fileID: 480903752669161454}
+  m_Amounts: 010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
   m_Modifiers:
+  - modifiers: []
   - modifiers: []
   - modifiers: []
   - modifiers: []
@@ -1437,13 +1439,13 @@ MonoBehaviour:
   m_Icon: {fileID: 21300000, guid: 693293c396231194abeef3171f977485, type: 3}
   m_Prefab: {fileID: 4297410541953718099, guid: 233c66a6349a8c141972c04334801bca,
     type: 3}
-  m_Description: 
+  m_Description: A campfire can be used to cook food or act as a light source.
   m_Category: {fileID: -6294223960729143046}
-  m_IsSellable: 0
-  m_BuyPrice: 0
+  m_IsSellable: 1
+  m_BuyPrice: 16
   m_CanBuyBack: 1
   m_BuyCurrency: {fileID: -2811142919616601772}
-  m_SellPrice: 0
+  m_SellPrice: 12
   m_SellCurrency: {fileID: -2811142919616601772}
   m_Stack: 1
   m_MaxStack: 1
@@ -1516,11 +1518,12 @@ MonoBehaviour:
   references:
     version: 1
     00000000:
-      type: {class: Show, ns: DevionGames, asm: Assembly-CSharp}
+      type: {class: ShowWindow, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
       data:
-        m_Type: DevionGames.Show
+        m_Type: DevionGames.InventorySystem.ShowWindow
         m_Enabled: 1
-        m_WidgetName: Alchemy
+        m_WindowName: Alchemy
+        m_DestroyWhenEmpty: 0
 --- !u!114 &757395598172549354
 MonoBehaviour:
   m_ObjectHideFlags: 1

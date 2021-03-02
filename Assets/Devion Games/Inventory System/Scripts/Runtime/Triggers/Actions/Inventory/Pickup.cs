@@ -26,6 +26,10 @@ namespace DevionGames.InventorySystem
             this.m_ItemCollection.onChange.AddListener(delegate () {
                 if (this.m_ItemCollection.IsEmpty && this.m_DestroyWhenEmpty)
                 {
+                    DisplayTriggerTooltip tooltip = gameObject.GetComponent<DisplayTriggerTooltip>();
+                    if (tooltip != null) {
+                        GameObject.Destroy(tooltip);
+                    }
                     GameObject.Destroy(gameObject,0.1f);
                 }
             });
