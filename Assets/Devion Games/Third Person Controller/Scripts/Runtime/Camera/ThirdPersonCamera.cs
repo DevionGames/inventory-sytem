@@ -178,6 +178,7 @@ namespace DevionGames
             if (Physics.SphereCast(targetPosition - direction.normalized * this.m_ActivePreset.CollisionRadius, this.m_ActivePreset.CollisionRadius, direction.normalized, out hit, direction.magnitude, this.m_ActivePreset.CollisionLayer, QueryTriggerInteraction.Ignore))
             {
                 desiredPosition = hit.point + (hit.normal * 0.1f);
+                Debug.Log(hit.transform);
             }
             this.m_Transform.position = Vector3.SmoothDamp(this.m_Transform.position, desiredPosition, ref this.m_SmoothMoveVelocity, this.m_ActivePreset.MoveSmoothing);
         }

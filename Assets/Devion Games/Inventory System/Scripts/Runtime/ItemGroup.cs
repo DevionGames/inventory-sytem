@@ -16,7 +16,6 @@ namespace DevionGames.InventorySystem
             set { this.m_GroupName = value; }
         }
 
-        [ItemPicker]
         [SerializeField]
         private Item[] m_Items=new Item[0];
         public Item[] Items {

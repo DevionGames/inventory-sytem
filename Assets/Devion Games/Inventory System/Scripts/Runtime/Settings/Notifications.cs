@@ -81,11 +81,6 @@ namespace DevionGames.InventorySystem.Configuration
         {
             text = "You don't have the skill to craft this item!"
         };
-        public NotificationOptions requiresHigherSkill = new NotificationOptions()
-        {
-            text = "Your {0} is to low to craft {1}."
-        };
-
 
         [Header("Vendor:")]
         public NotificationOptions soldItem = new NotificationOptions()

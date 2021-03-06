@@ -83,7 +83,6 @@ namespace DevionGames.InventorySystem
         [Tooltip("The category the item belongs to. Used to sort the items collection in editor or also at runtime in the UI.")]
 		[Header ("Behaviour:")]
         [SerializeField]
-        [CategoryPicker]
         private Category m_Category = null;
 
         public Category Category
@@ -148,7 +147,6 @@ namespace DevionGames.InventorySystem
         public bool CanBuyBack { get { return this.m_CanBuyBack; } }
 
         [Tooltip("The buy currency. You can also use a lower currency, it will be auto converted. 120 Copper will be converted to 1 Silver and 20 Copper.")]
-        [CurrencyPicker]
         [SerializeField]
         private Currency m_BuyCurrency=null;
 
@@ -166,7 +164,6 @@ namespace DevionGames.InventorySystem
 		}
 
         [Tooltip("The sell currency. You can also use a lower currency, it will be auto converted. 120 Copper will be converted to 1 Silver and 20 Copper.")]
-        [CurrencyPicker]
         [SerializeField]
         private Currency m_SellCurrency= null;
 
@@ -213,6 +210,14 @@ namespace DevionGames.InventorySystem
             }
 		}
 
+        [Tooltip("Can this item be destroyed?")]
+        [SerializeField]
+        private bool m_CanDestroy = true;
+        public bool CanDestroy {
+            get { return this.m_CanDestroy; }
+        }
+
+
         [Tooltip("If set to true, the item is droppable from a container to the scene.")]
 		[SerializeField]
 		private bool m_IsDroppable = true;
@@ -237,7 +242,16 @@ namespace DevionGames.InventorySystem
 			get{ return this.m_OverridePrefab; }
 		}
 
-        [Tooltip("Defines if the item is craftable.")]
+        [AcceptNull]
+        [SerializeField]
+        private CraftingRecipe m_CraftingRecipe = null;
+        
+        public CraftingRecipe CraftingRecipe {
+            get { return this.m_CraftingRecipe; }
+            set { this.m_CraftingRecipe = value; }
+        }
+
+        /*[Tooltip("Defines if the item is craftable.")]
         //TODO Move all to CraftingData class
         [SerializeField]
         private bool m_IsCraftable=false;
@@ -311,7 +325,7 @@ namespace DevionGames.InventorySystem
             set { this.m_CraftingModifier = value; }
         }
 
-        public List<Ingredient> ingredients = new List<Ingredient>();
+        public List<Ingredient> ingredients = new List<Ingredient>();*/
 
 
         public ItemContainer Container
@@ -513,14 +527,6 @@ namespace DevionGames.InventorySystem
                     }
                 }
             }
-        }
-
-        [System.Serializable]
-        public class Ingredient
-        {
-            [ItemPicker]
-            public Item item;
-            public int amount = 1;
         }
     }
 }

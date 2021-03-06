@@ -12,7 +12,6 @@ namespace DevionGames.InventorySystem.ItemActions
     {
         [SerializeField]
         private string m_WindowName = "Inventory";
-        [ItemPicker]
         [SerializeField]
         private Item m_Item = null;
         [Range(1, 200)]
@@ -21,21 +20,13 @@ namespace DevionGames.InventorySystem.ItemActions
 
         public override ActionStatus OnUpdate()
         {
-            Item instance = ScriptableObject.Instantiate(this.m_Item);
+            Item instance = InventoryManager.CreateInstance(this.m_Item);
             instance.Stack = this.m_Amount;
-            if (this.m_Item.IsCraftable)
+            if (ItemContainer.AddItem(this.m_WindowName, instance))
             {
-                for (int j = 0; j < this.m_Item.ingredients.Count; j++)
-                {
-                    instance.ingredients[j].item = ScriptableObject.Instantiate(this.m_Item.ingredients[j].item);
-                    instance.ingredients[j].item.Stack = this.m_Item.ingredients[j].amount;
-                }
-            }
-            if (ItemContainer.AddItem(this.m_WindowName, instance)) {
                 return ActionStatus.Success;
             }
             return ActionStatus.Failure;
-
         }
     }
 }

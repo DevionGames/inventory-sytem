@@ -29,7 +29,6 @@ namespace DevionGames.InventorySystem
         protected Transform m_FirePoint;
         [SerializeField]
         protected Transform m_ReloadPoint;
-        [ItemPicker]
         [SerializeField]
         protected Item m_ProjectileItem;
         [SerializeField]

@@ -85,7 +85,7 @@ namespace DevionGames{
 			ResizeSidebar();
 		}
 
-		private void DrawSidebar(Rect position) {
+		protected void DrawSidebar(Rect position) {
 			m_SidebarRect = position;
 			GUILayout.BeginArea(m_SidebarRect, "", Styles.leftPane);
 			GUILayout.BeginHorizontal();
@@ -259,7 +259,7 @@ namespace DevionGames{
 			GUILayout.EndArea();
 		}
 
-		private void ShowContextMenu(T currentItem) {
+		protected void ShowContextMenu(T currentItem) {
 			GenericMenu contextMenu = new GenericMenu();
 			if (CanRemove)
 				contextMenu.AddItem(new GUIContent("Delete"), false, delegate { Remove(currentItem); });
@@ -425,7 +425,7 @@ namespace DevionGames{
 			m_SearchString = EditorTools.SearchField (m_SearchString);
 		}
 
-		private void ResizeSidebar(){
+		protected void ResizeSidebar(){
 			Rect rect = new Rect (m_SidebarRect.width - LIST_RESIZE_WIDTH*0.5f, m_SidebarRect.y, LIST_RESIZE_WIDTH, m_SidebarRect.height);
 			EditorGUIUtility.AddCursorRect(rect, MouseCursor.ResizeHorizontal);
 			int controlID = GUIUtility.GetControlID(FocusType.Passive);

@@ -4788,7 +4788,7 @@ MonoBehaviour:
   m_CameraPreset: UI
   m_CloseOnMove: 0
   m_FocusPlayer: 0
-  useButton: 2
+  useButton: 1
   m_DynamicContainer: 0
   m_SlotParent: {fileID: 2740522860500275141}
   m_SlotPrefab: {fileID: 0}
@@ -4799,7 +4799,8 @@ MonoBehaviour:
   m_CanReferenceItems: 1
   m_CanSellItems: 1
   m_CanUseItems: 1
-  m_UseContextMenu: 0
+  m_UseContextMenu: 1
+  m_ContextMenuButton: 2
   m_ShowTooltips: 1
   m_MoveUsedItem: 1
   moveItemConditions:

@@ -80,28 +80,30 @@ namespace DevionGames.InventorySystem
             if (m_ChildEditors != null)
             {
                 this.m_Database.RemoveNullReferences();
-                m_ChildEditors[toolbarIndex].OnGUI(new Rect(0f, 30f, position.width, position.height - 30f));
+                m_ChildEditors[toolbarIndex].OnGUI(new Rect(0f, 20f, position.width, position.height - 20f));
             }
         }
 
         private void DoToolbar() {
-            EditorGUILayout.Space();
-            GUILayout.BeginHorizontal();
+            GUILayout.BeginHorizontal(EditorStyles.toolbar);
             GUILayout.FlexibleSpace();
 
             SelectDatabaseButton();
-           
+            GUILayout.Space(2f);
             if (this.m_ChildEditors != null)
-                toolbarIndex = GUILayout.Toolbar(toolbarIndex, toolbarNames, GUILayout.MinWidth(200));
+                toolbarIndex = GUILayout.Toolbar(toolbarIndex, toolbarNames,EditorStyles.toolbarButton, GUILayout.MinWidth(200));
 
             GUILayout.FlexibleSpace();
             GUILayout.EndHorizontal();
+
+
         }
 
         private void SelectDatabaseButton() {
             GUIStyle buttonStyle = EditorStyles.objectField;
             GUIContent buttonContent = new GUIContent(this.m_Database != null ? this.m_Database.name : "Null");
             Rect buttonRect = GUILayoutUtility.GetRect(180f,18f);
+            buttonRect.y += 1f;
             if (GUI.Button(buttonRect, buttonContent, buttonStyle))
             {
                 ObjectPickerWindow.ShowWindow(buttonRect, typeof(ItemDatabase), 
@@ -143,10 +145,13 @@ namespace DevionGames.InventorySystem
                 this.m_ChildEditors = new List<ICollectionEditor>();
                 this.m_ChildEditors.Add(new ItemCollectionEditor(this.m_Database, this.m_Database.items, this.m_Database.categories.Select(x => x.Name).ToList()));
                 this.m_ChildEditors.Add(new ScriptableObjectCollectionEditor<Currency>(this.m_Database, this.m_Database.currencies));
+                this.m_ChildEditors.Add(new ScriptableObjectCollectionEditor<CraftingRecipe>(this.m_Database, this.m_Database.craftingRecipes));
+
                 this.m_ChildEditors.Add(new ScriptableObjectCollectionEditor<Rarity>(this.m_Database, this.m_Database.raritys));
                 this.m_ChildEditors.Add(new ScriptableObjectCollectionEditor<Category>(this.m_Database, this.m_Database.categories));
                 this.m_ChildEditors.Add(new ScriptableObjectCollectionEditor<EquipmentRegion>(this.m_Database, this.m_Database.equipments));
                 this.m_ChildEditors.Add(new ScriptableObjectCollectionEditor<ItemGroup>(this.m_Database, this.m_Database.itemGroups));
+
                 this.m_ChildEditors.Add(new Configuration.ItemSettingsEditor(this.m_Database, this.m_Database.settings));
 
                 for (int i = 0; i < this.m_ChildEditors.Count; i++)
@@ -155,6 +160,5 @@ namespace DevionGames.InventorySystem
                 }
             }
         }
-
     }
 }

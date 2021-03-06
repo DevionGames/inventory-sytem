@@ -533,14 +533,15 @@ namespace DevionGames.InventorySystem
                 item = Instantiate(item);
                 item.Stack = amounts[i];
                 if(i < modifierLists.Length)
-                    modifierLists[i].Modify(item); 
+                    modifierLists[i].Modify(item);
 
-                if (item.IsCraftable)
-                {
-                    for (int j = 0; j < item.ingredients.Count; j++)
+                if (item.CraftingRecipe != null) {
+                    item.CraftingRecipe = Instantiate(item.CraftingRecipe);
+
+                    for (int j = 0; j < item.CraftingRecipe.Ingredients.Count; j++)
                     {
-                        item.ingredients[j].item = Instantiate(item.ingredients[j].item);
-                        item.ingredients[j].item.Stack = item.ingredients[j].amount;
+                        item.CraftingRecipe.Ingredients[j].item = Instantiate(item.CraftingRecipe.Ingredients[j].item);
+                        item.CraftingRecipe.Ingredients[j].item.Stack = item.CraftingRecipe.Ingredients[j].amount;
                     }
                 }
                 instances[i] = item;

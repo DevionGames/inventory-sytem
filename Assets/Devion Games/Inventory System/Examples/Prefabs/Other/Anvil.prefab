@@ -147,16 +147,9 @@ MonoBehaviour:
   - id: 0
   - id: 1
   - id: 2
-  - id: 3
-  - id: 4
-  - id: 5
-  - id: 6
-  - id: 7
-  - id: 8
-  - id: 9
   m_Interruptable: 1
-  m_RequiredIngredientsWindow: Inventory
-  m_ResultStorageWindow: Inventory
+  m_IngredientsWindow: Inventory
+  m_StorageWindow: Inventory
   m_CraftingProgressbar: CraftingProgress
   references:
     version: 1
@@ -179,70 +172,12 @@ MonoBehaviour:
           stringValue: Skills
           intValue: 0
     00000001:
-      type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.SetEnabled
-        m_Enabled: 0
-        m_Target: 1
-        m_ComponentName: ThirdPersonController
-        m_Enable: 0
-    00000002:
-      type: {class: ApplyRootMotion, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.ApplyRootMotion
-        m_Enabled: 0
-        m_Target: 1
-        m_Apply: 0
-    00000003:
-      type: {class: SetFloat, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.SetFloat
-        m_Enabled: 0
-        m_Target: 1
-        m_ParameterName: Forward Input
-        m_Value: 1
-        m_DampTime: 0
-    00000004:
-      type: {class: MoveTowards, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.MoveTowards
-        m_Enabled: 0
-        m_Target: 1
-        m_Position: {x: 11.94487, y: 0, z: 4.779361}
-        m_Speed: 2
-        m_LookAtPosition: 1
-        m_UsePath: 1
-    00000005:
-      type: {class: SetFloat, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.SetFloat
-        m_Enabled: 0
-        m_Target: 1
-        m_ParameterName: Forward Input
-        m_Value: 0
-        m_DampTime: 0
-    00000006:
       type: {class: LookAtTrigger, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.LookAtTrigger
         m_Enabled: 1
         m_Speed: 5
-    00000007:
-      type: {class: ApplyRootMotion, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.ApplyRootMotion
-        m_Enabled: 0
-        m_Target: 1
-        m_Apply: 1
-    00000008:
-      type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.SetEnabled
-        m_Enabled: 0
-        m_Target: 1
-        m_ComponentName: ThirdPersonController
-        m_Enable: 1
-    00000009:
+    00000002:
       type: {class: ShowWindow, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
       data:
         m_Type: DevionGames.InventorySystem.ShowWindow

@@ -28,7 +28,6 @@ namespace DevionGames.InventorySystem
         [System.Serializable]
         public class Entry {
             public string name = "Inventory";
-            [ItemGroupPicker]
             public ItemGroup group;
         }
     }

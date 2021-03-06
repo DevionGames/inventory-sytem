@@ -125,11 +125,11 @@ namespace DevionGames.InventorySystem
             if (this.m_Ingredients != null)
             {
                 this.m_Ingredients.RemoveItems();
-                if (!IsEmpty) { 
-                    for (int i = 0; i < ObservedItem.ingredients.Count; i++)
+                if (!IsEmpty && ObservedItem.CraftingRecipe != null) { 
+                    for (int i = 0; i < ObservedItem.CraftingRecipe.Ingredients.Count; i++)
                     {
-                        Item ingredient = Instantiate(ObservedItem.ingredients[i].item);
-                        ingredient.Stack = ObservedItem.ingredients[i].amount;
+                        Item ingredient = Instantiate(ObservedItem.CraftingRecipe.Ingredients[i].item);
+                        ingredient.Stack = ObservedItem.CraftingRecipe.Ingredients[i].amount;
                         this.m_Ingredients.StackOrAdd(ingredient);
                     }
                 }
@@ -235,40 +235,40 @@ namespace DevionGames.InventorySystem
          
                 }
 
-                if (isUnstacking){
+                if (isUnstacking)
                     return;
-                }
-            
-                if (Container.useButton.HasFlag((InputButton)Mathf.Clamp(((int)eventData.button * 2), 1, int.MaxValue)) && ObservedItem != null)
+
+                if (ObservedItem == null)
+                    return;
+
+                if (Container.useButton.HasFlag((InputButton)Mathf.Clamp(((int)eventData.button * 2), 1, int.MaxValue)))
                 {
-                    if (Container.UseContextMenu)
+                    Use();
+                } else if (Container.UseContextMenu && Container.ContextMenuButton.HasFlag((InputButton)Mathf.Clamp(((int)eventData.button * 2), 1, int.MaxValue))) {
+                    UIWidgets.ContextMenu menu = InventoryManager.UI.contextMenu;
+                    if (menu == null) { return; }
+                    menu.Clear();
+
+                    if (Trigger.currentUsedTrigger != null && Trigger.currentUsedTrigger is VendorTrigger && Container.CanSellItems)
                     {
-                        UIWidgets.ContextMenu menu = InventoryManager.UI.contextMenu;
-                        if (menu == null) { return; }
-                        menu.Clear();
-
-                        if (Trigger.currentUsedTrigger != null && Trigger.currentUsedTrigger is VendorTrigger && Container.CanSellItems)
-                        {
-                            menu.AddMenuItem("Sell", Use);
-                        }
-                        else if (ObservedItem is UsableItem)
-                        {
-                            menu.AddMenuItem("Use", Use);
-
-                        }
-                        if (ObservedItem.MaxStack > 1 || ObservedItem.MaxStack == 0)
-                        {
-                            menu.AddMenuItem("Unstack", Unstack);
-                        }
-                        
-                        menu.AddMenuItem("Drop", DropItem);
-
-                        menu.Show();
+                        menu.AddMenuItem("Sell", Use);
                     }
-                    else
+                    else if (ObservedItem is UsableItem)
                     {
-                        Use();
+                        menu.AddMenuItem("Use", Use);
+
                     }
+                    if (ObservedItem.MaxStack > 1 || ObservedItem.MaxStack == 0)
+                    {
+                        menu.AddMenuItem("Unstack", Unstack);
+                    }
+
+                    menu.AddMenuItem("Drop", DropItem);
+
+                    if(ObservedItem.CanDestroy)
+                        menu.AddMenuItem("Destroy", DestroyItem);
+
+                    menu.Show();
                 }
             }
         }
@@ -419,6 +419,10 @@ namespace DevionGames.InventorySystem
             {
                 InventoryManager.UI.stack.SetItem(ObservedItem);
             }
+        }
+
+        private void DestroyItem() {
+            Container.RemoveItem(Index);
         }
 
         /// <summary>

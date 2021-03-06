@@ -8,7 +8,6 @@ namespace DevionGames.InventorySystem
     [RequireComponent(typeof(ItemCollection))]
     public class ItemGroupGenerator : MonoBehaviour, IGenerator
     {
-        [ItemGroupPicker]
         [SerializeField]
         private ItemGroup m_From = null;
         [SerializeField]
@@ -68,7 +67,12 @@ namespace DevionGames.InventorySystem
 
                 Item item = items[Random.Range(0, items.Count)];
                 int stack = Random.Range(this.m_MinStack,this.m_MaxStack);
-                item = Instantiate(item);
+                
+                item = InventoryManager.CreateInstance(item);
+                item.Stack = stack;
+                this.m_Modifiers.Modify(item);
+
+               /* item = Instantiate(item);
                 item.Stack = stack;
 
                 this.m_Modifiers.Modify(item);
@@ -80,7 +84,7 @@ namespace DevionGames.InventorySystem
                         item.ingredients[j].item = Instantiate(item.ingredients[j].item);
                         item.ingredients[j].item.Stack = item.ingredients[j].amount;
                     }
-                }
+                }*/
                 generatedItems.Add(item);
 
 

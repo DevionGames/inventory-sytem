@@ -8,7 +8,8 @@ namespace DevionGames.InventorySystem{
 	public class ItemDatabase : ScriptableObject {
 		public List<Item> items = new List<Item>();
         public List<Currency> currencies = new List<Currency>();
-        public List<Rarity> raritys = new List<Rarity>();
+		public List<CraftingRecipe> craftingRecipes = new List<CraftingRecipe>();
+		public List<Rarity> raritys = new List<Rarity>();
 		public List<Category> categories = new List<Category>();
 		public List<EquipmentRegion> equipments = new List<EquipmentRegion>();
         public List<ItemGroup> itemGroups = new List<ItemGroup>();
@@ -43,6 +44,7 @@ namespace DevionGames.InventorySystem{
 			categories.AddRange(database.categories.Where(y => !categories.Any(z => z.Name == y.Name)));
 			equipments.AddRange(database.equipments.Where(y => !equipments.Any(z => z.Name == y.Name)));
 			itemGroups.AddRange(database.itemGroups.Where(y => !itemGroups.Any(z => z.Name == y.Name)));
+			craftingRecipes.AddRange(database.craftingRecipes.Where(y => !craftingRecipes.Any(z => z.Name == y.Name)));
 		}
 
 		public void RemoveNullReferences() {
@@ -52,6 +54,7 @@ namespace DevionGames.InventorySystem{
 			this.categories.RemoveAll(x => x == null);
 			this.equipments.RemoveAll(x => x == null);
 			this.itemGroups.RemoveAll(x => x == null);
+			this.craftingRecipes.RemoveAll(x => x == null);
 		}
 	}
 }

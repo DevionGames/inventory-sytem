@@ -252,9 +252,9 @@ MonoBehaviour:
       data:
         m_Type: DevionGames.InventorySystem.CheckSkill
         m_Enabled: 1
-        m_WindowName: Skills
         m_Skill: {fileID: 6305893422732665131, guid: e1f045c49e197e3439b99da9edbc5ba3,
           type: 2}
+        m_SkillWindow: 
         m_SuccessNotification:
           title: 
           text: 

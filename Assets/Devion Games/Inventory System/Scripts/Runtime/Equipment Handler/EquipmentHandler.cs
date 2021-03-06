@@ -133,7 +133,6 @@ namespace DevionGames.InventorySystem
 
         [System.Serializable]
         public class EquipmentBone{
-            [EquipmentPicker]
             public EquipmentRegion region;
             public GameObject bone;
         }

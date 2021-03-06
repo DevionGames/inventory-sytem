@@ -17,7 +17,8 @@ namespace DevionGames.InventorySystem.Configuration
             }
         }
 
-        [InspectorLabel("Context Menu","Name of ContextMenu widget.")]
+        [Header("Generic")]
+        [InspectorLabel("Context Menu", "Name of ContextMenu widget.")]
         public string contextMenuName = "ContextMenu";
         [InspectorLabel("Tooltip", "Name of Tooltip widget.")]
         public string tooltipName = "Tooltip";

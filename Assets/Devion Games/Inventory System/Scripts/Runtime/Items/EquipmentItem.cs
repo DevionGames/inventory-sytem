@@ -15,7 +15,6 @@ namespace DevionGames.InventorySystem{
 			} 
 		}
 
-		[EquipmentPicker]
 		[SerializeField]
 		private List<EquipmentRegion> m_Region= new List<EquipmentRegion>();
 		public List<EquipmentRegion> Region{

@@ -201,6 +201,16 @@ namespace DevionGames.InventorySystem
             protected set { this.m_UseContextMenu = value; }
         }
 
+        [Compound("m_UseContextMenu")]
+        [SerializeField]
+        [EnumFlags]
+        protected InputButton m_ContextMenuButton = InputButton.Right;
+        public InputButton ContextMenuButton {
+            get { return this.m_ContextMenuButton; }
+            set { this.m_ContextMenuButton = value; }
+        }
+
+
         [Tooltip("Show item tooltips?")]
         [SerializeField]
         protected bool m_ShowTooltips = false;
@@ -1059,6 +1069,8 @@ namespace DevionGames.InventorySystem
         public Item[] GetItems(string idOrName)
         {
             List<Item> items = new List<Item>();
+            if (this.m_Collection == null) return items.ToArray();
+
             if (!this.m_UseReferences)
             {
                 items.AddRange(this.m_Collection.Where(x => x.Id == idOrName));
@@ -1602,6 +1614,20 @@ namespace DevionGames.InventorySystem
 
             }
             return false;
+        }
+
+        //Get the item in any container
+        public static Item GetItem(string nameOrId) {
+            ItemContainer[] windows = WidgetUtility.FindAll<ItemContainer>();
+            for (int j = 0; j < windows.Length; j++)
+            {
+                ItemContainer current = windows[j];
+
+                Item item = current.GetItems(nameOrId).FirstOrDefault();
+                if (item != null)
+                    return item;
+            }
+            return null;
         }
 
         /// <summary>

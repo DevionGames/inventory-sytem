@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace DevionGames.InventorySystem{
-	[CustomPropertyDrawer(typeof(ItemPickerAttribute))]
+	[CustomPropertyDrawer(typeof(Item),true)]
 	public class ItemPickerDrawer : PickerDrawer<Item> {
 
 		protected override List<Item> GetItems(ItemDatabase database)

@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3524a7a6338447643bb4fc31fe9b46e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoSave: 0
+  autoSave: 1
   savingKey: Player
   savingRate: 10
   provider: 0
@@ -617,14 +617,7 @@ MonoBehaviour:
         m_Actions:
           actions:
           - id: 1
-          - id: 2
     00000001:
-      type: {class: Log, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.Log
-        m_Enabled: 1
-        m_Message: Dead
-    00000002:
       type: {class: AddEffect, ns: DevionGames.StatSystem, asm: DevionGames.StatSystem}
       data:
         m_Type: DevionGames.StatSystem.AddEffect

@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace DevionGames.InventorySystem{
-	[CustomPropertyDrawer(typeof(EquipmentPickerAttribute))]
+	[CustomPropertyDrawer(typeof(EquipmentRegion))]
 	public class EquipmentPickerDrawer : PickerDrawer<EquipmentRegion> {
 
 		protected override List<EquipmentRegion> GetItems(ItemDatabase database) {

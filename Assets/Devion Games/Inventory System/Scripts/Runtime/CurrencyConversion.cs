@@ -8,7 +8,6 @@ namespace DevionGames.InventorySystem
     public class CurrencyConversion
     {
         public float factor = 1.0f;
-        [CurrencyPicker]
         public Currency currency;
     }
 }

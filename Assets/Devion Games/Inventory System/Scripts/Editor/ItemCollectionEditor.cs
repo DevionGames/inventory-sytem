@@ -30,14 +30,6 @@ namespace DevionGames.InventorySystem
 			this.searchFilters = searchFilters;
 			this.searchFilters.Insert (0, "All");
             this.m_SearchString = "All";
-
-			//Fix old items without category
-			/*for (int i = 0; i < this.items.Count; i++) {
-				if (this.items[i].Category == null && InventorySystemEditor.Database.categories.Count > 0) {
-					this.items[i].Category = InventorySystemEditor.Database.categories[0];
-					EditorUtility.SetDirty(this.items[i]);
-				}
-			}*/
         }
 
 		protected override void Create()

@@ -30,20 +30,11 @@ MonoBehaviour:
   m_SellCurrency: {fileID: 0}
   m_Stack: 1
   m_MaxStack: 1
+  m_CanDestroy: 1
   m_IsDroppable: 1
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients: []
+  m_CraftingRecipe: {fileID: 0}
   properties: []
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
@@ -95,6 +86,7 @@ MonoBehaviour:
   sellPriceTooltipName: Sell Price Tooltip
   stackName: Stack
   notificationName: Notification
+  skillsWindowName: Skills
 --- !u!114 &-6985257367457998506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -157,20 +149,11 @@ MonoBehaviour:
   m_SellCurrency: {fileID: 0}
   m_Stack: 1
   m_MaxStack: 1
+  m_CanDestroy: 1
   m_IsDroppable: 1
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients: []
+  m_CraftingRecipe: {fileID: 0}
   properties: []
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
@@ -380,20 +363,11 @@ MonoBehaviour:
   m_SellCurrency: {fileID: 0}
   m_Stack: 1
   m_MaxStack: 1
+  m_CanDestroy: 1
   m_IsDroppable: 1
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients: []
+  m_CraftingRecipe: {fileID: 0}
   properties: []
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
@@ -431,20 +405,11 @@ MonoBehaviour:
   m_SellCurrency: {fileID: 0}
   m_Stack: 1
   m_MaxStack: 1
+  m_CanDestroy: 1
   m_IsDroppable: 1
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients: []
+  m_CraftingRecipe: {fileID: 0}
   properties: []
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
@@ -476,6 +441,7 @@ MonoBehaviour:
   - {fileID: 5770177478895120047}
   - {fileID: 9165992345120903733}
   currencies: []
+  craftingRecipes: []
   raritys: []
   categories:
   - {fileID: 7814454700255973630}
@@ -548,20 +514,11 @@ MonoBehaviour:
   m_SellCurrency: {fileID: 0}
   m_Stack: 1
   m_MaxStack: 1
+  m_CanDestroy: 1
   m_IsDroppable: 1
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients: []
+  m_CraftingRecipe: {fileID: 0}
   properties: []
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
@@ -599,20 +556,11 @@ MonoBehaviour:
   m_SellCurrency: {fileID: 0}
   m_Stack: 1
   m_MaxStack: 1
+  m_CanDestroy: 1
   m_IsDroppable: 1
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients: []
+  m_CraftingRecipe: {fileID: 0}
   properties: []
   m_UseCategoryCooldown: 1
   m_Cooldown: 5
@@ -651,20 +599,11 @@ MonoBehaviour:
   m_SellCurrency: {fileID: 0}
   m_Stack: 1
   m_MaxStack: 1
+  m_CanDestroy: 1
   m_IsDroppable: 1
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients: []
+  m_CraftingRecipe: {fileID: 0}
   properties: []
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
@@ -702,20 +641,11 @@ MonoBehaviour:
   m_SellCurrency: {fileID: 0}
   m_Stack: 1
   m_MaxStack: 1
+  m_CanDestroy: 1
   m_IsDroppable: 1
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients: []
+  m_CraftingRecipe: {fileID: 0}
   properties: []
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
@@ -769,20 +699,11 @@ MonoBehaviour:
   m_SellCurrency: {fileID: 0}
   m_Stack: 1
   m_MaxStack: 1
+  m_CanDestroy: 1
   m_IsDroppable: 1
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients: []
+  m_CraftingRecipe: {fileID: 0}
   properties: []
   m_UseCategoryCooldown: 1
   m_Cooldown: 1

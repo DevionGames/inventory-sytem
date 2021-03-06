@@ -4,7 +4,7 @@ using System.Collections;
 namespace DevionGames.InventorySystem{
 	[System.Serializable]
 	public class Category : ScriptableObject,INameable {
-		[CategoryPicker(true)]
+		[AcceptNull]
 		[SerializeField]
 		protected Category m_Parent;
 

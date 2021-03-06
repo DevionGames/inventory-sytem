@@ -6,3 +6,7 @@
 - Interuptable layer index in Animator Controller can be any now (was only index = 1 possible)
 - Spin Button option in FocusTarget
 - Inherit distance option when switching between camera presets
+- ItemPicker, CategoryPicker, EquipmentPicker, RarityPicker is used by default, no need to add an attribute to targets. 
+- Removed Window Name field from CheckSkill.
+- Added Crafting Recipe tab in editor. This replaces the crafting options in item editor. 
+- Crafting Recipe field in Item, if null item is not craftable.

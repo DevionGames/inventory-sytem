@@ -171,7 +171,6 @@ namespace DevionGames.InventorySystem
                 //Try to move item
                 if (!MoveItem())
                 {
-                    Debug.Log("use");
                     ObservedItem.Use();
                     Container.NotifyUseItem(ObservedItem, this);
                 }

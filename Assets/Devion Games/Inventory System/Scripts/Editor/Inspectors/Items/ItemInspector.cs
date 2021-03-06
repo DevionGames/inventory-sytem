@@ -33,29 +33,32 @@ namespace DevionGames.InventorySystem
         protected SerializedProperty m_IsDroppable;
         protected SerializedProperty m_DropSound;
         protected SerializedProperty m_OverridePrefab;
-        protected SerializedProperty m_IsCraftable;
+       /* protected SerializedProperty m_IsCraftable;
         protected SerializedProperty m_CraftingDuration;
         protected SerializedProperty m_CraftingAnimatorState;
-        protected SerializedProperty m_Ingredients;
+        protected SerializedProperty m_Ingredients;*/
         protected SerializedProperty m_Properties;
         protected SerializedProperty m_IsSellable;
         protected SerializedProperty m_CanBuyBack;
+        protected SerializedProperty m_CanDestroy;
 
-        protected SerializedProperty m_UseCraftingSkill;
+        protected SerializedProperty m_CraftingRecipe;
+
+        /*protected SerializedProperty m_UseCraftingSkill;
         protected SerializedProperty m_SkillWindow;
         protected SerializedProperty m_CraftingSkill;
         protected SerializedProperty m_MinCraftingSkillValue;
         protected SerializedProperty m_RemoveIngredientsWhenFailed;
         protected SerializedProperty m_CraftingModifier;
-        protected ReorderableList m_CraftingModifierList;
+        protected ReorderableList m_CraftingModifierList;*/
 
         protected AnimBool m_ShowSellOptions;
         protected AnimBool m_ShowDropOptions;
         protected AnimBool m_ShowCraftOptions;
-        protected AnimBool m_ShowSkillOptions;
+      //  protected AnimBool m_ShowSkillOptions;
 
         protected ReorderableList m_PropertyList;
-        protected ReorderableList m_IngredientList;
+       // protected ReorderableList m_IngredientList;
         protected static List<ObjectProperty> copy = new List<ObjectProperty> ();
 
 
@@ -103,6 +106,7 @@ namespace DevionGames.InventorySystem
 
             this.m_Stack = serializedObject.FindProperty("m_Stack");
             this.m_MaxStack = serializedObject.FindProperty("m_MaxStack");
+            this.m_CanDestroy = serializedObject.FindProperty("m_CanDestroy");
 
             #region Drop
             this.m_IsDroppable = serializedObject.FindProperty("m_IsDroppable");
@@ -174,8 +178,9 @@ namespace DevionGames.InventorySystem
 			};
 
 
+            this.m_CraftingRecipe = serializedObject.FindProperty("m_CraftingRecipe");
             #region Crafting
-            this.m_IsCraftable = serializedObject.FindProperty("m_IsCraftable");
+            /*this.m_IsCraftable = serializedObject.FindProperty("m_IsCraftable");
             this.m_CraftingDuration = serializedObject.FindProperty("m_CraftingDuration");
             this.m_CraftingAnimatorState = serializedObject.FindProperty("m_CraftingAnimatorState");
  
@@ -209,7 +214,7 @@ namespace DevionGames.InventorySystem
             };
             this.m_IngredientList.drawHeaderCallback = (Rect rect) => {
                 EditorGUI.LabelField(rect, "Ingredients (Item, Amount)");
-            };
+            };*/
             #endregion
 
             List<string> propertiesToExclude = new List<string>() {
@@ -230,19 +235,21 @@ namespace DevionGames.InventorySystem
                 this.m_IsDroppable.propertyPath,
                 this.m_DropSound.propertyPath,
                 this.m_OverridePrefab.propertyPath,
-                this.m_IsCraftable.propertyPath,
+                /*this.m_IsCraftable.propertyPath,
                 this.m_CraftingDuration.propertyPath,
                 this.m_CraftingAnimatorState.propertyPath,
-                this.m_Ingredients.propertyPath,
+                this.m_Ingredients.propertyPath,*/
                 this.m_Properties.propertyPath,
                 this.m_IsSellable.propertyPath,
-                this.m_CraftingModifier.propertyPath,
+               /* this.m_CraftingModifier.propertyPath,
                 this.m_CraftingSkill.propertyPath,
                 this.m_UseCraftingSkill.propertyPath,
                 this.m_SkillWindow.propertyPath,
                 this.m_RemoveIngredientsWhenFailed.propertyPath,
-                this.m_MinCraftingSkillValue.propertyPath,
+                this.m_MinCraftingSkillValue.propertyPath,*/
                 this.m_CanBuyBack.propertyPath,
+                this.m_CanDestroy.propertyPath,
+                this.m_CraftingRecipe.propertyPath,
             };
 
 
@@ -348,7 +355,7 @@ namespace DevionGames.InventorySystem
                 EditorGUILayout.HelpBox("Maximum stack of 0 ~ unlimited", MessageType.Info);
             }
             EditorGUILayout.PropertyField(this.m_MaxStack);
-
+            EditorGUILayout.PropertyField(this.m_CanDestroy);
 
             EditorGUILayout.PropertyField(this.m_IsDroppable);
             this.m_ShowDropOptions.target = this.m_IsDroppable.boolValue;
@@ -361,7 +368,9 @@ namespace DevionGames.InventorySystem
             }
             EditorGUILayout.EndFadeGroup();
 
-            EditorGUILayout.PropertyField(this.m_IsCraftable);
+            EditorGUILayout.PropertyField(this.m_CraftingRecipe);
+
+            /*EditorGUILayout.PropertyField(this.m_IsCraftable);
             this.m_ShowCraftOptions.target = this.m_IsCraftable.boolValue;
             if (EditorGUILayout.BeginFadeGroup(this.m_ShowCraftOptions.faded))
             {
@@ -395,7 +404,7 @@ namespace DevionGames.InventorySystem
                 GUILayout.EndVertical();
                 GUILayout.EndHorizontal();
             }
-            EditorGUILayout.EndFadeGroup();
+            EditorGUILayout.EndFadeGroup();*/
         }
 
 
@@ -419,7 +428,7 @@ namespace DevionGames.InventorySystem
             EditorGUILayout.EndFadeGroup();
         }
 
-        private void CreateModifierList(string title, SerializedObject serializedObject, SerializedProperty property)
+        /*private void CreateModifierList(string title, SerializedObject serializedObject, SerializedProperty property)
         {
 
             this.m_CraftingModifierList = new ReorderableList(serializedObject, property.FindPropertyRelative("modifiers"), true, true, true, true);
@@ -440,7 +449,7 @@ namespace DevionGames.InventorySystem
                 list.serializedProperty.GetArrayElementAtIndex(list.index).objectReferenceValue = null;
                 ReorderableList.defaultBehaviours.DoRemoveButton(list);
             };
-        }
+        }*/
 
         /*private List<int> selectedRarity;
 

@@ -34,7 +34,12 @@ namespace DevionGames.InventorySystem
                 Item item = data.item;
                 int stack = Random.Range(data.minStack, data.maxStack + 1);
                 stack = Mathf.Clamp(stack, item.Stack, item.MaxStack);
-                item = Instantiate(item);
+
+                item = InventoryManager.CreateInstance(item);
+                item.Stack = stack;
+                data.modifiers.Modify(item);
+
+               /* item = Instantiate(item);
                 item.Stack = stack;
 
                 data.modifiers.Modify(item);
@@ -46,7 +51,7 @@ namespace DevionGames.InventorySystem
                         item.ingredients[j].item = Instantiate(item.ingredients[j].item);
                         item.ingredients[j].item.Stack = item.ingredients[j].amount;
                     }
-                }
+                }*/
                 generatedItems.Add(item);
             }
             return generatedItems;

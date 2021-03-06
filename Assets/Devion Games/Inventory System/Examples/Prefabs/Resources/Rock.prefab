@@ -144,6 +144,7 @@ MonoBehaviour:
   useDistance: 1.5
   triggerType: 43
   key: 102
+  actionTemplate: {fileID: 0}
   actions:
   - id: 0
   - id: 1
@@ -156,6 +157,7 @@ MonoBehaviour:
   - id: 8
   - id: 9
   - id: 10
+  m_Interruptable: 0
   references:
     version: 1
     00000000:
@@ -250,6 +252,22 @@ MonoBehaviour:
         m_WindowName: Skills
         m_Skill: {fileID: -7886543208416861863, guid: e1f045c49e197e3439b99da9edbc5ba3,
           type: 2}
+        m_SuccessNotification:
+          title: 
+          text: 
+          color: {r: 1, g: 1, b: 1, a: 1}
+          icon: {fileID: 0}
+          delay: 2
+          duration: 2
+          ignoreTimeScale: 1
+        m_FailureNotification:
+          title: 
+          text: 
+          color: {r: 1, g: 1, b: 1, a: 1}
+          icon: {fileID: 0}
+          delay: 2
+          duration: 2
+          ignoreTimeScale: 1
     00000008:
       type: {class: Pickup, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
       data:

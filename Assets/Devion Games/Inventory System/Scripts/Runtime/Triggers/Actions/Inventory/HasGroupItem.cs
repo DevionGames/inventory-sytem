@@ -10,7 +10,6 @@ namespace DevionGames.InventorySystem
     [ComponentMenu("Inventory System/Has Group Item")]
     public class HasGroupItem : Action, ICondition
     {
-        [ItemGroupPicker]
         [SerializeField]
         protected ItemGroup m_RequiredGroupItem;
         [SerializeField]

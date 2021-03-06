@@ -20,7 +20,7 @@ namespace DevionGames
 			this.m_Controller.IsGrounded = false;
 			this.m_StartMove = false;
 			Vector3 startPosition = this.m_Trigger.transform.position;
-			startPosition.y = 0.186f;
+			startPosition.y += 0.186f;
 			this.m_Animator.SetFloat("Forward Input", 0f);
 			MoveToTarget(this.m_Transform, startPosition, this.m_Trigger.transform.rotation, 0.3f, delegate {this.m_StartMove = true; });
 	

@@ -6,7 +6,7 @@ using System.Collections;
 
 namespace DevionGames.InventorySystem
 {
-	[CustomPropertyDrawer (typeof(PickerAttribute), true)]
+	//[CustomPropertyDrawer (typeof(PickerAttribute), true)]
 	public abstract class PickerDrawer<T> : PropertyDrawer where T: ScriptableObject, INameable
 	{
 		public override void OnGUI (Rect position, SerializedProperty property, GUIContent label)
@@ -33,7 +33,7 @@ namespace DevionGames.InventorySystem
 					},
 					() => {
 						ItemDatabase db = EditorTools.CreateAsset<ItemDatabase>(true);
-					}, (attribute as PickerAttribute).acceptNull);
+					}, fieldInfo.HasAttribute<AcceptNullAttribute>());
 			}
 		}
 

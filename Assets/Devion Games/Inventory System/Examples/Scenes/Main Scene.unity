@@ -5491,6 +5491,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
   m_ShowTooltips: 0
   m_MoveUsedItem: 1
   moveItemConditions:
@@ -6146,7 +6147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.00007194594}
+  m_AnchoredPosition: {x: 0, y: -0.000090878995}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &87677221
@@ -6881,6 +6882,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
   m_ShowTooltips: 1
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -11425,6 +11427,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
   m_ShowTooltips: 0
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -13902,6 +13905,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
   m_ShowTooltips: 1
   m_MoveUsedItem: 1
   moveItemConditions:
@@ -18611,75 +18615,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341762028}
   m_CullTransparentMesh: 0
---- !u!1001 &342616072
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7721358054019599411, guid: b00bb6cb994265949817cafd18821323,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7721358054019599411, guid: b00bb6cb994265949817cafd18821323,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 7721358054019599411, guid: b00bb6cb994265949817cafd18821323,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.67
-      objectReference: {fileID: 0}
-    - target: {fileID: 7721358054019599411, guid: b00bb6cb994265949817cafd18821323,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.14143686
-      objectReference: {fileID: 0}
-    - target: {fileID: 7721358054019599411, guid: b00bb6cb994265949817cafd18821323,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7721358054019599411, guid: b00bb6cb994265949817cafd18821323,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7721358054019599411, guid: b00bb6cb994265949817cafd18821323,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9899473
-      objectReference: {fileID: 0}
-    - target: {fileID: 7721358054019599411, guid: b00bb6cb994265949817cafd18821323,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7721358054019599411, guid: b00bb6cb994265949817cafd18821323,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 16.262001
-      objectReference: {fileID: 0}
-    - target: {fileID: 7721358054019599411, guid: b00bb6cb994265949817cafd18821323,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7721358054019599411, guid: b00bb6cb994265949817cafd18821323,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7721358054019599432, guid: b00bb6cb994265949817cafd18821323,
-        type: 3}
-      propertyPath: m_Name
-      value: Third Person Camera
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b00bb6cb994265949817cafd18821323, type: 3}
 --- !u!1 &343889994
 GameObject:
   m_ObjectHideFlags: 0
@@ -21278,7 +21213,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1611059577}
   m_HandleRect: {fileID: 1611059576}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -22625,7 +22560,6 @@ MonoBehaviour:
       data:
         m_Type: DevionGames.InventorySystem.CheckSkill
         m_Enabled: 1
-        m_WindowName: Skills
         m_Skill: {fileID: 5770177478895120047, guid: e1f045c49e197e3439b99da9edbc5ba3,
           type: 2}
         m_SuccessNotification:
@@ -26871,7 +26805,6 @@ MonoBehaviour:
       data:
         m_Type: DevionGames.InventorySystem.CheckSkill
         m_Enabled: 1
-        m_WindowName: Skills
         m_Skill: {fileID: 5770177478895120047, guid: e1f045c49e197e3439b99da9edbc5ba3,
           type: 2}
         m_SuccessNotification:
@@ -30337,7 +30270,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0000041861, y: 0.00015198777}
+  m_AnchoredPosition: {x: -0.0000041861, y: 0.0000845928}
   m_SizeDelta: {x: -0.000015259, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &529287258
@@ -33783,50 +33716,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: b9d7ac1a0f551404f8d32e1e02b64325, type: 3}
---- !u!1 &584752409
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 584752410}
-  - component: {fileID: 584752411}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &584752410
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 584752409}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.21819973, y: 2.3709702, z: 0.88951397}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1569974724}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &584752411
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 584752409}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.60211754, y: 0.082350016, z: 0.24360847}
-  m_Center: {x: -0.01450634, y: 0.458825, z: -0.37819576}
 --- !u!1 &587374474
 GameObject:
   m_ObjectHideFlags: 0
@@ -39545,7 +39434,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0000041861, y: 0.00027093242}
+  m_AnchoredPosition: {x: -0.0000041861, y: 0.00015327656}
   m_SizeDelta: {x: -0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &681275146
@@ -39936,6 +39825,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
   m_ShowTooltips: 1
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -46338,7 +46228,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1006546907}
   m_HandleRect: {fileID: 1006546906}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -49368,6 +49258,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
   m_ShowTooltips: 0
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -50397,7 +50288,6 @@ MonoBehaviour:
       data:
         m_Type: DevionGames.InventorySystem.CheckSkill
         m_Enabled: 1
-        m_WindowName: Skills
         m_Skill: {fileID: 5770177478895120047, guid: e1f045c49e197e3439b99da9edbc5ba3,
           type: 2}
         m_SuccessNotification:
@@ -53421,6 +53311,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
   m_ShowTooltips: 0
   m_MoveUsedItem: 1
   moveItemConditions:
@@ -54606,7 +54497,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00022148878}
+  m_AnchoredPosition: {x: 0, y: 0.000101925165}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &959109046
@@ -56116,6 +56007,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
   m_ShowTooltips: 0
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -60450,6 +60342,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
   m_ShowTooltips: 0
   m_MoveUsedItem: 1
   moveItemConditions:
@@ -61661,7 +61554,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0000041861, y: 0.000047186713}
+  m_AnchoredPosition: {x: -0.0000041861, y: -0.000024186867}
   m_SizeDelta: {x: -0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1079224612
@@ -63236,7 +63129,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0000041861, y: -0.000078436766}
+  m_AnchoredPosition: {x: -0.0000041861, y: 0.000013732327}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1111451588
@@ -69630,6 +69523,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
   m_ShowTooltips: 1
   m_MoveUsedItem: 1
   moveItemConditions:
@@ -72301,24 +72195,36 @@ MonoBehaviour:
   - id: 0
   - id: 1
   m_Interruptable: 1
-  m_RequiredIngredientsWindow: Inventory
-  m_ResultStorageWindow: Inventory
+  m_IngredientsWindow: Inventory
+  m_StorageWindow: Inventory
   m_CraftingProgressbar: CraftingProgress
   references:
     version: 1
     00000000:
+      type: {class: HasItem, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.HasItem
+        m_Enabled: 1
+        requiredItems:
+        - item: {fileID: -447126039411374142, guid: 1ae57b994efcab048a1bb130d4e11d83,
+            type: 2}
+          category: {fileID: 0}
+          boolValue: 0
+          stringValue: Equipment
+          intValue: 0
+        - item: {fileID: 4594666206616667452, guid: e1f045c49e197e3439b99da9edbc5ba3,
+            type: 2}
+          category: {fileID: 0}
+          boolValue: 0
+          stringValue: Skills
+          intValue: 0
+    00000001:
       type: {class: ShowWindow, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
       data:
         m_Type: DevionGames.InventorySystem.ShowWindow
         m_Enabled: 1
         m_WindowName: Crafting
         m_DestroyWhenEmpty: 0
-    00000001:
-      type: {class: Log, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.Log
-        m_Enabled: 1
-        m_Message: Crafting
 --- !u!114 &1277914225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73641,8 +73547,8 @@ MonoBehaviour:
   actionTemplate: {fileID: 0}
   actions: []
   m_Interruptable: 1
-  m_RequiredIngredientsWindow: Inventory
-  m_ResultStorageWindow: Inventory
+  m_IngredientsWindow: Inventory
+  m_StorageWindow: Inventory
   m_CraftingProgressbar: AlchemyProgress
   references:
     version: 1
@@ -73685,6 +73591,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
   m_ShowTooltips: 0
   m_MoveUsedItem: 1
   moveItemConditions:
@@ -80082,7 +79989,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00026228852}
+  m_AnchoredPosition: {x: 0, y: 0.00021634989}
   m_SizeDelta: {x: 0.002532959, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1408539673
@@ -89371,6 +89278,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
   m_ShowTooltips: 0
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -89548,11 +89456,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 957630519}
     m_Modifications:
-    - target: {fileID: 5157323341740066066, guid: cd90baa0cfea9e54d927f2efd1268c8c,
-        type: 3}
-      propertyPath: m_Interruptable
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5157323341740066073, guid: cd90baa0cfea9e54d927f2efd1268c8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -90612,7 +90515,6 @@ Transform:
   m_Children:
   - {fileID: 1222560255}
   - {fileID: 366102085}
-  - {fileID: 584752410}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -91682,6 +91584,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 1
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
   m_ShowTooltips: 0
   m_MoveUsedItem: 1
   moveItemConditions:
@@ -91779,6 +91682,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 1
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
   m_ShowTooltips: 0
   m_MoveUsedItem: 1
   moveItemConditions:
@@ -92987,7 +92891,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.00007194594}
+  m_AnchoredPosition: {x: 0, y: -0.000090878995}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1611400918
@@ -95100,6 +95004,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
   m_ShowTooltips: 0
   m_MoveUsedItem: 1
   moveItemConditions:
@@ -95412,7 +95317,6 @@ MonoBehaviour:
       data:
         m_Type: DevionGames.InventorySystem.CheckSkill
         m_Enabled: 1
-        m_WindowName: Skills
         m_Skill: {fileID: 5770177478895120047, guid: e1f045c49e197e3439b99da9edbc5ba3,
           type: 2}
         m_SuccessNotification:
@@ -97096,6 +97000,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
   m_ShowTooltips: 0
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -98386,6 +98291,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
   m_ShowTooltips: 0
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -99050,6 +98956,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
   m_ShowTooltips: 0
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -103400,7 +103307,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0000041861, y: 0.00014095966}
+  m_AnchoredPosition: {x: -0.0000041861, y: 0.000047673326}
   m_SizeDelta: {x: -0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1780176398
@@ -106430,6 +106337,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
   m_ShowTooltips: 0
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -107706,6 +107614,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 1
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
   m_ShowTooltips: 0
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -114291,6 +114200,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
   m_ShowTooltips: 0
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -114447,7 +114357,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00030792854}
+  m_AnchoredPosition: {x: 0, y: 0.00017055258}
   m_SizeDelta: {x: 0.002532959, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1950240567
@@ -117204,6 +117114,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
   m_ShowTooltips: 0
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -125101,6 +125012,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
   m_ShowTooltips: 0
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -127475,6 +127387,7 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 1
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
   m_ShowTooltips: 1
   m_MoveUsedItem: 1
   moveItemConditions:
@@ -131336,6 +131249,85 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &7906034793815590705
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 864753745464015930, guid: ca461851dfacfb14e84266ca01f62690,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 864753745464015930, guid: ca461851dfacfb14e84266ca01f62690,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 864753745464015930, guid: ca461851dfacfb14e84266ca01f62690,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 864753745464015930, guid: ca461851dfacfb14e84266ca01f62690,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.14143686
+      objectReference: {fileID: 0}
+    - target: {fileID: 864753745464015930, guid: ca461851dfacfb14e84266ca01f62690,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 864753745464015930, guid: ca461851dfacfb14e84266ca01f62690,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 864753745464015930, guid: ca461851dfacfb14e84266ca01f62690,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9899473
+      objectReference: {fileID: 0}
+    - target: {fileID: 864753745464015930, guid: ca461851dfacfb14e84266ca01f62690,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 864753745464015930, guid: ca461851dfacfb14e84266ca01f62690,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 16.262001
+      objectReference: {fileID: 0}
+    - target: {fileID: 864753745464015930, guid: ca461851dfacfb14e84266ca01f62690,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 864753745464015930, guid: ca461851dfacfb14e84266ca01f62690,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 864753745464015934, guid: ca461851dfacfb14e84266ca01f62690,
+        type: 3}
+      propertyPath: m_Presets.Array.data[4].m_CollisionLayer.m_Bits
+      value: 2049
+      objectReference: {fileID: 0}
+    - target: {fileID: 864753745464015934, guid: ca461851dfacfb14e84266ca01f62690,
+        type: 3}
+      propertyPath: m_Presets.Array.data[3].m_CollisionLayer.m_Bits
+      value: 2049
+      objectReference: {fileID: 0}
+    - target: {fileID: 864753745464015937, guid: ca461851dfacfb14e84266ca01f62690,
+        type: 3}
+      propertyPath: m_Name
+      value: Third Person Camera
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ca461851dfacfb14e84266ca01f62690, type: 3}
 --- !u!114 &7940071333035965340
 MonoBehaviour:
   m_ObjectHideFlags: 2

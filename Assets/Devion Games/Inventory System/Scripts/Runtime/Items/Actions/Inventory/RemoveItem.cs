@@ -12,7 +12,6 @@ namespace DevionGames.InventorySystem.ItemActions
     {
         [SerializeField]
         private string m_WindowName = "Inventory";
-        [ItemPicker]
         [SerializeField]
         private Item m_Item = null;
         [Range(1,200)]
