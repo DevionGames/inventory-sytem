@@ -9,6 +9,7 @@ namespace DevionGames.InventorySystem
     [CustomEditor(typeof(Skill),true)]
     public class SkillInspector : UsableItemInspector
     {
+        protected SerializedProperty m_CurrentValue;
         protected SerializedProperty m_FixedSuccessChance;
         protected SerializedProperty m_GainModifier;
 
@@ -16,7 +17,7 @@ namespace DevionGames.InventorySystem
         {
             base.OnEnable();
             if (target == null) return;
-
+            this.m_CurrentValue = serializedObject.FindProperty("m_CurrentValue");
             this.m_FixedSuccessChance = serializedObject.FindProperty("m_FixedSuccessChance");
             this.m_GainModifier = serializedObject.FindProperty("m_GainModifier");
 
@@ -43,6 +44,7 @@ namespace DevionGames.InventorySystem
 
             EditorGUILayout.Space();
             EditorGUILayout.PropertyField(this.m_Category);
+            EditorGUILayout.PropertyField(this.m_CurrentValue);
             EditorGUILayout.PropertyField(m_FixedSuccessChance);
             EditorGUILayout.PropertyField(this.m_GainModifier);
 

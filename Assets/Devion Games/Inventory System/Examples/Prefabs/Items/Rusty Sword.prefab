@@ -146,85 +146,16 @@ MonoBehaviour:
   actionTemplate: {fileID: 11400000, guid: 4114e50432580d84b861b4d87c2a1c2a, type: 2}
   actions:
   - id: 0
-  - id: 1
-  - id: 2
-  - id: 3
-  - id: 4
-  - id: 5
-  - id: 6
   m_Interruptable: 0
   references:
     version: 1
     00000000:
-      type: {class: CanPickup, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      type: {class: ShowWindow, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
       data:
-        m_Type: DevionGames.InventorySystem.CanPickup
+        m_Type: DevionGames.InventorySystem.ShowWindow
         m_Enabled: 1
-        m_WindowName: Inventory
-    00000001:
-      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.SendMessage
-        m_Enabled: 1
-        m_Target: 1
-        methodName: SetControllerActive
-        m_Argument:
-          m_BoolValue: 0
-          m_IntValue: 0
-          m_FloatValue: 0
-          m_StringValue: 
-          m_Vector2Value: {x: 0, y: 0}
-          m_Vector3Value: {x: 0, y: 0, z: 0}
-          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
-          m_ObjectValue: {fileID: 0}
-          m_ArgumentType: 1
-        m_Options: 1
-    00000002:
-      type: {class: LookAtTrigger, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.LookAtTrigger
-        m_Enabled: 1
-        m_Speed: 15
-    00000003:
-      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.CrossFade
-        m_Enabled: 1
-        m_Target: 1
-        m_AnimatorState: Pickup
-        m_TransitionDuration: 0.2
-    00000004:
-      type: {class: Wait, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.Wait
-        m_Enabled: 1
-        duration: 1
-    00000005:
-      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.SendMessage
-        m_Enabled: 1
-        m_Target: 1
-        methodName: SetControllerActive
-        m_Argument:
-          m_BoolValue: 1
-          m_IntValue: 0
-          m_FloatValue: 0
-          m_StringValue: 
-          m_Vector2Value: {x: 0, y: 0}
-          m_Vector3Value: {x: 0, y: 0, z: 0}
-          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
-          m_ObjectValue: {fileID: 0}
-          m_ArgumentType: 1
-        m_Options: 1
-    00000006:
-      type: {class: Pickup, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
-      data:
-        m_Type: DevionGames.InventorySystem.Pickup
-        m_Enabled: 1
-        m_WindowName: Inventory
+        m_WindowName: Loot
         m_DestroyWhenEmpty: 1
-        m_Amount: -1
 --- !u!114 &2420680222564479830
 MonoBehaviour:
   m_ObjectHideFlags: 0

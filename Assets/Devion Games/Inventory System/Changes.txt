@@ -10,3 +10,4 @@
 - Removed Window Name field from CheckSkill.
 - Added Crafting Recipe tab in editor. This replaces the crafting options in item editor. 
 - Crafting Recipe field in Item, if null item is not craftable.
+- Added warnings if there is a null reference restriction

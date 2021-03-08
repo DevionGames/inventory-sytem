@@ -40,6 +40,7 @@ MonoBehaviour:
   m_Cooldown: 1
   actions: []
   m_FixedSuccessChance: 50
+  m_CurrentValue: 0
   m_GainModifier: {fileID: 11400000, guid: 469cf9288efaed44a9d0eb78c6b58840, type: 2}
   references:
     version: 1
@@ -86,7 +87,6 @@ MonoBehaviour:
   sellPriceTooltipName: Sell Price Tooltip
   stackName: Stack
   notificationName: Notification
-  skillsWindowName: Skills
 --- !u!114 &-6985257367457998506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Cooldown: 1
   actions: []
   m_FixedSuccessChance: 50
+  m_CurrentValue: 0
   m_GainModifier: {fileID: 11400000, guid: 3ce0320ba5183f345b5a8aa837f67700, type: 2}
   references:
     version: 1
@@ -257,14 +258,6 @@ MonoBehaviour:
   missingSkillToCraft:
     title: 
     text: You don't have the skill to craft this item!
-    color: {r: 1, g: 1, b: 1, a: 1}
-    icon: {fileID: 0}
-    delay: 2
-    duration: 2
-    ignoreTimeScale: 1
-  requiresHigherSkill:
-    title: 
-    text: Your {0} is to low to craft {1}.
     color: {r: 1, g: 1, b: 1, a: 1}
     icon: {fileID: 0}
     delay: 2
@@ -373,6 +366,7 @@ MonoBehaviour:
   m_Cooldown: 1
   actions: []
   m_FixedSuccessChance: 50
+  m_CurrentValue: 0
   m_GainModifier: {fileID: 11400000, guid: c1992775e12652140b4d346619cbf34f, type: 2}
   references:
     version: 1
@@ -415,6 +409,7 @@ MonoBehaviour:
   m_Cooldown: 1
   actions: []
   m_FixedSuccessChance: 50
+  m_CurrentValue: 0
   m_GainModifier: {fileID: 11400000, guid: fe54ba700fcd2c148920b5d08884dab8, type: 2}
   references:
     version: 1
@@ -524,6 +519,7 @@ MonoBehaviour:
   m_Cooldown: 1
   actions: []
   m_FixedSuccessChance: 50
+  m_CurrentValue: 0
   m_GainModifier: {fileID: 11400000, guid: 469cf9288efaed44a9d0eb78c6b58840, type: 2}
   references:
     version: 1
@@ -566,6 +562,7 @@ MonoBehaviour:
   m_Cooldown: 5
   actions: []
   m_FixedSuccessChance: 50
+  m_CurrentValue: 0
   m_GainModifier: {fileID: 11400000, guid: 46f3d22ada8c5dc44ada009bcf58c573, type: 2}
   references:
     version: 1
@@ -609,6 +606,7 @@ MonoBehaviour:
   m_Cooldown: 1
   actions: []
   m_FixedSuccessChance: 50
+  m_CurrentValue: 0
   m_GainModifier: {fileID: 11400000, guid: ab8c15d98d0de6d448b589d24bbb0eef, type: 2}
   references:
     version: 1
@@ -651,6 +649,7 @@ MonoBehaviour:
   m_Cooldown: 1
   actions: []
   m_FixedSuccessChance: 50
+  m_CurrentValue: 0
   m_GainModifier: {fileID: 11400000, guid: 4b4c88aca3f41b5428addc167494186f, type: 2}
   references:
     version: 1
@@ -709,6 +708,7 @@ MonoBehaviour:
   m_Cooldown: 1
   actions: []
   m_FixedSuccessChance: 50
+  m_CurrentValue: 0
   m_GainModifier: {fileID: 11400000, guid: 008ca9312f640ab42bc1de739c2d0a78, type: 2}
   references:
     version: 1

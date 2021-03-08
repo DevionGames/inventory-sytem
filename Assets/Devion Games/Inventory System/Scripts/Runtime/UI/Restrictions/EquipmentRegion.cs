@@ -11,7 +11,10 @@ namespace DevionGames.InventorySystem.Restrictions
 
         public override bool CanAddItem(Item item)
         {
-
+            if (region == null) {
+                Debug.LogWarning("The restriction EquipmentRegion has a null reference. This can happen when you delete the region in database but not update your slots. Remove the restriction or add a reference.");
+                return true; 
+            }
             if (item == null || !(item is EquipmentItem equipmentItem)) { return false; }
 
             List<DevionGames.InventorySystem.EquipmentRegion> requiredRegions = new List<DevionGames.InventorySystem.EquipmentRegion>(equipmentItem.Region);

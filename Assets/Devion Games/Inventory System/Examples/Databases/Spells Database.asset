@@ -443,7 +443,6 @@ MonoBehaviour:
   sellPriceTooltipName: Sell Price Tooltip
   stackName: Stack
   notificationName: Notification
-  skillsWindowName: Skills
 --- !u!114 &-3989543302354102894
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1086,7 +1085,6 @@ MonoBehaviour:
   sellPriceTooltipName: Sell Price Tooltip
   stackName: Stack
   notificationName: Notification
-  skillsWindowName: Skills
 --- !u!114 &4447567160419299934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1321,7 +1319,6 @@ MonoBehaviour:
   sellPriceTooltipName: Sell Price Tooltip
   stackName: Stack
   notificationName: Notification
-  skillsWindowName: Skills
 --- !u!114 &6580122338069936885
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1417,14 +1414,6 @@ MonoBehaviour:
   missingSkillToCraft:
     title: 
     text: You don't have the skill to craft this item!
-    color: {r: 1, g: 1, b: 1, a: 1}
-    icon: {fileID: 0}
-    delay: 2
-    duration: 2
-    ignoreTimeScale: 1
-  requiresHigherSkill:
-    title: 
-    text: Your {0} is to low to craft {1}.
     color: {r: 1, g: 1, b: 1, a: 1}
     icon: {fileID: 0}
     delay: 2
@@ -1604,14 +1593,6 @@ MonoBehaviour:
     duration: 2
     ignoreTimeScale: 1
   missingSkillToCraft:
-    title: 
-    text: You don't have the skill to craft this item!
-    color: {r: 1, g: 1, b: 1, a: 1}
-    icon: {fileID: 0}
-    delay: 2
-    duration: 2
-    ignoreTimeScale: 1
-  requiresHigherSkill:
     title: 
     text: You don't have the skill to craft this item!
     color: {r: 1, g: 1, b: 1, a: 1}

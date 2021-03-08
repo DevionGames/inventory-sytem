@@ -11,7 +11,8 @@ namespace DevionGames.InventorySystem
         [SerializeField]
         protected float m_FixedSuccessChance = 50f;
 
-
+        [Range(0f, 100f)]
+        [SerializeField]
         protected float m_CurrentValue = 0f;
         public float CurrentValue {
             get { return this.m_CurrentValue; }
