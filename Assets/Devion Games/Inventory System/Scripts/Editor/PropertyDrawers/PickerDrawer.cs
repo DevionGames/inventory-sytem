@@ -43,7 +43,7 @@ namespace DevionGames.InventorySystem
 		{
 			Dictionary<UnityEngine.Object,List<UnityEngine.Object>> selectableObjects = new Dictionary<UnityEngine.Object, List<UnityEngine.Object>>();
 
-			string[] guids = AssetDatabase.FindAssets("t:ItemDatabase");
+			string[] guids = AssetDatabase.FindAssets("t:" + typeof(ItemDatabase).FullName);
 			for (int i = 0; i < guids.Length; i++)
 			{
 				string path = AssetDatabase.GUIDToAssetPath(guids[i]);

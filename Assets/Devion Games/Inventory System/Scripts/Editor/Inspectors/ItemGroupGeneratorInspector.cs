@@ -61,7 +61,7 @@ namespace DevionGames.InventorySystem
             this.m_FilterList.onAddDropdownCallback = (Rect rect, ReorderableList list) => {
 
                 GenericMenu menu = new GenericMenu();
-                string[] guids = AssetDatabase.FindAssets("t:ItemDatabase");
+                string[] guids = AssetDatabase.FindAssets("t:"+typeof(ItemDatabase).FullName);
                 for (int i = 0; i < guids.Length; i++)
                 {
                     string path = AssetDatabase.GUIDToAssetPath(guids[i]);

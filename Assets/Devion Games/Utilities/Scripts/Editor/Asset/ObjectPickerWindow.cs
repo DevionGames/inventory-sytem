@@ -190,7 +190,7 @@ namespace DevionGames
         private void BuildSelectableObjects(Type type) {
             this.m_SelectableObjects = new Dictionary<UnityEngine.Object, List<UnityEngine.Object>>();
 
-            string[] guids = AssetDatabase.FindAssets("t:"+type.Name);
+            string[] guids = AssetDatabase.FindAssets("t:"+type.FullName);
             for(int i = 0; i < guids.Length; i++) { 
                 string path = AssetDatabase.GUIDToAssetPath(guids[i]);
                 UnityEngine.Object obj = AssetDatabase.LoadAssetAtPath(path,type);
