@@ -50,6 +50,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: 0}
+  m_EnchantingRecipe: {fileID: 0}
   properties:
   - name: Magic Attack
     typeIndex: 3
@@ -201,6 +202,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: 0}
+  m_EnchantingRecipe: {fileID: 0}
   properties: []
   currencyConversions:
   - factor: 100
@@ -360,6 +362,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: -2195819364841047837}
+  m_EnchantingRecipe: {fileID: 0}
   properties: []
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
@@ -462,6 +465,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: 0}
+  m_EnchantingRecipe: {fileID: 0}
   properties: []
   currencyConversions:
   - factor: 100
@@ -517,6 +521,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: 0}
+  m_EnchantingRecipe: {fileID: 0}
   properties: []
   m_UseCategoryCooldown: 0
   m_Cooldown: 3
@@ -640,6 +645,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: 0}
+  m_EnchantingRecipe: {fileID: 0}
   properties: []
 --- !u!114 &-5355670550631679221
 MonoBehaviour:
@@ -716,6 +722,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: 3882374964577945335}
+  m_EnchantingRecipe: {fileID: 0}
   properties: []
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
@@ -904,6 +911,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: 0}
+  m_EnchantingRecipe: {fileID: 0}
   properties: []
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
@@ -998,6 +1006,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: 0}
+  m_EnchantingRecipe: {fileID: 0}
   properties: []
   currencyConversions:
   - factor: 0.01
@@ -1061,6 +1070,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: -4126672403109569486}
+  m_EnchantingRecipe: {fileID: 3119476666203521515}
   properties:
   - name: Armor
     typeIndex: 5
@@ -1140,6 +1150,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: 0}
+  m_EnchantingRecipe: {fileID: 0}
   properties: []
 --- !u!114 &-1474344929657048262
 MonoBehaviour:
@@ -1188,6 +1199,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: 0}
+  m_EnchantingRecipe: {fileID: 0}
   properties: []
 --- !u!114 &-447126039411374142
 MonoBehaviour:
@@ -1223,6 +1235,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: 3882374964577945335}
+  m_EnchantingRecipe: {fileID: 0}
   properties: []
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
@@ -1292,6 +1305,7 @@ MonoBehaviour:
   - {fileID: 5556830429201033128}
   - {fileID: 3882374964577945335}
   - {fileID: -2195819364841047837}
+  - {fileID: 3119476666203521515}
   raritys:
   - {fileID: 4257271418691296376}
   - {fileID: 1459171670829712994}
@@ -1422,6 +1436,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: 0}
+  m_EnchantingRecipe: {fileID: 0}
   properties: []
 --- !u!114 &529780001783015153
 MonoBehaviour:
@@ -1457,6 +1472,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: 0}
+  m_EnchantingRecipe: {fileID: 0}
   properties: []
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
@@ -1505,6 +1521,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: 0}
+  m_EnchantingRecipe: {fileID: 0}
   properties: []
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
@@ -1549,6 +1566,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: 5556830429201033128}
+  m_EnchantingRecipe: {fileID: 3119476666203521515}
   properties:
   - name: Ranged Attack
     typeIndex: 3
@@ -1700,6 +1718,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: -5140409996519736791}
+  m_EnchantingRecipe: {fileID: 0}
   properties: []
 --- !u!114 &1459171670829712994
 MonoBehaviour:
@@ -1752,6 +1771,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: 0}
+  m_EnchantingRecipe: {fileID: 0}
   properties: []
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
@@ -1847,6 +1867,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: 3882374964577945335}
+  m_EnchantingRecipe: {fileID: 0}
   properties: []
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
@@ -1854,6 +1875,32 @@ MonoBehaviour:
   m_OverrideEquipPrefab: {fileID: 0}
   m_Region:
   - {fileID: 316844889573954113}
+  references:
+    version: 1
+--- !u!114 &3119476666203521515
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752013a53119b8c4ea625187374d4e75, type: 3}
+  m_Name: Basic Enchantment
+  m_EditorClassIdentifier: 
+  name: Basic Enchantment
+  m_Duration: 2
+  m_AnimatorState: Cooking
+  m_Skill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_Ingredients:
+  - item: {fileID: -1175442255857385599}
+    amount: 1
+  m_CraftingModifier:
+    modifiers:
+    - {fileID: 11400000, guid: 9118000452b16de4681aa942ee7b7797, type: 2}
+  conditions: []
   references:
     version: 1
 --- !u!114 &3129509250564287029
@@ -1890,6 +1937,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: 0}
+  m_EnchantingRecipe: {fileID: 0}
   properties: []
   m_UseCategoryCooldown: 0
   m_Cooldown: 5
@@ -1963,6 +2011,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: 0}
+  m_EnchantingRecipe: {fileID: 0}
   properties: []
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
@@ -2229,6 +2278,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: 0}
+  m_EnchantingRecipe: {fileID: 0}
   properties: []
 --- !u!114 &6503011437292745313
 MonoBehaviour:
@@ -2339,9 +2389,33 @@ MonoBehaviour:
     delay: 2
     duration: 2
     ignoreTimeScale: 1
-  missingSkillToCraft:
+  alreadyEnchanting:
     title: 
-    text: You don't have the skill to craft this item!
+    text: You are already enchating.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  enchantedItem:
+    title: 
+    text: Successfully enchanted {0}.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  missingMaterials:
+    title: 
+    text: You don't have all materials to enchant this item!
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  failedToEnchant:
+    title: 
+    text: You failed to enchant {0}.
     color: {r: 1, g: 1, b: 1, a: 1}
     icon: {fileID: 0}
     delay: 2
@@ -2515,6 +2589,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: 3696839605020311992}
+  m_EnchantingRecipe: {fileID: 0}
   properties: []
   m_UseCategoryCooldown: 1
   m_Cooldown: 5
@@ -2614,6 +2689,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: 0}
+  m_EnchantingRecipe: {fileID: 0}
   properties: []
   m_UseCategoryCooldown: 1
   m_Cooldown: 1
@@ -2725,6 +2801,7 @@ MonoBehaviour:
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_CraftingRecipe: {fileID: 0}
+  m_EnchantingRecipe: {fileID: 0}
   properties: []
 --- !u!114 &8829102310862775636
 MonoBehaviour:
@@ -2826,7 +2903,7 @@ MonoBehaviour:
     ignoreTimeScale: 1
   selectItem:
     title: 
-    text: Select an item you would like to craft.
+    text: You need to select an item first.
     color: {r: 1, g: 1, b: 1, a: 1}
     icon: {fileID: 0}
     delay: 2
@@ -2864,9 +2941,33 @@ MonoBehaviour:
     delay: 2
     duration: 2
     ignoreTimeScale: 1
-  missingSkillToCraft:
+  alreadyEnchanting:
     title: 
-    text: You don't have the skill to craft this item!
+    text: You are already enchating.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  enchantedItem:
+    title: 
+    text: Successfully enchanted {0}.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  missingMaterials:
+    title: 
+    text: You don't have all materials to enchant this item!
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  failedToEnchant:
+    title: 
+    text: You failed to enchant {0}.
     color: {r: 1, g: 1, b: 1, a: 1}
     icon: {fileID: 0}
     delay: 2

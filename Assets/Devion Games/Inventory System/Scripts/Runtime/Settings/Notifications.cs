@@ -55,12 +55,12 @@ namespace DevionGames.InventorySystem.Configuration
         {
             text = "{0} is in cooldown for {1} seconds!"
         };
-
-        [Header("Crafting:")]
         public NotificationOptions selectItem = new NotificationOptions()
         {
-            text = "Select an item you would like to craft."
+            text = "You need to select an item first."
         };
+
+        [Header("Crafting:")]
         public NotificationOptions alreadyCrafting = new NotificationOptions()
         {
             text = "You are already crafting."
@@ -77,10 +77,25 @@ namespace DevionGames.InventorySystem.Configuration
         {
             text = "You failed to craft {0}."
         };
-        public NotificationOptions missingSkillToCraft = new NotificationOptions()
+
+        [Header("Enchanting:")]
+        public NotificationOptions alreadyEnchanting = new NotificationOptions()
         {
-            text = "You don't have the skill to craft this item!"
+            text = "You are already enchating."
         };
+        public NotificationOptions enchantedItem = new NotificationOptions()
+        {
+            text = "Successfully enchanted {0}."
+        };
+        public NotificationOptions missingMaterials = new NotificationOptions()
+        {
+            text = "You don't have all materials to enchant this item!"
+        };
+        public NotificationOptions failedToEnchant = new NotificationOptions()
+        {
+            text = "You failed to enchant {0}."
+        };
+
 
         [Header("Vendor:")]
         public NotificationOptions soldItem = new NotificationOptions()

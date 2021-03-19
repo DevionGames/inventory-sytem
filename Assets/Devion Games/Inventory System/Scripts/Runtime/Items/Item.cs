@@ -251,6 +251,16 @@ namespace DevionGames.InventorySystem
             set { this.m_CraftingRecipe = value; }
         }
 
+        [AcceptNull]
+        [SerializeField]
+        private CraftingRecipe m_EnchantingRecipe = null;
+
+        public CraftingRecipe EnchantingRecipe
+        {
+            get { return this.m_EnchantingRecipe; }
+            set { this.m_EnchantingRecipe = value; }
+        }
+
         /*[Tooltip("Defines if the item is craftable.")]
         //TODO Move all to CraftingData class
         [SerializeField]

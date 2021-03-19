@@ -55,15 +55,13 @@ namespace DevionGames.InventorySystem
             handler.OnCraftStop(item, player);
         }
 
-        private ItemContainer m_ResultStorageContainer;
-        private ItemContainer m_RequiredIngredientsContainer;
-        private bool m_IsCrafting;
-        private float m_ProgressDuration;
-        private float m_ProgressInitTime;
-        private Progressbar m_Progressbar;
-        private Spinner m_AmountSpinner;
-
-
+        protected ItemContainer m_ResultStorageContainer;
+        protected ItemContainer m_RequiredIngredientsContainer;
+        protected bool m_IsCrafting;
+        protected float m_ProgressDuration;
+        protected float m_ProgressInitTime;
+        protected Progressbar m_Progressbar;
+        protected Spinner m_AmountSpinner;
 
         protected override void Start()
         {
@@ -78,7 +76,6 @@ namespace DevionGames.InventorySystem
                 container.RegisterListener("OnClose", (CallbackEventData ev) => { InUse = false; });
             }
         }
-
 
         public override bool OverrideUse(Slot slot, Item item)
         {
@@ -105,7 +102,6 @@ namespace DevionGames.InventorySystem
             {
                 this.m_Progressbar.SetProgress(GetCraftingProgress());
             }
-            
         }
 
         protected override void OnTriggerInterrupted()
@@ -118,7 +114,6 @@ namespace DevionGames.InventorySystem
                 user.SendMessage("SetControllerActive", true, SendMessageOptions.DontRequireReceiver);
 
             LoadCachedAnimatorStates();
-    
         }
 
         private float GetCraftingProgress()
@@ -138,17 +133,16 @@ namespace DevionGames.InventorySystem
                 return;
             }
             if (this.m_IsCrafting) {
-                InventoryManager.Notifications.alreadyCrafting.Show();
-                ExecuteEvent<ITriggerFailedCraftStart>(Execute, item, FailureCause.InUse);
+                NotifyAlreadyCrafting(item);
                 return;
             }
 
-            if (item.CraftingRecipe == null || !item.CraftingRecipe.CheckConditions()) return;
+            CraftingRecipe recipe = GetCraftingRecipe(item);
+            if (recipe == null || !recipe.CheckConditions()) return;
 
-            if (!HasIngredients(this.m_RequiredIngredientsContainer, item.CraftingRecipe))
+            if (!HasIngredients(item))
             {
-                InventoryManager.Notifications.missingIngredient.Show();
-                ExecuteEvent<ITriggerFailedCraftStart>(Execute, item, FailureCause.Requirement);
+                NotifyMissingIngredients(item);
                 return;
             }
 
@@ -156,27 +150,29 @@ namespace DevionGames.InventorySystem
             if (user != null)
             {
                 user.SendMessage("SetControllerActive", false, SendMessageOptions.DontRequireReceiver);
-
                 Animator animator = InventoryManager.current.PlayerInfo.animator;
-                if(animator != null)
-                    animator.CrossFadeInFixedTime(Animator.StringToHash(item.CraftingRecipe.AnimatorState), 0.2f);
+                if (animator != null)
+                    animator.CrossFadeInFixedTime(Animator.StringToHash(recipe.AnimatorState), 0.2f);
 
             }
             StartCoroutine(CraftItems(item, amount));
             ExecuteEvent<ITriggerCraftStart>(Execute, item);
-
         }
 
-        private bool HasIngredients(ItemContainer container, CraftingRecipe recipe) {
-            
+        private bool HasIngredients(Item item) {
+            CraftingRecipe recipe = GetCraftingRecipe(item);
             for (int i = 0; i < recipe.Ingredients.Count; i++)
             {
-                if (!container.HasItem(recipe.Ingredients[i].item, recipe.Ingredients[i].amount))
+                if (!this.m_RequiredIngredientsContainer.HasItem(recipe.Ingredients[i].item, recipe.Ingredients[i].amount))
                 {
                     return false;
                 }
             }
             return true;
+        }
+
+        protected virtual CraftingRecipe GetCraftingRecipe(Item item) {
+            return item.CraftingRecipe;
         }
 
         public void StopCrafting(Item item)
@@ -197,15 +193,13 @@ namespace DevionGames.InventorySystem
             this.m_IsCrafting = true;
             for (int i = 0; i < amount; i++)
             {
-                if (HasIngredients(this.m_RequiredIngredientsContainer,item.CraftingRecipe))
+                if (HasIngredients(item))
                 {
-
                     yield return StartCoroutine(CraftItem(item));
                 }
                 else
                 {
-                    InventoryManager.Notifications.missingIngredient.Show();
-                    ExecuteEvent<ITriggerFailedToCraftItem>(Execute, item, FailureCause.Requirement);
+                    NotifyMissingIngredients(item);
                     break;
                 }
             }
@@ -213,23 +207,24 @@ namespace DevionGames.InventorySystem
             this.m_IsCrafting = false;
         }
 
-        private IEnumerator CraftItem(Item item)
+        protected virtual IEnumerator CraftItem(Item item)
         {
-            this.m_ProgressDuration = item.CraftingRecipe.Duration;
+            CraftingRecipe recipe = GetCraftingRecipe(item);
+            this.m_ProgressDuration = recipe.Duration;
             this.m_ProgressInitTime = Time.time;
-            yield return new WaitForSeconds(item.CraftingRecipe.Duration);
+            yield return new WaitForSeconds(recipe.Duration);
 
-            if (item.CraftingRecipe.Skill != null)
+            if (recipe.Skill != null)
             {
-                Skill skill = ItemContainer.GetItem(item.CraftingRecipe.Skill.Id) as Skill;
+                Skill skill = ItemContainer.GetItem(recipe.Skill.Id) as Skill;
                 if (skill != null && !skill.CheckSkill())
                 {
-                    InventoryManager.Notifications.failedToCraft.Show(item.DisplayName);
-                    if (item.CraftingRecipe.RemoveIngredientsWhenFailed)
+                    NotifyFailedToCraft(item, FailureCause.Unknown);
+                    if (recipe.RemoveIngredientsWhenFailed)
                     {
-                        for (int j = 0; j < item.CraftingRecipe.Ingredients.Count; j++)
+                        for (int j = 0; j < recipe.Ingredients.Count; j++)
                         {
-                            this.m_RequiredIngredientsContainer.RemoveItem(item.CraftingRecipe.Ingredients[j].item, item.CraftingRecipe.Ingredients[j].amount);
+                            this.m_RequiredIngredientsContainer.RemoveItem(recipe.Ingredients[j].item, recipe.Ingredients[j].amount);
                         }
                     }
                     yield break;
@@ -239,22 +234,49 @@ namespace DevionGames.InventorySystem
 
             Item craftedItem = Instantiate(item);
             craftedItem.Stack = 1;
-            craftedItem.CraftingRecipe.CraftingModifier.Modify(craftedItem);
+            recipe.CraftingModifier.Modify(craftedItem);
 
             if (this.m_ResultStorageContainer.StackOrAdd(craftedItem))
             {
-                for (int i = 0; i < item.CraftingRecipe.Ingredients.Count; i++)
+                for (int i = 0; i < recipe.Ingredients.Count; i++)
                 {
-                    this.m_RequiredIngredientsContainer.RemoveItem(item.CraftingRecipe.Ingredients[i].item, item.CraftingRecipe.Ingredients[i].amount);
+                    this.m_RequiredIngredientsContainer.RemoveItem(recipe.Ingredients[i].item, recipe.Ingredients[i].amount);
                 }
-                InventoryManager.Notifications.craftedItem.Show(UnityTools.ColorString(craftedItem.Name, craftedItem.Rarity.Color));
-                ExecuteEvent<ITriggerCraftItem>(Execute, craftedItem);
+                NotifyItemCrafted(craftedItem);
             }
             else
             {
-                InventoryManager.Notifications.containerFull.Show(this.m_ResultStorageContainer.Name);
-                ExecuteEvent<ITriggerFailedToCraftItem>(Execute, item, FailureCause.ContainerFull);
+                NotifyFailedToCraft(item, FailureCause.ContainerFull);
                 StopCrafting(item);
+            }
+        }
+
+
+        protected virtual void NotifyAlreadyCrafting(Item item) {
+            InventoryManager.Notifications.alreadyCrafting.Show();
+            ExecuteEvent<ITriggerFailedCraftStart>(Execute, item, FailureCause.InUse);
+        }
+
+        protected virtual void NotifyMissingIngredients(Item item) {
+            InventoryManager.Notifications.missingIngredient.Show();
+            ExecuteEvent<ITriggerFailedCraftStart>(Execute, item, FailureCause.Requirement);
+        }
+
+        protected virtual void NotifyItemCrafted(Item item) {
+            InventoryManager.Notifications.craftedItem.Show(UnityTools.ColorString(item.Name, item.Rarity.Color));
+            ExecuteEvent<ITriggerCraftItem>(Execute, item);
+        }
+
+        protected virtual void NotifyFailedToCraft(Item item, FailureCause cause) {
+            switch (cause) {
+                case FailureCause.ContainerFull:
+                    InventoryManager.Notifications.containerFull.Show(this.m_ResultStorageContainer.Name);
+                    ExecuteEvent<ITriggerFailedToCraftItem>(Execute, item, FailureCause.ContainerFull);
+                    break;
+                case FailureCause.Unknown:
+                    InventoryManager.Notifications.failedToCraft.Show(item.DisplayName);
+                    ExecuteEvent<ITriggerFailedToCraftItem>(Execute, item, FailureCause.Unknown);
+                    break;
             }
         }
 

@@ -159,5 +159,19 @@ namespace DevionGames
             }
         }
 
+        public void Execute(ActionTemplate template) {
+            IEnumerator behavior = SequenceCoroutine(template.actions.ToArray());
+            UnityTools.StartCoroutine(behavior);
+        }
+        protected IEnumerator SequenceCoroutine(Action[] actions)
+        {
+            Sequence sequence = new Sequence(gameObject, PlayerInfo, GetComponent<Blackboard>(), actions);
+            sequence.Start();
+            while (sequence.Tick())
+            {
+                yield return null;
+            }
+        }
+
     }
 }

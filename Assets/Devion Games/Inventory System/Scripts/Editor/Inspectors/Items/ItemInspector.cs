@@ -43,6 +43,7 @@ namespace DevionGames.InventorySystem
         protected SerializedProperty m_CanDestroy;
 
         protected SerializedProperty m_CraftingRecipe;
+        protected SerializedProperty m_EnchantingRecipe;
 
         /*protected SerializedProperty m_UseCraftingSkill;
         protected SerializedProperty m_SkillWindow;
@@ -179,6 +180,8 @@ namespace DevionGames.InventorySystem
 
 
             this.m_CraftingRecipe = serializedObject.FindProperty("m_CraftingRecipe");
+            this.m_EnchantingRecipe = serializedObject.FindProperty("m_EnchantingRecipe");
+
             #region Crafting
             /*this.m_IsCraftable = serializedObject.FindProperty("m_IsCraftable");
             this.m_CraftingDuration = serializedObject.FindProperty("m_CraftingDuration");
@@ -250,6 +253,7 @@ namespace DevionGames.InventorySystem
                 this.m_CanBuyBack.propertyPath,
                 this.m_CanDestroy.propertyPath,
                 this.m_CraftingRecipe.propertyPath,
+                this.m_EnchantingRecipe.propertyPath
             };
 
 
@@ -369,6 +373,7 @@ namespace DevionGames.InventorySystem
             EditorGUILayout.EndFadeGroup();
 
             EditorGUILayout.PropertyField(this.m_CraftingRecipe);
+            EditorGUILayout.PropertyField(this.m_EnchantingRecipe);
 
             /*EditorGUILayout.PropertyField(this.m_IsCraftable);
             this.m_ShowCraftOptions.target = this.m_IsCraftable.boolValue;
