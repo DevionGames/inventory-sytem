@@ -333,6 +333,15 @@ namespace DevionGames.InventorySystem
                     if(ObservedItem.CanDestroy)
                         menu.AddMenuItem("Destroy", DestroyItem);
 
+                    for (int i = 0; i < Container.ContextMenuFunctions.Count; i++) {
+                        int cnt = i;
+                        if (!string.IsNullOrEmpty(Container.ContextMenuFunctions[cnt]))
+                        {
+                        
+                            menu.AddMenuItem(Container.ContextMenuFunctions[cnt], () => { Container.gameObject.SendMessage(Container.ContextMenuFunctions[cnt], ObservedItem, SendMessageOptions.DontRequireReceiver); });
+                        }
+                    }
+
                     menu.Show();
                 }
             }

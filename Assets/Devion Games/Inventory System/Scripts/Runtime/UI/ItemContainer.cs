@@ -201,7 +201,7 @@ namespace DevionGames.InventorySystem
             protected set { this.m_UseContextMenu = value; }
         }
 
-        [Compound("m_UseContextMenu")]
+       // [Compound("m_UseContextMenu")]
         [SerializeField]
         [EnumFlags]
         protected InputButton m_ContextMenuButton = InputButton.Right;
@@ -210,6 +210,12 @@ namespace DevionGames.InventorySystem
             set { this.m_ContextMenuButton = value; }
         }
 
+        [SerializeField]
+        protected List<string> m_ContextMenuFunctions = new List<string>();
+
+        public List<string> ContextMenuFunctions {
+            get { return this.m_ContextMenuFunctions; }
+        }
 
         [Tooltip("Show item tooltips?")]
         [SerializeField]

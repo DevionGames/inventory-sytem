@@ -26,6 +26,11 @@ namespace DevionGames.InventorySystem
         private SerializedProperty m_MoveItemConditions;
         private AnimBool m_ShowMoveUsedItems;
 
+        private SerializedProperty m_UseContextMenu;
+        private SerializedProperty m_ContextMenuButton;
+        private SerializedProperty m_ContextMenuFunctions;
+        private ReorderableList m_ContextMenuFunctionList;
+        private AnimBool m_ShowContextMenu;
 
         private ReorderableList m_MoveItemConditionList;
 
@@ -57,6 +62,25 @@ namespace DevionGames.InventorySystem
             this.m_ShowDynamicContainer.valueChanged.AddListener(new UnityAction(this.Repaint));
 
             this.m_UseReferences = serializedObject.FindProperty("m_UseReferences");
+
+
+            this.m_UseContextMenu = serializedObject.FindProperty("m_UseContextMenu");
+            this.m_ContextMenuButton = serializedObject.FindProperty("m_ContextMenuButton");
+            this.m_ContextMenuFunctions = serializedObject.FindProperty("m_ContextMenuFunctions");
+            this.m_ShowContextMenu = new AnimBool(this.m_UseContextMenu.boolValue);
+            this.m_ShowContextMenu.valueChanged.AddListener(new UnityAction(this.Repaint));
+
+            this.m_ContextMenuFunctionList = new ReorderableList(serializedObject, this.m_ContextMenuFunctions, true, true, true, true);
+            this.m_ContextMenuFunctionList.drawHeaderCallback = (Rect rect) => {
+                EditorGUI.LabelField(rect, "Functions");
+            };
+
+            this.m_ContextMenuFunctionList.drawElementCallback = (Rect rect, int index, bool isActive, bool isFocused) => {
+                SerializedProperty element = this.m_ContextMenuFunctionList.serializedProperty.GetArrayElementAtIndex(index);
+                rect.y += 2;
+                rect.height = EditorGUIUtility.singleLineHeight;
+                EditorGUI.PropertyField(rect, element, GUIContent.none);
+            };
 
             this.m_MoveUsedItems = serializedObject.FindProperty("m_MoveUsedItem");
             this.m_MoveItemConditions = serializedObject.FindProperty("moveItemConditions");
@@ -92,6 +116,9 @@ namespace DevionGames.InventorySystem
                 this.m_SlotParent.propertyPath,
                 this.m_SlotPrefab.propertyPath,
                 this.m_UseReferences.propertyPath,
+                this.m_UseContextMenu.propertyPath,
+                this.m_ContextMenuButton.propertyPath,
+                this.m_ContextMenuFunctions.propertyPath,
                 this.m_MoveUsedItems.propertyPath,
                 this.m_MoveItemConditions.propertyPath,
                 this.m_Restrictions.propertyPath
@@ -131,6 +158,22 @@ namespace DevionGames.InventorySystem
 
         
             DrawTypePropertiesExcluding(typeof(ItemContainer),this.m_PropertiesToExcludeForDefaultInspector);
+
+            EditorGUILayout.PropertyField(this.m_UseContextMenu);
+            this.m_ShowContextMenu.target = this.m_UseContextMenu.boolValue;
+            if (EditorGUILayout.BeginFadeGroup(this.m_ShowContextMenu.faded)) {
+                EditorGUI.indentLevel = EditorGUI.indentLevel + 1;
+                EditorGUILayout.PropertyField(this.m_ContextMenuButton);
+                EditorGUILayout.HelpBox("Here you can define custom context menu functions. The script should be attached to this game object and have the form of MyFunction(Item item).", MessageType.Info);
+                EditorGUI.indentLevel = EditorGUI.indentLevel - 1;
+                GUILayout.BeginHorizontal();
+                GUILayout.Space(16f);
+                GUILayout.BeginVertical();
+                this.m_ContextMenuFunctionList.DoLayoutList();
+                GUILayout.EndVertical();
+                GUILayout.EndHorizontal();
+            }
+            EditorGUILayout.EndFadeGroup();
 
             EditorGUILayout.PropertyField(this.m_MoveUsedItems);
             this.m_ShowMoveUsedItems.target = this.m_MoveUsedItems.boolValue;
