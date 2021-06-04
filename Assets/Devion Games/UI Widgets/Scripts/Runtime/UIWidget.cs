@@ -123,6 +123,7 @@ namespace DevionGames.UIWidgets
 		protected MonoBehaviour m_ThirdPersonController;
 		protected static bool m_PreviousCameraControllerEnabled;
 		protected static List<UIWidget> m_CurrentVisibleWidgets=new List<UIWidget>();
+		protected CursorLockMode m_PreviousLockMode;
 
 		/// <summary>
 		/// Gets a value indicating whether this widget is visible.
@@ -246,23 +247,24 @@ namespace DevionGames.UIWidgets
 				this.m_Scrollbars[i].value = 1f;
 			}
 			if (this.m_ShowAndHideCursor) {
-				/*if (m_CurrentVisibleWidgets.Count == 0) {
-					m_PreviousCursorLockMode = Cursor.lockState;
-					m_PreviousCursorVisibility = Cursor.visible;
-					if (m_CameraController != null)
-						m_PreviousCameraControllerEnabled = m_CameraController.enabled;
-				}*/
 				m_CurrentVisibleWidgets.Add(this);
-				if (m_CameraController != null && m_CurrentVisibleWidgets.Count == 1)
-				{
-					//this.m_CameraController.enabled = false;
-					this.m_CameraTransform.SendMessage("Activate", this.m_CameraPreset, SendMessageOptions.DontRequireReceiver);
 
-					if(this.m_FocusPlayer && !this.m_IsLocked)
-						this.m_CameraController.SendMessage("Focus", true, SendMessageOptions.DontRequireReceiver);
+				if ( m_CurrentVisibleWidgets.Count == 1)
+				{
+					if (m_CameraController != null)
+					{
+						this.m_CameraTransform.SendMessage("Activate", this.m_CameraPreset, SendMessageOptions.DontRequireReceiver);
+
+						if (this.m_FocusPlayer && !this.m_IsLocked)
+							this.m_CameraController.SendMessage("Focus", true, SendMessageOptions.DontRequireReceiver);
+					}else {
+						//Show Cursor without ThridPersonCamera
+						this.m_PreviousLockMode = Cursor.lockState;
+						Cursor.lockState = CursorLockMode.None;
+						Cursor.visible = true;
+						Debug.Log("Show");
+					}
 				}
-				//Cursor.lockState = CursorLockMode.None;
-				//Cursor.visible = true;
 			}
 
 			Execute("OnShow", new CallbackEventData());
@@ -286,15 +288,19 @@ namespace DevionGames.UIWidgets
 			if (this.m_ShowAndHideCursor) {
 				m_CurrentVisibleWidgets.Remove(this);
 				if (m_CurrentVisibleWidgets.Count == 0) {
-					//Cursor.lockState = m_PreviousCursorLockMode;
-					//Cursor.visible = m_PreviousCursorVisibility;
+
 					if (this.m_CameraController != null)
 					{
 						this.m_CameraTransform.SendMessage("Deactivate", this.m_CameraPreset, SendMessageOptions.DontRequireReceiver);
-						//this.m_CameraController.enabled = m_PreviousCameraControllerEnabled;
-						if (this.m_CameraController.enabled && this.m_FocusPlayer) {
+						if (this.m_CameraController.enabled && this.m_FocusPlayer)
+						{
 							this.m_CameraController.SendMessage("Focus", false, SendMessageOptions.DontRequireReceiver);
 						}
+					}
+					else {
+						//Hide Cursor with missing ThirdPersonCamera
+						Cursor.lockState = this.m_PreviousLockMode;
+						Cursor.visible = false;
 					}
 				}
 			}
