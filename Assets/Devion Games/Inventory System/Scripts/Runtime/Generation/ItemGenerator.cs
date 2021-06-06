@@ -12,11 +12,28 @@ namespace DevionGames.InventorySystem
         private List<ItemGeneratorData> m_ItemGeneratorData=new List<ItemGeneratorData>();
         [SerializeField]
         private int m_MaxAmount = 1;
+        [Tooltip("Refill time in seconds.")]
+        [SerializeField]
+        private float m_Refill = -1;
+
 
         private void Start()
         {
             ItemCollection collection = GetComponent<ItemCollection>();
             collection.Add(GenerateItems().ToArray());
+            if (m_Refill > 0) {
+                StartCoroutine(Refill(collection));
+            }
+        }
+
+        private IEnumerator Refill(ItemCollection collection) {
+            while (true) {
+                if (collection.IsEmpty) {
+                    yield return new WaitForSeconds(m_Refill);
+                    collection.Add(GenerateItems().ToArray());
+                }
+                yield return new WaitForSeconds(3f);
+            }
         }
 
         private List<Item> GenerateItems() {
@@ -38,20 +55,6 @@ namespace DevionGames.InventorySystem
                 item = InventoryManager.CreateInstance(item);
                 item.Stack = stack;
                 data.modifiers.Modify(item);
-
-               /* item = Instantiate(item);
-                item.Stack = stack;
-
-                data.modifiers.Modify(item);
-
-                if (item.IsCraftable)
-                {
-                    for (int j = 0; j < item.ingredients.Count; j++)
-                    {
-                        item.ingredients[j].item = Instantiate(item.ingredients[j].item);
-                        item.ingredients[j].item.Stack = item.ingredients[j].amount;
-                    }
-                }*/
                 generatedItems.Add(item);
             }
             return generatedItems;

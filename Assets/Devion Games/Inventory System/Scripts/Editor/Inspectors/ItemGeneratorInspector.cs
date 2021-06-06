@@ -11,6 +11,7 @@ namespace DevionGames.InventorySystem
     {
         private SerializedProperty m_Script;
         private SerializedProperty m_MaxAmount;
+        private SerializedProperty m_Refill;
         private SerializedProperty m_ItemGeneratorData;
         private ReorderableList m_ItemGeneratorDataList;
 
@@ -19,6 +20,7 @@ namespace DevionGames.InventorySystem
         protected virtual void OnEnable() {
             this.m_Script = serializedObject.FindProperty("m_Script");
             this.m_MaxAmount = serializedObject.FindProperty("m_MaxAmount");
+            this.m_Refill = serializedObject.FindProperty("m_Refill");
             this.m_ItemGeneratorData = serializedObject.FindProperty("m_ItemGeneratorData");
             this.m_ItemGeneratorDataList = new ReorderableList(serializedObject, this.m_ItemGeneratorData, true, true, true, true)
             {
@@ -79,7 +81,7 @@ namespace DevionGames.InventorySystem
             {
                 this.m_MaxAmount.intValue = 0;
             }
-
+            EditorGUILayout.PropertyField(this.m_Refill);
             this.m_ItemGeneratorDataList.DoLayoutList();
 
             if (this.m_ItemGeneratorDataList.index != -1)

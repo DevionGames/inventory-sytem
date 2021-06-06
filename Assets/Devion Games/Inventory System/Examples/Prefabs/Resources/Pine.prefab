@@ -254,7 +254,6 @@ MonoBehaviour:
         m_Enabled: 1
         m_Skill: {fileID: 6305893422732665131, guid: e1f045c49e197e3439b99da9edbc5ba3,
           type: 2}
-        m_SkillWindow: 
         m_SuccessNotification:
           title: 
           text: 
@@ -374,6 +373,7 @@ MonoBehaviour:
     modifiers:
       modifiers: []
   m_MaxAmount: 3
+  m_Refill: 120
 --- !u!1 &7232939143057212312
 GameObject:
   m_ObjectHideFlags: 0

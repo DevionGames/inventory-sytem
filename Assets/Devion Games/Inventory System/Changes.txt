@@ -12,3 +12,6 @@
 - Crafting Recipe field in Item, if null item is not craftable.
 - Added warnings if there is a null reference restriction.
 - Fixed problems with ThirdParty-Assets that also have a class named ItemDatabase.
+- Sort in UI Manager
+- Refill for ItemGenerator
+- Callbacks were not called, when autosave disabled and saved data was availible.

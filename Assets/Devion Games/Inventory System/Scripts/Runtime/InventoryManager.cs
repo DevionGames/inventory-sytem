@@ -192,11 +192,13 @@ namespace DevionGames.InventorySystem
                 Physics.queriesHitTriggers = InventoryManager.DefaultSettings.queriesHitTriggers;
 
                 m_IsLoaded = !HasSavedData();
-               /* if (!InventoryManager.SavingLoading.autoSave)
-                    m_IsLoaded = true;*/
+
+               if (!InventoryManager.SavingLoading.autoSave)
+                    m_IsLoaded = true;
 
                 this.onDataLoaded.AddListener(() => { m_IsLoaded = true; });
 
+                Debug.Log(m_IsLoaded);
                 if (InventoryManager.DefaultSettings.debugMessages)
                     Debug.Log("Inventory Manager initialized.");
             }

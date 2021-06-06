@@ -262,7 +262,6 @@ namespace DevionGames.UIWidgets
 						this.m_PreviousLockMode = Cursor.lockState;
 						Cursor.lockState = CursorLockMode.None;
 						Cursor.visible = true;
-						Debug.Log("Show");
 					}
 				}
 			}

@@ -67,6 +67,13 @@ namespace DevionGames.StatSystem
             CalculateValue();
         }
 
+        public void Set(float amount)
+        {
+            this.m_BaseValue = amount;
+            this.m_BaseValue = Mathf.Clamp(this.m_BaseValue, 0, float.MaxValue);
+            CalculateValue();
+        }
+
         public void Add(float amount) {
             this.m_BaseValue += amount;
             this.m_BaseValue = Mathf.Clamp(this.m_BaseValue, 0, float.MaxValue);

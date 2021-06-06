@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using System.Linq;
+using System;
 
 namespace DevionGames.UIWidgets
 {
@@ -29,7 +30,9 @@ namespace DevionGames.UIWidgets
 		[SerializeField]
 		private int index = -1;
 		private DisplayType displayType= DisplayType.Name;
-		
+
+		private string[] sortType = new string[] {"A-Z","Hierarchy"};
+		private int sortIndex = 0;
 
 		private void OnEnable ()
 		{
@@ -51,6 +54,12 @@ namespace DevionGames.UIWidgets
 				displayType = selectedDisplayType;
 				FindWidgets();
 				Focus();
+			}
+
+			int sIndex = EditorGUILayout.Popup(sortIndex, sortType, EditorStyles.toolbarPopup);
+			if (sIndex != sortIndex) {
+				sortIndex = sIndex;
+				FindWidgets();
 			}
 
 			GUILayout.FlexibleSpace();
@@ -135,6 +144,19 @@ namespace DevionGames.UIWidgets
 		private void FindWidgets ()
 		{
 			targets = FindInScene<UIWidget> ().ToArray ();
+			switch (sortIndex)
+			{
+				case 0:
+					Array.Sort(targets, delegate (UIWidget a, UIWidget b) {
+						return a.Name.CompareTo(b.Name);
+					});
+					break;
+				case 1:
+					Array.Sort(targets, delegate (UIWidget a, UIWidget b) {
+						return a.transform.GetSiblingIndex().CompareTo(b.transform.GetSiblingIndex());
+					});
+					break;
+			}
 			canvasGroups = targets.Select (x => x.gameObject.GetComponent<CanvasGroup> ()).ToArray ();
 			List<string> widgetPaths = new List<string> ();
 
