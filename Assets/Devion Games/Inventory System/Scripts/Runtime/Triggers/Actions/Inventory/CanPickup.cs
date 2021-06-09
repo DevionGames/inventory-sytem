@@ -23,7 +23,7 @@ namespace DevionGames.InventorySystem
 
         public override ActionStatus OnUpdate()
         {
-            bool result = ItemContainer.CanAddItems(this.m_WindowName, this.m_ItemCollection.ToArray());
+            bool result = ItemContainer.CanAddItems(this.m_WindowName, this.m_ItemCollection.ToArray()) || ItemContainer.CanStackItems(this.m_WindowName, this.m_ItemCollection.ToArray());
             if (!result) {
                 InventoryManager.Notifications.containerFull.Show(this.m_WindowName);
             }

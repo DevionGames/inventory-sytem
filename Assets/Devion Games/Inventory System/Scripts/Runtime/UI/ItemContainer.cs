@@ -1767,6 +1767,38 @@ namespace DevionGames.InventorySystem
             return checkedItems.Count == 0;
         }
 
+     /// <summary>
+     /// Checks if the items can be stacks.
+     /// </summary>
+     /// <param name="windowName"></param>
+     /// <param name="items"></param>
+     /// <param name="createSlot"></param>
+     /// <returns></returns>
+        public static bool CanStackItems(string windowName, Item[] items)
+        {
+            ItemContainer[] windows = WidgetUtility.FindAll<ItemContainer>(windowName);
+            List<Item> checkedItems = new List<Item>(items);
+
+            for (int i = checkedItems.Count - 1; i >= 0; i--)
+            {
+                Item item = checkedItems[i];
+                if (windows.Length > 0)
+                {
+                    for (int j = 0; j < windows.Length; j++)
+                    {
+                        ItemContainer current = windows[j];
+                        if (current.CanStack(item))
+                        {
+                            checkedItems.RemoveAt(i);
+                            break;
+                        }
+                    }
+                }
+            }
+
+            return checkedItems.Count == 0;
+        }
+
         /// <summary>
         /// Checks if the item can be added to container.
         /// </summary>
