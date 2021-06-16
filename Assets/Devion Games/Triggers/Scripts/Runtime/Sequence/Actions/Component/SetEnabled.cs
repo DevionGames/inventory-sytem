@@ -22,6 +22,7 @@ namespace DevionGames
         public override void OnStart()
         {
             GameObject target = GetTarget(this.m_Target);
+            if(target == null) { return; }
             this.m_Component = target.GetComponent(this.m_ComponentName) as Behaviour;
             if (this.m_Component != null)
                 this.m_IsEnabled = this.m_Component.enabled;

@@ -24,7 +24,7 @@ namespace DevionGames.InventorySystem
         private void Update()
         {
 
-            if (!this.m_Trigger.InUse && this.m_Trigger.InRange && this.m_Trigger.IsBestTrigger())
+            if (!this.m_Trigger.InUse && this.m_Trigger.InRange && InventoryManager.current.PlayerInfo.transform != null && this.m_Trigger.IsBestTrigger())
             {
                 DoDisplayTooltip(true);
             }
