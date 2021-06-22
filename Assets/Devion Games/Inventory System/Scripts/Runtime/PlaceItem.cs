@@ -27,7 +27,8 @@ namespace DevionGames.InventorySystem
 
 			this.m_Player = InventoryManager.current.PlayerInfo.transform;
 			this.m_Layer = gameObject.layer;
-			gameObject.layer = 2;
+			gameObject.layer = 31;
+			mask = mask & ~(1 << 31);
 			SetColor(Color.red);
 		}
 

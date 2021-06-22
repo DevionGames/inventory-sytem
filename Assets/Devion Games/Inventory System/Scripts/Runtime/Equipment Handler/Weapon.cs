@@ -44,7 +44,7 @@ namespace DevionGames.InventorySystem
         protected StartType m_StartType;
         [SerializeField]
         protected StopType m_StopType;
-
+        
 
 
         [Header("Animator IK:")]
