@@ -1713,6 +1713,7 @@ MonoBehaviour:
   m_CanUseItems: 0
   m_UseContextMenu: 0
   m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 0
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -6723,8 +6724,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.025026, y: 139.75}
-  m_SizeDelta: {x: 426, y: 127.19}
+  m_AnchoredPosition: {x: 0.0000066757, y: 139.25}
+  m_SizeDelta: {x: 499.01117, y: 127.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &8081286545477115097
 CanvasGroup:

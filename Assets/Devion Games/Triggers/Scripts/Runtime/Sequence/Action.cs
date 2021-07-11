@@ -19,7 +19,7 @@ namespace DevionGames
             set { this.m_Enabled = value; }
         }
 
-        public bool isActiveAndEnabled { get { return enabled && gameObject.activeSelf; } }
+        public bool isActiveAndEnabled { get { return enabled && (gameObject == null || gameObject.activeSelf); } }
 
         protected PlayerInfo playerInfo;
         protected GameObject gameObject;

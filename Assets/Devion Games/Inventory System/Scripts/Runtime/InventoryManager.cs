@@ -198,7 +198,6 @@ namespace DevionGames.InventorySystem
 
                 this.onDataLoaded.AddListener(() => { m_IsLoaded = true; });
 
-                Debug.Log(m_IsLoaded);
                 if (InventoryManager.DefaultSettings.debugMessages)
                     Debug.Log("Inventory Manager initialized.");
             }

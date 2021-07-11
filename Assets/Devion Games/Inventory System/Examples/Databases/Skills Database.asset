@@ -257,9 +257,33 @@ MonoBehaviour:
     delay: 2
     duration: 2
     ignoreTimeScale: 1
-  missingSkillToCraft:
+  alreadyEnchanting:
     title: 
-    text: You don't have the skill to craft this item!
+    text: You are already enchating.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  enchantedItem:
+    title: 
+    text: Successfully enchanted {0}.
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  missingMaterials:
+    title: 
+    text: You don't have all materials to enchant this item!
+    color: {r: 1, g: 1, b: 1, a: 1}
+    icon: {fileID: 0}
+    delay: 2
+    duration: 2
+    ignoreTimeScale: 1
+  failedToEnchant:
+    title: 
+    text: You failed to enchant {0}.
     color: {r: 1, g: 1, b: 1, a: 1}
     icon: {fileID: 0}
     delay: 2

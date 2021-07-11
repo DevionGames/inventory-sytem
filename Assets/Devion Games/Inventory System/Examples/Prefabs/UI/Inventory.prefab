@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &68863466
 RectTransform:
   m_ObjectHideFlags: 0
@@ -512,6 +512,7 @@ MonoBehaviour:
   m_Ingredients: {fileID: 0}
   m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!1 &516229213964823446
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,6 +810,7 @@ MonoBehaviour:
   m_Ingredients: {fileID: 0}
   m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!1 &963240956226248952
 GameObject:
   m_ObjectHideFlags: 0
@@ -1624,6 +1626,7 @@ MonoBehaviour:
   m_Ingredients: {fileID: 0}
   m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!1 &1425623130121863989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,6 +1776,7 @@ MonoBehaviour:
   m_Ingredients: {fileID: 0}
   m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!1 &1431623635406968230
 GameObject:
   m_ObjectHideFlags: 0
@@ -2830,6 +2834,7 @@ MonoBehaviour:
   m_Ingredients: {fileID: 0}
   m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!1 &2604486360627200410
 GameObject:
   m_ObjectHideFlags: 0
@@ -4000,6 +4005,7 @@ MonoBehaviour:
   m_Ingredients: {fileID: 0}
   m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!1 &2740522861360441080
 GameObject:
   m_ObjectHideFlags: 0
@@ -4807,6 +4813,7 @@ MonoBehaviour:
   m_CanUseItems: 1
   m_UseContextMenu: 1
   m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 1
   m_MoveUsedItem: 1
   moveItemConditions:
@@ -5714,6 +5721,7 @@ MonoBehaviour:
   m_Ingredients: {fileID: 0}
   m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!1 &3465058747900361578
 GameObject:
   m_ObjectHideFlags: 0
@@ -5863,6 +5871,7 @@ MonoBehaviour:
   m_Ingredients: {fileID: 0}
   m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!1 &3498760385765054687
 GameObject:
   m_ObjectHideFlags: 0
@@ -6086,6 +6095,7 @@ MonoBehaviour:
   m_Ingredients: {fileID: 0}
   m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!1 &3665039194917978709
 GameObject:
   m_ObjectHideFlags: 0
@@ -7221,6 +7231,7 @@ MonoBehaviour:
   m_Ingredients: {fileID: 0}
   m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!1 &4801453607320609705
 GameObject:
   m_ObjectHideFlags: 0
@@ -7370,6 +7381,7 @@ MonoBehaviour:
   m_Ingredients: {fileID: 0}
   m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!1 &4810260493382396894
 GameObject:
   m_ObjectHideFlags: 0
@@ -7967,6 +7979,7 @@ MonoBehaviour:
   m_Ingredients: {fileID: 0}
   m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!1 &5655683437855259542
 GameObject:
   m_ObjectHideFlags: 0
@@ -8194,6 +8207,7 @@ MonoBehaviour:
   m_Ingredients: {fileID: 0}
   m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!1 &5696090107815144689
 GameObject:
   m_ObjectHideFlags: 0
@@ -8491,6 +8505,7 @@ MonoBehaviour:
   m_Ingredients: {fileID: 0}
   m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!1 &5847070531278520992
 GameObject:
   m_ObjectHideFlags: 0
@@ -9084,6 +9099,7 @@ MonoBehaviour:
   m_Ingredients: {fileID: 0}
   m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!1 &6773242258431831893
 GameObject:
   m_ObjectHideFlags: 0
@@ -9533,6 +9549,7 @@ MonoBehaviour:
   m_Ingredients: {fileID: 0}
   m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!1 &7170855109814151146
 GameObject:
   m_ObjectHideFlags: 0
@@ -9982,6 +9999,7 @@ MonoBehaviour:
   m_Ingredients: {fileID: 0}
   m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!1 &7789423494802763615
 GameObject:
   m_ObjectHideFlags: 0
@@ -10131,6 +10149,7 @@ MonoBehaviour:
   m_Ingredients: {fileID: 0}
   m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!1 &8065768485352128734
 GameObject:
   m_ObjectHideFlags: 0
@@ -10280,6 +10299,7 @@ MonoBehaviour:
   m_Ingredients: {fileID: 0}
   m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!1 &8266757965781479278
 GameObject:
   m_ObjectHideFlags: 0
@@ -10577,6 +10597,7 @@ MonoBehaviour:
   m_Ingredients: {fileID: 0}
   m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!1 &8539028819860422578
 GameObject:
   m_ObjectHideFlags: 0
@@ -10878,6 +10899,7 @@ MonoBehaviour:
   m_Ingredients: {fileID: 0}
   m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!1 &9023159434880581936
 GameObject:
   m_ObjectHideFlags: 0

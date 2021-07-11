@@ -41,9 +41,10 @@ namespace DevionGames.InventorySystem
 
         public override void Use()
         {
-            if(this.m_ActionSequence == null)
-                this.m_ActionSequence = new Sequence(InventoryManager.current.PlayerInfo.gameObject, InventoryManager.current.PlayerInfo, InventoryManager.current.PlayerInfo.gameObject.GetComponent<Blackboard>(), actions.Cast<IAction>().ToArray());
-
+            if (this.m_ActionSequence == null) { 
+                GameObject gameObject = InventoryManager.current.PlayerInfo.gameObject;
+                this.m_ActionSequence = new Sequence(gameObject, InventoryManager.current.PlayerInfo, gameObject!= null?gameObject.GetComponent<Blackboard>():null, actions.Cast<IAction>().ToArray());
+            }
             if (this.m_ActionBehavior != null) {
                 UnityTools.StopCoroutine(m_ActionBehavior);
             }
