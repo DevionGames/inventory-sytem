@@ -2,3 +2,4 @@
 - Spin Button option in FocusTarget
 - Inherit distance option when switching between camera presets
 - Fixed Ladder start position.y was always set to 0
+- Added Footsetps to Sword & Shield Movement

@@ -20,6 +20,7 @@ namespace DevionGames.StatSystem
         }
         public override void OnInspectorGUI()
         {
+            if (target == null) return;
             EditorGUI.BeginDisabledGroup(true);
             EditorGUILayout.PropertyField(this.m_Script);
             EditorGUI.EndDisabledGroup();

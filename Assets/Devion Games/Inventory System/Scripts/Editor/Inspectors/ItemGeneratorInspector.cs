@@ -72,7 +72,14 @@ namespace DevionGames.InventorySystem
             EditorGUI.EndDisabledGroup();
 
             serializedObject.Update();
+            if (this.m_ItemGeneratorData.arraySize == 0)
+            {
+                EditorGUILayout.HelpBox("You need to add at least one item to the list to be able to use the generator.", MessageType.Warning);
+            }
+            EditorGUI.BeginDisabledGroup(this.m_ItemGeneratorData.arraySize == 0);
             EditorGUILayout.PropertyField(this.m_MaxAmount);
+         
+
             if (this.m_MaxAmount.intValue > this.m_ItemGeneratorData.arraySize)
             {
                 this.m_MaxAmount.intValue=this.m_ItemGeneratorData.arraySize;
@@ -82,6 +89,7 @@ namespace DevionGames.InventorySystem
                 this.m_MaxAmount.intValue = 0;
             }
             EditorGUILayout.PropertyField(this.m_Refill);
+            EditorGUI.EndDisabledGroup();
             this.m_ItemGeneratorDataList.DoLayoutList();
 
             if (this.m_ItemGeneratorDataList.index != -1)

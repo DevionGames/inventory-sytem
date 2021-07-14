@@ -340,7 +340,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &3829651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1320,8 +1322,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 0
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   useButton: 0
   m_DynamicContainer: 0
@@ -1335,6 +1337,8 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 0
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -1836,7 +1840,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &26969051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2964,7 +2970,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &50372836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3312,7 +3320,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &56241983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4158,7 +4168,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &82035539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5690,7 +5702,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &130961441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6064,7 +6078,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &143899987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6406,7 +6422,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &147917731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7631,7 +7649,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &175067980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8096,7 +8116,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &185588007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9205,7 +9227,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &207494562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9616,7 +9640,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 807915803}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.54113984
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -10782,7 +10806,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &242084279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11977,7 +12003,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &261096065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12608,7 +12636,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &268076756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13960,8 +13990,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 0
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   useButton: 2
   m_DynamicContainer: 0
@@ -13975,6 +14005,8 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 1
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 0
   m_MoveUsedItem: 1
   moveItemConditions:
@@ -14230,7 +14262,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &298187273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14600,7 +14634,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &315306524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15258,8 +15294,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 0
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
 --- !u!225 &328623492
 CanvasGroup:
@@ -15500,8 +15536,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 1
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
 --- !u!225 &334298305
 CanvasGroup:
@@ -16276,7 +16312,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 104492013}
   m_HandleRect: {fileID: 104492012}
   m_Direction: 3
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -16702,8 +16738,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 1
+  m_CameraPreset: UI
   m_CloseOnMove: 0
-  m_Deactivate: 306
   m_FocusPlayer: 0
   useButton: 3
   m_DynamicContainer: 1
@@ -16717,6 +16753,8 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 1
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 0
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -19811,7 +19849,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &438308257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20833,7 +20873,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &460129339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21055,7 +21097,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &465159540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21776,7 +21820,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &477833967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22038,7 +22084,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &482137226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23204,7 +23252,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 2008495808}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 1663117841}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &508766577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24063,8 +24113,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 0
   m_ShowAndHideCursor: 0
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   useButton: 0
   m_DynamicContainer: 0
@@ -24078,6 +24128,8 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 0
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -24699,7 +24751,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &535612579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25405,7 +25459,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &545169104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26560,7 +26616,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &561964579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27475,7 +27533,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &577710228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27932,7 +27992,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &587298233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28228,7 +28290,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &595151604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29035,8 +29099,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 1
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   useButton: -1
   m_DynamicContainer: 1
@@ -29050,6 +29114,8 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 0
   m_MoveUsedItem: 1
   moveItemConditions:
@@ -29242,7 +29308,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &607931518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32052,8 +32120,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 1
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   useButton: -1
   m_DynamicContainer: 0
@@ -32067,6 +32135,8 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 0
   m_MoveUsedItem: 1
   moveItemConditions:
@@ -32921,7 +32991,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &685370518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33518,8 +33590,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 1
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   useButton: -1
   m_DynamicContainer: 1
@@ -33533,6 +33605,8 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 0
   m_MoveUsedItem: 1
   moveItemConditions:
@@ -34858,7 +34932,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &709028056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35427,7 +35503,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 1516617271}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &718040886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35997,7 +36075,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &731132041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36734,8 +36814,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 0
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   useButton: 0
   m_DynamicContainer: 0
@@ -36749,6 +36829,8 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 0
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -36999,7 +37081,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 360833899}
   m_Direction: 3
   m_Value: 0
-  m_Size: 0.10602353
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -37330,7 +37412,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &759907875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37701,7 +37785,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &764570247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37945,7 +38031,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &767368872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38309,8 +38397,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 1
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   useButton: 3
   m_DynamicContainer: 1
@@ -38324,6 +38412,8 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 1
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -39365,7 +39455,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 1370199305}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &797334650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39607,7 +39699,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &799709250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39770,7 +39864,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1414380428}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.9995034
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -39891,8 +39985,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 0
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   progressbar: {fileID: 804388561}
   m_ProgressbarTitle: {fileID: 0}
@@ -42379,7 +42473,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 1446289559}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
   m_Value: {fileID: 1067108643}
 --- !u!114 &843864774
 MonoBehaviour:
@@ -42965,7 +43061,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 1745918741}
   m_Ingredients: {fileID: 1815417710}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!224 &860568970
 RectTransform:
   m_ObjectHideFlags: 0
@@ -43548,7 +43646,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &867073182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44608,7 +44708,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 1747676351}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &879088951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45081,7 +45183,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &885299888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45206,7 +45310,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 1844424260}
   m_Ingredients: {fileID: 1626285768}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!224 &887304507
 RectTransform:
   m_ObjectHideFlags: 0
@@ -45393,7 +45499,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 732146238}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.75064576
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -46247,7 +46353,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &899574368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47027,7 +47135,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 34890703}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &916380037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47473,7 +47583,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &926979437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48231,7 +48343,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 169777056}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &944421754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49183,7 +49297,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &954946901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50261,7 +50377,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &967552453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50502,7 +50620,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 185478688}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.9992643
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -50688,7 +50806,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &974628718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51359,7 +51479,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &993183060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51621,7 +51743,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &996177148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52267,7 +52391,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1007138707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53222,7 +53348,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1018392314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53756,7 +53884,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1022633297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53904,7 +54034,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1023885566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55451,8 +55583,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 0
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   useButton: 0
   m_DynamicContainer: 0
@@ -55466,6 +55598,8 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 0
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -56037,7 +56171,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 1522775723}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1060102094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56341,7 +56477,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1061100158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57956,8 +58094,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 1
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 1
   useButton: 2
   m_DynamicContainer: 1
@@ -57971,6 +58109,8 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 0
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -58539,7 +58679,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1112276536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59110,8 +59252,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 0
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   progressbar: {fileID: 1117309720}
   m_ProgressbarTitle: {fileID: 0}
@@ -59275,7 +59417,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1119978600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60436,8 +60580,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 0
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   useButton: 0
   m_DynamicContainer: 1
@@ -60451,6 +60595,8 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 0
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -60776,7 +60922,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1145194555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61971,8 +62119,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 1
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 1
   useButton: 0
   m_DynamicContainer: 1
@@ -61986,6 +62134,8 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 0
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -62431,7 +62581,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1177752123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63053,7 +63205,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1193284767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63790,8 +63944,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 0
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   useButton: 3
   m_DynamicContainer: 0
@@ -63805,6 +63959,8 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 1
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 0
   m_MoveUsedItem: 1
   moveItemConditions:
@@ -64869,8 +65025,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1850132166}
   m_HandleRect: {fileID: 1850132165}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 0
+  m_Value: 1
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -65383,17 +65539,17 @@ PrefabInstance:
     - target: {fileID: 2217017165105714522, guid: 7711700c499322241ad0a6161fccb38f,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2217017165105714522, guid: 7711700c499322241ad0a6161fccb38f,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2217017165105714522, guid: 7711700c499322241ad0a6161fccb38f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -35.294117
       objectReference: {fileID: 0}
     - target: {fileID: 2217017165105714522, guid: 7711700c499322241ad0a6161fccb38f,
         type: 3}
@@ -65413,17 +65569,17 @@ PrefabInstance:
     - target: {fileID: 2452283189092255581, guid: 7711700c499322241ad0a6161fccb38f,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2452283189092255581, guid: 7711700c499322241ad0a6161fccb38f,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2452283189092255581, guid: 7711700c499322241ad0a6161fccb38f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -80.08412
       objectReference: {fileID: 0}
     - target: {fileID: 2452283189092255581, guid: 7711700c499322241ad0a6161fccb38f,
         type: 3}
@@ -66129,7 +66285,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1238544253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66801,7 +66959,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1248360008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67245,7 +67405,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1253412898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69619,8 +69781,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 0
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   useButton: 0
   m_DynamicContainer: 0
@@ -69634,6 +69796,8 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 0
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -70553,7 +70717,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1335533549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72360,8 +72526,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 1
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   useButton: 3
   m_DynamicContainer: 0
@@ -72375,6 +72541,8 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 1
   m_MoveUsedItem: 1
   moveItemConditions:
@@ -72570,7 +72738,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1372969361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73036,7 +73206,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1378065831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73362,7 +73534,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1382822582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74177,7 +74351,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1404495019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74852,7 +75028,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1417726613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76589,7 +76767,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1436201369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76913,7 +77093,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 326069951}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1438925609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77791,7 +77973,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1454129421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78411,7 +78595,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1466862027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78900,7 +79086,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 1670750476}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1471329184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80671,8 +80859,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 0
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   autoClose: 1
   title: {fileID: 560880837}
@@ -81511,7 +81699,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1519986688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83097,8 +83287,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 766214255}
   m_HandleRect: {fileID: 766214254}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.99947566
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -83281,7 +83471,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1550573006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83481,8 +83673,8 @@ MonoBehaviour:
   actions:
   - id: 0
   m_Interruptable: 0
-  m_RequiredIngredientsWindow: Inventory
-  m_ResultStorageWindow: Inventory
+  m_IngredientsWindow: Inventory
+  m_StorageWindow: Inventory
   m_CraftingProgressbar: CraftingProgress
   references:
     version: 1
@@ -85830,7 +86022,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1587047504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86768,7 +86962,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1612068171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87459,8 +87655,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 0
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   useButton: 0
   m_DynamicContainer: 1
@@ -87474,6 +87670,8 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 0
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -88119,8 +88317,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 1
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   useButton: 2
   m_DynamicContainer: 0
@@ -88134,6 +88332,8 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 1
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 1
   m_MoveUsedItem: 1
   moveItemConditions:
@@ -88515,8 +88715,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 0
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   useButton: 0
   m_DynamicContainer: 0
@@ -88530,6 +88730,8 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 0
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -89096,7 +89298,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1676016871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90221,8 +90425,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 1
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
 --- !u!114 &1688527099
 MonoBehaviour:
@@ -90470,6 +90674,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 647049451}
     m_Modifications:
+    - target: {fileID: 68863466, guid: 73000691bb97ca545a8d09fd0c6f5865, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 230410997574644129, guid: 73000691bb97ca545a8d09fd0c6f5865,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -92230,7 +92438,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1710038582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92706,8 +92916,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 0
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   progressbar: {fileID: 1719483375}
   m_ProgressbarTitle: {fileID: 0}
@@ -92945,7 +93155,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1720145928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93093,7 +93305,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1720222185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93328,8 +93542,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 1
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   useButton: 3
   m_DynamicContainer: 1
@@ -93343,6 +93557,8 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 1
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -93776,7 +93992,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1739610485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94019,7 +94237,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1741394131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94408,8 +94628,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 1
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   useButton: -1
   m_DynamicContainer: 1
@@ -94423,6 +94643,8 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 0
   m_MoveUsedItem: 1
   moveItemConditions:
@@ -95327,7 +95549,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1760972325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96288,7 +96512,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 819092059}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9994142
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -97683,8 +97907,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 0
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   useButton: 0
   m_DynamicContainer: 1
@@ -97698,6 +97922,8 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 0
   m_MoveUsedItem: 0
   moveItemConditions: []
@@ -97821,7 +98047,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1816589904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98048,8 +98276,8 @@ MonoBehaviour:
   actionTemplate: {fileID: 0}
   actions: []
   m_Interruptable: 1
-  m_RequiredIngredientsWindow: Inventory
-  m_ResultStorageWindow: Inventory
+  m_IngredientsWindow: Inventory
+  m_StorageWindow: Inventory
   m_CraftingProgressbar: AlchemyProgress
   references:
     version: 1
@@ -98077,8 +98305,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 1
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   useButton: -1
   m_DynamicContainer: 1
@@ -98092,6 +98320,8 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 0
   m_MoveUsedItem: 1
   moveItemConditions:
@@ -100276,7 +100506,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1604192827}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.9992643
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -100613,7 +100843,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1882230251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101128,8 +101360,8 @@ MonoBehaviour:
   m_Focus: 0
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 0
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   m_Title: {fileID: 223781165}
   m_Instruction: {fileID: 1739445627}
@@ -101276,7 +101508,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 1735694661}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1894080594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102233,7 +102467,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 2032131170}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1917191668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102381,7 +102617,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1920770234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103083,8 +103321,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 0
   m_ShowAndHideCursor: 1
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
 --- !u!225 &1928790492
 CanvasGroup:
@@ -104108,7 +104346,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 1696599191}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &1967300035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105600,8 +105840,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 1
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
 --- !u!225 &2002782127
 CanvasGroup:
@@ -105708,7 +105948,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &2003571153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106872,7 +107114,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &2022583357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107094,7 +107338,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &2024766782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107308,7 +107554,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 1911710188}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 20423768}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &2028313323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107459,7 +107707,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 1119991563}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &2031006335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108587,7 +108837,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &2050413984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109182,7 +109434,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &2062294705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109632,7 +109886,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &2066742192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110199,7 +110455,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &2083418302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110753,8 +111011,8 @@ MonoBehaviour:
   m_Focus: 1
   m_DeactivateOnClose: 0
   m_ShowAndHideCursor: 1
+  m_CameraPreset: UI
   m_CloseOnMove: 1
-  m_Deactivate: 306
   m_FocusPlayer: 0
   useButton: 3
   m_DynamicContainer: 0
@@ -110768,6 +111026,8 @@ MonoBehaviour:
   m_CanSellItems: 0
   m_CanUseItems: 0
   m_UseContextMenu: 0
+  m_ContextMenuButton: 2
+  m_ContextMenuFunctions: []
   m_ShowTooltips: 1
   m_MoveUsedItem: 1
   moveItemConditions:
@@ -111137,7 +111397,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &2103334188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112030,7 +112292,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &2116961018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112537,7 +112801,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 1610788098}
   m_Ingredients: {fileID: 1138181722}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!224 &2138637635
 RectTransform:
   m_ObjectHideFlags: 0
@@ -112908,7 +113174,9 @@ MonoBehaviour:
   m_Cooldown: {fileID: 0}
   m_Description: {fileID: 0}
   m_Ingredients: {fileID: 0}
+  m_EnchantingMaterials: {fileID: 0}
   m_BuyPrice: {fileID: 0}
+  m_SlotPrefab: {fileID: 0}
 --- !u!114 &2142510376
 MonoBehaviour:
   m_ObjectHideFlags: 0

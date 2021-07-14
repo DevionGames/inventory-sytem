@@ -33,7 +33,6 @@ namespace DevionGames.InventorySystem
         private void Start()
         {
             this.m_EquipmentContainer = WidgetUtility.Find<ItemContainer>(this.m_WindowName);
-            Debug.Log(this.m_EquipmentContainer);
             if (this.m_EquipmentContainer != null)
             {
                 for (int i = 0; i < this.m_VisibleItems.Count; i++)

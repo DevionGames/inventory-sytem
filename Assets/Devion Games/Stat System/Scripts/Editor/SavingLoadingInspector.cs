@@ -24,6 +24,7 @@ namespace DevionGames.StatSystem.Configuration
 
         protected virtual void OnEnable()
         {
+            if (target == null) return;
             this.m_Script = serializedObject.FindProperty("m_Script");
             this.m_AutoSave = serializedObject.FindProperty("autoSave");
             this.m_ShowSave = new AnimBool(this.m_AutoSave.boolValue);
@@ -43,6 +44,7 @@ namespace DevionGames.StatSystem.Configuration
 
         public override void OnInspectorGUI()
         {
+            if (target == null) return;
             EditorGUI.BeginDisabledGroup(true);
             EditorGUILayout.PropertyField(this.m_Script);
             EditorGUI.EndDisabledGroup();

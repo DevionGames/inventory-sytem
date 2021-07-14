@@ -16,3 +16,4 @@
 - Refill for ItemGenerator
 - Callbacks were not called, when autosave disabled and saved data was availible.
 - Fixed attack animation when placing items to ground.
+- Warning info for ItemGenerator when there no items in list.
