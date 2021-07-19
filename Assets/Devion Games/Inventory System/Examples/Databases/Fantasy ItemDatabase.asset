@@ -49,7 +49,7 @@ MonoBehaviour:
   m_IsDroppable: 1
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
-  m_CraftingRecipe: {fileID: 0}
+  m_CraftingRecipe: {fileID: -7846176418664830727}
   m_EnchantingRecipe: {fileID: 0}
   properties:
   - name: Magic Attack
@@ -312,6 +312,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unstackEvent: -1
   unstackKeyCode: 304
+--- !u!114 &-7846176418664830727
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752013a53119b8c4ea625187374d4e75, type: 3}
+  m_Name: Bow
+  m_EditorClassIdentifier: 
+  name: Bow
+  m_Duration: 2
+  m_AnimatorState: Blacksmithy
+  m_Skill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_Ingredients:
+  - item: {fileID: -5663772737389988193}
+    amount: 2
+  m_CraftingModifier:
+    modifiers:
+    - {fileID: 11400000, guid: af5120ca8702be44fb59b6eadcd27cd0, type: 2}
+    - {fileID: 11400000, guid: 9118000452b16de4681aa942ee7b7797, type: 2}
+  conditions: []
+  references:
+    version: 1
 --- !u!114 &-7427245140175711199
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1306,6 +1333,7 @@ MonoBehaviour:
   - {fileID: 3882374964577945335}
   - {fileID: -2195819364841047837}
   - {fileID: 3119476666203521515}
+  - {fileID: -7846176418664830727}
   raritys:
   - {fileID: 4257271418691296376}
   - {fileID: 1459171670829712994}
@@ -1967,7 +1995,7 @@ MonoBehaviour:
         m_Type: 
         m_Enabled: 1
         item: {fileID: 3129509250564287029}
-        m_WindowName: Crafting
+        m_WindowName: Blacksmithy
         m_Item: {fileID: -8967533827971111582}
         m_Amount: 0
     00000003:

@@ -15,7 +15,7 @@ namespace DevionGames.InventorySystem
 		/// </summary>
 		[SerializeField]
         protected KeyCode m_UseKey;
-        /// <summary>
+       /* /// <summary>
         /// Key text to display the use key
         /// </summary>
         [SerializeField]
@@ -56,9 +56,9 @@ namespace DevionGames.InventorySystem
         [SerializeField]
         protected StringPairSlot m_SlotPrefab;
 
-        protected List<StringPairSlot> m_SlotCache= new List<StringPairSlot>();
+        protected List<StringPairSlot> m_SlotCache= new List<StringPairSlot>();*/
 
-        private bool m_IsCooldown;
+      /*  private bool m_IsCooldown;*/
         /// <summary>
         /// Gets a value indicating whether this slot is in cooldown.
         /// </summary>
@@ -67,12 +67,11 @@ namespace DevionGames.InventorySystem
         {
             get
             {
-                UpdateCooldown();
-                return this.m_IsCooldown;
+                return !IsEmpty && ObservedItem.IsInCooldown;
             }
         }
-        protected float cooldownDuration;
-        protected float cooldownInitTime;
+        //protected float cooldownDuration;
+        //protected float cooldownInitTime;
 
         private static DragObject m_DragObject;
         public static DragObject dragObject {
@@ -99,34 +98,28 @@ namespace DevionGames.InventorySystem
         protected override void Start()
         {
             base.Start();
-
-            if (this.m_CooldownOverlay != null)
-                this.m_CooldownOverlay.raycastTarget = false;
-
             this.m_ParentScrollRect = GetComponentInParent<ScrollRect>();
-            if (this.m_Key != null){
-                this.m_Key.text = UnityTools.KeyToCaption(this.m_UseKey);
-            }
             this.m_IsMouseKey = m_UseKey == KeyCode.Mouse0 || m_UseKey == KeyCode.Mouse1 || m_UseKey == KeyCode.Mouse2;
         }
 
         /// <summary>
 		/// Update is called every frame, if the MonoBehaviour is enabled.
 		/// </summary>
-		protected virtual void Update()
+		protected override void Update()
         {
+            base.Update();
             if (Input.GetKeyDown(m_UseKey) && !UnityTools.IsPointerOverUI())
             {
                 if(!(this.m_IsMouseKey && TriggerRaycaster.IsPointerOverTrigger()))
                     Use();
             }
-            if (Container != null && Container.IsVisible)
+          /*  if (Container != null && Container.IsVisible)
             {
                 UpdateCooldown();
-            }
+            }*/
         }
 
-        public override void Repaint()
+      /*  public override void Repaint()
         {
             base.Repaint();
 
@@ -200,7 +193,7 @@ namespace DevionGames.InventorySystem
                     this.m_BuyPrice.StackOrAdd(price);
                 }
             }
-        }
+        }*/
 
         public void OnPointerEnter(PointerEventData eventData)
         {
@@ -356,7 +349,7 @@ namespace DevionGames.InventorySystem
             }   
 
             //Check if we can start dragging
-            if (ObservedItem != null && !IsCooldown && Container.CanDragOut)
+            if (!IsEmpty && !ObservedItem.IsInCooldown && Container.CanDragOut)
             {
                 //If key for unstacking items is pressed and if the stack is greater then 1, show the unstack ui.
                 if (InventoryManager.Input.unstackEvent.HasFlag<Configuration.Input.UnstackInput>(Configuration.Input.UnstackInput.OnDrag) && Input.GetKey(InventoryManager.Input.unstackKeyCode) && ObservedItem.Stack > 1){
@@ -364,7 +357,7 @@ namespace DevionGames.InventorySystem
                 }else{
                     //Set the dragging slot
                     // draggedSlot = this;
-                    if(base.m_Ícon == null || !base.m_Ícon.raycastTarget || eventData.pointerCurrentRaycast.gameObject == base.m_Ícon.gameObject)
+                    //if(base.m_Ícon == null || !base.m_Ícon.raycastTarget || eventData.pointerCurrentRaycast.gameObject == base.m_Ícon.gameObject)
                         dragObject = new DragObject(this);
     
                 }
@@ -425,7 +418,7 @@ namespace DevionGames.InventorySystem
                 return;
             }
 
-            if (IsCooldown)
+            if (ObservedItem.IsInCooldown)
                 return;
 
             //Get the item to drop
@@ -502,21 +495,22 @@ namespace DevionGames.InventorySystem
         /// <summary>
         /// Set the slot in cooldown
         /// </summary>
-        /// <param name="cooldown">In seconds</param>
-        public void Cooldown(float cooldown)
+        /// <param name="duration">In seconds</param>
+        public void Cooldown(float duration)
         {
-            if (!m_IsCooldown && cooldown > 0f)
-            {
-                cooldownDuration = cooldown;
-                cooldownInitTime = Time.time;
-                this.m_IsCooldown = true;
-            }
+            //if (!m_IsCooldown && duration > 0f)
+           // {
+                ObservedItem.SetCooldown(duration);
+              //  cooldownDuration = cooldown;
+               // cooldownInitTime = Time.time;
+               // this.m_IsCooldown = true;
+            //}
         }
 
         /// <summary>
         /// Updates the cooldown image and sets if the slot is in cooldown.
         /// </summary>
-        private void UpdateCooldown()
+       /* private void UpdateCooldown()
         {
             if (this.m_IsCooldown && this.m_CooldownOverlay != null)
             {
@@ -536,7 +530,7 @@ namespace DevionGames.InventorySystem
 
             }
             this.m_IsCooldown = (cooldownDuration - (Time.time - cooldownInitTime)) > 0f;
-        }
+        }*/
 
         /// <summary>
         /// Use the item in slot
@@ -574,18 +568,18 @@ namespace DevionGames.InventorySystem
                     ShowTooltip();
                 }
               
-            } else if(IsCooldown && !IsEmpty){
-                InventoryManager.Notifications.inCooldown.Show(ObservedItem.DisplayName, (cooldownDuration - (Time.time - cooldownInitTime)).ToString("f2"));
+            } else if(!IsEmpty && ObservedItem.IsInCooldown){
+                InventoryManager.Notifications.inCooldown.Show(ObservedItem.DisplayName, (ObservedItem.CooldownDuration - (Time.time - ObservedItem.CooldownTime)).ToString("f2"));
             }
         }
 
         //Can we use the item
         public override bool CanUse()
         {
-            return !IsCooldown && ObservedItem != null;
+            return ObservedItem != null && !ObservedItem.IsInCooldown;
         }
 
-        protected virtual StringPairSlot CreateSlot()
+      /*  protected virtual StringPairSlot CreateSlot()
         {
             if (this.m_SlotPrefab != null)
             {
@@ -599,7 +593,7 @@ namespace DevionGames.InventorySystem
             }
             Debug.LogWarning("[ItemSlot] Please ensure that the slot prefab is set in the inspector.");
             return null;
-        }
+        }*/
 
         public class DragObject {
             public ItemContainer container;

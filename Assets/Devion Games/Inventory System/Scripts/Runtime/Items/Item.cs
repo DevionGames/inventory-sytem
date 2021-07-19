@@ -373,7 +373,30 @@ namespace DevionGames.InventorySystem
 			set{ this.m_ReferencedSlots = value; }
 		}
 
-		[SerializeField]
+        private float m_CooldownTime = 0f;
+        public float CooldownTime {
+            get { return this.m_CooldownTime; }
+        }
+
+        private float m_CooldownDuration= 0f;
+        public float CooldownDuration
+        {
+            get { return this.m_CooldownDuration; }
+        }
+
+        public bool IsInCooldown {
+            get { return (this.m_CooldownDuration - (Time.time - this.m_CooldownTime)) > 0f; }
+        }
+        public void SetCooldown(float duration)
+        {
+            if (duration > 0f){
+                this.m_CooldownDuration = duration;
+                this.m_CooldownTime = Time.time;
+            }
+        }
+
+
+        [SerializeField]
 		private List<ObjectProperty> properties = new List<ObjectProperty> ();
 
         public void AddProperty(string name, object value) {

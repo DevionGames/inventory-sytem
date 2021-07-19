@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Interruptable: 1
   m_IngredientsWindow: Inventory
   m_StorageWindow: Inventory
-  m_CraftingProgressbar: CraftingProgress
+  m_CraftingProgressbar: BlacksmithyProgress
   references:
     version: 1
     00000000:
@@ -182,7 +182,7 @@ MonoBehaviour:
       data:
         m_Type: DevionGames.InventorySystem.ShowWindow
         m_Enabled: 1
-        m_WindowName: Crafting
+        m_WindowName: Blacksmithy
         m_DestroyWhenEmpty: 0
 --- !u!1001 &5157323342365875069
 PrefabInstance:

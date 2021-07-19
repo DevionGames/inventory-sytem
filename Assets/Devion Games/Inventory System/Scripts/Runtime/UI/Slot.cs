@@ -4,12 +4,13 @@ using DevionGames.UIWidgets;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using System.Linq;
 
 namespace DevionGames.InventorySystem
 {
     public class Slot : CallbackHandler
     {
-        /// <summary>
+       /* /// <summary>
         /// The text to display item name.
         /// </summary>
         [SerializeField]
@@ -29,7 +30,7 @@ namespace DevionGames.InventorySystem
 		/// The text to display item stack.
 		/// </summary>
 		[SerializeField]
-        protected Text m_Stack;
+        protected Text m_Stack;*/
 
         //Actions to run when the trigger is used.
         [HideInInspector]
@@ -86,6 +87,8 @@ namespace DevionGames.InventorySystem
             }
         }
 
+        protected ItemView[] m_Views;
+
         protected virtual void Start() {
             
             Container.OnAddItem += (Item item, Slot slot) => {
@@ -113,10 +116,7 @@ namespace DevionGames.InventorySystem
                     eventData.slot = slot;
                     Execute("OnUseItem", eventData);
                 }
-            };
-
-            if (this.m_Stack != null)
-                this.m_Stack.raycastTarget = false;
+            };  
         }
 
         /// <summary>
@@ -124,7 +124,14 @@ namespace DevionGames.InventorySystem
         /// </summary>
         public virtual void Repaint()
         {
-            if (this.m_ItemName != null){
+            if (this.m_Views == null)
+                this.m_Views = GetComponentsInChildren<ItemView>().Where(x => x.GetComponentsInParent<Slot>(true).FirstOrDefault() == this).ToArray();
+
+            for (int i = 0; i < this.m_Views.Length; i++) {
+                this.m_Views[i].Repaint(ObservedItem);
+            }
+
+           /* if (this.m_ItemName != null){
                 //Updates the text with item name and rarity color. If this slot is empty, sets the text to empty.
                 this.m_ItemName.text = (!IsEmpty ? (this.m_UseRarityColor?UnityTools.ColorString(ObservedItem.DisplayName, ObservedItem.Rarity.Color):ObservedItem.DisplayName) : string.Empty);
             }
@@ -149,6 +156,18 @@ namespace DevionGames.InventorySystem
                     //If there is no item in this slot, disable stack field
                     this.m_Stack.enabled = false;
                 }
+            }*/
+        }
+
+        protected virtual void Update()
+        {
+            if (this.m_Views == null)
+                this.m_Views = GetComponentsInChildren<ItemView>();
+
+            for (int i = 0; i < this.m_Views.Length; i++)
+            {
+                if(this.m_Views[i].RequiresConstantRepaint())
+                    this.m_Views[i].Repaint(ObservedItem);
             }
         }
 
@@ -248,8 +267,5 @@ namespace DevionGames.InventorySystem
             }
             return true;
         }
-
-
-
     }
 }
