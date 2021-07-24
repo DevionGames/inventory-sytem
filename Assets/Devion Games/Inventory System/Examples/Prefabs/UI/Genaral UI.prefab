@@ -280,7 +280,7 @@ MonoBehaviour:
   priority: 0
   m_KeyCode: 0
   m_EaseType: 28
-  m_Duration: 0
+  m_Duration: 0.4
   m_IgnoreTimeScale: 1
   m_ShowSound: {fileID: 0}
   m_CloseSound: {fileID: 0}

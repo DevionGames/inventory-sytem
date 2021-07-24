@@ -144,8 +144,8 @@ namespace DevionGames
 
         private void LateUpdate ()
 		{
-            if (this.m_Focus)
-                return;
+            /*if (this.m_Focus)
+                return;*/
 
             UpdateInput();
             if(!this.m_CharacterControllerActive)

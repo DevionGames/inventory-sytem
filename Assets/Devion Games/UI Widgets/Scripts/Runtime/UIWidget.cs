@@ -249,14 +249,14 @@ namespace DevionGames.UIWidgets
 			if (this.m_ShowAndHideCursor) {
 				m_CurrentVisibleWidgets.Add(this);
 
+				if (this.m_FocusPlayer && !this.m_IsLocked)
+					this.m_CameraController.SendMessage("Focus", true, SendMessageOptions.DontRequireReceiver);
+
 				if ( m_CurrentVisibleWidgets.Count == 1)
 				{
 					if (m_CameraController != null)
 					{
 						this.m_CameraTransform.SendMessage("Activate", this.m_CameraPreset, SendMessageOptions.DontRequireReceiver);
-
-						if (this.m_FocusPlayer && !this.m_IsLocked)
-							this.m_CameraController.SendMessage("Focus", true, SendMessageOptions.DontRequireReceiver);
 					}else {
 						//Show Cursor without ThridPersonCamera
 						this.m_PreviousLockMode = Cursor.lockState;
@@ -286,15 +286,15 @@ namespace DevionGames.UIWidgets
 			m_CanvasGroup.blocksRaycasts = false;
 			if (this.m_ShowAndHideCursor) {
 				m_CurrentVisibleWidgets.Remove(this);
+
+				if(m_CurrentVisibleWidgets.Find(x=>x.m_FocusPlayer) == null)
+					this.m_CameraController.SendMessage("Focus", false, SendMessageOptions.DontRequireReceiver);
+
 				if (m_CurrentVisibleWidgets.Count == 0) {
 
 					if (this.m_CameraController != null)
 					{
 						this.m_CameraTransform.SendMessage("Deactivate", this.m_CameraPreset, SendMessageOptions.DontRequireReceiver);
-						if (this.m_CameraController.enabled && this.m_FocusPlayer)
-						{
-							this.m_CameraController.SendMessage("Focus", false, SendMessageOptions.DontRequireReceiver);
-						}
 					}
 					else {
 						//Hide Cursor with missing ThirdPersonCamera
