@@ -157,6 +157,9 @@ MonoBehaviour:
   - id: 8
   - id: 9
   - id: 10
+  - id: 11
+  - id: 12
+  - id: 13
   m_Interruptable: 0
   references:
     version: 1
@@ -170,7 +173,7 @@ MonoBehaviour:
             type: 2}
           category: {fileID: 0}
           boolValue: 0
-          stringValue: Equipment
+          stringValue: Tools
           intValue: 0
         - item: {fileID: -7886543208416861863, guid: e1f045c49e197e3439b99da9edbc5ba3,
             type: 2}
@@ -197,7 +200,7 @@ MonoBehaviour:
           m_ObjectValue: {fileID: 0}
           m_ArgumentType: 4
         m_Condition: 0
-        m_Number: 2
+        m_Number: 1
         m_FailureNotification:
           title: 
           text: Your level is to small to collect this resource.
@@ -207,6 +210,20 @@ MonoBehaviour:
           duration: 2
           ignoreTimeScale: 1
     00000002:
+      type: {class: RemoveVisualItem, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.RemoveVisualItem
+        m_Enabled: 1
+        m_Region: {fileID: 316844889573954113, guid: 1ae57b994efcab048a1bb130d4e11d83,
+          type: 2}
+    00000003:
+      type: {class: AddVisualItem, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.AddVisualItem
+        m_Enabled: 1
+        m_Item: {fileID: 2409076057030828310, guid: 1ae57b994efcab048a1bb130d4e11d83,
+          type: 2}
+    00000004:
       type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.SetEnabled
@@ -214,13 +231,13 @@ MonoBehaviour:
         m_Target: 1
         m_ComponentName: ThirdPersonController
         m_Enable: 0
-    00000003:
+    00000005:
       type: {class: LookAtTrigger, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.LookAtTrigger
         m_Enabled: 1
         m_Speed: 15
-    00000004:
+    00000006:
       type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.CrossFade
@@ -228,7 +245,7 @@ MonoBehaviour:
         m_Target: 1
         m_AnimatorState: Mining
         m_TransitionDuration: 0.2
-    00000005:
+    00000007:
       type: {class: ShowProgressbar, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
       data:
         m_Type: DevionGames.InventorySystem.ShowProgressbar
@@ -236,7 +253,7 @@ MonoBehaviour:
         m_WidgetName: General Progressbar
         m_Title: Mining Iron
         m_Duration: 8
-    00000006:
+    00000008:
       type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.SetEnabled
@@ -244,12 +261,16 @@ MonoBehaviour:
         m_Target: 1
         m_ComponentName: ThirdPersonController
         m_Enable: 1
-    00000007:
+    00000009:
+      type: {class: UpdateEquipment, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.UpdateEquipment
+        m_Enabled: 1
+    0000000A:
       type: {class: CheckSkill, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
       data:
         m_Type: DevionGames.InventorySystem.CheckSkill
         m_Enabled: 1
-        m_WindowName: Skills
         m_Skill: {fileID: -7886543208416861863, guid: e1f045c49e197e3439b99da9edbc5ba3,
           type: 2}
         m_SuccessNotification:
@@ -268,7 +289,7 @@ MonoBehaviour:
           delay: 2
           duration: 2
           ignoreTimeScale: 1
-    00000008:
+    0000000B:
       type: {class: Pickup, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
       data:
         m_Type: DevionGames.InventorySystem.Pickup
@@ -276,7 +297,7 @@ MonoBehaviour:
         m_WindowName: Inventory
         m_DestroyWhenEmpty: 1
         m_Amount: 1
-    00000009:
+    0000000C:
       type: {class: Invoke, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: 
@@ -303,7 +324,7 @@ MonoBehaviour:
           m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
           m_ObjectValue: {fileID: 0}
           m_ArgumentType: 3
-    0000000A:
+    0000000D:
       type: {class: Instantiate, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: 
@@ -378,3 +399,4 @@ MonoBehaviour:
     modifiers:
       modifiers: []
   m_MaxAmount: 3
+  m_Refill: -1

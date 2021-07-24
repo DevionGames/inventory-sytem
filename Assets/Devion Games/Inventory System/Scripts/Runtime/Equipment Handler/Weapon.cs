@@ -81,7 +81,10 @@ namespace DevionGames.InventorySystem
 
         private AnimatorStateInfo[] m_DefaultStates;
 
-
+        protected override void Start()
+        {
+            this.m_DefaultStates = new AnimatorStateInfo[this.m_CharacterAnimator.layerCount];
+        }
         public override void OnItemEquip(Item item)
         {
             base.OnItemEquip(item);
@@ -267,17 +270,17 @@ namespace DevionGames.InventorySystem
             if (activated)
             {
                 this.m_CharacterAnimator.Update(1f);
-                this.m_DefaultStates = new AnimatorStateInfo[this.m_CharacterAnimator.layerCount];
+               // this.m_DefaultStates = new AnimatorStateInfo[this.m_CharacterAnimator.layerCount];
                  for (int j = 0; j < this.m_CharacterAnimator.layerCount; j++)
                  {
                      AnimatorStateInfo stateInfo = this.m_CharacterAnimator.GetCurrentAnimatorStateInfo(j);
-                     this.m_DefaultStates[j] = stateInfo;
+                    if(stateInfo.IsTag("Default"))
+                        this.m_DefaultStates[j] = stateInfo;
                  }
                 this.m_CharacterAnimator.SetInteger("Item ID", this.m_ItemID);
                 this.m_CharacterAnimator.CrossFadeInFixedTime(this.m_IdleState, 0.15f);
                 this.m_InUse = false;
             } else {
-
                 this.m_CharacterAnimator.SetBool("Item Use", false);
                 this.m_CharacterAnimator.SetInteger("Item ID",0);
                 for (int j = 0; j < this.m_DefaultStates.Length; j++)

@@ -112,8 +112,13 @@ namespace DevionGames.InventorySystem
             }
         }
 
-        private void UpdateEquipment()
+        public void UpdateEquipment()
         {
+            for (int i = 0; i < this.m_VisibleItems.Count; i++)
+            {
+                VisibleItem visibleItem = this.m_VisibleItems[i];
+                visibleItem.OnItemUnEquip(visibleItem.item);
+            }
             EquipmentItem[] containerItems = this.m_EquipmentContainer.GetItems<EquipmentItem>();
             foreach (EquipmentItem item in containerItems)
             {

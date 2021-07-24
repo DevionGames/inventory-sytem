@@ -1486,7 +1486,7 @@ MonoBehaviour:
   m_Prefab: {fileID: 6550093729711604389, guid: 53bbca1204ea7aa48938286fdd6d36b6,
     type: 3}
   m_Description: Tool used for Alchemy.
-  m_Category: {fileID: -9040799555073544844}
+  m_Category: {fileID: -6294223960729143046}
   m_IsSellable: 1
   m_BuyPrice: 10
   m_CanBuyBack: 1

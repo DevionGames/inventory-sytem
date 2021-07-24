@@ -188,6 +188,10 @@ MonoBehaviour:
   - id: 7
   - id: 8
   - id: 9
+  - id: 10
+  - id: 11
+  - id: 12
+  - id: 13
   m_Interruptable: 1
   references:
     version: 1
@@ -201,7 +205,7 @@ MonoBehaviour:
             type: 2}
           category: {fileID: 0}
           boolValue: 0
-          stringValue: Equipment
+          stringValue: Tools
           intValue: 0
         - item: {fileID: 6305893422732665131, guid: e1f045c49e197e3439b99da9edbc5ba3,
             type: 2}
@@ -210,6 +214,20 @@ MonoBehaviour:
           stringValue: Skills
           intValue: 0
     00000001:
+      type: {class: RemoveVisualItem, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.RemoveVisualItem
+        m_Enabled: 1
+        m_Region: {fileID: 316844889573954113, guid: 1ae57b994efcab048a1bb130d4e11d83,
+          type: 2}
+    00000002:
+      type: {class: AddVisualItem, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.AddVisualItem
+        m_Enabled: 1
+        m_Item: {fileID: -4474190543486091594, guid: 1ae57b994efcab048a1bb130d4e11d83,
+          type: 2}
+    00000003:
       type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.SetEnabled
@@ -217,13 +235,13 @@ MonoBehaviour:
         m_Target: 1
         m_ComponentName: ThirdPersonController
         m_Enable: 0
-    00000002:
+    00000004:
       type: {class: LookAtTrigger, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.LookAtTrigger
         m_Enabled: 1
         m_Speed: 15
-    00000003:
+    00000005:
       type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.CrossFade
@@ -231,7 +249,7 @@ MonoBehaviour:
         m_Target: 1
         m_AnimatorState: Cut
         m_TransitionDuration: 0.2
-    00000004:
+    00000006:
       type: {class: ShowProgressbar, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
       data:
         m_Type: DevionGames.InventorySystem.ShowProgressbar
@@ -239,7 +257,7 @@ MonoBehaviour:
         m_WidgetName: General Progressbar
         m_Title: Cutting Tree
         m_Duration: 6
-    00000005:
+    00000007:
       type: {class: SetEnabled, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.SetEnabled
@@ -247,7 +265,19 @@ MonoBehaviour:
         m_Target: 1
         m_ComponentName: ThirdPersonController
         m_Enable: 1
-    00000006:
+    00000008:
+      type: {class: RemoveVisualItem, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.RemoveVisualItem
+        m_Enabled: 1
+        m_Region: {fileID: 316844889573954113, guid: 1ae57b994efcab048a1bb130d4e11d83,
+          type: 2}
+    00000009:
+      type: {class: UpdateEquipment, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.UpdateEquipment
+        m_Enabled: 1
+    0000000A:
       type: {class: CheckSkill, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
       data:
         m_Type: DevionGames.InventorySystem.CheckSkill
@@ -270,7 +300,7 @@ MonoBehaviour:
           delay: 2
           duration: 2
           ignoreTimeScale: 1
-    00000007:
+    0000000B:
       type: {class: Pickup, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
       data:
         m_Type: DevionGames.InventorySystem.Pickup
@@ -278,7 +308,7 @@ MonoBehaviour:
         m_WindowName: 
         m_DestroyWhenEmpty: 0
         m_Amount: 1
-    00000008:
+    0000000C:
       type: {class: Invoke, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.Invoke
@@ -305,7 +335,7 @@ MonoBehaviour:
           m_ColorValue: {r: 0, g: 0, b: 0, a: 0}
           m_ObjectValue: {fileID: 0}
           m_ArgumentType: 3
-    00000009:
+    0000000D:
       type: {class: Instantiate, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.Instantiate
