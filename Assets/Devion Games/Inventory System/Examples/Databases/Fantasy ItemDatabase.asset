@@ -1248,7 +1248,7 @@ MonoBehaviour:
   m_Prefab: {fileID: 5445779230513671954, guid: f82bc419a6e172a44bd05e66d42408dc,
     type: 3}
   m_Description: Hammer is used to craft items.
-  m_Category: {fileID: -9040799555073544844}
+  m_Category: {fileID: 4434150847256412975}
   m_IsSellable: 1
   m_BuyPrice: 6
   m_CanBuyBack: 0
@@ -1345,9 +1345,10 @@ MonoBehaviour:
   - {fileID: 8705209814584371102}
   - {fileID: -5355670550631679221}
   - {fileID: 5270022900184783660}
-  - {fileID: -9040799555073544844}
   - {fileID: -7427245140175711199}
   - {fileID: 164684216256526245}
+  - {fileID: -9040799555073544844}
+  - {fileID: 4434150847256412975}
   equipments:
   - {fileID: -1474344929657048262}
   - {fileID: -327638963660831434}
@@ -2147,6 +2148,22 @@ MonoBehaviour:
   chance: 100
   multiplier: 1
   m_PriceMultiplier: 1
+--- !u!114 &4434150847256412975
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
+  m_Name: Tool_Hammer
+  m_EditorClassIdentifier: 
+  m_Parent: {fileID: 0}
+  name: Tool_Hammer
+  m_EditorColor: {r: 0.6117647, g: 0.6117647, b: 0.6117647, a: 1}
+  m_Cooldown: 1
 --- !u!114 &5092307033516734736
 MonoBehaviour:
   m_ObjectHideFlags: 1
