@@ -16,4 +16,5 @@
 - Refill for ItemGenerator
 - Callbacks were not called, when autosave disabled and saved data was availible.
 - Fixed attack animation when placing items to ground.
-- Warning info for ItemGenerator when there no items in list.
+- Warning info for ItemGenerator when there are no items in list.
+- Integrated auto equip for tools like in New World. You can convert it back as it was, see Anvil and Hammer as an example.
