@@ -262,6 +262,7 @@ namespace DevionGames.InventorySystem
         //Detects the release of the mouse button
         public virtual void OnPointerUp(PointerEventData eventData)
         {
+            EventSystem.current.SetSelectedGameObject(null);
             if (!eventData.dragging)
             {
                 Stack stack = InventoryManager.UI.stack;
@@ -358,6 +359,7 @@ namespace DevionGames.InventorySystem
                     //Set the dragging slot
                     // draggedSlot = this;
                     //if(base.m_Ícon == null || !base.m_Ícon.raycastTarget || eventData.pointerCurrentRaycast.gameObject == base.m_Ícon.gameObject)
+                    if (eventData.pointerCurrentRaycast.gameObject != gameObject)
                         dragObject = new DragObject(this);
     
                 }

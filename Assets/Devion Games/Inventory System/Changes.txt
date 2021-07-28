@@ -18,3 +18,5 @@
 - Fixed attack animation when placing items to ground.
 - Warning info for ItemGenerator when there are no items in list.
 - Integrated auto equip for tools like in New World. You can convert it back as it was, see Anvil and Hammer as an example.
+- Updated how item information is displayed in slots. To display item information, you do not reference UI components to the slot anymore. You add a corresponding ItemView compoent as a child.
+- Prefabs and Prefab Variants for slots.

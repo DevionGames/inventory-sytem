@@ -941,7 +941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 1}
   m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5281,7 +5281,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 192.5, y: 0}
-  m_SizeDelta: {x: 235, y: 0}
+  m_SizeDelta: {x: 234.99998, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8973779119818147432
 CanvasRenderer:
@@ -8539,6 +8539,11 @@ PrefabInstance:
       propertyPath: name
       value: Sell Price Tooltip
       objectReference: {fileID: 0}
+    - target: {fileID: 6420817232148820193, guid: 10fbaa4c4ec09714aa493f65af79461d,
+        type: 3}
+      propertyPath: m_Duration
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6420817232148820196, guid: 10fbaa4c4ec09714aa493f65af79461d,
         type: 3}
       propertyPath: m_Name
@@ -8652,17 +8657,17 @@ PrefabInstance:
     - target: {fileID: 6420817232148820222, guid: 10fbaa4c4ec09714aa493f65af79461d,
         type: 3}
       propertyPath: m_Alpha
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6420817232148820222, guid: 10fbaa4c4ec09714aa493f65af79461d,
         type: 3}
       propertyPath: m_Interactable
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6420817232148820222, guid: 10fbaa4c4ec09714aa493f65af79461d,
         type: 3}
       propertyPath: m_BlocksRaycasts
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10fbaa4c4ec09714aa493f65af79461d, type: 3}

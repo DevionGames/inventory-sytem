@@ -318,7 +318,7 @@ namespace DevionGames.InventorySystem
 
         protected override void OnAwake()
         {
-            if (this.m_SlotPrefab != null){
+            if (this.m_SlotPrefab != null && this.m_SlotPrefab.scene.name != default){
                 this.m_SlotPrefab.SetActive(false);
             }
             RefreshSlots();
