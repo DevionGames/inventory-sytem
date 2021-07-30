@@ -98,7 +98,7 @@ namespace DevionGames.InventorySystem
         protected override void Update()
         {
             base.Update();
-            if (this.m_IsCrafting)
+            if (this.m_IsCrafting && this.m_Progressbar != null)
             {
                 this.m_Progressbar.SetProgress(GetCraftingProgress());
             }
@@ -108,7 +108,8 @@ namespace DevionGames.InventorySystem
         {
             StopAllCoroutines();
             this.m_IsCrafting = false;
-            this.m_Progressbar.SetProgress(0f);
+            if(this.m_Progressbar != null)
+                this.m_Progressbar.SetProgress(0f);
             GameObject user = InventoryManager.current.PlayerInfo.gameObject;
             if (user != null)
                 user.SendMessage("SetControllerActive", true, SendMessageOptions.DontRequireReceiver);
@@ -185,7 +186,8 @@ namespace DevionGames.InventorySystem
             LoadCachedAnimatorStates();
             StopCoroutine("CraftItems");
             ExecuteEvent<ITriggerCraftStop>(Execute, item);
-            this.m_Progressbar.SetProgress(0f);
+            if(this.m_Progressbar != null)
+                this.m_Progressbar.SetProgress(0f);
         }
 
         private IEnumerator CraftItems(Item item, int amount)

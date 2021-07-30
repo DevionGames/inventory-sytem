@@ -28,6 +28,8 @@ namespace DevionGames.InventorySystem.Configuration
         public string stackName = "Stack";
         [InspectorLabel("Notification", "Name of Notification widget.")]
         public string notificationName = "Notification";
+        [InspectorLabel("Notification", "Name of Notification widget.")]
+        public string dialogBoxName = "Dialog Box";
 
         private Notification m_Notification;
         public Notification notification {
@@ -92,6 +94,20 @@ namespace DevionGames.InventorySystem.Configuration
                 }
                 Assert.IsNotNull(this.m_ContextMenu, "ConextMenu widget with name " + this.contextMenuName + " is not present in scene.");
                 return this.m_ContextMenu;
+            }
+        }
+
+        private UIWidgets.DialogBox m_DialogBox;
+        public UIWidgets.DialogBox dialogBox
+        {
+            get
+            {
+                if (this.m_DialogBox == null)
+                {
+                    this.m_DialogBox = WidgetUtility.Find<UIWidgets.DialogBox>(this.dialogBoxName);
+                }
+                Assert.IsNotNull(this.m_DialogBox, "DialogBox widget with name " + this.dialogBoxName + " is not present in scene.");
+                return this.m_DialogBox;
             }
         }
     }

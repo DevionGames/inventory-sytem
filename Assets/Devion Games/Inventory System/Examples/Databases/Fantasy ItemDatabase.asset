@@ -776,6 +776,7 @@ MonoBehaviour:
   sellPriceTooltipName: Sell Price Tooltip
   stackName: Stack
   notificationName: Notification
+  dialogBoxName: Dialog Box
 --- !u!114 &-4213577332647146612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2130,6 +2131,7 @@ MonoBehaviour:
   sellPriceTooltipName: Sell Price Tooltip
   stackName: Stack
   notificationName: Notification
+  dialogBoxName: Dialog Box
 --- !u!114 &4257271418691296376
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2342,6 +2344,7 @@ MonoBehaviour:
   sellPriceTooltipName: Sell Price Tooltip
   stackName: Stack
   notificationName: Notification
+  dialogBoxName: Dialog Box
 --- !u!114 &6580122338069936885
 MonoBehaviour:
   m_ObjectHideFlags: 1

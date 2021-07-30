@@ -258,26 +258,31 @@ namespace DevionGames.InventorySystem
             }
         }
 
+        public static void Delete(string key) {
+            List<string> keys = PlayerPrefs.GetString("InventorySystemSavedKeys").Split(';').ToList();
+            keys.RemoveAll(x => string.IsNullOrEmpty(x));
+
+            List<string> scenes = PlayerPrefs.GetString(key + ".Scenes").Split(';').ToList();
+            scenes.RemoveAll(x => string.IsNullOrEmpty(x));
+            string uiData = PlayerPrefs.GetString(key + ".UI");
+
+            List<string> allKeys = new List<string>(keys);
+            allKeys.Remove(key);
+            PlayerPrefs.SetString("InventorySystemSavedKeys", string.Join(";", allKeys));
+            PlayerPrefs.DeleteKey(key + ".UI");
+            PlayerPrefs.DeleteKey(key + ".Scenes");
+            for (int j = 0; j < scenes.Count; j++)
+            {
+                PlayerPrefs.DeleteKey(key + "." + scenes[j]);
+            }
+        }
+
         public static void Save() {
             string key = PlayerPrefs.GetString(InventoryManager.SavingLoading.savingKey, InventoryManager.SavingLoading.savingKey);
             Save(key);
         }
 
-        public static void Save(string key) {
-
-            /* List<MonoBehaviour> results = new List<MonoBehaviour>();
-             UnityEngine.SceneManagement.SceneManager.GetActiveScene().GetRootGameObjects().ToList().ForEach(g => results.AddRange(g.GetComponentsInChildren<MonoBehaviour>(true)));
-             //DontDestroyOnLoad GameObjects
-             SingleInstance.GetInstanceObjects().ForEach(g => results.AddRange(g.GetComponentsInChildren<MonoBehaviour>(true)));
-
-             ItemCollection[] serializables  = results.OfType<ItemCollection>().Where(x=>x.saveable).ToArray();
-
-             IJsonSerializable[] ui = serializables.Where(x=>x.GetComponent<ItemContainer>() != null).ToArray();
-             IJsonSerializable[] world = serializables.Except(ui).ToArray();
-
-             string uiData = JsonSerializer.Serialize(ui);
-             string worldData = JsonSerializer.Serialize(world);*/
-
+        public static void Save(string key, int index = 0) {
             string uiData = string.Empty;
             string worldData = string.Empty;
             Serialize(ref uiData, ref worldData);
@@ -295,7 +300,7 @@ namespace DevionGames.InventorySystem
             List<string> keys = PlayerPrefs.GetString("InventorySystemSavedKeys").Split(';').ToList();
             keys.RemoveAll(x => string.IsNullOrEmpty(x));
             if (!keys.Contains(key)) {
-                keys.Add(key);
+                keys.Insert(index,key);
             }
             PlayerPrefs.SetString("InventorySystemSavedKeys",string.Join(";",keys));
 

@@ -5,31 +5,28 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Devion Games/RPG Kit/Scenes/Start.unity
     guid: ced6083b00705a64689031271f542081
-  - enabled: 0
+  - enabled: 1
     path: Assets/Devion Games/RPG Kit/Scenes/Select Character.unity
     guid: ce4ceca92492eeb4996fb6b6c8b73549
-  - enabled: 0
+  - enabled: 1
     path: Assets/Devion Games/RPG Kit/Scenes/Create Character.unity
     guid: 5aeb5602255a4b2469eb895d12e20011
-  - enabled: 0
+  - enabled: 1
     path: Assets/Devion Games/RPG Kit/Scenes/Main Scene.unity
     guid: 1ec7bd8f44f71db47b5420126fa7366e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Devion Games/RPG Kit/Scenes/Map2.unity
     guid: 4965677e068e3ee43b5953413e0d5a03
   - enabled: 0
     path: Assets/Devion Games/Quest System/Example/Scenes/Quest.unity
     guid: 1eb944ae767aa6b458e5c13e70576ab4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Devion Games/Inventory System/Examples/Scenes/Main Scene.unity
     guid: 36dbd05f5f61b1d448f73b3e934c276d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Devion Games/Inventory System/Examples/Scenes/Map2.unity
     guid: e23207e9ece660a4b9d00aee184c8a1e
-  - enabled: 1
-    path: Assets/Tutorial/Scenes/Test.unity
-    guid: 5a4d02e5322461d479f740030280635c
   m_configObjects: {}
