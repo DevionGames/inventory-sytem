@@ -308,12 +308,12 @@ namespace DevionGames
             handlerGameObject.transform.SetParent(transform,false);
             handlerGameObject.layer = 2;
 
-            Collider collider = GetComponent<Collider>();
-            if (collider != null)
+            MeshFilter meshFilter = null;
+            if (TryGetComponent<MeshFilter>(out meshFilter))
             {
-                position = collider.bounds.center;
-                position.y = (collider.bounds.center - collider.bounds.extents).y;
-                position = transform.InverseTransformPoint(position);
+                Bounds bounds = meshFilter.mesh.bounds;
+                position = bounds.center;
+                position.y = (bounds.center - bounds.extents).y;
             }
 
             SphereCollider sphereCollider = handlerGameObject.AddComponent<SphereCollider>();
