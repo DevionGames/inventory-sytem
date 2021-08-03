@@ -164,7 +164,7 @@ namespace DevionGames.StatSystem
 
         public static void Save()
         {
-            string key = m_SaveProvider.GetString(StatsManager.SavingLoading.savingKey, StatsManager.SavingLoading.savingKey);
+            string key = PlayerPrefs.GetString(StatsManager.SavingLoading.savingKey, StatsManager.SavingLoading.savingKey);
             Save(key);
         }
 
@@ -207,7 +207,7 @@ namespace DevionGames.StatSystem
 
         public static void Load()
         {
-            string key = m_SaveProvider.GetString(StatsManager.SavingLoading.savingKey, StatsManager.SavingLoading.savingKey);
+            string key = PlayerPrefs.GetString(StatsManager.SavingLoading.savingKey, StatsManager.SavingLoading.savingKey);
             Load(key);
         }
 

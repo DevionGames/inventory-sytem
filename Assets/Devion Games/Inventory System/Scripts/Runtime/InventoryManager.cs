@@ -260,7 +260,7 @@ namespace DevionGames.InventorySystem
         }
 
         public static void Save() {
-            string key = m_SaveProvider.GetString(InventoryManager.SavingLoading.savingKey, InventoryManager.SavingLoading.savingKey);
+            string key = PlayerPrefs.GetString(InventoryManager.SavingLoading.savingKey, InventoryManager.SavingLoading.savingKey);
             Save(key);
         }
 
@@ -329,7 +329,7 @@ namespace DevionGames.InventorySystem
         }
 
         public static void Load() {
-            string key = m_SaveProvider.GetString(InventoryManager.SavingLoading.savingKey, InventoryManager.SavingLoading.savingKey);
+            string key = PlayerPrefs.GetString(InventoryManager.SavingLoading.savingKey, InventoryManager.SavingLoading.savingKey);
             Load(key);
         }
 
