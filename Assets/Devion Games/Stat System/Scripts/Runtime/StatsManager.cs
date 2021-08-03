@@ -11,6 +11,7 @@ namespace DevionGames.StatSystem
     public class StatsManager : MonoBehaviour
     {
         private static StatsManager m_Current;
+        private static ISaveProvider m_SaveProvider;
 
         /// <summary>
         /// The StatManager singleton object. This object is set inside Awake()
@@ -137,6 +138,12 @@ namespace DevionGames.StatSystem
                 }
 
                 this.m_StatsHandler = new List<StatsHandler>();
+
+                if (!TryGetComponent<ISaveProvider>(out m_SaveProvider))
+                {
+                    m_SaveProvider = new ProviderPlayerPrefs();
+                }
+
                 if (StatsManager.SavingLoading.autoSave)
                 {
                     StartCoroutine(RepeatSaving(StatsManager.SavingLoading.savingRate));
@@ -157,12 +164,13 @@ namespace DevionGames.StatSystem
 
         public static void Save()
         {
-            string key = PlayerPrefs.GetString(StatsManager.SavingLoading.savingKey, StatsManager.SavingLoading.savingKey);
+            string key = m_SaveProvider.GetString(StatsManager.SavingLoading.savingKey, StatsManager.SavingLoading.savingKey);
             Save(key);
         }
 
         public static void Save(string key)
         {
+            m_SaveProvider.StartSave();
             StatsHandler[] results = Object.FindObjectsOfType<StatsHandler>().Where(x => x.saveable).ToArray();
             if (results.Length > 0)
             {
@@ -174,37 +182,39 @@ namespace DevionGames.StatSystem
                 {
                     foreach (Stat stat in handler.m_Stats)
                     {
-                        PlayerPrefs.SetFloat(key + ".Stats." + handler.HandlerName + "." + stat.Name + ".Value", stat.Value);
+                        m_SaveProvider.SetFloat(key + ".Stats." + handler.HandlerName + "." + stat.Name + ".Value", stat.Value);
                         if(stat is Attribute attribute)
-                            PlayerPrefs.SetFloat(key + ".Stats." + handler.HandlerName + "." + stat.Name + ".CurrentValue", attribute.CurrentValue);
+                            m_SaveProvider.SetFloat(key + ".Stats." + handler.HandlerName + "." + stat.Name + ".CurrentValue", attribute.CurrentValue);
                     }
                 }
 
-                PlayerPrefs.SetString(key+".Stats", data);
+                m_SaveProvider.SetString(key+".Stats", data);
 
-                List<string> keys = PlayerPrefs.GetString("StatSystemSavedKeys").Split(';').ToList();
+                List<string> keys = m_SaveProvider.GetString("StatSystemSavedKeys").Split(';').ToList();
                 keys.RemoveAll(x => string.IsNullOrEmpty(x));
                 if (!keys.Contains(key))
                 {
                     keys.Add(key);
                 }
-                PlayerPrefs.SetString("StatSystemSavedKeys", string.Join(";", keys));
+                m_SaveProvider.SetString("StatSystemSavedKeys", string.Join(";", keys));
 
     
                 if (StatsManager.DefaultSettings.debugMessages)
                     Debug.Log("[Stat System] Stats saved: " + data);
             }
+            m_SaveProvider.EndSave();
         }
 
         public static void Load()
         {
-            string key = PlayerPrefs.GetString(StatsManager.SavingLoading.savingKey, StatsManager.SavingLoading.savingKey);
+            string key = m_SaveProvider.GetString(StatsManager.SavingLoading.savingKey, StatsManager.SavingLoading.savingKey);
             Load(key);
         }
 
         public static void Load(string key)
         {
-            string data = PlayerPrefs.GetString(key+".Stats");
+            m_SaveProvider.StartLoad();
+            string data = m_SaveProvider.GetString(key+".Stats");
             if (string.IsNullOrEmpty(data)) { return; }
 
             List<StatsHandler> results = Object.FindObjectsOfType<StatsHandler>().Where(x => x.saveable).ToList();
@@ -221,6 +231,7 @@ namespace DevionGames.StatSystem
                 }
             }
 
+            m_SaveProvider.EndLoad();
             if (StatsManager.DefaultSettings.debugMessages)
                 Debug.Log("[Stat System] Stats loaded: "+ data);
         }
