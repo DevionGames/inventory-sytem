@@ -141,7 +141,7 @@ namespace DevionGames.StatSystem
 
                 if (!TryGetComponent<ISaveProvider>(out m_SaveProvider))
                 {
-                    m_SaveProvider = new ProviderPlayerPrefs();
+                    m_SaveProvider = gameObject.AddComponent<ProviderPlayerPrefs>();
                 }
 
                 if (StatsManager.SavingLoading.autoSave)

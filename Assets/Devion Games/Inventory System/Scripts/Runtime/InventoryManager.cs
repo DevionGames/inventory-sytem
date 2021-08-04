@@ -188,7 +188,7 @@ namespace DevionGames.InventorySystem
 
                 if (!TryGetComponent<ISaveProvider>(out m_SaveProvider))
                 {
-                    m_SaveProvider = new ProviderPlayerPrefs();
+                    m_SaveProvider = gameObject.AddComponent<ProviderPlayerPrefs>();
                 } 
 
                 if (InventoryManager.SavingLoading.autoSave) {
