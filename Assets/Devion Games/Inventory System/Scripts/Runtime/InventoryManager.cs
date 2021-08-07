@@ -356,7 +356,7 @@ namespace DevionGames.InventorySystem
         }
 
         public static bool HasSavedData() {
-            string key = m_SaveProvider.GetString(InventoryManager.SavingLoading.savingKey, InventoryManager.SavingLoading.savingKey);
+            string key = PlayerPrefs.GetString(InventoryManager.SavingLoading.savingKey, InventoryManager.SavingLoading.savingKey);
             return InventoryManager.HasSavedData(key);
         }
 
