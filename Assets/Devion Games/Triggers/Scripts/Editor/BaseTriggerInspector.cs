@@ -15,6 +15,8 @@ namespace DevionGames
         private SerializedProperty m_TriggerInputType;
         private SerializedProperty m_TriggerKey;
         private AnimBool m_KeyOptions;
+        private SerializedProperty m_ManualColliderPosition;
+        private SerializedProperty m_ColliderOffset;
 
         protected override void OnEnable()
         {
@@ -27,6 +29,9 @@ namespace DevionGames
                 this.m_KeyOptions = new AnimBool((target as BaseTrigger).triggerType.HasFlag<BaseTrigger.TriggerInputType>(BaseTrigger.TriggerInputType.Key));
                 this.m_KeyOptions.valueChanged.AddListener(new UnityAction(Repaint));
             }
+            this.m_ColliderOffset = serializedObject.FindProperty("colliderOffset");
+            this.m_ManualColliderPosition = serializedObject.FindProperty("manualColliderPosition");
+
         }
 
         private void DrawInspector()
@@ -42,6 +47,12 @@ namespace DevionGames
                 EditorGUI.indentLevel = EditorGUI.indentLevel - 1;
             }
             EditorGUILayout.EndFadeGroup();
+
+            EditorGUILayout.PropertyField(this.m_ManualColliderPosition);
+            if (this.m_ManualColliderPosition.boolValue)
+            {
+                EditorGUILayout.PropertyField(this.m_ColliderOffset);
+            }
 
             if (EditorApplication.isPlaying) {
                 EditorGUI.BeginDisabledGroup(true);

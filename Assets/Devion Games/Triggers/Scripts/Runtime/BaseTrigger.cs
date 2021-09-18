@@ -33,6 +33,11 @@ namespace DevionGames
         //If in range and trigger input type includes key, the key to use the trigger.
         public KeyCode key = KeyCode.F;
 
+        [Tooltip("Allow overriding the automatic positioning of the trigger collider")]
+        public bool manualColliderPosition;
+        [Tooltip("The trigger collider offset, this is before scaling and rotation of the parent object.")]
+        public Vector3 colliderOffset;
+ 
         //Custom Trigger callbacks
         protected ITriggerEventHandler[] m_TriggerEvents;
         //Current trigger used by the player
@@ -308,12 +313,20 @@ namespace DevionGames
             handlerGameObject.transform.SetParent(transform,false);
             handlerGameObject.layer = 2;
 
-            Collider collider = GetComponent<Collider>();
-            if (collider != null)
+            if (manualColliderPosition)
             {
-                position = collider.bounds.center;
-                position.y = (collider.bounds.center - collider.bounds.extents).y;
-                position = transform.InverseTransformPoint(position);
+                position = colliderOffset;
+            }
+            else
+            {
+                Renderer renderer = null;
+                if (TryGetComponent<Renderer>(out renderer))
+                {
+                    Bounds bounds = renderer.bounds;
+                    position = bounds.center;
+                    position.y = (bounds.center - bounds.extents).y;
+                    position = transform.InverseTransformPoint(position);
+                }
             }
 
             SphereCollider sphereCollider = handlerGameObject.AddComponent<SphereCollider>();
